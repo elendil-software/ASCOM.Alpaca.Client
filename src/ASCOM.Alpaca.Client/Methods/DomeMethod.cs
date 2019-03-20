@@ -1,0 +1,30 @@
+﻿namespace ASCOM.Alpaca.Client.Methods
+{
+    public enum DomeMethod
+    {
+        Altitude,
+        AtHome,
+        AtPark,
+        Azimuth,
+        CanFindHome,
+        CanPark,
+        CanSetAltitude,
+        CanSetAzimuth,
+        CanSetPark,
+        CanSetShutter,
+        CanSlave,
+        CanSyncAzimuth,
+        ShutterStatus,
+        Slaved,
+        Slewing,
+        AbortSlew,
+        CloseShutter,
+        FindHome,
+        OpenShutter,
+        Park,
+        SetPark,
+        SlewToAltitude,
+        SlewToAzimuth,
+        SyncToAzimuth
+    }
+}
