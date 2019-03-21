@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace ASCOM.Alpaca.Client.Responses
+﻿namespace ASCOM.Alpaca.Client.Responses
 {
     public class StringArrayResponse : ResponseBase, IValueResponse<string[]>
     {

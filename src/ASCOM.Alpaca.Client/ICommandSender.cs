@@ -5,9 +5,9 @@ namespace ASCOM.Alpaca.Client
 {
     public interface ICommandSender
     {
-        bool IsInitialized { get; }
+        //bool IsInitialized { get; }
 
-        void InitRestClient(string baseUrl);
+        //void InitRestClient(string baseUrl);
 
         IRestResponse ExecuteRequest(RestRequest request);
 
