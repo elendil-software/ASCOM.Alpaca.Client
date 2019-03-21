@@ -3,7 +3,7 @@ using RestSharp;
 
 namespace ASCOM.Alpaca.Client
 {
-    public interface IAscomRemoteCommandSender
+    public interface ICommandSender
     {
         bool IsInitialized { get; }
 
@@ -11,7 +11,6 @@ namespace ASCOM.Alpaca.Client
 
         IRestResponse ExecuteRequest(RestRequest request);
 
-        TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(RestRequest request) 
-            where TASCOMRemoteResponse : IResponse, new();
+        TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(RestRequest request) where TASCOMRemoteResponse : IResponse, new();
     }
 }

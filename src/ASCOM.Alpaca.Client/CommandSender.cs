@@ -5,7 +5,7 @@ using RestSharp;
 
 namespace ASCOM.Alpaca.Client
 {
-    public class AscomRemoteCommandSender : IAscomRemoteCommandSender
+    public class CommandSender : ICommandSender
     {
         private RestClient _restClient;
         public bool IsInitialized => _restClient != null;
@@ -28,8 +28,7 @@ namespace ASCOM.Alpaca.Client
             }
         }
 
-        public TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(RestRequest request)
-            where TASCOMRemoteResponse : IResponse, new()
+        public TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(RestRequest request) where TASCOMRemoteResponse : IResponse, new()
         {
             IRestResponse<TASCOMRemoteResponse> response = _restClient.Execute<TASCOMRemoteResponse>(request);
             if (response.StatusCode == HttpStatusCode.OK)
