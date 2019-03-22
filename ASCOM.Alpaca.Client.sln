@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASCOM.Alpaca.Client", "src\ASCOM.Alpaca.Client\ASCOM.Alpaca.Client.csproj", "{AEE5F6B7-3C58-45CF-A5C8-B4A7BA4EAD31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASCOM.Alpaca.Client", "src\ASCOM.Alpaca.Client\ASCOM.Alpaca.Client.csproj", "{AEE5F6B7-3C58-45CF-A5C8-B4A7BA4EAD31}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{B01D7E73-3B28-49A4-9FD9-E9D6B5D73535}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TXT", "TXT", "{2D08D41B-6BBF-4CF9-BA3D-3BF1EC3C8E3F}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
