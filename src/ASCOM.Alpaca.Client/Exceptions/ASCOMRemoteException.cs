@@ -18,7 +18,7 @@ namespace ASCOM.Alpaca.Client.Exceptions
         {
         }
 
-        public ASCOMRemoteException(SerializationInfo info, StreamingContext context) : base(info, context)
+        protected ASCOMRemoteException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
     }
