@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
+using ASCOM.Alpaca.Client.Device;
 using RestSharp;
 
-namespace ASCOM.Alpaca.Client.Device
+namespace ASCOM.Alpaca.Client.Request
 {
     public class RequestBuilder
     {
@@ -42,7 +43,7 @@ namespace ASCOM.Alpaca.Client.Device
         public RestRequest BuildRestRequest(Enum command, Method httpMethod, Dictionary<string, object> parameters, int clientTransactionId = 1234)
         {
             var request = new RestRequest("{deviceType}/{deviceNumber}/{command}", httpMethod);
-            request.AddUrlSegment("deviceType", _deviceType.ToString());
+            request.AddUrlSegment("deviceType", _deviceType.ToString().ToLower());
             request.AddUrlSegment("deviceNumber", _deviceNumber.ToString());
             request.AddUrlSegment("command", command.ToString().ToLower());
             request.AddUrlSegment("ClientID", _clientId.ToString());
