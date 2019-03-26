@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using ASCOM.Alpaca.Client.Exceptions;
 using ASCOM.Alpaca.Client.Responses;
 using RestSharp;
@@ -7,13 +8,13 @@ namespace ASCOM.Alpaca.Client
 {
     public class CommandSender : ICommandSender
     {
-        private readonly RestClient _restClient;
+        private readonly IRestClient _restClient;
 
-        public CommandSender(string baseUrl)
+        public CommandSender(IRestClient restClient)
         {
-            _restClient = new RestClient(baseUrl);
+            _restClient = restClient ?? throw new ArgumentNullException(nameof(restClient));
         }
-
+        
         public IRestResponse ExecuteRequest(RestRequest request)
         {
             IRestResponse response = _restClient.Execute(request);

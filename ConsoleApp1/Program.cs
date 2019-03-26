@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using ASCOM.Alpaca.Client;
 using ASCOM.Alpaca.Client.Device;
 using ASCOM.Alpaca.Client.Methods;
+using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using RestSharp;
-using RequestBuilder = ASCOM.Alpaca.Client.Device.RequestBuilder;
 
 namespace ConsoleApp1
 {
@@ -14,7 +14,8 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             var parameters = new AscomRemoteParametersBase();
-            var commandSender = new CommandSender(parameters.GetBaseUrl());
+            IRestClient restClient = new RestClient(parameters.GetBaseUrl());
+            var commandSender = new CommandSender(restClient);
             var requestBuilder = new RequestBuilder(DeviceType.telescope, 1);
             
             var isConnectedMethod = requestBuilder.BuildRestRequest(CommonMethod.Connected, Method.GET);
