@@ -11,10 +11,10 @@ namespace ASCOM.Alpaca.Client.Device
 {
     public abstract class DeviceBase : ICommonMethods
     {
-        private readonly ILogger _logger;
-        private readonly ICommandSender _commandSender;
-        private readonly RequestBuilder _requestBuilder;
-        private readonly IClientTransactionIdGenerator _clientTransactionIdGenerator;
+        protected readonly ILogger _logger;
+        protected readonly ICommandSender _commandSender;
+        protected readonly RequestBuilder _requestBuilder;
+        protected readonly IClientTransactionIdGenerator _clientTransactionIdGenerator;
         
         protected DeviceBase(DeviceType deviceType, int deviceNumber, int clientId, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator)
         {
