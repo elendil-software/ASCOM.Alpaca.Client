@@ -1,7 +1,9 @@
-﻿namespace ASCOM.Alpaca.Client.Responses
+﻿using System.Collections.Generic;
+
+namespace ASCOM.Alpaca.Client.Responses
 {
-    public class StringArrayResponse : ResponseBase, IValueResponse<string[]>
+    public class StringArrayResponse : ResponseBase, IValueResponse<List<string>>
     {
-        public string[] Value { get; set; }
+        public List<string> Value { get; set; }
     }
 }
