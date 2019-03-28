@@ -15,11 +15,13 @@ namespace ASCOM.Alpaca.Client.Device
         protected readonly ICommandSender _commandSender;
         protected readonly RequestBuilder _requestBuilder;
         protected readonly IClientTransactionIdGenerator _clientTransactionIdGenerator;
+        protected abstract DeviceType DeviceType { get; }
         
-        protected DeviceBase(DeviceType deviceType, int deviceNumber, int clientId, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator)
+        protected DeviceBase(int deviceNumber, int clientId, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator)
         {
             _commandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
-            _requestBuilder = new RequestBuilder(deviceType, deviceNumber, clientId);
+            _clientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
+            _requestBuilder = new RequestBuilder(DeviceType, deviceNumber, clientId);
         }
 
         public StringResponse Action(string actionName, string actionParameters)
@@ -102,7 +104,7 @@ namespace ASCOM.Alpaca.Client.Device
         {
             var parameters = new Dictionary<string, object>
             {
-                {"Connected ", connected.ToString()}
+                {"Connected", connected.ToString()}
             };
             RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.Connected, Method.PUT, parameters, _clientTransactionIdGenerator.GetTransactionId());
             _logger.LogInformation(request);

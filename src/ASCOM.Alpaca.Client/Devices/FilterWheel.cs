@@ -9,9 +9,12 @@ namespace ASCOM.Alpaca.Client.Device
 {
     public class FilterWheel : DeviceBase, IFilterWheel
     {
-        public FilterWheel(DeviceType deviceType, int deviceNumber, int clientId, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
-            base(deviceType, deviceNumber, clientId, commandSender, clientTransactionIdGenerator)
+        protected override DeviceType DeviceType { get; } = DeviceType.filterwheel;
+        
+        public FilterWheel(int deviceNumber, int clientId, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
+            base(deviceNumber, clientId, commandSender, clientTransactionIdGenerator)
         {
+            
         }
 
         public IntArrayResponse GetFocusOffsets()
