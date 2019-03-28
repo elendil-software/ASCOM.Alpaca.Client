@@ -15,12 +15,12 @@ namespace ASCOM.Alpaca.Client.Logger
         {
             string parametersString = string.Join(", ", request.Parameters.Select(p => $"{p.Name}={p.Value}").ToArray());
             
-            logger.LogInformation("Send command with parameters {Parameters}", parametersString);
+            logger?.LogInformation("Send command with parameters {Parameters}", parametersString);
         }
 
         public static void LogInformation<T>(this ILogger logger, IValueResponse<T> response)
         {
-            logger.LogInformation("Received response : ClientTransactionID={ClientTransactionID}, ServerTransactionID={ServerTransactionID}, Value={Value}, ErrorNumber={ErrorNumber}, ErrorMessage={ErrorMessage}", 
+            logger?.LogInformation("Received response : ClientTransactionID={ClientTransactionID}, ServerTransactionID={ServerTransactionID}, Value={Value}, ErrorNumber={ErrorNumber}, ErrorMessage={ErrorMessage}", 
                                             response.ClientTransactionID, 
                                             response.ServerTransactionID, 
                                             response.Value, 
@@ -30,7 +30,7 @@ namespace ASCOM.Alpaca.Client.Logger
         
         public static void LogInformation(this ILogger logger, MethodResponse response)
         {
-            logger.LogInformation("Received response : ClientTransactionID={ClientTransactionID}, ServerTransactionID={ServerTransactionID}, ErrorNumber={ErrorNumber}, ErrorMessage={ErrorMessage}", 
+            logger?.LogInformation("Received response : ClientTransactionID={ClientTransactionID}, ServerTransactionID={ServerTransactionID}, ErrorNumber={ErrorNumber}, ErrorMessage={ErrorMessage}", 
                 response.ClientTransactionID, 
                 response.ServerTransactionID,
                 response.ErrorNumber, 
