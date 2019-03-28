@@ -16,19 +16,25 @@ namespace ConsoleApp1
             var parameters = new AscomRemoteParametersBase();
             IRestClient restClient = new RestClient(parameters.GetBaseUrl());
             var commandSender = new CommandSender(restClient);
-            var requestBuilder = new RequestBuilder(DeviceType.telescope, 1);
+            //var requestBuilder = new RequestBuilder(DeviceType.telescope, 1);
             
-            var isConnectedMethod = requestBuilder.BuildRestRequest(CommonMethod.Connected, Method.GET);
-            var isConnectedResponse = commandSender.ExecuteRequest<BoolResponse>(isConnectedMethod);
-            Console.WriteLine($"isConnectedResponse : {isConnectedResponse.Value}");
-            
-            var connectMethod = requestBuilder.BuildRestRequest(CommonMethod.Connected, Method.PUT, new Dictionary<string, object> {{"Connected", true}});
-            var connectResponse = commandSender.ExecuteRequest<MethodResponse>(connectMethod);
-            Console.WriteLine($"connectResponse : {connectResponse.ErrorNumber}");
+            FilterWheel filterWheel = new FilterWheel(0, 1, commandSender, new ClientTransactionIdGenerator());
 
-            var parkMethod = requestBuilder.BuildRestRequest(TelescopeMethod.Park, Method.PUT);
-            var parkResponse = commandSender.ExecuteRequest<MethodResponse>(parkMethod);
-            Console.WriteLine($"parkResponse : {parkResponse.ErrorNumber}");
+            var isConnectedResponse = filterWheel.IsConnected();
+            Console.WriteLine($"isConnectedResponse : {isConnectedResponse.Value}");
+
+            var connectResponse = filterWheel.SetConnected(true);
+            
+            var namesResponse = filterWheel.GetNames();
+            Console.WriteLine($"namesResponse : {namesResponse.Value}");
+            
+            var positionResponse = filterWheel.GetPosition();
+            Console.WriteLine($"positionResponse : {namesResponse.Value}");
+            
+            var setPositionResponse = filterWheel.SetPosition(2);
+            
+            positionResponse = filterWheel.GetPosition();
+            Console.WriteLine($"positionResponse : {namesResponse.Value}");
             
             Console.ReadKey();
         }
