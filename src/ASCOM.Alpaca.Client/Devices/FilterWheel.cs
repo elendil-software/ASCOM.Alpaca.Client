@@ -2,28 +2,39 @@ using System.Collections.Generic;
 using System.Globalization;
 using ASCOM.Alpaca.Client.Logger;
 using ASCOM.Alpaca.Client.Methods;
+using ASCOM.Alpaca.Client.Configuration;
+using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Device
 {
     public class FilterWheel : DeviceBase, IFilterWheel
     {
-        protected override DeviceType DeviceType { get; } = DeviceType.filterwheel;
+        protected override DeviceType DeviceType { get; } = DeviceType.FilterWheel;
         
-        public FilterWheel(int deviceNumber, int clientId, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
-            base(deviceNumber, clientId, commandSender, clientTransactionIdGenerator)
+        public FilterWheel(IOptionsSnapshot<DeviceConfiguration> configuration, ILogger<DeviceBase> logger) : base(configuration, logger)
         {
-            
+        }
+
+        public FilterWheel(DeviceConfiguration configuration, ILogger<DeviceBase> logger) : base(configuration, logger)
+        {
+        }
+
+        public FilterWheel(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger<DeviceBase> logger) : 
+               base(configuration, commandSender, clientTransactionIdGenerator, logger)
+        {
         }
 
         public IntArrayResponse GetFocusOffsets()
         {
             RestRequest request = _requestBuilder.BuildRestRequest(FilterWheelMethod.FocusOffsets, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogInformation(request);
+            _logger.LogDebug(request);
             
             var response = _commandSender.ExecuteRequest<IntArrayResponse>(request);
-            _logger.LogInformation(response);
+            _logger.LogDebug(response);
 
             return response;
         }
@@ -31,10 +42,10 @@ namespace ASCOM.Alpaca.Client.Device
         public StringArrayResponse GetNames()
         {
             RestRequest request = _requestBuilder.BuildRestRequest(FilterWheelMethod.Names, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogInformation(request);
+            _logger.LogDebug(request);
             
             var response = _commandSender.ExecuteRequest<StringArrayResponse>(request);
-            _logger.LogInformation(response);
+            _logger.LogDebug(response);
 
             return response;
         }
@@ -42,10 +53,10 @@ namespace ASCOM.Alpaca.Client.Device
         public IntResponse GetPosition()
         {
             RestRequest request = _requestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogInformation(request);
+            _logger.LogDebug(request);
             
             var response = _commandSender.ExecuteRequest<IntResponse>(request);
-            _logger.LogInformation(response);
+            _logger.LogDebug(response);
 
             return response;
         }
@@ -58,10 +69,10 @@ namespace ASCOM.Alpaca.Client.Device
             };
             
             RestRequest request = _requestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.PUT, parameters, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogInformation(request);
+            _logger.LogDebug(request);
             
             var response = _commandSender.ExecuteRequest<MethodResponse>(request);
-            _logger.LogInformation(response);
+            _logger.LogDebug(response);
 
             return response;
         }

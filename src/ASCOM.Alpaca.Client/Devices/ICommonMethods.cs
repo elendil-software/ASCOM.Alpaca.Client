@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using ASCOM.Alpaca.Client.Responses;
 
 namespace ASCOM.Alpaca.Client.Device

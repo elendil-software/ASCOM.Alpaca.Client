@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using ASCOM.Alpaca.Client;
 using ASCOM.Alpaca.Client.Device;
-using ASCOM.Alpaca.Client.Methods;
-using ASCOM.Alpaca.Client.Request;
-using ASCOM.Alpaca.Client.Responses;
+using ASCOM.Alpaca.Client.Configuration;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using RestSharp;
+using Serilog;
 
 namespace ConsoleApp1
 {
@@ -13,30 +14,42 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var parameters = new AscomRemoteParametersBase();
-            IRestClient restClient = new RestClient(parameters.GetBaseUrl());
-            var commandSender = new CommandSender(restClient);
-            //var requestBuilder = new RequestBuilder(DeviceType.telescope, 1);
-            
-            FilterWheel filterWheel = new FilterWheel(0, 1, commandSender, new ClientTransactionIdGenerator());
+            IServiceCollection serviceCollection = new ServiceCollection();
 
-            var isConnectedResponse = filterWheel.IsConnected();
-            Console.WriteLine($"isConnectedResponse : {isConnectedResponse.Value}");
-
-            var connectResponse = filterWheel.SetConnected(true);
+            IConfiguration config = BuildConfiguration();
+            ConfigureLogger();
+            ConfigureServices(serviceCollection, config);
+            ServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
             
-            var namesResponse = filterWheel.GetNames();
-            Console.WriteLine($"namesResponse : {namesResponse.Value}");
-            
-            var positionResponse = filterWheel.GetPosition();
-            Console.WriteLine($"positionResponse : {namesResponse.Value}");
-            
-            var setPositionResponse = filterWheel.SetPosition(2);
-            
-            positionResponse = filterWheel.GetPosition();
-            Console.WriteLine($"positionResponse : {namesResponse.Value}");
+            serviceProvider.GetService<FilterWheelDemo>().Run();
             
             Console.ReadKey();
+        }
+
+        private static IConfiguration BuildConfiguration()
+        {
+            return new ConfigurationBuilder()
+                .SetBasePath(Path.Combine(AppContext.BaseDirectory))
+                .AddJsonFile("appsettings.json", optional: false)
+                .Build();
+        }
+
+        private static void ConfigureLogger()
+        {
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.Console()
+                .WriteTo.File("ASCOM-Alpaca-Client-Demo.log")
+                .CreateLogger();
+        }
+
+        private static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
+        {
+            services
+                .Configure<DeviceConfiguration>("FilterWheel", configuration.GetSection("FilterWheel"))
+                .AddLogging(configure => configure.AddSerilog())
+                .AddTransient<FilterWheelDemo>()
+                .AddScoped<FilterWheel>();
         }
     }
 }

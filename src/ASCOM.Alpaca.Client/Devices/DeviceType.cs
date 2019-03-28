@@ -7,7 +7,7 @@ namespace ASCOM.Alpaca.Client.Device
         dome,
         camera,
         observingconditions,
-        filterwheel,
+        FilterWheel,
         focuser,
         rotator,
         telescope
