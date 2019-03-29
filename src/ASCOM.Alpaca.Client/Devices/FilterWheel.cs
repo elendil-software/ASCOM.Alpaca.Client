@@ -3,7 +3,6 @@ using System.Globalization;
 using ASCOM.Alpaca.Client.Logger;
 using ASCOM.Alpaca.Client.Methods;
 using ASCOM.Alpaca.Client.Configuration;
-using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -28,7 +27,7 @@ namespace ASCOM.Alpaca.Client.Device
         {
         }
 
-        public IntArrayResponse GetFocusOffsets()
+        public List<int> GetFocusOffsets()
         {
             RestRequest request = _requestBuilder.BuildRestRequest(FilterWheelMethod.FocusOffsets, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
             _logger.LogDebug(request);
@@ -36,10 +35,10 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<IntArrayResponse>(request);
             _logger.LogDebug(response);
 
-            return response;
+            return response.HandleResponse<List<int>, IntArrayResponse>();
         }
 
-        public StringArrayResponse GetNames()
+        public List<string> GetNames()
         {
             RestRequest request = _requestBuilder.BuildRestRequest(FilterWheelMethod.Names, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
             _logger.LogDebug(request);
@@ -47,10 +46,10 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<StringArrayResponse>(request);
             _logger.LogDebug(response);
 
-            return response;
+            return response.HandleResponse<List<string>, StringArrayResponse>();
         }
 
-        public IntResponse GetPosition()
+        public int GetPosition()
         {
             RestRequest request = _requestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
             _logger.LogDebug(request);
@@ -58,10 +57,10 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<IntResponse>(request);
             _logger.LogDebug(response);
 
-            return response;
+            return response.HandleResponse<int, IntResponse>();
         }
 
-        public MethodResponse SetPosition(int position)
+        public void SetPosition(int position)
         {
             var parameters = new Dictionary<string, object>
             {
@@ -74,7 +73,7 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<MethodResponse>(request);
             _logger.LogDebug(response);
 
-            return response;
+            response.HandleResponse();
         }
     }
 }

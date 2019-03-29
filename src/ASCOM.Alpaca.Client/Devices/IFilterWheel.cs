@@ -1,4 +1,4 @@
-using ASCOM.Alpaca.Client.Responses;
+using System.Collections.Generic;
 
 namespace ASCOM.Alpaca.Client.Device
 {
@@ -8,25 +8,25 @@ namespace ASCOM.Alpaca.Client.Device
         /// Get the filter focus offsets
         /// </summary>
         /// <returns></returns>
-        IntArrayResponse GetFocusOffsets();
+        List<int> GetFocusOffsets();
         
         /// <summary>
         /// Get the Filter wheel filter names
         /// </summary>
         /// <returns></returns>
-        StringArrayResponse GetNames();
+        List<string> GetNames();
         
         /// <summary>
         /// Returns the current filter wheel position
         /// </summary>
         /// <returns></returns>
-        IntResponse GetPosition();
+        int GetPosition();
 
         /// <summary>
         /// Sets the filter wheel position
         /// </summary>
         /// <param name="position">The number of the filter wheel position to select</param>
         /// <returns></returns>
-        MethodResponse SetPosition(int position);
+        void SetPosition(int position);
     }
 }

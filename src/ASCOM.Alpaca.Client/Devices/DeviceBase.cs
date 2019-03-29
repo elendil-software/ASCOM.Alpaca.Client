@@ -49,7 +49,7 @@ namespace ASCOM.Alpaca.Client.Device
             _requestBuilder = new RequestBuilder(DeviceType, _configuration.DeviceNumber);
         }
 
-        public StringResponse Action(string actionName, string actionParameters)
+        public string Action(string actionName, string actionParameters)
         {
             var parameters = new Dictionary<string, object>
             {
@@ -63,10 +63,10 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<StringResponse>(request);
             _logger.LogDebug(response);
             
-            return response;
+            return response.HandleResponse<string, StringResponse>();
         }
 
-        public MethodResponse CommandBlind(string command, bool raw = false)
+        public void CommandBlind(string command, bool raw = false)
         {
             var parameters = new Dictionary<string, object>
             {
@@ -79,10 +79,10 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<MethodResponse>(request);
             _logger.LogDebug(response);
 
-            return response;
+            response.HandleResponse();
         }
 
-        public BoolResponse CommandBool(string command, bool raw = false)
+        public bool CommandBool(string command, bool raw = false)
         {
             var parameters = new Dictionary<string, object>
             {
@@ -95,10 +95,10 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<BoolResponse>(request);
             _logger.LogDebug(response);
 
-            return response;
+            return response.HandleResponse<bool, BoolResponse>();
         }
 
-        public StringResponse CommandString(string command, bool raw = false)
+        public string CommandString(string command, bool raw = false)
         {
             var parameters = new Dictionary<string, object>
             {
@@ -111,10 +111,10 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<StringResponse>(request);
             _logger.LogDebug(response);
 
-            return response;
+            return response.HandleResponse<string, StringResponse>();
         }
 
-        public BoolResponse IsConnected()
+        public bool IsConnected()
         {
             RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.Connected, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
             _logger.LogDebug(request);
@@ -122,10 +122,10 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<BoolResponse>(request);
             _logger.LogDebug(response);
 
-            return response;
+            return response.HandleResponse<bool, BoolResponse>();
         }
 
-        public MethodResponse SetConnected(bool connected)
+        public void SetConnected(bool connected)
         {
             var parameters = new Dictionary<string, object>
             {
@@ -137,10 +137,10 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<MethodResponse>(request);
             _logger.LogDebug(response);
 
-            return response;
+            response.HandleResponse();
         }
 
-        public StringResponse GetDescription()
+        public string GetDescription()
         {
             RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.Description, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
             _logger.LogDebug(request);
@@ -148,10 +148,10 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<StringResponse>(request);
             _logger.LogDebug(response);
 
-            return response;
+            return response.HandleResponse<string, StringResponse>();
         }
 
-        public StringResponse GetDriverInfo()
+        public string GetDriverInfo()
         {
             RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.Driverinfo, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
             _logger.LogDebug(request);
@@ -159,10 +159,10 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<StringResponse>(request);
             _logger.LogDebug(response);
 
-            return response;
+            return response.HandleResponse<string, StringResponse>();
         }
 
-        public StringResponse GetDriverVersion()
+        public string GetDriverVersion()
         {
             RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.DriverVersion, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
             _logger.LogDebug(request);
@@ -170,10 +170,10 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<StringResponse>(request);
             _logger.LogDebug(response);
 
-            return response;
+            return response.HandleResponse<string, StringResponse>();
         }
 
-        public StringResponse GetName()
+        public string GetName()
         {
             RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.Name, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
             _logger.LogDebug(request);
@@ -181,10 +181,10 @@ namespace ASCOM.Alpaca.Client.Device
              var response = _commandSender.ExecuteRequest<StringResponse>(request);
              _logger.LogDebug(response);
 
-             return response;
+             return response.HandleResponse<string, StringResponse>();
         }
 
-        public StringArrayResponse GetSupportedActions()
+        public List<string> GetSupportedActions()
         {
             RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.SupportedActions, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
             _logger.LogDebug(request);
@@ -192,7 +192,7 @@ namespace ASCOM.Alpaca.Client.Device
             var response = _commandSender.ExecuteRequest<StringArrayResponse>(request);
             _logger.LogDebug(response);
 
-            return response;
+            return response.HandleResponse<List<string>, StringArrayResponse>();
         }
     }
 }

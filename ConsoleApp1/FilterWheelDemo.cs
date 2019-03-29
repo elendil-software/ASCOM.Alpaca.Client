@@ -1,5 +1,6 @@
 using System;
 using ASCOM.Alpaca.Client.Device;
+using ASCOM.Alpaca.Client.Exceptions;
 using Microsoft.Extensions.Logging;
 
 namespace ConsoleApp1
@@ -20,34 +21,43 @@ namespace ConsoleApp1
             try
             {
                 _logger.LogInformation("Connect Filter wheel");
-                var connectResponse = _filterWheel.SetConnected(true);
+                _filterWheel.SetConnected(true);
                 
-                var isConnectedResponse = _filterWheel.IsConnected();
-                _logger.LogInformation("is Connected : {Connected}", isConnectedResponse.Value);
+                var isConnected = _filterWheel.IsConnected();
+                _logger.LogInformation("is Connected : {Connected}", isConnected);
                 
-                var infoResponse = _filterWheel.GetName();
-                _logger.LogInformation("Name : {Name}", infoResponse.Value);
+                var name = _filterWheel.GetName();
+                _logger.LogInformation("Name : {Name}", name);
                 
-                infoResponse = _filterWheel.GetDescription();
-                _logger.LogInformation("Description : {Description}", infoResponse.Value);
+                var description = _filterWheel.GetDescription();
+                _logger.LogInformation("Description : {Description}", description);
                 
-                infoResponse = _filterWheel.GetDriverInfo();
-                _logger.LogInformation("DriverInfo : {DriverInfo}", infoResponse.Value);
+                var driverInfo = _filterWheel.GetDriverInfo();
+                _logger.LogInformation("DriverInfo : {DriverInfo}", driverInfo);
                 
-                infoResponse = _filterWheel.GetDriverVersion();
-                _logger.LogInformation("DriverVersion : {DriverVersion}", infoResponse.Value);
+                var driverVersion = _filterWheel.GetDriverVersion();
+                _logger.LogInformation("DriverVersion : {DriverVersion}", driverVersion);
                 
-                var namesResponse = _filterWheel.GetNames();
-                _logger.LogInformation("Filter names : {Names}", namesResponse.Value);
+                var names = _filterWheel.GetNames();
+                _logger.LogInformation("Filter names : {Names}", names);
 
-                var positionResponse = _filterWheel.GetPosition();
-                _logger.LogInformation("Current position : {Position}", positionResponse.Value);
+                var offsets = _filterWheel.GetFocusOffsets();
+                _logger.LogInformation("Filter offsets : {Offsets}", offsets);
+
+                var position = _filterWheel.GetPosition();
+                _logger.LogInformation("Current position : {Position}", position);
                 
                 _logger.LogInformation("Set filter position");
-                var setPositionResponse = _filterWheel.SetPosition(2);
+                _filterWheel.SetPosition(2);
                 
-                positionResponse = _filterWheel.GetPosition();
-                _logger.LogInformation("Current position : {Position}", positionResponse.Value);
+                position = _filterWheel.GetPosition();
+                _logger.LogInformation("Current position : {Position}", position);
+                
+                _filterWheel.SetPosition(1000);
+            }
+            catch (ASCOMRemoteResponseException e)
+            {
+                _logger.LogError(e, $"{e.ErrorNumber} : {e.Message}");
             }
             catch (Exception e)
             {

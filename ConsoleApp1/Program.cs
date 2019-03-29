@@ -1,11 +1,9 @@
 ﻿using System;
 using System.IO;
-using ASCOM.Alpaca.Client;
 using ASCOM.Alpaca.Client.Device;
 using ASCOM.Alpaca.Client.Configuration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using RestSharp;
 using Serilog;
 
 namespace ConsoleApp1
