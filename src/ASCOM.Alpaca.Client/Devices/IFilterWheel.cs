@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace ASCOM.Alpaca.Client.Device
+namespace ASCOM.Alpaca.Client.Devices
 {
-    public interface IFilterWheel : ICommonMethods
+    public interface IFilterWheel : IDeviceBase
     {
         /// <summary>
         /// Get the filter focus offsets

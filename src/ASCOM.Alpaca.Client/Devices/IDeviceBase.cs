@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace ASCOM.Alpaca.Client.Device
+namespace ASCOM.Alpaca.Client.Devices
 {
-    public interface ICommonMethods
+    public interface IDeviceBase
     {
         /// <summary>
         /// Invokes the specified device-specific action.

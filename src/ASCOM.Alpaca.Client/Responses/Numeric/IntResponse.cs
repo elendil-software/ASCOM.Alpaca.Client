@@ -1,4 +1,4 @@
-﻿namespace ASCOM.Alpaca.Client.Responses
+﻿namespace ASCOM.Alpaca.Client.Responses.Numeric
 {
     public class IntResponse : ResponseBase, IValueResponse<int>
     {

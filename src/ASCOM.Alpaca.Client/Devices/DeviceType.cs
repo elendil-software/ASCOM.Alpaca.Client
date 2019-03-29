@@ -1,15 +1,15 @@
-namespace ASCOM.Alpaca.Client.Device
+namespace ASCOM.Alpaca.Client.Devices
 {
     public enum DeviceType
     {
-        @switch,
-        safetymonitor,
-        dome,
-        camera,
-        observingconditions,
+        Switch,
+        SafetyMonitor,
+        Dome,
+        Camera,
+        ObservingConditions,
         FilterWheel,
-        focuser,
-        rotator,
-        telescope
+        Focuser,
+        Rotator,
+        Telescope
     }
 }

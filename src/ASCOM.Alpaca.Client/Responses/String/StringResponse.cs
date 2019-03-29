@@ -1,4 +1,4 @@
-﻿namespace ASCOM.Alpaca.Client.Responses
+﻿namespace ASCOM.Alpaca.Client.Responses.String
 {
     public class StringResponse : ResponseBase, IValueResponse<string>
     {

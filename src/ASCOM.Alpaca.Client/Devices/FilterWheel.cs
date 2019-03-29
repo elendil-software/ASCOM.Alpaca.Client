@@ -1,24 +1,29 @@
 using System.Collections.Generic;
 using System.Globalization;
-using ASCOM.Alpaca.Client.Logger;
-using ASCOM.Alpaca.Client.Methods;
 using ASCOM.Alpaca.Client.Configuration;
+using ASCOM.Alpaca.Client.Devices.Methods;
+using ASCOM.Alpaca.Client.Logger;
+using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
+using ASCOM.Alpaca.Client.Responses.Empty;
+using ASCOM.Alpaca.Client.Responses.Numeric;
+using ASCOM.Alpaca.Client.Responses.String;
+using ASCOM.Alpaca.Client.Transactions;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using RestSharp;
 
-namespace ASCOM.Alpaca.Client.Device
+namespace ASCOM.Alpaca.Client.Devices
 {
     public class FilterWheel : DeviceBase, IFilterWheel
     {
         protected override DeviceType DeviceType { get; } = DeviceType.FilterWheel;
         
-        public FilterWheel(IOptionsSnapshot<DeviceConfiguration> configuration, ILogger<DeviceBase> logger) : base(configuration, logger)
+        public FilterWheel(DeviceConfiguration configuration, ILogger<DeviceBase> logger = null) : base(configuration, logger)
         {
         }
-
-        public FilterWheel(DeviceConfiguration configuration, ILogger<DeviceBase> logger) : base(configuration, logger)
+        
+        public FilterWheel(IOptionsSnapshot<DeviceConfiguration> configuration, ILogger<DeviceBase> logger = null) : base(configuration, logger)
         {
         }
 

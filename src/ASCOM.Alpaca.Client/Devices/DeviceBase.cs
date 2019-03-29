@@ -1,17 +1,21 @@
 using System;
 using System.Collections.Generic;
-using ASCOM.Alpaca.Client.Logger;
-using ASCOM.Alpaca.Client.Methods;
 using ASCOM.Alpaca.Client.Configuration;
+using ASCOM.Alpaca.Client.Devices.Methods;
+using ASCOM.Alpaca.Client.Logger;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
+using ASCOM.Alpaca.Client.Responses.Boolean;
+using ASCOM.Alpaca.Client.Responses.Empty;
+using ASCOM.Alpaca.Client.Responses.String;
+using ASCOM.Alpaca.Client.Transactions;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using RestSharp;
 
-namespace ASCOM.Alpaca.Client.Device
+namespace ASCOM.Alpaca.Client.Devices
 {
-    public abstract class DeviceBase : ICommonMethods
+    public abstract class DeviceBase : IDeviceBase
     {
         protected readonly ILogger<DeviceBase> _logger;
         protected readonly ICommandSender _commandSender;
@@ -20,19 +24,19 @@ namespace ASCOM.Alpaca.Client.Device
         private readonly DeviceConfiguration _configuration;
         protected abstract DeviceType DeviceType { get; }
 
-        protected DeviceBase(IOptionsSnapshot<DeviceConfiguration> configuration, ILogger<DeviceBase> logger)
+        protected DeviceBase(DeviceConfiguration configuration, ILogger<DeviceBase> logger)
         {
-            _configuration = configuration?.Get(DeviceType.ToString()) ?? throw new ArgumentNullException(nameof(configuration));
+            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             
             _clientTransactionIdGenerator = new ClientTransactionIdGenerator();
             _requestBuilder = new RequestBuilder(DeviceType, _configuration.DeviceNumber);
             _commandSender = new CommandSender(new RestClient(_configuration.GetBaseUrl()));
         }
-
-        protected DeviceBase(DeviceConfiguration configuration, ILogger<DeviceBase> logger)
+        
+        protected DeviceBase(IOptionsSnapshot<DeviceConfiguration> configuration, ILogger<DeviceBase> logger)
         {
-            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            _configuration = configuration?.Get(DeviceType.ToString()) ?? throw new ArgumentNullException(nameof(configuration));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             
             _clientTransactionIdGenerator = new ClientTransactionIdGenerator();

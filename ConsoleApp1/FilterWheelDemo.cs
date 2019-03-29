@@ -1,5 +1,5 @@
 using System;
-using ASCOM.Alpaca.Client.Device;
+using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Exceptions;
 using Microsoft.Extensions.Logging;
 

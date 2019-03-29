@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Client.Device
+namespace ASCOM.Alpaca.Client.Transactions
 {
     public interface IClientTransactionIdGenerator
     {

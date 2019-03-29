@@ -1,4 +1,4 @@
-﻿namespace ASCOM.Alpaca.Client.Methods
+﻿namespace ASCOM.Alpaca.Client.Devices.Methods
 {
     public enum FilterWheelMethod
     {

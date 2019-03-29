@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
-using ASCOM.Alpaca.Client.Device;
 using ASCOM.Alpaca.Client.Configuration;
+using ASCOM.Alpaca.Client.Devices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;

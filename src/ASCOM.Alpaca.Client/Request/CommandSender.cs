@@ -4,7 +4,7 @@ using ASCOM.Alpaca.Client.Exceptions;
 using ASCOM.Alpaca.Client.Responses;
 using RestSharp;
 
-namespace ASCOM.Alpaca.Client
+namespace ASCOM.Alpaca.Client.Request
 {
     public class CommandSender : ICommandSender
     {
