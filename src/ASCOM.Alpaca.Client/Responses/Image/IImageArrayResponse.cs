@@ -1,6 +1,6 @@
 ﻿namespace ASCOM.Alpaca.Client.Responses.Image
 {
-    public interface IImageArrayResponse<T> : IValueResponse<T>
+    public interface IImageArrayResponse<out T> : IValueResponse<T>
     {
         /// <summary>
         /// minimum: 0
