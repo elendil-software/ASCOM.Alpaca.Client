@@ -6,9 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 
-namespace ConsoleApp1
+namespace ASCOM.Alpaca.Client.Demo
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {

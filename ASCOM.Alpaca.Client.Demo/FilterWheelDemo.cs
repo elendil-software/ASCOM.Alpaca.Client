@@ -3,7 +3,7 @@ using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Exceptions;
 using Microsoft.Extensions.Logging;
 
-namespace ConsoleApp1
+namespace ASCOM.Alpaca.Client.Demo
 {
     internal class FilterWheelDemo
     {
