@@ -3,12 +3,11 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>netcoreapp2.2</TargetFramework>
-        <AssemblyName>ASCOM.Alpaca.Client.Demo</AssemblyName>
         <RootNamespace>ASCOM.Alpaca.Client.Demo</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\src\ASCOM.Alpaca.Client\ASCOM.Alpaca.Client.csproj" />
+      <ProjectReference Include="..\ASCOM.Alpaca.Client\ASCOM.Alpaca.Client.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -16,8 +15,9 @@
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
       <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
       <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
+      <PackageReference Include="Serilog.Settings.Configuration" Version="3.0.1" />
       <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
-      <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
+      <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
     </ItemGroup>
 
     <ItemGroup>

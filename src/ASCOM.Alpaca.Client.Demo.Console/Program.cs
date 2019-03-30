@@ -4,7 +4,9 @@ using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Serilog;
+using Serilog.AspNetCore;
 
 namespace ASCOM.Alpaca.Client.Demo
 {
@@ -15,7 +17,7 @@ namespace ASCOM.Alpaca.Client.Demo
             IServiceCollection serviceCollection = new ServiceCollection();
 
             IConfiguration config = BuildConfiguration();
-            ConfigureLogger();
+            ConfigureLogger(config);
             ConfigureServices(serviceCollection, config);
             ServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
             
@@ -32,19 +34,18 @@ namespace ASCOM.Alpaca.Client.Demo
                 .Build();
         }
 
-        private static void ConfigureLogger()
+        private static void ConfigureLogger(IConfiguration config)
         {
             Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Debug()
-                .WriteTo.Console()
-                .WriteTo.File("ASCOM-Alpaca-Client-Demo.log")
+                .ReadFrom.Configuration(config)
                 .CreateLogger();
         }
 
         private static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
             services
-                .Configure<DeviceConfiguration>("FilterWheel", configuration.GetSection("FilterWheel"))
+                .Configure<DeviceConfiguration>("FilterWheel", configuration.GetSection("Devices:FilterWheel"))
+                .AddSingleton<ILoggerFactory>(s => new SerilogLoggerFactory(Log.Logger, true))
                 .AddLogging(configure => configure.AddSerilog())
                 .AddTransient<FilterWheelDemo>()
                 .AddScoped<FilterWheel>();
