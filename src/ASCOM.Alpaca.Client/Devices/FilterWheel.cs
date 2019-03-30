@@ -34,33 +34,33 @@ namespace ASCOM.Alpaca.Client.Devices
 
         public List<int> GetFocusOffsets()
         {
-            RestRequest request = _requestBuilder.BuildRestRequest(FilterWheelMethod.FocusOffsets, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(FilterWheelMethod.FocusOffsets, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<IntArrayResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<IntArrayResponse>(request);
+            Logger.LogDebug(response);
 
             return response.HandleResponse<List<int>, IntArrayResponse>();
         }
 
         public List<string> GetNames()
         {
-            RestRequest request = _requestBuilder.BuildRestRequest(FilterWheelMethod.Names, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(FilterWheelMethod.Names, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<StringArrayResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<StringArrayResponse>(request);
+            Logger.LogDebug(response);
 
             return response.HandleResponse<List<string>, StringArrayResponse>();
         }
 
         public int GetPosition()
         {
-            RestRequest request = _requestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<IntResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<IntResponse>(request);
+            Logger.LogDebug(response);
 
             return response.HandleResponse<int, IntResponse>();
         }
@@ -72,11 +72,11 @@ namespace ASCOM.Alpaca.Client.Devices
                 {"Position", position.ToString(CultureInfo.InvariantCulture)}
             };
             
-            RestRequest request = _requestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.PUT, parameters, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<MethodResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<MethodResponse>(request);
+            Logger.LogDebug(response);
 
             response.HandleResponse();
         }

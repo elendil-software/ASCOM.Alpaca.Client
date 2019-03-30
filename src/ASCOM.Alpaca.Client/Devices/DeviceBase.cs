@@ -17,10 +17,10 @@ namespace ASCOM.Alpaca.Client.Devices
 {
     public abstract class DeviceBase : IDeviceBase
     {
-        protected readonly ILogger<DeviceBase> _logger;
-        protected readonly ICommandSender _commandSender;
-        protected readonly RequestBuilder _requestBuilder;
-        protected readonly IClientTransactionIdGenerator _clientTransactionIdGenerator;
+        protected readonly ILogger<DeviceBase> Logger;
+        protected readonly ICommandSender CommandSender;
+        protected readonly RequestBuilder RequestBuilder;
+        protected readonly IClientTransactionIdGenerator ClientTransactionIdGenerator;
         protected abstract DeviceType DeviceType { get; }
 
         protected DeviceBase(DeviceConfiguration configuration, ILogger<DeviceBase> logger)
@@ -30,11 +30,11 @@ namespace ASCOM.Alpaca.Client.Devices
                 throw new ArgumentNullException(nameof(configuration));
             }
             
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            Logger = logger ?? throw new ArgumentNullException(nameof(logger));
             
-            _clientTransactionIdGenerator = new ClientTransactionIdGenerator();
-            _requestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber);
-            _commandSender = new CommandSender(new RestClient(configuration.GetBaseUrl()));
+            ClientTransactionIdGenerator = new ClientTransactionIdGenerator();
+            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber);
+            CommandSender = new CommandSender(new RestClient(configuration.GetBaseUrl()));
         }
         
         protected DeviceBase(IOptionsSnapshot<DeviceConfiguration> configuration, ILogger<DeviceBase> logger)
@@ -45,11 +45,11 @@ namespace ASCOM.Alpaca.Client.Devices
             }
             
             var configuration1 = configuration.Get(DeviceType.ToString()) ?? throw new ArgumentNullException(nameof(configuration));
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            Logger = logger ?? throw new ArgumentNullException(nameof(logger));
             
-            _clientTransactionIdGenerator = new ClientTransactionIdGenerator();
-            _requestBuilder = new RequestBuilder(DeviceType, configuration1.DeviceNumber);
-            _commandSender = new CommandSender(new RestClient(configuration1.GetBaseUrl()));
+            ClientTransactionIdGenerator = new ClientTransactionIdGenerator();
+            RequestBuilder = new RequestBuilder(DeviceType, configuration1.DeviceNumber);
+            CommandSender = new CommandSender(new RestClient(configuration1.GetBaseUrl()));
         }
         
         protected DeviceBase(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger<DeviceBase> logger)
@@ -59,10 +59,10 @@ namespace ASCOM.Alpaca.Client.Devices
                 throw new ArgumentNullException(nameof(configuration));
             }
             
-            _commandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
-            _clientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-            _requestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber);
+            CommandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
+            ClientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
+            Logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber);
         }
 
         public string Action(string actionName, string actionParameters)
@@ -73,11 +73,11 @@ namespace ASCOM.Alpaca.Client.Devices
                 {"Parameters", actionParameters}
             };
 
-            RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.Action, Method.PUT, parameters, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.Action, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<StringResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<StringResponse>(request);
+            Logger.LogDebug(response);
             
             return response.HandleResponse<string, StringResponse>();
         }
@@ -89,11 +89,11 @@ namespace ASCOM.Alpaca.Client.Devices
                 {"Command", command},
                 {"Raw", raw.ToString()}
             };
-            RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.CommandBlind, Method.PUT, parameters, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.CommandBlind, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<MethodResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<MethodResponse>(request);
+            Logger.LogDebug(response);
 
             response.HandleResponse();
         }
@@ -105,11 +105,11 @@ namespace ASCOM.Alpaca.Client.Devices
                 {"Command", command},
                 {"Raw", raw.ToString()}
             };
-            RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.CommandBool, Method.PUT, parameters, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.CommandBool, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<BoolResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<BoolResponse>(request);
+            Logger.LogDebug(response);
 
             return response.HandleResponse<bool, BoolResponse>();
         }
@@ -121,22 +121,22 @@ namespace ASCOM.Alpaca.Client.Devices
                 {"Command", command},
                 {"Raw", raw.ToString()}
             };
-            RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.CommandString, Method.PUT, parameters, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.CommandString, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<StringResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<StringResponse>(request);
+            Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
         }
 
         public bool IsConnected()
         {
-            RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.Connected, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.Connected, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<BoolResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<BoolResponse>(request);
+            Logger.LogDebug(response);
 
             return response.HandleResponse<bool, BoolResponse>();
         }
@@ -147,66 +147,66 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 {"Connected", connected.ToString()}
             };
-            RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.Connected, Method.PUT, parameters, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.Connected, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<MethodResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<MethodResponse>(request);
+            Logger.LogDebug(response);
 
             response.HandleResponse();
         }
 
         public string GetDescription()
         {
-            RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.Description, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.Description, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<StringResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<StringResponse>(request);
+            Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
         }
 
         public string GetDriverInfo()
         {
-            RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.Driverinfo, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.Driverinfo, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<StringResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<StringResponse>(request);
+            Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
         }
 
         public string GetDriverVersion()
         {
-            RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.DriverVersion, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.DriverVersion, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<StringResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<StringResponse>(request);
+            Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
         }
 
         public string GetName()
         {
-            RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.Name, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.Name, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-             var response = _commandSender.ExecuteRequest<StringResponse>(request);
-             _logger.LogDebug(response);
+             var response = CommandSender.ExecuteRequest<StringResponse>(request);
+             Logger.LogDebug(response);
 
              return response.HandleResponse<string, StringResponse>();
         }
 
         public List<string> GetSupportedActions()
         {
-            RestRequest request = _requestBuilder.BuildRestRequest(CommonMethod.SupportedActions, Method.GET, _clientTransactionIdGenerator.GetTransactionId());
-            _logger.LogDebug(request);
+            RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.SupportedActions, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
             
-            var response = _commandSender.ExecuteRequest<StringArrayResponse>(request);
-            _logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<StringArrayResponse>(request);
+            Logger.LogDebug(response);
 
             return response.HandleResponse<List<string>, StringArrayResponse>();
         }
