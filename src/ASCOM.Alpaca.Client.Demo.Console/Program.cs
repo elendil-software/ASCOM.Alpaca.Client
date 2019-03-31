@@ -21,7 +21,10 @@ namespace ASCOM.Alpaca.Client.Demo
             ConfigureServices(serviceCollection, config);
             ServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
             
-            serviceProvider.GetService<FilterWheelDemo>().Run();
+            foreach (IDeviceDemo deviceDemo in serviceProvider.GetServices<IDeviceDemo>())
+            {
+                deviceDemo.Run();
+            }
             
             Console.ReadKey();
         }
@@ -47,7 +50,7 @@ namespace ASCOM.Alpaca.Client.Demo
                 .Configure<DeviceConfiguration>("FilterWheel", configuration.GetSection("Devices:FilterWheel"))
                 .AddSingleton<ILoggerFactory>(s => new SerilogLoggerFactory(Log.Logger, true))
                 .AddLogging(configure => configure.AddSerilog())
-                .AddTransient<FilterWheelDemo>()
+                .AddTransient<IDeviceDemo, FilterWheelDemo>()
                 .AddScoped<FilterWheel>();
         }
     }

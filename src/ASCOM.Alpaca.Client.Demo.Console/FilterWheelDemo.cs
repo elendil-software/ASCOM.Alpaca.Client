@@ -5,7 +5,12 @@ using Microsoft.Extensions.Logging;
 
 namespace ASCOM.Alpaca.Client.Demo
 {
-    internal class FilterWheelDemo
+    internal interface IDeviceDemo
+    {
+        void Run();
+    }
+    
+    internal class FilterWheelDemo : IDeviceDemo
     {
         private readonly ILogger<FilterWheelDemo> _logger;
         private readonly FilterWheel _filterWheel;
