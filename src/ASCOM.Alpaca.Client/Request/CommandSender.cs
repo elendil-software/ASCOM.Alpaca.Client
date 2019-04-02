@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net;
-using ASCOM.Alpaca.Client.Exceptions;
 using ASCOM.Alpaca.Client.Responses;
 using RestSharp;
 
@@ -24,7 +23,7 @@ namespace ASCOM.Alpaca.Client.Request
             }
             else
             {
-                throw new ASCOMRemoteException(response.Content);
+                throw new DriverException(response.Content);
             }
         }
 
@@ -37,7 +36,7 @@ namespace ASCOM.Alpaca.Client.Request
             }
             else
             {
-                throw new ASCOMRemoteException(response.Content);
+                throw new DriverException(response.Content);
             }
         }
     }

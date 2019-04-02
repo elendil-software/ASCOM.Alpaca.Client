@@ -1,15 +1,9 @@
 using System;
 using ASCOM.Alpaca.Client.Devices;
-using ASCOM.Alpaca.Client.Exceptions;
 using Microsoft.Extensions.Logging;
 
 namespace ASCOM.Alpaca.Client.Demo
 {
-    internal interface IDeviceDemo
-    {
-        void Run();
-    }
-    
     internal class FilterWheelDemo : IDeviceDemo
     {
         private readonly ILogger<FilterWheelDemo> _logger;
@@ -59,10 +53,6 @@ namespace ASCOM.Alpaca.Client.Demo
                 _logger.LogInformation("Current position : {Position}", position);
                 
                 _filterWheel.SetPosition(1000);
-            }
-            catch (ASCOMRemoteResponseException e)
-            {
-                _logger.LogError(e, $"{e.ErrorNumber} : {e.Message}");
             }
             catch (Exception e)
             {
