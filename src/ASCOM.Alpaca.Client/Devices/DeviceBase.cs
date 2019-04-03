@@ -21,15 +21,13 @@ namespace ASCOM.Alpaca.Client.Devices
         protected readonly ICommandSender CommandSender;
         protected readonly RequestBuilder RequestBuilder;
         protected readonly IClientTransactionIdGenerator ClientTransactionIdGenerator;
+        private readonly DeviceConfiguration _configuration;
         protected abstract DeviceType DeviceType { get; }
+        public int DeviceNumber => _configuration.DeviceNumber;
 
         protected DeviceBase(DeviceConfiguration configuration, ILogger<DeviceBase> logger)
         {
-            if (configuration == null)
-            {
-                throw new ArgumentNullException(nameof(configuration));
-            }
-            
+            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
             Logger = logger ?? throw new ArgumentNullException(nameof(logger));
             
             ClientTransactionIdGenerator = new ClientTransactionIdGenerator();
@@ -44,12 +42,12 @@ namespace ASCOM.Alpaca.Client.Devices
                 throw new ArgumentNullException(nameof(configuration));
             }
             
-            var configuration1 = configuration.Get(DeviceType.ToString()) ?? throw new ArgumentNullException(nameof(configuration));
+            _configuration = configuration.Get(DeviceType.ToString()) ?? throw new ArgumentNullException(nameof(configuration));
             Logger = logger ?? throw new ArgumentNullException(nameof(logger));
             
             ClientTransactionIdGenerator = new ClientTransactionIdGenerator();
-            RequestBuilder = new RequestBuilder(DeviceType, configuration1.DeviceNumber);
-            CommandSender = new CommandSender(new RestClient(configuration1.GetBaseUrl()));
+            RequestBuilder = new RequestBuilder(DeviceType, _configuration.DeviceNumber);
+            CommandSender = new CommandSender(new RestClient(_configuration.GetBaseUrl()));
         }
         
         protected DeviceBase(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger<DeviceBase> logger)

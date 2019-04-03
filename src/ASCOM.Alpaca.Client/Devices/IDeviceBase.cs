@@ -4,6 +4,8 @@ namespace ASCOM.Alpaca.Client.Devices
 {
     public interface IDeviceBase
     {
+        int DeviceNumber { get; }
+        
         /// <summary>
         /// Invokes the specified device-specific action.
         /// </summary>
