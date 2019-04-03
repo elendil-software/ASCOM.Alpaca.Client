@@ -46,12 +46,35 @@ namespace ASCOM.Alpaca.Client.Demo
 
         private static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
+            DevicesConfiguration devicesConfiguration = new DevicesConfiguration();
+            configuration.Bind(devicesConfiguration);
+
             services
                 .Configure<DeviceConfiguration>("FilterWheel", configuration.GetSection("Devices:FilterWheel"))
                 .AddSingleton<ILoggerFactory>(s => new SerilogLoggerFactory(Log.Logger, true))
                 .AddLogging(configure => configure.AddSerilog())
-                .AddTransient<IDeviceDemo, FilterWheelDemo>()
-                .AddScoped<FilterWheel>();
+                .AddDevices(devicesConfiguration)
+                .AddTransient<IDeviceDemo, FilterWheelDemo>();
+        }
+
+        private static IServiceCollection AddDevices(this IServiceCollection services, DevicesConfiguration devicesConfiguration)
+        {
+            foreach (var deviceConfiguration in devicesConfiguration.Devices)
+            {
+                services.AddScoped<IDeviceBase>(ctx =>
+                {
+                    switch (deviceConfiguration.DeviceType)
+                    {
+                        case DeviceType.FilterWheel:
+                            var logger = ctx.GetService<ILogger<FilterWheel>>();
+                            return new FilterWheel(deviceConfiguration, logger);
+                        default:
+                            throw new Exception("Unsupported device");
+                    }
+                });
+            }
+            
+            return services;
         }
     }
 }
