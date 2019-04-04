@@ -21,8 +21,19 @@ namespace ASCOM.Alpaca.Client.DependencyInjection.Microsoft
                             var logger = ctx.GetService<ILogger<FilterWheel>>();
                             var clientTransactionIdGenerator = ctx.GetService<IClientTransactionIdGenerator>();
                             return new FilterWheel(deviceConfiguration, clientTransactionIdGenerator, logger);
+                        
+                        case DeviceType.Switch:
+                        case DeviceType.SafetyMonitor:
+                        case DeviceType.Dome:
+                        case DeviceType.Camera:
+                        case DeviceType.ObservingConditions:
+                        case DeviceType.Focuser:
+                        case DeviceType.Rotator:
+                        case DeviceType.Telescope:
+                            throw new NotImplementedException(deviceConfiguration.DeviceType.ToString());
+                        
                         default:
-                            throw new Exception("Unsupported device");
+                            throw new ArgumentOutOfRangeException(nameof(deviceConfiguration.DeviceType));
                     }
                 });
             }
