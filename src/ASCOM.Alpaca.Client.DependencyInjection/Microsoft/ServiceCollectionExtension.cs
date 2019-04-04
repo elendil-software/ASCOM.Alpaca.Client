@@ -1,6 +1,7 @@
 using System;
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices;
+using ASCOM.Alpaca.Client.Transactions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -18,7 +19,8 @@ namespace ASCOM.Alpaca.Client.DependencyInjection.Microsoft
                     {
                         case DeviceType.FilterWheel:
                             var logger = ctx.GetService<ILogger<FilterWheel>>();
-                            return new FilterWheel(deviceConfiguration, logger);
+                            var clientTransactionIdGenerator = ctx.GetService<IClientTransactionIdGenerator>();
+                            return new FilterWheel(deviceConfiguration, clientTransactionIdGenerator, logger);
                         default:
                             throw new Exception("Unsupported device");
                     }

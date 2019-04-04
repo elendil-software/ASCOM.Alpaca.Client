@@ -2,8 +2,8 @@
 using System.IO;
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.DependencyInjection.Microsoft;
-using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Devices.Providers;
+using ASCOM.Alpaca.Client.Transactions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -53,13 +53,12 @@ namespace ASCOM.Alpaca.Client.Demo
 
             services
                 .Configure<DeviceConfiguration>("FilterWheel", configuration.GetSection("Devices:FilterWheel"))
-                .AddSingleton<ILoggerFactory>(s => new SerilogLoggerFactory(Log.Logger, true))
                 .AddLogging(configure => configure.AddSerilog())
+                .AddSingleton<ILoggerFactory>(s => new SerilogLoggerFactory(Log.Logger, true))
+                .AddSingleton<IClientTransactionIdGenerator, ClientTransactionIdGenerator>()
                 .AddDevices(devicesConfiguration)
                 .AddSingleton<IDeviceProvider, DeviceProvider>()
                 .AddTransient<IDeviceDemo, FilterWheelDemo>();
         }
-
-        
     }
 }

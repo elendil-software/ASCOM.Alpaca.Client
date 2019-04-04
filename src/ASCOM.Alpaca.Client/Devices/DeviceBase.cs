@@ -10,7 +10,6 @@ using ASCOM.Alpaca.Client.Responses.Empty;
 using ASCOM.Alpaca.Client.Responses.String;
 using ASCOM.Alpaca.Client.Transactions;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Devices
@@ -25,41 +24,23 @@ namespace ASCOM.Alpaca.Client.Devices
         protected abstract DeviceType DeviceType { get; }
         public int DeviceNumber => _configuration.DeviceNumber;
 
-        protected DeviceBase(DeviceConfiguration configuration, ILogger<DeviceBase> logger)
+        protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger<DeviceBase> logger)
         {
             _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            ClientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
             Logger = logger ?? throw new ArgumentNullException(nameof(logger));
             
-            ClientTransactionIdGenerator = new ClientTransactionIdGenerator();
             RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber);
             CommandSender = new CommandSender(new RestClient(configuration.GetBaseUrl()));
         }
-        
-        protected DeviceBase(IOptionsSnapshot<DeviceConfiguration> configuration, ILogger<DeviceBase> logger)
+
+        protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger<DeviceBase> logger, ICommandSender commandSender)
         {
-            if (configuration == null)
-            {
-                throw new ArgumentNullException(nameof(configuration));
-            }
-            
-            _configuration = configuration.Get(DeviceType.ToString()) ?? throw new ArgumentNullException(nameof(configuration));
-            Logger = logger ?? throw new ArgumentNullException(nameof(logger));
-            
-            ClientTransactionIdGenerator = new ClientTransactionIdGenerator();
-            RequestBuilder = new RequestBuilder(DeviceType, _configuration.DeviceNumber);
-            CommandSender = new CommandSender(new RestClient(_configuration.GetBaseUrl()));
-        }
-        
-        protected DeviceBase(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger<DeviceBase> logger)
-        {
-            if (configuration == null)
-            {
-                throw new ArgumentNullException(nameof(configuration));
-            }
-            
-            CommandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
+            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
             ClientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
             Logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            CommandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
+            
             RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber);
         }
 
