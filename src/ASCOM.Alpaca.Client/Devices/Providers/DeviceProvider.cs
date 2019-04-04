@@ -8,30 +8,23 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
 {
     public class DeviceProvider : IDeviceProvider
     {
-        private readonly List<IDeviceBase> _devices = new List<IDeviceBase>();
-        private readonly DevicesConfiguration _devicesConfiguration;
-        private readonly IDeviceFactory _deviceFactory;
-        private readonly object devicesLock = new object();
+        private readonly IEnumerable<IDeviceBase> _devices;
         
-        public DeviceProvider(IOptionsSnapshot<DevicesConfiguration> devicesConfiguration, IDeviceFactory deviceFactory)
+        public DeviceProvider(IEnumerable<IDeviceBase> devices)
         {
-            _devicesConfiguration = devicesConfiguration?.Value ?? throw new ArgumentNullException(nameof(devicesConfiguration));
-            _deviceFactory = deviceFactory ?? throw new ArgumentNullException(nameof(deviceFactory));
+            _devices = devices ?? throw new ArgumentNullException(nameof(devices));
         }
 
         public T GetDevice<T>(int deviceNumber)
         {
-            lock (devicesLock)
-            {
-                IDeviceBase foundDevice = _devices.FirstOrDefault(d => d.GetType() == typeof(T) && d.DeviceNumber == deviceNumber);
-
-                if (foundDevice == null)
-                {
-                    //TODO : create new instance of device and add to the collection
-                }
-
-                return (T)foundDevice;
-            }
+            IDeviceBase foundDevice = _devices.FirstOrDefault(d => d.GetType() == typeof(T) && d.DeviceNumber == deviceNumber);
+            return (T)foundDevice;
+        }
+        
+        public IEnumerable<T> GetDevices<T>()
+        {
+            IEnumerable<IDeviceBase> foundDevice = _devices.Where(d => d.GetType() == typeof(T));
+            return (IEnumerable<T>)foundDevice;
         }
     }
 }
