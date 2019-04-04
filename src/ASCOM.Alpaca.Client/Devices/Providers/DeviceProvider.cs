@@ -31,8 +31,8 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
         
         public IEnumerable<T> GetDevices<T>() where T : IDeviceBase
         {
-            IEnumerable<IDeviceBase> foundDevice = _devices.Where(d => d.GetType() == typeof(T));
-            return (IEnumerable<T>)foundDevice;
+            IEnumerable<T> foundDevices = _devices.Where(d => d.GetType() == typeof(T)).Cast<T>();
+            return foundDevices;
         }
     }
 }
