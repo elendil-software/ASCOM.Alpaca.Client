@@ -15,13 +15,13 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
             _devices = devices ?? throw new ArgumentNullException(nameof(devices));
         }
 
-        public T GetDevice<T>(int deviceNumber)
+        public T GetDevice<T>(int deviceNumber) where T : IDeviceBase
         {
             IDeviceBase foundDevice = _devices.FirstOrDefault(d => d.GetType() == typeof(T) && d.DeviceNumber == deviceNumber);
             return (T)foundDevice;
         }
         
-        public IEnumerable<T> GetDevices<T>()
+        public IEnumerable<T> GetDevices<T>() where T : IDeviceBase
         {
             IEnumerable<IDeviceBase> foundDevice = _devices.Where(d => d.GetType() == typeof(T));
             return (IEnumerable<T>)foundDevice;
