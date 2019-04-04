@@ -10,7 +10,6 @@ using ASCOM.Alpaca.Client.Responses.Numeric;
 using ASCOM.Alpaca.Client.Responses.String;
 using ASCOM.Alpaca.Client.Transactions;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Devices
