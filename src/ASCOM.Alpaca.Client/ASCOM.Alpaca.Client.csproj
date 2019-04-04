@@ -11,7 +11,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>ASCOM.Alpaca.Client</PackageId>
-    <PackageProjectUrl>https://www.elendil.software/en/softwares/libs/ascom-alpaca-client.html</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</PackageProjectUrl>
     <Product>C# ASCOM Alpaca Client</Product>
     <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</RepositoryUrl>
     <PackageTags>ASCOM astronomy</PackageTags>
