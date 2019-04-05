@@ -14,7 +14,7 @@ using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
-    public abstract class DeviceBase : IDeviceBase
+    public abstract class DeviceBase : IDevice
     {
         protected readonly ILogger<DeviceBase> Logger;
         protected readonly ICommandSender CommandSender;

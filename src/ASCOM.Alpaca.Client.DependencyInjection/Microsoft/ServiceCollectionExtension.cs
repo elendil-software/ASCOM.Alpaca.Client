@@ -13,7 +13,7 @@ namespace ASCOM.Alpaca.Client.DependencyInjection.Microsoft
         {
             foreach (var deviceConfiguration in devicesConfiguration.Devices)
             {
-                services.AddScoped<IDeviceBase>(ctx =>
+                services.AddScoped<IDevice>(ctx =>
                 {
                     switch (deviceConfiguration.DeviceType)
                     {

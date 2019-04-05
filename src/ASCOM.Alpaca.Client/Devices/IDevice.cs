@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
-    public interface IDeviceBase
+    public interface IDevice
     {
         int DeviceNumber { get; }
         
