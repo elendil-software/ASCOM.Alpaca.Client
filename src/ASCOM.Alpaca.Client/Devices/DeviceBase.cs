@@ -44,7 +44,7 @@ namespace ASCOM.Alpaca.Client.Devices
             RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber);
         }
 
-        public string Action(string actionName, string actionParameters)
+        public string InvokeAction(string actionName, string actionParameters)
         {
             var parameters = new Dictionary<string, object>
             {
@@ -61,7 +61,7 @@ namespace ASCOM.Alpaca.Client.Devices
             return response.HandleResponse<string, StringResponse>();
         }
 
-        public void CommandBlind(string command, bool raw = false)
+        public void SendCommandBlind(string command, bool raw = false)
         {
             var parameters = new Dictionary<string, object>
             {
@@ -77,7 +77,7 @@ namespace ASCOM.Alpaca.Client.Devices
             response.HandleResponse();
         }
 
-        public bool CommandBool(string command, bool raw = false)
+        public bool SendCommandBool(string command, bool raw = false)
         {
             var parameters = new Dictionary<string, object>
             {
@@ -93,7 +93,7 @@ namespace ASCOM.Alpaca.Client.Devices
             return response.HandleResponse<bool, BoolResponse>();
         }
 
-        public string CommandString(string command, bool raw = false)
+        public string SendCommandString(string command, bool raw = false)
         {
             var parameters = new Dictionary<string, object>
             {

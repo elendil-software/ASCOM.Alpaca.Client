@@ -12,14 +12,14 @@ namespace ASCOM.Alpaca.Client.Devices
         /// <param name="actionName">A well known name that represents the action to be carried out.</param>
         /// <param name="actionParameters">List of required parameters or an Empty String if none are required</param>
         /// <returns>String response from the device</returns>
-        string Action(string actionName, string actionParameters);
+        string InvokeAction(string actionName, string actionParameters);
         
         /// <summary>
         /// Transmits an arbitrary string to the device and does not wait for a response. Optionally, protocol framing characters may be added to the string before transmission.
         /// </summary>
         /// <param name="command">The literal command string to be transmitted</param>
         /// <param name="raw">If set to true the string is transmitted 'as-is', if set to false then protocol framing characters may be added prior to transmission</param>
-        void CommandBlind(string command, bool raw = false);
+        void SendCommandBlind(string command, bool raw = false);
         
         /// <summary>
         /// Transmits an arbitrary string to the device and waits for a boolean response. Optionally, protocol framing characters may be added to the string before transmission.
@@ -27,7 +27,7 @@ namespace ASCOM.Alpaca.Client.Devices
         /// <param name="command">The literal command string to be transmitted</param>
         /// <param name="raw">If set to true the string is transmitted 'as-is', if set to false then protocol framing characters may be added prior to transmission</param>
         /// <returns>Boolean response from the device.</returns>
-        bool CommandBool(string command, bool raw = false);
+        bool SendCommandBool(string command, bool raw = false);
         
         /// <summary>
         /// Transmits an arbitrary string to the device and waits for a string response. Optionally, protocol framing characters may be added to the string before transmission.
@@ -35,7 +35,7 @@ namespace ASCOM.Alpaca.Client.Devices
         /// <param name="command">The literal command string to be transmitted.</param>
         /// <param name="raw">If set to true the string is transmitted 'as-is', if set to false then protocol framing characters may be added prior to transmission</param>
         /// <returns>String response from the device.</returns>
-        string CommandString(string command, bool raw = false);
+        string SendCommandString(string command, bool raw = false);
         
         /// <summary>
         /// Retrieves the connected state of the device
