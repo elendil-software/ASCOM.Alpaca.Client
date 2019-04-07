@@ -35,53 +35,19 @@ namespace ASCOM.Alpaca.Client.Responses
             {
                 // Handle ASCOM Alpaca reserved error numbers between 0x400 and 0xFFF by translating these to
                 // the COM HResult error number range: 0x80040400 to 0x80040FFF and throwing the translated value as an exception
-                if (errorCode >= ALPACA_ERROR_CODE_BASE && (errorCode <= ALPACA_ERROR_CODE_MAX))
+                if (errorCode >= ALPACA_ERROR_CODE_BASE && errorCode <= ALPACA_ERROR_CODE_MAX)
                 {
                     // Calculate the equivalent COM HResult error number from the supplied Alpaca error number so that comparison can
                     // be made with the original ASCOM COM exception HResult numbers that Windows clients expect in their exceptions
                     int ascomCOMErrorNumber = errorCode + ASCOM_ERROR_NUMBER_OFFSET;
 
-                    if (ascomCOMErrorNumber == ErrorCodes.ActionNotImplementedException)
-                    {
-                        throw new ActionNotImplementedException(errorMessage);
-                    }
-
-                    if (ascomCOMErrorNumber == ErrorCodes.InvalidOperationException)
-                    {
-                        throw new InvalidOperationException(errorMessage);
-                    }
-                    
-                    if (ascomCOMErrorNumber == ErrorCodes.InvalidValue)
-                    {
-                        throw new InvalidValueException(errorMessage);
-                    }
-                    
-                    if (ascomCOMErrorNumber == ErrorCodes.InvalidWhileParked)
-                    {
-                        throw new ParkedException(errorMessage);
-                    }
-                    
-                    if (ascomCOMErrorNumber == ErrorCodes.InvalidWhileSlaved)
-                    {
-                        throw new SlavedException(errorMessage);
-                    }
-                    
-                    if (ascomCOMErrorNumber == ErrorCodes.NotConnected)
-                    {
-                        throw new NotConnectedException(errorMessage);
-                    }
-                    
-                    if (ascomCOMErrorNumber == ErrorCodes.NotImplemented)
-                    {
-                        if (errorMessage != null && errorMessage.ToLowerInvariant().Contains("property"))
-                        {
-                            throw new PropertyNotImplementedException(errorMessage);
-                        }
-                        else
-                        {
-                            throw new MethodNotImplementedException(errorMessage);
-                        }
-                    }
+                    CheckActionNotImplemented(errorMessage, ascomCOMErrorNumber);
+                    CheckInvalidOperation(errorMessage, ascomCOMErrorNumber);
+                    CheckInvalidValue(errorMessage, ascomCOMErrorNumber);
+                    CheckInvalidWhileParked(errorMessage, ascomCOMErrorNumber);
+                    CheckInvalidWhileSlaved(errorMessage, ascomCOMErrorNumber);
+                    CheckNotConnected(errorMessage, ascomCOMErrorNumber);
+                    CheckNotImplemented(errorMessage, ascomCOMErrorNumber);
                     
                     if (ascomCOMErrorNumber == ErrorCodes.ValueNotSet)
                     {
@@ -92,6 +58,69 @@ namespace ASCOM.Alpaca.Client.Responses
                 }
 
                 throw new DriverException(errorMessage, errorCode);
+            }
+        }
+
+        private static void CheckNotImplemented(string errorMessage, int ascomCOMErrorNumber)
+        {
+            if (ascomCOMErrorNumber == ErrorCodes.NotImplemented)
+            {
+                if (errorMessage != null && errorMessage.ToLowerInvariant().Contains("property"))
+                {
+                    throw new PropertyNotImplementedException(errorMessage);
+                }
+                else
+                {
+                    throw new MethodNotImplementedException(errorMessage);
+                }
+            }
+        }
+
+        private static void CheckNotConnected(string errorMessage, int ascomCOMErrorNumber)
+        {
+            if (ascomCOMErrorNumber == ErrorCodes.NotConnected)
+            {
+                throw new NotConnectedException(errorMessage);
+            }
+        }
+
+        private static void CheckInvalidWhileSlaved(string errorMessage, int ascomCOMErrorNumber)
+        {
+            if (ascomCOMErrorNumber == ErrorCodes.InvalidWhileSlaved)
+            {
+                throw new SlavedException(errorMessage);
+            }
+        }
+
+        private static void CheckInvalidWhileParked(string errorMessage, int ascomCOMErrorNumber)
+        {
+            if (ascomCOMErrorNumber == ErrorCodes.InvalidWhileParked)
+            {
+                throw new ParkedException(errorMessage);
+            }
+        }
+
+        private static void CheckInvalidValue(string errorMessage, int ascomCOMErrorNumber)
+        {
+            if (ascomCOMErrorNumber == ErrorCodes.InvalidValue)
+            {
+                throw new InvalidValueException(errorMessage);
+            }
+        }
+
+        private static void CheckInvalidOperation(string errorMessage, int ascomCOMErrorNumber)
+        {
+            if (ascomCOMErrorNumber == ErrorCodes.InvalidOperationException)
+            {
+                throw new InvalidOperationException(errorMessage);
+            }
+        }
+
+        private static void CheckActionNotImplemented(string errorMessage, int ascomCOMErrorNumber)
+        {
+            if (ascomCOMErrorNumber == ErrorCodes.ActionNotImplementedException)
+            {
+                throw new ActionNotImplementedException(errorMessage);
             }
         }
     }
