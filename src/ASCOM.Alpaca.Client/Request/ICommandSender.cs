@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Responses;
 using RestSharp;
 
@@ -6,12 +7,12 @@ namespace ASCOM.Alpaca.Client.Request
 {
     public interface ICommandSender
     {
-        IRestResponse ExecuteRequest(RestRequest request);
+        IRestResponse ExecuteRequest(string baseUrl, RestRequest request);
 
-        TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(RestRequest request) where TASCOMRemoteResponse : IResponse, new();
+        TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(string baseUrl, RestRequest request) where TASCOMRemoteResponse : IResponse, new();
 
-        Task<IRestResponse> ExecuteRequestAsync(RestRequest request);
+        Task<IRestResponse> ExecuteRequestAsync(string baseUrl, RestRequest request);
 
-        Task<TASCOMRemoteResponse> ExecuteRequestAsync<TASCOMRemoteResponse>(RestRequest request) where TASCOMRemoteResponse : IResponse, new();
+        Task<TASCOMRemoteResponse> ExecuteRequestAsync<TASCOMRemoteResponse>(string baseUrl, RestRequest request) where TASCOMRemoteResponse : IResponse, new();
     }
 }

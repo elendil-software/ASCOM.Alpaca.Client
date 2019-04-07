@@ -21,19 +21,9 @@ namespace ASCOM.Alpaca.Client.Devices
         protected readonly ICommandSender CommandSender;
         protected readonly RequestBuilder RequestBuilder;
         protected readonly IClientTransactionIdGenerator ClientTransactionIdGenerator;
-        private readonly DeviceConfiguration _configuration;
+        protected readonly DeviceConfiguration _configuration;
         protected abstract DeviceType DeviceType { get; }
         public int DeviceNumber => _configuration.DeviceNumber;
-
-        protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger<DeviceBase> logger = null)
-        {
-            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
-            ClientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
-            Logger = logger;
-            
-            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber, configuration.ClientId);
-            CommandSender = new CommandSender(new RestClient(configuration.GetBaseUrl()));
-        }
 
         protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger<DeviceBase> logger = null)
         {
@@ -49,7 +39,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildInvokeActionRequest(actionName, actionParameters);
 
-            var response = CommandSender.ExecuteRequest<StringResponse>(request);
+            var response = CommandSender.ExecuteRequest<StringResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             
             return response.HandleResponse<string, StringResponse>();
@@ -59,7 +49,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildInvokeActionRequest(actionName, actionParameters);
 
-            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(request);
+            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             
             return response.HandleResponse<string, StringResponse>();
@@ -75,7 +65,7 @@ namespace ASCOM.Alpaca.Client.Devices
 
             RestRequest request =
                 RequestBuilder.BuildRestRequest(CommonMethod.Action, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
 
@@ -83,7 +73,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildSendCommandBlindRequest(command, raw);
 
-            var response = CommandSender.ExecuteRequest<MethodResponse>(request);
+            var response = CommandSender.ExecuteRequest<MethodResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             response.HandleResponse();
@@ -93,7 +83,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildSendCommandBlindRequest(command, raw);
 
-            var response = await CommandSender.ExecuteRequestAsync<MethodResponse>(request);
+            var response = await CommandSender.ExecuteRequestAsync<MethodResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             response.HandleResponse();
@@ -108,7 +98,7 @@ namespace ASCOM.Alpaca.Client.Devices
             };
             RestRequest request =
                 RequestBuilder.BuildRestRequest(CommonMethod.CommandBlind, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
 
@@ -116,7 +106,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildSendCommandBoolRequest(command, raw);
 
-            var response = CommandSender.ExecuteRequest<BoolResponse>(request);
+            var response = CommandSender.ExecuteRequest<BoolResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<bool, BoolResponse>();
@@ -126,7 +116,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildSendCommandBoolRequest(command, raw);
 
-            var response = await CommandSender.ExecuteRequestAsync<BoolResponse>(request);
+            var response = await CommandSender.ExecuteRequestAsync<BoolResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<bool, BoolResponse>();
@@ -141,7 +131,7 @@ namespace ASCOM.Alpaca.Client.Devices
             };
             RestRequest request =
                 RequestBuilder.BuildRestRequest(CommonMethod.CommandBool, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
       
@@ -149,7 +139,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildSendCommandStringRequest(command, raw);
 
-            var response = CommandSender.ExecuteRequest<StringResponse>(request);
+            var response = CommandSender.ExecuteRequest<StringResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
@@ -159,7 +149,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildSendCommandStringRequest(command, raw);
 
-            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(request);
+            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
@@ -174,7 +164,7 @@ namespace ASCOM.Alpaca.Client.Devices
             };
             RestRequest request =
                 RequestBuilder.BuildRestRequest(CommonMethod.CommandString, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
 
@@ -182,7 +172,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildIsConnectedRequest();
 
-            var response = CommandSender.ExecuteRequest<BoolResponse>(request);
+            var response = CommandSender.ExecuteRequest<BoolResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<bool, BoolResponse>();
@@ -192,7 +182,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildIsConnectedRequest();
 
-            var response = await CommandSender.ExecuteRequestAsync<BoolResponse>(request);
+            var response = await CommandSender.ExecuteRequestAsync<BoolResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<bool, BoolResponse>();
@@ -201,7 +191,7 @@ namespace ASCOM.Alpaca.Client.Devices
         private RestRequest BuildIsConnectedRequest()
         {
             RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.Connected, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
 
@@ -209,7 +199,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildSetConnectedRequest(connected);
 
-            var response = CommandSender.ExecuteRequest<MethodResponse>(request);
+            var response = CommandSender.ExecuteRequest<MethodResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             response.HandleResponse();
@@ -219,7 +209,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildSetConnectedRequest(connected);
 
-            var response = await CommandSender.ExecuteRequestAsync<MethodResponse>(request);
+            var response = await CommandSender.ExecuteRequestAsync<MethodResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             response.HandleResponse();
@@ -233,7 +223,7 @@ namespace ASCOM.Alpaca.Client.Devices
             };
             RestRequest request =
                 RequestBuilder.BuildRestRequest(CommonMethod.Connected, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
 
@@ -241,7 +231,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildGetDescriptionRequest();
 
-            var response = CommandSender.ExecuteRequest<StringResponse>(request);
+            var response = CommandSender.ExecuteRequest<StringResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
@@ -251,7 +241,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildGetDescriptionRequest();
 
-            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(request);
+            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
@@ -260,7 +250,7 @@ namespace ASCOM.Alpaca.Client.Devices
         private RestRequest BuildGetDescriptionRequest()
         {
             RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.Description, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
 
@@ -268,7 +258,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildGetDriverInfoRequest();
 
-            var response = CommandSender.ExecuteRequest<StringResponse>(request);
+            var response = CommandSender.ExecuteRequest<StringResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
@@ -278,7 +268,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildGetDriverInfoRequest();
 
-            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(request);
+            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
@@ -287,7 +277,7 @@ namespace ASCOM.Alpaca.Client.Devices
         private RestRequest BuildGetDriverInfoRequest()
         {
             RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.Driverinfo, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
 
@@ -295,7 +285,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildGetDriverVersionRequest();
 
-            var response = CommandSender.ExecuteRequest<StringResponse>(request);
+            var response = CommandSender.ExecuteRequest<StringResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
@@ -305,7 +295,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildGetDriverVersionRequest();
 
-            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(request);
+            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
@@ -314,7 +304,7 @@ namespace ASCOM.Alpaca.Client.Devices
         private RestRequest BuildGetDriverVersionRequest()
         {
             RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.DriverVersion, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
 
@@ -322,7 +312,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildGetNameRequest();
 
-            var response = CommandSender.ExecuteRequest<StringResponse>(request);
+            var response = CommandSender.ExecuteRequest<StringResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
@@ -332,7 +322,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildGetNameRequest();
 
-            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(request);
+            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<string, StringResponse>();
@@ -341,7 +331,7 @@ namespace ASCOM.Alpaca.Client.Devices
         private RestRequest BuildGetNameRequest()
         {
             RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.Name, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
         
@@ -349,7 +339,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildGetSupportedActionsRequest();
 
-            var response = CommandSender.ExecuteRequest<StringArrayResponse>(request);
+            var response = CommandSender.ExecuteRequest<StringArrayResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<List<string>, StringArrayResponse>();
@@ -359,7 +349,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildGetSupportedActionsRequest();
 
-            var response = await CommandSender.ExecuteRequestAsync<StringArrayResponse>(request);
+            var response = await CommandSender.ExecuteRequestAsync<StringArrayResponse>(_configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<List<string>, StringArrayResponse>();
@@ -368,7 +358,7 @@ namespace ASCOM.Alpaca.Client.Devices
         private RestRequest BuildGetSupportedActionsRequest()
         {
             RestRequest request = RequestBuilder.BuildRestRequest(CommonMethod.SupportedActions, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
     }

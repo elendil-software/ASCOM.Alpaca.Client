@@ -3,6 +3,7 @@ using System.IO;
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.DependencyInjection.Microsoft;
 using ASCOM.Alpaca.Client.Devices.Providers;
+using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -57,6 +58,7 @@ namespace ASCOM.Alpaca.Client.Demo
                 .AddLogging(configure => configure.AddSerilog())
                 .AddSingleton<ILoggerFactory>(s => new SerilogLoggerFactory(Log.Logger, true))
                 .AddSingleton<IClientTransactionIdGenerator, ClientTransactionIdGenerator>()
+                .AddTransient<ICommandSender, CommandSender>()
                 .AddDevices(devicesConfiguration)
                 .AddSingleton<IDeviceProvider, DeviceProvider>()
                 .AddTransient<IDeviceDemo, FilterWheelDemo>();

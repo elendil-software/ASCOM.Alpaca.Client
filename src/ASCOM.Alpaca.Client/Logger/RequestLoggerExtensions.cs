@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using ASCOM.Alpaca.Client.Responses;
@@ -9,12 +10,12 @@ namespace ASCOM.Alpaca.Client.Logger
 {
     internal static class RequestLoggerExtensions
     {
-        public static void LogDebug(this ILogger logger, RestRequest request)
+        public static void LogDebug(this ILogger logger, string baseUrl, RestRequest request)
         {
             var requestParametersName = new List<string> {"deviceType", "deviceNumber", "command"};
             
             string parametersString = string.Join(", ", request.Parameters.Where(p => !requestParametersName.Contains(p.Name)).Select(p => $"{p.Name}={p.Value}").ToArray());
-            string requestString = string.Join("/", request.Parameters.Where(p => requestParametersName.Contains(p.Name)).Select(p => p.Value).ToArray());
+            string requestString = $"{baseUrl}{string.Join("/", request.Parameters.Where(p => requestParametersName.Contains(p.Name)).Select(p => p.Value).ToArray())}";
             
             logger?.LogDebug("Send request {Request} ({Method}) with parameters {Parameters}", requestString, request.Method, parametersString);
         }

@@ -1,6 +1,7 @@
 using System;
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices;
+using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -15,12 +16,13 @@ namespace ASCOM.Alpaca.Client.DependencyInjection.Microsoft
             {
                 services.AddScoped<IDevice>(ctx =>
                 {
+                    var clientTransactionIdGenerator = ctx.GetService<IClientTransactionIdGenerator>();
+                    var commandSender = ctx.GetService<ICommandSender>();
+                    
                     switch (deviceConfiguration.DeviceType)
                     {
                         case DeviceType.FilterWheel:
-                            var logger = ctx.GetService<ILogger<FilterWheel>>();
-                            var clientTransactionIdGenerator = ctx.GetService<IClientTransactionIdGenerator>();
-                            return new FilterWheel(deviceConfiguration, clientTransactionIdGenerator, logger);
+                            return new FilterWheel(deviceConfiguration, clientTransactionIdGenerator, commandSender, ctx.GetService<ILogger<FilterWheel>>());
                         
                         case DeviceType.Switch:
                         case DeviceType.SafetyMonitor:

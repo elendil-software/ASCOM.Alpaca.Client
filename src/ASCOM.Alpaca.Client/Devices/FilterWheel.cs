@@ -19,11 +19,6 @@ namespace ASCOM.Alpaca.Client.Devices
     {
         protected override DeviceType DeviceType { get; } = DeviceType.FilterWheel;
         
-        public FilterWheel(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger<DeviceBase> logger = null) : 
-            base(configuration, clientTransactionIdGenerator, logger)
-        {
-        }
-
         public FilterWheel(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger<DeviceBase> logger = null) : 
             base(configuration, clientTransactionIdGenerator, commandSender, logger)
         {
@@ -33,8 +28,8 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildGetFocusOffsetRequest();
 
-            var response = CommandSender.ExecuteRequest<IntArrayResponse>(request);
-            Logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<IntArrayResponse>(_configuration.GetBaseUrl(), request);
+
 
             return response.HandleResponse<List<int>, IntArrayResponse>();
         }
@@ -43,8 +38,8 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildGetFocusOffsetRequest();
             
-            var response = await CommandSender.ExecuteRequestAsync<IntArrayResponse>(request);
-            Logger.LogDebug(response);
+            var response = await CommandSender.ExecuteRequestAsync<IntArrayResponse>(_configuration.GetBaseUrl(), request);
+
 
             return response.HandleResponse<List<int>, IntArrayResponse>();
         }
@@ -53,7 +48,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request =
                 RequestBuilder.BuildRestRequest(FilterWheelMethod.FocusOffsets, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
 
@@ -61,8 +56,8 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             var request = BuildGetNamesRequest();
 
-            var response = CommandSender.ExecuteRequest<StringArrayResponse>(request);
-            Logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<StringArrayResponse>(_configuration.GetBaseUrl(), request);
+
 
             return response.HandleResponse<List<string>, StringArrayResponse>();
         }
@@ -71,8 +66,8 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             var request = BuildGetNamesRequest();
 
-            var response = await CommandSender.ExecuteRequestAsync<StringArrayResponse>(request);
-            Logger.LogDebug(response);
+            var response = await CommandSender.ExecuteRequestAsync<StringArrayResponse>(_configuration.GetBaseUrl(), request);
+
 
             return response.HandleResponse<List<string>, StringArrayResponse>();
         }
@@ -80,7 +75,7 @@ namespace ASCOM.Alpaca.Client.Devices
         private RestRequest BuildGetNamesRequest()
         {
             RestRequest request = RequestBuilder.BuildRestRequest(FilterWheelMethod.Names, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
 
@@ -88,8 +83,8 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             var request = BuildGetPositionRequest();
 
-            var response = CommandSender.ExecuteRequest<IntResponse>(request);
-            Logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<IntResponse>(_configuration.GetBaseUrl(), request);
+
 
             return response.HandleResponse<int, IntResponse>();
         }
@@ -98,8 +93,8 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             var request = BuildGetPositionRequest();
 
-            var response = await CommandSender.ExecuteRequestAsync<IntResponse>(request);
-            Logger.LogDebug(response);
+            var response = await CommandSender.ExecuteRequestAsync<IntResponse>(_configuration.GetBaseUrl(), request);
+
 
             return response.HandleResponse<int, IntResponse>();
         }
@@ -107,7 +102,7 @@ namespace ASCOM.Alpaca.Client.Devices
         private RestRequest BuildGetPositionRequest()
         {
             RestRequest request = RequestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
 
@@ -115,8 +110,8 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildSetPositionRequest(position);
 
-            var response = CommandSender.ExecuteRequest<MethodResponse>(request);
-            Logger.LogDebug(response);
+            var response = CommandSender.ExecuteRequest<MethodResponse>(_configuration.GetBaseUrl(), request);
+
 
             response.HandleResponse();
         }
@@ -125,8 +120,8 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildSetPositionRequest(position);
 
-            var response = await CommandSender.ExecuteRequestAsync<MethodResponse>(request);
-            Logger.LogDebug(response);
+            var response = await CommandSender.ExecuteRequestAsync<MethodResponse>(_configuration.GetBaseUrl(), request);
+
 
             response.HandleResponse();
         }
@@ -140,7 +135,7 @@ namespace ASCOM.Alpaca.Client.Devices
 
             RestRequest request =
                 RequestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
+            
             return request;
         }
     }

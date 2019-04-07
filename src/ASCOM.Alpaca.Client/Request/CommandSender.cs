@@ -1,23 +1,31 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+using ASCOM.Alpaca.Client.Logger;
 using ASCOM.Alpaca.Client.Responses;
+using Microsoft.Extensions.Logging;
 using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Request
 {
     public class CommandSender : ICommandSender
     {
-        private readonly IRestClient _restClient;
+        private readonly ILogger<CommandSender> _logger;
 
-        public CommandSender(IRestClient restClient)
+        public CommandSender()
         {
-            _restClient = restClient ?? throw new ArgumentNullException(nameof(restClient));
+        }
+
+        public CommandSender(ILogger<CommandSender> logger)
+        {
+          
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
         
-        public IRestResponse ExecuteRequest(RestRequest request)
+        public IRestResponse ExecuteRequest(string baseUrl, RestRequest request)
         {
-            IRestResponse response = _restClient.Execute(request);
+            _logger?.LogDebug(baseUrl, request);
+            IRestResponse response = new RestClient(baseUrl).Execute(request);
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 return response;
@@ -28,9 +36,10 @@ namespace ASCOM.Alpaca.Client.Request
             }
         }
 
-        public TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(RestRequest request) where TASCOMRemoteResponse : IResponse, new()
+        public TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(string baseUrl, RestRequest request) where TASCOMRemoteResponse : IResponse, new()
         {
-            IRestResponse<TASCOMRemoteResponse> response = _restClient.Execute<TASCOMRemoteResponse>(request);
+            _logger?.LogDebug(baseUrl, request);
+            IRestResponse<TASCOMRemoteResponse> response = new RestClient(baseUrl).Execute<TASCOMRemoteResponse>(request);
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 return response.Data;
@@ -41,9 +50,10 @@ namespace ASCOM.Alpaca.Client.Request
             }
         }
         
-        public async Task<IRestResponse> ExecuteRequestAsync(RestRequest request)
+        public async Task<IRestResponse> ExecuteRequestAsync(string baseUrl, RestRequest request)
         {
-            IRestResponse response = await _restClient.ExecuteTaskAsync(request);
+            _logger?.LogDebug(baseUrl, request);
+            IRestResponse response = await new RestClient(baseUrl).ExecuteTaskAsync(request);
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 return response;
@@ -54,9 +64,10 @@ namespace ASCOM.Alpaca.Client.Request
             }
         }
 
-        public async Task<TASCOMRemoteResponse> ExecuteRequestAsync<TASCOMRemoteResponse>(RestRequest request) where TASCOMRemoteResponse : IResponse, new()
+        public async Task<TASCOMRemoteResponse> ExecuteRequestAsync<TASCOMRemoteResponse>(string baseUrl, RestRequest request) where TASCOMRemoteResponse : IResponse, new()
         {
-            IRestResponse<TASCOMRemoteResponse> response = await _restClient.ExecuteTaskAsync<TASCOMRemoteResponse>(request);
+            _logger?.LogDebug(baseUrl, request);
+            IRestResponse<TASCOMRemoteResponse> response = await new RestClient(baseUrl).ExecuteTaskAsync<TASCOMRemoteResponse>(request);
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 return response.Data;
