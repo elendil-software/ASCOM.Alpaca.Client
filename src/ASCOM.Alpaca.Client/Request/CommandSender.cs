@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Responses;
 using RestSharp;
 
@@ -30,6 +31,32 @@ namespace ASCOM.Alpaca.Client.Request
         public TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(RestRequest request) where TASCOMRemoteResponse : IResponse, new()
         {
             IRestResponse<TASCOMRemoteResponse> response = _restClient.Execute<TASCOMRemoteResponse>(request);
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                return response.Data;
+            }
+            else
+            {
+                throw new DriverException(response.Content);
+            }
+        }
+        
+        public async Task<IRestResponse> ExecuteRequestAsync(RestRequest request)
+        {
+            IRestResponse response = await _restClient.ExecuteTaskAsync(request);
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                return response;
+            }
+            else
+            {
+                throw new DriverException(response.Content);
+            }
+        }
+
+        public async Task<TASCOMRemoteResponse> ExecuteRequestAsync<TASCOMRemoteResponse>(RestRequest request) where TASCOMRemoteResponse : IResponse, new()
+        {
+            IRestResponse<TASCOMRemoteResponse> response = await _restClient.ExecuteTaskAsync<TASCOMRemoteResponse>(request);
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 return response.Data;
