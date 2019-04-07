@@ -46,8 +46,9 @@ namespace ASCOM.Alpaca.Client.Request
             request.AddUrlSegment("deviceType", _deviceType.ToString().ToLower());
             request.AddUrlSegment("deviceNumber", _deviceNumber.ToString());
             request.AddUrlSegment("command", command.ToString().ToLower());
-            request.AddUrlSegment("ClientID", _clientId.ToString());
-            request.AddUrlSegment("ClientTransactionID", clientTransactionId.ToString());
+            
+            request.AddParameter("ClientID", _clientId.ToString());
+            request.AddParameter("ClientTransactionID", clientTransactionId.ToString());
             
             foreach (var parameter in parameters)
             {
