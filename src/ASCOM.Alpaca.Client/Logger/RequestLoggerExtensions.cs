@@ -7,7 +7,7 @@ using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Logger
 {
-    internal static class LoggerExtensions
+    internal static class RequestLoggerExtensions
     {
         public static void LogDebug(this ILogger logger, RestRequest request)
         {
