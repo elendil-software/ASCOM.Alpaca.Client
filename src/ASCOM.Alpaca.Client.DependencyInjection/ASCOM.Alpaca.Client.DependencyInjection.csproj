@@ -9,7 +9,8 @@
         <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client.Toolkit</RepositoryUrl>
         <PackageTags>ASCOM Astronomy</PackageTags>
         <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client.Toolkit/releases</PackageReleaseNotes>
-        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicenseUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/LICENSE</PackageLicenseUrl>
     </PropertyGroup>
 
     <ItemGroup>
@@ -19,10 +20,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\ASCOM.Alpaca.Client\ASCOM.Alpaca.Client.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <None Include="LICENSE" Pack="true" PackagePath="" />
     </ItemGroup>
 
 </Project>
