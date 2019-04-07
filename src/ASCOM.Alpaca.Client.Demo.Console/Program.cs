@@ -28,6 +28,7 @@ namespace ASCOM.Alpaca.Client.Demo
                 deviceDemo.Run();
             }
             
+            Log.CloseAndFlush();
             Console.ReadKey();
         }
 
