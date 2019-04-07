@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Devices.Providers;
 using Microsoft.Extensions.Logging;
@@ -26,6 +27,7 @@ namespace ASCOM.Alpaca.Client.Demo
                 try
                 {
                     CallDeviceMethods(filterWheel);
+                    CallDeviceMethodsAsync(filterWheel);
                 }
                 catch (Exception e)
                 {
@@ -36,6 +38,8 @@ namespace ASCOM.Alpaca.Client.Demo
 
         private void CallDeviceMethods(FilterWheel filterWheel)
         {
+            _logger.LogInformation("START CallDeviceMethods");
+
             _logger.LogInformation("Connect Filter wheel");
             filterWheel.SetConnected(true);
 
@@ -69,7 +73,89 @@ namespace ASCOM.Alpaca.Client.Demo
             position = filterWheel.GetPosition();
             _logger.LogInformation("Current position : {Position}", position);
 
-            filterWheel.SetPosition(1000);
+            try
+            {
+                filterWheel.SetPosition(1000);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, e.Message);
+            }
+
+            _logger.LogInformation("END CallDeviceMethods");
+        }
+
+
+        private async Task CallDeviceMethodsAsync(FilterWheel filterWheel)
+        {
+            _logger.LogInformation("START CallDeviceMethodsAsync");
+
+            _logger.LogInformation("Connect Filter wheel");
+            var SetConnectedAsyncTask = filterWheel.SetConnectedAsync(true);
+            ContinueTask(SetConnectedAsyncTask);
+
+            var IsConnectedAsyncTask = filterWheel.IsConnectedAsync();
+            ContinueTask(IsConnectedAsyncTask);
+
+            _logger.LogInformation("Call GetNameAsync");
+            var GetNameAsyncTask = filterWheel.GetNameAsync();
+            ContinueTask(GetNameAsyncTask);
+
+            _logger.LogInformation("Call GetDescriptionAsync");
+            var GetDescriptionAsyncTask = filterWheel.GetDescriptionAsync();
+            ContinueTask(GetDescriptionAsyncTask);
+
+            _logger.LogInformation("Call GetDriverInfoAsync");
+            var GetDriverInfoAsyncTask = filterWheel.GetDriverInfoAsync();
+            ContinueTask(GetDriverInfoAsyncTask);
+
+            _logger.LogInformation("Call GetDriverVersionAsync");
+            var GetDriverVersionAsyncTask = filterWheel.GetDriverVersionAsync();
+            ContinueTask(GetDriverVersionAsyncTask);
+
+            _logger.LogInformation("Call GetNamesAsync");
+            var GetNamesAsyncTask = filterWheel.GetNamesAsync();
+            ContinueTask(GetNamesAsyncTask);
+
+            _logger.LogInformation("Call GetFocusOffsetsAsync");
+            var GetFocusOffsetsAsyncTask = filterWheel.GetFocusOffsetsAsync();
+            ContinueTask(GetFocusOffsetsAsyncTask);
+
+            _logger.LogInformation("Call SetPositionAsync(2)");
+            var SetPositionAsync2Task = filterWheel.SetPositionAsync(2);
+            ContinueTask(SetPositionAsync2Task);
+
+            _logger.LogInformation("Call GetPositionAsync");
+            var GetPositionAsyncTask = filterWheel.GetPositionAsync();
+            ContinueTask(GetPositionAsyncTask);
+
+            _logger.LogInformation("Call SetPositionAsync(1000)");
+            var SetPositionAsync1000Task = filterWheel.SetPositionAsync(1000);
+            ContinueTask(SetPositionAsync1000Task);
+
+            await Task.WhenAll(SetConnectedAsyncTask, IsConnectedAsyncTask, GetNameAsyncTask,
+                GetDescriptionAsyncTask, GetDriverInfoAsyncTask, GetDriverVersionAsyncTask,
+                GetNamesAsyncTask, GetFocusOffsetsAsyncTask, SetPositionAsync2Task, GetPositionAsyncTask, SetPositionAsync1000Task);
+
+            _logger.LogInformation("END CallDeviceMethodsAsync");
+        }
+
+        private void ContinueTask(Task task)
+        {
+            task.ContinueWith(t => { _logger.LogInformation("Action executed successfully"); },
+                TaskContinuationOptions.OnlyOnRanToCompletion);
+
+            task.ContinueWith(t => { _logger.LogError(t.Exception.Message); },
+                TaskContinuationOptions.OnlyOnFaulted);
+        }
+
+        private void ContinueTask<T>(Task<T> task)
+        {
+            task.ContinueWith(t => { _logger.LogInformation("Response : {Value}", t.Result.ToString()); },
+                TaskContinuationOptions.OnlyOnRanToCompletion);
+
+            task.ContinueWith(t => { _logger.LogError(t.Exception.Message); },
+                TaskContinuationOptions.OnlyOnFaulted);
         }
     }
 }
