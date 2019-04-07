@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Globalization;
+using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices.Methods;
 using ASCOM.Alpaca.Client.Logger;
@@ -30,51 +31,117 @@ namespace ASCOM.Alpaca.Client.Devices
 
         public List<int> GetFocusOffsets()
         {
-            RestRequest request = RequestBuilder.BuildRestRequest(FilterWheelMethod.FocusOffsets, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
-            
+            RestRequest request = BuildGetFocusOffsetRequest();
+
             var response = CommandSender.ExecuteRequest<IntArrayResponse>(request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<List<int>, IntArrayResponse>();
         }
 
+        public async Task<List<int>> GetFocusOffsetsAsync()
+        {
+            RestRequest request = BuildGetFocusOffsetRequest();
+            
+            var response = await CommandSender.ExecuteRequestAsync<IntArrayResponse>(request);
+            Logger.LogDebug(response);
+
+            return response.HandleResponse<List<int>, IntArrayResponse>();
+        }
+        
+        private RestRequest BuildGetFocusOffsetRequest()
+        {
+            RestRequest request =
+                RequestBuilder.BuildRestRequest(FilterWheelMethod.FocusOffsets, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
+            return request;
+        }
+
         public List<string> GetNames()
         {
-            RestRequest request = RequestBuilder.BuildRestRequest(FilterWheelMethod.Names, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
-            
+            var request = BuildGetNamesRequest();
+
             var response = CommandSender.ExecuteRequest<StringArrayResponse>(request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<List<string>, StringArrayResponse>();
         }
+        
+        public async Task<List<string>> GetNamesAsync()
+        {
+            var request = BuildGetNamesRequest();
+
+            var response = await CommandSender.ExecuteRequestAsync<StringArrayResponse>(request);
+            Logger.LogDebug(response);
+
+            return response.HandleResponse<List<string>, StringArrayResponse>();
+        }
+
+        private RestRequest BuildGetNamesRequest()
+        {
+            RestRequest request = RequestBuilder.BuildRestRequest(FilterWheelMethod.Names, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
+            return request;
+        }
 
         public int GetPosition()
         {
-            RestRequest request = RequestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
-            
+            var request = BuildGetPositionRequest();
+
             var response = CommandSender.ExecuteRequest<IntResponse>(request);
             Logger.LogDebug(response);
 
             return response.HandleResponse<int, IntResponse>();
         }
 
+        public async Task<int> GetPositionAsync()
+        {
+            var request = BuildGetPositionRequest();
+
+            var response = await CommandSender.ExecuteRequestAsync<IntResponse>(request);
+            Logger.LogDebug(response);
+
+            return response.HandleResponse<int, IntResponse>();
+        }
+
+        private RestRequest BuildGetPositionRequest()
+        {
+            RestRequest request = RequestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
+            return request;
+        }
+
         public void SetPosition(int position)
+        {
+            RestRequest request = BuildSetPositionRequest(position);
+
+            var response = CommandSender.ExecuteRequest<MethodResponse>(request);
+            Logger.LogDebug(response);
+
+            response.HandleResponse();
+        }
+
+        public async Task SetPositionAsync(int position)
+        {
+            RestRequest request = BuildSetPositionRequest(position);
+
+            var response = await CommandSender.ExecuteRequestAsync<MethodResponse>(request);
+            Logger.LogDebug(response);
+
+            response.HandleResponse();
+        }
+        
+        private RestRequest BuildSetPositionRequest(int position)
         {
             var parameters = new Dictionary<string, object>
             {
                 {"Position", position.ToString(CultureInfo.InvariantCulture)}
             };
-            
-            RestRequest request = RequestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
-            Logger.LogDebug(request);
-            
-            var response = CommandSender.ExecuteRequest<MethodResponse>(request);
-            Logger.LogDebug(response);
 
-            response.HandleResponse();
+            RestRequest request =
+                RequestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+            Logger.LogDebug(request);
+            return request;
         }
     }
 }

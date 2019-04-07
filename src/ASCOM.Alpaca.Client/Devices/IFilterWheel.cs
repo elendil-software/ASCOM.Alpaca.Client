@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
@@ -9,6 +10,8 @@ namespace ASCOM.Alpaca.Client.Devices
         /// </summary>
         /// <returns></returns>
         List<int> GetFocusOffsets();
+
+        Task<List<int>> GetFocusOffsetsAsync();
         
         /// <summary>
         /// Get the Filter wheel filter names
@@ -16,11 +19,16 @@ namespace ASCOM.Alpaca.Client.Devices
         /// <returns></returns>
         List<string> GetNames();
         
+        
+        Task<List<string>> GetNamesAsync();
+        
         /// <summary>
         /// Returns the current filter wheel position
         /// </summary>
         /// <returns></returns>
         int GetPosition();
+        
+        Task<int> GetPositionAsync();
 
         /// <summary>
         /// Sets the filter wheel position
@@ -28,5 +36,7 @@ namespace ASCOM.Alpaca.Client.Devices
         /// <param name="position">The number of the filter wheel position to select</param>
         /// <returns></returns>
         void SetPosition(int position);
+        
+        Task SetPositionAsync(int position);
     }
 }
