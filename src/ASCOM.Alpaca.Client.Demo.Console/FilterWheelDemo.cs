@@ -18,7 +18,7 @@ namespace ASCOM.Alpaca.Client.Demo
             _deviceProvider = deviceProvider ?? throw new ArgumentNullException(nameof(deviceProvider));
         }
 
-        public void Run()
+        public async void Run()
         {
             IEnumerable<FilterWheel> filterWheels = _deviceProvider.GetDevices<FilterWheel>();
 
@@ -27,7 +27,7 @@ namespace ASCOM.Alpaca.Client.Demo
                 try
                 {
                     CallDeviceMethods(filterWheel);
-                    CallDeviceMethodsAsync(filterWheel);
+                    await CallDeviceMethodsAsync(filterWheel);
                 }
                 catch (Exception e)
                 {
@@ -91,51 +91,51 @@ namespace ASCOM.Alpaca.Client.Demo
             _logger.LogInformation("START CallDeviceMethodsAsync");
 
             _logger.LogInformation("Connect Filter wheel");
-            var SetConnectedAsyncTask = filterWheel.SetConnectedAsync(true);
-            ContinueTask(SetConnectedAsyncTask);
+            var setConnectedAsyncTask = filterWheel.SetConnectedAsync(true);
+            ContinueTask(setConnectedAsyncTask);
 
-            var IsConnectedAsyncTask = filterWheel.IsConnectedAsync();
-            ContinueTask(IsConnectedAsyncTask);
+            var isConnectedAsyncTask = filterWheel.IsConnectedAsync();
+            ContinueTask(isConnectedAsyncTask);
 
             _logger.LogInformation("Call GetNameAsync");
-            var GetNameAsyncTask = filterWheel.GetNameAsync();
-            ContinueTask(GetNameAsyncTask);
+            var getNameAsyncTask = filterWheel.GetNameAsync();
+            ContinueTask(getNameAsyncTask);
 
             _logger.LogInformation("Call GetDescriptionAsync");
-            var GetDescriptionAsyncTask = filterWheel.GetDescriptionAsync();
-            ContinueTask(GetDescriptionAsyncTask);
+            var getDescriptionAsyncTask = filterWheel.GetDescriptionAsync();
+            ContinueTask(getDescriptionAsyncTask);
 
             _logger.LogInformation("Call GetDriverInfoAsync");
-            var GetDriverInfoAsyncTask = filterWheel.GetDriverInfoAsync();
-            ContinueTask(GetDriverInfoAsyncTask);
+            var getDriverInfoAsyncTask = filterWheel.GetDriverInfoAsync();
+            ContinueTask(getDriverInfoAsyncTask);
 
             _logger.LogInformation("Call GetDriverVersionAsync");
-            var GetDriverVersionAsyncTask = filterWheel.GetDriverVersionAsync();
-            ContinueTask(GetDriverVersionAsyncTask);
+            var getDriverVersionAsyncTask = filterWheel.GetDriverVersionAsync();
+            ContinueTask(getDriverVersionAsyncTask);
 
             _logger.LogInformation("Call GetNamesAsync");
-            var GetNamesAsyncTask = filterWheel.GetNamesAsync();
-            ContinueTask(GetNamesAsyncTask);
+            var getNamesAsyncTask = filterWheel.GetNamesAsync();
+            ContinueTask(getNamesAsyncTask);
 
             _logger.LogInformation("Call GetFocusOffsetsAsync");
-            var GetFocusOffsetsAsyncTask = filterWheel.GetFocusOffsetsAsync();
-            ContinueTask(GetFocusOffsetsAsyncTask);
+            var getFocusOffsetsAsyncTask = filterWheel.GetFocusOffsetsAsync();
+            ContinueTask(getFocusOffsetsAsyncTask);
 
             _logger.LogInformation("Call SetPositionAsync(2)");
-            var SetPositionAsync2Task = filterWheel.SetPositionAsync(2);
-            ContinueTask(SetPositionAsync2Task);
+            var setPositionAsync2Task = filterWheel.SetPositionAsync(2);
+            ContinueTask(setPositionAsync2Task);
 
             _logger.LogInformation("Call GetPositionAsync");
-            var GetPositionAsyncTask = filterWheel.GetPositionAsync();
-            ContinueTask(GetPositionAsyncTask);
+            var getPositionAsyncTask = filterWheel.GetPositionAsync();
+            ContinueTask(getPositionAsyncTask);
 
             _logger.LogInformation("Call SetPositionAsync(1000)");
-            var SetPositionAsync1000Task = filterWheel.SetPositionAsync(1000);
-            ContinueTask(SetPositionAsync1000Task);
+            var setPositionAsync1000Task = filterWheel.SetPositionAsync(1000);
+            ContinueTask(setPositionAsync1000Task);
 
-            await Task.WhenAll(SetConnectedAsyncTask, IsConnectedAsyncTask, GetNameAsyncTask,
-                GetDescriptionAsyncTask, GetDriverInfoAsyncTask, GetDriverVersionAsyncTask,
-                GetNamesAsyncTask, GetFocusOffsetsAsyncTask, SetPositionAsync2Task, GetPositionAsyncTask, SetPositionAsync1000Task);
+            await Task.WhenAll(setConnectedAsyncTask, isConnectedAsyncTask, getNameAsyncTask,
+                getDescriptionAsyncTask, getDriverInfoAsyncTask, getDriverVersionAsyncTask,
+                getNamesAsyncTask, getFocusOffsetsAsyncTask, setPositionAsync2Task, getPositionAsyncTask, setPositionAsync1000Task);
 
             _logger.LogInformation("END CallDeviceMethodsAsync");
         }
@@ -145,7 +145,7 @@ namespace ASCOM.Alpaca.Client.Demo
             task.ContinueWith(t => { _logger.LogInformation("Action executed successfully"); },
                 TaskContinuationOptions.OnlyOnRanToCompletion);
 
-            task.ContinueWith(t => { _logger.LogError(t.Exception.Message); },
+            task.ContinueWith(t => { _logger.LogError(t.Exception?.Message); },
                 TaskContinuationOptions.OnlyOnFaulted);
         }
 
@@ -154,7 +154,7 @@ namespace ASCOM.Alpaca.Client.Demo
             task.ContinueWith(t => { _logger.LogInformation("Response : {Value}", t.Result.ToString()); },
                 TaskContinuationOptions.OnlyOnRanToCompletion);
 
-            task.ContinueWith(t => { _logger.LogError(t.Exception.Message); },
+            task.ContinueWith(t => { _logger.LogError(t.Exception?.Message); },
                 TaskContinuationOptions.OnlyOnFaulted);
         }
     }
