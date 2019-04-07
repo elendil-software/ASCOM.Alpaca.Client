@@ -30,7 +30,7 @@ namespace ASCOM.Alpaca.Client.Devices
             ClientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
             Logger = logger;
             
-            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber);
+            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber, configuration.ClientId);
             CommandSender = new CommandSender(new RestClient(configuration.GetBaseUrl()));
         }
 
@@ -41,7 +41,7 @@ namespace ASCOM.Alpaca.Client.Devices
             CommandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
             Logger = logger;
             
-            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber);
+            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber, configuration.ClientId);
         }
 
         public string InvokeAction(string actionName, string actionParameters)
