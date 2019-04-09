@@ -3,6 +3,7 @@ using System.Net;
 using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Logger;
 using ASCOM.Alpaca.Client.Responses;
+using ASCOM.Alpaca.Exceptions;
 using Microsoft.Extensions.Logging;
 using RestSharp;
 
