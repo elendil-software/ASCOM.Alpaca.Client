@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Client.Responses.Image;
+using ASCOM.Alpaca.Client.Devices.Telescope;
 
-namespace ASCOM.Alpaca.Client.Devices
+namespace ASCOM.Alpaca.Client.Devices.Camera
 {
     public interface ICamera
     {

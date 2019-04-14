@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ASCOM.Alpaca.Client.Devices
+namespace ASCOM.Alpaca.Client.Devices.Telescope
 {
     public interface ITelescope
     {

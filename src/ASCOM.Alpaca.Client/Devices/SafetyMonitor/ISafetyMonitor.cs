@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace ASCOM.Alpaca.Client.Devices
+namespace ASCOM.Alpaca.Client.Devices.SafetyMonitor
 {
     public interface ISafetyMonitor : IDevice
     {
