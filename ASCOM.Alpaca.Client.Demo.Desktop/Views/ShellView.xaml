@@ -3,12 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ASCOM.Alpaca.Client.Demo.Desktop.Views"
         xmlns:model="clr-namespace:ASCOM.Alpaca.Client.Demo.Desktop.ViewModels"
         mc:Ignorable="d"
         d:DataContext="{x:Type model:ShellViewModel}"
-        Title="ShellView" Height="450" Width="800">
-    <Grid>
+        Title="ASCOM Alpaca Demo" Height="450" Width="800">
+    <DockPanel>
+        <TabControl>
+            <TabItem Header="FilterWheel">
+                <ContentControl x:Name="FilterWheelViewModel" />
+            </TabItem>
+            <TabItem Header="Dome" />
+            <TabItem Header="etc." />
+        </TabControl>
+    </DockPanel>
         
-    </Grid>
+    <!--<Grid>
+        
+    </Grid>-->
 </Window>

@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Threading;
 using ASCOM.Alpaca.Client.Demo.Desktop.ViewModels;
+using ASCOM.Alpaca.Client.Devices.Providers;
+using ASCOM.Alpaca.Client.Request;
+using ASCOM.Alpaca.Client.Transactions;
 using Caliburn.Micro;
+using Lamar;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop
 {
     public class Bootstrapper : BootstrapperBase
     {
-        private SimpleContainer container;
+        private Container _container;
 
         public Bootstrapper()
         {
@@ -18,42 +22,34 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop
 
         protected override void Configure()
         {
-            container = new SimpleContainer();
+            var registry = new ServiceRegistry();
 
-            container.Instance(container);
+            registry.AddSingleton<IWindowManager, WindowManager>();
+            registry.AddSingleton<IEventAggregator, EventAggregator>();
+            registry.AddSingleton<IDeviceFactory, DeviceFactory>();
+            registry.AddSingleton<ICommandSender, CommandSender>();
+            registry.AddSingleton<IClientTransactionIdGenerator, ClientTransactionIdGenerator>();
 
-            container
-                .Singleton<IWindowManager, WindowManager>()
-                .Singleton<IEventAggregator, EventAggregator>();
 
-            container
-                .PerRequest<ShellViewModel>();
+            registry.AddTransient<ShellViewModel, ShellViewModel>();
+            registry.AddTransient<FilterWheelViewModel, FilterWheelViewModel>();
+
+            _container = new Container(registry);
+        }
+
+        protected override object GetInstance(Type service, string key)
+        {
+            return string.IsNullOrEmpty(key) ? _container.GetInstance(service) : _container.GetInstance(service, key);
+        }
+
+        protected override IEnumerable<object> GetAllInstances(Type service)
+        {
+            return (IEnumerable<object>) _container.GetAllInstances(service);
         }
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
             DisplayRootViewFor<ShellViewModel>();
-        }
-
-        protected override object GetInstance(Type service, string key)
-        {
-            return container.GetInstance(service, key);
-        }
-
-        protected override IEnumerable<object> GetAllInstances(Type service)
-        {
-            return container.GetAllInstances(service);
-        }
-
-        protected override void BuildUp(object instance)
-        {
-            container.BuildUp(instance);
-        }
-
-        protected override void OnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
-        {
-            e.Handled = true;
-            MessageBox.Show(e.Exception.Message, "An error as occurred", MessageBoxButton.OK);
         }
     }
 }
