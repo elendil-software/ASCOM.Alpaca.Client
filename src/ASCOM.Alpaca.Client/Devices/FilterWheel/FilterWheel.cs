@@ -19,7 +19,12 @@ namespace ASCOM.Alpaca.Client.Devices.FilterWheel
     {
         protected override DeviceType DeviceType { get; } = DeviceType.FilterWheel;
 
-        public FilterWheel(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger<DeviceBase> logger = null) : 
+        public FilterWheel(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender) :
+            base(configuration, clientTransactionIdGenerator, commandSender)
+        {
+        }
+
+        public FilterWheel(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger<DeviceBase> logger) : 
             base(configuration, clientTransactionIdGenerator, commandSender, logger)
         {
         }

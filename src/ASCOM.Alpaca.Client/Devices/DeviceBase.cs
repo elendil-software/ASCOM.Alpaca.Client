@@ -25,12 +25,21 @@ namespace ASCOM.Alpaca.Client.Devices
         protected abstract DeviceType DeviceType { get; }
         public int DeviceNumber => Configuration.DeviceNumber;
 
-        protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger<DeviceBase> logger = null)
+        protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger<DeviceBase> logger)
         {
             Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
             ClientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
             CommandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
-            Logger = logger;
+            Logger = logger ?? throw new ArgumentNullException(nameof(logger));
+
+            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber, configuration.ClientId);
+        }
+
+        protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender)
+        {
+            Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            ClientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
+            CommandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
             
             RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber, configuration.ClientId);
         }
