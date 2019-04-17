@@ -4,7 +4,6 @@ using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Devices.FilterWheel;
 using ASCOM.Alpaca.Client.Devices.Providers;
 using Caliburn.Micro;
-using static System.String;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 {
@@ -14,12 +13,62 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private int _port = 11111;
         private int _clientId = 1;
         private int _deviceId;
+
+        private string _name = "";
+        private string _description = "";
+        private string _driverVersion = "";
+        private string _driverInfo = "";
+
         private IFilterWheel _filterWheel;
         private readonly IDeviceFactory _deviceFactory;
 
         public FilterWheelViewModel(IDeviceFactory deviceFactory)
         {
             _deviceFactory = deviceFactory ?? throw new ArgumentNullException(nameof(deviceFactory));
+        }
+
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                _name = value;
+                NotifyOfPropertyChange(() => Name);
+
+            }
+        }
+
+        public string Description
+        {
+            get => _description;
+            set
+            {
+                _description = value;
+                NotifyOfPropertyChange(() => Description);
+
+            }
+        }
+        
+        public string DriverVersion
+        {
+            get => _driverVersion;
+            set
+            {
+                _driverVersion = value;
+                NotifyOfPropertyChange(() => DriverVersion);
+
+            }
+        }
+        
+        public string DriverInfo
+        {
+            get => _driverInfo;
+            set
+            {
+                _driverInfo = value;
+                NotifyOfPropertyChange(() => DriverInfo);
+
+            }
         }
 
         public string Host
@@ -66,7 +115,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             }
         }
 
-        public bool CanConnect => !IsNullOrEmpty(Host) && Port > 0 && DeviceId >= 0 && ClientId > 0;
+        public bool CanConnect => !string.IsNullOrEmpty(Host) && Port > 0 && DeviceId >= 0 && ClientId > 0;
 
         public async void Connect()
         {
@@ -77,6 +126,15 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             });
 
             await _filterWheel.SetConnectedAsync(true);
+            LoadDriverInfo();
+        }
+
+        private async void LoadDriverInfo()
+        {
+            Name = await _filterWheel.GetNameAsync();
+            Description = await _filterWheel.GetDescriptionAsync();
+            DriverInfo = await _filterWheel.GetDriverInfoAsync();
+            DriverVersion = await _filterWheel.GetDriverVersionAsync();
         }
     }
 }
