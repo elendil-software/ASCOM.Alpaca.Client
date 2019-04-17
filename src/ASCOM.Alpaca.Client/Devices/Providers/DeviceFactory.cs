@@ -2,6 +2,7 @@
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
+using Microsoft.Extensions.Logging;
 
 namespace ASCOM.Alpaca.Client.Devices.Providers
 {
@@ -9,11 +10,19 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
     {
         private readonly IClientTransactionIdGenerator _clientTransactionIdGenerator;
         private readonly ICommandSender _commandSender;
+        private readonly ILoggerFactory _loggerFactory;
 
         public DeviceFactory(IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender)
         {
             _clientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
             _commandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
+        }
+
+        public DeviceFactory(IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILoggerFactory loggerFactory)
+        {
+            _clientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
+            _commandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
+            _loggerFactory = loggerFactory ?? throw new ArgumentNullException(nameof(loggerFactory));
         }
 
         public T GetDevice<T>(DeviceConfiguration configuration) where T : IDevice
@@ -22,7 +31,9 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
             switch (configuration.DeviceType)
             {
                 case DeviceType.FilterWheel:
-                    IDevice device = new FilterWheel.FilterWheel(configuration, _clientTransactionIdGenerator, _commandSender);
+                    //TODO : handle the case without logger
+                    ILogger<FilterWheel.FilterWheel> logger = _loggerFactory.CreateLogger<FilterWheel.FilterWheel>();
+                    IDevice device = new FilterWheel.FilterWheel(configuration, _clientTransactionIdGenerator, _commandSender, logger);
                     return (T) device;
 
                 case DeviceType.Switch:

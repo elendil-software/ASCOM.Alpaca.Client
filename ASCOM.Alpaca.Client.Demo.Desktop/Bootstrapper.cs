@@ -8,6 +8,10 @@ using ASCOM.Alpaca.Client.Transactions;
 using Caliburn.Micro;
 using Lamar;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Serilog;
+using Serilog.AspNetCore;
+using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop
 {
@@ -30,6 +34,13 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop
             registry.AddSingleton<ICommandSender, CommandSender>();
             registry.AddSingleton<IClientTransactionIdGenerator, ClientTransactionIdGenerator>();
 
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.Debug()
+                .WriteTo.File("Log-.json", rollingInterval:RollingInterval.Day)
+                .CreateLogger();
+            registry.AddSingleton<ILoggerFactory>(s => new SerilogLoggerFactory(Log.Logger, true));
+            registry.For(typeof(ILogger<>)).Use(typeof(Logger<>));
 
             registry.AddTransient<ShellViewModel, ShellViewModel>();
             registry.AddTransient<FilterWheelViewModel, FilterWheelViewModel>();
