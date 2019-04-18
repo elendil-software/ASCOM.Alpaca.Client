@@ -13,13 +13,10 @@ namespace ASCOM.Alpaca.Client.Request
     {
         private readonly ILogger<CommandSender> _logger;
 
-        public CommandSender()
-        {
-        }
+        public CommandSender() {}
 
         public CommandSender(ILogger<CommandSender> logger)
         {
-          
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
         
@@ -27,53 +24,41 @@ namespace ASCOM.Alpaca.Client.Request
         {
             _logger?.LogDebug(baseUrl, request);
             IRestResponse response = new RestClient(baseUrl).Execute(request);
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                return response;
-            }
-            else
-            {
-                throw new DriverException(response.Content);
-            }
+            CheckResponse(response, baseUrl);
+            return response;
         }
 
         public TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(string baseUrl, RestRequest request) where TASCOMRemoteResponse : IResponse, new()
         {
             _logger?.LogDebug(baseUrl, request);
             IRestResponse<TASCOMRemoteResponse> response = new RestClient(baseUrl).Execute<TASCOMRemoteResponse>(request);
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                return response.Data;
-            }
-            else
-            {
-                throw new DriverException(response.Content);
-            }
+            CheckResponse(response, baseUrl);
+            return response.Data;
         }
         
         public async Task<IRestResponse> ExecuteRequestAsync(string baseUrl, RestRequest request)
         {
             _logger?.LogDebug(baseUrl, request);
             IRestResponse response = await new RestClient(baseUrl).ExecuteTaskAsync(request);
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                return response;
-            }
-            else
-            {
-                throw new DriverException(response.Content);
-            }
+            CheckResponse(response, baseUrl);
+            return response;
         }
-
+        
         public async Task<TASCOMRemoteResponse> ExecuteRequestAsync<TASCOMRemoteResponse>(string baseUrl, RestRequest request) where TASCOMRemoteResponse : IResponse, new()
         {
             _logger?.LogDebug(baseUrl, request);
             IRestResponse<TASCOMRemoteResponse> response = await new RestClient(baseUrl).ExecuteTaskAsync<TASCOMRemoteResponse>(request);
-            if (response.StatusCode == HttpStatusCode.OK)
+            CheckResponse(response, baseUrl);
+            return response.Data;
+        }
+
+        private void CheckResponse(IRestResponse response, string baseUrl)
+        {
+            if (response.StatusCode == 0)
             {
-                return response.Data;
+                throw new DriverException($"Unable to connect to {baseUrl}");
             }
-            else
+            else if (response.StatusCode != HttpStatusCode.OK)
             {
                 throw new DriverException(response.Content);
             }
