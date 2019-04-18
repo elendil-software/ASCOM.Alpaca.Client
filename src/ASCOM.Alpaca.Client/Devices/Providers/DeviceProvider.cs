@@ -8,17 +8,10 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
     public class DeviceProvider : IDeviceProvider
     {
         private readonly IEnumerable<IDevice> _devices;
-        private readonly ILogger<DeviceProvider> _logger;
-        
+
         public DeviceProvider(IEnumerable<IDevice> devices)
         {
             _devices = devices ?? throw new ArgumentNullException(nameof(devices));
-        }
-        
-        public DeviceProvider(IEnumerable<IDevice> devices, ILogger<DeviceProvider> logger)
-        {
-            _devices = devices ?? throw new ArgumentNullException(nameof(devices));
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         public T GetDevice<T>(int deviceNumber) where T : IDevice
