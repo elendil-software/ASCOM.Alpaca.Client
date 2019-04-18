@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Devices.FilterWheel;
@@ -115,6 +117,11 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             }
         }
 
+        public ObservableCollection<int> FocusOffsets { get; set; } = new ObservableCollection<int>();
+        public ObservableCollection<string> Filters { get; set; } = new ObservableCollection<string>();
+
+        public int Type { get; set; }
+
         public bool CanConnect => !string.IsNullOrEmpty(Host) && Port > 0 && DeviceId >= 0 && ClientId > 0;
 
         public async void Connect()
@@ -126,15 +133,35 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             });
 
             await _filterWheel.SetConnectedAsync(true);
-            LoadDriverInfo();
+            LoadDriverData();
         }
 
-        private async void LoadDriverInfo()
+        private async void LoadDriverData()
         {
             Name = await _filterWheel.GetNameAsync();
             Description = await _filterWheel.GetDescriptionAsync();
             DriverInfo = await _filterWheel.GetDriverInfoAsync();
             DriverVersion = await _filterWheel.GetDriverVersionAsync();
+
+            List<string> filterNames = await _filterWheel.GetNamesAsync();
+            Filters.Clear();
+            foreach (var filterName in filterNames)
+            {
+                Filters.Add(filterName);
+            }
+
+            NotifyOfPropertyChange(() => Filters);
+
+            List<int> focusOffsets = await _filterWheel.GetFocusOffsetsAsync();
+            FocusOffsets.Clear();
+            foreach (var focusOffset in focusOffsets)
+            {
+                FocusOffsets.Add(focusOffset);
+            }
+
+            NotifyOfPropertyChange(() => FocusOffsets);
         }
+
+        
     }
 }

@@ -23,17 +23,24 @@
             <Button Name="Connect" Content="Connect" Height="20" Margin="10,0,0,0"></Button>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <Label>Name</Label>
-            <TextBlock Name="Name">...</TextBlock>
+            <Label FontWeight="Bold">Name</Label>
+            <Label Name="Name">...</Label>
 
-            <Label>Description</Label>
-            <TextBlock Name="Description">...</TextBlock>
+            <Label FontWeight="Bold">Description</Label>
+            <Label Name="Description">...</Label>
             
-            <Label>DriverInfo</Label>
-            <TextBlock Name="DriverInfo">...</TextBlock>
+            <Label FontWeight="Bold">DriverInfo</Label>
+            <Label Name="DriverInfo">...</Label>
             
-            <Label>DriverVersion</Label>
-            <TextBlock Name="DriverVersion">...</TextBlock>
+            <Label FontWeight="Bold">DriverVersion</Label>
+            <Label Name="DriverVersion">...</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label FontWeight="Bold">Filters</Label>
+            <ListBox Name="Filters" SelectedIndex="{Binding SelectedIndex}"/>
+
+            <Label FontWeight="Bold">Focus Offsets</Label>
+            <ListBox Name="FocusOffsets" />
         </StackPanel>
     </StackPanel>
 </UserControl>
