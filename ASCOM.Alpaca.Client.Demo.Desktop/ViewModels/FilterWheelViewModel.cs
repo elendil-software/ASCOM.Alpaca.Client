@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows;
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Devices.FilterWheel;
@@ -20,6 +23,9 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private string _description = "";
         private string _driverVersion = "";
         private string _driverInfo = "";
+
+        private int _selectedFilter;
+        private int _currentPosition;
 
         private IFilterWheel _filterWheel;
         private readonly IDeviceFactory _deviceFactory;
@@ -120,7 +126,26 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         public ObservableCollection<int> FocusOffsets { get; set; } = new ObservableCollection<int>();
         public ObservableCollection<string> Filters { get; set; } = new ObservableCollection<string>();
 
-        public int Type { get; set; }
+        public int SelectedFilter
+        {
+            get => _selectedFilter;
+            set
+            {
+                _selectedFilter = value;
+                NotifyOfPropertyChange(() => SelectedFilter);
+
+            }
+        }
+
+        public int CurrentPosition
+        {
+            get => _currentPosition;
+            set
+            {
+                _currentPosition = value;
+                NotifyOfPropertyChange(() => CurrentPosition);
+            }
+        }
 
         public bool CanConnect => !string.IsNullOrEmpty(Host) && Port > 0 && DeviceId >= 0 && ClientId > 0;
 
@@ -132,8 +157,15 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
                 Port = Port
             });
 
-            await _filterWheel.SetConnectedAsync(true);
-            LoadDriverData();
+            try
+            {
+                await _filterWheel.SetConnectedAsync(true);
+                LoadDriverData();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private async void LoadDriverData()
@@ -160,8 +192,33 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             }
 
             NotifyOfPropertyChange(() => FocusOffsets);
+
+            SelectedFilter = await _filterWheel.GetPositionAsync();
+            CurrentPosition = SelectedFilter;
         }
 
-        
+        public async void MoveToSelectedFilter()
+        {
+            try
+            {
+                await _filterWheel.SetPositionAsync(SelectedFilter);
+                int currentPosition = -1;
+                await Task.Run(() =>
+                {
+                    
+                    do
+                    {
+                        currentPosition = _filterWheel.GetPosition();
+                        Thread.Sleep(1000);
+                    } while (currentPosition == -1);
+                });
+
+                CurrentPosition = currentPosition;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }
