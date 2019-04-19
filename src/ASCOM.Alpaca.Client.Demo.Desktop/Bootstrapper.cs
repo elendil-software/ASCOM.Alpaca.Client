@@ -11,7 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.AspNetCore;
-using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop
 {

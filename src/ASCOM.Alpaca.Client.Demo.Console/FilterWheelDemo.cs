@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Devices.FilterWheel;
 using ASCOM.Alpaca.Client.Devices.Providers;
 using Microsoft.Extensions.Logging;

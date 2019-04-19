@@ -1,5 +1,4 @@
 ﻿using ASCOM.Alpaca.Client.Configuration;
-using Microsoft.Extensions.Logging;
 
 namespace ASCOM.Alpaca.Client.Devices.Providers
 {
