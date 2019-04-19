@@ -1,5 +1,6 @@
-using ASCOM.Alpaca.Client.Responses.Empty;
 using ASCOM.Alpaca.Exceptions;
+using ASCOM.Alpaca.Responses;
+using ASCOM.Alpaca.Responses.Empty;
 
 namespace ASCOM.Alpaca.Client.Responses
 {

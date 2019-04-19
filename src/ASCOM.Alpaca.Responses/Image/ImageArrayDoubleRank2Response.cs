@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Client.Responses.Image
+namespace ASCOM.Alpaca.Responses.Image
 {
     public class ImageArrayDoubleRank2Response : ImageArrayResponseBase<double[,]>
     {

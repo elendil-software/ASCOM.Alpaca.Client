@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ASCOM.Alpaca.Client.Responses.Numeric
+namespace ASCOM.Alpaca.Responses.Numeric
 {
     public class IntArrayResponse : ResponseBase, IValueResponse<List<int>>
     {

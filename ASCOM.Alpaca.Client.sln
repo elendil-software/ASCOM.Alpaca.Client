@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASCOM.Alpaca.Client.Demo.De
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASCOM.Alpaca.Enums", "src\ASCOM.Alpaca.Enums\ASCOM.Alpaca.Enums.csproj", "{5E492507-ACD5-4227-8008-4CC72559FE59}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASCOM.Alpaca.Responses", "src\ASCOM.Alpaca.Responses\ASCOM.Alpaca.Responses.csproj", "{2E51EEA4-BA56-456F-B9B9-E47D0424E833}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{5E492507-ACD5-4227-8008-4CC72559FE59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E492507-ACD5-4227-8008-4CC72559FE59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E492507-ACD5-4227-8008-4CC72559FE59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E51EEA4-BA56-456F-B9B9-E47D0424E833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E51EEA4-BA56-456F-B9B9-E47D0424E833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E51EEA4-BA56-456F-B9B9-E47D0424E833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E51EEA4-BA56-456F-B9B9-E47D0424E833}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using ASCOM.Alpaca.Client.Responses;
-using ASCOM.Alpaca.Client.Responses.Empty;
+using ASCOM.Alpaca.Responses;
+using ASCOM.Alpaca.Responses.Empty;
 using Microsoft.Extensions.Logging;
 using RestSharp;
 

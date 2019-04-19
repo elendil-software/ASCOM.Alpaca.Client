@@ -6,11 +6,11 @@ using ASCOM.Alpaca.Client.Devices.Methods;
 using ASCOM.Alpaca.Client.Logger;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
-using ASCOM.Alpaca.Client.Responses.Boolean;
-using ASCOM.Alpaca.Client.Responses.Empty;
-using ASCOM.Alpaca.Client.Responses.String;
 using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Enums.Devices;
+using ASCOM.Alpaca.Responses.Boolean;
+using ASCOM.Alpaca.Responses.Empty;
+using ASCOM.Alpaca.Responses.String;
 using Microsoft.Extensions.Logging;
 using RestSharp;
 

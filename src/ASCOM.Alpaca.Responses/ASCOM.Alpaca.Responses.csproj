@@ -19,6 +19,9 @@
     <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
     <PackageLicenseUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/LICENSE</PackageLicenseUrl>
     <PackageIconUrl></PackageIconUrl>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
   </PropertyGroup>
 
 </Project>

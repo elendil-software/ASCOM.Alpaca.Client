@@ -1,4 +1,4 @@
-﻿namespace ASCOM.Alpaca.Client.Responses
+﻿namespace ASCOM.Alpaca.Responses
 {
     public abstract class ResponseBase : IResponse
     {
