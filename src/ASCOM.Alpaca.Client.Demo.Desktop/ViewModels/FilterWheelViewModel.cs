@@ -8,6 +8,7 @@ using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Devices.FilterWheel;
 using ASCOM.Alpaca.Client.Devices.Providers;
+using ASCOM.Alpaca.Enums.Devices;
 using Caliburn.Micro;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels

@@ -2,6 +2,7 @@
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
+using ASCOM.Alpaca.Enums.Devices;
 using Microsoft.Extensions.Logging;
 
 namespace ASCOM.Alpaca.Client.Devices.Providers

@@ -1,4 +1,5 @@
 using ASCOM.Alpaca.Client.Devices;
+using ASCOM.Alpaca.Enums.Devices;
 
 namespace ASCOM.Alpaca.Client.Configuration
 {

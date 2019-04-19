@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Client.Devices
+namespace ASCOM.Alpaca.Enums.Devices
 {
     public enum DeviceType
     {

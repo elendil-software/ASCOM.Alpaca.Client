@@ -4,6 +4,7 @@ using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Devices.FilterWheel;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
+using ASCOM.Alpaca.Enums.Devices;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 

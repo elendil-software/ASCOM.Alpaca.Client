@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Client.Devices.Camera
+namespace ASCOM.Alpaca.Enums.Devices.Camera
 {
     public enum SensorType
     {

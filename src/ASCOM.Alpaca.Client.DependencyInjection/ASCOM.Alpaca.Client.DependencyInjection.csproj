@@ -20,6 +20,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\ASCOM.Alpaca.Client\ASCOM.Alpaca.Client.csproj" />
+      <ProjectReference Include="..\ASCOM.Alpaca.Enums\ASCOM.Alpaca.Enums.csproj" />
     </ItemGroup>
 
 </Project>
