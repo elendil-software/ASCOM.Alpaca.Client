@@ -7,34 +7,38 @@ namespace ASCOM.Alpaca.Exceptions
     ///   The range of permitted values falls within the class FACILTY_ITF as 
     ///   defined by the operating system and COM. These values will never clash with 
     ///   COM, RPC, or OS error codes.
-    ///   <para>
-    ///     Driver developers may extend this class by making use of the <c>partial</c> keyword.
-    ///   </para>
     /// </remarks>
-    public static partial class ErrorCodes
+    public static class ErrorCodes
     {
+        /// <summary>
+        /// Offset value that relates the ASCOM Alpaca reserved error number range to the ASCOM COM HResult error number range
+        /// </summary>
+        public static readonly int ASCOMErrorNumberOffset = unchecked((int)0x80040000);
+        /// <summary>
+        /// Start of the Alpaca error code range 0x400 to 0xFFF
+        /// </summary>
+        public static readonly int AlpacaErrorCodeBase = 0x400;
+        /// <summary>
+        /// End of Alpaca error code range 0x400 to 0xFFF
+        /// </summary>
+        public static readonly int AlpacaErrorCodeMax = 0xFFF;
+        
         /// <summary>
         /// Reserved error number (0x80040400) for property or method not implemented.
         /// </summary>
-        /// <remarks>
-        /// See ASCOM.Exception.NotImplementedException.
-        /// </remarks>
+        /// <seealso cref="NotImplementedException"/>
         public static readonly int NotImplemented = unchecked((int)0x80040400);
 
         /// <summary>
         /// Reserved error code (0x80040401) for reporting an invalid value.
         /// </summary>
-        /// <remarks>
-        /// See ASCOM.Exception.InvalidValueException.
-        /// </remarks>
+        /// <seealso cref="InvalidValueException"/>
         public static readonly int InvalidValue = unchecked((int)0x80040401);
 
         /// <summary>
         /// Reserved error code (0x80040402) for reporting that a value has not been set.
         /// </summary>
-        /// <remarks>
-        /// See ASCOM.Exception.ValueNotSetException.
-        /// </remarks>
+        /// <seealso cref="ValueNotSetException"/>
         public static readonly int ValueNotSet = unchecked((int)0x80040402);
 
         /// <summary>
