@@ -150,7 +150,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
         public bool CanConnect => !string.IsNullOrEmpty(Host) && Port > 0 && DeviceId >= 0 && ClientId > 0;
 
-        public async void Connect()
+        public async Task Connect()
         {
             _filterWheel = _deviceFactory.GetDevice<FilterWheel>(new DeviceConfiguration
             {
@@ -161,7 +161,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             try
             {
                 await _filterWheel.SetConnectedAsync(true);
-                LoadDriverData();
+                await LoadDriverData();
             }
             catch (Exception e)
             {
@@ -169,7 +169,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             }
         }
 
-        private async void LoadDriverData()
+        private async Task LoadDriverData()
         {
             Name = await _filterWheel.GetNameAsync();
             Description = await _filterWheel.GetDescriptionAsync();
@@ -198,7 +198,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             CurrentPosition = SelectedFilter;
         }
 
-        public async void MoveToSelectedFilter()
+        public async Task MoveToSelectedFilter()
         {
             try
             {
