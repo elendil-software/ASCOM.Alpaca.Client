@@ -61,7 +61,7 @@ namespace ASCOM.Alpaca.Client.Devices.Dome
         /// Returns the dome azimuth (degrees, North zero and increasing clockwise, i.e., 90 East, 180 South, 270 West)
         /// </summary>
         /// <returns>The dome azimuth in degrees</returns>
-        double GetAzimuthAsync();
+        Task<double> GetAzimuthAsync();
 
         /// <summary>
         /// True if the dome can move to the home position.

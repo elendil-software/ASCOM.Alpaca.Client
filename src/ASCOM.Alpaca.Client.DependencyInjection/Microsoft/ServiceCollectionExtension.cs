@@ -1,6 +1,7 @@
 using System;
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices;
+using ASCOM.Alpaca.Client.Devices.Dome;
 using ASCOM.Alpaca.Client.Devices.FilterWheel;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
@@ -29,6 +30,8 @@ namespace ASCOM.Alpaca.Client.DependencyInjection.Microsoft
                         case DeviceType.Switch:
                         case DeviceType.SafetyMonitor:
                         case DeviceType.Dome:
+                            return new Dome(deviceConfiguration, clientTransactionIdGenerator, commandSender, ctx.GetService<ILogger<Dome>>());
+
                         case DeviceType.Camera:
                         case DeviceType.ObservingConditions:
                         case DeviceType.Focuser:
