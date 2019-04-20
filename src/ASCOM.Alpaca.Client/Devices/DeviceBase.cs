@@ -8,6 +8,7 @@ using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Enums.Devices;
+using ASCOM.Alpaca.Responses;
 using ASCOM.Alpaca.Responses.Boolean;
 using ASCOM.Alpaca.Responses.Empty;
 using ASCOM.Alpaca.Responses.String;
@@ -330,5 +331,57 @@ namespace ASCOM.Alpaca.Client.Devices
         }
 
         private RestRequest BuildGetSupportedActionsRequest() => RequestBuilder.BuildRestRequest(CommonMethod.SupportedActions, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+
+
+
+        protected void ExecuteRequest(Func<RestRequest> requestBuilder)
+        {
+            RestRequest request = requestBuilder();
+            var response = CommandSender.ExecuteRequest<MethodResponse>(Configuration.GetBaseUrl(), request);
+            Logger.LogDebug(response);
+            response.HandleResponse();
+        }
+
+        protected async Task ExecuteRequestAsync(Func<RestRequest> requestBuilder)
+        {
+            RestRequest request = requestBuilder();
+            var response = await CommandSender.ExecuteRequestAsync<MethodResponse>(Configuration.GetBaseUrl(), request);
+            Logger.LogDebug(response);
+            response.HandleResponse();
+        }
+
+        protected void ExecuteRequest<T1>(Func<T1, RestRequest> requestBuilder, T1 param1)
+        {
+            RestRequest request = requestBuilder(param1);
+            var response = CommandSender.ExecuteRequest<MethodResponse>(Configuration.GetBaseUrl(), request);
+            Logger.LogDebug(response);
+            response.HandleResponse();
+        }
+
+        protected async Task ExecuteRequestAsync<T1>(Func<T1, RestRequest> requestBuilder, T1 param1)
+        {
+            RestRequest request = requestBuilder(param1);
+            var response = await CommandSender.ExecuteRequestAsync<MethodResponse>(Configuration.GetBaseUrl(), request);
+            Logger.LogDebug(response);
+            response.HandleResponse();
+        }
+
+        protected TResult ExecuteRequest<TResult, TAlpacaResponse>(Func<RestRequest> requestBuilder) where TAlpacaResponse : IValueResponse<TResult>, new()
+        {
+            RestRequest request = requestBuilder();
+            var response = CommandSender.ExecuteRequest<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
+            Logger.LogDebug(response);
+            return response.HandleResponse<TResult, TAlpacaResponse>();
+        }
+
+        protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse>(Func<RestRequest> requestBuilder) where TAlpacaResponse : IValueResponse<TResult>, new()
+        {
+            RestRequest request = requestBuilder();
+            var response = await CommandSender.ExecuteRequestAsync<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
+            Logger.LogDebug(response);
+            return response.HandleResponse<TResult, TAlpacaResponse>();
+        }
+
+
     }
 }
