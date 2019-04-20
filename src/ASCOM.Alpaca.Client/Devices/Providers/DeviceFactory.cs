@@ -26,21 +26,21 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
             _loggerFactory = loggerFactory ?? throw new ArgumentNullException(nameof(loggerFactory));
         }
 
-        public T GetDevice<T>(DeviceConfiguration configuration) where T : IDevice
+        public T CreateDeviceInstance<T>(DeviceConfiguration configuration) where T : IDevice
         {
             //TODO : handle the case without logger
             switch (configuration.DeviceType)
             {
                 case DeviceType.FilterWheel:
-                    ILogger<FilterWheel.FilterWheel> logger = _loggerFactory.CreateLogger<FilterWheel.FilterWheel>();
-                    IDevice device = new FilterWheel.FilterWheel(configuration, _clientTransactionIdGenerator, _commandSender, logger);
+                    ILogger<FilterWheel> logger = _loggerFactory.CreateLogger<FilterWheel>();
+                    IDevice device = new FilterWheel(configuration, _clientTransactionIdGenerator, _commandSender, logger);
                     return (T) device;
 
                 case DeviceType.Switch:
                 case DeviceType.SafetyMonitor:
                 case DeviceType.Dome:
-                    ILogger<Dome.Dome> domeLogger = _loggerFactory.CreateLogger<Dome.Dome>();
-                    IDevice dome = new Dome.Dome(configuration, _clientTransactionIdGenerator, _commandSender, domeLogger);
+                    ILogger<Dome> domeLogger = _loggerFactory.CreateLogger<Dome>();
+                    IDevice dome = new Dome(configuration, _clientTransactionIdGenerator, _commandSender, domeLogger);
                     return (T) dome;
                 
                 case DeviceType.Camera:

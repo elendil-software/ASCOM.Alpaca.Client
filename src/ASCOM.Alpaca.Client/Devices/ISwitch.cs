@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace ASCOM.Alpaca.Client.Devices.Switch
+namespace ASCOM.Alpaca.Client.Devices
 {
     public interface ISwitch : IDevice
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices.Methods;
-using ASCOM.Alpaca.Client.Logger;
+using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
@@ -254,7 +254,5 @@ namespace ASCOM.Alpaca.Client.Devices
             Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
-
-
     }
 }

@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace ASCOM.Alpaca.Client.Devices.Focuser
+namespace ASCOM.Alpaca.Client.Devices
 {
     public interface IFocuser
     {

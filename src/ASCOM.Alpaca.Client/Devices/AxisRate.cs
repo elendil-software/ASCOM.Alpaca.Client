@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Client.Devices.Telescope
+namespace ASCOM.Alpaca.Client.Devices
 {
     public class AxisRate
     {

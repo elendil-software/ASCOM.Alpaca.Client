@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Client.Logger;
-using ASCOM.Alpaca.Client.Responses;
+using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Exceptions;
 using ASCOM.Alpaca.Responses;
 using Microsoft.Extensions.Logging;

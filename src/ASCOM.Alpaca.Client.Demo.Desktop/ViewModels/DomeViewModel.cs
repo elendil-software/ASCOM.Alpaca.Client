@@ -1,10 +1,9 @@
 using System;
-using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using ASCOM.Alpaca.Client.Configuration;
-using ASCOM.Alpaca.Client.Devices.Dome;
+using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Devices.Providers;
 using ASCOM.Alpaca.Enums.Devices;
 using ASCOM.Alpaca.Enums.Devices.Dome;
@@ -193,7 +192,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
         public async Task Connect()
         {
-            _dome = DeviceFactory.GetDevice<Dome>(new DeviceConfiguration
+            _dome = DeviceFactory.CreateDeviceInstance<Dome>(new DeviceConfiguration
             {
                 ClientId = ClientId, DeviceNumber = DeviceId, DeviceType = DeviceType.Dome, Host = Host,
                 Port = Port

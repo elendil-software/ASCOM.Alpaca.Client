@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using ASCOM.Alpaca.Client.Configuration;
-using ASCOM.Alpaca.Client.Devices.FilterWheel;
+using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Devices.Providers;
 using ASCOM.Alpaca.Enums.Devices;
 
@@ -48,7 +48,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
         public async Task Connect()
         {
-            _filterWheel = DeviceFactory.GetDevice<FilterWheel>(new DeviceConfiguration
+            _filterWheel = DeviceFactory.CreateDeviceInstance<FilterWheel>(new DeviceConfiguration
             {
                 ClientId = ClientId, DeviceNumber = DeviceId, DeviceType = DeviceType.FilterWheel, Host = Host,
                 Port = Port

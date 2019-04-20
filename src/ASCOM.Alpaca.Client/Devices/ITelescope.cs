@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using ASCOM.Alpaca.Enums.Devices.Telescope;
 
-namespace ASCOM.Alpaca.Client.Devices.Telescope
+namespace ASCOM.Alpaca.Client.Devices
 {
     public interface ITelescope
     {

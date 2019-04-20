@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Responses;
 using RestSharp;
 

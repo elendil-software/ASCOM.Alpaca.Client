@@ -4,7 +4,7 @@ using ASCOM.Alpaca.Responses;
 using Microsoft.Extensions.Logging;
 using RestSharp;
 
-namespace ASCOM.Alpaca.Client.Logger
+namespace ASCOM.Alpaca.Client.Logging
 {
     internal static class RequestLoggerExtensions
     {

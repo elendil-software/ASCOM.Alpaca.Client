@@ -13,7 +13,7 @@ using ASCOM.Alpaca.Responses.Numeric;
 using Microsoft.Extensions.Logging;
 using RestSharp;
 
-namespace ASCOM.Alpaca.Client.Devices.Dome
+namespace ASCOM.Alpaca.Client.Devices
 {
     public class Dome : DeviceBase, IDome
     {

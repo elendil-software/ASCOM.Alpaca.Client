@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace ASCOM.Alpaca.Client.Devices.ObservingConditions
+namespace ASCOM.Alpaca.Client.Devices
 {
     public interface IObservingConditions
     {

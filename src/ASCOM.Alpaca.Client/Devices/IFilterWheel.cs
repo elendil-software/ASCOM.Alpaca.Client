@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ASCOM.Alpaca.Client.Devices.FilterWheel
+namespace ASCOM.Alpaca.Client.Devices
 {
     public interface IFilterWheel : IDevice
     {

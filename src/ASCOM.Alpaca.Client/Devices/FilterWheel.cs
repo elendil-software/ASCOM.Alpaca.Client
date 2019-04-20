@@ -11,7 +11,7 @@ using ASCOM.Alpaca.Responses.String;
 using Microsoft.Extensions.Logging;
 using RestSharp;
 
-namespace ASCOM.Alpaca.Client.Devices.FilterWheel
+namespace ASCOM.Alpaca.Client.Devices
 {
     public class FilterWheel : DeviceBase, IFilterWheel
     {
