@@ -1,0 +1,143 @@
+﻿<UserControl x:Class="ASCOM.Alpaca.Client.Demo.Desktop.Views.DomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:ASCOM.Alpaca.Client.Demo.Desktop.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5" VerticalAlignment="Center">
+            <Label VerticalAlignment="Center" FontWeight="Bold">Host</Label>
+            <TextBox Name="Host" Width="200" Margin="5" Padding="5"></TextBox>
+
+            <Label VerticalAlignment="Center" FontWeight="Bold">Port</Label>
+            <TextBox Name="Port" Width="50" Margin="5" Padding="5"></TextBox>
+
+            <Label VerticalAlignment="Center" FontWeight="Bold">ClientId</Label>
+            <TextBox Name="ClientId" Margin="5" Padding="5"></TextBox>
+
+            <Label VerticalAlignment="Center" FontWeight="Bold">DeviceId</Label>
+            <TextBox Name="DeviceId" Margin="5" Padding="5"></TextBox>
+
+            <Button Name="Connect" Content="Connect" Margin="5" Padding="5"></Button>
+        </StackPanel>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Name</Label>
+            <Label Grid.Row="0" Grid.Column="1" Name="Name">...</Label>
+            <Label Grid.Row="0" Grid.Column="2" FontWeight="Bold">Description</Label>
+            <Label Grid.Row="0" Grid.Column="3" Name="Description">...</Label>
+            
+            <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Driver Info</Label>
+            <Label Grid.Row="1" Grid.Column="1" Name="DriverInfo">...</Label>
+            <Label Grid.Row="1" Grid.Column="2" FontWeight="Bold">Driver Version</Label>
+            <Label Grid.Row="1" Grid.Column="3" Name="DriverVersion">...</Label>
+        </Grid>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Can Find Home</Label>
+            <Label Grid.Row="0" Grid.Column="1" Name="CanFindHome">...</Label>
+            <Label Grid.Row="0" Grid.Column="2" FontWeight="Bold">Can Set Shutter</Label>
+            <Label Grid.Row="0" Grid.Column="3" Name="CanSetShutter">...</Label>
+            
+            <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Can Park</Label>
+            <Label Grid.Row="1" Grid.Column="1" Name="CanPark">...</Label>
+            <Label Grid.Row="1" Grid.Column="2" FontWeight="Bold">Can Set Park</Label>
+            <Label Grid.Row="1" Grid.Column="3" Name="CanSetPark">...</Label>
+            
+            <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">Can Set Altitude</Label>
+            <Label Grid.Row="2" Grid.Column="1" Name="CanSetAltitude">...</Label>
+            <Label Grid.Row="2" Grid.Column="2" FontWeight="Bold">Can Set Azimuth</Label>
+            <Label Grid.Row="2" Grid.Column="3" Name="CanSetAzimuth">...</Label>
+            
+            <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Can Sync Azimuth</Label>
+            <Label Grid.Row="3" Grid.Column="1" Name="CanSyncAzimuth">...</Label>
+            <Label Grid.Row="3" Grid.Column="2" FontWeight="Bold">Can Slave</Label>
+            <Label Grid.Row="3" Grid.Column="3" Name="CanSlave">...</Label>
+        </Grid>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">At Home</Label>
+            <Label Grid.Row="0" Grid.Column="1" Name="AtHome">...</Label>
+            <Label Grid.Row="0" Grid.Column="2" FontWeight="Bold">At Park</Label>
+            <Label Grid.Row="0" Grid.Column="3" Name="AtPark">...</Label>
+            
+            <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Is Slaved</Label>
+            <Label Grid.Row="1" Grid.Column="1" Name="IsSlaved">...</Label>
+            <Label Grid.Row="1" Grid.Column="2" FontWeight="Bold">Is Slewing</Label>
+            <Label Grid.Row="1" Grid.Column="3" Name="IsSlewing">...</Label>
+            
+            <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">Azimuth</Label>
+            <Label Grid.Row="2" Grid.Column="1" Name="Azimuth">...</Label>
+            <Label Grid.Row="2" Grid.Column="2" FontWeight="Bold">Altitude</Label>
+            <Label Grid.Row="2" Grid.Column="3" Name="Altitude">...</Label>
+            
+            <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Shutter Status</Label>
+            <Label Grid.Row="3" Grid.Column="1" Name="ShutterStatus">...</Label>
+        </Grid>
+        
+        <StackPanel Orientation="Horizontal">
+            <Button Margin="5" Padding="5" Name="SetPark">Set Park</Button>
+            <Button Margin="5" Padding="5" Name="Park">Park</Button>
+            <Button Margin="5" Padding="5" Name="FindHome">Find Home</Button>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal">
+            <Button Margin="5" Padding="5" Name="OpenShutter">Open Shutter</Button>
+            <Button Margin="5" Padding="5" Name="CloseShutter">Close Shutter</Button>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal">
+            <Button Margin="5" Padding="5" Name="AbortSlew">Abort Slew</Button>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal">
+            <TextBox Margin="5" Padding="5" Width="100" Name="TargetAltitude"></TextBox>
+            <Button Margin="5" Padding="5" Name="SlewToAltitude">Slew To Altitude</Button>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal">
+            <TextBox Margin="5" Padding="5" Width="100" Name="TargetAzimuth"></TextBox>
+            <Button Margin="5" Padding="5" Name="SlewToAzimuth">Slew To Azimuth</Button>
+            <Button Margin="5" Padding="5" Name="SyncToAzimuth">Sync To Azimuth</Button>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

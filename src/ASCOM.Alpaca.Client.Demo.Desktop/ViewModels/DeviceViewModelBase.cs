@@ -17,6 +17,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private string _driverInfo = "";
 
         protected readonly IDeviceFactory DeviceFactory;
+        private bool _isConnected;
 
         public DeviceViewModelBase(IDeviceFactory deviceFactory)
         {
@@ -108,6 +109,16 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
                 _deviceId = value;
                 NotifyOfPropertyChange(() => DeviceId);
                 NotifyOfPropertyChange(() => CanConnect);
+            }
+        }
+
+        public bool IsConnected
+        {
+            get => _isConnected;
+            set
+            {
+                _isConnected = value;
+                NotifyOfPropertyChange(() => IsConnected);
             }
         }
 

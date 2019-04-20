@@ -6,18 +6,15 @@
         xmlns:model="clr-namespace:ASCOM.Alpaca.Client.Demo.Desktop.ViewModels"
         mc:Ignorable="d"
         d:DataContext="{x:Type model:ShellViewModel}"
-        Title="ASCOM Alpaca Demo" Height="450" Width="800">
+        Title="ASCOM Alpaca Demo" Height="768" Width="1024">
     <DockPanel>
         <TabControl>
             <TabItem Header="FilterWheel">
                 <ContentControl x:Name="FilterWheelViewModel" />
             </TabItem>
-            <TabItem Header="Dome" />
-            <TabItem Header="etc." />
+            <TabItem Header="Dome">
+                <ContentControl x:Name="DomeViewModel" />
+            </TabItem>
         </TabControl>
     </DockPanel>
-        
-    <!--<Grid>
-        
-    </Grid>-->
 </Window>

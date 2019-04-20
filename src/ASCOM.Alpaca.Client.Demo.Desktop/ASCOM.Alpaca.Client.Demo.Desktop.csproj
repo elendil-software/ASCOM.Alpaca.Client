@@ -162,8 +162,12 @@
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="ViewModels\DeviceViewModelBase.cs" />
+    <Compile Include="ViewModels\DomeViewModel.cs" />
     <Compile Include="ViewModels\FilterWheelViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="Views\DomeView.xaml.cs">
+      <DependentUpon>DomeView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\FilterWheelView.xaml.cs">
       <DependentUpon>FilterWheelView.xaml</DependentUpon>
     </Compile>
@@ -174,6 +178,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\DomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\FilterWheelView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

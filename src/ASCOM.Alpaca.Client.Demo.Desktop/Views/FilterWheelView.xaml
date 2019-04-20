@@ -7,34 +7,45 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="5">
-            <Label>Host</Label>
-            <TextBox Name="Host" Width="200" Height="20"></TextBox>
+        <StackPanel Orientation="Horizontal" Margin="5" VerticalAlignment="Center">
+            <Label VerticalAlignment="Center" FontWeight="Bold">Host</Label>
+            <TextBox Name="Host" Width="200" Margin="5" Padding="5"></TextBox>
 
-            <Label>Port</Label>
-            <TextBox Name="Port" Width="50" Height="20"></TextBox>
-            
-            <Label>ClientId</Label>
-            <TextBox Name="ClientId" Width="20" Height="20"></TextBox>
+            <Label VerticalAlignment="Center" FontWeight="Bold">Port</Label>
+            <TextBox Name="Port" Width="50" Margin="5" Padding="5"></TextBox>
 
-            <Label>DeviceId</Label>
-            <TextBox Name="DeviceId" Width="20" Height="20"></TextBox>
+            <Label VerticalAlignment="Center" FontWeight="Bold">ClientId</Label>
+            <TextBox Name="ClientId" Margin="5" Padding="5"></TextBox>
 
-            <Button Name="Connect" Content="Connect" Height="20" Margin="10,0,0,0"></Button>
+            <Label VerticalAlignment="Center" FontWeight="Bold">DeviceId</Label>
+            <TextBox Name="DeviceId" Margin="5" Padding="5"></TextBox>
+
+            <Button Name="Connect" Content="Connect" Margin="5" Padding="5"></Button>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="5">
-            <Label FontWeight="Bold">Name</Label>
-            <Label Name="Name">...</Label>
-
-            <Label FontWeight="Bold">Description</Label>
-            <Label Name="Description">...</Label>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
             
-            <Label FontWeight="Bold">DriverInfo</Label>
-            <Label Name="DriverInfo">...</Label>
+            <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Name</Label>
+            <Label Grid.Row="0" Grid.Column="1" Name="Name">...</Label>
+            <Label Grid.Row="0" Grid.Column="2" FontWeight="Bold">Description</Label>
+            <Label Grid.Row="0" Grid.Column="3" Name="Description">...</Label>
             
-            <Label FontWeight="Bold">DriverVersion</Label>
-            <Label Name="DriverVersion">...</Label>
-        </StackPanel>
+            <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Driver Info</Label>
+            <Label Grid.Row="1" Grid.Column="1" Name="DriverInfo">...</Label>
+            <Label Grid.Row="1" Grid.Column="2" FontWeight="Bold">Driver Version</Label>
+            <Label Grid.Row="1" Grid.Column="3" Name="DriverVersion">...</Label>
+        </Grid>
+        
         <StackPanel Orientation="Horizontal" Margin="5">
             <Label FontWeight="Bold">Filters</Label>
             <ListBox Name="Filters" SelectedIndex="{Binding SelectedFilter}" Width="100"/>
