@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Responses;
-using ASCOM.Alpaca.Responses.Empty;
 using Microsoft.Extensions.Logging;
 using RestSharp;
 
@@ -30,7 +28,7 @@ namespace ASCOM.Alpaca.Client.Logger
                                             response.ErrorMessage);
         }
         
-        public static void LogDebug(this ILogger logger, MethodResponse response)
+        public static void LogDebug(this ILogger logger, IResponse response)
         {
             logger?.LogDebug("Received response : ClientTransactionID={ClientTransactionID}, ServerTransactionID={ServerTransactionID}, ErrorNumber={ErrorNumber}, ErrorMessage={ErrorMessage}", 
                 response.ClientTransactionID, 

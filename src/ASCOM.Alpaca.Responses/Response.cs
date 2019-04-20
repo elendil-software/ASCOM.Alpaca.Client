@@ -1,6 +1,6 @@
 ﻿namespace ASCOM.Alpaca.Responses
 {
-    public abstract class ResponseBase : IResponse
+    public class Response : IResponse
     {
         public int ClientTransactionID { get; internal set; }
         public int ServerTransactionID { get; internal set; }

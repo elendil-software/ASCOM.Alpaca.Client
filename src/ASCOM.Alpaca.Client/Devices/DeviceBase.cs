@@ -10,7 +10,6 @@ using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Enums.Devices;
 using ASCOM.Alpaca.Responses;
 using ASCOM.Alpaca.Responses.Boolean;
-using ASCOM.Alpaca.Responses.Empty;
 using ASCOM.Alpaca.Responses.String;
 using Microsoft.Extensions.Logging;
 using RestSharp;
@@ -81,7 +80,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildSendCommandBlindRequest(command, raw);
 
-            var response = CommandSender.ExecuteRequest<MethodResponse>(Configuration.GetBaseUrl(), request);
+            var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             response.HandleResponse();
@@ -91,7 +90,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             RestRequest request = BuildSendCommandBlindRequest(command, raw);
 
-            var response = await CommandSender.ExecuteRequestAsync<MethodResponse>(Configuration.GetBaseUrl(), request);
+            var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
 
             response.HandleResponse();
@@ -211,7 +210,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected void ExecuteRequest(Func<RestRequest> requestBuilder)
         {
             RestRequest request = requestBuilder();
-            var response = CommandSender.ExecuteRequest<MethodResponse>(Configuration.GetBaseUrl(), request);
+            var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             response.HandleResponse();
         }
@@ -219,7 +218,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected async Task ExecuteRequestAsync(Func<RestRequest> requestBuilder)
         {
             RestRequest request = requestBuilder();
-            var response = await CommandSender.ExecuteRequestAsync<MethodResponse>(Configuration.GetBaseUrl(), request);
+            var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             response.HandleResponse();
         }
@@ -227,7 +226,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected void ExecuteRequest<T1>(Func<T1, RestRequest> requestBuilder, T1 param1)
         {
             RestRequest request = requestBuilder(param1);
-            var response = CommandSender.ExecuteRequest<MethodResponse>(Configuration.GetBaseUrl(), request);
+            var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             response.HandleResponse();
         }
@@ -235,7 +234,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected async Task ExecuteRequestAsync<T1>(Func<T1, RestRequest> requestBuilder, T1 param1)
         {
             RestRequest request = requestBuilder(param1);
-            var response = await CommandSender.ExecuteRequestAsync<MethodResponse>(Configuration.GetBaseUrl(), request);
+            var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             response.HandleResponse();
         }

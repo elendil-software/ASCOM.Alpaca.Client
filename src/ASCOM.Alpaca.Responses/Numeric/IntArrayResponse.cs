@@ -2,7 +2,7 @@
 
 namespace ASCOM.Alpaca.Responses.Numeric
 {
-    public class IntArrayResponse : ResponseBase, IValueResponse<List<int>>
+    public class IntArrayResponse : Response, IValueResponse<List<int>>
     {
         public List<int> Value { get; set; }
     }

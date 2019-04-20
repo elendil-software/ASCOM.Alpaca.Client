@@ -1,6 +1,5 @@
 using ASCOM.Alpaca.Exceptions;
 using ASCOM.Alpaca.Responses;
-using ASCOM.Alpaca.Responses.Empty;
 
 namespace ASCOM.Alpaca.Client.Responses
 {
@@ -12,7 +11,7 @@ namespace ASCOM.Alpaca.Client.Responses
             return response.Value;
         }
 
-        public static void HandleResponse(this MethodResponse response)
+        public static void HandleResponse(this IResponse response)
         {
             HandleError(response.ErrorNumber, response.ErrorMessage);
         }
