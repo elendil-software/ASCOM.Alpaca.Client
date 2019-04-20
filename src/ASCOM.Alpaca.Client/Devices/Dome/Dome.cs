@@ -129,7 +129,7 @@ namespace ASCOM.Alpaca.Client.Devices.Dome
         {
             var parameters = new Dictionary<string, object>
             {
-                {"Altitude ", altitude.ToString(CultureInfo.InvariantCulture)}
+                {"Altitude", altitude.ToString(CultureInfo.InvariantCulture)}
             };
 
             return RequestBuilder.BuildRestRequest(DomeMethod.SlewToAltitude, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
@@ -141,15 +141,22 @@ namespace ASCOM.Alpaca.Client.Devices.Dome
         {
             var parameters = new Dictionary<string, object>
             {
-                {"Azimuth ", azimuth.ToString(CultureInfo.InvariantCulture)}
+                {"Azimuth", azimuth.ToString(CultureInfo.InvariantCulture)}
             };
 
             return RequestBuilder.BuildRestRequest(DomeMethod.SlewToAzimuth, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
-        public void SyncToAzimuth() => ExecuteRequest(BuildSyncToAzimuthRequest);
-        public async Task SyncToAzimuthAsync() => await ExecuteRequestAsync(BuildSyncToAzimuthRequest);
-        private RestRequest BuildSyncToAzimuthRequest() => RequestBuilder.BuildRestRequest(DomeMethod.SyncToAzimuth, Method.PUT, ClientTransactionIdGenerator.GetTransactionId());
+        public void SyncToAzimuth(double azimuth) => ExecuteRequest(BuildSyncToAzimuthRequest, azimuth);
+        public async Task SyncToAzimuthAsync(double azimuth) => await ExecuteRequestAsync(BuildSyncToAzimuthRequest, azimuth);
+        private RestRequest BuildSyncToAzimuthRequest(double azimuth)
+        {
+            var parameters = new Dictionary<string, object>
+            {
+                {"Azimuth", azimuth.ToString(CultureInfo.InvariantCulture)}
+            };
 
+            return RequestBuilder.BuildRestRequest(DomeMethod.SyncToAzimuth, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+        }
     }
 }

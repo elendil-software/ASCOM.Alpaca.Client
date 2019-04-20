@@ -301,11 +301,11 @@ namespace ASCOM.Alpaca.Client.Devices.Dome
         /// <summary>
         /// Synchronize the current position of the dome to the given azimuth.
         /// </summary>
-        void SyncToAzimuth();
+        void SyncToAzimuth(double azimuth);
 
         /// <summary>
         /// Synchronize the current position of the dome to the given azimuth.
         /// </summary>
-        Task SyncToAzimuthAsync();
+        Task SyncToAzimuthAsync(double azimuth);
     }
 }
