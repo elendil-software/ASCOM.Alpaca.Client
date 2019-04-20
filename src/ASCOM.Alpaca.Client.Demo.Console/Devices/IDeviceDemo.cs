@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Client.Demo
+namespace ASCOM.Alpaca.Client.Demo.Devices
 {
     internal interface IDeviceDemo
     {

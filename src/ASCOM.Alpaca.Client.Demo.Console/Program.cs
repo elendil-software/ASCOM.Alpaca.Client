@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using ASCOM.Alpaca.Client.Configuration;
+using ASCOM.Alpaca.Client.Demo.Devices;
 using ASCOM.Alpaca.Client.DependencyInjection.Microsoft;
 using ASCOM.Alpaca.Client.Devices.Providers;
 using ASCOM.Alpaca.Client.Request;
@@ -61,7 +62,8 @@ namespace ASCOM.Alpaca.Client.Demo
                 .AddTransient<ICommandSender, CommandSender>()
                 .AddDevices(devicesConfiguration)
                 .AddSingleton<IDeviceProvider, DeviceProvider>()
-                .AddTransient<IDeviceDemo, FilterWheelDemo>();
+                //.AddTransient<IDeviceDemo, FilterWheelDemo>()
+                .AddTransient<IDeviceDemo, DomeDemo>();
         }
     }
 }
