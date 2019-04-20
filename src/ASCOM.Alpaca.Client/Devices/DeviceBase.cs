@@ -170,48 +170,12 @@ namespace ASCOM.Alpaca.Client.Devices
             return RequestBuilder.BuildRestRequest(CommonMethod.CommandString, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
-        public bool IsConnected()
-        {
-            RestRequest request = BuildIsConnectedRequest();
-
-            var response = CommandSender.ExecuteRequest<BoolResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<bool, BoolResponse>();
-        }
-        
-        public async Task<bool> IsConnectedAsync()
-        {
-            RestRequest request = BuildIsConnectedRequest();
-
-            var response = await CommandSender.ExecuteRequestAsync<BoolResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<bool, BoolResponse>();
-        }
-
+        public bool IsConnected() => ExecuteRequest<bool, BoolResponse>(BuildIsConnectedRequest);
+        public async Task<bool> IsConnectedAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsConnectedRequest);
         private RestRequest BuildIsConnectedRequest() => RequestBuilder.BuildRestRequest(CommonMethod.Connected, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
         
-        public void SetConnected(bool connected)
-        {
-            RestRequest request = BuildSetConnectedRequest(connected);
-
-            var response = CommandSender.ExecuteRequest<MethodResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            response.HandleResponse();
-        }
-        
-        public async Task SetConnectedAsync(bool connected)
-        {
-            RestRequest request = BuildSetConnectedRequest(connected);
-
-            var response = await CommandSender.ExecuteRequestAsync<MethodResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            response.HandleResponse();
-        }
-
+        public void SetConnected(bool connected) => ExecuteRequest(BuildSetConnectedRequest, connected);
+        public async Task SetConnectedAsync(bool connected) => await ExecuteRequestAsync(BuildSetConnectedRequest, connected);
         private RestRequest BuildSetConnectedRequest(bool connected)
         {
             var parameters = new Dictionary<string, object>
@@ -222,114 +186,24 @@ namespace ASCOM.Alpaca.Client.Devices
             return RequestBuilder.BuildRestRequest(CommonMethod.Connected, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
-        public string GetDescription()
-        {
-            RestRequest request = BuildGetDescriptionRequest();
-
-            var response = CommandSender.ExecuteRequest<StringResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<string, StringResponse>();
-        }
-        
-        public async Task<string> GetDescriptionAsync()
-        {
-            RestRequest request = BuildGetDescriptionRequest();
-
-            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<string, StringResponse>();
-        }
-
+        public string GetDescription() => ExecuteRequest<string, StringResponse>(BuildGetDescriptionRequest);     
+        public async Task<string> GetDescriptionAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetDescriptionRequest);
         private RestRequest BuildGetDescriptionRequest() => RequestBuilder.BuildRestRequest(CommonMethod.Description, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
-        public string GetDriverInfo()
-        {
-            RestRequest request = BuildGetDriverInfoRequest();
-
-            var response = CommandSender.ExecuteRequest<StringResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<string, StringResponse>();
-        }
-        
-        public async Task<string> GetDriverInfoAsync()
-        {
-            RestRequest request = BuildGetDriverInfoRequest();
-
-            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<string, StringResponse>();
-        }
-
+        public string GetDriverInfo() => ExecuteRequest<string, StringResponse>(BuildGetDriverInfoRequest);    
+        public async Task<string> GetDriverInfoAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetDriverInfoRequest);
         private RestRequest BuildGetDriverInfoRequest() => RequestBuilder.BuildRestRequest(CommonMethod.Driverinfo, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
-        public string GetDriverVersion()
-        {
-            RestRequest request = BuildGetDriverVersionRequest();
-
-            var response = CommandSender.ExecuteRequest<StringResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<string, StringResponse>();
-        }
-        
-        public async Task<string> GetDriverVersionAsync()
-        {
-            RestRequest request = BuildGetDriverVersionRequest();
-
-            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<string, StringResponse>();
-        }
-
+        public string GetDriverVersion() => ExecuteRequest<string, StringResponse>(BuildGetDriverVersionRequest);
+        public async Task<string> GetDriverVersionAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetDriverVersionRequest);
         private RestRequest BuildGetDriverVersionRequest() => RequestBuilder.BuildRestRequest(CommonMethod.DriverVersion, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
-        public string GetName()
-        {
-            RestRequest request = BuildGetNameRequest();
-
-            var response = CommandSender.ExecuteRequest<StringResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<string, StringResponse>();
-        }
-        
-        public async Task<string> GetNameAsync()
-        {
-            RestRequest request = BuildGetNameRequest();
-
-            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<string, StringResponse>();
-        }
-
+        public string GetName() => ExecuteRequest<string, StringResponse>(BuildGetNameRequest);
+        public async Task<string> GetNameAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetNameRequest);
         private RestRequest BuildGetNameRequest() => RequestBuilder.BuildRestRequest(CommonMethod.Name, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-        
-        public List<string> GetSupportedActions()
-        {
-            RestRequest request = BuildGetSupportedActionsRequest();
 
-            var response = CommandSender.ExecuteRequest<StringArrayResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<List<string>, StringArrayResponse>();
-        }
-        
-        public async Task<List<string>> GetSupportedActionsAsync()
-        {
-            RestRequest request = BuildGetSupportedActionsRequest();
-
-            var response = await CommandSender.ExecuteRequestAsync<StringArrayResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<List<string>, StringArrayResponse>();
-        }
-
+        public List<string> GetSupportedActions() => ExecuteRequest<List<string>, StringArrayResponse>(BuildGetSupportedActionsRequest);      
+        public async Task<List<string>> GetSupportedActionsAsync() => await ExecuteRequestAsync<List<string>, StringArrayResponse>(BuildGetSupportedActionsRequest);
         private RestRequest BuildGetSupportedActionsRequest() => RequestBuilder.BuildRestRequest(CommonMethod.SupportedActions, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
 
