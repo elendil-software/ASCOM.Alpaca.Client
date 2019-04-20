@@ -28,11 +28,10 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
 
         public T GetDevice<T>(DeviceConfiguration configuration) where T : IDevice
         {
-
+            //TODO : handle the case without logger
             switch (configuration.DeviceType)
             {
                 case DeviceType.FilterWheel:
-                    //TODO : handle the case without logger
                     ILogger<FilterWheel.FilterWheel> logger = _loggerFactory.CreateLogger<FilterWheel.FilterWheel>();
                     IDevice device = new FilterWheel.FilterWheel(configuration, _clientTransactionIdGenerator, _commandSender, logger);
                     return (T) device;
@@ -40,6 +39,10 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
                 case DeviceType.Switch:
                 case DeviceType.SafetyMonitor:
                 case DeviceType.Dome:
+                    ILogger<Dome.Dome> domeLogger = _loggerFactory.CreateLogger<Dome.Dome>();
+                    IDevice dome = new Dome.Dome(configuration, _clientTransactionIdGenerator, _commandSender, domeLogger);
+                    return (T) dome;
+                
                 case DeviceType.Camera:
                 case DeviceType.ObservingConditions:
                 case DeviceType.Focuser:
