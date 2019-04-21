@@ -45,7 +45,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {"Position", position.ToString(CultureInfo.InvariantCulture)}
+                {FilterWheelRequestParameters.Position, position.ToString(CultureInfo.InvariantCulture)}
             };
 
             return RequestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());

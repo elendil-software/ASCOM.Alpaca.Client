@@ -89,7 +89,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {"Slaved", slaved.ToString()}
+                {DomeRequestParameters.Slaved, slaved.ToString()}
             };
 
             return RequestBuilder.BuildRestRequest(DomeMethod.Slaved, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
@@ -129,7 +129,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {"Altitude", altitude.ToString(CultureInfo.InvariantCulture)}
+                {DomeRequestParameters.Altitude, altitude.ToString(CultureInfo.InvariantCulture)}
             };
 
             return RequestBuilder.BuildRestRequest(DomeMethod.SlewToAltitude, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
@@ -141,7 +141,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {"Azimuth", azimuth.ToString(CultureInfo.InvariantCulture)}
+                {DomeRequestParameters.Azimuth, azimuth.ToString(CultureInfo.InvariantCulture)}
             };
 
             return RequestBuilder.BuildRestRequest(DomeMethod.SlewToAzimuth, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
@@ -153,7 +153,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {"Azimuth", azimuth.ToString(CultureInfo.InvariantCulture)}
+                {DomeRequestParameters.Azimuth, azimuth.ToString(CultureInfo.InvariantCulture)}
             };
 
             return RequestBuilder.BuildRestRequest(DomeMethod.SyncToAzimuth, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
