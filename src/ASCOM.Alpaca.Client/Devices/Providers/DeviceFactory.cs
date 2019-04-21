@@ -38,6 +38,10 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
 
                 case DeviceType.Switch:
                 case DeviceType.SafetyMonitor:
+                    ILogger<SafetyMonitor> safetyMonitorLogger = _loggerFactory.CreateLogger<SafetyMonitor>();
+                    IDevice safetyMonitor = new SafetyMonitor(configuration, _clientTransactionIdGenerator, _commandSender, safetyMonitorLogger);
+                    return (T) safetyMonitor;
+                
                 case DeviceType.Dome:
                     ILogger<Dome> domeLogger = _loggerFactory.CreateLogger<Dome>();
                     IDevice dome = new Dome(configuration, _clientTransactionIdGenerator, _commandSender, domeLogger);
