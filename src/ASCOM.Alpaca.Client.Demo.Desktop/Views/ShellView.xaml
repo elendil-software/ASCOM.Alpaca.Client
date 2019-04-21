@@ -15,6 +15,9 @@
             <TabItem Header="Dome">
                 <ContentControl x:Name="DomeViewModel" />
             </TabItem>
+            <TabItem Header="Safety Monitor">
+                <ContentControl x:Name="SafetyMonitorViewModel" />
+            </TabItem>
         </TabControl>
     </DockPanel>
 </Window>
