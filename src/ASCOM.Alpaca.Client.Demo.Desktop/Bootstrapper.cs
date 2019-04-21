@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows;
+using ASCOM.Alpaca.Client.Demo.Desktop.IoC;
 using ASCOM.Alpaca.Client.Demo.Desktop.ViewModels;
-using ASCOM.Alpaca.Client.Devices.Providers;
-using ASCOM.Alpaca.Client.Request;
-using ASCOM.Alpaca.Client.Transactions;
+using ASCOM.Alpaca.Client.Devices;
 using Caliburn.Micro;
 using Lamar;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,13 +26,20 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop
         protected override void Configure()
         {
             var registry = new ServiceRegistry();
+            
+            registry.Policies.Add<SingletonInstancePolicy>();
+            
+            registry.Scan(s =>
+            {
+                s.AssemblyContainingType(typeof(Bootstrapper));
+                s.AssemblyContainingType(typeof(DeviceBase));
+                s.AssemblyContainingType(typeof(BootstrapperBase));
+                s.AssemblyContainingType(typeof(EventAggregator));
 
-            registry.AddSingleton<IWindowManager, WindowManager>();
-            registry.AddSingleton<IEventAggregator, EventAggregator>();
-            registry.AddSingleton<IDeviceFactory, DeviceFactory>();
-            registry.AddSingleton<ICommandSender, CommandSender>();
-            registry.AddSingleton<IClientTransactionIdGenerator, ClientTransactionIdGenerator>();
-
+                s.Convention<ViewModelConventionScanner>();
+                s.WithDefaultConventions();    
+            });
+            
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
                 .WriteTo.Debug()
@@ -40,11 +47,13 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop
                 .CreateLogger();
             registry.AddSingleton<ILoggerFactory>(s => new SerilogLoggerFactory(Log.Logger, true));
             registry.For(typeof(ILogger<>)).Use(typeof(Logger<>));
-
-            registry.AddTransient<ShellViewModel, ShellViewModel>();
-            registry.AddTransient<FilterWheelViewModel, FilterWheelViewModel>();
-
+            
             _container = new Container(registry);
+            
+            #if DEBUG
+            Debug.Write(_container.WhatDidIScan());
+            Debug.Write(_container.WhatDoIHave());
+            #endif
         }
 
         protected override object GetInstance(Type service, string key)
@@ -61,5 +70,28 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop
         {
             DisplayRootViewFor<ShellViewModel>();
         }
+
+//        protected override void OnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+//        {
+//            MessageBox.Show(e.Exception.Message, "Error OnUnhandledException", MessageBoxButton.OK); 
+//            e.Handled = true;
+//            base.OnUnhandledException(sender, e);
+//        }
+
+//        protected override void OnUnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
+//        {
+//            if (Debugger.IsAttached)
+//            {
+//                Debugger.Break();
+//                e.Handled = true;
+//            }
+//            else
+//            {
+//                MessageBox.Show("An unexpected error occured, sorry about the troubles.", "Oops...", MessageBoxButton.OK);
+//                e.Handled = true;
+//            }
+//
+//            base.OnUnhandledException(sender, e);
+//        }
     }
 }

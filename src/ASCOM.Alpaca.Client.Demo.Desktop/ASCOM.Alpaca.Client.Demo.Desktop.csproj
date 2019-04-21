@@ -161,10 +161,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="IoC\SingletonInstancePolicy.cs" />
+    <Compile Include="IoC\ViewModelConventionScanner.cs" />
     <Compile Include="ViewModels\DeviceViewModelBase.cs" />
     <Compile Include="ViewModels\DomeViewModel.cs" />
     <Compile Include="ViewModels\FilterWheelViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
+    </Compile>
     <Compile Include="Views\DomeView.xaml.cs">
       <DependentUpon>DomeView.xaml</DependentUpon>
     </Compile>
