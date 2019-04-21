@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>ASCOM.Alpaca</RootNamespace>
+        <PackageVersion>0.1.0</PackageVersion>
+        <Authors>Julien Tschäppät</Authors>
+        <Copyright>© 2019 - Julien Tschäppät</Copyright>
+        <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</RepositoryUrl>
+        <PackageTags>ASCOM Astronomy</PackageTags>
+        <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageLicenseUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/LICENSE</PackageLicenseUrl>
+    </PropertyGroup>
+
+</Project>

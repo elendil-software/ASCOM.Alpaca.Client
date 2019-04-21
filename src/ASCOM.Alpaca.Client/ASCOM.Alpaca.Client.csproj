@@ -30,9 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ASCOM.Alpaca.Enums\ASCOM.Alpaca.Enums.csproj" />
-    <ProjectReference Include="..\ASCOM.Alpaca.Exceptions\ASCOM.Alpaca.Exceptions.csproj" />
-    <ProjectReference Include="..\ASCOM.Alpaca.Responses\ASCOM.Alpaca.Responses.csproj" />
+    <ProjectReference Include="..\ASCOM.Alpaca.Shared\ASCOM.Alpaca.Shared.csproj" />
   </ItemGroup>
 
 

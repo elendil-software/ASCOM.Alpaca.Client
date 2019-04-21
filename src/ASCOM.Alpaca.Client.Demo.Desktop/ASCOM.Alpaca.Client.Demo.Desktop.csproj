@@ -225,9 +225,9 @@
       <Project>{aee5f6b7-3c58-45cf-a5c8-b4a7ba4ead31}</Project>
       <Name>ASCOM.Alpaca.Client</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ASCOM.Alpaca.Enums\ASCOM.Alpaca.Enums.csproj">
-      <Project>{5e492507-acd5-4227-8008-4cc72559fe59}</Project>
-      <Name>ASCOM.Alpaca.Enums</Name>
+    <ProjectReference Include="..\ASCOM.Alpaca.Shared\ASCOM.Alpaca.Shared.csproj">
+      <Project>{a7f62721-608c-46ce-8832-5cf4f5b58c84}</Project>
+      <Name>ASCOM.Alpaca.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -15,13 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASCOM.Alpaca.Client.Demo.Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASCOM.Alpaca.Client.DependencyInjection", "src\ASCOM.Alpaca.Client.DependencyInjection\ASCOM.Alpaca.Client.DependencyInjection.csproj", "{4F3E76EF-CDFF-4FA1-B48E-265D655F1EE2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASCOM.Alpaca.Exceptions", "src\ASCOM.Alpaca.Exceptions\ASCOM.Alpaca.Exceptions.csproj", "{11CD2022-B2DF-4EB0-90D6-458EF2107663}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASCOM.Alpaca.Client.Demo.Desktop", "src\ASCOM.Alpaca.Client.Demo.Desktop\ASCOM.Alpaca.Client.Demo.Desktop.csproj", "{ED5A8944-465A-4FF8-B8F8-28063C5D43D8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASCOM.Alpaca.Enums", "src\ASCOM.Alpaca.Enums\ASCOM.Alpaca.Enums.csproj", "{5E492507-ACD5-4227-8008-4CC72559FE59}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASCOM.Alpaca.Responses", "src\ASCOM.Alpaca.Responses\ASCOM.Alpaca.Responses.csproj", "{2E51EEA4-BA56-456F-B9B9-E47D0424E833}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASCOM.Alpaca.Shared", "src\ASCOM.Alpaca.Shared\ASCOM.Alpaca.Shared.csproj", "{A7F62721-608C-46CE-8832-5CF4F5B58C84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,22 +37,14 @@ Global
 		{4F3E76EF-CDFF-4FA1-B48E-265D655F1EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F3E76EF-CDFF-4FA1-B48E-265D655F1EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F3E76EF-CDFF-4FA1-B48E-265D655F1EE2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{11CD2022-B2DF-4EB0-90D6-458EF2107663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11CD2022-B2DF-4EB0-90D6-458EF2107663}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11CD2022-B2DF-4EB0-90D6-458EF2107663}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11CD2022-B2DF-4EB0-90D6-458EF2107663}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ED5A8944-465A-4FF8-B8F8-28063C5D43D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ED5A8944-465A-4FF8-B8F8-28063C5D43D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED5A8944-465A-4FF8-B8F8-28063C5D43D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED5A8944-465A-4FF8-B8F8-28063C5D43D8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5E492507-ACD5-4227-8008-4CC72559FE59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5E492507-ACD5-4227-8008-4CC72559FE59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5E492507-ACD5-4227-8008-4CC72559FE59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5E492507-ACD5-4227-8008-4CC72559FE59}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2E51EEA4-BA56-456F-B9B9-E47D0424E833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E51EEA4-BA56-456F-B9B9-E47D0424E833}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E51EEA4-BA56-456F-B9B9-E47D0424E833}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2E51EEA4-BA56-456F-B9B9-E47D0424E833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7F62721-608C-46CE-8832-5CF4F5B58C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F62721-608C-46CE-8832-5CF4F5B58C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F62721-608C-46CE-8832-5CF4F5B58C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F62721-608C-46CE-8832-5CF4F5B58C84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
