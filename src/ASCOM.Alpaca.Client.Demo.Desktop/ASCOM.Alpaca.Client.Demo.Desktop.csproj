@@ -167,7 +167,6 @@
     <Compile Include="ViewModels\DomeViewModel.cs" />
     <Compile Include="ViewModels\FilterWheelViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
-    </Compile>
     <Compile Include="Views\DomeView.xaml.cs">
       <DependentUpon>DomeView.xaml</DependentUpon>
     </Compile>
