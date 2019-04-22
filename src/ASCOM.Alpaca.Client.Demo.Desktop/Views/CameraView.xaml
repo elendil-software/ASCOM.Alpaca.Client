@@ -1,0 +1,326 @@
+﻿<UserControl x:Class="ASCOM.Alpaca.Client.Demo.Desktop.Views.CameraView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ASCOM.Alpaca.Client.Demo.Desktop.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,5,5,5" VerticalAlignment="Center">
+            <Label VerticalAlignment="Center" FontWeight="Bold">Host</Label>
+            <TextBox Name="Host" Width="200" Margin="5" Padding="5"></TextBox>
+
+            <Label VerticalAlignment="Center" FontWeight="Bold">Port</Label>
+            <TextBox Name="Port" Width="50" Margin="5" Padding="5"></TextBox>
+
+            <Label VerticalAlignment="Center" FontWeight="Bold">ClientId</Label>
+            <TextBox Name="ClientId" Margin="5" Padding="5"></TextBox>
+
+            <Label VerticalAlignment="Center" FontWeight="Bold">DeviceId</Label>
+            <TextBox Name="DeviceId" Margin="5" Padding="5"></TextBox>
+
+            <Button Name="Connect" Content="Connect" Margin="5" Padding="5"></Button>
+        </StackPanel>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Name</Label>
+            <Label Grid.Row="0" Grid.Column="1" Name="Name">...</Label>
+            <Label Grid.Row="0" Grid.Column="2" FontWeight="Bold">Description</Label>
+            <Label Grid.Row="0" Grid.Column="3" Name="Description">...</Label>
+            
+            <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Driver Info</Label>
+            <Label Grid.Row="1" Grid.Column="1" Name="DriverInfo">...</Label>
+            <Label Grid.Row="1" Grid.Column="2" FontWeight="Bold">Driver Version</Label>
+            <Label Grid.Row="1" Grid.Column="3" Name="DriverVersion">...</Label>
+        </Grid>
+        
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+                <GroupBox Header="Pixel">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                    
+                        <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Pixel Size X</Label>
+                        <Label Grid.Row="0" Grid.Column="1" Name="PixelSizeX">...</Label>
+                        <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Pixel Size Y</Label>
+                        <Label Grid.Row="1" Grid.Column="1" Name="PixelSizeY">...</Label>
+                        <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">Electrons Per ADU</Label>
+                        <Label Grid.Row="2" Grid.Column="1" Name="ElectronsPerADU">...</Label>
+                        <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Max ADU</Label>
+                        <Label Grid.Row="3" Grid.Column="1" Name="MaxADU">...</Label>
+                        <Label Grid.Row="4" Grid.Column="0" FontWeight="Bold">Full Well Capacity</Label>
+                        <Label Grid.Row="4" Grid.Column="1" Name="FullWellCapacity">...</Label>
+                    </Grid>
+                </GroupBox>
+                
+                <GroupBox Header="CCD">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                    
+                        <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Camera X Size</Label>
+                        <Label Grid.Row="0" Grid.Column="1" Name="CameraXSize">...</Label>
+                        <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Camera Y Size</Label>
+                        <Label Grid.Row="1" Grid.Column="1" Name="CameraYSize">...</Label>
+                        
+                        <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">Max Bin X</Label>
+                        <Label Grid.Row="2" Grid.Column="1" Name="MaxBinX">...</Label>
+                        <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Max Bin Y</Label>
+                        <Label Grid.Row="3" Grid.Column="1" Name="MaxBinY">...</Label>
+                        
+                        <Label Grid.Row="4" Grid.Column="0" FontWeight="Bold">Can Asymmetric Bin</Label>
+                        <Label Grid.Row="4" Grid.Column="1" Name="CanAsymmetricBin">...</Label>
+                        
+                        <Label Grid.Row="5" Grid.Column="0" FontWeight="Bold">Has Shutter</Label>
+                        <Label Grid.Row="5" Grid.Column="1" Name="HasShutter">...</Label>
+                        
+                        <Label Grid.Row="6" Grid.Column="0" FontWeight="Bold">Sensor Name</Label>
+                        <Label Grid.Row="6" Grid.Column="1" Name="SensorName">...</Label>
+                        
+                        <Label Grid.Row="7" Grid.Column="0" FontWeight="Bold">Sensor Type</Label>
+                        <Label Grid.Row="7" Grid.Column="1" Name="SensorType">...</Label>
+                        
+                        <Label Grid.Row="8" Grid.Column="0" FontWeight="Bold">Bayer Offset X</Label>
+                        <Label Grid.Row="8" Grid.Column="1" Name="BayerOffsetX">...</Label>
+                        <Label Grid.Row="9" Grid.Column="0" FontWeight="Bold">Bayer Offset Y</Label>
+                        <Label Grid.Row="9" Grid.Column="1" Name="BayerOffsetY">...</Label>
+                    </Grid>
+                </GroupBox>
+            
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                  
+                <GroupBox Header="Cooling">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                    
+                        <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Can Set CCD Temperature</Label>
+                        <Label Grid.Row="0" Grid.Column="1" Name="CanSetCCDTemperature">...</Label>
+                        
+                        <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Can Get Cooler Power</Label>
+                        <Label Grid.Row="1" Grid.Column="1" Name="CanGetCoolerPower">...</Label>
+                        
+                        <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">CoolerOn</Label>
+                        <Label Grid.Row="2" Grid.Column="1" Name="CoolerOn">...</Label>
+                        
+                        <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Set CCD Temperature</Label>
+                        <Label Grid.Row="3" Grid.Column="1" Name="SetCCDTemperature">...</Label>
+                        
+                        <Label Grid.Row="4" Grid.Column="0" FontWeight="Bold">CCD Temperature</Label>
+                        <Label Grid.Row="4" Grid.Column="1" Name="CCDTemperature">...</Label>
+                
+                        <Label Grid.Row="5" Grid.Column="0" FontWeight="Bold">Heat Sink Temperature</Label>
+                        <Label Grid.Row="5" Grid.Column="1" Name="HeatSinkTemperature">...</Label>
+                
+                        <Label Grid.Row="6" Grid.Column="0" FontWeight="Bold">Cooler Power</Label>
+                        <Label Grid.Row="6" Grid.Column="1" Name="CoolerPower">...</Label>
+                    </Grid>
+                </GroupBox>
+                
+                <GroupBox Header="Gain">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        
+                        <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Gain</Label>
+                        <Label Grid.Row="0" Grid.Column="1" Name="Gain">...</Label>
+                        <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Gain Max</Label>
+                        <Label Grid.Row="1" Grid.Column="1" Name="GainMax">...</Label>
+                        <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">GainMin</Label>
+                        <Label Grid.Row="2" Grid.Column="1" Name="GainMin">...</Label>
+                        <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Gains</Label>
+                        <Label Grid.Row="3" Grid.Column="1" Name="Gains">...</Label>
+                    </Grid>
+                </GroupBox>
+                
+                <GroupBox Header="Readout">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        
+                        <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Can Fast Readout</Label>
+                        <Label Grid.Row="0" Grid.Column="1" Name="CanFastReadout">...</Label>
+                        <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Fast Readout</Label>
+                        <Label Grid.Row="1" Grid.Column="1" Name="FastReadout">...</Label>
+                        <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">Readout Modes</Label>
+                        <Label Grid.Row="2" Grid.Column="1" Name="ReadoutModes">...</Label>
+                        <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Readout Mode</Label>
+                        <Label Grid.Row="3" Grid.Column="1" Name="ReadoutMode">...</Label>
+                    </Grid>
+                </GroupBox>
+                
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <GroupBox Header="Guiding">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        
+                        <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Can Pulse Guide</Label>
+                        <Label Grid.Row="0" Grid.Column="1" Name="CanPulseGuide">...</Label>
+                        <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Is Pulse Guiding</Label>
+                        <Label Grid.Row="1" Grid.Column="1" Name="IsPulseGuiding">...</Label>
+                    </Grid>
+                </GroupBox>
+                
+                <GroupBox Header="Exposure">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        
+                        <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Can Abort Exposure</Label>
+                        <Label Grid.Row="0" Grid.Column="1" Name="CanAbortExposure">...</Label>
+                        <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Can Stop Exposure</Label>
+                        <Label Grid.Row="1" Grid.Column="1" Name="CanStopExposure">...</Label>
+                        <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">Exposure Min</Label>
+                        <Label Grid.Row="2" Grid.Column="1" Name="ExposureMin">...</Label>
+                        <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Exposure Max</Label>
+                        <Label Grid.Row="3" Grid.Column="1" Name="ExposureMax">...</Label>
+                        <Label Grid.Row="4" Grid.Column="0" FontWeight="Bold">ExposureResolution</Label>
+                        <Label Grid.Row="4" Grid.Column="1" Name="ExposureResolution">...</Label>
+                    </Grid>
+                </GroupBox>
+                
+                <GroupBox Header="Frame">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        
+                        <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Start X</Label>
+                        <Label Grid.Row="0" Grid.Column="1" Name="StartX">...</Label>
+                        <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Start Y</Label>
+                        <Label Grid.Row="1" Grid.Column="1" Name="StartY">...</Label>
+                        <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">Num X</Label>
+                        <Label Grid.Row="2" Grid.Column="1" Name="NumX">...</Label>
+                        <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Num Y</Label>
+                        <Label Grid.Row="3" Grid.Column="1" Name="NumY">...</Label>
+                    </Grid>
+                </GroupBox>
+                
+            </StackPanel>
+            
+            <StackPanel Orientation="Vertical">
+                <GroupBox Header="Expose">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Margin="5" Padding="5" Width="100" Name="ExposureDuration"></TextBox>
+                            <Button Margin="5" Padding="5" Name="StartExposure">Start Exposure</Button>
+                            <Button Margin="5" Padding="5" Name="AbortExposure">Abort Exposure</Button>
+                        </StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                        
+                            <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Last Exposure Duration</Label>
+                            <Label Grid.Row="0" Grid.Column="1" Name="LastExposureDuration">...</Label>
+                            <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Last Exposure Start Time</Label>
+                            <Label Grid.Row="1" Grid.Column="1" Name="LastExposureStartTime">...</Label>
+                            <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">Image Ready</Label>
+                            <Label Grid.Row="2" Grid.Column="1" Name="IsImageReady">...</Label>
+                            <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Percent Completed</Label>
+                            <Label Grid.Row="3" Grid.Column="1" Name="PercentCompleted">...</Label>
+                            <Label Grid.Row="4" Grid.Column="0" FontWeight="Bold">Camera State</Label>
+                            <Label Grid.Row="4" Grid.Column="1" Name="CameraState">...</Label>
+                        </Grid>        
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

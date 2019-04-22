@@ -8,14 +8,17 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private FilterWheelViewModel _filterWheelViewModel;
         private DomeViewModel _domeViewModel;
         private SafetyMonitorViewModel _safetyMonitorViewModel;
+        private CameraViewModel _cameraViewModel;
 
         public ShellViewModel(FilterWheelViewModel filterWheelViewModel, 
                                 DomeViewModel domeViewModel,
-                                SafetyMonitorViewModel safetyMonitorViewModel)
+                                SafetyMonitorViewModel safetyMonitorViewModel,
+                                CameraViewModel cameraViewModel)
         {
             _filterWheelViewModel = filterWheelViewModel ?? throw new ArgumentNullException(nameof(filterWheelViewModel));
             _domeViewModel = domeViewModel ?? throw new ArgumentNullException(nameof(domeViewModel));
             _safetyMonitorViewModel = safetyMonitorViewModel ?? throw new ArgumentNullException(nameof(safetyMonitorViewModel));
+            _cameraViewModel = cameraViewModel ?? throw new ArgumentNullException(nameof(cameraViewModel));
         }
 
         public FilterWheelViewModel FilterWheelViewModel
@@ -45,6 +48,16 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             {
                 _safetyMonitorViewModel = value;
                 NotifyOfPropertyChange(() => SafetyMonitorViewModel);
+            }
+        }
+        
+        public CameraViewModel CameraViewModel
+        {
+            get => _cameraViewModel;
+            set
+            {
+                _cameraViewModel = value;
+                NotifyOfPropertyChange(() => CameraViewModel);
             }
         }
     }

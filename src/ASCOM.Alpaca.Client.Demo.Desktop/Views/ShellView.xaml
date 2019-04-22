@@ -18,6 +18,9 @@
             <TabItem Header="Safety Monitor">
                 <ContentControl x:Name="SafetyMonitorViewModel" />
             </TabItem>
+            <TabItem Header="Camera">
+                <ContentControl x:Name="CameraViewModel" />
+            </TabItem>
         </TabControl>
     </DockPanel>
 </Window>
