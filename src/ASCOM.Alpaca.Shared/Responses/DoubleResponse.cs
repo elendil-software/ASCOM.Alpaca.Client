@@ -1,4 +1,4 @@
-﻿namespace ASCOM.Alpaca.Responses.Numeric
+﻿namespace ASCOM.Alpaca.Responses
 {
     public class DoubleResponse : Response, IValueResponse<double>
     {

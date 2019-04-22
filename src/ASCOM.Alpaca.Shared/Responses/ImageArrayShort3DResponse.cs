@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Responses.Image
+namespace ASCOM.Alpaca.Responses
 {
     public class ImageArrayShort3DResponse : ImageArrayResponse<short[,,]>
     {

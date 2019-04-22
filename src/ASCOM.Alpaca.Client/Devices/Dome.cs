@@ -8,8 +8,6 @@ using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Enums.Devices;
 using ASCOM.Alpaca.Enums.Devices.Dome;
 using ASCOM.Alpaca.Responses;
-using ASCOM.Alpaca.Responses.Boolean;
-using ASCOM.Alpaca.Responses.Numeric;
 using Microsoft.Extensions.Logging;
 using RestSharp;
 

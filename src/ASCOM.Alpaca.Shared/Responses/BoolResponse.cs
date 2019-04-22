@@ -1,4 +1,4 @@
-﻿namespace ASCOM.Alpaca.Responses.Boolean
+﻿namespace ASCOM.Alpaca.Responses
 {
     public class BoolResponse : Response, IValueResponse<bool>
     {

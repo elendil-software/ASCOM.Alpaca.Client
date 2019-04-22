@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Responses.Image
+namespace ASCOM.Alpaca.Responses
 {
     public class ImageArrayDouble3DResponse : ImageArrayResponse<double[,,]>
     {
