@@ -4,7 +4,7 @@ using System.Windows;
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Devices.Providers;
-using ASCOM.Alpaca.Enums.Devices;
+using ASCOM.Alpaca.Devices;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 {

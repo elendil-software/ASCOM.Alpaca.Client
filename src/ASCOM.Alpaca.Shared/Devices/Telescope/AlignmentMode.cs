@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Enums.Devices.Telescope
+namespace ASCOM.Alpaca.Devices.Telescope
 {
     public enum AlignmentMode
     {

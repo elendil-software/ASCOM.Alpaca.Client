@@ -6,9 +6,8 @@ using System.Windows;
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Devices.Providers;
-using ASCOM.Alpaca.Enums.Devices;
-using ASCOM.Alpaca.Enums.Devices.Camera;
-using ASCOM.Alpaca.Enums.Devices.Dome;
+using ASCOM.Alpaca.Devices;
+using ASCOM.Alpaca.Devices.Camera;
 using ASCOM.Alpaca.Exceptions;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels

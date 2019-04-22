@@ -3,7 +3,7 @@ using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
-using ASCOM.Alpaca.Enums.Devices;
+using ASCOM.Alpaca.Devices;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 

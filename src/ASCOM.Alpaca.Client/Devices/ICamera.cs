@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Enums.Devices.Camera;
-using ASCOM.Alpaca.Enums.Devices.Telescope;
+using ASCOM.Alpaca.Devices.Camera;
+using ASCOM.Alpaca.Devices.Telescope;
 
 namespace ASCOM.Alpaca.Client.Devices
 {

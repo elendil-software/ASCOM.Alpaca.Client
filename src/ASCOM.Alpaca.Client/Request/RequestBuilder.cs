@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using ASCOM.Alpaca.Enums.Devices;
+using ASCOM.Alpaca.Devices;
 using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Request

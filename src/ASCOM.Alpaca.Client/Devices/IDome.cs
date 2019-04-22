@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Enums.Devices.Dome;
+using ASCOM.Alpaca.Devices.Dome;
 
 namespace ASCOM.Alpaca.Client.Devices
 {

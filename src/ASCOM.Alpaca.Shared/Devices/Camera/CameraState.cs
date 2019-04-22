@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Enums.Devices.Camera
+namespace ASCOM.Alpaca.Devices.Camera
 {
     public enum CameraState
     {

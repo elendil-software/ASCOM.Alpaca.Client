@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Enums.Devices.Dome
+namespace ASCOM.Alpaca.Devices.Dome
 {
     public enum ShutterState
     {

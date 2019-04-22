@@ -7,7 +7,7 @@ using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
-using ASCOM.Alpaca.Enums.Devices;
+using ASCOM.Alpaca.Devices;
 using ASCOM.Alpaca.Responses;
 using Microsoft.Extensions.Logging;
 using RestSharp;
