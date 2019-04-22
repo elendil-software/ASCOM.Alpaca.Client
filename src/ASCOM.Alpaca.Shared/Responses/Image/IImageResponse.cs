@@ -1,6 +1,6 @@
 ﻿namespace ASCOM.Alpaca.Responses.Image
 {
-    public interface IImageArrayResponse<out T> : IValueResponse<T>
+    public interface IImageResponse<out T> : IValueResponse<T>
     {
         /// <summary>
         /// minimum: 0
@@ -12,6 +12,6 @@
         /// <summary>
         /// The array's rank, will be 2 (single plane image (monochrome)) or 3 (multi-plane image).
         /// </summary>
-        ImageRank Rank { get; }
+        int Rank { get; }
     }
 }

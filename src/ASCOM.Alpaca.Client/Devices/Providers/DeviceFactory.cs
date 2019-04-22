@@ -37,6 +37,8 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
                     return (T) device;
 
                 case DeviceType.Switch:
+                    throw new NotImplementedException(configuration.DeviceType.ToString());
+                
                 case DeviceType.SafetyMonitor:
                     ILogger<SafetyMonitor> safetyMonitorLogger = _loggerFactory.CreateLogger<SafetyMonitor>();
                     IDevice safetyMonitor = new SafetyMonitor(configuration, _clientTransactionIdGenerator, _commandSender, safetyMonitorLogger);
@@ -48,6 +50,10 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
                     return (T) dome;
                 
                 case DeviceType.Camera:
+                    ILogger<SafetyMonitor> cameraLogger = _loggerFactory.CreateLogger<SafetyMonitor>();
+                    IDevice camera = new Camera(configuration, _clientTransactionIdGenerator, _commandSender, cameraLogger);
+                    return (T) camera;
+                
                 case DeviceType.ObservingConditions:
                 case DeviceType.Focuser:
                 case DeviceType.Rotator:

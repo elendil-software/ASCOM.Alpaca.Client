@@ -6,7 +6,7 @@ using ASCOM.Alpaca.Enums.Devices.Telescope;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
-    public interface ICamera
+    public interface ICamera : IDevice
     {
         /// <summary>
         /// Returns the X offset of the Bayer matrix, as defined in SensorType.
@@ -47,12 +47,12 @@ namespace ASCOM.Alpaca.Client.Devices
         /// <summary>
         /// Sets the binning factor for the X axis.
         /// </summary>
-        void SetBinX();
+        void SetBinX(int binX);
         
         /// <summary>
         /// Returns the binning factor for the X axis.
         /// </summary>
-        Task SetBinXAsync();
+        Task SetBinXAsync(int binX);
         
         /// <summary>
         /// Returns the binning factor for the Y axis.
@@ -69,12 +69,12 @@ namespace ASCOM.Alpaca.Client.Devices
         /// <summary>
         /// Sets the binning factor for the Y axis.
         /// </summary>
-        void SetBinY();
+        void SetBinY(int binY);
         
         /// <summary>
         /// Returns the binning factor for the Y axis.
         /// </summary>
-        Task SetBinYAsync();
+        Task SetBinYAsync(int binY);
 
         /// <summary>
         /// Returns the current camera operational state
@@ -307,14 +307,14 @@ namespace ASCOM.Alpaca.Client.Devices
         /// <summary>
         /// Sets whether Fast Readout Mode is enabled.
         /// </summary>
-        /// <param name="enabled">True to enable fast readout mode</param>
-        void SetFastReadout(bool enabled);
+        /// <param name="fastReadout">True to enable fast readout mode</param>
+        void SetFastReadout(bool fastReadout);
 
         /// <summary>
         /// Sets whether Fast Readout Mode is enabled.
         /// </summary>
-        /// <param name="enabled">True to enable fast readout mode</param>
-        Task SetFastReadoutAsync(bool enabled);
+        /// <param name="fastReadout">True to enable fast readout mode</param>
+        Task SetFastReadoutAsync(bool fastReadout);
 
         /// <summary>
         /// Reports the full well capacity of the camera in electrons, at the
@@ -345,14 +345,14 @@ namespace ASCOM.Alpaca.Client.Devices
         /// <summary>
         /// Set the camera gain
         /// </summary>
-        /// <param name="index">Index of the current camera gain in the Gains string array.</param>
-        void SetGain(int index);
+        /// <param name="gain">Index of the current camera gain in the Gains string array.</param>
+        void SetGain(int gain);
 
         /// <summary>
         /// Set the camera gain
         /// </summary>
-        /// <param name="index">Index of the current camera gain in the Gains string array.</param>
-        Task SetGainAsync(int index);
+        /// <param name="gain">Index of the current camera gain in the Gains string array.</param>
+        Task SetGainAsync(int gain);
 
         /// <summary>
         /// Returns the maximum value of Gain.
@@ -440,7 +440,7 @@ namespace ASCOM.Alpaca.Client.Devices
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        T[,] GetImageArray<T>();
+        Array GetImageArray();
         
         /// <summary>
         /// Returns an array of integers containing the exposure pixel values",
@@ -466,7 +466,7 @@ namespace ASCOM.Alpaca.Client.Devices
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        Task<T[,]> GetImageArrayAsync<T>();
+        Task<Array> GetImageArrayAsync();
 
         /// <summary>
         /// Returns an array containing the pixel values from the last exposure. This call can return either 
@@ -491,7 +491,7 @@ namespace ASCOM.Alpaca.Client.Devices
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        T[,] GetImageArrayVariant<T>();
+        Array GetImageArrayVariant();
 
         /// <summary>
         /// Returns an array containing the pixel values from the last exposure. This call can return either 
@@ -516,7 +516,7 @@ namespace ASCOM.Alpaca.Client.Devices
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        Task<T[,]> GetImageArrayVariantAsync<T>();
+        Task<Array> GetImageArrayVariantAsync();
 
         /// <summary>
         /// Indicates that an image is ready to be downloaded
