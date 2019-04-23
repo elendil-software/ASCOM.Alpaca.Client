@@ -22,7 +22,6 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private bool _tempCompAvailable;
         private double _temperature;
         private int _targetPosition;
-        private bool _temperatureCompensationEnabled;
 
         public FocuserViewModel(IDeviceFactory deviceFactory) : base(deviceFactory)
         {
