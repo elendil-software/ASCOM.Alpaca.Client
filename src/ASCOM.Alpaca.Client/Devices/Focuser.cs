@@ -62,7 +62,7 @@ namespace ASCOM.Alpaca.Client.Devices
                 {FocuserRequestParameters.TempComp, tempComp.ToString()}
             };
             
-            return RequestBuilder.BuildRestRequest(FocuserMethod.TempComp, Method.PUT, ClientTransactionIdGenerator.GetTransactionId());
+            return RequestBuilder.BuildRestRequest(FocuserMethod.TempComp, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
         public bool IsTempCompAvailable() => ExecuteRequest<bool, BoolResponse>(BuildIsTempCompAvailableRequest); 
