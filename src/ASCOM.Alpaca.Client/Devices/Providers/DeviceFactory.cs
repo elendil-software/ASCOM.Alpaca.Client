@@ -36,9 +36,6 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
                     IDevice device = new FilterWheel(configuration, _clientTransactionIdGenerator, _commandSender, logger);
                     return (T) device;
 
-                case DeviceType.Switch:
-                    throw new NotImplementedException(configuration.DeviceType.ToString());
-                
                 case DeviceType.SafetyMonitor:
                     ILogger<SafetyMonitor> safetyMonitorLogger = _loggerFactory.CreateLogger<SafetyMonitor>();
                     IDevice safetyMonitor = new SafetyMonitor(configuration, _clientTransactionIdGenerator, _commandSender, safetyMonitorLogger);
@@ -54,8 +51,13 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
                     IDevice camera = new Camera(configuration, _clientTransactionIdGenerator, _commandSender, cameraLogger);
                     return (T) camera;
                 
-                case DeviceType.ObservingConditions:
                 case DeviceType.Focuser:
+                    ILogger<Focuser> focuserLogger = _loggerFactory.CreateLogger<Focuser>();
+                    IDevice focuser = new Focuser(configuration, _clientTransactionIdGenerator, _commandSender, focuserLogger);
+                    return (T) focuser;
+                
+                case DeviceType.Switch:
+                case DeviceType.ObservingConditions:
                 case DeviceType.Rotator:
                 case DeviceType.Telescope:
                     throw new NotImplementedException(configuration.DeviceType.ToString());

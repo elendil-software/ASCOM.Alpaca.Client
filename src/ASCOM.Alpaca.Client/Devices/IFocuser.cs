@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
-    public interface IFocuser
+    public interface IFocuser : IDevice
     {
         /// <summary>
         /// Indicates whether the focuser is capable of absolute position.
