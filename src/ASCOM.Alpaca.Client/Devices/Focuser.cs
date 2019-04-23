@@ -15,12 +15,10 @@ namespace ASCOM.Alpaca.Client.Devices
     {
         public Focuser(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger<DeviceBase> logger) : base(configuration, clientTransactionIdGenerator, commandSender, logger)
         {
-            DeviceType = DeviceType.Focuser;
         }
 
         public Focuser(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender) : base(configuration, clientTransactionIdGenerator, commandSender)
         {
-            DeviceType = DeviceType.Focuser;
         }
 
         protected override DeviceType DeviceType { get; } = DeviceType.Focuser;
@@ -46,11 +44,11 @@ namespace ASCOM.Alpaca.Client.Devices
         private RestRequest BuildGetPositionRequest() => RequestBuilder.BuildRestRequest(FocuserMethod.Position, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
         
         public double GetStepSize() => ExecuteRequest<int, IntResponse>(BuildGetStepSizeRequest);
-        public async Task<double> GetStepSizeAsync() => ExecuteRequest<int, IntResponse>(BuildGetStepSizeRequest);
+        public async Task<double> GetStepSizeAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetStepSizeRequest);
         private RestRequest BuildGetStepSizeRequest() => RequestBuilder.BuildRestRequest(FocuserMethod.StepSize, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
         
         public bool IsTempComp() => ExecuteRequest<bool, BoolResponse>(BuildIsTempCompRequest); 
-        public async Task<bool> IsTempCompAsync() => ExecuteRequest<bool, BoolResponse>(BuildIsTempCompRequest); 
+        public async Task<bool> IsTempCompAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsTempCompRequest); 
         private RestRequest BuildIsTempCompRequest() => RequestBuilder.BuildRestRequest(FocuserMethod.TempComp, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public void SetTempComp(bool tempComp) => ExecuteRequest(BuildSetTempCompRequest, tempComp);

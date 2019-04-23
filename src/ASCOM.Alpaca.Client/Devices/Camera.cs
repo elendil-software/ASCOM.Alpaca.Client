@@ -11,11 +11,13 @@ using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Devices;
 using ASCOM.Alpaca.Devices.Camera;
 using ASCOM.Alpaca.Devices.Telescope;
+using ASCOM.Alpaca.Exceptions;
 using ASCOM.Alpaca.Responses;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Serialization.Json;
+using NotImplementedException = System.NotImplementedException;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
@@ -241,14 +243,13 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 return Parse2DImageResponse(response, type);
             }
-            else if (rank == 3)
+
+            if (rank == 3)
             {
                 return Parse3DImageResponse(response, type);
             }
-            else
-            {
-                throw new Exception($"Image rank {rank} is not supported");
-            }
+
+            throw new DriverException($"Image rank {rank} is not supported");
         }
         private (ImageArrayType type, int rank) ParseTypeAndRank(string jsonString)
         {
