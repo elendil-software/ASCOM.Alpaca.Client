@@ -61,7 +61,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
         public bool CanRefresh => IsConnected;
 
-        public async Task Refresh()
+        public async Task RefreshData()
         {
             try
             {

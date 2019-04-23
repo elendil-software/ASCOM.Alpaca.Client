@@ -21,7 +21,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             _domeViewModel = domeViewModel ?? throw new ArgumentNullException(nameof(domeViewModel));
             _safetyMonitorViewModel = safetyMonitorViewModel ?? throw new ArgumentNullException(nameof(safetyMonitorViewModel));
             _cameraViewModel = cameraViewModel ?? throw new ArgumentNullException(nameof(cameraViewModel));
-            _focuserViewModel = focuserViewModel ?? throw new ArgumentNullException(nameof(focuserViewModel));;
+            _focuserViewModel = focuserViewModel ?? throw new ArgumentNullException(nameof(focuserViewModel));
         }
 
         public FilterWheelViewModel FilterWheelViewModel

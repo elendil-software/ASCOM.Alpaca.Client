@@ -64,6 +64,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private int _startX;
         private int _startY;
         private double _exposureDuration;
+        private string _lastImageInformations;
 
         public CameraViewModel(IDeviceFactory deviceFactory) : base(deviceFactory)
         {
@@ -564,6 +565,16 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             }
         }
 
+        public string LastImageInformation
+        {
+            get => _lastImageInformations;
+            set
+            {
+                _lastImageInformations = value;
+                NotifyOfPropertyChange(() => LastImageInformation);
+            }
+        }
+
         #endregion
 
 
@@ -645,6 +656,8 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             try
             {
                 Gain = await _camera.GetGainAsync();
+                GainMax = await _camera.GetGainMaxAsync();
+                GainMin = await _camera.GetGainMinAsync();
             }
             catch (PropertyNotImplementedException)
             {
@@ -656,17 +669,6 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
                 try
                 {
                     Gains = await _camera.GetGainsAsync();
-                }
-                catch (Exception)
-                {
-                    //DO NOTHING
-                }
-                
-                try
-                {
-                    
-                    GainMax = await _camera.GetGainMaxAsync();
-                    GainMin = await _camera.GetGainMinAsync();
                 }
                 catch (Exception)
                 {
@@ -759,9 +761,8 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             if (IsImageReady)
             {
                 var image = await _camera.GetImageArrayAsync();
+                LastImageInformation = $"Rank : {image.Rank}, Length : {image.Length}";
             }
         }
-        
-        public void StopExposure(){}
     }
 }

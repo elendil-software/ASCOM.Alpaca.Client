@@ -91,5 +91,8 @@
             <Button Margin="5" Padding="5" Name="Move">Move</Button>
             <Button Margin="5" Padding="5" Name="Halt">Halt</Button>
         </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,5,5,5" >
+            <ToggleButton Margin="5" Padding="5" Name="SetTemperatureCompensation" Content="Set Temperature Compensation" />
+        </StackPanel>
     </StackPanel>
 </UserControl>

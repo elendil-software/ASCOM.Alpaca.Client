@@ -70,28 +70,5 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop
         {
             DisplayRootViewFor<ShellViewModel>();
         }
-
-//        protected override void OnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
-//        {
-//            MessageBox.Show(e.Exception.Message, "Error OnUnhandledException", MessageBoxButton.OK); 
-//            e.Handled = true;
-//            base.OnUnhandledException(sender, e);
-//        }
-
-//        protected override void OnUnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
-//        {
-//            if (Debugger.IsAttached)
-//            {
-//                Debugger.Break();
-//                e.Handled = true;
-//            }
-//            else
-//            {
-//                MessageBox.Show("An unexpected error occured, sorry about the troubles.", "Oops...", MessageBoxButton.OK);
-//                e.Handled = true;
-//            }
-//
-//            base.OnUnhandledException(sender, e);
-//        }
     }
 }

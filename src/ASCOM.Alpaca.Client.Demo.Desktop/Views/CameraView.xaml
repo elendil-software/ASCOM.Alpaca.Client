@@ -305,6 +305,7 @@
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
                         
                             <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Last Exposure Duration</Label>
@@ -317,6 +318,8 @@
                             <Label Grid.Row="3" Grid.Column="1" Name="PercentCompleted">...</Label>
                             <Label Grid.Row="4" Grid.Column="0" FontWeight="Bold">Camera State</Label>
                             <Label Grid.Row="4" Grid.Column="1" Name="CameraState">...</Label>
+                            <Label Grid.Row="5" Grid.Column="0" FontWeight="Bold">Last Image Information</Label>
+                            <Label Grid.Row="5" Grid.Column="1" Name="LastImageInformation">...</Label>
                         </Grid>        
                     </StackPanel>
                 </GroupBox>

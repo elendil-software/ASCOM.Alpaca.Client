@@ -22,6 +22,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private bool _tempCompAvailable;
         private double _temperature;
         private int _targetPosition;
+        private bool _temperatureCompensationEnabled;
 
         public FocuserViewModel(IDeviceFactory deviceFactory) : base(deviceFactory)
         {
@@ -166,11 +167,16 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             TempComp = await _focuser.IsTempCompAsync();
             TempCompAvailable = await _focuser.IsTempCompAvailableAsync();
             Temperature = await _focuser.GetTemperatureAsync();
+            
+            NotifyOfPropertyChange(() => CanSetTemperatureCompensation);
         }
+
+        public bool CanSetTemperatureCompensation => TempCompAvailable;
         
         public async Task SetTemperatureCompensation()
         {
-            
+            await _focuser.SetTempCompAsync(!TempComp);
+            TempComp = await _focuser.IsTempCompAsync();
         }
             
         public bool CanHalt => IsMoving;
