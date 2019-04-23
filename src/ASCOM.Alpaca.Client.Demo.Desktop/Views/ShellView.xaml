@@ -21,6 +21,9 @@
             <TabItem Header="Camera">
                 <ContentControl x:Name="CameraViewModel" />
             </TabItem>
+            <TabItem Header="Focuser">
+                <ContentControl x:Name="FocuserViewModel" />
+            </TabItem>
         </TabControl>
     </DockPanel>
 </Window>
