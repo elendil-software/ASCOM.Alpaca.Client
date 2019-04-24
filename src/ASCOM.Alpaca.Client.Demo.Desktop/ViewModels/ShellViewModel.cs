@@ -10,18 +10,21 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private SafetyMonitorViewModel _safetyMonitorViewModel;
         private CameraViewModel _cameraViewModel;
         private FocuserViewModel _focuserViewModel;
+        private ObservingConditionsViewModel _observingConditionsViewModel;
 
         public ShellViewModel(FilterWheelViewModel filterWheelViewModel, 
                                 DomeViewModel domeViewModel,
                                 SafetyMonitorViewModel safetyMonitorViewModel,
                                 CameraViewModel cameraViewModel,
-                                FocuserViewModel focuserViewModel)
+                                FocuserViewModel focuserViewModel,
+                                ObservingConditionsViewModel observingConditionsViewModel)
         {
             _filterWheelViewModel = filterWheelViewModel ?? throw new ArgumentNullException(nameof(filterWheelViewModel));
             _domeViewModel = domeViewModel ?? throw new ArgumentNullException(nameof(domeViewModel));
             _safetyMonitorViewModel = safetyMonitorViewModel ?? throw new ArgumentNullException(nameof(safetyMonitorViewModel));
             _cameraViewModel = cameraViewModel ?? throw new ArgumentNullException(nameof(cameraViewModel));
             _focuserViewModel = focuserViewModel ?? throw new ArgumentNullException(nameof(focuserViewModel));
+            _observingConditionsViewModel = observingConditionsViewModel ?? throw new ArgumentNullException(nameof(observingConditionsViewModel));
         }
 
         public FilterWheelViewModel FilterWheelViewModel
@@ -71,6 +74,16 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             {
                 _focuserViewModel = value;
                 NotifyOfPropertyChange(() => FocuserViewModel);
+            }
+        }
+        
+        public ObservingConditionsViewModel ObservingConditionsViewModel
+        {
+            get => _observingConditionsViewModel;
+            set
+            {
+                _observingConditionsViewModel = value;
+                NotifyOfPropertyChange(() => ObservingConditionsViewModel);
             }
         }
     }

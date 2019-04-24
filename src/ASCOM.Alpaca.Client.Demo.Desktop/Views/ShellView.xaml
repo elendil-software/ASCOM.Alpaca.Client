@@ -24,6 +24,9 @@
             <TabItem Header="Focuser">
                 <ContentControl x:Name="FocuserViewModel" />
             </TabItem>
+            <TabItem Header="Observing Conditions">
+                <ContentControl x:Name="ObservingConditionsViewModel" />
+            </TabItem>
         </TabControl>
     </DockPanel>
 </Window>

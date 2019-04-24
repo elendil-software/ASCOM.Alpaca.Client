@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="ASCOM.Alpaca.Client.Demo.Desktop.Views.ObservingConditionsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ASCOM.Alpaca.Client.Demo.Desktop.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,5,5,5" VerticalAlignment="Center">
+            <Label VerticalAlignment="Center" FontWeight="Bold">Host</Label>
+            <TextBox Name="Host" Width="200" Margin="5" Padding="5"></TextBox>
+
+            <Label VerticalAlignment="Center" FontWeight="Bold">Port</Label>
+            <TextBox Name="Port" Width="50" Margin="5" Padding="5"></TextBox>
+
+            <Label VerticalAlignment="Center" FontWeight="Bold">ClientId</Label>
+            <TextBox Name="ClientId" Margin="5" Padding="5"></TextBox>
+
+            <Label VerticalAlignment="Center" FontWeight="Bold">DeviceId</Label>
+            <TextBox Name="DeviceId" Margin="5" Padding="5"></TextBox>
+
+            <Button Name="Connect" Content="Connect" Margin="5" Padding="5"></Button>
+        </StackPanel>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Cloud Cover</Label>
+            <Label Grid.Row="0" Grid.Column="1" Name="CloudCover">...</Label>
+            <Label Grid.Row="0" Grid.Column="2" FontWeight="Bold">Dew Point</Label>
+            <Label Grid.Row="0" Grid.Column="3" Name="DewPoint">...</Label>
+            
+            <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Humidity</Label>
+            <Label Grid.Row="1" Grid.Column="1" Name="Humidity">...</Label>
+            <Label Grid.Row="1" Grid.Column="2" FontWeight="Bold">Pressure</Label>
+            <Label Grid.Row="1" Grid.Column="3" Name="Pressure">...</Label>
+            
+            <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">Rain Rate</Label>
+            <Label Grid.Row="2" Grid.Column="1" Name="RainRate">...</Label>
+            <Label Grid.Row="2" Grid.Column="2" FontWeight="Bold">Sky Brightness</Label>
+            <Label Grid.Row="2" Grid.Column="3" Name="SkyBrightness">...</Label>
+            
+            <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Sky Quality</Label>
+            <Label Grid.Row="3" Grid.Column="1" Name="SkyQuality">...</Label>
+            <Label Grid.Row="3" Grid.Column="2" FontWeight="Bold">Sky Temperature</Label>
+            <Label Grid.Row="3" Grid.Column="3" Name="SkyTemperature">...</Label>
+            
+            <Label Grid.Row="4" Grid.Column="0" FontWeight="Bold">Star FWHM</Label>
+            <Label Grid.Row="4" Grid.Column="1" Name="StarFWHM">...</Label>
+            <Label Grid.Row="4" Grid.Column="2" FontWeight="Bold">Temperature</Label>
+            <Label Grid.Row="4" Grid.Column="3" Name="Temperature">...</Label>
+            
+            <Label Grid.Row="5" Grid.Column="0" FontWeight="Bold">Wind Direction</Label>
+            <Label Grid.Row="5" Grid.Column="1" Name="WindDirection">...</Label>
+            <Label Grid.Row="5" Grid.Column="2" FontWeight="Bold">Wind Gust</Label>
+            <Label Grid.Row="5" Grid.Column="3" Name="WindGust">...</Label>
+            
+            <Label Grid.Row="6" Grid.Column="0" FontWeight="Bold">Wind Speed</Label>
+            <Label Grid.Row="6" Grid.Column="1" Name="WindSpeed">...</Label>
+            <Label Grid.Row="6" Grid.Column="2" FontWeight="Bold">Average Period</Label>
+            <Label Grid.Row="6" Grid.Column="3" Name="AveragePeriod">...</Label>
+            
+            <Label Grid.Row="7" Grid.Column="0" FontWeight="Bold">Time Since Last Update</Label>
+            <Label Grid.Row="7" Grid.Column="1" Name="TimeSinceLastUpdate">...</Label>
+            <Label Grid.Row="7" Grid.Column="2" FontWeight="Bold">SensorDescription</Label>
+            <Label Grid.Row="7" Grid.Column="3" Name="SensorDescription">...</Label>
+        </Grid>
+        
+        <StackPanel Orientation="Horizontal">
+            <Button Margin="5" Padding="5" Name="RefreshData">Refresh</Button>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

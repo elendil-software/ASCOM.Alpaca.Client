@@ -172,6 +172,7 @@
     <Compile Include="ViewModels\DomeViewModel.cs" />
     <Compile Include="ViewModels\FilterWheelViewModel.cs" />
     <Compile Include="ViewModels\FocuserViewModel.cs" />
+    <Compile Include="ViewModels\ObservingConditionsViewModel.cs" />
     <Compile Include="ViewModels\SafetyMonitorViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="Views\CameraView.xaml.cs">
@@ -185,6 +186,9 @@
     </Compile>
     <Compile Include="Views\FocuserView.xaml.cs">
       <DependentUpon>FocuserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ObservingConditionsView.xaml.cs">
+      <DependentUpon>ObservingConditionsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SafetyMonitorView.xaml.cs">
       <DependentUpon>SafetyMonitorView.xaml</DependentUpon>
@@ -209,6 +213,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\FocuserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ObservingConditionsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
