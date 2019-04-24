@@ -131,20 +131,6 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             TargetPosition = await _rotator.GetTargetPositionAsync();
         }
 
-        public bool CanRefresh => IsConnected;
-
-        public async Task RefreshData()
-        {
-            try
-            {
-                //IsSafe = await _safetyMonitor.IsSafeAsync();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
         public async Task Move()
         {
             try
