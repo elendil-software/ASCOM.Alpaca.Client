@@ -11,7 +11,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private int _clientId = 1;
         private int _deviceId;
 
-        private string _name = "";
+        private string _driverName = "";
         private string _description = "";
         private string _driverVersion = "";
         private string _driverInfo = "";
@@ -24,13 +24,13 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             DeviceFactory = deviceFactory ?? throw new ArgumentNullException(nameof(deviceFactory));
         }
 
-        public string Name
+        public string DriverName
         {
-            get => _name;
+            get => _driverName;
             set
             {
-                _name = value;
-                NotifyOfPropertyChange(() => Name);
+                _driverName = value;
+                NotifyOfPropertyChange(() => DriverName);
 
             }
         }

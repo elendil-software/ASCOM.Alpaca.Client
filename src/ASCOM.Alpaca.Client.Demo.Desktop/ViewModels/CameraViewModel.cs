@@ -731,7 +731,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
         private async Task LoadDriverData()
         {
-            Name = await _camera.GetNameAsync();
+            DriverName = await _camera.GetNameAsync();
             Description = await _camera.GetDescriptionAsync();
             DriverInfo = await _camera.GetDriverInfoAsync();
             DriverVersion = await _camera.GetDriverVersionAsync();

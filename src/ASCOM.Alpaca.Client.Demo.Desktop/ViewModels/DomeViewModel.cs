@@ -234,7 +234,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
         private async Task LoadDriverData()
         {
-            Name = await _dome.GetNameAsync();
+            DriverName = await _dome.GetNameAsync();
             Description = await _dome.GetDescriptionAsync();
             DriverInfo = await _dome.GetDriverInfoAsync();
             DriverVersion = await _dome.GetDriverVersionAsync();
