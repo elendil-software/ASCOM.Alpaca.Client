@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
-    public interface IRotator
+    public interface IRotator : IDevice
     {
         /// <summary>
         /// Indicates whether the Rotator supports the Reverse method.
@@ -45,6 +45,12 @@ namespace ASCOM.Alpaca.Client.Devices
         /// </summary>
         /// <returns></returns>
         bool IsReversed();
+        
+        /// <summary>
+        /// Returns the rotator’s Reverse state.
+        /// </summary>
+        /// <returns></returns>
+        Task<bool> IsReversedAsync();
 
         /// <summary>
         /// Sets the rotator’s Reverse state.

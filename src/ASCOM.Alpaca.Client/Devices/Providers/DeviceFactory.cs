@@ -61,8 +61,13 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
                     IDevice observingConditions = new ObservingConditions(configuration, _clientTransactionIdGenerator, _commandSender, observingConditionsLogger);
                     return (T) observingConditions;
                 
-                case DeviceType.Switch:
                 case DeviceType.Rotator:
+                    ILogger<Rotator> rotatorLogger = _loggerFactory.CreateLogger<Rotator>();
+                    IDevice rotator = new Rotator(configuration, _clientTransactionIdGenerator, _commandSender, rotatorLogger);
+                    return (T) rotator;
+                
+                case DeviceType.Switch:
+                
                 case DeviceType.Telescope:
                     throw new NotImplementedException(configuration.DeviceType.ToString());
 
