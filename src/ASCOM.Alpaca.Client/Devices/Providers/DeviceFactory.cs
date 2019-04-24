@@ -56,8 +56,12 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
                     IDevice focuser = new Focuser(configuration, _clientTransactionIdGenerator, _commandSender, focuserLogger);
                     return (T) focuser;
                 
-                case DeviceType.Switch:
                 case DeviceType.ObservingConditions:
+                    ILogger<ObservingConditions> observingConditionsLogger = _loggerFactory.CreateLogger<ObservingConditions>();
+                    IDevice observingConditions = new ObservingConditions(configuration, _clientTransactionIdGenerator, _commandSender, observingConditionsLogger);
+                    return (T) observingConditions;
+                
+                case DeviceType.Switch:
                 case DeviceType.Rotator:
                 case DeviceType.Telescope:
                     throw new NotImplementedException(configuration.DeviceType.ToString());

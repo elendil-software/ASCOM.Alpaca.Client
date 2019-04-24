@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
-    public interface IObservingConditions
+    public interface IObservingConditions : IDevice
     {
         /// <summary>
         /// Gets the time period over which observations will be averaged
@@ -207,24 +207,24 @@ namespace ASCOM.Alpaca.Client.Devices
         /// Gets a description of the sensor with the name specified in the PropertyName parameter
         /// </summary>
         /// <returns></returns>
-        string GetSensorDescription();
+        string GetSensorDescription(ObservingConditionSensorName sensorName);
         
         /// <summary>
         /// Gets a description of the sensor with the name specified in the PropertyName parameter
         /// </summary>
         /// <returns></returns>
-        Task<string> GetSensorDescriptionAsync();
+        Task<string> GetSensorDescriptionAsync(ObservingConditionSensorName sensorName);
 
         /// <summary>
         /// Gets the time since the sensor was last updated
         /// </summary>
         /// <returns></returns>
-        DateTime GetTimeSinceLastUpdate();
+        TimeSpan GetTimeSinceLastUpdate(ObservingConditionSensorName sensorName);
 
         /// <summary>
         /// Gets the time since the sensor was last updated
         /// </summary>
         /// <returns></returns>
-        Task<DateTime> GetTimeSinceLastUpdateAsync();
+        Task<TimeSpan> GetTimeSinceLastUpdateAsync(ObservingConditionSensorName sensorName);
     }
 }
