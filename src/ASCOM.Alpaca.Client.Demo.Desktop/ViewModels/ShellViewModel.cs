@@ -11,13 +11,15 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private CameraViewModel _cameraViewModel;
         private FocuserViewModel _focuserViewModel;
         private ObservingConditionsViewModel _observingConditionsViewModel;
+        private RotatorViewModel _rotatorViewModel;
 
         public ShellViewModel(FilterWheelViewModel filterWheelViewModel, 
                                 DomeViewModel domeViewModel,
                                 SafetyMonitorViewModel safetyMonitorViewModel,
                                 CameraViewModel cameraViewModel,
                                 FocuserViewModel focuserViewModel,
-                                ObservingConditionsViewModel observingConditionsViewModel)
+                                ObservingConditionsViewModel observingConditionsViewModel,
+                                RotatorViewModel rotatorViewModel)
         {
             _filterWheelViewModel = filterWheelViewModel ?? throw new ArgumentNullException(nameof(filterWheelViewModel));
             _domeViewModel = domeViewModel ?? throw new ArgumentNullException(nameof(domeViewModel));
@@ -25,6 +27,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             _cameraViewModel = cameraViewModel ?? throw new ArgumentNullException(nameof(cameraViewModel));
             _focuserViewModel = focuserViewModel ?? throw new ArgumentNullException(nameof(focuserViewModel));
             _observingConditionsViewModel = observingConditionsViewModel ?? throw new ArgumentNullException(nameof(observingConditionsViewModel));
+            _rotatorViewModel = rotatorViewModel ?? throw new ArgumentNullException(nameof(rotatorViewModel));
         }
 
         public FilterWheelViewModel FilterWheelViewModel
@@ -84,6 +87,16 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             {
                 _observingConditionsViewModel = value;
                 NotifyOfPropertyChange(() => ObservingConditionsViewModel);
+            }
+        }
+        
+        public RotatorViewModel RotatorViewModel
+        {
+            get => _rotatorViewModel;
+            set
+            {
+                _rotatorViewModel = value;
+                NotifyOfPropertyChange(() => RotatorViewModel);
             }
         }
     }

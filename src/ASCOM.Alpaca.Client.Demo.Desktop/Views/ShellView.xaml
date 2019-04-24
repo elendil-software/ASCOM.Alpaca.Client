@@ -27,6 +27,9 @@
             <TabItem Header="Observing Conditions">
                 <ContentControl x:Name="ObservingConditionsViewModel" />
             </TabItem>
+            <TabItem Header="Rotator">
+                <ContentControl x:Name="RotatorViewModel" />
+            </TabItem>
         </TabControl>
     </DockPanel>
 </Window>
