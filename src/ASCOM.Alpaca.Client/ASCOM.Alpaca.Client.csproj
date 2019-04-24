@@ -1,8 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <LangVersion>7.3</LangVersion>
-
     <Description>C# ASCOM Alpaca Client Library allowing to send request to ASCOM Alpaca</Description>
     <Authors>Julien Tschäppät</Authors>
     <Company>Julien Tschäppät</Company>
