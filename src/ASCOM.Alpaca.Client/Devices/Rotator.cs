@@ -51,8 +51,8 @@ namespace ASCOM.Alpaca.Client.Devices
             return RequestBuilder.BuildRestRequest(RotatorMethod.Reverse, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
-        public double GetStepSize() => ExecuteRequest<double, DoubleResponse>(BuildIsMovingRequest);
-        public async Task<double> GetStepSizeAsync() =>  await ExecuteRequestAsync<double, DoubleResponse>(BuildIsMovingRequest);
+        public double GetStepSize() => ExecuteRequest<double, DoubleResponse>(BuildGetStepSizeRequest);
+        public async Task<double> GetStepSizeAsync() =>  await ExecuteRequestAsync<double, DoubleResponse>(BuildGetStepSizeRequest);
         private RestRequest BuildGetStepSizeRequest() => RequestBuilder.BuildRestRequest(RotatorMethod.StepSize, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public double GetTargetPosition() => ExecuteRequest<double, DoubleResponse>(BuildGetTargetPositionRequest);
