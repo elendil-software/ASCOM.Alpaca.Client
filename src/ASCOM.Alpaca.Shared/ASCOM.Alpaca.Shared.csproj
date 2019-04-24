@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
         <RootNamespace>ASCOM.Alpaca</RootNamespace>
         <PackageVersion>0.1.0</PackageVersion>
         <Authors>Julien Tschäppät</Authors>
@@ -12,6 +11,7 @@
         <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageLicenseUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/LICENSE</PackageLicenseUrl>
+        <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
     </PropertyGroup>
 
 </Project>
