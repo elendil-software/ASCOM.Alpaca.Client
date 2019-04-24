@@ -29,7 +29,7 @@ namespace ASCOM.Alpaca.Client.Devices
         private RestRequest BuildCanReverseRequest() => RequestBuilder.BuildRestRequest(RotatorMethod.CanReverse, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public bool IsMoving() => ExecuteRequest<bool, BoolResponse>(BuildIsMovingRequest);
-        public async Task<bool> IsMovingAsync() => ExecuteRequest<bool, BoolResponse>(BuildIsMovingRequest);
+        public async Task<bool> IsMovingAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsMovingRequest);
         private RestRequest BuildIsMovingRequest() => RequestBuilder.BuildRestRequest(RotatorMethod.IsMoving, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public double GetPosition() => ExecuteRequest<double, DoubleResponse>(BuildGetPositionRequest);
