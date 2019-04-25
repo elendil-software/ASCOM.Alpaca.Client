@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ASCOM.Alpaca.Client.Demo.Desktop.Views"
+             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:viewModels="clr-namespace:ASCOM.Alpaca.Client.Demo.Desktop.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
@@ -60,7 +62,32 @@
             <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">MaxSwitch</Label>
             <Label Grid.Row="0" Grid.Column="1" Name="MaxSwitch">...</Label>
         </Grid>
+
+        <DataGrid ItemsSource="{Binding Switches}" AutoGenerateColumns="False">
+            <DataGrid.Resources>
+                <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                <DataGridTextColumn Header="Value" Binding="{Binding Value}" />
+                <DataGridTextColumn Header="Min" Binding="{Binding Min}" />
+                <DataGridTextColumn Header="Max" Binding="{Binding Max}" />
+                <DataGridTextColumn Header="StepSize" Binding="{Binding StepSize}" />
+                <DataGridTextColumn Header="CanWrite" Binding="{Binding CanWrite}" />
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Button Content="Switch" cal:Message.Attach="[Click] = [SetSwitch($datacontext)]"
+                                        Visibility="{Binding IsBool, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
         
-        <DataGrid ItemsSource="{Binding Switches}" />
     </StackPanel>
 </UserControl>

@@ -1,5 +1,7 @@
 using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows;
 using ASCOM.Alpaca.Client.Configuration;
@@ -27,17 +29,6 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
                 NotifyOfPropertyChange(() => MaxSwitch);
             }
         }
-//        CanWrite,
-//        GetSwitch,
-//        GetSwitchDescription,
-//        GetSwitchName,
-//        GetSwitchValue,
-//        MinSwitchValue,
-//        MaxSwitchValue,
-//        SetSwitch,
-//        SetSwitchName,
-//        SetSwitchValue,
-//        SwitchStep
 
         public ObservableCollection<SwitchItem> Switches { get; set; } = new ObservableCollection<SwitchItem>();
 
@@ -94,17 +85,49 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             MaxSwitch = await _switch.GetMaxSwitchAsync();
             await LoadSwitches();
         }
+        
+        public async Task SetSwitch(SwitchItem item)
+        {
+            try
+            {
+                await _switch.SetSwitchAsync(item.Id, item.Value == 0);
+                item.Value = await _switch.GetSwitchValueAsync(item.Id);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 
-    public class SwitchItem
+    public class SwitchItem : INotifyPropertyChanged 
     {
+        private double _value;
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public double Value { get; set; }
+
+        public double Value
+        {
+            get => _value;
+            set
+            {
+                _value = value;
+                OnPropertyChanged("Value");
+            }
+        }
+
         public double Min { get; set; }
         public double Max { get; set; }
         public double StepSize { get; set; }
         public bool CanWrite { get; set; }
+
+        public bool IsBool => Min == 0 && Max == 1 && StepSize == 1;
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }
