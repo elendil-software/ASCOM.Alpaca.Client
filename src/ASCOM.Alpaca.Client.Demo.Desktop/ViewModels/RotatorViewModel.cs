@@ -108,7 +108,6 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
                 await LoadDriverData();
                 
                 IsConnected = true;
-                NotifyOfPropertyChange(() => CanRefresh);
             }
             catch (Exception e)
             {
