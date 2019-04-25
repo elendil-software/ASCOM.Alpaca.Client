@@ -67,6 +67,9 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
                     return (T) rotator;
                 
                 case DeviceType.Switch:
+                    ILogger<Switch> switchLogger = _loggerFactory.CreateLogger<Switch>();
+                    IDevice @switch = new Switch(configuration, _clientTransactionIdGenerator, _commandSender, switchLogger);
+                    return (T) @switch;
                 
                 case DeviceType.Telescope:
                     throw new NotImplementedException(configuration.DeviceType.ToString());

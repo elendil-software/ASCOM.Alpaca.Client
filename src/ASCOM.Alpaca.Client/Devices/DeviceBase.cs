@@ -253,9 +253,9 @@ namespace ASCOM.Alpaca.Client.Devices
             response.HandleResponse();
         }
         
-        protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1>(Func<T1, RestRequest> requestBuilder, T1 param1) where TAlpacaResponse : IValueResponse<TResult>, new()
+        protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1>(Func<T1, RestRequest> requestBuilder, T1 arg) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
-            RestRequest request = requestBuilder(param1);
+            RestRequest request = requestBuilder(arg);
             var response = CommandSender.ExecuteRequest<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
@@ -268,6 +268,28 @@ namespace ASCOM.Alpaca.Client.Devices
             Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
+        
+        
+        
+        protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1, T2>(Func<T1, T2, RestRequest> requestBuilder, T1 arg1, T2 arg2) where TAlpacaResponse : IValueResponse<TResult>, new()
+        {
+            RestRequest request = requestBuilder(arg1 , arg2);
+            var response = CommandSender.ExecuteRequest<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
+            Logger.LogDebug(response);
+            return response.HandleResponse<TResult, TAlpacaResponse>();
+        }
+
+        protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse, T1, T2>(Func<T1, T2, RestRequest> requestBuilder, T1 arg1, T2 arg2) where TAlpacaResponse : IValueResponse<TResult>, new()
+        {
+            RestRequest request = requestBuilder(arg1 , arg2);
+            var response = await CommandSender.ExecuteRequestAsync<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
+            Logger.LogDebug(response);
+            return response.HandleResponse<TResult, TAlpacaResponse>();
+        }
+        
+        
+        
+        
 
         protected TResult ExecuteRequest<TResult, TAlpacaResponse>(Func<RestRequest> requestBuilder) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
