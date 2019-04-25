@@ -176,6 +176,7 @@
     <Compile Include="ViewModels\RotatorViewModel.cs" />
     <Compile Include="ViewModels\SafetyMonitorViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="ViewModels\SwitchViewModel.cs" />
     <Compile Include="Views\CameraView.xaml.cs">
       <DependentUpon>CameraView.xaml</DependentUpon>
     </Compile>
@@ -203,6 +204,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SwitchView.xaml.cs">
+      <DependentUpon>SwitchView.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\CameraView.xaml">
       <SubType>Designer</SubType>
@@ -233,6 +237,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SwitchView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

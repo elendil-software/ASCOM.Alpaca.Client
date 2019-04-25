@@ -30,6 +30,9 @@
             <TabItem Header="Rotator">
                 <ContentControl x:Name="RotatorViewModel" />
             </TabItem>
+            <TabItem Header="Switch">
+                <ContentControl x:Name="SwitchViewModel" />
+            </TabItem>
         </TabControl>
     </DockPanel>
 </Window>

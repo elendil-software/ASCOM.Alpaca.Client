@@ -12,6 +12,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private FocuserViewModel _focuserViewModel;
         private ObservingConditionsViewModel _observingConditionsViewModel;
         private RotatorViewModel _rotatorViewModel;
+        private SwitchViewModel _switchViewModel;
 
         public ShellViewModel(FilterWheelViewModel filterWheelViewModel, 
                                 DomeViewModel domeViewModel,
@@ -19,7 +20,8 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
                                 CameraViewModel cameraViewModel,
                                 FocuserViewModel focuserViewModel,
                                 ObservingConditionsViewModel observingConditionsViewModel,
-                                RotatorViewModel rotatorViewModel)
+                                RotatorViewModel rotatorViewModel,
+                                SwitchViewModel switchViewModel)
         {
             _filterWheelViewModel = filterWheelViewModel ?? throw new ArgumentNullException(nameof(filterWheelViewModel));
             _domeViewModel = domeViewModel ?? throw new ArgumentNullException(nameof(domeViewModel));
@@ -28,6 +30,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             _focuserViewModel = focuserViewModel ?? throw new ArgumentNullException(nameof(focuserViewModel));
             _observingConditionsViewModel = observingConditionsViewModel ?? throw new ArgumentNullException(nameof(observingConditionsViewModel));
             _rotatorViewModel = rotatorViewModel ?? throw new ArgumentNullException(nameof(rotatorViewModel));
+            _switchViewModel = switchViewModel ?? throw new ArgumentNullException(nameof(switchViewModel));
         }
 
         public FilterWheelViewModel FilterWheelViewModel
@@ -97,6 +100,16 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             {
                 _rotatorViewModel = value;
                 NotifyOfPropertyChange(() => RotatorViewModel);
+            }
+        }
+        
+        public SwitchViewModel SwitchViewModel
+        {
+            get => _switchViewModel;
+            set
+            {
+                _switchViewModel = value;
+                NotifyOfPropertyChange(() => SwitchViewModel);
             }
         }
     }
