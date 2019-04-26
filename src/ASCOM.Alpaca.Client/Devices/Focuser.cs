@@ -43,8 +43,8 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task<int> GetPositionAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetPositionRequest);
         private RestRequest BuildGetPositionRequest() => RequestBuilder.BuildRestRequest(FocuserMethod.Position, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
         
-        public double GetStepSize() => ExecuteRequest<int, IntResponse>(BuildGetStepSizeRequest);
-        public async Task<double> GetStepSizeAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetStepSizeRequest);
+        public double GetStepSize() => ExecuteRequest<double, DoubleResponse>(BuildGetStepSizeRequest);
+        public async Task<double> GetStepSizeAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetStepSizeRequest);
         private RestRequest BuildGetStepSizeRequest() => RequestBuilder.BuildRestRequest(FocuserMethod.StepSize, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
         
         public bool IsTempComp() => ExecuteRequest<bool, BoolResponse>(BuildIsTempCompRequest); 

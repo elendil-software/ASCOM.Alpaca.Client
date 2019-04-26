@@ -16,7 +16,6 @@ using ASCOM.Alpaca.Responses;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using RestSharp;
-using RestSharp.Serialization.Json;
 using NotImplementedException = System.NotImplementedException;
 
 namespace ASCOM.Alpaca.Client.Devices
@@ -38,7 +37,7 @@ namespace ASCOM.Alpaca.Client.Devices
         private RestRequest BuildGetBayerOffsetXRequest() => RequestBuilder.BuildRestRequest(CameraMethod.BayerOffsetX, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public int GetBayerOffsetY() => ExecuteRequest<int, IntResponse>(BuildGetBayerOffsetYRequest);
-        public async Task<int> GetBayerOffsetYAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetBayerOffsetXRequest);
+        public async Task<int> GetBayerOffsetYAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetBayerOffsetYRequest);
         private RestRequest BuildGetBayerOffsetYRequest() => RequestBuilder.BuildRestRequest(CameraMethod.BayerOffsetY, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public int GetBinX() => ExecuteRequest<int, IntResponse>(BuildGetBinXRequest);
@@ -385,6 +384,17 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task<int> GetReadoutModeAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetReadoutModeRequest);
         private RestRequest BuildGetReadoutModeRequest() => RequestBuilder.BuildRestRequest(CameraMethod.ReadoutMode, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
+        public void SetReadoutMode(int readoutMode) => ExecuteRequest(BuildSetReadoutModeRequest, readoutMode);
+        public async Task SetReadoutModeAsync(int readoutMode) => await ExecuteRequestAsync(BuildSetReadoutModeRequest, readoutMode);
+        private RestRequest BuildSetReadoutModeRequest(int readoutMode)
+        {
+            var parameters = new Dictionary<string, object>
+            {
+                {CameraRequestParameters.ReadoutMode, readoutMode.ToString()}
+            };
+            return RequestBuilder.BuildRestRequest(CameraMethod.ReadoutMode, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+        }
+        
         public List<string> GetReadoutModes() => ExecuteRequest<List<string>, StringArrayResponse>(BuildGetReadoutModesRequest);
         public async Task<List<string>> GetReadoutModesAsync() => await ExecuteRequestAsync<List<string>, StringArrayResponse>(BuildGetReadoutModesRequest);
         private RestRequest BuildGetReadoutModesRequest() => RequestBuilder.BuildRestRequest(CameraMethod.ReadoutModes, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
@@ -428,7 +438,7 @@ namespace ASCOM.Alpaca.Client.Devices
         }
 
         public int GetStartY() => ExecuteRequest<int, IntResponse>(BuildGetStartYRequest);
-        public async Task<int> GetStartYAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetStartXRequest);
+        public async Task<int> GetStartYAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetStartYRequest);
         private RestRequest BuildGetStartYRequest() => RequestBuilder.BuildRestRequest(CameraMethod.StartY, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public void SetStartY(int startY) => ExecuteRequest(BuildSetStartYRequest, startY);

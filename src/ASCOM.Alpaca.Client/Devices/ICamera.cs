@@ -710,6 +710,18 @@ namespace ASCOM.Alpaca.Client.Devices
         Task<int> GetReadoutModeAsync();
 
         /// <summary>
+        /// Sets the ReadoutMode as an index into the array ReadoutModes.
+        /// </summary>
+        /// <returns></returns>
+        void SetReadoutMode(int readoutMode);
+
+        /// <summary>
+        /// Sets the ReadoutMode as an index into the array ReadoutModes.
+        /// </summary>
+        /// <returns></returns>
+        Task SetReadoutModeAsync(int readoutMode);
+
+        /// <summary>
         /// Get the list of available readout modes.
         /// This property provides an array of strings, each of which describes
         /// an available readout mode of the camera.

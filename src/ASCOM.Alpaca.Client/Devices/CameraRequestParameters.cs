@@ -12,6 +12,7 @@ namespace ASCOM.Alpaca.Client.Devices
         public const string SetCCDTemperature = "SetCCDTemperature";
         public const string Gain = "Gain";
         public const string FastReadout = "FastReadout";
+        public const string ReadoutMode = "ReadoutMode";
         public const string CoolerOn = "CoolerOn";
         public const string BinX = "BinX";
         public const string BinY = "BinY";

@@ -57,7 +57,7 @@ namespace ASCOM.Alpaca.Client.Devices
         private RestRequest BuildSetSwitchNameRequest(int id, string name)
         {
             var parameters = GetDefaultParameters(id);
-            parameters.Add(SwitchRequestParameters.Value, name);
+            parameters.Add(SwitchRequestParameters.Name, name);
             return RequestBuilder.BuildRestRequest(SwitchMethod.SetSwitchName, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
