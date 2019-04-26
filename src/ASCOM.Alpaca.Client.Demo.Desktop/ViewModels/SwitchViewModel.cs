@@ -71,8 +71,6 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
                 
                 Switches.Add(switchItem);
             }
-            
-            //NotifyOfPropertyChange(() => Switches);
         }
         
         private async Task LoadDriverData()
