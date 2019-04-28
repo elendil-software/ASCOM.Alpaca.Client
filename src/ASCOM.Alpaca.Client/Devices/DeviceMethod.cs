@@ -1,6 +1,6 @@
 ﻿namespace ASCOM.Alpaca.Client.Devices
 {
-    public enum DeviceMethod
+    internal enum DeviceMethod
     {
         Action,
         CommandBlind,

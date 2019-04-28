@@ -1,6 +1,6 @@
 ﻿namespace ASCOM.Alpaca.Client.Devices
 {
-    public enum RotatorMethod
+    internal enum RotatorMethod
     {
         CanReverse,
         IsMoving,

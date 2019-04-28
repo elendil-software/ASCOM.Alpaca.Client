@@ -1,6 +1,6 @@
 ﻿namespace ASCOM.Alpaca.Client.Devices
 {
-    public enum CameraMethod
+    internal enum CameraMethod
     {
         BayerOffsetX,
         BayerOffsetY,

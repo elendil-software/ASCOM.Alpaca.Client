@@ -1,6 +1,6 @@
 ﻿namespace ASCOM.Alpaca.Client.Devices
 {
-    public enum SafetyMonitorMethod
+    internal enum SafetyMonitorMethod
     {
         IsSafe
     }
