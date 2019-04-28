@@ -41,8 +41,8 @@
         SiteLongitude,
         Slewing,
         SlewSettleTime,
-        TarDeclination,
-        TarRightAscension,
+        TargetDeclination,
+        TargetRightAscension,
         Tracking,
         TrackingRate,
         TrackingRates,
@@ -60,11 +60,11 @@
         SlewToAltAzAsync,
         SlewToCoordinates,
         SlewToCoordinatesAsync,
-        SlewToTar,
-        SlewToTarAsync,
+        SlewToTarget,
+        SlewToTargetAsync,
         SyncToAltAz,
         SyncToCoordinates,
-        SyncToTar,
+        SyncToTarget,
         UnPark
     }
  }
