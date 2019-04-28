@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASCOM.Alpaca.Client.Depende
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASCOM.Alpaca.Client.Demo.Desktop", "src\ASCOM.Alpaca.Client.Demo.Desktop\ASCOM.Alpaca.Client.Demo.Desktop.csproj", "{ED5A8944-465A-4FF8-B8F8-28063C5D43D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASCOM.Alpaca.Shared", "src\ASCOM.Alpaca.Shared\ASCOM.Alpaca.Shared.csproj", "{A7F62721-608C-46CE-8832-5CF4F5B58C84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASCOM.Alpaca.Shared", "src\ASCOM.Alpaca.Shared\ASCOM.Alpaca.Shared.csproj", "{A7F62721-608C-46CE-8832-5CF4F5B58C84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASCOM.Alpaca.Client.Test", "test\ASCOM.Alpaca.Client.Test\ASCOM.Alpaca.Client.Test.csproj", "{88ECB311-08E3-432C-A17C-5BA333F120CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASCOM.Alpaca.Client.Test", "test\ASCOM.Alpaca.Client.Test\ASCOM.Alpaca.Client.Test.csproj", "{88ECB311-08E3-432C-A17C-5BA333F120CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

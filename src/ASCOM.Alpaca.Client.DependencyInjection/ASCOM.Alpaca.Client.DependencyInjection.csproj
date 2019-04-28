@@ -4,13 +4,18 @@
         <PackageVersion>0.1.0</PackageVersion>
         <Authors>Julien Tschäppät</Authors>
         <Copyright>© 2019 - Julien Tschäppät</Copyright>
-        <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client.Toolkit</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client.Toolkit</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</RepositoryUrl>
         <PackageTags>ASCOM Astronomy</PackageTags>
-        <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client.Toolkit/releases</PackageReleaseNotes>
+        <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageLicenseUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageLicenseUrl></PackageLicenseUrl>
         <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <AssemblyVersion>0.1.0</AssemblyVersion>
+        <FileVersion>0.1.0</FileVersion>
+        <Version>0.1.0</Version>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -20,6 +25,13 @@
 
     <ItemGroup>
       <ProjectReference Include="..\ASCOM.Alpaca.Client\ASCOM.Alpaca.Client.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\..\LICENSE.md">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
     </ItemGroup>
 
 </Project>

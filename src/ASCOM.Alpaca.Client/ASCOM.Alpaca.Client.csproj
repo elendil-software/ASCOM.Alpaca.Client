@@ -12,13 +12,14 @@
     <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</PackageProjectUrl>
     <Product>C# ASCOM Alpaca Client</Product>
     <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</RepositoryUrl>
-    <PackageTags>ASCOM astronomy</PackageTags>
+    <PackageTags>ASCOM Astronomy</PackageTags>
     <AssemblyVersion>0.1.0</AssemblyVersion>
     <FileVersion>0.1.0</FileVersion>
     <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
-    <PackageLicenseUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <PackageIconUrl></PackageIconUrl>
     <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,6 +31,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ASCOM.Alpaca.Shared\ASCOM.Alpaca.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 
