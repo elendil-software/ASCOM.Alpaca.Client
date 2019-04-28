@@ -8,7 +8,7 @@
         CommandString,
         Connected,
         Description,
-        Driverinfo,
+        DriverInfo,
         DriverVersion,
         Name,
         SupportedActions

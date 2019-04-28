@@ -189,7 +189,7 @@ namespace ASCOM.Alpaca.Client.Devices
 
         public string GetDriverInfo() => ExecuteRequest<string, StringResponse>(BuildGetDriverInfoRequest);    
         public async Task<string> GetDriverInfoAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetDriverInfoRequest);
-        private RestRequest BuildGetDriverInfoRequest() => RequestBuilder.BuildRestRequest(CommonMethod.Driverinfo, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+        private RestRequest BuildGetDriverInfoRequest() => RequestBuilder.BuildRestRequest(CommonMethod.DriverInfo, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public string GetDriverVersion() => ExecuteRequest<string, StringResponse>(BuildGetDriverVersionRequest);
         public async Task<string> GetDriverVersionAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetDriverVersionRequest);
