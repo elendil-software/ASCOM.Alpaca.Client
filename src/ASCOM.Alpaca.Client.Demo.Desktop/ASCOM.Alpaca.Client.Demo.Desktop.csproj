@@ -109,7 +109,7 @@
       <HintPath>..\..\packages\Serilog.AspNetCore.2.1.1\lib\netstandard2.0\Serilog.AspNetCore.dll</HintPath>
     </Reference>
     <Reference Include="Serilog.Extensions.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Serilog.Extensions.Logging.2.0.2\lib\net461\Serilog.Extensions.Logging.dll</HintPath>
+      <HintPath>..\..\packages\Serilog.Extensions.Logging.2.0.4\lib\net461\Serilog.Extensions.Logging.dll</HintPath>
     </Reference>
     <Reference Include="Serilog.Sinks.Debug, Version=1.0.1.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Serilog.Sinks.Debug.1.0.1\lib\net46\Serilog.Sinks.Debug.dll</HintPath>
