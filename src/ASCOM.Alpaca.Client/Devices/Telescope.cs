@@ -420,12 +420,12 @@ namespace ASCOM.Alpaca.Client.Devices
         }
 
         public void FindHome() => ExecuteRequest(BuildFindHomeRequest);
-        public async Task FindHomeAsync() => ExecuteRequestAsync(BuildFindHomeRequest);
+        public async Task FindHomeAsync() => await ExecuteRequestAsync(BuildFindHomeRequest);
         private RestRequest BuildFindHomeRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.FindHome, Method.PUT, ClientTransactionIdGenerator.GetTransactionId());
 
         //TODO : Note : Axis is sent as request parameter and rate in the request body ? To check with Peter and Bob
         public void MoveAxis(TelescopeAxis axis, double rate) => ExecuteRequest(BuildMoveAxisRequest, axis, rate);
-        public async Task MoveAxisAsync(TelescopeAxis axis, double rate) => ExecuteRequestAsync(BuildMoveAxisRequest, axis, rate);
+        public async Task MoveAxisAsync(TelescopeAxis axis, double rate) => await ExecuteRequestAsync(BuildMoveAxisRequest, axis, rate);
         private RestRequest BuildMoveAxisRequest(TelescopeAxis axis, double rate)
         {
             var parameters = new Dictionary<string, object>
@@ -437,7 +437,7 @@ namespace ASCOM.Alpaca.Client.Devices
         }
 
         public void Park() => ExecuteRequest(BuildParkRequest);
-        public async Task ParkAsync() => ExecuteRequestAsync(BuildParkRequest);
+        public async Task ParkAsync() => await ExecuteRequestAsync(BuildParkRequest);
         private RestRequest BuildParkRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.Park, Method.PUT, ClientTransactionIdGenerator.GetTransactionId());
 
         public void PulseGuide(Direction direction, int duration) => ExecuteRequest(BuildPulseGuideRequest, direction, duration);
@@ -481,7 +481,7 @@ namespace ASCOM.Alpaca.Client.Devices
         }
 
         public void SlewToCoordinates(double rightAscension, double declination) => ExecuteRequest(BuildSlewToCoordinatesRequest, rightAscension, declination);
-        public async Task SlewToCoordinatesAsync(double rightAscension, double declination) => ExecuteRequestAsync(BuildSlewToCoordinatesRequest, rightAscension, declination);
+        public async Task SlewToCoordinatesAsync(double rightAscension, double declination) => await ExecuteRequestAsync(BuildSlewToCoordinatesRequest, rightAscension, declination);
         private RestRequest BuildSlewToCoordinatesRequest(double rightAscension, double declination)
         {
             var parameters = new Dictionary<string, object>
