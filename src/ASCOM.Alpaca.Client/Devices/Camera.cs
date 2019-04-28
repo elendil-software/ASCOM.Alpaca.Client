@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Configuration;
-using ASCOM.Alpaca.Client.Devices.Methods;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;

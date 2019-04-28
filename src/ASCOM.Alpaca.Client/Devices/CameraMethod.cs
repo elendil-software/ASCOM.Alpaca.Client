@@ -1,4 +1,4 @@
-﻿namespace ASCOM.Alpaca.Client.Devices.Methods
+﻿namespace ASCOM.Alpaca.Client.Devices
 {
     public enum CameraMethod
     {

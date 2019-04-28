@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Configuration;
-using ASCOM.Alpaca.Client.Devices.Methods;
 using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
@@ -71,7 +70,7 @@ namespace ASCOM.Alpaca.Client.Devices
                 {"Parameters", actionParameters}
             };
 
-            return RequestBuilder.BuildRestRequest(CommonMethod.Action, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+            return RequestBuilder.BuildRestRequest(DeviceMethod.Action, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
         public void SendCommandBlind(string command, bool raw = false)
@@ -102,7 +101,7 @@ namespace ASCOM.Alpaca.Client.Devices
                 {"Raw", raw.ToString()}
             };
 
-            return RequestBuilder.BuildRestRequest(CommonMethod.CommandBlind, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+            return RequestBuilder.BuildRestRequest(DeviceMethod.CommandBlind, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
         public bool SendCommandBool(string command, bool raw = false)
@@ -133,7 +132,7 @@ namespace ASCOM.Alpaca.Client.Devices
                 {"Raw", raw.ToString()}
             };
 
-            return RequestBuilder.BuildRestRequest(CommonMethod.CommandBool, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+            return RequestBuilder.BuildRestRequest(DeviceMethod.CommandBool, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
       
         public string SendCommandString(string command, bool raw = false)
@@ -164,12 +163,12 @@ namespace ASCOM.Alpaca.Client.Devices
                 {"Raw", raw.ToString()}
             };
 
-            return RequestBuilder.BuildRestRequest(CommonMethod.CommandString, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+            return RequestBuilder.BuildRestRequest(DeviceMethod.CommandString, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
         public bool IsConnected() => ExecuteRequest<bool, BoolResponse>(BuildIsConnectedRequest);
         public async Task<bool> IsConnectedAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsConnectedRequest);
-        private RestRequest BuildIsConnectedRequest() => RequestBuilder.BuildRestRequest(CommonMethod.Connected, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+        private RestRequest BuildIsConnectedRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.Connected, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
         
         public void SetConnected(bool connected) => ExecuteRequest(BuildSetConnectedRequest, connected);
         public async Task SetConnectedAsync(bool connected) => await ExecuteRequestAsync(BuildSetConnectedRequest, connected);
@@ -180,28 +179,28 @@ namespace ASCOM.Alpaca.Client.Devices
                 {"Connected", connected.ToString()}
             };
 
-            return RequestBuilder.BuildRestRequest(CommonMethod.Connected, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
+            return RequestBuilder.BuildRestRequest(DeviceMethod.Connected, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
         public string GetDescription() => ExecuteRequest<string, StringResponse>(BuildGetDescriptionRequest);     
         public async Task<string> GetDescriptionAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetDescriptionRequest);
-        private RestRequest BuildGetDescriptionRequest() => RequestBuilder.BuildRestRequest(CommonMethod.Description, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+        private RestRequest BuildGetDescriptionRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.Description, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public string GetDriverInfo() => ExecuteRequest<string, StringResponse>(BuildGetDriverInfoRequest);    
         public async Task<string> GetDriverInfoAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetDriverInfoRequest);
-        private RestRequest BuildGetDriverInfoRequest() => RequestBuilder.BuildRestRequest(CommonMethod.DriverInfo, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+        private RestRequest BuildGetDriverInfoRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.DriverInfo, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public string GetDriverVersion() => ExecuteRequest<string, StringResponse>(BuildGetDriverVersionRequest);
         public async Task<string> GetDriverVersionAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetDriverVersionRequest);
-        private RestRequest BuildGetDriverVersionRequest() => RequestBuilder.BuildRestRequest(CommonMethod.DriverVersion, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+        private RestRequest BuildGetDriverVersionRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.DriverVersion, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public string GetName() => ExecuteRequest<string, StringResponse>(BuildGetNameRequest);
         public async Task<string> GetNameAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetNameRequest);
-        private RestRequest BuildGetNameRequest() => RequestBuilder.BuildRestRequest(CommonMethod.Name, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+        private RestRequest BuildGetNameRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.Name, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public List<string> GetSupportedActions() => ExecuteRequest<List<string>, StringArrayResponse>(BuildGetSupportedActionsRequest);      
         public async Task<List<string>> GetSupportedActionsAsync() => await ExecuteRequestAsync<List<string>, StringArrayResponse>(BuildGetSupportedActionsRequest);
-        private RestRequest BuildGetSupportedActionsRequest() => RequestBuilder.BuildRestRequest(CommonMethod.SupportedActions, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+        private RestRequest BuildGetSupportedActionsRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.SupportedActions, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
 
 

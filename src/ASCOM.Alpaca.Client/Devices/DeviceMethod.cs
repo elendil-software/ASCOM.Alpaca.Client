@@ -1,6 +1,6 @@
-﻿namespace ASCOM.Alpaca.Client.Devices.Methods
+﻿namespace ASCOM.Alpaca.Client.Devices
 {
-    public enum CommonMethod
+    public enum DeviceMethod
     {
         Action,
         CommandBlind,
