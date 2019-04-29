@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using ASCOM.Alpaca.Client.Configuration;
 
-namespace ASCOM.Alpaca.Client.Configuration
+namespace ASCOM.Alpaca.Client.Demo.Devices
 {
     public class DevicesConfiguration
     {
