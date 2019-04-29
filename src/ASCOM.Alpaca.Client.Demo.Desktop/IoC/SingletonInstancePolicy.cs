@@ -1,9 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using ASCOM.Alpaca.Client.Devices;
-using ASCOM.Alpaca.Client.Devices.Providers;
-using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
 using Caliburn.Micro;
 using Lamar;
@@ -18,7 +15,6 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.IoC
         {
             typeof(IWindowManager),
             typeof(IEventAggregator),
-            typeof(IDeviceProvider),
             typeof(IClientTransactionIdGenerator)
         };
         

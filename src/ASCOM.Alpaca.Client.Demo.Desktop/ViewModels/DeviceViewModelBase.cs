@@ -1,6 +1,5 @@
 ﻿using System;
 using ASCOM.Alpaca.Client.Demo.Desktop.Factories;
-using ASCOM.Alpaca.Client.Devices.Providers;
 using Caliburn.Micro;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
