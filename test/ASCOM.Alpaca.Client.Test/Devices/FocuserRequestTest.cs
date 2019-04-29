@@ -21,11 +21,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "absolute";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -42,11 +42,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "absolute";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -63,11 +63,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "ismoving";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -84,11 +84,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "ismoving";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -105,11 +105,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "maxincrement";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -126,11 +126,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "maxincrement";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -147,11 +147,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "maxstep";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -168,11 +168,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "maxstep";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -189,11 +189,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "position";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -210,11 +210,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "position";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -231,11 +231,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "stepsize";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -252,11 +252,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "stepsize";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -273,11 +273,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "tempcomp";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -294,11 +294,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "tempcomp";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -317,11 +317,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "tempcomp";
             string tempCompParameterName = "TempComp";
             bool tempCompParameterValue = true;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -341,11 +341,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "tempcomp";
             string tempCompParameterName = "TempComp";
             bool tempCompParameterValue = true;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -363,11 +363,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "tempcompavailable";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -384,11 +384,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "tempcompavailable";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -405,11 +405,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "temperature";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -426,11 +426,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "temperature";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -447,11 +447,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "halt";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -468,11 +468,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "halt";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -491,11 +491,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "move";
             string positionParameterName = "Position";
             int positionParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -515,11 +515,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "move";
             string positionParameterName = "Position";
             int positionParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             

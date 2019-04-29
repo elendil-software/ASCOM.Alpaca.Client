@@ -22,11 +22,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "altitude";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -43,11 +43,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "altitude";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -64,11 +64,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "athome";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -85,11 +85,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "athome";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -106,11 +106,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "atpark";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -127,11 +127,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "atpark";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -148,11 +148,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "azimuth";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -169,11 +169,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "azimuth";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -190,11 +190,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canfindhome";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -211,11 +211,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canfindhome";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -232,11 +232,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canpark";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -253,11 +253,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canpark";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -274,11 +274,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cansetaltitude";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -295,11 +295,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cansetaltitude";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -316,11 +316,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cansetazimuth";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -337,11 +337,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cansetazimuth";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -358,11 +358,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cansetpark";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -379,11 +379,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cansetpark";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -400,11 +400,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cansetshutter";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -421,11 +421,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cansetshutter";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -442,11 +442,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canslave";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -463,11 +463,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canslave";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -484,11 +484,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cansyncazimuth";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -505,11 +505,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cansyncazimuth";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -526,11 +526,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "shutterstatus";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<ValueResponse<ShutterState>>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new ValueResponse<ShutterState>());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -547,11 +547,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "shutterstatus";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<ValueResponse<ShutterState>>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new ValueResponse<ShutterState>()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -568,11 +568,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "slaved";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -589,11 +589,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "slaved";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -612,11 +612,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "slaved";
             string slavedParameterName = "Slaved";
             bool slavedParameterValue = true;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -636,11 +636,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "slaved";
             string slavedParameterName = "Slaved";
             bool slavedParameterValue = true;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -658,11 +658,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "slewing";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -679,11 +679,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "slewing";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -700,11 +700,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "abortslew";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -721,11 +721,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "abortslew";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -742,11 +742,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "closeshutter";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -763,11 +763,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "closeshutter";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -784,11 +784,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "findhome";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -805,11 +805,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "findhome";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -826,11 +826,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "openshutter";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -847,11 +847,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "openshutter";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -868,11 +868,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "park";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -889,11 +889,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "park";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -910,11 +910,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "setpark";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -931,11 +931,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "setpark";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -954,11 +954,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "slewtoaltitude";
             string altitudeParameterName = "Altitude";
             double altitudeParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -978,11 +978,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "slewtoaltitude";
             string altitudeParameterName = "Altitude";
             double altitudeParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1002,11 +1002,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "slewtoazimuth";
             string azimuthParameterName = "Azimuth";
             double azimuthParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1026,11 +1026,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "slewtoazimuth";
             string azimuthParameterName = "Azimuth";
             double azimuthParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1050,11 +1050,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "synctoazimuth";
             string azimuthParameterName = "Azimuth";
             double azimuthParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1074,11 +1074,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "synctoazimuth";
             string azimuthParameterName = "Azimuth";
             double azimuthParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             

@@ -21,11 +21,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "issafe";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var safetyMonitor = new SafetyMonitor(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
 
@@ -42,11 +42,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "issafe";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var safetyMonitor = new SafetyMonitor(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
 

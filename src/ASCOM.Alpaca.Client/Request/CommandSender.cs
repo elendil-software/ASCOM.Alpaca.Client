@@ -20,7 +20,7 @@ namespace ASCOM.Alpaca.Client.Request
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
         
-        public IRestResponse ExecuteRequest(string baseUrl, RestRequest request)
+        public IRestResponse ExecuteRequest(string baseUrl, IRestRequest request)
         {
             _logger?.LogDebug(baseUrl, request);
             IRestResponse response = new RestClient(baseUrl).Execute(request);
@@ -28,7 +28,7 @@ namespace ASCOM.Alpaca.Client.Request
             return response;
         }
 
-        public TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(string baseUrl, RestRequest request) where TASCOMRemoteResponse : IResponse, new()
+        public TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(string baseUrl, IRestRequest request) where TASCOMRemoteResponse : IResponse, new()
         {
             _logger?.LogDebug(baseUrl, request);
             IRestResponse<TASCOMRemoteResponse> response = new RestClient(baseUrl).Execute<TASCOMRemoteResponse>(request);
@@ -36,7 +36,7 @@ namespace ASCOM.Alpaca.Client.Request
             return response.Data;
         }
         
-        public async Task<IRestResponse> ExecuteRequestAsync(string baseUrl, RestRequest request)
+        public async Task<IRestResponse> ExecuteRequestAsync(string baseUrl, IRestRequest request)
         {
             _logger?.LogDebug(baseUrl, request);
             IRestResponse response = await new RestClient(baseUrl).ExecuteTaskAsync(request);
@@ -44,7 +44,7 @@ namespace ASCOM.Alpaca.Client.Request
             return response;
         }
         
-        public async Task<TASCOMRemoteResponse> ExecuteRequestAsync<TASCOMRemoteResponse>(string baseUrl, RestRequest request) where TASCOMRemoteResponse : IResponse, new()
+        public async Task<TASCOMRemoteResponse> ExecuteRequestAsync<TASCOMRemoteResponse>(string baseUrl, IRestRequest request) where TASCOMRemoteResponse : IResponse, new()
         {
             _logger?.LogDebug(baseUrl, request);
             IRestResponse<TASCOMRemoteResponse> response = await new RestClient(baseUrl).ExecuteTaskAsync<TASCOMRemoteResponse>(request);

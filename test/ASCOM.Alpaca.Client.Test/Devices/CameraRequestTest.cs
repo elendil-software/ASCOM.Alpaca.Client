@@ -23,11 +23,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "bayeroffsetx";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -44,11 +44,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "bayeroffsetx";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -65,11 +65,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "bayeroffsety";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -86,11 +86,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "bayeroffsety";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -107,11 +107,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "binx";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -128,11 +128,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "binx";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -151,11 +151,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "binx";
             string binXParameterName = "BinX";
             int binXParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -175,11 +175,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "binx";
             string binXParameterName = "BinX";
             int binXParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -197,11 +197,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "biny";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -218,11 +218,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "biny";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -241,11 +241,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "biny";
             string binYParameterName = "BinY";
             int binYParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -265,11 +265,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "biny";
             string binYParameterName = "BinY";
             int binYParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -287,11 +287,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "camerastate";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<ValueResponse<CameraState>>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new ValueResponse<CameraState>());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -308,11 +308,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "camerastate";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<ValueResponse<CameraState>>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new ValueResponse<CameraState>()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -329,11 +329,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cameraxsize";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -350,11 +350,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cameraxsize";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -371,11 +371,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cameraysize";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -392,11 +392,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cameraysize";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -413,11 +413,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canabortexposure";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -434,11 +434,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canabortexposure";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -455,11 +455,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canasymmetricbin";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -476,11 +476,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canasymmetricbin";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -497,11 +497,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canfastreadout";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -518,11 +518,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canfastreadout";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -539,11 +539,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cangetcoolerpower";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -560,11 +560,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cangetcoolerpower";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -581,11 +581,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canpulseguide";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -602,11 +602,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canpulseguide";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -623,11 +623,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cansetccdtemperature";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -644,11 +644,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cansetccdtemperature";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -665,11 +665,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canstopexposure";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -686,11 +686,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canstopexposure";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -707,11 +707,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "ccdtemperature";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -728,11 +728,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "ccdtemperature";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -749,11 +749,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cooleron";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -770,11 +770,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cooleron";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -793,11 +793,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "cooleron";
             string coolerOnParameterName = "CoolerOn";
             bool coolerOnParameterValue = true;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -817,11 +817,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "cooleron";
             string coolerOnParameterName = "CoolerOn";
             bool coolerOnParameterValue = true;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -839,11 +839,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "coolerpower";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -860,11 +860,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "coolerpower";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -881,11 +881,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "electronsperadu";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -902,11 +902,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "electronsperadu";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -923,11 +923,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "exposuremax";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -944,11 +944,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "exposuremax";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -965,11 +965,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "exposuremin";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -986,11 +986,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "exposuremin";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1007,11 +1007,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "exposureresolution";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1028,11 +1028,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "exposureresolution";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1049,11 +1049,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "fastreadout";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1070,11 +1070,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "fastreadout";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1093,11 +1093,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "fastreadout";
             string fastReadoutParameterName = "FastReadout";
             bool fastReadoutParameterValue = true;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1117,11 +1117,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "fastreadout";
             string fastReadoutParameterName = "FastReadout";
             bool fastReadoutParameterValue = true;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1139,11 +1139,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "fullwellcapacity";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1160,11 +1160,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "fullwellcapacity";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1181,11 +1181,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "gain";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1202,11 +1202,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "gain";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1225,11 +1225,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "gain";
             string gainParameterName = "Gain";
             int gainParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1249,11 +1249,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "gain";
             string gainParameterName = "Gain";
             int gainParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1271,11 +1271,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "gainmax";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1292,11 +1292,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "gainmax";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1313,11 +1313,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "gainmin";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1334,11 +1334,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "gainmin";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1355,11 +1355,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "gains";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<StringArrayResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new StringArrayResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1376,11 +1376,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "gains";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<StringArrayResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new StringArrayResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1397,11 +1397,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "hasshutter";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1418,11 +1418,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "hasshutter";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1439,11 +1439,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "heatsinktemperature";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1460,11 +1460,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "heatsinktemperature";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1481,11 +1481,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "imagearray";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new RestResponse { Content = "{\"Type\":2,\"Rank\":2,\"Value\":[[184,178],[188,186],[188,190]],\"ClientTransactionID\":59,\"ServerTransactionID\":134,\"ErrorNumber\":0,\"ErrorMessage\":\"\"}"});
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1502,11 +1502,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "imagearray";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult<IRestResponse>(new RestResponse { Content = "{\"Type\":2,\"Rank\":2,\"Value\":[[184,178],[188,186],[188,190]],\"ClientTransactionID\":59,\"ServerTransactionID\":134,\"ErrorNumber\":0,\"ErrorMessage\":\"\"}"}));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1523,11 +1523,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "imagearrayvariant";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new RestResponse { Content = "{\"Type\":2,\"Rank\":2,\"Value\":[[184,178],[188,186],[188,190]],\"ClientTransactionID\":59,\"ServerTransactionID\":134,\"ErrorNumber\":0,\"ErrorMessage\":\"\"}"});
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1544,11 +1544,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "imagearrayvariant";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult<IRestResponse>(new RestResponse { Content = "{\"Type\":2,\"Rank\":2,\"Value\":[[184,178],[188,186],[188,190]],\"ClientTransactionID\":59,\"ServerTransactionID\":134,\"ErrorNumber\":0,\"ErrorMessage\":\"\"}"}));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1565,11 +1565,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "imageready";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1586,11 +1586,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "imageready";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1607,11 +1607,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "ispulseguiding";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1628,11 +1628,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "ispulseguiding";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1649,11 +1649,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "lastexposureduration";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1670,11 +1670,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "lastexposureduration";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1691,11 +1691,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "lastexposurestarttime";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new StringResponse { Value = "2019-04-26T16:02:33" });
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1712,11 +1712,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "lastexposurestarttime";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new StringResponse { Value = "2019-04-26T16:02:33" }));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1733,11 +1733,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "maxadu";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1754,11 +1754,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "maxadu";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1775,11 +1775,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "maxbinx";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1796,11 +1796,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "maxbinx";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1817,11 +1817,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "maxbiny";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1838,11 +1838,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "maxbiny";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1859,11 +1859,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "numx";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1880,11 +1880,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "numx";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1903,11 +1903,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "numx";
             string numXParameterName = "NumX";
             int numXParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1927,11 +1927,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "numx";
             string numXParameterName = "NumX";
             int numXParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1949,11 +1949,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "numy";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1970,11 +1970,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "numy";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -1993,11 +1993,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "numy";
             string numYParameterName = "NumY";
             int numYParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2017,11 +2017,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "numy";
             string numYParameterName = "NumY";
             int numYParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2039,11 +2039,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "percentcompleted";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2060,11 +2060,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "percentcompleted";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2081,11 +2081,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "pixelsizex";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2102,11 +2102,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "pixelsizex";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2123,11 +2123,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "pixelsizey";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2144,11 +2144,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "pixelsizey";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2165,11 +2165,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "readoutmode";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2186,11 +2186,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "readoutmode";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2209,11 +2209,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "readoutmode";
             string readoutModeParameterName = "ReadoutMode";
             int readoutModeParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
 
@@ -2233,11 +2233,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "readoutmode";
             string readoutModeParameterName = "ReadoutMode";
             int readoutModeParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
 
@@ -2255,11 +2255,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "readoutmodes";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<StringArrayResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new StringArrayResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2276,11 +2276,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "readoutmodes";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<StringArrayResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new StringArrayResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2297,11 +2297,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "sensorname";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new StringResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2318,11 +2318,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "sensorname";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new StringResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2339,11 +2339,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "sensortype";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<ValueResponse<SensorType>>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new ValueResponse<SensorType>());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2360,11 +2360,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "sensortype";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<ValueResponse<SensorType>>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new ValueResponse<SensorType>()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2381,11 +2381,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "setccdtemperature";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2402,11 +2402,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "setccdtemperature";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2425,11 +2425,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "setccdtemperature";
             string temperatureParameterName = "SetCCDTemperature";
             double temperatureParameterValue = -20;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2449,11 +2449,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "setccdtemperature";
             string temperatureParameterName = "SetCCDTemperature";
             double temperatureParameterValue = -20;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2471,11 +2471,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "startx";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2492,11 +2492,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "startx";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2515,11 +2515,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "startx";
             string startXParameterName = "StartX";
             int startXParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2539,11 +2539,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "startx";
             string startXParameterName = "StartX";
             int startXParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2561,11 +2561,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "starty";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2582,11 +2582,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "starty";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2605,11 +2605,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "starty";
             string startYParameterName = "StartY";
             int startYParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2629,11 +2629,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             string commandName = "starty";
             string startYParameterName = "StartY";
             int startYParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2651,11 +2651,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "abortexposure";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2672,11 +2672,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "abortexposure";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2697,11 +2697,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             Direction directionParameterValue = Direction.West;
             string durationParameterName = "Duration";
             int durationParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2724,11 +2724,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             Direction directionParameterValue = Direction.West;
             string durationParameterName = "Duration";
             int durationParameterValue = 2;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2751,11 +2751,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             double durationParameterValue = 2;
             string isLightParameterName = "Light";
             bool isLightParameterValue = true;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2778,11 +2778,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             double durationParameterValue = 2;
             string isLightParameterName = "Light";
             bool isLightParameterValue = true;
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2801,11 +2801,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "stopexposure";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -2822,11 +2822,11 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "stopexposure";
-            RestRequest sentRequest = null;
+            IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, RestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
 

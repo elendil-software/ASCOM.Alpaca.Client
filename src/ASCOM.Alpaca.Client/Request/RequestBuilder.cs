@@ -36,12 +36,12 @@ namespace ASCOM.Alpaca.Client.Request
             _clientId = clientId;
         }
 
-        public RestRequest BuildRestRequest(Enum command, Method httpMethod, int clientTransactionId = 1234)
+        public IRestRequest BuildRestRequest(Enum command, Method httpMethod, int clientTransactionId = 1234)
         {
             return BuildRestRequest(command, httpMethod, new Dictionary<string, object>(), clientTransactionId);
         }
         
-        public RestRequest BuildRestRequest(Enum command, Method httpMethod, Dictionary<string, object> parameters, int clientTransactionId = 1234)
+        public IRestRequest BuildRestRequest(Enum command, Method httpMethod, Dictionary<string, object> parameters, int clientTransactionId = 1234)
         {
             var request = new RestRequest("{deviceType}/{deviceNumber}/{command}", httpMethod);
             request.AddUrlSegment("deviceType", _deviceType.ToString().ToLower());

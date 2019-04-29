@@ -10,7 +10,7 @@ using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
-    public class FilterWheel : DeviceBase, IFilterWheel
+    public sealed class FilterWheel : DeviceBase, IFilterWheel
     {
         protected override DeviceType DeviceType { get; } = DeviceType.FilterWheel;
 
@@ -26,19 +26,19 @@ namespace ASCOM.Alpaca.Client.Devices
         
         public List<int> GetFocusOffsets() => ExecuteRequest<List<int>, IntArrayResponse>(BuildGetFocusOffsetRequest);
         public async Task<List<int>> GetFocusOffsetsAsync() => await ExecuteRequestAsync<List<int>, IntArrayResponse>(BuildGetFocusOffsetRequest);
-        private RestRequest BuildGetFocusOffsetRequest() => RequestBuilder.BuildRestRequest(FilterWheelMethod.FocusOffsets, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+        private IRestRequest BuildGetFocusOffsetRequest() => RequestBuilder.BuildRestRequest(FilterWheelMethod.FocusOffsets, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public List<string> GetNames() => ExecuteRequest<List<string>, StringArrayResponse>(BuildGetNamesRequest);
         public async Task<List<string>> GetNamesAsync() => await ExecuteRequestAsync<List<string>, StringArrayResponse>(BuildGetNamesRequest);
-        private RestRequest BuildGetNamesRequest() => RequestBuilder.BuildRestRequest(FilterWheelMethod.Names, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+        private IRestRequest BuildGetNamesRequest() => RequestBuilder.BuildRestRequest(FilterWheelMethod.Names, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public int GetPosition() => ExecuteRequest<int, IntResponse>(BuildGetPositionRequest);
         public async Task<int> GetPositionAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetPositionRequest);
-        private RestRequest BuildGetPositionRequest() => RequestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+        private IRestRequest BuildGetPositionRequest() => RequestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public void SetPosition(int position) => ExecuteRequest(BuildSetPositionRequest, position);
         public async Task SetPositionAsync(int position) => await ExecuteRequestAsync(BuildSetPositionRequest, position);
-        private RestRequest BuildSetPositionRequest(int position)
+        private IRestRequest BuildSetPositionRequest(int position)
         {
             var parameters = new Dictionary<string, object>
             {

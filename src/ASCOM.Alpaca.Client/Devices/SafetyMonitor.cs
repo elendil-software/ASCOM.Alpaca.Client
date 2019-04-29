@@ -8,7 +8,7 @@ using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
-    public class SafetyMonitor : DeviceBase, ISafetyMonitor
+    public sealed class SafetyMonitor : DeviceBase, ISafetyMonitor
     {
         public SafetyMonitor(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger<DeviceBase> logger) : base(configuration, clientTransactionIdGenerator, commandSender, logger)
         {
@@ -22,6 +22,6 @@ namespace ASCOM.Alpaca.Client.Devices
         
         public bool IsSafe() => ExecuteRequest<bool, BoolResponse>(BuildIsSafeRequest);
         public async Task<bool> IsSafeAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsSafeRequest);
-        private RestRequest BuildIsSafeRequest() => RequestBuilder.BuildRestRequest(SafetyMonitorMethod.IsSafe, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+        private IRestRequest BuildIsSafeRequest() => RequestBuilder.BuildRestRequest(SafetyMonitorMethod.IsSafe, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
     }
 }
