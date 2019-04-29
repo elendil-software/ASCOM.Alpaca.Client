@@ -1,0 +1,240 @@
+﻿<UserControl x:Class="ASCOM.Alpaca.Client.Demo.Desktop.Views.TelescopeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:ASCOM.Alpaca.Client.Demo.Desktop.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,5,5,5" VerticalAlignment="Center">
+            <Label VerticalAlignment="Center" FontWeight="Bold">Host</Label>
+            <TextBox Name="Host" Width="200" Margin="5" Padding="5"></TextBox>
+
+            <Label VerticalAlignment="Center" FontWeight="Bold">Port</Label>
+            <TextBox Name="Port" Width="50" Margin="5" Padding="5"></TextBox>
+
+            <Label VerticalAlignment="Center" FontWeight="Bold">ClientId</Label>
+            <TextBox Name="ClientId" Margin="5" Padding="5"></TextBox>
+
+            <Label VerticalAlignment="Center" FontWeight="Bold">DeviceId</Label>
+            <TextBox Name="DeviceId" Margin="5" Padding="5"></TextBox>
+
+            <Button Name="Connect" Content="Connect" Margin="5" Padding="5"></Button>
+        </StackPanel>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Name</Label>
+            <Label Grid.Row="0" Grid.Column="1" Name="DriverName">...</Label>
+            <Label Grid.Row="0" Grid.Column="2" FontWeight="Bold">Description</Label>
+            <Label Grid.Row="0" Grid.Column="3" Name="Description">...</Label>
+
+            <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Driver Info</Label>
+            <Label Grid.Row="1" Grid.Column="1" Name="DriverInfo">...</Label>
+            <Label Grid.Row="1" Grid.Column="2" FontWeight="Bold">Driver Version</Label>
+            <Label Grid.Row="1" Grid.Column="3" Name="DriverVersion">...</Label>
+        </Grid>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Can Find Home</Label>
+            <Label Grid.Row="0" Grid.Column="1" Name="CanFindHome">...</Label>
+            <Label Grid.Row="0" Grid.Column="2" FontWeight="Bold">Can Park</Label>
+            <Label Grid.Row="0" Grid.Column="3" Name="CanPark">...</Label>
+            <Label Grid.Row="0" Grid.Column="4" FontWeight="Bold">CanSetPark</Label>
+            <Label Grid.Row="0" Grid.Column="5" Name="CanSetPark">...</Label>
+            <Label Grid.Row="0" Grid.Column="6" FontWeight="Bold">CanSetPierSide</Label>
+            <Label Grid.Row="0" Grid.Column="7" Name="CanSetPierSide">...</Label>
+            
+            <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">CanSetGuideRates</Label>
+            <Label Grid.Row="1" Grid.Column="1" Name="CanSetGuideRates">...</Label>
+            <Label Grid.Row="1" Grid.Column="2" FontWeight="Bold">CanPulseGuide</Label>
+            <Label Grid.Row="1" Grid.Column="3" Name="CanPulseGuide">...</Label>
+            <Label Grid.Row="1" Grid.Column="4" FontWeight="Bold">CanSetRightAscensionRate</Label>
+            <Label Grid.Row="1" Grid.Column="5" Name="CanSetRightAscensionRate">...</Label>
+            <Label Grid.Row="1" Grid.Column="6" FontWeight="Bold">CanSetDeclinationRate</Label>
+            <Label Grid.Row="1" Grid.Column="7" Name="CanSetDeclinationRate">...</Label>
+            
+            <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">CanSetTracking</Label>
+            <Label Grid.Row="2" Grid.Column="1" Name="CanSetTracking">...</Label>
+            <Label Grid.Row="2" Grid.Column="2" FontWeight="Bold">CanMoveAxis</Label>
+            <Label Grid.Row="2" Grid.Column="3" Name="CanMoveAxis">...</Label>
+            <Label Grid.Row="2" Grid.Column="4" FontWeight="Bold">CanSlew</Label>
+            <Label Grid.Row="2" Grid.Column="5" Name="CanSlew">...</Label>
+            <Label Grid.Row="2" Grid.Column="6" FontWeight="Bold">CanSlewAltAz</Label>
+            <Label Grid.Row="2" Grid.Column="7" Name="CanSlewAltAz">...</Label>
+
+            <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">CanSlewAltAzAsync</Label>
+            <Label Grid.Row="3" Grid.Column="1" Name="CanSlewAltAzAsync">...</Label>
+            <Label Grid.Row="3" Grid.Column="2" FontWeight="Bold">CanSlewAsync</Label>
+            <Label Grid.Row="3" Grid.Column="3" Name="CanSlewAsync">...</Label>
+            <Label Grid.Row="3" Grid.Column="4" FontWeight="Bold">CanSync</Label>
+            <Label Grid.Row="3" Grid.Column="5" Name="CanSync">...</Label>
+            <Label Grid.Row="3" Grid.Column="6" FontWeight="Bold">CanSyncAltAz</Label>
+            <Label Grid.Row="3" Grid.Column="7" Name="CanSyncAltAz">...</Label>
+        </Grid>
+        
+        <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Park/Home">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Margin="5" Padding="5" Name="FindHome">Find Home</Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Margin="5" Padding="5" Name="Unpark">Unpark</Button>
+                        <Button Margin="5" Padding="5" Name="Park">Park</Button>
+                        <Button Margin="5" Padding="5" Name="SetPark">Set Park</Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontWeight="Bold">At Park</Label>
+                        <Label Name="AtPark">...</Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontWeight="Bold">At Home</Label>
+                        <Label Name="AtHome">...</Label>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Move">
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Button Grid.Row="0" Grid.Column="1" Padding="5" Name="MoveNorth">N</Button>
+                        <Button Grid.Row="1" Grid.Column="0" Padding="5" Name="MoveWest">W</Button>
+                        <Button Grid.Row="1" Grid.Column="1" Padding="5" Name="StopMove">Stop</Button>
+                        <Button Grid.Row="1" Grid.Column="2" Padding="5" Name="MoveEast">E</Button>
+                        <Button Grid.Row="2" Grid.Column="1" Padding="5" Name="MoveSouth">S</Button>
+                    </Grid>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label VerticalAlignment="Center" FontWeight="Bold">Rate</Label>
+                        <TextBox Margin="5" Padding="5" Width="100" Name="MoveRate"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Guiding">
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Button Grid.Row="0" Grid.Column="1" Padding="5" Name="GuideNorth">N</Button>
+                        <Button Grid.Row="1" Grid.Column="0" Padding="5" Name="GuideWest">W</Button>
+                        <Button Grid.Row="1" Grid.Column="2" Padding="5" Name="GuideEast">E</Button>
+                        <Button Grid.Row="2" Grid.Column="1" Padding="5" Name="GuideSouth">S</Button>
+                    </Grid>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label VerticalAlignment="Center" FontWeight="Bold">Duration</Label>
+                        <TextBox Margin="5" Padding="5" Width="100" Name="Duration"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Info">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Right Ascension</Label>
+                    <Label Grid.Row="0" Grid.Column="1" Name="RightAscension">...</Label>
+                    <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Declination</Label>
+                    <Label Grid.Row="1" Grid.Column="1" Name="Declination">...</Label>
+                    <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">Azimuth</Label>
+                    <Label Grid.Row="2" Grid.Column="1" Name="Azimuth">...</Label>
+                    <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Altitude</Label>
+                    <Label Grid.Row="3" Grid.Column="1" Name="Altitude">...</Label>
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Tracking">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Margin="5" Padding="5" Name="StartTracking">Start Tracking</Button>
+                        <Button Margin="5" Padding="5" Name="StopTracking">Stop Tracking</Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontWeight="Bold">Is tracking</Label>
+                        <Label Name="IsTracking">...</Label>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="Slew">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label VerticalAlignment="Center" FontWeight="Bold">R.A.</Label>
+                        <TextBox Margin="5" Padding="5" Width="100" Name="TargetRightAscension"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label VerticalAlignment="Center" FontWeight="Bold">Dec.</Label>
+                        <TextBox Margin="5" Padding="5" Width="100" Name="TargetDeclination"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Margin="5" Padding="5" Name="SetTarget">Set Target</Button>
+                        <Button Margin="5" Padding="5" Name="SlewToTarget">Slew To Target</Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Margin="5" Padding="5" Name="SlewToCoordinates">Slew To Coordinates</Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Margin="5" Padding="5" Name="AbortSlew">Abort</Button>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

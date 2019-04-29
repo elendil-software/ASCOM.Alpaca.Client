@@ -165,6 +165,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Converters\CoordinatesConverter.cs" />
+    <Compile Include="Converters\AngleConverter.cs" />
+    <Compile Include="Converters\RightAscensionConverter.cs" />
     <Compile Include="IoC\SingletonInstancePolicy.cs" />
     <Compile Include="IoC\ViewModelConventionScanner.cs" />
     <Compile Include="ViewModels\CameraViewModel.cs" />
@@ -177,6 +180,7 @@
     <Compile Include="ViewModels\SafetyMonitorViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\SwitchViewModel.cs" />
+    <Compile Include="ViewModels\TelescopeViewModel.cs" />
     <Compile Include="Views\CameraView.xaml.cs">
       <DependentUpon>CameraView.xaml</DependentUpon>
     </Compile>
@@ -207,6 +211,9 @@
     </Compile>
     <Compile Include="Views\SwitchView.xaml.cs">
       <DependentUpon>SwitchView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TelescopeView.xaml.cs">
+      <DependentUpon>TelescopeView.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\CameraView.xaml">
       <SubType>Designer</SubType>
@@ -241,6 +248,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SwitchView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TelescopeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

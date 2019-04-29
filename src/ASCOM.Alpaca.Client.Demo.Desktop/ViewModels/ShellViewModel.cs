@@ -13,6 +13,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private ObservingConditionsViewModel _observingConditionsViewModel;
         private RotatorViewModel _rotatorViewModel;
         private SwitchViewModel _switchViewModel;
+        private TelescopeViewModel _telescopeViewModel;
 
         public ShellViewModel(FilterWheelViewModel filterWheelViewModel, 
                                 DomeViewModel domeViewModel,
@@ -21,7 +22,8 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
                                 FocuserViewModel focuserViewModel,
                                 ObservingConditionsViewModel observingConditionsViewModel,
                                 RotatorViewModel rotatorViewModel,
-                                SwitchViewModel switchViewModel)
+                                SwitchViewModel switchViewModel,
+                                TelescopeViewModel telescopeViewModel)
         {
             _filterWheelViewModel = filterWheelViewModel ?? throw new ArgumentNullException(nameof(filterWheelViewModel));
             _domeViewModel = domeViewModel ?? throw new ArgumentNullException(nameof(domeViewModel));
@@ -31,6 +33,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             _observingConditionsViewModel = observingConditionsViewModel ?? throw new ArgumentNullException(nameof(observingConditionsViewModel));
             _rotatorViewModel = rotatorViewModel ?? throw new ArgumentNullException(nameof(rotatorViewModel));
             _switchViewModel = switchViewModel ?? throw new ArgumentNullException(nameof(switchViewModel));
+            _telescopeViewModel = telescopeViewModel ?? throw new ArgumentNullException(nameof(telescopeViewModel));
         }
 
         public FilterWheelViewModel FilterWheelViewModel
@@ -110,6 +113,16 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             {
                 _switchViewModel = value;
                 NotifyOfPropertyChange(() => SwitchViewModel);
+            }
+        }
+        
+        public TelescopeViewModel TelescopeViewModel
+        {
+            get => _telescopeViewModel;
+            set
+            {
+                _telescopeViewModel = value;
+                NotifyOfPropertyChange(() => TelescopeViewModel);
             }
         }
     }

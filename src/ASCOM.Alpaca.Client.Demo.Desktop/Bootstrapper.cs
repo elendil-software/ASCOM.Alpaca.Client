@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.AspNetCore;
+using System.Windows.Controls;
+using ASCOM.Alpaca.Client.Demo.Desktop.Converters;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop
 {
@@ -25,6 +27,8 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop
 
         protected override void Configure()
         {
+            ConfigureConverters();
+            
             var registry = new ServiceRegistry();
             
             registry.Policies.Add<SingletonInstancePolicy>();
@@ -69,6 +73,34 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
             DisplayRootViewFor<ShellViewModel>();
+        }
+        
+        public static void ConfigureConverters()
+        {
+            var oldApplyConverterFunc = ConventionManager.ApplyValueConverter;
+            ConventionManager.ApplyValueConverter = (binding, bindableProperty, property) =>
+            {
+                if (property.Name.EndsWith("RightAscension") && (bindableProperty == TextBox.TextProperty || bindableProperty == TextBlock.TextProperty || bindableProperty == Label.ContentProperty))
+                {
+                    binding.Converter = new RightAscensionConverter();
+                }
+                else if (property.Name.EndsWith("Declination") && (bindableProperty == TextBox.TextProperty || bindableProperty == TextBlock.TextProperty || bindableProperty == Label.ContentProperty))
+                {
+                    binding.Converter = new AngleConverter();
+                }
+                else if (property.Name.EndsWith("Azimuth") && (bindableProperty == TextBox.TextProperty || bindableProperty == TextBlock.TextProperty || bindableProperty == Label.ContentProperty))
+                {
+                    binding.Converter = new AngleConverter();
+                }
+                else if (property.Name.EndsWith("Altitude") && (bindableProperty == TextBox.TextProperty || bindableProperty == TextBlock.TextProperty || bindableProperty == Label.ContentProperty))
+                {
+                    binding.Converter = new AngleConverter();
+                }
+                else
+                {
+                    oldApplyConverterFunc(binding, bindableProperty, property);
+                }
+            };
         }
     }
 }

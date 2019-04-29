@@ -33,6 +33,9 @@
             <TabItem Header="Switch">
                 <ContentControl x:Name="SwitchViewModel" />
             </TabItem>
+            <TabItem Header="Telescope">
+                <ContentControl x:Name="TelescopeViewModel" />
+            </TabItem>
         </TabControl>
     </DockPanel>
 </Window>
