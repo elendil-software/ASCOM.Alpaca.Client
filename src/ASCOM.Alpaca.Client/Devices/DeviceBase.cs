@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;

@@ -1,6 +1,6 @@
 using ASCOM.Alpaca.Devices;
 
-namespace ASCOM.Alpaca.Client.Configuration
+namespace ASCOM.Alpaca.Client.Devices
 {
     public class DeviceConfiguration
     {
@@ -10,7 +10,7 @@ namespace ASCOM.Alpaca.Client.Configuration
         public int Port { get; set; } = 11111;
 
         public DeviceType DeviceType { get; set; } = DeviceType.Telescope;
-        public int DeviceNumber { get; set; } = 0;
+        public int DeviceNumber { get; set; }
         public int ClientId { get; set; } = 1;
 
         public string GetBaseUrl() => $"{Protocol}{Host}:{Port}/api/{ApiVersion}/";

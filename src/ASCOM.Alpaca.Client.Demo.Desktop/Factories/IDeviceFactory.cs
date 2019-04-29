@@ -1,5 +1,4 @@
-﻿using ASCOM.Alpaca.Client.Configuration;
-using ASCOM.Alpaca.Client.Devices;
+﻿using ASCOM.Alpaca.Client.Devices;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop.Factories
 {

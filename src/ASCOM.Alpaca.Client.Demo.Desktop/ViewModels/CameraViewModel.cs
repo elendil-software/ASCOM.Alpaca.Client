@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Demo.Desktop.Factories;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Devices;

@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using ASCOM.Alpaca.Client.Configuration;
+using ASCOM.Alpaca.Client.Devices;
 
 namespace ASCOM.Alpaca.Client.Demo.Devices
 {
