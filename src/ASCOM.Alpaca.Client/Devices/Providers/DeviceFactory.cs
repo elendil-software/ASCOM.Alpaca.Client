@@ -72,7 +72,9 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
                     return (T) @switch;
                 
                 case DeviceType.Telescope:
-                    throw new NotImplementedException(configuration.DeviceType.ToString());
+                    ILogger<Rotator> telescopeLogger = _loggerFactory.CreateLogger<Rotator>();
+                    IDevice telescope = new Telescope(configuration, _clientTransactionIdGenerator, _commandSender, telescopeLogger);
+                    return (T) telescope;
 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(configuration.DeviceType));
