@@ -7,7 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ASCOM.Alpaca.Client.DependencyInjection\ASCOM.Alpaca.Client.DependencyInjection.csproj" />
       <ProjectReference Include="..\ASCOM.Alpaca.Client\ASCOM.Alpaca.Client.csproj" />
       <ProjectReference Include="..\ASCOM.Alpaca.Shared\ASCOM.Alpaca.Shared.csproj" />
     </ItemGroup>
