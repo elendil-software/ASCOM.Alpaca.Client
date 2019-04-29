@@ -6,7 +6,6 @@ using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Devices.Providers;
 using ASCOM.Alpaca.Devices;
-using ASCOM.Alpaca.Devices.Dome;
 using ASCOM.Alpaca.Devices.Telescope;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
@@ -318,14 +317,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
                 await _telescope.SetConnectedAsync(true);
                 await LoadDriverData();
                 IsConnected = true;
-                Task.Run(() =>
-                {
-                    do
-                    {
-                        RefreshMountPosition().Wait();
-                        Thread.Sleep(1000);
-                    } while (IsConnected);
-                });
+                StartPoolTask();
             }
             catch (Exception e)
             {
@@ -333,6 +325,17 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             }
         }
 
+        private void StartPoolTask()
+        {
+            Task.Run(() =>
+            {
+                do
+                {
+                    RefreshMountPosition().Wait();
+                    Thread.Sleep(1000);
+                } while (IsConnected);
+            });
+        }
 
         private async Task LoadDriverData()
         {
@@ -414,7 +417,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
         public async Task MoveSouth()
         {
-            await _telescope.MoveAxisAsync(TelescopeAxis.Secondary, -1 * MoveRate);
+            await _telescope.MoveAxisAsync(TelescopeAxis.Secondary, -MoveRate);
             await RefreshMountStatus();
         }
         
@@ -430,7 +433,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
         public async Task MoveWest()
         {
-            await _telescope.MoveAxisAsync(TelescopeAxis.Secondary, -1 * MoveRate);
+            await _telescope.MoveAxisAsync(TelescopeAxis.Primary, -MoveRate);
             await RefreshMountStatus();
         }
 
@@ -454,7 +457,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
         public async Task GuideSouth()
         {
-            await _telescope.PulseGuideAsync(Direction.South, Duration);;
+            await _telescope.PulseGuideAsync(Direction.South, Duration);
             await RefreshMountStatus();
         }
         

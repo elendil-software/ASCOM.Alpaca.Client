@@ -26,19 +26,31 @@ namespace ASCOM.Alpaca.Client.DependencyInjection.Microsoft
                             return new FilterWheel(deviceConfiguration, clientTransactionIdGenerator, commandSender, ctx.GetService<ILogger<FilterWheel>>());
                         
                         case DeviceType.Switch:
+                            return new Switch(deviceConfiguration, clientTransactionIdGenerator, commandSender, ctx.GetService<ILogger<Switch>>());
+                            
                         case DeviceType.SafetyMonitor:
+                            return new SafetyMonitor(deviceConfiguration, clientTransactionIdGenerator, commandSender, ctx.GetService<ILogger<SafetyMonitor>>());
+                            
                         case DeviceType.Dome:
                             return new Dome(deviceConfiguration, clientTransactionIdGenerator, commandSender, ctx.GetService<ILogger<Dome>>());
 
                         case DeviceType.Camera:
+                            return new Camera(deviceConfiguration, clientTransactionIdGenerator, commandSender, ctx.GetService<ILogger<Camera>>());
+                            
                         case DeviceType.ObservingConditions:
+                            return new ObservingConditions(deviceConfiguration, clientTransactionIdGenerator, commandSender, ctx.GetService<ILogger<ObservingConditions>>());
+
                         case DeviceType.Focuser:
+                            return new Focuser(deviceConfiguration, clientTransactionIdGenerator, commandSender, ctx.GetService<ILogger<Focuser>>());
+
                         case DeviceType.Rotator:
+                            return new Rotator(deviceConfiguration, clientTransactionIdGenerator, commandSender, ctx.GetService<ILogger<Rotator>>());
+
                         case DeviceType.Telescope:
-                            throw new NotImplementedException(deviceConfiguration.DeviceType.ToString());
+                            return new Telescope(deviceConfiguration, clientTransactionIdGenerator, commandSender, ctx.GetService<ILogger<Telescope>>());
                         
                         default:
-                            throw new ArgumentOutOfRangeException(nameof(deviceConfiguration.DeviceType));
+                            throw new NotImplementedException(deviceConfiguration.DeviceType.ToString());
                     }
                 });
             }

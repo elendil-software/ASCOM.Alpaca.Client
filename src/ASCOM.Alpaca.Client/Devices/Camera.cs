@@ -15,7 +15,6 @@ using ASCOM.Alpaca.Responses;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using RestSharp;
-using NotImplementedException = System.NotImplementedException;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
@@ -276,7 +275,7 @@ namespace ASCOM.Alpaca.Client.Devices
                     return imageArrayDouble3DResponse.HandleResponse<Array, ImageArrayDouble3DResponse>();
 
                 default:
-                    throw new NotImplementedException();
+                    throw new InvalidValueException($"'ImageArrayType '{type} ({(int)type})' is not a valid value");
             }
         }
 
@@ -297,7 +296,7 @@ namespace ASCOM.Alpaca.Client.Devices
                     return imageArrayDouble2DResponse.HandleResponse<Array, ImageArrayDouble2DResponse>();
 
                 default:
-                    throw new NotImplementedException();
+                    throw new InvalidValueException($"'ImageArrayType '{type} ({(int)type})' is not a valid value");
             }
         }
 

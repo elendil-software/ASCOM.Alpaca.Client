@@ -13,12 +13,6 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
         private readonly ICommandSender _commandSender;
         private readonly ILoggerFactory _loggerFactory;
 
-        public DeviceFactory(IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender)
-        {
-            _clientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
-            _commandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
-        }
-
         public DeviceFactory(IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILoggerFactory loggerFactory)
         {
             _clientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
@@ -28,7 +22,6 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
 
         public T CreateDeviceInstance<T>(DeviceConfiguration configuration) where T : IDevice
         {
-            //TODO : handle the case without logger
             switch (configuration.DeviceType)
             {
                 case DeviceType.FilterWheel:
