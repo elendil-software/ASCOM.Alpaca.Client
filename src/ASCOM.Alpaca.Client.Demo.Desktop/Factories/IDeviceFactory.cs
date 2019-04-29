@@ -1,6 +1,7 @@
 ﻿using ASCOM.Alpaca.Client.Configuration;
+using ASCOM.Alpaca.Client.Devices;
 
-namespace ASCOM.Alpaca.Client.Devices.Providers
+namespace ASCOM.Alpaca.Client.Demo.Desktop.Factories
 {
     public interface IDeviceFactory
     {

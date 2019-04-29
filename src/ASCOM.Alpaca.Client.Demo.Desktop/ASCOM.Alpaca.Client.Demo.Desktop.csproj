@@ -168,6 +168,8 @@
     <Compile Include="Converters\CoordinatesConverter.cs" />
     <Compile Include="Converters\AngleConverter.cs" />
     <Compile Include="Converters\RightAscensionConverter.cs" />
+    <Compile Include="Factories\DeviceFactory.cs" />
+    <Compile Include="Factories\IDeviceFactory.cs" />
     <Compile Include="IoC\SingletonInstancePolicy.cs" />
     <Compile Include="IoC\ViewModelConventionScanner.cs" />
     <Compile Include="ViewModels\CameraViewModel.cs" />

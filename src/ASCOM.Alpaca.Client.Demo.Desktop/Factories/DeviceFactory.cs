@@ -1,11 +1,13 @@
 ﻿using System;
+using System.ComponentModel;
 using ASCOM.Alpaca.Client.Configuration;
+using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Devices;
 using Microsoft.Extensions.Logging;
 
-namespace ASCOM.Alpaca.Client.Devices.Providers
+namespace ASCOM.Alpaca.Client.Demo.Desktop.Factories
 {
     public class DeviceFactory : IDeviceFactory
     {
@@ -70,7 +72,7 @@ namespace ASCOM.Alpaca.Client.Devices.Providers
                     return (T) telescope;
 
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(configuration.DeviceType));
+                    throw new InvalidEnumArgumentException(nameof(configuration.DeviceType));
             }
         }
     }
