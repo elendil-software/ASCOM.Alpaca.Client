@@ -423,7 +423,6 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task FindHomeAsync() => await ExecuteRequestAsync(BuildFindHomeRequest);
         private RestRequest BuildFindHomeRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.FindHome, Method.PUT, ClientTransactionIdGenerator.GetTransactionId());
 
-        //TODO : Note : Axis is sent as request parameter and rate in the request body ? To check with Peter and Bob
         public void MoveAxis(TelescopeAxis axis, double rate) => ExecuteRequest(BuildMoveAxisRequest, axis, rate);
         public async Task MoveAxisAsync(TelescopeAxis axis, double rate) => await ExecuteRequestAsync(BuildMoveAxisRequest, axis, rate);
         private RestRequest BuildMoveAxisRequest(TelescopeAxis axis, double rate)

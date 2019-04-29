@@ -315,7 +315,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "tempcomp";
-            string tempCompParameterName = "TempComp"; //TODO to check
+            string tempCompParameterName = "TempComp";
             bool tempCompParameterValue = true;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -339,7 +339,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "tempcomp";
-            string tempCompParameterName = "TempComp"; //TODO to check
+            string tempCompParameterName = "TempComp";
             bool tempCompParameterValue = true;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -489,7 +489,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "move";
-            string positionParameterName = "Position"; //TODO to check
+            string positionParameterName = "Position";
             int positionParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -513,7 +513,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "move";
-            string positionParameterName = "Position"; //TODO to check
+            string positionParameterName = "Position";
             int positionParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();

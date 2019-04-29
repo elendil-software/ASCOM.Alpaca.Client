@@ -63,7 +63,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "averageperiod";
-            string periodParameterName = "AveragePeriod"; //TODO to check
+            string periodParameterName = "AveragePeriod";
             double periodParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -87,7 +87,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "averageperiod";
-            string periodParameterName = "AveragePeriod"; //TODO to check
+            string periodParameterName = "AveragePeriod";
             double periodParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -699,7 +699,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "sensordescription";
-            string sensorNameParameterName = "SensorName"; //TODO to check
+            string sensorNameParameterName = "SensorName";
             ObservingConditionSensorName sensorNameParameterValue = ObservingConditionSensorName.WindSpeed;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -723,7 +723,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "sensordescription";
-            string sensorNameParameterName = "SensorName"; //TODO to check
+            string sensorNameParameterName = "SensorName";
             ObservingConditionSensorName sensorNameParameterValue = ObservingConditionSensorName.WindSpeed;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -747,7 +747,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "timesincelastupdate";
-            string sensorNameParameterName = "SensorName"; //TODO to check
+            string sensorNameParameterName = "SensorName";
             ObservingConditionSensorName sensorNameParameterValue = ObservingConditionSensorName.WindSpeed;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -771,7 +771,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "timesincelastupdate";
-            string sensorNameParameterName = "SensorName"; //TODO to check
+            string sensorNameParameterName = "SensorName";
             ObservingConditionSensorName sensorNameParameterValue = ObservingConditionSensorName.WindSpeed;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();

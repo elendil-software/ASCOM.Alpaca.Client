@@ -2889,7 +2889,6 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
             AssertEnumParameter(sentRequest.Parameters, axisParameterName, axisParameterValue);
             AssertParameter(sentRequest.Parameters, rateParameterName, rateParameterValue);
-            //TODO : Test to add : Axis is sent as request parameter and rate in the request body 
         }
         
         [Fact]
@@ -2917,7 +2916,6 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
             AssertEnumParameter(sentRequest.Parameters, axisParameterName, axisParameterValue);
             AssertParameter(sentRequest.Parameters, rateParameterName, rateParameterValue);
-            //TODO : Test to add : Axis is sent as request parameter and rate in the request body 
         }
         
         [Fact]

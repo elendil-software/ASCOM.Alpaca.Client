@@ -149,7 +149,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "binx";
-            string binXParameterName = "BinX"; //TODO to check
+            string binXParameterName = "BinX";
             int binXParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -173,7 +173,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "binx";
-            string binXParameterName = "BinX"; //TODO to check
+            string binXParameterName = "BinX";
             int binXParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -239,7 +239,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "biny";
-            string binYParameterName = "BinY"; //TODO to check
+            string binYParameterName = "BinY";
             int binYParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -263,7 +263,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "biny";
-            string binYParameterName = "BinY"; //TODO to check
+            string binYParameterName = "BinY";
             int binYParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -791,7 +791,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cooleron";
-            string coolerOnParameterName = "CoolerOn"; //TODO to check
+            string coolerOnParameterName = "CoolerOn";
             bool coolerOnParameterValue = true;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -815,7 +815,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "cooleron";
-            string coolerOnParameterName = "CoolerOn"; //TODO to check
+            string coolerOnParameterName = "CoolerOn";
             bool coolerOnParameterValue = true;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -1091,7 +1091,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "fastreadout";
-            string fastReadoutParameterName = "FastReadout"; //TODO to check
+            string fastReadoutParameterName = "FastReadout";
             bool fastReadoutParameterValue = true;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -1115,7 +1115,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "fastreadout";
-            string fastReadoutParameterName = "FastReadout"; //TODO to check
+            string fastReadoutParameterName = "FastReadout";
             bool fastReadoutParameterValue = true;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -1223,7 +1223,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "gain";
-            string gainParameterName = "Gain"; //TODO to check
+            string gainParameterName = "Gain";
             int gainParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -1247,7 +1247,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "gain";
-            string gainParameterName = "Gain"; //TODO to check
+            string gainParameterName = "Gain";
             int gainParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -1901,7 +1901,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "numx";
-            string numXParameterName = "NumX"; //TODO to check
+            string numXParameterName = "NumX";
             int numXParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -1925,7 +1925,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "numx";
-            string numXParameterName = "NumX"; //TODO to check
+            string numXParameterName = "NumX";
             int numXParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -1991,7 +1991,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "numy";
-            string numYParameterName = "NumY"; //TODO to check
+            string numYParameterName = "NumY";
             int numYParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -2015,7 +2015,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "numy";
-            string numYParameterName = "NumY"; //TODO to check
+            string numYParameterName = "NumY";
             int numYParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -2207,7 +2207,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "readoutmode";
-            string readoutModeParameterName = "ReadoutMode"; //TODO to check
+            string readoutModeParameterName = "ReadoutMode";
             int readoutModeParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -2231,7 +2231,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "readoutmode";
-            string readoutModeParameterName = "ReadoutMode"; //TODO to check
+            string readoutModeParameterName = "ReadoutMode";
             int readoutModeParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -2423,7 +2423,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "setccdtemperature";
-            string temperatureParameterName = "SetCCDTemperature"; //TODO to check
+            string temperatureParameterName = "SetCCDTemperature";
             double temperatureParameterValue = -20;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -2447,7 +2447,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "setccdtemperature";
-            string temperatureParameterName = "SetCCDTemperature"; //TODO to check
+            string temperatureParameterName = "SetCCDTemperature";
             double temperatureParameterValue = -20;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -2513,7 +2513,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "startx";
-            string startXParameterName = "StartX"; //TODO to check
+            string startXParameterName = "StartX";
             int startXParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -2537,7 +2537,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "startx";
-            string startXParameterName = "StartX"; //TODO to check
+            string startXParameterName = "StartX";
             int startXParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -2603,7 +2603,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "starty";
-            string startYParameterName = "StartY"; //TODO to check
+            string startYParameterName = "StartY";
             int startYParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -2627,7 +2627,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "starty";
-            string startYParameterName = "StartY"; //TODO to check
+            string startYParameterName = "StartY";
             int startYParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -2693,9 +2693,9 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "pulseguide";
-            string directionParameterName = "Direction"; //TODO to check
+            string directionParameterName = "Direction";
             Direction directionParameterValue = Direction.West;
-            string durationParameterName = "Duration"; //TODO to check
+            string durationParameterName = "Duration";
             int durationParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -2720,9 +2720,9 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "pulseguide";
-            string directionParameterName = "Direction"; //TODO to check
+            string directionParameterName = "Direction";
             Direction directionParameterValue = Direction.West;
-            string durationParameterName = "Duration"; //TODO to check
+            string durationParameterName = "Duration";
             int durationParameterValue = 2;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -2747,9 +2747,9 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "startexposure";
-            string durationParameterName = "Duration"; //TODO to check
+            string durationParameterName = "Duration";
             double durationParameterValue = 2;
-            string isLightParameterName = "Light"; //TODO to check
+            string isLightParameterName = "Light";
             bool isLightParameterValue = true;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
@@ -2774,9 +2774,9 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "startexposure";
-            string durationParameterName = "Duration"; //TODO to check
+            string durationParameterName = "Duration";
             double durationParameterValue = 2;
-            string isLightParameterName = "Light"; //TODO to check
+            string isLightParameterName = "Light";
             bool isLightParameterValue = true;
             RestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
