@@ -581,7 +581,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         {
             _camera = DeviceFactory.CreateDeviceInstance<Camera>(new DeviceConfiguration
             {
-                ClientId = ClientId, DeviceNumber = DeviceId, DeviceType = DeviceType.Camera, Host = Host,
+                ClientId = ClientId, DeviceNumber = DeviceId, Host = Host,
                 Port = Port
             });
 

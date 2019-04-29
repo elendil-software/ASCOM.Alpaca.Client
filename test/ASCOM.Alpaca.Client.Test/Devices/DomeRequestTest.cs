@@ -13,8 +13,9 @@ namespace ASCOM.Alpaca.Client.Test.Devices
 {
     public class DomeRequestTest : DeviceRequestsTestBase
     {
-        private readonly DeviceConfiguration _deviceConfiguration = new DeviceConfiguration { DeviceNumber = 5, DeviceType = DeviceType.Dome };
+        private readonly DeviceConfiguration _deviceConfiguration = new DeviceConfiguration { DeviceNumber = 5 };
         private readonly ClientTransactionIdGenerator _clientTransactionIdGenerator = new ClientTransactionIdGenerator();
+        protected override DeviceType DeviceType { get; } = DeviceType.Dome;
         
         [Fact]
         public void GetAltitude_SendValidRequest()

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using ASCOM.Alpaca.Client.Devices;
+using ASCOM.Alpaca.Devices;
 using RestSharp;
 using Xunit;
 
@@ -9,6 +10,8 @@ namespace ASCOM.Alpaca.Client.Test.Devices
 {
     public abstract class DeviceRequestsTestBase
     {
+        protected abstract DeviceType DeviceType { get; }
+        
         protected void AssertCommonParameters(List<Parameter> sentRequestParameters,
             DeviceConfiguration deviceConfiguration, string commandName)
         {
@@ -17,7 +20,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 sentRequestParameters.FirstOrDefault(p => p.Name == "deviceNumber")?.Value);
 
             Assert.Contains(sentRequestParameters, p => p.Name == "deviceType");
-            Assert.Equal(deviceConfiguration.DeviceType.ToString().ToLower(),
+            Assert.Equal(DeviceType.ToString().ToLower(),
                 sentRequestParameters.FirstOrDefault(p => p.Name == "deviceType")?.Value);
 
             Assert.Contains(sentRequestParameters, p => p.Name == "command");

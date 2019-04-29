@@ -8,11 +8,8 @@ namespace ASCOM.Alpaca.Client.Devices
         public string Host { get; set; } = "127.0.0.1";
         public string ApiVersion { get; set; } = "v1";
         public int Port { get; set; } = 11111;
-
-        public DeviceType DeviceType { get; set; } = DeviceType.Telescope;
         public int DeviceNumber { get; set; }
         public int ClientId { get; set; } = 1;
-
         public string GetBaseUrl() => $"{Protocol}{Host}:{Port}/api/{ApiVersion}/";
     }
 }

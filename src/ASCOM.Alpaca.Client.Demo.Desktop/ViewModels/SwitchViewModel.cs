@@ -35,7 +35,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         {
             _switch = DeviceFactory.CreateDeviceInstance<Switch>(new DeviceConfiguration
             {
-                ClientId = ClientId, DeviceNumber = DeviceId, DeviceType = DeviceType.Switch, Host = Host,
+                ClientId = ClientId, DeviceNumber = DeviceId, Host = Host,
                 Port = Port
             });
 

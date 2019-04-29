@@ -14,8 +14,9 @@ namespace ASCOM.Alpaca.Client.Test.Devices
 {
     public class CameraRequestTest : DeviceRequestsTestBase
     {
-        private readonly DeviceConfiguration _deviceConfiguration = new DeviceConfiguration { DeviceNumber = 5, DeviceType = DeviceType.Camera };
+        private readonly DeviceConfiguration _deviceConfiguration = new DeviceConfiguration { DeviceNumber = 5 };
         private readonly ClientTransactionIdGenerator _clientTransactionIdGenerator = new ClientTransactionIdGenerator();
+        protected override DeviceType DeviceType { get; } = DeviceType.Camera;
         
          [Fact]
         public void GetBayerOffsetX_SendValidRequest()
@@ -2815,7 +2816,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             Assert.Equal(Method.PUT, sentRequest.Method);
             AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
         }
-        
+
         [Fact]
         public async Task StopExposureAsync_SendValidRequest()
         {
@@ -2828,10 +2829,10 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Callback((string baseUrl, RestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
             var camera = new Camera(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
-            
+
             //Act
             await camera.StopExposureAsync();
-            
+
             //Assert
             Assert.Equal(Method.PUT, sentRequest.Method);
             AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);

@@ -307,7 +307,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         {
             _telescope = DeviceFactory.CreateDeviceInstance<Telescope>(new DeviceConfiguration
             {
-                ClientId = ClientId, DeviceNumber = DeviceId, DeviceType = DeviceType.Telescope, Host = Host,
+                ClientId = ClientId, DeviceNumber = DeviceId, Host = Host,
                 Port = Port
             });
 

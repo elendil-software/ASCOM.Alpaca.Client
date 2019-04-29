@@ -195,7 +195,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         {
             _observingConditions = DeviceFactory.CreateDeviceInstance<ObservingConditions>(new DeviceConfiguration
             {
-                ClientId = ClientId, DeviceNumber = DeviceId, DeviceType = DeviceType.ObservingConditions, Host = Host,
+                ClientId = ClientId, DeviceNumber = DeviceId, Host = Host,
                 Port = Port
             });
 

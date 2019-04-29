@@ -30,7 +30,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         {
             _safetyMonitor = DeviceFactory.CreateDeviceInstance<SafetyMonitor>(new DeviceConfiguration
             {
-                ClientId = ClientId, DeviceNumber = DeviceId, DeviceType = DeviceType.SafetyMonitor, Host = Host,
+                ClientId = ClientId, DeviceNumber = DeviceId, Host = Host,
                 Port = Port
             });
 

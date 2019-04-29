@@ -193,7 +193,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         {
             _dome = DeviceFactory.CreateDeviceInstance<Dome>(new DeviceConfiguration
             {
-                ClientId = ClientId, DeviceNumber = DeviceId, DeviceType = DeviceType.Dome, Host = Host,
+                ClientId = ClientId, DeviceNumber = DeviceId, Host = Host,
                 Port = Port
             });
 

@@ -12,9 +12,10 @@ namespace ASCOM.Alpaca.Client.Test.Devices
 {
     public class DeviceRequestTest : DeviceRequestsTestBase
     {
-        private readonly DeviceConfiguration _deviceConfiguration = new DeviceConfiguration { DeviceNumber = 5, DeviceType = DeviceType.FilterWheel };
+        private readonly DeviceConfiguration _deviceConfiguration = new DeviceConfiguration { DeviceNumber = 5 };
         private readonly ClientTransactionIdGenerator _clientTransactionIdGenerator = new ClientTransactionIdGenerator();
-
+        protected override DeviceType DeviceType { get; } = DeviceType.FilterWheel;
+            
         [Fact]
         public void InvokeAction_SendValidRequest()
         {

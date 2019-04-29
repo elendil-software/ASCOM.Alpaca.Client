@@ -12,8 +12,9 @@ namespace ASCOM.Alpaca.Client.Test.Devices
 {
     public class RotatorRequestTest : DeviceRequestsTestBase
     {
-        private readonly DeviceConfiguration _deviceConfiguration = new DeviceConfiguration { DeviceNumber = 5, DeviceType = DeviceType.Rotator };
+        private readonly DeviceConfiguration _deviceConfiguration = new DeviceConfiguration { DeviceNumber = 5 };
         private readonly ClientTransactionIdGenerator _clientTransactionIdGenerator = new ClientTransactionIdGenerator();
+        protected override DeviceType DeviceType { get; } = DeviceType.Rotator;
         
         [Fact]
         public void CanReverse_SendValidRequest()

@@ -97,7 +97,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         {
             _rotator = DeviceFactory.CreateDeviceInstance<Rotator>(new DeviceConfiguration
             {
-                ClientId = ClientId, DeviceNumber = DeviceId, DeviceType = DeviceType.Rotator, Host = Host,
+                ClientId = ClientId, DeviceNumber = DeviceId, Host = Host,
                 Port = Port
             });
 

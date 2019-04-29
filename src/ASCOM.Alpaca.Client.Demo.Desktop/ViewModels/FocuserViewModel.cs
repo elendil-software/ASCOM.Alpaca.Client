@@ -133,7 +133,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         {
             _focuser = DeviceFactory.CreateDeviceInstance<Focuser>(new DeviceConfiguration
             {
-                ClientId = ClientId, DeviceNumber = DeviceId, DeviceType = DeviceType.Focuser, Host = Host,
+                ClientId = ClientId, DeviceNumber = DeviceId, Host = Host,
                 Port = Port
             });
 
