@@ -27,7 +27,8 @@ namespace ASCOM.Alpaca.Client.Request
         /// </summary>
         /// <param name="deviceType">One of the recognised ASCOM device types</param>
         /// <param name="deviceNumber">Zero based device number as set on the server (0 to 4294967295)</param>
-        /// <param name="clientId">Client's unique ID. (0 to 4294967295). The client should choose a value at start-up, e.g. a random value between 0 and 65535, and send this value on every transaction to help associate entries in device logs with this particular client.</param>
+        /// <param name="clientId">Client's unique ID. (0 to 4294967295). The client should choose a value at start-up, e.g. a random value between 0 and 65535, and send this
+        /// value on every transaction to help associate entries in device logs with this particular client.</param>
         public RequestBuilder(DeviceType deviceType, int deviceNumber, int clientId)
         {
             _deviceType = deviceType;
@@ -47,8 +48,8 @@ namespace ASCOM.Alpaca.Client.Request
             request.AddUrlSegment("deviceNumber", _deviceNumber.ToString());
             request.AddUrlSegment("command", command.ToString().ToLower());
             
-            request.AddParameter("ClientID", _clientId.ToString());
-            request.AddParameter("ClientTransactionID", clientTransactionId.ToString());
+            request.AddParameter("ClientID", _clientId.ToString(), ParameterType.QueryString);
+            request.AddParameter("ClientTransactionID", clientTransactionId.ToString(), ParameterType.QueryString);
             
             foreach (var parameter in parameters)
             {
