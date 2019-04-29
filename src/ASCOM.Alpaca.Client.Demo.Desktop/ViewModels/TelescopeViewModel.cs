@@ -13,7 +13,6 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 {
     public class TelescopeViewModel : DeviceViewModelBase
     {
-        private Task poolingTask;
         private ITelescope _telescope;
         private bool _canMoveAxis;
         private bool _canFindHome;
@@ -33,7 +32,6 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private bool _canSyncAltAz;
         private bool _atHome;
         private bool _atPark;
-        private bool _isSlewingToParkOrHome;
         private bool _isTracking;
         private double _moveRate = 2.0;
         private bool _isSlewing;
@@ -41,6 +39,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private double _rightAscension;
         private double _azimuth;
         private double _altitude;
+        private int _duration = 1000;
 
         public TelescopeViewModel(IDeviceFactory deviceFactory) : base(deviceFactory)
         {
@@ -296,6 +295,16 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             }
         }
 
+        public int Duration
+        {
+            get => _duration;
+            set
+            {
+                _duration = value;
+                NotifyOfPropertyChange(() => Duration);
+            }
+        }
+
         public async Task Connect()
         {
             _telescope = DeviceFactory.CreateDeviceInstance<Telescope>(new DeviceConfiguration
@@ -309,7 +318,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
                 await _telescope.SetConnectedAsync(true);
                 await LoadDriverData();
                 IsConnected = true;
-                poolingTask = Task.Run(() =>
+                Task.Run(() =>
                 {
                     do
                     {
@@ -433,6 +442,38 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             await RefreshMountStatus();
         }
         
+        public bool CanGuideNorth => CanPulseGuide;
+
+        public async Task GuideNorth()
+        {
+            await _telescope.PulseGuideAsync(Direction.North, Duration);
+            await RefreshMountStatus();
+        }
+        
+        public bool CanGuideSouth => CanPulseGuide;
+
+        public async Task GuideSouth()
+        {
+            await _telescope.PulseGuideAsync(Direction.South, Duration);;
+            await RefreshMountStatus();
+        }
+        
+        public bool CanGuideEast => CanPulseGuide;
+
+        public async Task GuideEast()
+        {
+            await _telescope.PulseGuideAsync(Direction.East, Duration);
+            await RefreshMountStatus();
+        }
+        
+        public bool CanGuideWest => CanPulseGuide;
+
+        public async Task GuideWest()
+        {
+            await _telescope.PulseGuideAsync(Direction.West, Duration);
+            await RefreshMountStatus();
+        }
+        
         private async Task RefreshMountStatus()
         {
             AtPark = await _telescope.IsAtParkAsync();
@@ -444,11 +485,16 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             NotifyOfPropertyChange(() => CanStopTracking);
 
             IsSlewing = await _telescope.IsSlewingAsync();
+            
             NotifyOfPropertyChange(() => CanStopMove);
             NotifyOfPropertyChange(() => CanMoveEast);
             NotifyOfPropertyChange(() => CanMoveWest);
             NotifyOfPropertyChange(() => CanMoveNorth);
             NotifyOfPropertyChange(() => CanMoveSouth);
+            NotifyOfPropertyChange(() => CanGuideNorth);
+            NotifyOfPropertyChange(() => CanGuideSouth);
+            NotifyOfPropertyChange(() => CanGuideEast);
+            NotifyOfPropertyChange(() => CanGuideWest);
         }
 
         private async Task RefreshMountPosition()
