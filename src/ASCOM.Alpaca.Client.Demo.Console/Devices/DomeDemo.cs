@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using ASCOM.Alpaca.Client.Devices;
-using ASCOM.Alpaca.Client.Devices.Providers;
 using Microsoft.Extensions.Logging;
 
 namespace ASCOM.Alpaca.Client.Demo.Devices

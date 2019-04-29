@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using ASCOM.Alpaca.Client.Devices;
 
-namespace ASCOM.Alpaca.Client.Devices.Providers
+namespace ASCOM.Alpaca.Client.Demo.Devices
 {
     public interface IDeviceProvider
     {

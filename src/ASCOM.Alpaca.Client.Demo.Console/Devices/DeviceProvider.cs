@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ASCOM.Alpaca.Client.Devices;
 
-namespace ASCOM.Alpaca.Client.Devices.Providers
+namespace ASCOM.Alpaca.Client.Demo.Devices
 {
     public class DeviceProvider : IDeviceProvider
     {
