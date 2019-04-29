@@ -2,7 +2,7 @@
 using System.IO;
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Demo.Devices;
-using ASCOM.Alpaca.Client.DependencyInjection.Microsoft;
+using ASCOM.Alpaca.Client.Demo.IoC;
 using ASCOM.Alpaca.Client.Devices.Providers;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;

@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using ASCOM.Alpaca.Client.Configuration;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Request;
@@ -7,7 +8,7 @@ using ASCOM.Alpaca.Devices;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace ASCOM.Alpaca.Client.DependencyInjection.Microsoft
+namespace ASCOM.Alpaca.Client.Demo.IoC
 {
     public static class ServiceCollectionExtension
     {
@@ -50,7 +51,7 @@ namespace ASCOM.Alpaca.Client.DependencyInjection.Microsoft
                             return new Telescope(deviceConfiguration, clientTransactionIdGenerator, commandSender, ctx.GetService<ILogger<Telescope>>());
                         
                         default:
-                            throw new NotImplementedException(deviceConfiguration.DeviceType.ToString());
+                            throw new InvalidEnumArgumentException(deviceConfiguration.DeviceType.ToString());
                     }
                 });
             }
