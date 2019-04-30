@@ -2,7 +2,7 @@
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
-using Microsoft.Extensions.Logging;
+using ASCOM.Alpaca.Logging;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop.Factories
 {
@@ -10,13 +10,19 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.Factories
     {
         private readonly IClientTransactionIdGenerator _clientTransactionIdGenerator;
         private readonly ICommandSender _commandSender;
-        private readonly ILoggerFactory _loggerFactory;
+        private readonly ILogger _logger;
 
-        public DeviceFactory(IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILoggerFactory loggerFactory)
+        public DeviceFactory(IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender)
         {
             _clientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
             _commandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
-            _loggerFactory = loggerFactory ?? throw new ArgumentNullException(nameof(loggerFactory));
+        }
+
+        public DeviceFactory(IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger logger)
+        {
+            _clientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
+            _commandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         public T CreateDeviceInstance<T>(DeviceConfiguration configuration) where T : IDevice
@@ -26,48 +32,39 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.Factories
             switch (deviceType.Name)
             {
                 case nameof(FilterWheel):
-                    ILogger<FilterWheel> logger = _loggerFactory.CreateLogger<FilterWheel>();
-                    IDevice device = new FilterWheel(configuration, _clientTransactionIdGenerator, _commandSender, logger);
+                    IDevice device = new FilterWheel(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
                     return (T) device;
 
                 case nameof(SafetyMonitor):
-                    ILogger<SafetyMonitor> safetyMonitorLogger = _loggerFactory.CreateLogger<SafetyMonitor>();
-                    IDevice safetyMonitor = new SafetyMonitor(configuration, _clientTransactionIdGenerator, _commandSender, safetyMonitorLogger);
+                    IDevice safetyMonitor = new SafetyMonitor(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
                     return (T) safetyMonitor;
                 
                 case nameof(Dome):
-                    ILogger<Dome> domeLogger = _loggerFactory.CreateLogger<Dome>();
-                    IDevice dome = new Dome(configuration, _clientTransactionIdGenerator, _commandSender, domeLogger);
+                    IDevice dome = new Dome(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
                     return (T) dome;
                 
                 case nameof(Camera):
-                    ILogger<SafetyMonitor> cameraLogger = _loggerFactory.CreateLogger<SafetyMonitor>();
-                    IDevice camera = new Camera(configuration, _clientTransactionIdGenerator, _commandSender, cameraLogger);
+                    IDevice camera = new Camera(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
                     return (T) camera;
                 
                 case nameof(Focuser):
-                    ILogger<Focuser> focuserLogger = _loggerFactory.CreateLogger<Focuser>();
-                    IDevice focuser = new Focuser(configuration, _clientTransactionIdGenerator, _commandSender, focuserLogger);
+                    IDevice focuser = new Focuser(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
                     return (T) focuser;
                 
                 case nameof(ObservingConditions):
-                    ILogger<ObservingConditions> observingConditionsLogger = _loggerFactory.CreateLogger<ObservingConditions>();
-                    IDevice observingConditions = new ObservingConditions(configuration, _clientTransactionIdGenerator, _commandSender, observingConditionsLogger);
+                    IDevice observingConditions = new ObservingConditions(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
                     return (T) observingConditions;
                 
                 case nameof(Rotator):
-                    ILogger<Rotator> rotatorLogger = _loggerFactory.CreateLogger<Rotator>();
-                    IDevice rotator = new Rotator(configuration, _clientTransactionIdGenerator, _commandSender, rotatorLogger);
+                    IDevice rotator = new Rotator(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
                     return (T) rotator;
                 
                 case nameof(Switch):
-                    ILogger<Switch> switchLogger = _loggerFactory.CreateLogger<Switch>();
-                    IDevice @switch = new Switch(configuration, _clientTransactionIdGenerator, _commandSender, switchLogger);
+                    IDevice @switch = new Switch(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
                     return (T) @switch;
                 
                 case nameof(Telescope):
-                    ILogger<Rotator> telescopeLogger = _loggerFactory.CreateLogger<Rotator>();
-                    IDevice telescope = new Telescope(configuration, _clientTransactionIdGenerator, _commandSender, telescopeLogger);
+                    IDevice telescope = new Telescope(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
                     return (T) telescope;
 
                 default:

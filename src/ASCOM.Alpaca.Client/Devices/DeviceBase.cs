@@ -7,14 +7,14 @@ using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Devices;
 using ASCOM.Alpaca.Responses;
-using Microsoft.Extensions.Logging;
+using ASCOM.Alpaca.Logging;
 using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
     public abstract class DeviceBase : IDevice
     {
-        protected readonly ILogger<DeviceBase> Logger;
+        protected readonly ILogger Logger;
         protected readonly ICommandSender CommandSender;
         protected readonly RequestBuilder RequestBuilder;
         protected readonly IClientTransactionIdGenerator ClientTransactionIdGenerator;
@@ -22,7 +22,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected abstract DeviceType DeviceType { get; }
         public int DeviceNumber => Configuration.DeviceNumber;
 
-        protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger<DeviceBase> logger)
+        protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger logger)
         {
             Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
             ClientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
@@ -41,125 +41,54 @@ namespace ASCOM.Alpaca.Client.Devices
             RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber, configuration.ClientId);
         }
 
-        public string InvokeAction(string actionName, string actionParameters)
-        {
-            IRestRequest request = BuildInvokeActionRequest(actionName, actionParameters);
-
-            var response = CommandSender.ExecuteRequest<StringResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-            
-            return response.HandleResponse<string, StringResponse>();
-        }
-        
-        public async Task<string> InvokeActionAsync(string actionName, string actionParameters)
-        {
-            IRestRequest request = BuildInvokeActionRequest(actionName, actionParameters);
-
-            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-            
-            return response.HandleResponse<string, StringResponse>();
-        }
-
+        public string InvokeAction(string actionName, string actionParameters) => ExecuteRequest<string, StringResponse, string, string>(BuildInvokeActionRequest, actionName, actionParameters);
+        public async Task<string> InvokeActionAsync(string actionName, string actionParameters) => await ExecuteRequestAsync<string, StringResponse, string, string>(BuildInvokeActionRequest, actionName, actionParameters);
         private IRestRequest BuildInvokeActionRequest(string actionName, string actionParameters)
         {
             var parameters = new Dictionary<string, object>
             {
-                {"Action", actionName},
-                {"Parameters", actionParameters}
+                {DeviceRequestParameters.Action, actionName},
+                {DeviceRequestParameters.Parameters, actionParameters}
             };
 
             return RequestBuilder.BuildRestRequest(DeviceMethod.Action, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
-        public void SendCommandBlind(string command, bool raw = false)
-        {
-            IRestRequest request = BuildSendCommandBlindRequest(command, raw);
-
-            var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            response.HandleResponse();
-        }
-        
-        public async Task SendCommandBlindAsync(string command, bool raw = false)
-        {
-            IRestRequest request = BuildSendCommandBlindRequest(command, raw);
-
-            var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            response.HandleResponse();
-        }
-
+        public void SendCommandBlind(string command, bool raw = false) => ExecuteRequest(BuildSendCommandBlindRequest, command, raw);
+        public async Task SendCommandBlindAsync(string command, bool raw = false) => await ExecuteRequestAsync(BuildSendCommandBlindRequest, command, raw);
         private IRestRequest BuildSendCommandBlindRequest(string command, bool raw)
         {
             var parameters = new Dictionary<string, object>
             {
-                {"Command", command},
-                {"Raw", raw.ToString()}
+                {DeviceRequestParameters.Command, command},
+                {DeviceRequestParameters.Raw, raw.ToString()}
             };
 
             return RequestBuilder.BuildRestRequest(DeviceMethod.CommandBlind, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
-        public bool SendCommandBool(string command, bool raw = false)
-        {
-            IRestRequest request = BuildSendCommandBoolRequest(command, raw);
-
-            var response = CommandSender.ExecuteRequest<BoolResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<bool, BoolResponse>();
-        }
-        
-        public async Task<bool> SendCommandBoolAsync(string command, bool raw = false)
-        {
-            IRestRequest request = BuildSendCommandBoolRequest(command, raw);
-
-            var response = await CommandSender.ExecuteRequestAsync<BoolResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<bool, BoolResponse>();
-        }
-
+        public bool SendCommandBool(string command, bool raw = false) => ExecuteRequest<bool, BoolResponse, string, bool>(BuildSendCommandBoolRequest, command, raw);
+        public async Task<bool> SendCommandBoolAsync(string command, bool raw = false) => await ExecuteRequestAsync<bool, BoolResponse, string, bool>(BuildSendCommandBoolRequest, command, raw);
         private IRestRequest BuildSendCommandBoolRequest(string command, bool raw)
         {
             var parameters = new Dictionary<string, object>
             {
-                {"Command", command},
-                {"Raw", raw.ToString()}
+                {DeviceRequestParameters.Command, command},
+                {DeviceRequestParameters.Raw, raw.ToString()}
             };
 
             return RequestBuilder.BuildRestRequest(DeviceMethod.CommandBool, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
       
-        public string SendCommandString(string command, bool raw = false)
-        {
-            IRestRequest request = BuildSendCommandStringRequest(command, raw);
-
-            var response = CommandSender.ExecuteRequest<StringResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<string, StringResponse>();
-        }
+        public string SendCommandString(string command, bool raw = false) => ExecuteRequest<string, StringResponse, string, bool>(BuildSendCommandStringRequest, command, raw);
         
-        public async Task<string> SendCommandStringAsync(string command, bool raw = false)
-        {
-            IRestRequest request = BuildSendCommandStringRequest(command, raw);
-
-            var response = await CommandSender.ExecuteRequestAsync<StringResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
-
-            return response.HandleResponse<string, StringResponse>();
-        }
-
+        public async Task<string> SendCommandStringAsync(string command, bool raw = false) => await ExecuteRequestAsync<string, StringResponse, string, bool>(BuildSendCommandStringRequest, command, raw);
         private IRestRequest BuildSendCommandStringRequest(string command, bool raw)
         {
             var parameters = new Dictionary<string, object>
             {
-                {"Command", command},
-                {"Raw", raw.ToString()}
+                {DeviceRequestParameters.Command, command},
+                {DeviceRequestParameters.Raw, raw.ToString()}
             };
 
             return RequestBuilder.BuildRestRequest(DeviceMethod.CommandString, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
@@ -175,7 +104,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {"Connected", connected.ToString()}
+                {DeviceRequestParameters.Connected, connected.ToString()}
             };
 
             return RequestBuilder.BuildRestRequest(DeviceMethod.Connected, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
@@ -200,7 +129,6 @@ namespace ASCOM.Alpaca.Client.Devices
         public List<string> GetSupportedActions() => ExecuteRequest<List<string>, StringArrayResponse>(BuildGetSupportedActionsRequest);      
         public async Task<List<string>> GetSupportedActionsAsync() => await ExecuteRequestAsync<List<string>, StringArrayResponse>(BuildGetSupportedActionsRequest);
         private IRestRequest BuildGetSupportedActionsRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.SupportedActions, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-
 
 
         protected void ExecuteRequest(Func<IRestRequest> requestBuilder)
@@ -267,8 +195,6 @@ namespace ASCOM.Alpaca.Client.Devices
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
         
-        
-        
         protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder(arg1 , arg2);
@@ -285,10 +211,6 @@ namespace ASCOM.Alpaca.Client.Devices
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
         
-        
-        
-        
-
         protected TResult ExecuteRequest<TResult, TAlpacaResponse>(Func<IRestRequest> requestBuilder) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder();

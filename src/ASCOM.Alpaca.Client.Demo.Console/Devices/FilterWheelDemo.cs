@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Devices;
-using Microsoft.Extensions.Logging;
+using ASCOM.Alpaca.Logging;
 
 namespace ASCOM.Alpaca.Client.Demo.Devices
 {
     internal class FilterWheelDemo : DeviceDemoBase, IDeviceDemo
     {
 
-        public FilterWheelDemo(IDeviceProvider deviceProvider, ILogger<FilterWheelDemo> logger) : base(deviceProvider, logger)
+        public FilterWheelDemo(IDeviceProvider deviceProvider, ILogger logger) : base(deviceProvider, logger)
         {
         }
 

@@ -5,7 +5,7 @@ using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Devices;
 using ASCOM.Alpaca.Responses;
-using Microsoft.Extensions.Logging;
+using ASCOM.Alpaca.Logging;
 using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Devices
@@ -19,7 +19,7 @@ namespace ASCOM.Alpaca.Client.Devices
         {
         }
 
-        public FilterWheel(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger<DeviceBase> logger) : 
+        public FilterWheel(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger logger) : 
             base(configuration, clientTransactionIdGenerator, commandSender, logger)
         {
         }

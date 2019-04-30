@@ -11,7 +11,7 @@ using ASCOM.Alpaca.Devices.Camera;
 using ASCOM.Alpaca.Devices.Telescope;
 using ASCOM.Alpaca.Exceptions;
 using ASCOM.Alpaca.Responses;
-using Microsoft.Extensions.Logging;
+using ASCOM.Alpaca.Logging;
 using Newtonsoft.Json;
 using RestSharp;
 
@@ -19,7 +19,7 @@ namespace ASCOM.Alpaca.Client.Devices
 {
     public sealed class Camera : DeviceBase, ICamera
     {
-        public Camera(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger<DeviceBase> logger) : base(configuration, clientTransactionIdGenerator, commandSender, logger)
+        public Camera(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger logger) : base(configuration, clientTransactionIdGenerator, commandSender, logger)
         {
         }
 

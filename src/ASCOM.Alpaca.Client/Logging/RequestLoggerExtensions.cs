@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using ASCOM.Alpaca.Responses;
-using Microsoft.Extensions.Logging;
+using ASCOM.Alpaca.Logging;
 using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Logging
 {
     internal static class RequestLoggerExtensions
     {
-        public static void LogDebug(this ILogger logger, string baseUrl, RestRequest request)
+        public static void LogDebug(this ILogger logger, IRestRequest request, string baseUrl)
         {
             var requestParametersName = new List<string> {"deviceType", "deviceNumber", "command"};
             

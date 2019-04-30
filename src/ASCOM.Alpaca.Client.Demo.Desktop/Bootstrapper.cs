@@ -7,12 +7,11 @@ using ASCOM.Alpaca.Client.Demo.Desktop.ViewModels;
 using ASCOM.Alpaca.Client.Devices;
 using Caliburn.Micro;
 using Lamar;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+using ASCOM.Alpaca.Logging;
 using Serilog;
-using Serilog.AspNetCore;
 using System.Windows.Controls;
 using ASCOM.Alpaca.Client.Demo.Desktop.Converters;
+using ILogger = ASCOM.Alpaca.Logging.ILogger;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop
 {
@@ -49,9 +48,9 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop
                 .WriteTo.Debug()
                 .WriteTo.File("Log-.json", rollingInterval:RollingInterval.Day)
                 .CreateLogger();
-            registry.AddSingleton<ILoggerFactory>(s => new SerilogLoggerFactory(Log.Logger, true));
-            registry.For(typeof(ILogger<>)).Use(typeof(Logger<>));
             
+            registry.For<ILogger>().Use(context => new SerilogAdapter(Log.Logger));
+
             _container = new Container(registry);
             
             #if DEBUG

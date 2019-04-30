@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using ASCOM.Alpaca.Client.Devices;
-using Microsoft.Extensions.Logging;
+using ASCOM.Alpaca.Logging;
 
 namespace ASCOM.Alpaca.Client.Demo.Devices
 {
     internal class DomeDemo : DeviceDemoBase, IDeviceDemo
     {
-        public DomeDemo(IDeviceProvider deviceProvider, ILogger<IDeviceDemo> logger) : base(deviceProvider, logger)
+        public DomeDemo(IDeviceProvider deviceProvider, ILogger logger) : base(deviceProvider, logger)
         {
         }
 
