@@ -1,9 +1,6 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Exceptions;
-using ASCOM.Alpaca.Logging;
 using ASCOM.Alpaca.Responses;
 using RestSharp;
 
@@ -11,18 +8,8 @@ namespace ASCOM.Alpaca.Client.Request
 {
     public class CommandSender : ICommandSender
     {
-        private readonly ILogger _logger;
-
-        public CommandSender() {}
-
-        public CommandSender(ILogger logger)
-        {
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-        }
-        
         public IRestResponse ExecuteRequest(string baseUrl, IRestRequest request)
         {
-            _logger?.LogDebug(request, baseUrl);
             IRestResponse response = new RestClient(baseUrl).Execute(request);
             CheckResponse(response, baseUrl);
             return response;
@@ -30,7 +17,6 @@ namespace ASCOM.Alpaca.Client.Request
 
         public TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(string baseUrl, IRestRequest request) where TASCOMRemoteResponse : IResponse, new()
         {
-            _logger?.LogDebug(request, baseUrl);
             IRestResponse<TASCOMRemoteResponse> response = new RestClient(baseUrl).Execute<TASCOMRemoteResponse>(request);
             CheckResponse(response, baseUrl);
             return response.Data;
@@ -38,7 +24,6 @@ namespace ASCOM.Alpaca.Client.Request
         
         public async Task<IRestResponse> ExecuteRequestAsync(string baseUrl, IRestRequest request)
         {
-            _logger?.LogDebug(request, baseUrl);
             IRestResponse response = await new RestClient(baseUrl).ExecuteTaskAsync(request);
             CheckResponse(response, baseUrl);
             return response;
@@ -46,7 +31,6 @@ namespace ASCOM.Alpaca.Client.Request
         
         public async Task<TASCOMRemoteResponse> ExecuteRequestAsync<TASCOMRemoteResponse>(string baseUrl, IRestRequest request) where TASCOMRemoteResponse : IResponse, new()
         {
-            _logger?.LogDebug(request, baseUrl);
             IRestResponse<TASCOMRemoteResponse> response = await new RestClient(baseUrl).ExecuteTaskAsync<TASCOMRemoteResponse>(request);
             CheckResponse(response, baseUrl);
             return response.Data;

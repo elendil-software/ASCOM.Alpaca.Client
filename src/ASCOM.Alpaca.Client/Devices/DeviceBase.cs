@@ -130,10 +130,10 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task<List<string>> GetSupportedActionsAsync() => await ExecuteRequestAsync<List<string>, StringArrayResponse>(BuildGetSupportedActionsRequest);
         private IRestRequest BuildGetSupportedActionsRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.SupportedActions, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
-
         protected void ExecuteRequest(Func<IRestRequest> requestBuilder)
         {
             IRestRequest request = requestBuilder();
+            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             response.HandleResponse();
@@ -142,6 +142,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected async Task ExecuteRequestAsync(Func<IRestRequest> requestBuilder)
         {
             IRestRequest request = requestBuilder();
+            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             response.HandleResponse();
@@ -150,6 +151,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected void ExecuteRequest<T1>(Func<T1, IRestRequest> requestBuilder, T1 param1)
         {
             IRestRequest request = requestBuilder(param1);
+            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             response.HandleResponse();
@@ -158,6 +160,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected async Task ExecuteRequestAsync<T1>(Func<T1, IRestRequest> requestBuilder, T1 arg)
         {
             IRestRequest request = requestBuilder(arg);
+            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             response.HandleResponse();
@@ -166,6 +169,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected void ExecuteRequest<T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2)
         {
             IRestRequest request = requestBuilder(arg1, arg2);
+            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             response.HandleResponse();
@@ -174,6 +178,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected async Task ExecuteRequestAsync<T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2)
         {
             IRestRequest request = requestBuilder(arg1, arg2);
+            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             response.HandleResponse();
@@ -182,6 +187,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1>(Func<T1, IRestRequest> requestBuilder, T1 arg) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder(arg);
+            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = CommandSender.ExecuteRequest<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
@@ -190,6 +196,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse, T1>(Func<T1, IRestRequest> requestBuilder, T1 arg) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder(arg);
+            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = await CommandSender.ExecuteRequestAsync<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
@@ -198,6 +205,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder(arg1 , arg2);
+            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = CommandSender.ExecuteRequest<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
@@ -206,6 +214,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse, T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder(arg1 , arg2);
+            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = await CommandSender.ExecuteRequestAsync<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
@@ -214,6 +223,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected TResult ExecuteRequest<TResult, TAlpacaResponse>(Func<IRestRequest> requestBuilder) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder();
+            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = CommandSender.ExecuteRequest<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
@@ -222,6 +232,7 @@ namespace ASCOM.Alpaca.Client.Devices
         protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse>(Func<IRestRequest> requestBuilder) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder();
+            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = await CommandSender.ExecuteRequestAsync<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
