@@ -2966,7 +2966,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             //Arrange
             string commandName = "pulseguide";
             string directionParameterName = "Direction";
-            Direction directionParameterValue = Direction.West;
+            GuideDirection directionParameterValue = GuideDirection.West;
             string durationParameterName = "Duration";
             int durationParameterValue = 2;
             IRestRequest sentRequest = null;
@@ -2993,7 +2993,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             //Arrange
             string commandName = "pulseguide";
             string directionParameterName = "Direction";
-            Direction directionParameterValue = Direction.West;
+            GuideDirection directionParameterValue = GuideDirection.West;
             string durationParameterName = "Duration";
             int durationParameterValue = 2;
             IRestRequest sentRequest = null;

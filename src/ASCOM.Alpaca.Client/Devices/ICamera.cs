@@ -856,14 +856,14 @@ namespace ASCOM.Alpaca.Client.Devices
         /// </summary>
         /// <param name="direction">Direction of movement</param>
         /// <param name="duration">Duration of movement in milli-seconds</param>
-        void PulseGuide(Direction direction, int duration);
+        void PulseGuide(GuideDirection direction, int duration);
         
         /// <summary>
         /// Activates the Camera's mount control sytem to instruct the mount to move in a particular direction for a given period of time
         /// </summary>
         /// <param name="direction">Direction of movement</param>
         /// <param name="duration">Duration of movement in milli-seconds</param>
-        Task PulseGuideAsync(Direction direction, int duration);
+        Task PulseGuideAsync(GuideDirection direction, int duration);
 
         /// <summary>
         /// Starts an exposure. Use ImageReady to check when the exposure is complete.

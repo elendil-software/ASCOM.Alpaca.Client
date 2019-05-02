@@ -438,9 +438,9 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task ParkAsync() => await ExecuteRequestAsync(BuildParkRequest);
         private IRestRequest BuildParkRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.Park, Method.PUT, ClientTransactionIdGenerator.GetTransactionId());
 
-        public void PulseGuide(Direction direction, int duration) => ExecuteRequest(BuildPulseGuideRequest, direction, duration);
-        public async Task PulseGuideAsync(Direction direction, int duration) => await ExecuteRequestAsync(BuildPulseGuideRequest, direction, duration);
-        private IRestRequest BuildPulseGuideRequest(Direction direction, int duration)
+        public void PulseGuide(GuideDirection direction, int duration) => ExecuteRequest(BuildPulseGuideRequest, direction, duration);
+        public async Task PulseGuideAsync(GuideDirection direction, int duration) => await ExecuteRequestAsync(BuildPulseGuideRequest, direction, duration);
+        private IRestRequest BuildPulseGuideRequest(GuideDirection direction, int duration)
         {
             var parameters = new Dictionary<string, object>
             {

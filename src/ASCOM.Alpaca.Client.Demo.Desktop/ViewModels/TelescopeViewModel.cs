@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using System.Windows;
 using ASCOM.Alpaca.Client.Demo.Desktop.Factories;
 using ASCOM.Alpaca.Client.Devices;
-using ASCOM.Alpaca.Devices;
 using ASCOM.Alpaca.Devices.Telescope;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
@@ -448,7 +447,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
         public async Task GuideNorth()
         {
-            await _telescope.PulseGuideAsync(Direction.North, Duration);
+            await _telescope.PulseGuideAsync(GuideDirection.North, Duration);
             await RefreshMountStatus();
         }
         
@@ -456,7 +455,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
         public async Task GuideSouth()
         {
-            await _telescope.PulseGuideAsync(Direction.South, Duration);
+            await _telescope.PulseGuideAsync(GuideDirection.South, Duration);
             await RefreshMountStatus();
         }
         
@@ -464,7 +463,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
         public async Task GuideEast()
         {
-            await _telescope.PulseGuideAsync(Direction.East, Duration);
+            await _telescope.PulseGuideAsync(GuideDirection.East, Duration);
             await RefreshMountStatus();
         }
         
@@ -472,7 +471,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
         public async Task GuideWest()
         {
-            await _telescope.PulseGuideAsync(Direction.West, Duration);
+            await _telescope.PulseGuideAsync(GuideDirection.West, Duration);
             await RefreshMountStatus();
         }
         

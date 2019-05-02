@@ -826,14 +826,14 @@ namespace ASCOM.Alpaca.Client.Devices
         /// </summary>
         /// <param name="direction">The direction in which the guide-rate motion is to be made</param>
         /// <param name="duration">The duration of the guide-rate motion (milliseconds)</param>
-        void PulseGuide(Direction direction, int duration);
+        void PulseGuide(GuideDirection direction, int duration);
 
         /// <summary>
         /// Moves the scope in the given direction for the given time.
         /// </summary>
         /// <param name="direction">The direction in which the guide-rate motion is to be made</param>
         /// <param name="duration">The duration of the guide-rate motion (milliseconds)</param>
-        Task PulseGuideAsync(Direction direction, int duration);
+        Task PulseGuideAsync(GuideDirection direction, int duration);
 
         /// <summary>
         /// Sets the telescope's park position to be its current position.
