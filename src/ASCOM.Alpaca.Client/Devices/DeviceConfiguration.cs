@@ -9,7 +9,7 @@ namespace ASCOM.Alpaca.Client.Devices
         public string ApiVersion { get; set; } = "v1";
         public int Port { get; set; } = 11111;
         public int DeviceNumber { get; set; }
-        public int ClientId { get; set; } = 1;
+        public int ClientId { get; set; } = -1;
         public string GetBaseUrl() => $"{Protocol}{Host}:{Port}/api/{ApiVersion}/";
     }
 }

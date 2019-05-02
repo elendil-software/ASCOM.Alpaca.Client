@@ -9,7 +9,7 @@ namespace ASCOM.Alpaca.Client.Request
     {
         private readonly DeviceType _deviceType;
         private readonly int _deviceNumber;
-        private readonly int _clientId = 1;
+        private readonly int _clientId = -1;
 
         /// <summary>
         /// 
@@ -41,15 +41,15 @@ namespace ASCOM.Alpaca.Client.Request
             return BuildRestRequest(command, httpMethod, new Dictionary<string, object>(), clientTransactionId);
         }
         
-        public IRestRequest BuildRestRequest(Enum command, Method httpMethod, Dictionary<string, object> parameters, int clientTransactionId = 1234)
+        public IRestRequest BuildRestRequest(Enum command, Method httpMethod, Dictionary<string, object> parameters, int clientTransactionId = -1)
         {
             var request = new RestRequest("{deviceType}/{deviceNumber}/{command}", httpMethod);
             request.AddUrlSegment("deviceType", _deviceType.ToString().ToLower());
             request.AddUrlSegment("deviceNumber", _deviceNumber.ToString());
             request.AddUrlSegment("command", command.ToString().ToLower());
             
-            request.AddParameter("ClientID", _clientId.ToString(), ParameterType.QueryString);
-            request.AddParameter("ClientTransactionID", clientTransactionId.ToString(), ParameterType.QueryString);
+            AddClientIdParameter(request);
+            AddClientTransactionIdParameter(request, clientTransactionId);
             
             foreach (var parameter in parameters)
             {
@@ -57,6 +57,22 @@ namespace ASCOM.Alpaca.Client.Request
             }
 
             return request;
+        }
+
+        private static void AddClientTransactionIdParameter(IRestRequest request, int clientTransactionId)
+        {
+            if (clientTransactionId >= 0)
+            {
+                request.AddParameter("ClientTransactionID", clientTransactionId.ToString());
+            }
+        }
+
+        private void AddClientIdParameter(IRestRequest request)
+        {
+            if (_clientId >= 0)
+            {
+                request.AddParameter("ClientID", _clientId.ToString());
+            }
         }
     }
 }
