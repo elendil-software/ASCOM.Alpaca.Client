@@ -36,7 +36,7 @@ namespace ASCOM.Alpaca.Client.Request
             _clientId = clientId;
         }
 
-        public IRestRequest BuildRestRequest(Enum command, Method httpMethod, int clientTransactionId = 1234)
+        public IRestRequest BuildRestRequest(Enum command, Method httpMethod, int clientTransactionId = -1)
         {
             return BuildRestRequest(command, httpMethod, new Dictionary<string, object>(), clientTransactionId);
         }
