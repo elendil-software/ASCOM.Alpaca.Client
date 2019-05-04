@@ -5,7 +5,7 @@ using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Request
 {
-    public class RequestBuilder
+    internal class RequestBuilder : IRequestBuilder
     {
         private readonly DeviceType _deviceType;
         private readonly int _deviceNumber;

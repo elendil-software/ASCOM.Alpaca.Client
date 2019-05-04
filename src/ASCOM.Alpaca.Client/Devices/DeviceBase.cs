@@ -16,7 +16,7 @@ namespace ASCOM.Alpaca.Client.Devices
     {
         protected readonly ILogger Logger;
         protected readonly ICommandSender CommandSender;
-        protected readonly RequestBuilder RequestBuilder;
+        protected readonly IRequestBuilder RequestBuilder;
         protected readonly IClientTransactionIdGenerator ClientTransactionIdGenerator;
         protected readonly DeviceConfiguration Configuration;
         protected abstract DeviceType DeviceType { get; }
