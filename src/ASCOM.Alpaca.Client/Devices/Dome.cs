@@ -71,8 +71,8 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task<bool> CanSyncAzimuthAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSyncAzimuthRequest); 
         private IRestRequest BuildCanSyncAzimuthRequest() => RequestBuilder.BuildRestRequest(DomeMethod.CanSyncAzimuth, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
         
-        public ShutterState GetShutterStatus() => ExecuteRequest<ShutterState, ValueResponse<ShutterState>>(BuildGetShutterStatusRequest);
-        public async Task<ShutterState> GetShutterStatusAsync() => await ExecuteRequestAsync<ShutterState, ValueResponse<ShutterState>>(BuildGetShutterStatusRequest);
+        public ShutterState GetShutterStatus() => ExecuteRequest<ShutterState, ShutterStateResponse>(BuildGetShutterStatusRequest);
+        public async Task<ShutterState> GetShutterStatusAsync() => await ExecuteRequestAsync<ShutterState, ShutterStateResponse>(BuildGetShutterStatusRequest);
         private IRestRequest BuildGetShutterStatusRequest() => RequestBuilder.BuildRestRequest(DomeMethod.ShutterStatus, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
         
         public bool IsSlaved() => ExecuteRequest<bool, BoolResponse>(BuildIsSlavedRequest); 

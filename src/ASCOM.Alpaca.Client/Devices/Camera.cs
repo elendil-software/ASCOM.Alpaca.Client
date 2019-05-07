@@ -67,8 +67,8 @@ namespace ASCOM.Alpaca.Client.Devices
             return RequestBuilder.BuildRestRequest(CameraMethod.BinY, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
-        public CameraState GetCameraState() => ExecuteRequest<CameraState, ValueResponse<CameraState>>(BuildGetCameraStateRequest);
-        public async Task<CameraState> GetCameraStateAsync() => await ExecuteRequestAsync<CameraState, ValueResponse<CameraState>>(BuildGetCameraStateRequest);
+        public CameraState GetCameraState() => ExecuteRequest<CameraState, CameraStateResponse>(BuildGetCameraStateRequest);
+        public async Task<CameraState> GetCameraStateAsync() => await ExecuteRequestAsync<CameraState, CameraStateResponse>(BuildGetCameraStateRequest);
         private IRestRequest BuildGetCameraStateRequest() => RequestBuilder.BuildRestRequest(CameraMethod.CameraState, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public int GetCameraXSize() => ExecuteRequest<int, IntResponse>(BuildGetCameraXSizeRequest);
@@ -263,15 +263,15 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 case ImageArrayType.Int:
                     var imageArrayInt3DResponse = JsonConvert.DeserializeObject<ImageArrayInt3DResponse>(response.Content);
-                    return imageArrayInt3DResponse.HandleResponse<Array, ImageArrayInt3DResponse>();
+                    return imageArrayInt3DResponse.HandleResponse<int[,,], ImageArrayInt3DResponse>();
 
                 case ImageArrayType.Short:
                     var imageArrayShort3DResponse = JsonConvert.DeserializeObject<ImageArrayShort3DResponse>(response.Content);
-                    return imageArrayShort3DResponse.HandleResponse<Array, ImageArrayShort3DResponse>();
+                    return imageArrayShort3DResponse.HandleResponse<short[,,], ImageArrayShort3DResponse>();
 
                 case ImageArrayType.Double:
                     var imageArrayDouble3DResponse = JsonConvert.DeserializeObject<ImageArrayDouble3DResponse>(response.Content);
-                    return imageArrayDouble3DResponse.HandleResponse<Array, ImageArrayDouble3DResponse>();
+                    return imageArrayDouble3DResponse.HandleResponse<double[,,], ImageArrayDouble3DResponse>();
 
                 default:
                     throw new InvalidValueException($"'ImageArrayType '{type} ({(int)type})' is not a valid value");
@@ -284,15 +284,15 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 case ImageArrayType.Int:
                     var imageArrayInt2DResponse = JsonConvert.DeserializeObject<ImageArrayInt2DResponse>(response.Content);
-                    return imageArrayInt2DResponse.HandleResponse<Array, ImageArrayInt2DResponse>();
+                    return imageArrayInt2DResponse.HandleResponse<int[,], ImageArrayInt2DResponse>();
 
                 case ImageArrayType.Short:
                     var imageArrayShort2DResponse = JsonConvert.DeserializeObject<ImageArrayShort2DResponse>(response.Content);
-                    return imageArrayShort2DResponse.HandleResponse<Array, ImageArrayShort2DResponse>();
+                    return imageArrayShort2DResponse.HandleResponse<short[,], ImageArrayShort2DResponse>();
 
                 case ImageArrayType.Double:
                     var imageArrayDouble2DResponse = JsonConvert.DeserializeObject<ImageArrayDouble2DResponse>(response.Content);
-                    return imageArrayDouble2DResponse.HandleResponse<Array, ImageArrayDouble2DResponse>();
+                    return imageArrayDouble2DResponse.HandleResponse<double[,], ImageArrayDouble2DResponse>();
 
                 default:
                     throw new InvalidValueException($"'ImageArrayType '{type} ({(int)type})' is not a valid value");
@@ -400,8 +400,8 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task<string> GetSensorNameAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetSensorNameRequest);
         private IRestRequest BuildGetSensorNameRequest() => RequestBuilder.BuildRestRequest(CameraMethod.SensorName, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
-        public SensorType GetSensorType() => ExecuteRequest<SensorType, ValueResponse<SensorType>>(BuildGetSensorTypeRequest);
-        public async Task<SensorType> GetSensorTypeAsync() => await ExecuteRequestAsync<SensorType, ValueResponse<SensorType>>(BuildGetSensorTypeRequest);
+        public SensorType GetSensorType() => ExecuteRequest<SensorType, SensorTypeResponse>(BuildGetSensorTypeRequest);
+        public async Task<SensorType> GetSensorTypeAsync() => await ExecuteRequestAsync<SensorType, SensorTypeResponse>(BuildGetSensorTypeRequest);
         private IRestRequest BuildGetSensorTypeRequest() => RequestBuilder.BuildRestRequest(CameraMethod.SensorType, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public double GetCCDTemperatureSetPoint() => ExecuteRequest<double, DoubleResponse>(BuildGetCCDTemperatureSetPointRequest);

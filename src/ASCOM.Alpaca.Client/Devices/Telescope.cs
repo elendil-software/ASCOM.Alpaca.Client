@@ -24,8 +24,8 @@ namespace ASCOM.Alpaca.Client.Devices
 
         protected override DeviceType DeviceType { get; } = DeviceType.Telescope;
 
-        public AlignmentMode GetAlignmentMode() => ExecuteRequest<AlignmentMode, ValueResponse<AlignmentMode>>(BuildGetAlignmentModeRequest);    
-        public async Task<AlignmentMode> GetAlignmentModeAsync() => await ExecuteRequestAsync<AlignmentMode, ValueResponse<AlignmentMode>>(BuildGetAlignmentModeRequest);   
+        public AlignmentMode GetAlignmentMode() => ExecuteRequest<AlignmentMode, AlignmentModeResponse>(BuildGetAlignmentModeRequest);    
+        public async Task<AlignmentMode> GetAlignmentModeAsync() => await ExecuteRequestAsync<AlignmentMode, AlignmentModeResponse>(BuildGetAlignmentModeRequest);   
         private IRestRequest BuildGetAlignmentModeRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.AlignmentMode, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public double GetAltitude() => ExecuteRequest<double, DoubleResponse>(BuildGetAltitudeRequest);
@@ -146,8 +146,8 @@ namespace ASCOM.Alpaca.Client.Devices
             return RequestBuilder.BuildRestRequest(TelescopeMethod.DoesRefraction, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
-        public EquatorialCoordinateType GetEquatorialSystem() => ExecuteRequest<EquatorialCoordinateType, ValueResponse<EquatorialCoordinateType>>(BuildGetEquatorialSystemRequest);
-        public async Task<EquatorialCoordinateType> GetEquatorialSystemAsync() => await ExecuteRequestAsync<EquatorialCoordinateType, ValueResponse<EquatorialCoordinateType>>(BuildGetEquatorialSystemRequest);
+        public EquatorialCoordinateType GetEquatorialSystem() => ExecuteRequest<EquatorialCoordinateType, EquatorialCoordinateTypeResponse>(BuildGetEquatorialSystemRequest);
+        public async Task<EquatorialCoordinateType> GetEquatorialSystemAsync() => await ExecuteRequestAsync<EquatorialCoordinateType, EquatorialCoordinateTypeResponse>(BuildGetEquatorialSystemRequest);
         private IRestRequest BuildGetEquatorialSystemRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.EquatorialSystem, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public double GetFocalLength() => ExecuteRequest<double, DoubleResponse>(BuildGetFocalLengthRequest);
@@ -207,8 +207,8 @@ namespace ASCOM.Alpaca.Client.Devices
             return RequestBuilder.BuildRestRequest(TelescopeMethod.RightAscensionRate, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
-        public PierSide GetSideOfPier() => ExecuteRequest<PierSide, ValueResponse<PierSide>>(BuildGetSideOfPierRequest);
-        public async Task<PierSide> GetSideOfPierAsync() => await ExecuteRequestAsync<PierSide, ValueResponse<PierSide>>(BuildGetSideOfPierRequest);
+        public PierSide GetSideOfPier() => ExecuteRequest<PierSide, PierSideResponse>(BuildGetSideOfPierRequest);
+        public async Task<PierSide> GetSideOfPierAsync() => await ExecuteRequestAsync<PierSide, PierSideResponse>(BuildGetSideOfPierRequest);
         private IRestRequest BuildGetSideOfPierRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SideOfPier, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public void SetSideOfPier(PierSide sideOfPier) => ExecuteRequest(BuildSetSideOfPierRequest, sideOfPier);
@@ -335,8 +335,8 @@ namespace ASCOM.Alpaca.Client.Devices
             return RequestBuilder.BuildRestRequest(TelescopeMethod.Tracking, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
-        public DriveRate GetTrackingRate() => ExecuteRequest<DriveRate, ValueResponse<DriveRate>>(BuildGetTrackingRateRequest);
-        public async Task<DriveRate> GetTrackingRateAsync() => await ExecuteRequestAsync<DriveRate, ValueResponse<DriveRate>>(BuildGetTrackingRateRequest);
+        public DriveRate GetTrackingRate() => ExecuteRequest<DriveRate, DriveRateResponse>(BuildGetTrackingRateRequest);
+        public async Task<DriveRate> GetTrackingRateAsync() => await ExecuteRequestAsync<DriveRate, DriveRateResponse>(BuildGetTrackingRateRequest);
         private IRestRequest BuildGetTrackingRateRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.TrackingRate, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public void SetTrackingRate(DriveRate trackingRate) => ExecuteRequest(BuildSetTrackingRateRequest, trackingRate);
@@ -350,8 +350,8 @@ namespace ASCOM.Alpaca.Client.Devices
             return RequestBuilder.BuildRestRequest(TelescopeMethod.TrackingRate, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
-        public List<DriveRate> GetTrackingRates() => ExecuteRequest<List<DriveRate>, ValueResponse<List<DriveRate>>>(BuildGetTrackingRatesRequest);
-        public async Task<List<DriveRate>> GetTrackingRatesAsync() => await ExecuteRequestAsync<List<DriveRate>, ValueResponse<List<DriveRate>>>(BuildGetTrackingRatesRequest);
+        public List<DriveRate> GetTrackingRates() => ExecuteRequest<List<DriveRate>, DriveRatesResponse>(BuildGetTrackingRatesRequest);
+        public async Task<List<DriveRate>> GetTrackingRatesAsync() => await ExecuteRequestAsync<List<DriveRate>, DriveRatesResponse>(BuildGetTrackingRatesRequest);
         private IRestRequest BuildGetTrackingRatesRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.TrackingRates, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public DateTime GetUtcDate()
@@ -381,8 +381,8 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task AbortSlewAsync() => await ExecuteRequestAsync(BuildAbortSlewRequest);
         private IRestRequest BuildAbortSlewRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.AbortSlew, Method.PUT, ClientTransactionIdGenerator.GetTransactionId());
 
-        public List<AxisRate> GetAxisRates(TelescopeAxis axis) => ExecuteRequest<List<AxisRate>, ValueResponse<List<AxisRate>>, TelescopeAxis>(BuildGetAxisRatesRequest, axis);
-        public async Task<List<AxisRate>> GetAxisRatesAsync(TelescopeAxis axis) => await ExecuteRequestAsync<List<AxisRate>, ValueResponse<List<AxisRate>>, TelescopeAxis>(BuildGetAxisRatesRequest, axis);
+        public List<AxisRate> GetAxisRates(TelescopeAxis axis) => ExecuteRequest<List<AxisRate>, AxisRatesResponse, TelescopeAxis>(BuildGetAxisRatesRequest, axis);
+        public async Task<List<AxisRate>> GetAxisRatesAsync(TelescopeAxis axis) => await ExecuteRequestAsync<List<AxisRate>, AxisRatesResponse, TelescopeAxis>(BuildGetAxisRatesRequest, axis);
         private IRestRequest BuildGetAxisRatesRequest(TelescopeAxis axis)
         {
             var parameters = new Dictionary<string, object>
@@ -404,10 +404,10 @@ namespace ASCOM.Alpaca.Client.Devices
         }
 
         public PierSide GetDestinationSideOfPier(double rightAscension, double declination) => 
-            ExecuteRequest<PierSide, ValueResponse<PierSide>, double, double>(BuildGetDestinationSideOfPierRequest, rightAscension, declination);
+            ExecuteRequest<PierSide, PierSideResponse, double, double>(BuildGetDestinationSideOfPierRequest, rightAscension, declination);
             
         public async Task<PierSide> GetDestinationSideOfPierAsync(double rightAscension, double declination) =>
-            await ExecuteRequestAsync<PierSide, ValueResponse<PierSide>, double, double>(BuildGetDestinationSideOfPierRequest, rightAscension, declination);
+            await ExecuteRequestAsync<PierSide, PierSideResponse, double, double>(BuildGetDestinationSideOfPierRequest, rightAscension, declination);
         private IRestRequest BuildGetDestinationSideOfPierRequest(double rightAscension, double declination)
         {
             var parameters = new Dictionary<string, object>

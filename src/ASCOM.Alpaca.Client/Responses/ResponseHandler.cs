@@ -1,3 +1,4 @@
+using ASCOM.Alpaca.Errors;
 using ASCOM.Alpaca.Exceptions;
 using ASCOM.Alpaca.Responses;
 

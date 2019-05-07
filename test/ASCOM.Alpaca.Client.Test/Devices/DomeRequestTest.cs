@@ -529,9 +529,9 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
-                .Setup(x => x.ExecuteRequest<ValueResponse<ShutterState>>(It.IsAny<string>(), It.IsAny<RestRequest>()))
+                .Setup(x => x.ExecuteRequest<ShutterStateResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new ValueResponse<ShutterState>());
+                .Returns(new ShutterStateResponse());
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
             //Act
@@ -550,9 +550,9 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
-                .Setup(x => x.ExecuteRequestAsync<ValueResponse<ShutterState>>(It.IsAny<string>(), It.IsAny<RestRequest>()))
+                .Setup(x => x.ExecuteRequestAsync<ShutterStateResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new ValueResponse<ShutterState>()));
+                .Returns(Task.FromResult(new ShutterStateResponse()));
             var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
             //Act
