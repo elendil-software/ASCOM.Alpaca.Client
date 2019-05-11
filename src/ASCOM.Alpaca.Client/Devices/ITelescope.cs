@@ -226,30 +226,6 @@ namespace ASCOM.Alpaca.Client.Devices
         Task<bool> CanSlewAltAzAsync();
 
         /// <summary>
-        /// Indicates whether the telescope can slew asynchronously to AltAz coordinates.
-        /// </summary>
-        /// <returns></returns>
-        bool CanSlewAsyncAltAz();
-
-        /// <summary>
-        /// Indicates whether the telescope can slew asynchronously to AltAz coordinates.
-        /// </summary>
-        /// <returns></returns>
-        Task<bool> CanSlewAsyncAltAzAsync();
-
-        /// <summary>
-        /// Indicates whether the telescope can slew asynchronously.
-        /// </summary>
-        /// <returns></returns>
-        bool CanAsyncSlew();
-
-        /// <summary>
-        /// Indicates whether the telescope can slew asynchronously.
-        /// </summary>
-        /// <returns></returns>
-        Task<bool> CanAsyncSlewAsync();
-
-        /// <summary>
         /// Indicates whether the telescope can sync to equatorial coordinates.
         /// </summary>
         /// <returns></returns>
@@ -858,22 +834,6 @@ namespace ASCOM.Alpaca.Client.Devices
         /// <param name="altitude">Altitude coordinate (degrees, positive up)</param>
         /// <param name="azimuth">Azimuth coordinate (degrees, North-referenced, positive East/clockwise)</param>
         Task SlewToAltAzAsync(double altitude, double azimuth);
-        
-        /// <summary>
-        /// Move the telescope to the given local horizontal coordinates, return immediatley after the slew starts.
-        /// The client can poll the Slewing method to determine when the mount reaches the intended coordinates.
-        /// </summary>
-        /// <param name="altitude">Altitude coordinate (degrees, positive up)</param>
-        /// <param name="azimuth">Azimuth coordinate (degrees, North-referenced, positive East/clockwise)</param>
-        void SlewAsyncToAltAz(double altitude, double azimuth);
-
-        /// <summary>
-        /// Move the telescope to the given local horizontal coordinates, return immediatley after the slew starts.
-        /// The client can poll the Slewing method to determine when the mount reaches the intended coordinates.
-        /// </summary>
-        /// <param name="altitude">Altitude coordinate (degrees, positive up)</param>
-        /// <param name="azimuth">Azimuth coordinate (degrees, North-referenced, positive East/clockwise)</param>
-        Task SlewAsyncToAltAzAsync(double altitude, double azimuth);
 
         /// <summary>
         /// Synchronously slew to the given equatorial coordinates.
@@ -890,20 +850,6 @@ namespace ASCOM.Alpaca.Client.Devices
         Task SlewToCoordinatesAsync(double rightAscension, double declination);
 
         /// <summary>
-        /// Asynchronously slew to the given equatorial coordinates.
-        /// </summary>
-        /// <param name="rightAscension">Right Ascension coordinate (hours)</param>
-        /// <param name="declination">Declination coordinate (degrees)</param>
-        void SlewAsyncToCoordinates(double rightAscension, double declination);
-
-        /// <summary>
-        /// Asynchronously slew to the given equatorial coordinates.
-        /// </summary>
-        /// <param name="rightAscension">Right Ascension coordinate (hours)</param>
-        /// <param name="declination">Declination coordinate (degrees)</param>
-        Task SlewAsyncToCoordinatesAsync(double rightAscension, double declination);
-        
-        /// <summary>
         /// Move the telescope to the TargetRightAscension and TargetDeclination equatorial coordinates, return
         /// when slew is complete
         /// </summary>
@@ -914,18 +860,6 @@ namespace ASCOM.Alpaca.Client.Devices
         /// when slew is complete
         /// </summary>
         Task SlewToTargetAsync();
-        
-        /// <summary>
-        /// Move the telescope to the TargetRightAscension and TargetDeclination equatorial coordinates, return immediatley after the slew starts.
-        /// The client can poll the Slewing method to determine when the mount reaches the intended coordinates.
-        /// </summary>
-        void SlewAsyncToTarget();
-
-        /// <summary>
-        /// Move the telescope to the TargetRightAscension and TargetDeclination equatorial coordinates, return immediatley after the slew starts.
-        /// The client can poll the Slewing method to determine when the mount reaches the intended coordinates.
-        /// </summary>
-        Task SlewAsyncToTargetAsync();
 
         /// <summary>
         /// Matches the scope's local horizontal coordinates to the given local horizontal coordinates.

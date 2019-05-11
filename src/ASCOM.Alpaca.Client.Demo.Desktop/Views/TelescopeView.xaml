@@ -90,15 +90,11 @@
             <Label Grid.Row="2" Grid.Column="5" Name="CanSlew">...</Label>
             <Label Grid.Row="2" Grid.Column="6" FontWeight="Bold">CanSlewAltAz</Label>
             <Label Grid.Row="2" Grid.Column="7" Name="CanSlewAltAz">...</Label>
-
-            <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">CanSlewAltAzAsync</Label>
-            <Label Grid.Row="3" Grid.Column="1" Name="CanSlewAltAzAsync">...</Label>
-            <Label Grid.Row="3" Grid.Column="2" FontWeight="Bold">CanSlewAsync</Label>
-            <Label Grid.Row="3" Grid.Column="3" Name="CanSlewAsync">...</Label>
-            <Label Grid.Row="3" Grid.Column="4" FontWeight="Bold">CanSync</Label>
-            <Label Grid.Row="3" Grid.Column="5" Name="CanSync">...</Label>
-            <Label Grid.Row="3" Grid.Column="6" FontWeight="Bold">CanSyncAltAz</Label>
-            <Label Grid.Row="3" Grid.Column="7" Name="CanSyncAltAz">...</Label>
+            
+            <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">CanSync</Label>
+            <Label Grid.Row="3" Grid.Column="1" Name="CanSync">...</Label>
+            <Label Grid.Row="3" Grid.Column="2" FontWeight="Bold">CanSyncAltAz</Label>
+            <Label Grid.Row="3" Grid.Column="3" Name="CanSyncAltAz">...</Label>
         </Grid>
         
         <StackPanel Orientation="Horizontal">

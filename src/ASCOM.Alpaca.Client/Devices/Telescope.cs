@@ -9,6 +9,7 @@ using ASCOM.Alpaca.Devices.Telescope;
 using ASCOM.Alpaca.Responses;
 using ASCOM.Alpaca.Logging;
 using RestSharp;
+using NotImplementedException = ASCOM.Alpaca.Exceptions.NotImplementedException;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
@@ -88,22 +89,62 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task<bool> CanSetTrackingAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSetTrackingRequest);
         private IRestRequest BuildCanSetTrackingRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSetTracking, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
-        public bool CanSlew() => ExecuteRequest<bool, BoolResponse>(BuildCanSlewRequest);
-        public async Task<bool> CanSlewAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSlewRequest);
+        public bool CanSlew()
+        {
+            bool canSlew = ExecuteRequest<bool, BoolResponse>(BuildCanSlewRequest);
+
+            if (!canSlew)
+            {
+                bool canSlewAsync = ExecuteRequest<bool, BoolResponse>(BuildCanAsyncSlewRequest);
+                return canSlewAsync;
+            }
+
+            return canSlew;
+        }
+
+        public async Task<bool> CanSlewAsync()
+        {
+            bool canSlew = await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSlewRequest);
+            
+            if (!canSlew)
+            {
+                canSlew = await ExecuteRequestAsync<bool, BoolResponse>(BuildCanAsyncSlewRequest);
+            }
+
+            return canSlew;
+        }
+
         private IRestRequest BuildCanSlewRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSlew, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-
-        public bool CanSlewAltAz() => ExecuteRequest<bool, BoolResponse>(BuildCanSlewAltAzRequest);
-        public async Task<bool> CanSlewAltAzAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSlewAltAzRequest);
-        private IRestRequest BuildCanSlewAltAzRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSlewAltAz, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-        
-        public bool CanSlewAsyncAltAz() => ExecuteRequest<bool, BoolResponse>(BuildCanAsyncSlewAltAzRequest);
-        public async Task<bool> CanSlewAsyncAltAzAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanAsyncSlewAltAzRequest);
-        private IRestRequest BuildCanAsyncSlewAltAzRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSlewAltAzAsync, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
-
-        public bool CanAsyncSlew() => ExecuteRequest<bool, BoolResponse>(BuildCanAsyncSlewRequest);
-        public async Task<bool> CanAsyncSlewAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanAsyncSlewRequest);
         private IRestRequest BuildCanAsyncSlewRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSlewAsync, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
+        public bool CanSlewAltAz()
+        {
+            bool canSlewAltAz = ExecuteRequest<bool, BoolResponse>(BuildCanSlewAltAzRequest);
+
+            if (!canSlewAltAz)
+            {
+                canSlewAltAz = ExecuteRequest<bool, BoolResponse>(BuildCanAsyncSlewAltAzRequest);
+            }
+
+            return canSlewAltAz;
+        }
+
+        public async Task<bool> CanSlewAltAzAsync()
+        {
+            bool canSlewAltAz = await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSlewAltAzRequest);
+            
+            if (!canSlewAltAz)
+            {
+                canSlewAltAz = await ExecuteRequestAsync<bool, BoolResponse>(BuildCanAsyncSlewAltAzRequest);
+            }
+
+            return canSlewAltAz;
+        }
+
+        private IRestRequest BuildCanSlewAltAzRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSlewAltAz, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+        private IRestRequest BuildCanAsyncSlewAltAzRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSlewAltAzAsync, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+
+        
         public bool CanSync() => ExecuteRequest<bool, BoolResponse>(BuildCanSyncRequest);
         public async Task<bool> CanSyncAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSyncRequest);
         private IRestRequest BuildCanSyncRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSync, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
@@ -454,8 +495,32 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task SetParkAsync() => await ExecuteRequestAsync(BuildSetParkRequest);
         private IRestRequest BuildSetParkRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SetPark, Method.PUT, ClientTransactionIdGenerator.GetTransactionId());
 
-        public void SlewToAltAz(double altitude, double azimuth) => ExecuteRequest(BuildSlewToAltAzRequest, altitude, azimuth);
-        public async Task SlewToAltAzAsync(double altitude, double azimuth) => await ExecuteRequestAsync(BuildSlewToAltAzRequest, altitude, azimuth);
+        public void SlewToAltAz(double altitude, double azimuth)
+        {
+            try
+            {
+                ExecuteRequest(BuildSlewAsyncToAltAzRequest, altitude, azimuth);
+            }
+            catch (NotImplementedException ex)
+            {
+                Logger.LogDebug(ex, "slewtoaltazasync is not supported, try with slewtoaltaz");
+                ExecuteRequest(BuildSlewToAltAzRequest, altitude, azimuth);             
+            }
+        }
+
+        public async Task SlewToAltAzAsync(double altitude, double azimuth)
+        {
+            try
+            {
+                await ExecuteRequestAsync(BuildSlewAsyncToAltAzRequest, altitude, azimuth);
+            }
+            catch (NotImplementedException ex)
+            {
+                Logger.LogDebug(ex, "slewtoaltazasync is not supported, try with slewtoaltaz");
+                await ExecuteRequestAsync(BuildSlewToAltAzRequest, altitude, azimuth);             
+            }
+        }
+
         private IRestRequest BuildSlewToAltAzRequest(double altitude, double azimuth)
         {
             var parameters = new Dictionary<string, object>
@@ -465,9 +530,6 @@ namespace ASCOM.Alpaca.Client.Devices
             };
             return RequestBuilder.BuildRestRequest(TelescopeMethod.SlewToAltAz, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
-
-        public void SlewAsyncToAltAz(double altitude, double azimuth) => ExecuteRequest(BuildSlewAsyncToAltAzRequest, altitude, azimuth);
-        public async Task SlewAsyncToAltAzAsync(double altitude, double azimuth) => await ExecuteRequestAsync(BuildSlewAsyncToAltAzRequest, altitude, azimuth);
         private IRestRequest BuildSlewAsyncToAltAzRequest(double altitude, double azimuth)
         {
             var parameters = new Dictionary<string, object>
@@ -477,9 +539,31 @@ namespace ASCOM.Alpaca.Client.Devices
             };
             return RequestBuilder.BuildRestRequest(TelescopeMethod.SlewToAltAzAsync, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
-
-        public void SlewToCoordinates(double rightAscension, double declination) => ExecuteRequest(BuildSlewToCoordinatesRequest, rightAscension, declination);
-        public async Task SlewToCoordinatesAsync(double rightAscension, double declination) => await ExecuteRequestAsync(BuildSlewToCoordinatesRequest, rightAscension, declination);
+        
+        public void SlewToCoordinates(double rightAscension, double declination)
+        {
+            try
+            {
+                ExecuteRequest(BuildSlewAsyncToCoordinatesRequest, rightAscension, declination);
+            }
+            catch (NotImplementedException ex)
+            {
+                Logger.LogDebug(ex, "slewtocoordinatesasync is not supported, try with slewtocoordinates");
+                ExecuteRequest(BuildSlewToCoordinatesRequest, rightAscension, declination);             
+            }
+        }
+        public async Task SlewToCoordinatesAsync(double rightAscension, double declination)
+        {
+            try
+            {
+                await ExecuteRequestAsync(BuildSlewAsyncToCoordinatesRequest, rightAscension, declination);
+            }
+            catch (NotImplementedException ex)
+            {
+                Logger.LogDebug(ex, "slewtocoordinatesasync is not supported, try with slewtocoordinates");
+                await ExecuteRequestAsync(BuildSlewToCoordinatesRequest, rightAscension, declination);
+            }
+        }
         private IRestRequest BuildSlewToCoordinatesRequest(double rightAscension, double declination)
         {
             var parameters = new Dictionary<string, object>
@@ -489,9 +573,6 @@ namespace ASCOM.Alpaca.Client.Devices
             };
             return RequestBuilder.BuildRestRequest(TelescopeMethod.SlewToCoordinates, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
-
-        public void SlewAsyncToCoordinates(double rightAscension, double declination) => ExecuteRequest(BuildSlewAsyncToCoordinatesRequest, rightAscension, declination);
-        public async Task SlewAsyncToCoordinatesAsync(double rightAscension, double declination) => await ExecuteRequestAsync(BuildSlewAsyncToCoordinatesRequest, rightAscension, declination);
         private IRestRequest BuildSlewAsyncToCoordinatesRequest(double rightAscension, double declination)
         {
             var parameters = new Dictionary<string, object>
@@ -501,13 +582,32 @@ namespace ASCOM.Alpaca.Client.Devices
             };
             return RequestBuilder.BuildRestRequest(TelescopeMethod.SlewToCoordinatesAsync, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
-
-        public void SlewToTarget() => ExecuteRequest(BuildSlewToTargetRequest);
-        public async Task SlewToTargetAsync() => await ExecuteRequestAsync(BuildSlewToTargetRequest);
+        
+        public void SlewToTarget()
+        {
+            try
+            {
+                ExecuteRequest(BuildSlewAsyncToTargetRequest);
+            }
+            catch (NotImplementedException ex)
+            {
+                Logger.LogDebug(ex, "slewtotargetasync is not supported, try with slewtotarget");
+                ExecuteRequest(BuildSlewToTargetRequest);
+            }
+        }
+        public async Task SlewToTargetAsync()
+        {
+            try
+            {
+                await ExecuteRequestAsync(BuildSlewAsyncToTargetRequest);
+            }
+            catch (NotImplementedException ex)
+            {
+                Logger.LogDebug(ex, "slewtotargetasync is not supported, try with slewtotarget");
+                await ExecuteRequestAsync(BuildSlewToTargetRequest);
+            }
+        }
         private IRestRequest BuildSlewToTargetRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SlewToTarget, Method.PUT, ClientTransactionIdGenerator.GetTransactionId());
-
-        public void SlewAsyncToTarget() => ExecuteRequest(BuildSlewAsyncToTargetRequest);
-        public async Task SlewAsyncToTargetAsync() => await ExecuteRequestAsync(BuildSlewAsyncToTargetRequest);
         private IRestRequest BuildSlewAsyncToTargetRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SlewToTargetAsync, Method.PUT, ClientTransactionIdGenerator.GetTransactionId());
 
         public void SyncToAltAz(double altitude, double azimuth) => ExecuteRequest(BuildSyncToAltAzRequest, altitude, azimuth);

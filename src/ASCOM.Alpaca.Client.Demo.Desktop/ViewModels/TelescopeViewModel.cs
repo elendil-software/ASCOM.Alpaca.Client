@@ -23,8 +23,6 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private bool _canSetTracking;
         private bool _canSlew;
         private bool _canSlewAltAz;
-        private bool _canSlewAltAzAsync;
-        private bool _canSlewAsync;
         private bool _canSync;
         private bool _canSyncAltAz;
         private bool _atHome;
@@ -159,26 +157,6 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             {
                 _canSlewAltAz = value;
                 NotifyOfPropertyChange(() => CanSlewAltAz);
-            }
-        }
-
-        public bool CanSlewAltAzAsync
-        {
-            get => _canSlewAltAzAsync;
-            set
-            {
-                _canSlewAltAzAsync = value;
-                NotifyOfPropertyChange(() => CanSlewAltAzAsync);
-            }
-        }
-
-        public bool CanSlewAsync
-        {
-            get => _canSlewAsync;
-            set
-            {
-                _canSlewAsync = value;
-                NotifyOfPropertyChange(() => CanSlewAsync);
             }
         }
 
@@ -354,8 +332,6 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             CanMoveAxis = await _telescope.CanMoveAxisAsync(TelescopeAxis.Primary);
             CanSlew = await _telescope.CanSlewAsync();
             CanSlewAltAz = await _telescope.CanSlewAltAzAsync();
-            CanSlewAltAzAsync = await _telescope.CanSlewAsyncAltAzAsync();
-            CanSlewAsync = await _telescope.CanAsyncSlewAsync();
             CanSync = await _telescope.CanSyncAsync();
             CanSyncAltAz = await _telescope.CanSyncAltAzAsync();
 

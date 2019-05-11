@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Devices;
+using ASCOM.Alpaca.Logging;
+using Moq;
 using RestSharp;
 using Xunit;
 
@@ -11,6 +13,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
     public abstract class DeviceRequestsTestBase
     {
         protected abstract DeviceType DeviceType { get; }
+        protected readonly Mock<ILogger> Logger = new Mock<ILogger>();
         
         protected void AssertCommonParameters(List<Parameter> sentRequestParameters,
             DeviceConfiguration deviceConfiguration, string commandName)

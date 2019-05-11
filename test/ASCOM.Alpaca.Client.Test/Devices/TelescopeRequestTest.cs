@@ -7,6 +7,7 @@ using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Devices;
 using ASCOM.Alpaca.Devices.Telescope;
+using ASCOM.Alpaca.Errors;
 using ASCOM.Alpaca.Responses;
 using Moq;
 using RestSharp;
@@ -45,7 +46,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         public async Task GetAlignmentModeAsync_SendValidRequest()
         {
             //Arrange
-            string commandName = "alignmentmode";
+            string commandName = "alignmentmode"; 
             IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
@@ -697,11 +698,12 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canslew";
-            IRestRequest sentRequest = null;
+            string commandNameAsync = "canslewasync";
+            List<IRestRequest> sentRequests = new List<IRestRequest>();
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
                 .Returns(new BoolResponse());
             var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -709,8 +711,10 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             telescope.CanSlew();
             
             //Assert
-            Assert.Equal(Method.GET, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
+            Assert.Equal(Method.GET, sentRequests[0].Method);
+            AssertCommonParameters(sentRequests[0].Parameters, _deviceConfiguration, commandName);
+            Assert.Equal(Method.GET, sentRequests[1].Method);
+            AssertCommonParameters(sentRequests[1].Parameters, _deviceConfiguration, commandNameAsync);
         }
         
         [Fact]
@@ -718,11 +722,12 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canslew";
-            IRestRequest sentRequest = null;
+            string commandNameAsync = "canslewasync";
+            List<IRestRequest> sentRequests = new List<IRestRequest>();
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
                 .Returns(Task.FromResult(new BoolResponse()));
             var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -730,8 +735,10 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             await telescope.CanSlewAsync();
             
             //Assert
-            Assert.Equal(Method.GET, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
+            Assert.Equal(Method.GET, sentRequests[0].Method);
+            AssertCommonParameters(sentRequests[0].Parameters, _deviceConfiguration, commandName);
+            Assert.Equal(Method.GET, sentRequests[1].Method);
+            AssertCommonParameters(sentRequests[1].Parameters, _deviceConfiguration, commandNameAsync);
         }
         
         [Fact]
@@ -739,11 +746,12 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canslewaltaz";
-            IRestRequest sentRequest = null;
+            string commandNameAsync = "canslewaltazasync";
+            List<IRestRequest> sentRequests = new List<IRestRequest>();
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
                 .Returns(new BoolResponse());
             var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -751,8 +759,10 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             telescope.CanSlewAltAz();
             
             //Assert
-            Assert.Equal(Method.GET, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
+            Assert.Equal(Method.GET, sentRequests[0].Method);
+            AssertCommonParameters(sentRequests[0].Parameters, _deviceConfiguration, commandName);
+            Assert.Equal(Method.GET, sentRequests[1].Method);
+            AssertCommonParameters(sentRequests[1].Parameters, _deviceConfiguration, commandNameAsync);
         }
         
         [Fact]
@@ -760,11 +770,12 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "canslewaltaz";
-            IRestRequest sentRequest = null;
+            string commandNameAsync = "canslewaltazasync";
+            List<IRestRequest> sentRequests = new List<IRestRequest>();
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
+                .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
                 .Returns(Task.FromResult(new BoolResponse()));
             var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
@@ -772,94 +783,12 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             await telescope.CanSlewAltAzAsync();
             
             //Assert
-            Assert.Equal(Method.GET, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
+            Assert.Equal(Method.GET, sentRequests[0].Method);
+            AssertCommonParameters(sentRequests[0].Parameters, _deviceConfiguration, commandName);
+            Assert.Equal(Method.GET, sentRequests[1].Method);
+            AssertCommonParameters(sentRequests[1].Parameters, _deviceConfiguration, commandNameAsync);
         }
-        
-        [Fact]
-        public void CanSlewAsyncAltAz_SendValidRequest()
-        {
-            //Arrange
-            string commandName = "canslewaltazasync";
-            IRestRequest sentRequest = null;
-            var commandSenderMock = new Mock<ICommandSender>();
-            commandSenderMock
-                .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
-            
-            //Act
-            telescope.CanSlewAsyncAltAz();
-            
-            //Assert
-            Assert.Equal(Method.GET, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-        }
-        
-        [Fact]
-        public async Task CanSlewAsyncAltAzAsync_SendValidRequest()
-        {
-            //Arrange
-            string commandName = "canslewaltazasync";
-            IRestRequest sentRequest = null;
-            var commandSenderMock = new Mock<ICommandSender>();
-            commandSenderMock
-                .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
-            
-            //Act
-            await telescope.CanSlewAsyncAltAzAsync();
-            
-            //Assert
-            Assert.Equal(Method.GET, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-        }
-        
-        [Fact]
-        public void CanAsyncSlew_SendValidRequest()
-        {
-            //Arrange
-            string commandName = "canslewasync";
-            IRestRequest sentRequest = null;
-            var commandSenderMock = new Mock<ICommandSender>();
-            commandSenderMock
-                .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
-            
-            //Act
-            telescope.CanAsyncSlew();
-            
-            //Assert
-            Assert.Equal(Method.GET, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-        }
-        
-        [Fact]
-        public async Task CanAsyncSlewAsync_SendValidRequest()
-        {
-            //Arrange
-            string commandName = "canslewasync";
-            IRestRequest sentRequest = null;
-            var commandSenderMock = new Mock<ICommandSender>();
-            commandSenderMock
-                .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
-            
-            //Act
-            await telescope.CanAsyncSlewAsync();
-            
-            //Assert
-            Assert.Equal(Method.GET, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-        }
-        
+
         [Fact]
         public void CanSync_SendValidRequest()
         {
@@ -3061,134 +2990,95 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "slewtoaltaz";
+            string commandNameAsync = "slewtoaltazasync";
             string altitudeParameterName = "Altitude";
             double altitudeParameterValue = 2;
             string azimuthParameterName = "Azimuth";
             double azimuthParameterValue = 2;
-            IRestRequest sentRequest = null;
+            List<IRestRequest> sentRequests = new List<IRestRequest>();
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new Response());
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+                .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
+                .ReturnsInOrder(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }, new Response());
+            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object, Logger.Object);
             
             //Act
             telescope.SlewToAltAz(altitudeParameterValue, azimuthParameterValue);
             
             //Assert
-            Assert.Equal(Method.PUT, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-            AssertParameter(sentRequest.Parameters, altitudeParameterName, altitudeParameterValue);
-            AssertParameter(sentRequest.Parameters, azimuthParameterName, azimuthParameterValue);
+            Assert.Equal(Method.PUT, sentRequests[0].Method);
+            AssertCommonParameters(sentRequests[0].Parameters, _deviceConfiguration, commandNameAsync);
+            AssertParameter(sentRequests[0].Parameters, altitudeParameterName, altitudeParameterValue);
+            AssertParameter(sentRequests[0].Parameters, azimuthParameterName, azimuthParameterValue);
+            Assert.Equal(Method.PUT, sentRequests[1].Method);
+            AssertCommonParameters(sentRequests[1].Parameters, _deviceConfiguration, commandName);
+            AssertParameter(sentRequests[1].Parameters, altitudeParameterName, altitudeParameterValue);
+            AssertParameter(sentRequests[1].Parameters, azimuthParameterName, azimuthParameterValue);
         }
-        
+
         [Fact]
         public async Task SlewToAltAzAsync_SendValidRequest()
         {
             //Arrange
             string commandName = "slewtoaltaz";
+            string commandNameAsync = "slewtoaltazasync";
             string altitudeParameterName = "Altitude";
             double altitudeParameterValue = 2;
             string azimuthParameterName = "Azimuth";
             double azimuthParameterValue = 2;
-            IRestRequest sentRequest = null;
+            List<IRestRequest> sentRequests = new List<IRestRequest>();
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new Response()));
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
-            
+                .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
+                .ReturnsInOrder(Task.FromResult(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }), Task.FromResult(new Response()));
+            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object, Logger.Object);
+
             //Act
             await telescope.SlewToAltAzAsync(altitudeParameterValue, azimuthParameterValue);
-            
+
             //Assert
-            Assert.Equal(Method.PUT, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-            AssertParameter(sentRequest.Parameters, altitudeParameterName, altitudeParameterValue);
-            AssertParameter(sentRequest.Parameters, azimuthParameterName, azimuthParameterValue);
+            Assert.Equal(Method.PUT, sentRequests[0].Method);
+            AssertCommonParameters(sentRequests[0].Parameters, _deviceConfiguration, commandNameAsync);
+            AssertParameter(sentRequests[0].Parameters, altitudeParameterName, altitudeParameterValue);
+            AssertParameter(sentRequests[0].Parameters, azimuthParameterName, azimuthParameterValue);
+            Assert.Equal(Method.PUT, sentRequests[1].Method);
+            AssertCommonParameters(sentRequests[1].Parameters, _deviceConfiguration, commandName);
+            AssertParameter(sentRequests[1].Parameters, altitudeParameterName, altitudeParameterValue);
+            AssertParameter(sentRequests[1].Parameters, azimuthParameterName, azimuthParameterValue);
         }
-        
-        [Fact]
-        public void SlewAsyncToAltAz_SendValidRequest()
-        {
-            //Arrange
-            string commandName = "slewtoaltazasync";
-            string altitudeParameterName = "Altitude";
-            double altitudeParameterValue = 2;
-            string azimuthParameterName = "Azimuth";
-            double azimuthParameterValue = 2;
-            IRestRequest sentRequest = null;
-            var commandSenderMock = new Mock<ICommandSender>();
-            commandSenderMock
-                .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new Response());
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
-            
-            //Act
-            telescope.SlewAsyncToAltAz(altitudeParameterValue, azimuthParameterValue);
-            
-            //Assert
-            Assert.Equal(Method.PUT, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-            AssertParameter(sentRequest.Parameters, altitudeParameterName, altitudeParameterValue);
-            AssertParameter(sentRequest.Parameters, azimuthParameterName, azimuthParameterValue);
-        }
-        
-        [Fact]
-        public async Task SlewAsyncToAltAzAsync_SendValidRequest()
-        {
-            //Arrange
-            string commandName = "slewtoaltazasync";
-            string altitudeParameterName = "Altitude";
-            double altitudeParameterValue = 2;
-            string azimuthParameterName = "Azimuth";
-            double azimuthParameterValue = 2;
-            IRestRequest sentRequest = null;
-            var commandSenderMock = new Mock<ICommandSender>();
-            commandSenderMock
-                .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new Response()));
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
-            
-            //Act
-            await telescope.SlewAsyncToAltAzAsync(altitudeParameterValue, azimuthParameterValue);
-            
-            //Assert
-            Assert.Equal(Method.PUT, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-            AssertParameter(sentRequest.Parameters, altitudeParameterName, altitudeParameterValue);
-            AssertParameter(sentRequest.Parameters, azimuthParameterName, azimuthParameterValue);
-        }
-        
+
         [Fact]
         public void SlewToCoordinates_SendValidRequest()
         {
             //Arrange
             string commandName = "slewtocoordinates";
+            string commandNameAsync = "slewtocoordinatesasync";
             string rightAscensionParameterName = "RightAscension";
             double rightAscensionParameterValue = 2;
             string declinationParameterName = "Declination";
             double declinationParameterValue = 2;
-            IRestRequest sentRequest = null;
+            List<IRestRequest> sentRequests = new List<IRestRequest>();
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new Response());
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+                .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
+                .ReturnsInOrder(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }, new Response());
+            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object, Logger.Object);
             
             //Act
             telescope.SlewToCoordinates(rightAscensionParameterValue, declinationParameterValue);
             
             //Assert
-            Assert.Equal(Method.PUT, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-            AssertParameter(sentRequest.Parameters, rightAscensionParameterName, rightAscensionParameterValue);
-            AssertParameter(sentRequest.Parameters, declinationParameterName, declinationParameterValue);
+            Assert.Equal(Method.PUT, sentRequests[0].Method);
+            AssertCommonParameters(sentRequests[0].Parameters, _deviceConfiguration, commandNameAsync);
+            AssertParameter(sentRequests[0].Parameters, rightAscensionParameterName, rightAscensionParameterValue);
+            AssertParameter(sentRequests[0].Parameters, declinationParameterName, declinationParameterValue);
+            Assert.Equal(Method.PUT, sentRequests[1].Method);
+            AssertCommonParameters(sentRequests[1].Parameters, _deviceConfiguration, commandName);
+            AssertParameter(sentRequests[1].Parameters, rightAscensionParameterName, rightAscensionParameterValue);
+            AssertParameter(sentRequests[1].Parameters, declinationParameterName, declinationParameterValue);
         }
         
         [Fact]
@@ -3196,101 +3086,55 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "slewtocoordinates";
+            string commandNameAsync = "slewtocoordinatesasync";
             string rightAscensionParameterName = "RightAscension";
             double rightAscensionParameterValue = 2;
             string declinationParameterName = "Declination";
             double declinationParameterValue = 2;
-            IRestRequest sentRequest = null;
+            List<IRestRequest> sentRequests = new List<IRestRequest>();
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new Response()));
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+                .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
+                .ReturnsInOrder(Task.FromResult(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }), Task.FromResult(new Response()));
+            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object, Logger.Object);
             
             //Act
             await telescope.SlewToCoordinatesAsync(rightAscensionParameterValue, declinationParameterValue);
             
             //Assert
-            Assert.Equal(Method.PUT, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-            AssertParameter(sentRequest.Parameters, rightAscensionParameterName, rightAscensionParameterValue);
-            AssertParameter(sentRequest.Parameters, declinationParameterName, declinationParameterValue);
+            Assert.Equal(Method.PUT, sentRequests[0].Method);
+            AssertCommonParameters(sentRequests[0].Parameters, _deviceConfiguration, commandNameAsync);
+            AssertParameter(sentRequests[0].Parameters, rightAscensionParameterName, rightAscensionParameterValue);
+            AssertParameter(sentRequests[0].Parameters, declinationParameterName, declinationParameterValue);
+            Assert.Equal(Method.PUT, sentRequests[1].Method);
+            AssertCommonParameters(sentRequests[1].Parameters, _deviceConfiguration, commandName);
+            AssertParameter(sentRequests[1].Parameters, rightAscensionParameterName, rightAscensionParameterValue);
+            AssertParameter(sentRequests[1].Parameters, declinationParameterName, declinationParameterValue);
         }
-        
-        [Fact]
-        public void SlewAsyncToCoordinates_SendValidRequest()
-        {
-            //Arrange
-            string commandName = "slewtocoordinatesasync";
-            string rightAscensionParameterName = "RightAscension";
-            double rightAscensionParameterValue = 2;
-            string declinationParameterName = "Declination";
-            double declinationParameterValue = 2;
-            IRestRequest sentRequest = null;
-            var commandSenderMock = new Mock<ICommandSender>();
-            commandSenderMock
-                .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new Response());
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
-            
-            //Act
-            telescope.SlewAsyncToCoordinates(rightAscensionParameterValue, declinationParameterValue);
-            
-            //Assert
-            Assert.Equal(Method.PUT, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-            AssertParameter(sentRequest.Parameters, rightAscensionParameterName, rightAscensionParameterValue);
-            AssertParameter(sentRequest.Parameters, declinationParameterName, declinationParameterValue);
-        }
-        
-        [Fact]
-        public async Task SlewAsyncToCoordinatesAsync_SendValidRequest()
-        {
-            //Arrange
-            string commandName = "slewtocoordinatesasync";
-            string rightAscensionParameterName = "RightAscension";
-            double rightAscensionParameterValue = 2;
-            string declinationParameterName = "Declination";
-            double declinationParameterValue = 2;
-            IRestRequest sentRequest = null;
-            var commandSenderMock = new Mock<ICommandSender>();
-            commandSenderMock
-                .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new Response()));
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
-            
-            //Act
-            await telescope.SlewAsyncToCoordinatesAsync(rightAscensionParameterValue, declinationParameterValue);
-            
-            //Assert
-            Assert.Equal(Method.PUT, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-            AssertParameter(sentRequest.Parameters, rightAscensionParameterName, rightAscensionParameterValue);
-            AssertParameter(sentRequest.Parameters, declinationParameterName, declinationParameterValue);
-        }
-        
+
         [Fact]
         public void SlewToTarget_SendValidRequest()
         {
             //Arrange
             string commandName = "slewtotarget";
-            IRestRequest sentRequest = null;
+            string commandNameAsync = "slewtotargetasync";
+            List<IRestRequest> sentRequests = new List<IRestRequest>();
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new Response());
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+                .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
+                .ReturnsInOrder(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }, new Response());
+            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object, Logger.Object);
             
             //Act
             telescope.SlewToTarget();
             
             //Assert
-            Assert.Equal(Method.PUT, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
+            Assert.Equal(Method.PUT, sentRequests[0].Method);
+            AssertCommonParameters(sentRequests[0].Parameters, _deviceConfiguration, commandNameAsync);
+            Assert.Equal(Method.PUT, sentRequests[1].Method);
+            AssertCommonParameters(sentRequests[1].Parameters, _deviceConfiguration, commandName);
         }
         
         [Fact]
@@ -3298,64 +3142,25 @@ namespace ASCOM.Alpaca.Client.Test.Devices
         {
             //Arrange
             string commandName = "slewtotarget";
-            IRestRequest sentRequest = null;
+            string commandNameAsync = "slewtotargetasync";
+            List<IRestRequest> sentRequests = new List<IRestRequest>();
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new Response()));
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+                .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
+                .ReturnsInOrder(Task.FromResult(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }), Task.FromResult(new Response()));
+            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object, Logger.Object);
             
             //Act
             await telescope.SlewToTargetAsync();
             
             //Assert
-            Assert.Equal(Method.PUT, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
+            Assert.Equal(Method.PUT, sentRequests[0].Method);
+            AssertCommonParameters(sentRequests[0].Parameters, _deviceConfiguration, commandNameAsync);
+            Assert.Equal(Method.PUT, sentRequests[1].Method);
+            AssertCommonParameters(sentRequests[1].Parameters, _deviceConfiguration, commandName);
         }
-        
-        [Fact]
-        public void SlewAsyncToTarget_SendValidRequest()
-        {
-            //Arrange
-            string commandName = "slewtotargetasync";
-            IRestRequest sentRequest = null;
-            var commandSenderMock = new Mock<ICommandSender>();
-            commandSenderMock
-                .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new Response());
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
-            
-            //Act
-            telescope.SlewAsyncToTarget();
-            
-            //Assert
-            Assert.Equal(Method.PUT, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-        }
-        
-        [Fact]
-        public async Task SlewAsyncToTargetAsync_SendValidRequest()
-        {
-            //Arrange
-            string commandName = "slewtotargetasync";
-            IRestRequest sentRequest = null;
-            var commandSenderMock = new Mock<ICommandSender>();
-            commandSenderMock
-                .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
-                .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new Response()));
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
-            
-            //Act
-            await telescope.SlewAsyncToTargetAsync();
-            
-            //Assert
-            Assert.Equal(Method.PUT, sentRequest.Method);
-            AssertCommonParameters(sentRequest.Parameters, _deviceConfiguration, commandName);
-        }
-      
+
         [Fact]
         public void SyncToAltAz_SendValidRequest()
         {

@@ -25,37 +25,31 @@ namespace ASCOM.Alpaca.Client.Responses
                 // the COM HResult error number range: 0x80040400 to 0x80040FFF and throwing the translated value as an exception
                 if (errorCode >= ErrorCodes.AlpacaErrorCodeBase && errorCode <= ErrorCodes.AlpacaErrorCodeMax)
                 {
-                    // Calculate the equivalent COM HResult error number from the supplied Alpaca error number so that comparison can
-                    // be made with the original ASCOM COM exception HResult numbers that Windows clients expect in their exceptions
-                    int ascomComErrorNumber = errorCode + ErrorCodes.ASCOMErrorNumberOffset;
-
-                    CheckForActionNotImplemented(errorMessage, ascomComErrorNumber);
-                    CheckForInvalidOperation(errorMessage, ascomComErrorNumber);
-                    CheckForInvalidValue(errorMessage, ascomComErrorNumber);
-                    CheckForInvalidWhileParked(errorMessage, ascomComErrorNumber);
-                    CheckForInvalidWhileSlaved(errorMessage, ascomComErrorNumber);
-                    CheckForNotConnected(errorMessage, ascomComErrorNumber);
-                    CheckForNotImplemented(errorMessage, ascomComErrorNumber);
-                    CheckForValueNotSet(errorMessage, ascomComErrorNumber);
-                    
-                    throw new DriverException(errorMessage, ascomComErrorNumber);
+                    CheckForActionNotImplemented(errorMessage, errorCode);
+                    CheckForInvalidOperation(errorMessage, errorCode);
+                    CheckForInvalidValue(errorMessage, errorCode);
+                    CheckForInvalidWhileParked(errorMessage, errorCode);
+                    CheckForInvalidWhileSlaved(errorMessage, errorCode);
+                    CheckForNotConnected(errorMessage, errorCode);
+                    CheckForNotImplemented(errorMessage, errorCode);
+                    CheckForValueNotSet(errorMessage, errorCode);
                 }
 
                 throw new DriverException(errorMessage, errorCode);
             }
         }
 
-        private static void CheckForValueNotSet(string errorMessage, int ascomComErrorNumber)
+        private static void CheckForValueNotSet(string errorMessage, int errorCode)
         {
-            if (ascomComErrorNumber == ErrorCodes.ValueNotSet)
+            if (errorCode == ErrorCodes.ValueNotSet)
             {
                 throw new ValueNotSetException(errorMessage);
             }
         }
 
-        private static void CheckForNotImplemented(string errorMessage, int ascomComErrorNumber)
+        private static void CheckForNotImplemented(string errorMessage, int errorCode)
         {
-            if (ascomComErrorNumber == ErrorCodes.NotImplemented)
+            if (errorCode == ErrorCodes.NotImplemented)
             {
                 if (errorMessage != null && errorMessage.ToLowerInvariant().Contains("property"))
                 {
@@ -68,49 +62,49 @@ namespace ASCOM.Alpaca.Client.Responses
             }
         }
 
-        private static void CheckForNotConnected(string errorMessage, int ascomComErrorNumber)
+        private static void CheckForNotConnected(string errorMessage, int errorCode)
         {
-            if (ascomComErrorNumber == ErrorCodes.NotConnected)
+            if (errorCode == ErrorCodes.NotConnected)
             {
                 throw new NotConnectedException(errorMessage);
             }
         }
 
-        private static void CheckForInvalidWhileSlaved(string errorMessage, int ascomComErrorNumber)
+        private static void CheckForInvalidWhileSlaved(string errorMessage, int errorCode)
         {
-            if (ascomComErrorNumber == ErrorCodes.InvalidWhileSlaved)
+            if (errorCode == ErrorCodes.InvalidWhileSlaved)
             {
                 throw new SlavedException(errorMessage);
             }
         }
 
-        private static void CheckForInvalidWhileParked(string errorMessage, int ascomComErrorNumber)
+        private static void CheckForInvalidWhileParked(string errorMessage, int errorCode)
         {
-            if (ascomComErrorNumber == ErrorCodes.InvalidWhileParked)
+            if (errorCode == ErrorCodes.InvalidWhileParked)
             {
                 throw new ParkedException(errorMessage);
             }
         }
 
-        private static void CheckForInvalidValue(string errorMessage, int ascomComErrorNumber)
+        private static void CheckForInvalidValue(string errorMessage, int errorCode)
         {
-            if (ascomComErrorNumber == ErrorCodes.InvalidValue)
+            if (errorCode == ErrorCodes.InvalidValue)
             {
                 throw new InvalidValueException(errorMessage);
             }
         }
 
-        private static void CheckForInvalidOperation(string errorMessage, int ascomComErrorNumber)
+        private static void CheckForInvalidOperation(string errorMessage, int errorCode)
         {
-            if (ascomComErrorNumber == ErrorCodes.InvalidOperationException)
+            if (errorCode == ErrorCodes.InvalidOperationException)
             {
                 throw new InvalidOperationException(errorMessage);
             }
         }
 
-        private static void CheckForActionNotImplemented(string errorMessage, int ascomComErrorNumber)
+        private static void CheckForActionNotImplemented(string errorMessage, int errorCode)
         {
-            if (ascomComErrorNumber == ErrorCodes.ActionNotImplementedException)
+            if (errorCode == ErrorCodes.ActionNotImplementedException)
             {
                 throw new ActionNotImplementedException(errorMessage);
             }
