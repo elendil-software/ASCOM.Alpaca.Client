@@ -126,8 +126,8 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task<string> GetNameAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetNameRequest);
         private IRestRequest BuildGetNameRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.Name, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
-        public List<string> GetSupportedActions() => ExecuteRequest<List<string>, StringArrayResponse>(BuildGetSupportedActionsRequest);      
-        public async Task<List<string>> GetSupportedActionsAsync() => await ExecuteRequestAsync<List<string>, StringArrayResponse>(BuildGetSupportedActionsRequest);
+        public IList<string> GetSupportedActions() => ExecuteRequest<IList<string>, StringArrayResponse>(BuildGetSupportedActionsRequest);      
+        public async Task<IList<string>> GetSupportedActionsAsync() => await ExecuteRequestAsync<IList<string>, StringArrayResponse>(BuildGetSupportedActionsRequest);
         private IRestRequest BuildGetSupportedActionsRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.SupportedActions, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         protected void ExecuteRequest(Func<IRestRequest> requestBuilder)

@@ -71,7 +71,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             DriverInfo = await _filterWheel.GetDriverInfoAsync();
             DriverVersion = await _filterWheel.GetDriverVersionAsync();
 
-            List<string> filterNames = await _filterWheel.GetNamesAsync();
+            IList<string> filterNames = await _filterWheel.GetNamesAsync();
             Filters.Clear();
             foreach (var filterName in filterNames)
             {
@@ -80,7 +80,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 
             NotifyOfPropertyChange(() => Filters);
 
-            List<int> focusOffsets = await _filterWheel.GetFocusOffsetsAsync();
+            IList<int> focusOffsets = await _filterWheel.GetFocusOffsetsAsync();
             FocusOffsets.Clear();
             foreach (var focusOffset in focusOffsets)
             {

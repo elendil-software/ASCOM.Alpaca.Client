@@ -319,7 +319,6 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             Description = await _telescope.GetDescriptionAsync();
             DriverInfo = await _telescope.GetDriverInfoAsync();
             DriverVersion = await _telescope.GetDriverVersionAsync();
-
             CanFindHome = await _telescope.CanFindHomeAsync();
             CanPark = await _telescope.CanParkAsync();
             CanSetPark = await _telescope.CanSetParkAsync();

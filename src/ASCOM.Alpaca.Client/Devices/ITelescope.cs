@@ -677,13 +677,13 @@ namespace ASCOM.Alpaca.Client.Devices
         /// Returns a collection of supported DriveRates values.
         /// </summary>
         /// <returns></returns>
-        List<DriveRate> GetTrackingRates();
+        IList<DriveRate> GetTrackingRates();
 
         /// <summary>
         /// Returns a collection of supported DriveRates values.
         /// </summary>
         /// <returns></returns>
-        Task<List<DriveRate>> GetTrackingRatesAsync();
+        Task<IList<DriveRate>> GetTrackingRatesAsync();
 
         /// <summary>
         /// Returns the UTC date/time of the telescope's internal clock.
@@ -724,14 +724,14 @@ namespace ASCOM.Alpaca.Client.Devices
         /// </summary>
         /// <param name="axis">The axis about which rate information is desired</param>
         /// <returns></returns>
-        List<AxisRate> GetAxisRates(TelescopeAxis axis);
+        IList<AxisRate> GetAxisRates(TelescopeAxis axis);
 
         /// <summary>
         /// Returns the rates at which the telescope may be moved about the specified axis.
         /// </summary>
         /// <param name="axis">The axis about which rate information is desired</param>
         /// <returns></returns>
-        Task<List<AxisRate>> GetAxisRatesAsync(TelescopeAxis axis);
+        Task<IList<AxisRate>> GetAxisRatesAsync(TelescopeAxis axis);
 
         /// <summary>
         /// Indicates whether the telescope can move the requested axis.

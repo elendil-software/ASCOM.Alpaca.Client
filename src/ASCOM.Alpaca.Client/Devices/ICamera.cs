@@ -382,13 +382,13 @@ namespace ASCOM.Alpaca.Client.Devices
         /// Returns the Gains supported by the camera.
         /// </summary>
         /// <returns></returns>
-        List<string> GetGains();
+        IList<string> GetGains();
 
         /// <summary>
         /// Returns the Gains supported by the camera.
         /// </summary>
         /// <returns></returns>
-        Task<List<string>> GetGainsAsync();
+        Task<IList<string>> GetGainsAsync();
 
         /// <summary>
         /// Indicates whether the camera has a mechanical shutter
@@ -728,7 +728,7 @@ namespace ASCOM.Alpaca.Client.Devices
         /// At least one string must be present in the list.
         /// </summary>
         /// <returns></returns>
-        List<string> GetReadoutModes();
+        IList<string> GetReadoutModes();
 
         /// <summary>
         /// Get the list of available readout modes.
@@ -737,7 +737,7 @@ namespace ASCOM.Alpaca.Client.Devices
         /// At least one string must be present in the list.
         /// </summary>
         /// <returns></returns>
-        Task<List<string>> GetReadoutModesAsync();
+        Task<IList<string>> GetReadoutModesAsync();
 
         /// <summary>
         /// Gets the name of the sensor used within the camera.

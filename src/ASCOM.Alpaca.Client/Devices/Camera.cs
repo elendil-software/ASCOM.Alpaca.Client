@@ -188,8 +188,8 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task<int> GetGainMinAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetGainMinRequest);
         private IRestRequest BuildGetGainMinRequest() => RequestBuilder.BuildRestRequest(CameraMethod.GainMin, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
-        public List<string> GetGains() => ExecuteRequest<List<string>, StringArrayResponse>(BuildGetGainsRequest);
-        public async Task<List<string>> GetGainsAsync() => await ExecuteRequestAsync<List<string>, StringArrayResponse>(BuildGetGainsRequest);
+        public IList<string> GetGains() => ExecuteRequest<IList<string>, StringArrayResponse>(BuildGetGainsRequest);
+        public async Task<IList<string>> GetGainsAsync() => await ExecuteRequestAsync<IList<string>, StringArrayResponse>(BuildGetGainsRequest);
         private IRestRequest BuildGetGainsRequest() => RequestBuilder.BuildRestRequest(CameraMethod.Gains, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public bool HasShutter() => ExecuteRequest<bool, BoolResponse>(BuildHasShutterRequest);
@@ -392,8 +392,8 @@ namespace ASCOM.Alpaca.Client.Devices
             return RequestBuilder.BuildRestRequest(CameraMethod.ReadoutMode, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
         
-        public List<string> GetReadoutModes() => ExecuteRequest<List<string>, StringArrayResponse>(BuildGetReadoutModesRequest);
-        public async Task<List<string>> GetReadoutModesAsync() => await ExecuteRequestAsync<List<string>, StringArrayResponse>(BuildGetReadoutModesRequest);
+        public IList<string> GetReadoutModes() => ExecuteRequest<IList<string>, StringArrayResponse>(BuildGetReadoutModesRequest);
+        public async Task<IList<string>> GetReadoutModesAsync() => await ExecuteRequestAsync<IList<string>, StringArrayResponse>(BuildGetReadoutModesRequest);
         private IRestRequest BuildGetReadoutModesRequest() => RequestBuilder.BuildRestRequest(CameraMethod.ReadoutModes, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public string GetSensorName() => ExecuteRequest<string, StringResponse>(BuildGetSensorNameRequest);

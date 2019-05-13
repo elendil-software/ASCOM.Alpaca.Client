@@ -9,18 +9,18 @@ namespace ASCOM.Alpaca.Client.Devices
         /// Get the filter focus offsets
         /// </summary>
         /// <returns></returns>
-        List<int> GetFocusOffsets();
+        IList<int> GetFocusOffsets();
 
-        Task<List<int>> GetFocusOffsetsAsync();
+        Task<IList<int>> GetFocusOffsetsAsync();
         
         /// <summary>
         /// Get the Filter wheel filter names
         /// </summary>
         /// <returns></returns>
-        List<string> GetNames();
+        IList<string> GetNames();
         
         
-        Task<List<string>> GetNamesAsync();
+        Task<IList<string>> GetNamesAsync();
         
         /// <summary>
         /// Returns the current filter wheel position

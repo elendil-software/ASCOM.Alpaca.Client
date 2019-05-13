@@ -391,8 +391,8 @@ namespace ASCOM.Alpaca.Client.Devices
             return RequestBuilder.BuildRestRequest(TelescopeMethod.TrackingRate, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId());
         }
 
-        public List<DriveRate> GetTrackingRates() => ExecuteRequest<List<DriveRate>, DriveRatesResponse>(BuildGetTrackingRatesRequest);
-        public async Task<List<DriveRate>> GetTrackingRatesAsync() => await ExecuteRequestAsync<List<DriveRate>, DriveRatesResponse>(BuildGetTrackingRatesRequest);
+        public IList<DriveRate> GetTrackingRates() => ExecuteRequest<IList<DriveRate>, DriveRatesResponse>(BuildGetTrackingRatesRequest);
+        public async Task<IList<DriveRate>> GetTrackingRatesAsync() => await ExecuteRequestAsync<IList<DriveRate>, DriveRatesResponse>(BuildGetTrackingRatesRequest);
         private IRestRequest BuildGetTrackingRatesRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.TrackingRates, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public DateTime GetUtcDate()
@@ -422,8 +422,8 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task AbortSlewAsync() => await ExecuteRequestAsync(BuildAbortSlewRequest);
         private IRestRequest BuildAbortSlewRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.AbortSlew, Method.PUT, ClientTransactionIdGenerator.GetTransactionId());
 
-        public List<AxisRate> GetAxisRates(TelescopeAxis axis) => ExecuteRequest<List<AxisRate>, AxisRatesResponse, TelescopeAxis>(BuildGetAxisRatesRequest, axis);
-        public async Task<List<AxisRate>> GetAxisRatesAsync(TelescopeAxis axis) => await ExecuteRequestAsync<List<AxisRate>, AxisRatesResponse, TelescopeAxis>(BuildGetAxisRatesRequest, axis);
+        public IList<AxisRate> GetAxisRates(TelescopeAxis axis) => ExecuteRequest<IList<AxisRate>, AxisRatesResponse, TelescopeAxis>(BuildGetAxisRatesRequest, axis);
+        public async Task<IList<AxisRate>> GetAxisRatesAsync(TelescopeAxis axis) => await ExecuteRequestAsync<IList<AxisRate>, AxisRatesResponse, TelescopeAxis>(BuildGetAxisRatesRequest, axis);
         private IRestRequest BuildGetAxisRatesRequest(TelescopeAxis axis)
         {
             var parameters = new Dictionary<string, object>

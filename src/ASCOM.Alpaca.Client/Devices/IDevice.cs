@@ -98,8 +98,8 @@ namespace ASCOM.Alpaca.Client.Devices
         /// Returns the list of action names supported by this driver. 
         /// </summary>
         /// <returns></returns>
-        List<string> GetSupportedActions();
+        IList<string> GetSupportedActions();
         
-        Task<List<string>> GetSupportedActionsAsync();
+        Task<IList<string>> GetSupportedActionsAsync();
     }
 }

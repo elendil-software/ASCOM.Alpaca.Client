@@ -40,7 +40,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private int _gain = -1;
         private int _gainMax;
         private int _gainMin;
-        private List<string> _gains;
+        private IList<string> _gains;
         private bool _hasShutter;
         private double _heatSinkTemperature;
         private bool _isImageReady;
@@ -56,7 +56,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
         private double _pixelSizeX;
         private double _pixelSizeY;
         private int _readoutMode;
-        private List<string> _readoutModes;
+        private IList<string> _readoutModes;
         private string _sensorName;
         private SensorType _sensorType;
         private double _setCCDTemperature;
@@ -333,7 +333,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             }
         }
 
-        public List<string> Gains
+        public IList<string> Gains
         {
             get => _gains;
             set
@@ -494,7 +494,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
             }
         }
 
-        public List<string> ReadoutModes
+        public IList<string> ReadoutModes
         {
             get => _readoutModes;
             set
