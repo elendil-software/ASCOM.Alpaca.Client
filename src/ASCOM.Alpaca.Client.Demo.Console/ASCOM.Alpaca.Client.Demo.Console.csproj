@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\ASCOM.Alpaca.Client\ASCOM.Alpaca.Client.csproj" />
+      <ProjectReference Include="..\ASCOM.Alpaca.Shared\ASCOM.Alpaca.Shared.csproj" />
     </ItemGroup>
 
     <ItemGroup>
