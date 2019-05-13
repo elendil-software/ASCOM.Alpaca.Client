@@ -1,5 +1,8 @@
 namespace ASCOM.Alpaca.Devices.Telescope
 {
+    /// <summary>
+    /// Well-known telescope tracking rates.
+    /// </summary>
     public enum DriveRate
     {
         /// <summary>

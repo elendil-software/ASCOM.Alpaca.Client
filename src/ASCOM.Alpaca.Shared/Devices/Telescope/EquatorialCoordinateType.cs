@@ -1,5 +1,8 @@
 namespace ASCOM.Alpaca.Devices.Telescope
 {
+    /// <summary>
+    /// Equatorial coordinate systems used by telescopes.
+    /// </summary>
     public enum EquatorialCoordinateType
     {
         /// <summary>

@@ -1,5 +1,8 @@
 namespace ASCOM.Alpaca.Devices.Telescope
 {
+    /// <summary>
+    /// The telescope axes
+    /// </summary>
     public enum TelescopeAxis
     {
         /// <summary>

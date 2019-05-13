@@ -1,11 +1,13 @@
 ﻿namespace ASCOM.Alpaca.Responses
 {
-    public interface IImageResponse<out T> : IValueResponse<T>
+    /// <summary>
+    /// ImageArrayResponse interface
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public interface IImageResponse<T> : IValueResponse<T>
     {
         /// <summary>
-        /// minimum: 0
-        /// maximum: 3
-        /// 0 = Unknown, 1 = Short(int16), 2 = Integer(int32), 3 = Double(Double precision real number).
+        /// The type of data contained in <see cref="IValueResponse{T}.Value"/>
         /// </summary>
         ImageArrayType ArrayType { get; }
 

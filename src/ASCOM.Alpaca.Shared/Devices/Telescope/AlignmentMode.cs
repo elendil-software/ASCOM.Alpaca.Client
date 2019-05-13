@@ -1,5 +1,8 @@
 namespace ASCOM.Alpaca.Devices.Telescope
 {
+    /// <summary>
+    /// The alignment mode of the mount.
+    /// </summary>
     public enum AlignmentMode
     {
         /// <summary>

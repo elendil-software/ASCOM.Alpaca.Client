@@ -1,5 +1,8 @@
 namespace ASCOM.Alpaca.Devices.Camera
 {
+    /// <summary>
+    /// Sensor type, identifies the type of colour sensor
+    /// </summary>
     public enum SensorType
     {
         ///<summary>
