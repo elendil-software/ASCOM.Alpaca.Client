@@ -18,12 +18,12 @@ namespace ASCOM.Alpaca.Client.Devices
         {
         }
 
-        public IList<int> GetFocusOffsets() => ExecuteRequest<IList<int>, IntArrayResponse>(BuildGetFocusOffsetRequest);
-        public async Task<IList<int>> GetFocusOffsetsAsync() => await ExecuteRequestAsync<IList<int>, IntArrayResponse>(BuildGetFocusOffsetRequest);
+        public IList<int> GetFocusOffsets() => ExecuteRequest<IList<int>, IntListResponse>(BuildGetFocusOffsetRequest);
+        public async Task<IList<int>> GetFocusOffsetsAsync() => await ExecuteRequestAsync<IList<int>, IntListResponse>(BuildGetFocusOffsetRequest);
         private IRestRequest BuildGetFocusOffsetRequest() => RequestBuilder.BuildRestRequest(FilterWheelMethod.FocusOffsets, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
-        public IList<string> GetNames() => ExecuteRequest<IList<string>, StringArrayResponse>(BuildGetNamesRequest);
-        public async Task<IList<string>> GetNamesAsync() => await ExecuteRequestAsync<IList<string>, StringArrayResponse>(BuildGetNamesRequest);
+        public IList<string> GetNames() => ExecuteRequest<IList<string>, StringListResponse>(BuildGetNamesRequest);
+        public async Task<IList<string>> GetNamesAsync() => await ExecuteRequestAsync<IList<string>, StringListResponse>(BuildGetNamesRequest);
         private IRestRequest BuildGetNamesRequest() => RequestBuilder.BuildRestRequest(FilterWheelMethod.Names, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
 
         public int GetPosition() => ExecuteRequest<int, IntResponse>(BuildGetPositionRequest);
