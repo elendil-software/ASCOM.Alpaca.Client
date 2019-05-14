@@ -28,10 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ASCOM.Alpaca.Shared\ASCOM.Alpaca.Shared.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="..\..\LICENSE.md">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
