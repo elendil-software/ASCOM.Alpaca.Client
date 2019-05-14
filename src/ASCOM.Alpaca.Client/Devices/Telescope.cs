@@ -8,7 +8,6 @@ using ASCOM.Alpaca.Devices;
 using ASCOM.Alpaca.Devices.Telescope;
 using ASCOM.Alpaca.Responses;
 using RestSharp;
-using NotImplementedException = ASCOM.Alpaca.Exceptions.NotImplementedException;
 
 namespace ASCOM.Alpaca.Client.Devices
 {

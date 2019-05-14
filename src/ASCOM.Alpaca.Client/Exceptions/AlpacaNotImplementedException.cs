@@ -1,0 +1,25 @@
+using System;
+using System.Runtime.Serialization;
+
+namespace ASCOM.Alpaca.Client.Exceptions
+{
+    [Serializable]
+    public class AlpacaNotImplementedException : AlpacaDriverException
+    {
+        public AlpacaNotImplementedException() : base(ErrorCodes.NotImplemented)
+        {
+        }
+
+        public AlpacaNotImplementedException(string message) : base(message, ErrorCodes.NotImplemented)
+        {
+        }
+
+        public AlpacaNotImplementedException(string message, Exception innerException) : base(message, ErrorCodes.NotImplemented, innerException)
+        {
+        }
+
+        protected AlpacaNotImplementedException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+        }
+    }
+}

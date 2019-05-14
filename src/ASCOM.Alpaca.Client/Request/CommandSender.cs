@@ -1,6 +1,6 @@
 ﻿using System.Net;
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Exceptions;
+using ASCOM.Alpaca.Client.Exceptions;
 using ASCOM.Alpaca.Responses;
 using RestSharp;
 
@@ -40,11 +40,11 @@ namespace ASCOM.Alpaca.Client.Request
         {
             if (response.StatusCode == 0)
             {
-                throw new DriverException($"Unable to connect to {baseUrl}");
+                throw new AlpacaException($"Unable to connect to {baseUrl}");
             }
             else if (response.StatusCode != HttpStatusCode.OK)
             {
-                throw new DriverException(response.Content);
+                throw new AlpacaException(response.Content);
             }
         }
     }

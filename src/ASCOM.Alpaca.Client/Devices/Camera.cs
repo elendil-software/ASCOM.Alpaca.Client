@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using ASCOM.Alpaca.Client.Exceptions;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Devices;
 using ASCOM.Alpaca.Devices.Camera;
 using ASCOM.Alpaca.Devices.Telescope;
-using ASCOM.Alpaca.Exceptions;
 using ASCOM.Alpaca.Responses;
 using Newtonsoft.Json;
 using RestSharp;
@@ -240,7 +240,7 @@ namespace ASCOM.Alpaca.Client.Devices
                 return Parse3DImageResponse(response, type);
             }
 
-            throw new DriverException($"Image rank {rank} is not supported");
+            throw new AlpacaInvalidValueException($"Image rank {rank} is not supported");
         }
         private (ImageArrayType type, int rank) ParseTypeAndRank(string jsonString)
         {
@@ -269,7 +269,7 @@ namespace ASCOM.Alpaca.Client.Devices
                     return imageArrayDouble3DResponse.HandleResponse<double[,,], ImageArrayDouble3DResponse>();
 
                 default:
-                    throw new InvalidValueException($"'ImageArrayType '{type} ({(int)type})' is not a valid value");
+                    throw new AlpacaInvalidValueException($"'ImageArrayType '{type} ({(int)type})' is not a valid value");
             }
         }
 
@@ -290,7 +290,7 @@ namespace ASCOM.Alpaca.Client.Devices
                     return imageArrayDouble2DResponse.HandleResponse<double[,], ImageArrayDouble2DResponse>();
 
                 default:
-                    throw new InvalidValueException($"'ImageArrayType '{type} ({(int)type})' is not a valid value");
+                    throw new AlpacaInvalidValueException($"'ImageArrayType '{type} ({(int)type})' is not a valid value");
             }
         }
 

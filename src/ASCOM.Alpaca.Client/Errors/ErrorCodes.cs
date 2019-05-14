@@ -1,28 +1,10 @@
-using ASCOM.Alpaca.Exceptions;
-
-namespace ASCOM.Alpaca.Errors
+namespace ASCOM.Alpaca.Client.Exceptions
 {
     /// <summary>
-    ///   Error numbers for use by drivers.
+    /// Error numbers for use by drivers.
     /// </summary>
-    /// <remarks>
-    ///   The range of permitted values falls within the class FACILTY_ITF as 
-    ///   defined by the operating system and COM. These values will never clash with 
-    ///   COM, RPC, or OS error codes.
-    /// </remarks>
     public static class ErrorCodes
     {
-        public static int ConvertToAscomComErrorCode(this int alpacaErrorCode)
-        {
-            return alpacaErrorCode + ASCOMErrorNumberOffset;
-        }
-        
-        
-        /// <summary>
-        /// Offset value that relates the ASCOM Alpaca reserved error number range to the ASCOM COM HResult error number range
-        /// </summary>
-        public static readonly int ASCOMErrorNumberOffset = unchecked((int)0x80040000);
-        
         /// <summary>
         /// Start of the Alpaca error code range 0x400 to 0xFFF
         /// </summary>
@@ -36,19 +18,19 @@ namespace ASCOM.Alpaca.Errors
         /// <summary>
         /// Reserved error code (0x400) for property or method not implemented.
         /// </summary>
-        /// <seealso cref="NotImplementedException"/>
+        /// <seealso cref="AlpacaNotImplementedException"/>
         public static readonly int NotImplemented = 0x400;
 
         /// <summary>
         /// Reserved error code (0x401) for reporting an invalid value.
         /// </summary>
-        /// <seealso cref="InvalidValueException"/>
+        /// <seealso cref="AlpacaInvalidValueException"/>
         public static readonly int InvalidValue = 0x401;
 
         /// <summary>
         /// Reserved error code (0x402) for reporting that a value has not been set.
         /// </summary>
-        /// <seealso cref="ValueNotSetException"/>
+        /// <seealso cref="AlpacaValueNotSetException"/>
         public static readonly int ValueNotSet = 0x402;
 
         /// <summary>
@@ -92,12 +74,12 @@ namespace ASCOM.Alpaca.Errors
         public static readonly int NotInCacheException = 0x40D;
 
         /// <summary>
-        /// Reserved 'catch-all' error code (0x800404FF) used when nothing else was specified.
+        /// Reserved 'catch-all' error code (0x4FF) used when nothing else was specified.
         /// </summary>
         public static readonly int UnspecifiedError = 0x4FF;
 
         /// <summary>
-        /// The starting value (0x80040500) for driver-specific error numbers.
+        /// The starting value (0x500) for driver-specific error numbers.
         /// </summary>
         /// <remarks>
         /// Drivers are free to choose their own numbers starting with DriverBase, up to and including DriverMax.
@@ -105,7 +87,7 @@ namespace ASCOM.Alpaca.Errors
         public static readonly int DriverBase = 0x500;
 
         /// <summary>
-        /// The maximum value (0x80040FFF) for driver-specific error numbers.
+        /// The maximum value (0xFFF) for driver-specific error numbers.
         /// </summary>
         /// <remarks>
         /// Drivers are free to choose their own numbers starting with DriverBase, up to and including DriverMax.

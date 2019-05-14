@@ -6,7 +6,6 @@ using System.Windows;
 using ASCOM.Alpaca.Client.Demo.Desktop.Factories;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Devices.Camera;
-using ASCOM.Alpaca.Exceptions;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 {
@@ -657,7 +656,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
                 GainMax = await _camera.GetGainMaxAsync();
                 GainMin = await _camera.GetGainMinAsync();
             }
-            catch (ASCOM.Alpaca.Exceptions.NotImplementedException)
+            catch (ASCOM.Alpaca.Client.Exceptions.AlpacaNotImplementedException)
             {
                 //DO NOTHING
             }

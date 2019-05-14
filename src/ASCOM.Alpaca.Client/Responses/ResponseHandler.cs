@@ -1,6 +1,6 @@
-using ASCOM.Alpaca.Errors;
-using ASCOM.Alpaca.Exceptions;
+using ASCOM.Alpaca.Client.Exceptions;
 using ASCOM.Alpaca.Responses;
+using ErrorCodes = ASCOM.Alpaca.Client.Exceptions.ErrorCodes;
 
 namespace ASCOM.Alpaca.Client.Responses
 {
@@ -35,7 +35,7 @@ namespace ASCOM.Alpaca.Client.Responses
                     CheckForValueNotSet(errorMessage, errorCode);
                 }
 
-                throw new DriverException(errorMessage, errorCode);
+                throw new AlpacaDriverException(errorMessage, errorCode);
             }
         }
 
@@ -43,7 +43,7 @@ namespace ASCOM.Alpaca.Client.Responses
         {
             if (errorCode == ErrorCodes.ValueNotSet)
             {
-                throw new ValueNotSetException(errorMessage);
+                throw new AlpacaValueNotSetException(errorMessage);
             }
         }
 
@@ -51,14 +51,7 @@ namespace ASCOM.Alpaca.Client.Responses
         {
             if (errorCode == ErrorCodes.NotImplemented)
             {
-                if (errorMessage != null && errorMessage.ToLowerInvariant().Contains("property"))
-                {
-                    throw new PropertyNotImplementedException(errorMessage);
-                }
-                else
-                {
-                    throw new MethodNotImplementedException(errorMessage);
-                }
+                throw new AlpacaNotImplementedException(errorMessage);
             }
         }
 
@@ -66,7 +59,7 @@ namespace ASCOM.Alpaca.Client.Responses
         {
             if (errorCode == ErrorCodes.NotConnected)
             {
-                throw new NotConnectedException(errorMessage);
+                throw new AlpacaNotConnectedException(errorMessage);
             }
         }
 
@@ -74,7 +67,7 @@ namespace ASCOM.Alpaca.Client.Responses
         {
             if (errorCode == ErrorCodes.InvalidWhileSlaved)
             {
-                throw new SlavedException(errorMessage);
+                throw new AlpacaSlavedException(errorMessage);
             }
         }
 
@@ -82,7 +75,7 @@ namespace ASCOM.Alpaca.Client.Responses
         {
             if (errorCode == ErrorCodes.InvalidWhileParked)
             {
-                throw new ParkedException(errorMessage);
+                throw new AlpacaParkedException(errorMessage);
             }
         }
 
@@ -90,7 +83,7 @@ namespace ASCOM.Alpaca.Client.Responses
         {
             if (errorCode == ErrorCodes.InvalidValue)
             {
-                throw new InvalidValueException(errorMessage);
+                throw new AlpacaInvalidValueException(errorMessage);
             }
         }
 
@@ -98,7 +91,7 @@ namespace ASCOM.Alpaca.Client.Responses
         {
             if (errorCode == ErrorCodes.InvalidOperationException)
             {
-                throw new InvalidOperationException(errorMessage);
+                throw new AlpacaInvalidOperationException(errorMessage);
             }
         }
 
@@ -106,7 +99,7 @@ namespace ASCOM.Alpaca.Client.Responses
         {
             if (errorCode == ErrorCodes.ActionNotImplementedException)
             {
-                throw new ActionNotImplementedException(errorMessage);
+                throw new AlpacaActionNotImplementedException(errorMessage);
             }
         }
     }
