@@ -3001,7 +3001,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
                 .ReturnsInOrder(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }, new Response());
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object, Logger.Object);
+            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
             //Act
             telescope.SlewToAltAz(altitudeParameterValue, azimuthParameterValue);
@@ -3033,7 +3033,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
                 .ReturnsInOrder(Task.FromResult(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }), Task.FromResult(new Response()));
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object, Logger.Object);
+            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
 
             //Act
             await telescope.SlewToAltAzAsync(altitudeParameterValue, azimuthParameterValue);
@@ -3065,7 +3065,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
                 .ReturnsInOrder(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }, new Response());
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object, Logger.Object);
+            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
             //Act
             telescope.SlewToCoordinates(rightAscensionParameterValue, declinationParameterValue);
@@ -3097,7 +3097,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
                 .ReturnsInOrder(Task.FromResult(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }), Task.FromResult(new Response()));
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object, Logger.Object);
+            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
             //Act
             await telescope.SlewToCoordinatesAsync(rightAscensionParameterValue, declinationParameterValue);
@@ -3125,7 +3125,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
                 .ReturnsInOrder(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }, new Response());
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object, Logger.Object);
+            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
             //Act
             telescope.SlewToTarget();
@@ -3149,7 +3149,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
                 .ReturnsInOrder(Task.FromResult(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }), Task.FromResult(new Response()));
-            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object, Logger.Object);
+            var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
             //Act
             await telescope.SlewToTargetAsync();

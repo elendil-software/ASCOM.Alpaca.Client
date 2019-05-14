@@ -6,17 +6,12 @@ using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Devices;
 using ASCOM.Alpaca.Devices.Dome;
 using ASCOM.Alpaca.Responses;
-using ASCOM.Alpaca.Logging;
 using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
     public sealed class Dome : DeviceBase, IDome
     {
-        public Dome(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger logger) : base(configuration, clientTransactionIdGenerator, commandSender, logger)
-        {
-        }
-
         public Dome(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender) : base(configuration, clientTransactionIdGenerator, commandSender)
         {
         }

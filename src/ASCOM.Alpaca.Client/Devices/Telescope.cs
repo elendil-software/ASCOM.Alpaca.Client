@@ -7,7 +7,6 @@ using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Devices;
 using ASCOM.Alpaca.Devices.Telescope;
 using ASCOM.Alpaca.Responses;
-using ASCOM.Alpaca.Logging;
 using RestSharp;
 using NotImplementedException = ASCOM.Alpaca.Exceptions.NotImplementedException;
 
@@ -15,10 +14,6 @@ namespace ASCOM.Alpaca.Client.Devices
 {
     public sealed class Telescope : DeviceBase, ITelescope
     {
-        public Telescope(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger logger) : base(configuration, clientTransactionIdGenerator, commandSender, logger)
-        {
-        }
-
         public Telescope(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender) : base(configuration, clientTransactionIdGenerator, commandSender)
         {
         }
@@ -501,9 +496,8 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 ExecuteRequest(BuildSlewAsyncToAltAzRequest, altitude, azimuth);
             }
-            catch (NotImplementedException ex)
+            catch (NotImplementedException)
             {
-                Logger.LogDebug(ex, "slewtoaltazasync is not supported, try with slewtoaltaz");
                 ExecuteRequest(BuildSlewToAltAzRequest, altitude, azimuth);             
             }
         }
@@ -514,9 +508,8 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 await ExecuteRequestAsync(BuildSlewAsyncToAltAzRequest, altitude, azimuth);
             }
-            catch (NotImplementedException ex)
+            catch (NotImplementedException)
             {
-                Logger.LogDebug(ex, "slewtoaltazasync is not supported, try with slewtoaltaz");
                 await ExecuteRequestAsync(BuildSlewToAltAzRequest, altitude, azimuth);             
             }
         }
@@ -546,9 +539,8 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 ExecuteRequest(BuildSlewAsyncToCoordinatesRequest, rightAscension, declination);
             }
-            catch (NotImplementedException ex)
+            catch (NotImplementedException)
             {
-                Logger.LogDebug(ex, "slewtocoordinatesasync is not supported, try with slewtocoordinates");
                 ExecuteRequest(BuildSlewToCoordinatesRequest, rightAscension, declination);             
             }
         }
@@ -558,9 +550,8 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 await ExecuteRequestAsync(BuildSlewAsyncToCoordinatesRequest, rightAscension, declination);
             }
-            catch (NotImplementedException ex)
+            catch (NotImplementedException)
             {
-                Logger.LogDebug(ex, "slewtocoordinatesasync is not supported, try with slewtocoordinates");
                 await ExecuteRequestAsync(BuildSlewToCoordinatesRequest, rightAscension, declination);
             }
         }
@@ -589,9 +580,8 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 ExecuteRequest(BuildSlewAsyncToTargetRequest);
             }
-            catch (NotImplementedException ex)
+            catch (NotImplementedException)
             {
-                Logger.LogDebug(ex, "slewtotargetasync is not supported, try with slewtotarget");
                 ExecuteRequest(BuildSlewToTargetRequest);
             }
         }
@@ -601,9 +591,8 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 await ExecuteRequestAsync(BuildSlewAsyncToTargetRequest);
             }
-            catch (NotImplementedException ex)
+            catch (NotImplementedException)
             {
-                Logger.LogDebug(ex, "slewtotargetasync is not supported, try with slewtotarget");
                 await ExecuteRequestAsync(BuildSlewToTargetRequest);
             }
         }

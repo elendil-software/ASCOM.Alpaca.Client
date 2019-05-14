@@ -5,7 +5,6 @@ using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Devices;
 using ASCOM.Alpaca.Responses;
-using ASCOM.Alpaca.Logging;
 using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Devices
@@ -19,11 +18,6 @@ namespace ASCOM.Alpaca.Client.Devices
         {
         }
 
-        public FilterWheel(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger logger) : 
-            base(configuration, clientTransactionIdGenerator, commandSender, logger)
-        {
-        }
-        
         public IList<int> GetFocusOffsets() => ExecuteRequest<IList<int>, IntArrayResponse>(BuildGetFocusOffsetRequest);
         public async Task<IList<int>> GetFocusOffsetsAsync() => await ExecuteRequestAsync<IList<int>, IntArrayResponse>(BuildGetFocusOffsetRequest);
         private IRestRequest BuildGetFocusOffsetRequest() => RequestBuilder.BuildRestRequest(FilterWheelMethod.FocusOffsets, Method.GET, ClientTransactionIdGenerator.GetTransactionId());

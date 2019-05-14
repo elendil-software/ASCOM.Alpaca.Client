@@ -2,7 +2,6 @@
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
-using ASCOM.Alpaca.Logging;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop.Factories
 {
@@ -10,21 +9,13 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.Factories
     {
         private readonly IClientTransactionIdGenerator _clientTransactionIdGenerator;
         private readonly ICommandSender _commandSender;
-        private readonly ILogger _logger;
 
         public DeviceFactory(IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender)
         {
             _clientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
             _commandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
         }
-
-        public DeviceFactory(IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger logger)
-        {
-            _clientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
-            _commandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-        }
-
+        
         public T CreateDeviceInstance<T>(DeviceConfiguration configuration) where T : IDevice
         {
             Type deviceType = typeof(T);
@@ -32,39 +23,39 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.Factories
             switch (deviceType.Name)
             {
                 case nameof(FilterWheel):
-                    IDevice device = new FilterWheel(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
+                    IDevice device = new FilterWheel(configuration, _clientTransactionIdGenerator, _commandSender);
                     return (T) device;
 
                 case nameof(SafetyMonitor):
-                    IDevice safetyMonitor = new SafetyMonitor(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
+                    IDevice safetyMonitor = new SafetyMonitor(configuration, _clientTransactionIdGenerator, _commandSender);
                     return (T) safetyMonitor;
                 
                 case nameof(Dome):
-                    IDevice dome = new Dome(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
+                    IDevice dome = new Dome(configuration, _clientTransactionIdGenerator, _commandSender);
                     return (T) dome;
                 
                 case nameof(Camera):
-                    IDevice camera = new Camera(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
+                    IDevice camera = new Camera(configuration, _clientTransactionIdGenerator, _commandSender);
                     return (T) camera;
                 
                 case nameof(Focuser):
-                    IDevice focuser = new Focuser(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
+                    IDevice focuser = new Focuser(configuration, _clientTransactionIdGenerator, _commandSender);
                     return (T) focuser;
                 
                 case nameof(ObservingConditions):
-                    IDevice observingConditions = new ObservingConditions(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
+                    IDevice observingConditions = new ObservingConditions(configuration, _clientTransactionIdGenerator, _commandSender);
                     return (T) observingConditions;
                 
                 case nameof(Rotator):
-                    IDevice rotator = new Rotator(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
+                    IDevice rotator = new Rotator(configuration, _clientTransactionIdGenerator, _commandSender);
                     return (T) rotator;
                 
                 case nameof(Switch):
-                    IDevice @switch = new Switch(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
+                    IDevice @switch = new Switch(configuration, _clientTransactionIdGenerator, _commandSender);
                     return (T) @switch;
                 
                 case nameof(Telescope):
-                    IDevice telescope = new Telescope(configuration, _clientTransactionIdGenerator, _commandSender, _logger);
+                    IDevice telescope = new Telescope(configuration, _clientTransactionIdGenerator, _commandSender);
                     return (T) telescope;
 
                 default:

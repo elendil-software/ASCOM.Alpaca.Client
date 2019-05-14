@@ -1,5 +1,3 @@
-using ASCOM.Alpaca.Devices;
-
 namespace ASCOM.Alpaca.Client.Devices
 {
     public class DeviceConfiguration

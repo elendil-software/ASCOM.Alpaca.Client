@@ -1,37 +1,24 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Devices;
 using ASCOM.Alpaca.Responses;
-using ASCOM.Alpaca.Logging;
 using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Devices
 {
     public abstract class DeviceBase : IDevice
     {
-        protected readonly ILogger Logger;
         protected readonly ICommandSender CommandSender;
         protected readonly IRequestBuilder RequestBuilder;
         protected readonly IClientTransactionIdGenerator ClientTransactionIdGenerator;
         protected readonly DeviceConfiguration Configuration;
         protected abstract DeviceType DeviceType { get; }
         public int DeviceNumber => Configuration.DeviceNumber;
-
-        protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender, ILogger logger)
-        {
-            Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
-            ClientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
-            CommandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
-            Logger = logger ?? throw new ArgumentNullException(nameof(logger));
-
-            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber, configuration.ClientId);
-        }
-
+        
         protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender)
         {
             Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
@@ -133,108 +120,84 @@ namespace ASCOM.Alpaca.Client.Devices
         protected void ExecuteRequest(Func<IRestRequest> requestBuilder)
         {
             IRestRequest request = requestBuilder();
-            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
             response.HandleResponse();
         }
 
         protected async Task ExecuteRequestAsync(Func<IRestRequest> requestBuilder)
         {
             IRestRequest request = requestBuilder();
-            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
             response.HandleResponse();
         }
 
         protected void ExecuteRequest<T1>(Func<T1, IRestRequest> requestBuilder, T1 param1)
         {
             IRestRequest request = requestBuilder(param1);
-            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
             response.HandleResponse();
         }
 
         protected async Task ExecuteRequestAsync<T1>(Func<T1, IRestRequest> requestBuilder, T1 arg)
         {
             IRestRequest request = requestBuilder(arg);
-            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
             response.HandleResponse();
         }
         
         protected void ExecuteRequest<T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2)
         {
             IRestRequest request = requestBuilder(arg1, arg2);
-            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
             response.HandleResponse();
         }
 
         protected async Task ExecuteRequestAsync<T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2)
         {
             IRestRequest request = requestBuilder(arg1, arg2);
-            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
             response.HandleResponse();
         }
         
         protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1>(Func<T1, IRestRequest> requestBuilder, T1 arg) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder(arg);
-            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = CommandSender.ExecuteRequest<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
 
         protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse, T1>(Func<T1, IRestRequest> requestBuilder, T1 arg) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder(arg);
-            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = await CommandSender.ExecuteRequestAsync<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
         
         protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder(arg1 , arg2);
-            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = CommandSender.ExecuteRequest<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
 
         protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse, T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder(arg1 , arg2);
-            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = await CommandSender.ExecuteRequestAsync<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
         
         protected TResult ExecuteRequest<TResult, TAlpacaResponse>(Func<IRestRequest> requestBuilder) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder();
-            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = CommandSender.ExecuteRequest<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
 
         protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse>(Func<IRestRequest> requestBuilder) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder();
-            Logger.LogDebug(request, Configuration.GetBaseUrl());
             var response = await CommandSender.ExecuteRequestAsync<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
-            Logger.LogDebug(response);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
     }

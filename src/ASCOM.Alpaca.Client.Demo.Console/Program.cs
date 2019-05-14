@@ -5,11 +5,11 @@ using ASCOM.Alpaca.Client.Demo.IoC;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
-using ASCOM.Alpaca.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Serilog;
-using ILogger = ASCOM.Alpaca.Logging.ILogger;
+using Serilog.AspNetCore;
 
 namespace ASCOM.Alpaca.Client.Demo
 {
@@ -56,7 +56,7 @@ namespace ASCOM.Alpaca.Client.Demo
             services
                 .Configure<DeviceConfiguration>("FilterWheel", configuration.GetSection("Devices:FilterWheel"))
                 .AddLogging(configure => configure.AddSerilog())
-                .AddTransient<ILogger>(s => new SerilogAdapter(Log.Logger))
+                .AddSingleton<ILoggerFactory>(s => new SerilogLoggerFactory(Log.Logger, true))
                 .AddSingleton<IClientTransactionIdGenerator, ClientTransactionIdGenerator>()
                 .AddTransient<ICommandSender, CommandSender>()
                 .AddDevices(devicesConfiguration)
