@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace ASCOM.Alpaca.Client.Exceptions
 {
     [Serializable]
-    public class AlpacaParkedException : AlpacaDriverException
+    public class AlpacaParkedException : AlpacaDeviceException
     {
         public AlpacaParkedException() : base(ErrorCodes.InvalidWhileParked)
         {
@@ -16,7 +16,6 @@ namespace ASCOM.Alpaca.Client.Exceptions
 
         public AlpacaParkedException(string message, Exception innerException) : base(message, ErrorCodes.InvalidWhileParked, innerException)
         {
-            AlpacaErrorCode = ErrorCodes.InvalidValue;
         }
 
         protected AlpacaParkedException(SerializationInfo info, StreamingContext context) : base(info, context)

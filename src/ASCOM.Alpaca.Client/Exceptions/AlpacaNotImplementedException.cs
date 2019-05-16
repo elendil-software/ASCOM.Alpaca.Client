@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace ASCOM.Alpaca.Client.Exceptions
 {
     [Serializable]
-    public class AlpacaNotImplementedException : AlpacaDriverException
+    public class AlpacaNotImplementedException : AlpacaDeviceException
     {
         public AlpacaNotImplementedException() : base(ErrorCodes.NotImplemented)
         {

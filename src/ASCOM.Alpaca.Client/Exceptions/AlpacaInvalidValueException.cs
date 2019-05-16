@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace ASCOM.Alpaca.Client.Exceptions
 {
     [Serializable]
-    public class AlpacaInvalidValueException : AlpacaDriverException
+    public class AlpacaInvalidValueException : AlpacaDeviceException
     {
         public AlpacaInvalidValueException() : base(ErrorCodes.InvalidValue)
         {

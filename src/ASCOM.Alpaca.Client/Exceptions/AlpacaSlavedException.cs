@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace ASCOM.Alpaca.Client.Exceptions
 {
     [Serializable]
-    public class AlpacaSlavedException : AlpacaDriverException
+    public class AlpacaSlavedException : AlpacaDeviceException
     {
         public AlpacaSlavedException() : base(ErrorCodes.InvalidWhileSlaved)
         {
