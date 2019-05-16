@@ -1,6 +1,5 @@
 using ASCOM.Alpaca.Client.Exceptions;
 using ASCOM.Alpaca.Responses;
-using ErrorCodes = ASCOM.Alpaca.Client.Exceptions.ErrorCodes;
 
 namespace ASCOM.Alpaca.Client.Responses
 {
@@ -21,19 +20,14 @@ namespace ASCOM.Alpaca.Client.Responses
         {
             if (!string.IsNullOrWhiteSpace(errorMessage) || errorCode != 0)
             {
-                // Handle ASCOM Alpaca reserved error numbers between 0x400 and 0xFFF by translating these to
-                // the COM HResult error number range: 0x80040400 to 0x80040FFF and throwing the translated value as an exception
-                if (errorCode >= ErrorCodes.AlpacaErrorCodeBase && errorCode <= ErrorCodes.AlpacaErrorCodeMax)
-                {
-                    CheckForActionNotImplemented(errorMessage, errorCode);
-                    CheckForInvalidOperation(errorMessage, errorCode);
-                    CheckForInvalidValue(errorMessage, errorCode);
-                    CheckForInvalidWhileParked(errorMessage, errorCode);
-                    CheckForInvalidWhileSlaved(errorMessage, errorCode);
-                    CheckForNotConnected(errorMessage, errorCode);
-                    CheckForNotImplemented(errorMessage, errorCode);
-                    CheckForValueNotSet(errorMessage, errorCode);
-                }
+                CheckForActionNotImplemented(errorMessage, errorCode);
+                CheckForInvalidOperation(errorMessage, errorCode);
+                CheckForInvalidValue(errorMessage, errorCode);
+                CheckForInvalidWhileParked(errorMessage, errorCode);
+                CheckForInvalidWhileSlaved(errorMessage, errorCode);
+                CheckForNotConnected(errorMessage, errorCode);
+                CheckForNotImplemented(errorMessage, errorCode);
+                CheckForValueNotSet(errorMessage, errorCode);
 
                 throw new AlpacaDeviceException(errorMessage, errorCode);
             }
