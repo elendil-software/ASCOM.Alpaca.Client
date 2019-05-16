@@ -35,7 +35,7 @@ namespace ASCOM.Alpaca.Client.Responses
                     CheckForValueNotSet(errorMessage, errorCode);
                 }
 
-                throw new AlpacaDriverException(errorMessage, errorCode);
+                throw new AlpacaDeviceException(errorMessage, errorCode);
             }
         }
 

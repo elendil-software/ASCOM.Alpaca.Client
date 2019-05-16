@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
+using ASCOM.Alpaca.Client.Exceptions;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
 using ASCOM.Alpaca.Devices;
@@ -495,7 +496,7 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 ExecuteRequest(BuildSlewAsyncToAltAzRequest, altitude, azimuth);
             }
-            catch (NotImplementedException)
+            catch (AlpacaNotImplementedException)
             {
                 ExecuteRequest(BuildSlewToAltAzRequest, altitude, azimuth);             
             }
@@ -507,7 +508,7 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 await ExecuteRequestAsync(BuildSlewAsyncToAltAzRequest, altitude, azimuth);
             }
-            catch (NotImplementedException)
+            catch (AlpacaNotImplementedException)
             {
                 await ExecuteRequestAsync(BuildSlewToAltAzRequest, altitude, azimuth);             
             }
@@ -538,7 +539,7 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 ExecuteRequest(BuildSlewAsyncToCoordinatesRequest, rightAscension, declination);
             }
-            catch (NotImplementedException)
+            catch (AlpacaNotImplementedException)
             {
                 ExecuteRequest(BuildSlewToCoordinatesRequest, rightAscension, declination);             
             }
@@ -549,7 +550,7 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 await ExecuteRequestAsync(BuildSlewAsyncToCoordinatesRequest, rightAscension, declination);
             }
-            catch (NotImplementedException)
+            catch (AlpacaNotImplementedException)
             {
                 await ExecuteRequestAsync(BuildSlewToCoordinatesRequest, rightAscension, declination);
             }
@@ -579,7 +580,7 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 ExecuteRequest(BuildSlewAsyncToTargetRequest);
             }
-            catch (NotImplementedException)
+            catch (AlpacaNotImplementedException)
             {
                 ExecuteRequest(BuildSlewToTargetRequest);
             }
@@ -590,7 +591,7 @@ namespace ASCOM.Alpaca.Client.Devices
             {
                 await ExecuteRequestAsync(BuildSlewAsyncToTargetRequest);
             }
-            catch (NotImplementedException)
+            catch (AlpacaNotImplementedException)
             {
                 await ExecuteRequestAsync(BuildSlewToTargetRequest);
             }
