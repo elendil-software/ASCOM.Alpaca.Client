@@ -3000,7 +3000,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
-                .ReturnsInOrder(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }, new Response());
+                .ReturnsInOrder(new Response { ErrorNumber = ErrorCodes.NotImplemented }, new Response());
             var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
             //Act
@@ -3032,7 +3032,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
-                .ReturnsInOrder(Task.FromResult(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }), Task.FromResult(new Response()));
+                .ReturnsInOrder(Task.FromResult(new Response { ErrorNumber = ErrorCodes.NotImplemented }), Task.FromResult(new Response()));
             var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
 
             //Act
@@ -3064,7 +3064,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
-                .ReturnsInOrder(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }, new Response());
+                .ReturnsInOrder(new Response { ErrorNumber = ErrorCodes.NotImplemented }, new Response());
             var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
             //Act
@@ -3096,7 +3096,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
-                .ReturnsInOrder(Task.FromResult(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }), Task.FromResult(new Response()));
+                .ReturnsInOrder(Task.FromResult(new Response { ErrorNumber = ErrorCodes.NotImplemented }), Task.FromResult(new Response()));
             var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
             //Act
@@ -3124,7 +3124,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
-                .ReturnsInOrder(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }, new Response());
+                .ReturnsInOrder(new Response { ErrorNumber = ErrorCodes.NotImplemented }, new Response());
             var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
             //Act
@@ -3148,7 +3148,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
-                .ReturnsInOrder(Task.FromResult(new Response { ErrorNumber = ErrorCodes.ActionNotImplementedException }), Task.FromResult(new Response()));
+                .ReturnsInOrder(Task.FromResult(new Response { ErrorNumber = ErrorCodes.NotImplemented }), Task.FromResult(new Response()));
             var telescope = new Telescope(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
             
             //Act
