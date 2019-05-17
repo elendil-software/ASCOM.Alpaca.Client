@@ -38,12 +38,13 @@ namespace ASCOM.Alpaca.Client.Request
 
         private void CheckResponse(IRestResponse response, string baseUrl)
         {
-            if (response.StatusCode == 0)
+            if (response.ResponseStatus != ResponseStatus.Completed)
             {
-                throw new AlpacaException($"Unable to connect to {baseUrl}");
+                throw new AlpacaClientException(response.ErrorMessage, response.ErrorException);
             }
             else if (response.StatusCode != HttpStatusCode.OK)
             {
+                //TODO : Add AlpacaServerException
                 throw new AlpacaException(response.Content);
             }
         }
