@@ -17,6 +17,6 @@ namespace ASCOM.Alpaca.Client.Devices
         
         public bool IsSafe() => ExecuteRequest<bool, BoolResponse>(BuildIsSafeRequest);
         public async Task<bool> IsSafeAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsSafeRequest);
-        private IRestRequest BuildIsSafeRequest() => RequestBuilder.BuildRestRequest(SafetyMonitorMethod.IsSafe, Method.GET, ClientTransactionIdGenerator.GetTransactionId());
+        private IRestRequest BuildIsSafeRequest() => RequestBuilder.BuildRestRequest(SafetyMonitorMethod.IsSafe, Method.GET, ClientTransactionIdGenerator.GetTransactionId(Configuration.ClientId));
     }
 }
