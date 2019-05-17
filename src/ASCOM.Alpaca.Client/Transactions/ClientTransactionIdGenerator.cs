@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace ASCOM.Alpaca.Client.Transactions
 {
     /// <summary>
@@ -7,7 +9,7 @@ namespace ASCOM.Alpaca.Client.Transactions
     public class ClientTransactionIdGenerator : IClientTransactionIdGenerator
     {
         private readonly object _lockObject = new object();
-        private int _currentTransactionId;
+        private readonly Dictionary<int, int> _generatedTransactionId = new Dictionary<int, int>();
         
         /// <summary>
         /// Generate a client transaction ID.
@@ -15,12 +17,14 @@ namespace ASCOM.Alpaca.Client.Transactions
         /// This will aid associating entries in device logs with corresponding entries in client side logs.
         /// </summary>
         /// <returns>Generated client transaction ID</returns>
-        public int GetTransactionId()
+        public int GetTransactionId(int clientId)
         {
             lock (_lockObject)
             {
-                _currentTransactionId++;
-                return _currentTransactionId;
+                _generatedTransactionId.TryGetValue(clientId, out var currentValue);
+                currentValue++;
+                _generatedTransactionId[clientId] = currentValue;
+                return currentValue;
             }
         }
     }

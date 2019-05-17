@@ -12,6 +12,6 @@ namespace ASCOM.Alpaca.Client.Transactions
         /// This will aid associating entries in device logs with corresponding entries in client side logs.
         /// </summary>
         /// <returns>Generated client transaction ID</returns>
-        int GetTransactionId();
+        int GetTransactionId(int clientId);
     }
 }
