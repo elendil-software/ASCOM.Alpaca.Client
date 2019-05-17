@@ -11,32 +11,32 @@ namespace ASCOM.Alpaca.Client.Request
         public IRestResponse ExecuteRequest(string baseUrl, IRestRequest request)
         {
             IRestResponse response = new RestClient(baseUrl).Execute(request);
-            CheckResponse(response, baseUrl);
+            CheckResponse(response);
             return response;
         }
 
         public TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(string baseUrl, IRestRequest request) where TASCOMRemoteResponse : IResponse, new()
         {
             IRestResponse<TASCOMRemoteResponse> response = new RestClient(baseUrl).Execute<TASCOMRemoteResponse>(request);
-            CheckResponse(response, baseUrl);
+            CheckResponse(response);
             return response.Data;
         }
         
         public async Task<IRestResponse> ExecuteRequestAsync(string baseUrl, IRestRequest request)
         {
             IRestResponse response = await new RestClient(baseUrl).ExecuteTaskAsync(request);
-            CheckResponse(response, baseUrl);
+            CheckResponse(response);
             return response;
         }
         
         public async Task<TASCOMRemoteResponse> ExecuteRequestAsync<TASCOMRemoteResponse>(string baseUrl, IRestRequest request) where TASCOMRemoteResponse : IResponse, new()
         {
             IRestResponse<TASCOMRemoteResponse> response = await new RestClient(baseUrl).ExecuteTaskAsync<TASCOMRemoteResponse>(request);
-            CheckResponse(response, baseUrl);
+            CheckResponse(response);
             return response.Data;
         }
 
-        private void CheckResponse(IRestResponse response, string baseUrl)
+        private void CheckResponse(IRestResponse response)
         {
             if (response.ResponseStatus != ResponseStatus.Completed)
             {
