@@ -44,8 +44,7 @@ namespace ASCOM.Alpaca.Client.Request
             }
             else if (response.StatusCode != HttpStatusCode.OK)
             {
-                //TODO : Add AlpacaServerException
-                throw new AlpacaException(response.Content);
+                throw new AlpacaServerException(response.Content);
             }
         }
     }
