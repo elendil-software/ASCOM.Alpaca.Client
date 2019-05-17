@@ -1,5 +1,8 @@
+using System.Runtime.CompilerServices;
 using ASCOM.Alpaca.Client.Exceptions;
 using ASCOM.Alpaca.Responses;
+
+[assembly: InternalsVisibleTo("ASCOM.Alpaca.Client.Test")]
 
 namespace ASCOM.Alpaca.Client.Responses
 {
