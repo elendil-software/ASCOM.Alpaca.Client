@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Devices.Telescope
+namespace ASCOM.Alpaca.Client.Devices
 {
     /// <summary>
     /// Equatorial coordinate systems used by telescopes.

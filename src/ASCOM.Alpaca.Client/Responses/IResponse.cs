@@ -1,5 +1,5 @@
 ﻿
-namespace ASCOM.Alpaca.Responses
+namespace ASCOM.Alpaca.Client.Responses
 {
     /// <summary>
     /// Defines the base of an Alpaca response.

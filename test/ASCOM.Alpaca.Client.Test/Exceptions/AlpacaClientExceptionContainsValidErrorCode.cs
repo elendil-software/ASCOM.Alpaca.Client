@@ -1,4 +1,5 @@
 using System;
+using ASCOM.Alpaca.Client.Errors;
 using ASCOM.Alpaca.Client.Exceptions;
 using Xunit;
 

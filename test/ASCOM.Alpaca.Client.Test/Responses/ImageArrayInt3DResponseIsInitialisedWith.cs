@@ -1,4 +1,4 @@
-using ASCOM.Alpaca.Responses;
+using ASCOM.Alpaca.Client.Responses;
 using Xunit;
 
 namespace ASCOM.Alpaca.Client.Test.Responses

@@ -4,8 +4,6 @@ using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
-using ASCOM.Alpaca.Devices;
-using ASCOM.Alpaca.Responses;
 using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Devices

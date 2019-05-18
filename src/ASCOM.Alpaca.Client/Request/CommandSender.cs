@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Exceptions;
-using ASCOM.Alpaca.Responses;
+using ASCOM.Alpaca.Client.Responses;
 using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Request

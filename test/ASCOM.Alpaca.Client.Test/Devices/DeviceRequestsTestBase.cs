@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using ASCOM.Alpaca.Client.Devices;
-using ASCOM.Alpaca.Devices;
 using RestSharp;
 using Xunit;
 

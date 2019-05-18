@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using ASCOM.Alpaca.Devices.Telescope;
+using ASCOM.Alpaca.Client.Devices;
 
-namespace ASCOM.Alpaca.Responses
+namespace ASCOM.Alpaca.Client.Responses
 {
     /// <summary>
     /// Response that return the value as a collection of <see cref="AxisRate"/>

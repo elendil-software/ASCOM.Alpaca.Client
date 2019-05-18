@@ -1,4 +1,4 @@
-﻿namespace ASCOM.Alpaca.Responses
+﻿namespace ASCOM.Alpaca.Client.Responses
 {
     /// <summary>
     /// Response that return the value as a double

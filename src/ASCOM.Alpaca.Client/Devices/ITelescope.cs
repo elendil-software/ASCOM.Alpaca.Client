@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Devices.Telescope;
 
 namespace ASCOM.Alpaca.Client.Devices
 {

@@ -1,9 +1,8 @@
 using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Request;
+using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
-using ASCOM.Alpaca.Devices;
-using ASCOM.Alpaca.Responses;
 using Moq;
 using RestSharp;
 using Xunit;

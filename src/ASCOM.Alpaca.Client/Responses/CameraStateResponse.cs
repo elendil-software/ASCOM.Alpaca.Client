@@ -1,6 +1,6 @@
-using ASCOM.Alpaca.Devices.Camera;
+using ASCOM.Alpaca.Client.Devices;
 
-namespace ASCOM.Alpaca.Responses
+namespace ASCOM.Alpaca.Client.Responses
 {
     /// <summary>
     /// Response that return the value as a <see cref="CameraState"/>

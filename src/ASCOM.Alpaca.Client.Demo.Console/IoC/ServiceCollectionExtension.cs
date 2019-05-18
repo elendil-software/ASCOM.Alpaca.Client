@@ -3,7 +3,6 @@ using ASCOM.Alpaca.Client.Demo.Devices;
 using ASCOM.Alpaca.Client.Devices;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Transactions;
-using ASCOM.Alpaca.Devices;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ASCOM.Alpaca.Client.Demo.IoC

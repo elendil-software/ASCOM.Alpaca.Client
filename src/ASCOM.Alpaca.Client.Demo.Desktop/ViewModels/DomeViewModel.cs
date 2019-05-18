@@ -4,8 +4,6 @@ using System.Threading.Tasks;
 using System.Windows;
 using ASCOM.Alpaca.Client.Demo.Desktop.Factories;
 using ASCOM.Alpaca.Client.Devices;
-using ASCOM.Alpaca.Devices;
-using ASCOM.Alpaca.Devices.Dome;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
 {

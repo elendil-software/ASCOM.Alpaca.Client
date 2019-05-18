@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
+using ASCOM.Alpaca.Client.Errors;
 
 namespace ASCOM.Alpaca.Client.Exceptions
 {

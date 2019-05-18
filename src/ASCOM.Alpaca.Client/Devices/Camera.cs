@@ -7,10 +7,6 @@ using ASCOM.Alpaca.Client.Exceptions;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
-using ASCOM.Alpaca.Devices;
-using ASCOM.Alpaca.Devices.Camera;
-using ASCOM.Alpaca.Devices.Telescope;
-using ASCOM.Alpaca.Responses;
 using Newtonsoft.Json;
 using RestSharp;
 

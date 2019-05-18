@@ -1,5 +1,4 @@
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Devices.Dome;
 
 namespace ASCOM.Alpaca.Client.Devices
 {

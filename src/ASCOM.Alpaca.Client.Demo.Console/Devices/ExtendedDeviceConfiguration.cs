@@ -1,5 +1,4 @@
 using ASCOM.Alpaca.Client.Devices;
-using ASCOM.Alpaca.Devices;
 
 namespace ASCOM.Alpaca.Client.Demo.Devices
 {

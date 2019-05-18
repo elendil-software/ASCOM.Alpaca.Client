@@ -1,6 +1,6 @@
+using ASCOM.Alpaca.Client.Errors;
 using ASCOM.Alpaca.Client.Exceptions;
 using ASCOM.Alpaca.Client.Responses;
-using ASCOM.Alpaca.Responses;
 using Xunit;
 
 namespace ASCOM.Alpaca.Client.Test.Responses
