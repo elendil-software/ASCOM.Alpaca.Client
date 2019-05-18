@@ -1,6 +1,8 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Exceptions;
+using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Client.Responses;
 using RestSharp;
 
@@ -8,10 +10,22 @@ namespace ASCOM.Alpaca.Client.Request
 {
     public class CommandSender : ICommandSender
     {
+        private readonly ILogger _logger;
+
+        public CommandSender()
+        {
+        }
+
+        public CommandSender(ILogger logger)
+        {
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        }
+
         public IRestResponse ExecuteRequest(string baseUrl, IRestRequest request)
         {
             IRestResponse response = new RestClient(baseUrl).Execute(request);
             ThrowExceptionOnError(response);
+            _logger.LogDebug("Response : {Response}", response.Content);
             return response;
         }
 
@@ -19,6 +33,7 @@ namespace ASCOM.Alpaca.Client.Request
         {
             IRestResponse<TASCOMRemoteResponse> response = new RestClient(baseUrl).Execute<TASCOMRemoteResponse>(request);
             ThrowExceptionOnError(response);
+            _logger.LogDebug("Response : {Response}", response.Content);
             return response.Data;
         }
         
@@ -26,6 +41,7 @@ namespace ASCOM.Alpaca.Client.Request
         {
             IRestResponse response = await new RestClient(baseUrl).ExecuteTaskAsync(request);
             ThrowExceptionOnError(response);
+            _logger.LogDebug("Response : {Response}", response.Content);
             return response;
         }
         
@@ -33,17 +49,20 @@ namespace ASCOM.Alpaca.Client.Request
         {
             IRestResponse<TASCOMRemoteResponse> response = await new RestClient(baseUrl).ExecuteTaskAsync<TASCOMRemoteResponse>(request);
             ThrowExceptionOnError(response);
+            _logger.LogDebug("Response : {@Response}", response.Data);
             return response.Data;
         }
 
         private void ThrowExceptionOnError(IRestResponse response)
         {
-            if (response.ResponseStatus != ResponseStatus.Completed)
+            if (response.ResponseStatus != ResponseStatus.Completed && response.StatusCode == 0)
             {
+                _logger?.LogError("Request not completed, response status : {ResponseStatus}, error message : {ErrorMessage}", response.ResponseStatus, response.ErrorMessage);
                 throw new AlpacaClientException(response.ErrorMessage, response.ErrorException);
             }
             else if (response.StatusCode != HttpStatusCode.OK)
             {
+                _logger?.LogError("{ErrorName} ({ErrorCode}), error message : {ErrorMessage}", response.StatusCode, (int)response.StatusCode, response.Content);
                 throw new AlpacaServerException(response.Content);
             }
         }

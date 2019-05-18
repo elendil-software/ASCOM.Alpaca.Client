@@ -10,6 +10,7 @@ using Lamar;
 using Serilog;
 using System.Windows.Controls;
 using ASCOM.Alpaca.Client.Demo.Desktop.Converters;
+using ASCOM.Alpaca.Client.Logging;
 using Microsoft.Extensions.Logging;
 
 namespace ASCOM.Alpaca.Client.Demo.Desktop
@@ -48,7 +49,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop
                 .WriteTo.File("Log-.json", rollingInterval:RollingInterval.Day)
                 .CreateLogger();
             
-            registry.For(typeof(ILogger<>)).Use(typeof(Logger<>));
+            registry.For<Logging.ILogger>().Use(c => new SerilogAdapter(Log.Logger));
 
             _container = new Container(registry);
             
