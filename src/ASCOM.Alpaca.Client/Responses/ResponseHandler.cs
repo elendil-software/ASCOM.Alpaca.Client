@@ -23,20 +23,20 @@ namespace ASCOM.Alpaca.Client.Responses
         {
             if (!string.IsNullOrWhiteSpace(errorMessage) || errorCode != 0)
             {
-                CheckForActionNotImplemented(errorMessage, errorCode);
-                CheckForInvalidOperation(errorMessage, errorCode);
-                CheckForInvalidValue(errorMessage, errorCode);
-                CheckForInvalidWhileParked(errorMessage, errorCode);
-                CheckForInvalidWhileSlaved(errorMessage, errorCode);
-                CheckForNotConnected(errorMessage, errorCode);
-                CheckForNotImplemented(errorMessage, errorCode);
-                CheckForValueNotSet(errorMessage, errorCode);
+                ThrowExceptionIfActionNotImplemented(errorMessage, errorCode);
+                ThrowExceptionIfInvalidOperation(errorMessage, errorCode);
+                ThrowExceptionIfInvalidValue(errorMessage, errorCode);
+                ThrowExceptionIfInvalidWhileParked(errorMessage, errorCode);
+                ThrowExceptionIfInvalidWhileSlaved(errorMessage, errorCode);
+                ThrowExceptionIfNotConnected(errorMessage, errorCode);
+                ThrowExceptionIfNotImplemented(errorMessage, errorCode);
+                ThrowExceptionIfValueNotSet(errorMessage, errorCode);
 
                 throw new AlpacaDeviceException(errorMessage, errorCode);
             }
         }
 
-        private static void CheckForValueNotSet(string errorMessage, int errorCode)
+        private static void ThrowExceptionIfValueNotSet(string errorMessage, int errorCode)
         {
             if (errorCode == ErrorCodes.ValueNotSet)
             {
@@ -44,7 +44,7 @@ namespace ASCOM.Alpaca.Client.Responses
             }
         }
 
-        private static void CheckForNotImplemented(string errorMessage, int errorCode)
+        private static void ThrowExceptionIfNotImplemented(string errorMessage, int errorCode)
         {
             if (errorCode == ErrorCodes.NotImplemented)
             {
@@ -52,7 +52,7 @@ namespace ASCOM.Alpaca.Client.Responses
             }
         }
 
-        private static void CheckForNotConnected(string errorMessage, int errorCode)
+        private static void ThrowExceptionIfNotConnected(string errorMessage, int errorCode)
         {
             if (errorCode == ErrorCodes.NotConnected)
             {
@@ -60,7 +60,7 @@ namespace ASCOM.Alpaca.Client.Responses
             }
         }
 
-        private static void CheckForInvalidWhileSlaved(string errorMessage, int errorCode)
+        private static void ThrowExceptionIfInvalidWhileSlaved(string errorMessage, int errorCode)
         {
             if (errorCode == ErrorCodes.InvalidWhileSlaved)
             {
@@ -68,7 +68,7 @@ namespace ASCOM.Alpaca.Client.Responses
             }
         }
 
-        private static void CheckForInvalidWhileParked(string errorMessage, int errorCode)
+        private static void ThrowExceptionIfInvalidWhileParked(string errorMessage, int errorCode)
         {
             if (errorCode == ErrorCodes.InvalidWhileParked)
             {
@@ -76,7 +76,7 @@ namespace ASCOM.Alpaca.Client.Responses
             }
         }
 
-        private static void CheckForInvalidValue(string errorMessage, int errorCode)
+        private static void ThrowExceptionIfInvalidValue(string errorMessage, int errorCode)
         {
             if (errorCode == ErrorCodes.InvalidValue)
             {
@@ -84,7 +84,7 @@ namespace ASCOM.Alpaca.Client.Responses
             }
         }
 
-        private static void CheckForInvalidOperation(string errorMessage, int errorCode)
+        private static void ThrowExceptionIfInvalidOperation(string errorMessage, int errorCode)
         {
             if (errorCode == ErrorCodes.InvalidOperationException)
             {
@@ -92,7 +92,7 @@ namespace ASCOM.Alpaca.Client.Responses
             }
         }
 
-        private static void CheckForActionNotImplemented(string errorMessage, int errorCode)
+        private static void ThrowExceptionIfActionNotImplemented(string errorMessage, int errorCode)
         {
             if (errorCode == ErrorCodes.ActionNotImplementedException)
             {
