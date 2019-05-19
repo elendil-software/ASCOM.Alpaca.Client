@@ -115,6 +115,10 @@ namespace ASCOM.Alpaca.Client.Devices
         public async Task<string> GetDriverVersionAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetDriverVersionRequest);
         private IRestRequest BuildGetDriverVersionRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.DriverVersion, Method.GET, GetClientTransactionId());
 
+        public int GetInterfaceVersion() => ExecuteRequest<int, IntResponse>(BuildGetInterfaceVersionRequest);
+        public async Task<int> GetInterfaceVersionAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetNameRequest);
+        private IRestRequest BuildGetInterfaceVersionRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.InterfaceVersion, Method.GET, GetClientTransactionId());
+        
         public string GetName() => ExecuteRequest<string, StringResponse>(BuildGetNameRequest);
         public async Task<string> GetNameAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetNameRequest);
         private IRestRequest BuildGetNameRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.Name, Method.GET, GetClientTransactionId());

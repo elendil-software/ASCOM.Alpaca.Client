@@ -85,6 +85,13 @@ namespace ASCOM.Alpaca.Client.Devices
         string GetDriverVersion();
         
         Task<string> GetDriverVersionAsync();
+
+        /// <summary>
+        /// The ASCOM Device interface version number that this device supports.
+        /// </summary>
+        /// <returns></returns>
+        int GetInterfaceVersion();
+        Task<int> GetInterfaceVersionAsync();
         
         /// <summary>
         /// Retrieves the name of the device

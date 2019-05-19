@@ -10,6 +10,7 @@
         Description,
         DriverInfo,
         DriverVersion,
+        InterfaceVersion,
         Name,
         SupportedActions
     }
