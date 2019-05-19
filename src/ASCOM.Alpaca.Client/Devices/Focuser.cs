@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
@@ -9,6 +10,22 @@ namespace ASCOM.Alpaca.Client.Devices
 {
     public sealed class Focuser : DeviceBase, IFocuser
     {
+        public Focuser(DeviceConfiguration configuration) : base(configuration)
+        {
+        }
+
+        public Focuser(DeviceConfiguration configuration, ILogger logger) : base(configuration, logger)
+        {
+        }
+
+        public Focuser(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, clientTransactionIdGenerator)
+        {
+        }
+
+        public Focuser(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger) : base(configuration, clientTransactionIdGenerator, logger)
+        {
+        }
+
         public Focuser(DeviceConfiguration configuration, ICommandSender commandSender) : 
             base(configuration, commandSender)
         {

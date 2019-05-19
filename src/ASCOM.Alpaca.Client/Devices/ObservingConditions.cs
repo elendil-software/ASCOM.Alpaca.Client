@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
+using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
@@ -11,6 +12,22 @@ namespace ASCOM.Alpaca.Client.Devices
 {
     public sealed class ObservingConditions : DeviceBase, IObservingConditions
     {
+        public ObservingConditions(DeviceConfiguration configuration) : base(configuration)
+        {
+        }
+
+        public ObservingConditions(DeviceConfiguration configuration, ILogger logger) : base(configuration, logger)
+        {
+        }
+
+        public ObservingConditions(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, clientTransactionIdGenerator)
+        {
+        }
+
+        public ObservingConditions(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger) : base(configuration, clientTransactionIdGenerator, logger)
+        {
+        }
+
         public ObservingConditions(DeviceConfiguration configuration, ICommandSender commandSender) : 
             base(configuration, commandSender)
         {

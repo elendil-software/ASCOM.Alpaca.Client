@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
+using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
@@ -10,6 +11,22 @@ namespace ASCOM.Alpaca.Client.Devices
 {
     public sealed class FilterWheel : DeviceBase, IFilterWheel
     {
+        public FilterWheel(DeviceConfiguration configuration) : base(configuration)
+        {
+        }
+
+        public FilterWheel(DeviceConfiguration configuration, ILogger logger) : base(configuration, logger)
+        {
+        }
+
+        public FilterWheel(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, clientTransactionIdGenerator)
+        {
+        }
+
+        public FilterWheel(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger) : base(configuration, clientTransactionIdGenerator, logger)
+        {
+        }
+
         public FilterWheel(DeviceConfiguration configuration, ICommandSender commandSender) : base(configuration, commandSender)
         {
         }

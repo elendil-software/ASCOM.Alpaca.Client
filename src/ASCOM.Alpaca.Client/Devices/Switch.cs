@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
+using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
@@ -10,6 +11,22 @@ namespace ASCOM.Alpaca.Client.Devices
 {
     public sealed class Switch : DeviceBase, ISwitch 
     {
+        public Switch(DeviceConfiguration configuration) : base(configuration)
+        {
+        }
+
+        public Switch(DeviceConfiguration configuration, ILogger logger) : base(configuration, logger)
+        {
+        }
+
+        public Switch(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, clientTransactionIdGenerator)
+        {
+        }
+
+        public Switch(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger) : base(configuration, clientTransactionIdGenerator, logger)
+        {
+        }
+
         public Switch(DeviceConfiguration configuration, ICommandSender commandSender) : 
             base(configuration, commandSender)
         {

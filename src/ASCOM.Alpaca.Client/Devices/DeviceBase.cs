@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
@@ -17,6 +18,40 @@ namespace ASCOM.Alpaca.Client.Devices
         protected abstract DeviceType DeviceType { get; }
         public int DeviceNumber => Configuration.DeviceNumber;
         
+        protected DeviceBase(DeviceConfiguration configuration)
+        {
+            Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            CommandSender = new CommandSender();
+            
+            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber, configuration.ClientId);
+        }
+        
+        protected DeviceBase(DeviceConfiguration configuration, ILogger logger)
+        {
+            Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            CommandSender = new CommandSender(logger);
+            
+            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber, configuration.ClientId);
+        }
+        
+        protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator)
+        {
+            Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            _clientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
+            CommandSender = new CommandSender();
+            
+            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber, configuration.ClientId);
+        }
+        
+        protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger)
+        {
+            Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            _clientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
+            CommandSender = new CommandSender(logger);
+            
+            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber, configuration.ClientId);
+        }
+
         protected DeviceBase(DeviceConfiguration configuration, ICommandSender commandSender)
         {
             Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));

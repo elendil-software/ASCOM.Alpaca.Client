@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Exceptions;
+using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
@@ -12,6 +13,22 @@ namespace ASCOM.Alpaca.Client.Devices
 {
     public sealed class Telescope : DeviceBase, ITelescope
     {
+        public Telescope(DeviceConfiguration configuration) : base(configuration)
+        {
+        }
+
+        public Telescope(DeviceConfiguration configuration, ILogger logger) : base(configuration, logger)
+        {
+        }
+
+        public Telescope(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, clientTransactionIdGenerator)
+        {
+        }
+
+        public Telescope(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger) : base(configuration, clientTransactionIdGenerator, logger)
+        {
+        }
+
         public Telescope(DeviceConfiguration configuration, ICommandSender commandSender) : 
             base(configuration, commandSender)
         {

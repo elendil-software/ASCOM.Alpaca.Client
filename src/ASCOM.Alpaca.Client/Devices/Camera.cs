@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ASCOM.Alpaca.Client.Exceptions;
+using ASCOM.Alpaca.Client.Logging;
 using ASCOM.Alpaca.Client.Request;
 using ASCOM.Alpaca.Client.Responses;
 using ASCOM.Alpaca.Client.Transactions;
@@ -14,6 +15,22 @@ namespace ASCOM.Alpaca.Client.Devices
 {
     public sealed class Camera : DeviceBase, ICamera
     {
+        public Camera(DeviceConfiguration configuration) : base(configuration)
+        {
+        }
+
+        public Camera(DeviceConfiguration configuration, ILogger logger) : base(configuration, logger)
+        {
+        }
+
+        public Camera(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, clientTransactionIdGenerator)
+        {
+        }
+
+        public Camera(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger) : base(configuration, clientTransactionIdGenerator, logger)
+        {
+        }
+
         public Camera(DeviceConfiguration configuration, ICommandSender commandSender) : 
             base(configuration, commandSender)
         {
