@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>ASCOM.Alpaca.Client.Logging</RootNamespace>
+        <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <Version>0.1.0</Version>
+        <Authors>Julien Tschäppät</Authors>
+        <Product>C# ASCOM Alpaca Client Logging NLogAdapter</Product>
+        <Description>NLog adapter to use with AscomAlpacaClient</Description>
+        <Copyright>© 2019 - Julien Tschäppät</Copyright>
+        <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</RepositoryUrl>
+        <PackageTags>ASCOM Astronomy</PackageTags>
+        <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
+        <PackageId>AscomAlpacaClient.Logging.NLogAdapter</PackageId>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NLog" Version="4.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\..\LICENSE.md">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ASCOM.Alpaca.Client\ASCOM.Alpaca.Client.csproj" />
+    </ItemGroup>
+
+</Project>

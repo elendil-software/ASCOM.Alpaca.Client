@@ -236,6 +236,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ASCOM.Alpaca.Client.Logging.SerilogAdapter\ASCOM.Alpaca.Client.Logging.SerilogAdapter.csproj">
+      <Project>{9e66b3e4-f51f-4e5c-9f1c-0136f06c82bb}</Project>
+      <Name>ASCOM.Alpaca.Client.Logging.SerilogAdapter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ASCOM.Alpaca.Client\ASCOM.Alpaca.Client.csproj">
       <Project>{aee5f6b7-3c58-45cf-a5c8-b4a7ba4ead31}</Project>
       <Name>ASCOM.Alpaca.Client</Name>
