@@ -8,7 +8,7 @@
     <Copyright>© 2019 - Julien Tschäppät</Copyright>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>ASCOM.Alpaca.Client</PackageId>
+    <PackageId>AscomAlpacaClient</PackageId>
     <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</PackageProjectUrl>
     <Product>C# ASCOM Alpaca Client</Product>
     <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</RepositoryUrl>
