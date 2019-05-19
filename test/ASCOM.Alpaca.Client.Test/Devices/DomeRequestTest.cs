@@ -26,7 +26,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.GetAltitude();
@@ -47,7 +47,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.GetAltitudeAsync();
@@ -68,7 +68,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.IsAtHome();
@@ -89,7 +89,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.IsAtHomeAsync();
@@ -110,7 +110,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.IsAtPark();
@@ -131,7 +131,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.IsAtParkAsync();
@@ -152,7 +152,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.GetAzimuth();
@@ -173,7 +173,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.GetAzimuthAsync();
@@ -194,7 +194,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.CanFindHome();
@@ -215,7 +215,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.CanFindHomeAsync();
@@ -236,7 +236,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.CanPark();
@@ -257,7 +257,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.CanParkAsync();
@@ -278,7 +278,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.CanSetAltitude();
@@ -299,7 +299,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.CanSetAltitudeAsync();
@@ -320,7 +320,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.CanSetAzimuth();
@@ -341,7 +341,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.CanSetAzimuthAsync();
@@ -362,7 +362,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.CanSetPark();
@@ -383,7 +383,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.CanSetParkAsync();
@@ -404,7 +404,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.CanSetShutter();
@@ -425,7 +425,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.CanSetShutterAsync();
@@ -446,7 +446,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.CanSlave();
@@ -467,7 +467,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.CanSlaveAsync();
@@ -488,7 +488,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.CanSyncAzimuth();
@@ -509,7 +509,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.CanSyncAzimuthAsync();
@@ -530,7 +530,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<ShutterStateResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new ShutterStateResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.GetShutterStatus();
@@ -551,7 +551,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<ShutterStateResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new ShutterStateResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.GetShutterStatusAsync();
@@ -572,7 +572,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.IsSlaved();
@@ -593,7 +593,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.IsSlavedAsync();
@@ -616,7 +616,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.SetSlaved(slavedParameterValue);
@@ -640,7 +640,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.SetSlavedAsync(slavedParameterValue);
@@ -662,7 +662,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.IsSlewing();
@@ -683,7 +683,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.IsSlewingAsync();
@@ -704,7 +704,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.AbortSlew();
@@ -725,7 +725,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.AbortSlewAsync();
@@ -746,7 +746,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.CloseShutter();
@@ -767,7 +767,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.CloseShutterAsync();
@@ -788,7 +788,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.FindHome();
@@ -809,7 +809,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.FindHomeAsync();
@@ -830,7 +830,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.OpenShutter();
@@ -851,7 +851,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.OpenShutterAsync();
@@ -872,7 +872,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.Park();
@@ -893,7 +893,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.ParkAsync();
@@ -914,7 +914,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.SetPark();
@@ -935,7 +935,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.SetParkAsync();
@@ -958,7 +958,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.SlewToAltitude(altitudeParameterValue);
@@ -982,7 +982,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.SlewToAltitudeAsync(altitudeParameterValue);
@@ -1006,7 +1006,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.SlewToAzimuth(azimuthParameterValue);
@@ -1030,7 +1030,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.SlewToAzimuthAsync(azimuthParameterValue);
@@ -1054,7 +1054,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             dome.SyncToAzimuth(azimuthParameterValue);
@@ -1078,7 +1078,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var dome = new Dome(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var dome = new Dome(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await dome.SyncToAzimuthAsync(azimuthParameterValue);

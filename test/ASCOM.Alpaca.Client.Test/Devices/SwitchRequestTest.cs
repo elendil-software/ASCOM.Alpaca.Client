@@ -26,7 +26,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             switchDevice.GetMaxSwitch();
@@ -47,7 +47,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await switchDevice.GetMaxSwitchAsync();
@@ -70,7 +70,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             switchDevice.CanWrite(idParameterValue);
@@ -94,7 +94,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await switchDevice.CanWriteAsync(idParameterValue);
@@ -118,7 +118,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             switchDevice.GetSwitch(idParameterValue);
@@ -142,7 +142,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await switchDevice.GetSwitchAsync(idParameterValue);
@@ -168,7 +168,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             switchDevice.SetSwitch(idParameterValue, stateParameterValue);
@@ -195,7 +195,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await switchDevice.SetSwitchAsync(idParameterValue, stateParameterValue);
@@ -220,7 +220,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new StringResponse());
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             switchDevice.GetSwitchDescription(idParameterValue);
@@ -244,7 +244,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new StringResponse()));
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await switchDevice.GetSwitchDescriptionAsync(idParameterValue);
@@ -268,7 +268,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new StringResponse());
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             switchDevice.GetSwitchName(idParameterValue);
@@ -292,7 +292,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new StringResponse()));
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await switchDevice.GetSwitchNameAsync(idParameterValue);
@@ -318,7 +318,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             switchDevice.SetSwitchName(idParameterValue, nameParameterValue);
@@ -345,7 +345,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await switchDevice.SetSwitchNameAsync(idParameterValue, nameParameterValue);
@@ -370,7 +370,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             switchDevice.GetSwitchValue(idParameterValue);
@@ -394,7 +394,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await switchDevice.GetSwitchValueAsync(idParameterValue);
@@ -420,7 +420,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             switchDevice.SetSwitchValue(idParameterValue, valueParameterValue);
@@ -447,7 +447,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await switchDevice.SetSwitchValueAsync(idParameterValue, valueParameterValue);
@@ -472,7 +472,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             switchDevice.GetMinSwitchValue(idParameterValue);
@@ -496,7 +496,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await switchDevice.GetMinSwitchValueAsync(idParameterValue);
@@ -520,7 +520,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             switchDevice.GetMaxSwitchValue(idParameterValue);
@@ -544,7 +544,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await switchDevice.GetMaxSwitchValueAsync(idParameterValue);
@@ -568,7 +568,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             switchDevice.GetSwitchStep(idParameterValue);
@@ -592,7 +592,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var switchDevice = new Switch(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await switchDevice.GetSwitchStepAsync(idParameterValue);

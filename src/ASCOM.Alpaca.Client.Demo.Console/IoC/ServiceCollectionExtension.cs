@@ -21,31 +21,31 @@ namespace ASCOM.Alpaca.Client.Demo.IoC
                     switch (deviceConfiguration.DeviceType)
                     {
                         case DeviceType.FilterWheel:
-                            return new FilterWheel(deviceConfiguration, clientTransactionIdGenerator, commandSender);
+                            return new FilterWheel(deviceConfiguration, commandSender, clientTransactionIdGenerator);
                         
                         case DeviceType.Switch:
-                            return new Switch(deviceConfiguration, clientTransactionIdGenerator, commandSender);
+                            return new Switch(deviceConfiguration, commandSender, clientTransactionIdGenerator);
                             
                         case DeviceType.SafetyMonitor:
-                            return new SafetyMonitor(deviceConfiguration, clientTransactionIdGenerator, commandSender);
+                            return new SafetyMonitor(deviceConfiguration, commandSender, clientTransactionIdGenerator);
                             
                         case DeviceType.Dome:
-                            return new Dome(deviceConfiguration, clientTransactionIdGenerator, commandSender);
+                            return new Dome(deviceConfiguration, commandSender, clientTransactionIdGenerator);
 
                         case DeviceType.Camera:
-                            return new Camera(deviceConfiguration, clientTransactionIdGenerator, commandSender);
+                            return new Camera(deviceConfiguration, commandSender, clientTransactionIdGenerator);
                             
                         case DeviceType.ObservingConditions:
-                            return new ObservingConditions(deviceConfiguration, clientTransactionIdGenerator, commandSender);
+                            return new ObservingConditions(deviceConfiguration, commandSender, clientTransactionIdGenerator);
 
                         case DeviceType.Focuser:
-                            return new Focuser(deviceConfiguration, clientTransactionIdGenerator, commandSender);
+                            return new Focuser(deviceConfiguration, commandSender, clientTransactionIdGenerator);
 
                         case DeviceType.Rotator:
-                            return new Rotator(deviceConfiguration, clientTransactionIdGenerator, commandSender);
+                            return new Rotator(deviceConfiguration, commandSender, clientTransactionIdGenerator);
 
                         case DeviceType.Telescope:
-                            return new Telescope(deviceConfiguration, clientTransactionIdGenerator, commandSender);
+                            return new Telescope(deviceConfiguration, commandSender, clientTransactionIdGenerator);
                         
                         default:
                             throw new InvalidEnumArgumentException(deviceConfiguration.DeviceType.ToString());

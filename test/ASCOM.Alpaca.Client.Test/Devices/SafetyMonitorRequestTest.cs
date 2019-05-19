@@ -26,7 +26,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var safetyMonitor = new SafetyMonitor(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var safetyMonitor = new SafetyMonitor(_deviceConfiguration, commandSenderMock.Object);
 
             //Act
             safetyMonitor.IsSafe();
@@ -47,7 +47,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var safetyMonitor = new SafetyMonitor(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var safetyMonitor = new SafetyMonitor(_deviceConfiguration, commandSenderMock.Object);
 
             //Act
             await safetyMonitor.IsSafeAsync();

@@ -8,7 +8,13 @@ namespace ASCOM.Alpaca.Client.Devices
 {
     public sealed class SafetyMonitor : DeviceBase, ISafetyMonitor
     {
-        public SafetyMonitor(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender) : base(configuration, clientTransactionIdGenerator, commandSender)
+        public SafetyMonitor(DeviceConfiguration configuration, ICommandSender commandSender) : 
+            base(configuration, commandSender)
+        {
+        }
+
+        public SafetyMonitor(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
+            base(configuration, commandSender, clientTransactionIdGenerator)
         {
         }
 
@@ -16,6 +22,6 @@ namespace ASCOM.Alpaca.Client.Devices
         
         public bool IsSafe() => ExecuteRequest<bool, BoolResponse>(BuildIsSafeRequest);
         public async Task<bool> IsSafeAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsSafeRequest);
-        private IRestRequest BuildIsSafeRequest() => RequestBuilder.BuildRestRequest(SafetyMonitorMethod.IsSafe, Method.GET, ClientTransactionIdGenerator.GetTransactionId(Configuration.ClientId));
+        private IRestRequest BuildIsSafeRequest() => RequestBuilder.BuildRestRequest(SafetyMonitorMethod.IsSafe, Method.GET, GetClientTransactionId());
     }
 }

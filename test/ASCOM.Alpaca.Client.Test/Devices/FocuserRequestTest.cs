@@ -26,7 +26,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             focuser.IsAbsolute();
@@ -47,7 +47,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await focuser.IsAbsoluteAsync();
@@ -68,7 +68,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             focuser.IsMoving();
@@ -89,7 +89,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await focuser.IsMovingAsync();
@@ -110,7 +110,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             focuser.GetMaxIncrement();
@@ -131,7 +131,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await focuser.GetMaxIncrementAsync();
@@ -152,7 +152,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             focuser.GetMaxStep();
@@ -173,7 +173,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await focuser.GetMaxStepAsync();
@@ -194,7 +194,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             focuser.GetPosition();
@@ -215,7 +215,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await focuser.GetPositionAsync();
@@ -236,7 +236,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             focuser.GetStepSize();
@@ -257,7 +257,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await focuser.GetStepSizeAsync();
@@ -278,7 +278,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             focuser.IsTempComp();
@@ -299,7 +299,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await focuser.IsTempCompAsync();
@@ -322,7 +322,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             focuser.SetTempComp(tempCompParameterValue);
@@ -346,7 +346,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await focuser.SetTempCompAsync(tempCompParameterValue);
@@ -368,7 +368,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             focuser.IsTempCompAvailable();
@@ -389,7 +389,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await focuser.IsTempCompAvailableAsync();
@@ -410,7 +410,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             focuser.GetTemperature();
@@ -431,7 +431,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await focuser.GetTemperatureAsync();
@@ -452,7 +452,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             focuser.Halt();
@@ -473,7 +473,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await focuser.HaltAsync();
@@ -496,7 +496,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             focuser.Move(positionParameterValue);
@@ -520,7 +520,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var focuser = new Focuser(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await focuser.MoveAsync(positionParameterValue);

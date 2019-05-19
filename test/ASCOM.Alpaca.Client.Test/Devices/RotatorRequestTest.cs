@@ -26,7 +26,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             rotator.CanReverse();
@@ -47,7 +47,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await rotator.CanReverseAsync();
@@ -68,7 +68,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             rotator.IsMoving();
@@ -89,7 +89,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await rotator.IsMovingAsync();
@@ -110,7 +110,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             rotator.GetPosition();
@@ -131,7 +131,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await rotator.GetPositionAsync();
@@ -152,7 +152,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new BoolResponse());
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             rotator.IsReversed();
@@ -173,7 +173,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new BoolResponse()));
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await rotator.IsReversedAsync();
@@ -196,7 +196,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             rotator.SetReversed(reversedParameterValue);
@@ -220,7 +220,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await rotator.SetReversedAsync(reversedParameterValue);
@@ -242,7 +242,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             rotator.GetStepSize();
@@ -263,7 +263,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await rotator.GetStepSizeAsync();
@@ -284,7 +284,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             rotator.GetTargetPosition();
@@ -305,7 +305,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await rotator.GetTargetPositionAsync();
@@ -326,7 +326,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             rotator.Halt();
@@ -347,7 +347,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await rotator.HaltAsync();
@@ -370,7 +370,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             rotator.Move(positionParameterValue);
@@ -394,7 +394,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await rotator.MoveAsync(positionParameterValue);
@@ -418,7 +418,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             rotator.MoveAbsolute(positionParameterValue);
@@ -442,7 +442,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var rotator = new Rotator(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var rotator = new Rotator(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await rotator.MoveAbsoluteAsync(positionParameterValue);

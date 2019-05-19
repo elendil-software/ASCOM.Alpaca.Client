@@ -23,39 +23,39 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.Factories
             switch (deviceType.Name)
             {
                 case nameof(FilterWheel):
-                    IDevice device = new FilterWheel(configuration, _clientTransactionIdGenerator, _commandSender);
+                    IDevice device = new FilterWheel(configuration, _commandSender, _clientTransactionIdGenerator);
                     return (T) device;
 
                 case nameof(SafetyMonitor):
-                    IDevice safetyMonitor = new SafetyMonitor(configuration, _clientTransactionIdGenerator, _commandSender);
+                    IDevice safetyMonitor = new SafetyMonitor(configuration, _commandSender, _clientTransactionIdGenerator);
                     return (T) safetyMonitor;
                 
                 case nameof(Dome):
-                    IDevice dome = new Dome(configuration, _clientTransactionIdGenerator, _commandSender);
+                    IDevice dome = new Dome(configuration, _commandSender, _clientTransactionIdGenerator);
                     return (T) dome;
                 
                 case nameof(Camera):
-                    IDevice camera = new Camera(configuration, _clientTransactionIdGenerator, _commandSender);
+                    IDevice camera = new Camera(configuration, _commandSender, _clientTransactionIdGenerator);
                     return (T) camera;
                 
                 case nameof(Focuser):
-                    IDevice focuser = new Focuser(configuration, _clientTransactionIdGenerator, _commandSender);
+                    IDevice focuser = new Focuser(configuration, _commandSender, _clientTransactionIdGenerator);
                     return (T) focuser;
                 
                 case nameof(ObservingConditions):
-                    IDevice observingConditions = new ObservingConditions(configuration, _clientTransactionIdGenerator, _commandSender);
+                    IDevice observingConditions = new ObservingConditions(configuration, _commandSender, _clientTransactionIdGenerator);
                     return (T) observingConditions;
                 
                 case nameof(Rotator):
-                    IDevice rotator = new Rotator(configuration, _clientTransactionIdGenerator, _commandSender);
+                    IDevice rotator = new Rotator(configuration, _commandSender, _clientTransactionIdGenerator);
                     return (T) rotator;
                 
                 case nameof(Switch):
-                    IDevice @switch = new Switch(configuration, _clientTransactionIdGenerator, _commandSender);
+                    IDevice @switch = new Switch(configuration, _commandSender, _clientTransactionIdGenerator);
                     return (T) @switch;
                 
                 case nameof(Telescope):
-                    IDevice telescope = new Telescope(configuration, _clientTransactionIdGenerator, _commandSender);
+                    IDevice telescope = new Telescope(configuration, _commandSender, _clientTransactionIdGenerator);
                     return (T) telescope;
 
                 default:

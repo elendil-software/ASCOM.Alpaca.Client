@@ -10,19 +10,27 @@ namespace ASCOM.Alpaca.Client.Devices
 {
     public abstract class DeviceBase : IDevice
     {
+        private readonly IClientTransactionIdGenerator _clientTransactionIdGenerator;
         protected readonly ICommandSender CommandSender;
         protected readonly IRequestBuilder RequestBuilder;
-        protected readonly IClientTransactionIdGenerator ClientTransactionIdGenerator;
         protected readonly DeviceConfiguration Configuration;
         protected abstract DeviceType DeviceType { get; }
         public int DeviceNumber => Configuration.DeviceNumber;
         
-        protected DeviceBase(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ICommandSender commandSender)
+        protected DeviceBase(DeviceConfiguration configuration, ICommandSender commandSender)
         {
             Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
-            ClientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
             CommandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
             
+            RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber, configuration.ClientId);
+        }
+        
+        protected DeviceBase(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator)
+        {
+            Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            CommandSender = commandSender ?? throw new ArgumentNullException(nameof(commandSender));
+            _clientTransactionIdGenerator = clientTransactionIdGenerator ?? throw new ArgumentNullException(nameof(clientTransactionIdGenerator));
+
             RequestBuilder = new RequestBuilder(DeviceType, configuration.DeviceNumber, configuration.ClientId);
         }
 
@@ -36,7 +44,7 @@ namespace ASCOM.Alpaca.Client.Devices
                 {DeviceRequestParameters.Parameters, actionParameters}
             };
 
-            return RequestBuilder.BuildRestRequest(DeviceMethod.Action, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId(Configuration.ClientId));
+            return RequestBuilder.BuildRestRequest(DeviceMethod.Action, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public void SendCommandBlind(string command, bool raw = false) => ExecuteRequest(BuildSendCommandBlindRequest, command, raw);
@@ -49,7 +57,7 @@ namespace ASCOM.Alpaca.Client.Devices
                 {DeviceRequestParameters.Raw, raw.ToString()}
             };
 
-            return RequestBuilder.BuildRestRequest(DeviceMethod.CommandBlind, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId(Configuration.ClientId));
+            return RequestBuilder.BuildRestRequest(DeviceMethod.CommandBlind, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public bool SendCommandBool(string command, bool raw = false) => ExecuteRequest<bool, BoolResponse, string, bool>(BuildSendCommandBoolRequest, command, raw);
@@ -62,7 +70,7 @@ namespace ASCOM.Alpaca.Client.Devices
                 {DeviceRequestParameters.Raw, raw.ToString()}
             };
 
-            return RequestBuilder.BuildRestRequest(DeviceMethod.CommandBool, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId(Configuration.ClientId));
+            return RequestBuilder.BuildRestRequest(DeviceMethod.CommandBool, Method.PUT, parameters, GetClientTransactionId());
         }
       
         public string SendCommandString(string command, bool raw = false) => ExecuteRequest<string, StringResponse, string, bool>(BuildSendCommandStringRequest, command, raw);
@@ -76,12 +84,12 @@ namespace ASCOM.Alpaca.Client.Devices
                 {DeviceRequestParameters.Raw, raw.ToString()}
             };
 
-            return RequestBuilder.BuildRestRequest(DeviceMethod.CommandString, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId(Configuration.ClientId));
+            return RequestBuilder.BuildRestRequest(DeviceMethod.CommandString, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public bool IsConnected() => ExecuteRequest<bool, BoolResponse>(BuildIsConnectedRequest);
         public async Task<bool> IsConnectedAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsConnectedRequest);
-        private IRestRequest BuildIsConnectedRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.Connected, Method.GET, ClientTransactionIdGenerator.GetTransactionId(Configuration.ClientId));
+        private IRestRequest BuildIsConnectedRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.Connected, Method.GET, GetClientTransactionId());
         
         public void SetConnected(bool connected) => ExecuteRequest(BuildSetConnectedRequest, connected);
         public async Task SetConnectedAsync(bool connected) => await ExecuteRequestAsync(BuildSetConnectedRequest, connected);
@@ -92,28 +100,28 @@ namespace ASCOM.Alpaca.Client.Devices
                 {DeviceRequestParameters.Connected, connected.ToString()}
             };
 
-            return RequestBuilder.BuildRestRequest(DeviceMethod.Connected, Method.PUT, parameters, ClientTransactionIdGenerator.GetTransactionId(Configuration.ClientId));
+            return RequestBuilder.BuildRestRequest(DeviceMethod.Connected, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public string GetDescription() => ExecuteRequest<string, StringResponse>(BuildGetDescriptionRequest);     
         public async Task<string> GetDescriptionAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetDescriptionRequest);
-        private IRestRequest BuildGetDescriptionRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.Description, Method.GET, ClientTransactionIdGenerator.GetTransactionId(Configuration.ClientId));
+        private IRestRequest BuildGetDescriptionRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.Description, Method.GET, GetClientTransactionId());
 
         public string GetDriverInfo() => ExecuteRequest<string, StringResponse>(BuildGetDriverInfoRequest);    
         public async Task<string> GetDriverInfoAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetDriverInfoRequest);
-        private IRestRequest BuildGetDriverInfoRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.DriverInfo, Method.GET, ClientTransactionIdGenerator.GetTransactionId(Configuration.ClientId));
+        private IRestRequest BuildGetDriverInfoRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.DriverInfo, Method.GET, GetClientTransactionId());
 
         public string GetDriverVersion() => ExecuteRequest<string, StringResponse>(BuildGetDriverVersionRequest);
         public async Task<string> GetDriverVersionAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetDriverVersionRequest);
-        private IRestRequest BuildGetDriverVersionRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.DriverVersion, Method.GET, ClientTransactionIdGenerator.GetTransactionId(Configuration.ClientId));
+        private IRestRequest BuildGetDriverVersionRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.DriverVersion, Method.GET, GetClientTransactionId());
 
         public string GetName() => ExecuteRequest<string, StringResponse>(BuildGetNameRequest);
         public async Task<string> GetNameAsync() => await ExecuteRequestAsync<string, StringResponse>(BuildGetNameRequest);
-        private IRestRequest BuildGetNameRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.Name, Method.GET, ClientTransactionIdGenerator.GetTransactionId(Configuration.ClientId));
+        private IRestRequest BuildGetNameRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.Name, Method.GET, GetClientTransactionId());
 
         public IList<string> GetSupportedActions() => ExecuteRequest<IList<string>, StringListResponse>(BuildGetSupportedActionsRequest);      
         public async Task<IList<string>> GetSupportedActionsAsync() => await ExecuteRequestAsync<IList<string>, StringListResponse>(BuildGetSupportedActionsRequest);
-        private IRestRequest BuildGetSupportedActionsRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.SupportedActions, Method.GET, ClientTransactionIdGenerator.GetTransactionId(Configuration.ClientId));
+        private IRestRequest BuildGetSupportedActionsRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.SupportedActions, Method.GET, GetClientTransactionId());
 
         protected void ExecuteRequest(Func<IRestRequest> requestBuilder)
         {
@@ -197,6 +205,16 @@ namespace ASCOM.Alpaca.Client.Devices
             IRestRequest request = requestBuilder();
             var response = await CommandSender.ExecuteRequestAsync<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             return response.HandleResponse<TResult, TAlpacaResponse>();
+        }
+
+        protected int GetClientTransactionId()
+        {
+            if (_clientTransactionIdGenerator == null)
+            {
+                return -1;
+            }
+
+            return GetClientTransactionId();
         }
     }
 }

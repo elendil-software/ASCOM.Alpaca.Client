@@ -26,7 +26,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<IntListResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntListResponse());
-            var filterWheel = new FilterWheel(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             filterWheel.GetFocusOffsets();
@@ -47,7 +47,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<IntListResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntListResponse()));
-            var filterWheel = new FilterWheel(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await filterWheel.GetFocusOffsetsAsync();
@@ -68,7 +68,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<StringListResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new StringListResponse());
-            var filterWheel = new FilterWheel(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             filterWheel.GetNames();
@@ -89,7 +89,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<StringListResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new StringListResponse()));
-            var filterWheel = new FilterWheel(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await filterWheel.GetNamesAsync();
@@ -110,7 +110,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new IntResponse());
-            var filterWheel = new FilterWheel(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             filterWheel.GetPosition();
@@ -131,7 +131,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new IntResponse()));
-            var filterWheel = new FilterWheel(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await filterWheel.GetPositionAsync();
@@ -154,7 +154,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var filterWheel = new FilterWheel(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             filterWheel.SetPosition(positionParameterValue);
@@ -178,7 +178,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var filterWheel = new FilterWheel(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await filterWheel.SetPositionAsync(positionParameterValue);

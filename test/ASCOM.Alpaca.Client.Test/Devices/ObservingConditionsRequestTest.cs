@@ -26,7 +26,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetAveragePeriod();
@@ -47,7 +47,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetAveragePeriodAsync();
@@ -70,7 +70,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.SetAveragePeriod(periodParameterValue);
@@ -94,7 +94,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.SetAveragePeriodAsync(periodParameterValue);
@@ -116,7 +116,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetCloudCover();
@@ -137,7 +137,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetCloudCoverAsync();
@@ -158,7 +158,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetDewPoint();
@@ -179,7 +179,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetDewPointAsync();
@@ -200,7 +200,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetHumidity();
@@ -221,7 +221,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetHumidityAsync();
@@ -242,7 +242,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetPressure();
@@ -263,7 +263,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetPressureAsync();
@@ -284,7 +284,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetRainRate();
@@ -305,7 +305,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetRainRateAsync();
@@ -326,7 +326,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetSkyBrightness();
@@ -347,7 +347,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetSkyBrightnessAsync();
@@ -368,7 +368,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetSkyQuality();
@@ -389,7 +389,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetSkyQualityAsync();
@@ -410,7 +410,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetSkyTemperature();
@@ -431,7 +431,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetSkyTemperatureAsync();
@@ -452,7 +452,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetStarFwhm();
@@ -473,7 +473,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetStarFwhmAsync();
@@ -494,7 +494,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetTemperature();
@@ -515,7 +515,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetTemperatureAsync();
@@ -536,7 +536,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetWindDirection();
@@ -557,7 +557,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetWindDirectionAsync();
@@ -578,7 +578,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetWindGust();
@@ -599,7 +599,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetWindGustAsync();
@@ -620,7 +620,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetWindSpeed();
@@ -641,7 +641,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetWindSpeedAsync();
@@ -662,7 +662,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new Response());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.Refresh();
@@ -683,7 +683,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new Response()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.RefreshAsync();
@@ -706,7 +706,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new StringResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetSensorDescription(sensorNameParameterValue);
@@ -730,7 +730,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new StringResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetSensorDescriptionAsync(sensorNameParameterValue);
@@ -754,7 +754,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(new DoubleResponse());
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             observingConditions.GetTimeSinceLastUpdate(sensorNameParameterValue);
@@ -778,7 +778,7 @@ namespace ASCOM.Alpaca.Client.Test.Devices
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
                 .Returns(Task.FromResult(new DoubleResponse()));
-            var observingConditions = new ObservingConditions(_deviceConfiguration, _clientTransactionIdGenerator, commandSenderMock.Object);
+            var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
             await observingConditions.GetTimeSinceLastUpdateAsync(sensorNameParameterValue);
