@@ -6,7 +6,9 @@ This library provides methods that simplify the integration of
 **Important**
 This project is under development and should not be use in production.
 
+Any improvement suggestion, new ideas, ... will be appreciated
+
 ## Documentation
 
-You will find all information in the [wiki]()
+You will find all information in the [wiki](https://github.com/elendil-software/ASCOM.Alpaca.Client/wiki)
 
