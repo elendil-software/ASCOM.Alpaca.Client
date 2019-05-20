@@ -21,6 +21,11 @@ pipeline {
       defaultValue: false,
       description: 'Publish NuGet Package'
     )
+	string(
+      name: 'NextVersion',
+      defaultValue: '',
+      description: 'Next Version'
+    )
     booleanParam(
       name: 'Create_Tag',
       defaultValue: false,
