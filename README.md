@@ -6,37 +6,7 @@ This library provides methods that simplify the integration of
 **Important**
 This project is under development and should not be use in production.
 
-## Installation
+## Documentation
 
-This library will be available as a NuGet package when the developement will be completed. 
+You will find all information in the [wiki]()
 
-## How to use it
-
-A class (most are in developement) for each ASCOM device type is provided :
-
-- Switch
-- SafetyMonitor
-- Dome
-- Camera
-- ObservingConditions
-- FilterWheel,
-- Focuser
-- Rotator
-- Telescope
-
-### Dependencies
-
-To work a device require some dependencies that have to be passed to the class constructor
-
-#### Device configuration
-
-A device instance has to be configured with a common configuration class : 
-[DeviceConfiguration](https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/ASCOM.Alpaca.Client/Configuration/DeviceConfiguration.cs)
-
-#### Client Transaction ID Generator
-
-//TODO
-
-#### Command sender
-
-//TODO
