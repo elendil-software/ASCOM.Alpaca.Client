@@ -9,16 +9,6 @@ namespace AscomAlpacaClient.Errors
     public static class ErrorCodes
     {
         /// <summary>
-        /// Start of the Alpaca error code range 0x400 to 0xFFF
-        /// </summary>
-        public static readonly int AlpacaErrorCodeBase = 0x400;
-        
-        /// <summary>
-        /// End of Alpaca error code range 0x400 to 0xFFF
-        /// </summary>
-        public static readonly int AlpacaErrorCodeMax = 0xFFF;
-        
-        /// <summary>
         /// Reserved error code (0x400) for property or method not implemented.
         /// </summary>
         /// <seealso cref="AlpacaNotImplementedException"/>
@@ -71,32 +61,8 @@ namespace AscomAlpacaClient.Errors
         public static readonly int ActionNotImplementedException = 0x40C;
 
         /// <summary>
-        /// Reserved error code (0x40D) to indicate that the requested item is not present in the ASCOM cache.
-        /// </summary>
-        /// <remarks>
-        /// The exception is defined in the ASCOM.Cache component rather than ASCOM.Exceptions.
-        /// </remarks>
-        public static readonly int NotInCacheException = 0x40D;
-
-        /// <summary>
         /// Reserved 'catch-all' error code (0x4FF) used when nothing else was specified.
         /// </summary>
         public static readonly int UnspecifiedError = 0x4FF;
-
-        /// <summary>
-        /// The starting value (0x500) for driver-specific error numbers.
-        /// </summary>
-        /// <remarks>
-        /// Drivers are free to choose their own numbers starting with DriverBase, up to and including DriverMax.
-        /// </remarks>
-        public static readonly int DriverBase = 0x500;
-
-        /// <summary>
-        /// The maximum value (0xFFF) for driver-specific error numbers.
-        /// </summary>
-        /// <remarks>
-        /// Drivers are free to choose their own numbers starting with DriverBase, up to and including DriverMax.
-        /// </remarks>
-        public static readonly int DriverMax = 0xFFF;
     }
 }
