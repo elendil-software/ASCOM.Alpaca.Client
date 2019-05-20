@@ -20,7 +20,6 @@ namespace AscomAlpacaClient.Responses
         {
             if (!string.IsNullOrWhiteSpace(errorMessage) || errorCode != 0)
             {
-                ThrowExceptionIfActionNotImplemented(errorMessage, errorCode);
                 ThrowExceptionIfInvalidOperation(errorMessage, errorCode);
                 ThrowExceptionIfInvalidValue(errorMessage, errorCode);
                 ThrowExceptionIfInvalidWhileParked(errorMessage, errorCode);
@@ -43,7 +42,7 @@ namespace AscomAlpacaClient.Responses
 
         private static void ThrowExceptionIfNotImplemented(string errorMessage, int errorCode)
         {
-            if (errorCode == ErrorCodes.NotImplemented)
+            if (errorCode == ErrorCodes.NotImplemented || errorCode == ErrorCodes.ActionNotImplementedException)
             {
                 throw new AlpacaNotImplementedException(errorMessage);
             }
@@ -86,14 +85,6 @@ namespace AscomAlpacaClient.Responses
             if (errorCode == ErrorCodes.InvalidOperationException)
             {
                 throw new AlpacaInvalidOperationException(errorMessage);
-            }
-        }
-
-        private static void ThrowExceptionIfActionNotImplemented(string errorMessage, int errorCode)
-        {
-            if (errorCode == ErrorCodes.ActionNotImplementedException)
-            {
-                throw new AlpacaActionNotImplementedException(errorMessage);
             }
         }
     }

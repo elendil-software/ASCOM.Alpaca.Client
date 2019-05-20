@@ -1,3 +1,4 @@
+using System;
 using AscomAlpacaClient.Exceptions;
 
 namespace AscomAlpacaClient.Errors
@@ -65,6 +66,8 @@ namespace AscomAlpacaClient.Errors
         /// <summary>
         /// Reserved error code (0x40C) to indicate that the requested action is not implemented in this driver.
         /// </summary>
+        /// <seealso cref="NotImplemented"/>
+        [Obsolete("Replaced by NotImplemented")]
         public static readonly int ActionNotImplementedException = 0x40C;
 
         /// <summary>
