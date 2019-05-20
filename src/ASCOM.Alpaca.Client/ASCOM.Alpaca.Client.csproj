@@ -5,14 +5,14 @@
     <Authors>Julien Tschäppät</Authors>
     <Company>Julien Tschäppät</Company>
     <Version>0.1.0</Version>
-    <Copyright>© 2019 - Julien Tschäppät</Copyright>
+    <Copyright>Copyright © 2019 - Julien Tschäppät</Copyright>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>AscomAlpacaClient</PackageId>
     <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</PackageProjectUrl>
     <Product>C# ASCOM Alpaca Client</Product>
     <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</RepositoryUrl>
-    <PackageTags>ASCOM Astronomy</PackageTags>
+    <PackageTags>ASCOM Alpaca Astronomy</PackageTags>
     <AssemblyVersion>0.1.0</AssemblyVersion>
     <FileVersion>0.1.0</FileVersion>
     <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
@@ -20,6 +20,8 @@
     <PackageIconUrl></PackageIconUrl>
     <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <RootNamespace>AscomAlpacaClient</RootNamespace>
+    <AssemblyName>AscomAlpacaClient</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,3 +1,3 @@
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("ASCOM.Alpaca.Client.Test")]
+[assembly: InternalsVisibleTo("AscomAlpacaClient.Test")]
