@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace ASCOM.Alpaca.Client.Demo.Devices
+namespace AscomAlpacaClient.Demo.Devices
 {
     internal abstract class DeviceDemoBase
     {

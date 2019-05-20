@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace ASCOM.Alpaca.Client.Exceptions
+namespace AscomAlpacaClient.Exceptions
 {
     [Serializable]
     public class AlpacaServerException : AlpacaException

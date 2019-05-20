@@ -1,7 +1,7 @@
 using System;
 using NLog;
 
-namespace ASCOM.Alpaca.Client.Logging
+namespace AscomAlpacaClient.Logging
 {
     public class NLogAdapter : ILogger
     {

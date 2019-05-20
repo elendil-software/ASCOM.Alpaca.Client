@@ -1,7 +1,7 @@
-using ASCOM.Alpaca.Client.Errors;
-using ASCOM.Alpaca.Client.Exceptions;
+using AscomAlpacaClient.Errors;
+using AscomAlpacaClient.Exceptions;
 
-namespace ASCOM.Alpaca.Client.Responses
+namespace AscomAlpacaClient.Responses
 {
     internal static class ResponseHandler
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
-using ASCOM.Alpaca.Client.Errors;
+using AscomAlpacaClient.Errors;
 
-namespace ASCOM.Alpaca.Client.Exceptions
+namespace AscomAlpacaClient.Exceptions
 {
     [Serializable]
     public class AlpacaException : Exception

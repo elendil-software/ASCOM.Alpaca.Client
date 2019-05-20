@@ -1,7 +1,7 @@
-using ASCOM.Alpaca.Client.Responses;
+using AscomAlpacaClient.Responses;
 using Xunit;
 
-namespace ASCOM.Alpaca.Client.Test.Responses
+namespace AscomAlpacaClient.Test.Responses
 {
     public class ImageArrayShort2DResponseIsInitialisedWith
     {

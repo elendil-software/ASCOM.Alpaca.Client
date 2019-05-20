@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace ASCOM.Alpaca.Client.Transactions
+namespace AscomAlpacaClient.Transactions
 {
     /// <summary>
     /// Generate a client transaction ID.

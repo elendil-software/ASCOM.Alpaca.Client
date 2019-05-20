@@ -1,9 +1,9 @@
 using System;
-using ASCOM.Alpaca.Client.Errors;
-using ASCOM.Alpaca.Client.Exceptions;
+using AscomAlpacaClient.Errors;
+using AscomAlpacaClient.Exceptions;
 using Xunit;
 
-namespace ASCOM.Alpaca.Client.Test.Exceptions
+namespace AscomAlpacaClient.Test.Exceptions
 {
     public class AlpacaNotImplementedExceptionContainsValidErrorCode
     {

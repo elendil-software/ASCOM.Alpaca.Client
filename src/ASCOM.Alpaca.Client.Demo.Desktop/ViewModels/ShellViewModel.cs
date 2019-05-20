@@ -1,7 +1,7 @@
 ﻿using System;
 using Caliburn.Micro;
 
-namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
+namespace AscomAlpacaClient.Demo.Desktop.ViewModels
 {
     public class ShellViewModel : Screen
     {

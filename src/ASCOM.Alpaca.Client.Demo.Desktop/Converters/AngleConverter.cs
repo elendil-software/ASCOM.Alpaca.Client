@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using System.Windows.Data;
 
-namespace ASCOM.Alpaca.Client.Demo.Desktop.Converters
+namespace AscomAlpacaClient.Demo.Desktop.Converters
 {
     public class AngleConverter : IValueConverter
     {

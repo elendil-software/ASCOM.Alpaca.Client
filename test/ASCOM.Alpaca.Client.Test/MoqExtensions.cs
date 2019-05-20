@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using Moq.Language.Flow;
 
-namespace ASCOM.Alpaca.Client.Test
+namespace AscomAlpacaClient.Test
 {
     internal static class MoqExtensions
     {

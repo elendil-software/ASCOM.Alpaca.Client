@@ -1,9 +1,9 @@
-using ASCOM.Alpaca.Client.Errors;
-using ASCOM.Alpaca.Client.Exceptions;
-using ASCOM.Alpaca.Client.Responses;
+using AscomAlpacaClient.Errors;
+using AscomAlpacaClient.Exceptions;
+using AscomAlpacaClient.Responses;
 using Xunit;
 
-namespace ASCOM.Alpaca.Client.Test.Responses
+namespace AscomAlpacaClient.Test.Responses
 {
     public class ResponseHandlerTest
     {

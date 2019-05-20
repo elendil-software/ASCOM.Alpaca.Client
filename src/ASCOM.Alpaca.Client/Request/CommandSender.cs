@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Client.Exceptions;
-using ASCOM.Alpaca.Client.Logging;
-using ASCOM.Alpaca.Client.Responses;
+using AscomAlpacaClient.Exceptions;
+using AscomAlpacaClient.Logging;
+using AscomAlpacaClient.Responses;
 using RestSharp;
 
-namespace ASCOM.Alpaca.Client.Request
+namespace AscomAlpacaClient.Request
 {
     internal class CommandSender : ICommandSender
     {

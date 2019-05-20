@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Client.Devices
+namespace AscomAlpacaClient.Devices
 {
     /// <summary>
     /// Sensor type, identifies the type of colour sensor

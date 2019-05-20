@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using RestSharp;
 
-namespace ASCOM.Alpaca.Client.Request
+namespace AscomAlpacaClient.Request
 {
     public interface IRequestBuilder
     {

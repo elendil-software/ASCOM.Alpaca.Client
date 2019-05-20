@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TXT", "TXT", "{2D08D41B-6BB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASCOM.Alpaca.Client.Demo.Console", "src\ASCOM.Alpaca.Client.Demo.Console\ASCOM.Alpaca.Client.Demo.Console.csproj", "{CCDD330A-D0AB-4F08-8970-936FCCC069BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASCOM.Alpaca.Client.Demo.Desktop", "src\ASCOM.Alpaca.Client.Demo.Desktop\ASCOM.Alpaca.Client.Demo.Desktop.csproj", "{ED5A8944-465A-4FF8-B8F8-28063C5D43D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ascom.Alpaca.Client.Demo.Desktop", "src\ASCOM.Alpaca.Client.Demo.Desktop\Ascom.Alpaca.Client.Demo.Desktop.csproj", "{ED5A8944-465A-4FF8-B8F8-28063C5D43D8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASCOM.Alpaca.Client.Test", "test\ASCOM.Alpaca.Client.Test\ASCOM.Alpaca.Client.Test.csproj", "{88ECB311-08E3-432C-A17C-5BA333F120CF}"
 EndProject

@@ -1,10 +1,10 @@
 using System.ComponentModel;
-using ASCOM.Alpaca.Client.Demo.Devices;
-using ASCOM.Alpaca.Client.Devices;
-using ASCOM.Alpaca.Client.Transactions;
+using AscomAlpacaClient.Demo.Devices;
+using AscomAlpacaClient.Devices;
+using AscomAlpacaClient.Transactions;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ASCOM.Alpaca.Client.Demo.IoC
+namespace AscomAlpacaClient.Demo.IoC
 {
     public static class ServiceCollectionExtension
     {

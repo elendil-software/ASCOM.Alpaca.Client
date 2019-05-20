@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using ASCOM.Alpaca.Client.Responses;
+using AscomAlpacaClient.Responses;
 using RestSharp;
 
-namespace ASCOM.Alpaca.Client.Request
+namespace AscomAlpacaClient.Request
 {
     public interface ICommandSender
     {

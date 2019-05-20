@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using ASCOM.Alpaca.Client.Demo.Desktop.Factories;
-using ASCOM.Alpaca.Client.Devices;
+using AscomAlpacaClient.Demo.Desktop.Factories;
+using AscomAlpacaClient.Devices;
+using AscomAlpacaClient.Exceptions;
 
-namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
+namespace AscomAlpacaClient.Demo.Desktop.ViewModels
 {
     public class CameraViewModel : DeviceViewModelBase
     {
@@ -655,7 +656,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
                 GainMax = await _camera.GetGainMaxAsync();
                 GainMin = await _camera.GetGainMinAsync();
             }
-            catch (ASCOM.Alpaca.Client.Exceptions.AlpacaNotImplementedException)
+            catch (AlpacaNotImplementedException)
             {
                 //DO NOTHING
             }

@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Client.Exceptions;
-using ASCOM.Alpaca.Client.Logging;
-using ASCOM.Alpaca.Client.Request;
-using ASCOM.Alpaca.Client.Responses;
-using ASCOM.Alpaca.Client.Transactions;
+using AscomAlpacaClient.Exceptions;
+using AscomAlpacaClient.Logging;
+using AscomAlpacaClient.Request;
+using AscomAlpacaClient.Responses;
+using AscomAlpacaClient.Transactions;
 using RestSharp;
 
-namespace ASCOM.Alpaca.Client.Devices
+namespace AscomAlpacaClient.Devices
 {
     public sealed class Telescope : DeviceBase, ITelescope
     {

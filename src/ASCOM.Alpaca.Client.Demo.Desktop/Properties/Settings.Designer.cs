@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ASCOM.Alpaca.Client.Demo.Desktop.Properties
+namespace AscomAlpacaClient.Demo.Desktop.Properties
 {
 
 

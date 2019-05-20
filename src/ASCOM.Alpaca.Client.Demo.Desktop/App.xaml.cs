@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace ASCOM.Alpaca.Client.Demo.Desktop
+namespace AscomAlpacaClient.Demo.Desktop
 {
     /// <summary>
     /// Interaction logic for App.xaml

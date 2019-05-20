@@ -1,6 +1,6 @@
-using ASCOM.Alpaca.Client.Devices;
+using AscomAlpacaClient.Devices;
 
-namespace ASCOM.Alpaca.Client.Responses
+namespace AscomAlpacaClient.Responses
 {
     /// <summary>
     /// Response that return the value as a <see cref="DriveRate"/>

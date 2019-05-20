@@ -1,6 +1,6 @@
-using ASCOM.Alpaca.Client.Devices;
+using AscomAlpacaClient.Devices;
 
-namespace ASCOM.Alpaca.Client.Demo.Devices
+namespace AscomAlpacaClient.Demo.Devices
 {
     public abstract class ExtendedDeviceConfiguration : DeviceConfiguration
     {

@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Client.Devices;
-using ASCOM.Alpaca.Client.Errors;
-using ASCOM.Alpaca.Client.Exceptions;
-using ASCOM.Alpaca.Client.Request;
-using ASCOM.Alpaca.Client.Responses;
-using ASCOM.Alpaca.Client.Transactions;
+using AscomAlpacaClient.Devices;
+using AscomAlpacaClient.Errors;
+using AscomAlpacaClient.Exceptions;
+using AscomAlpacaClient.Request;
+using AscomAlpacaClient.Responses;
+using AscomAlpacaClient.Transactions;
 using Moq;
 using RestSharp;
 using Xunit;
 
-namespace ASCOM.Alpaca.Client.Test.Devices
+namespace AscomAlpacaClient.Test.Devices
 {
     public class TelescopeRequestTest : DeviceRequestsTestBase
     {

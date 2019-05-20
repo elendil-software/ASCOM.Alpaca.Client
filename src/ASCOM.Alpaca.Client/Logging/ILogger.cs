@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Client.Logging
+namespace AscomAlpacaClient.Logging
 {
     public interface ILogger
     {

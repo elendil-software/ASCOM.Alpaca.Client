@@ -1,4 +1,4 @@
-namespace ASCOM.Alpaca.Client.Responses
+namespace AscomAlpacaClient.Responses
 {
     /// <summary>
     /// Image array element type enumeration

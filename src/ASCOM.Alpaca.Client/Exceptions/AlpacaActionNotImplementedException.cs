@@ -1,8 +1,8 @@
 using System;
 using System.Runtime.Serialization;
-using ASCOM.Alpaca.Client.Errors;
+using AscomAlpacaClient.Errors;
 
-namespace ASCOM.Alpaca.Client.Exceptions
+namespace AscomAlpacaClient.Exceptions
 {
     [Serializable]
     public class AlpacaActionNotImplementedException : AlpacaDeviceException

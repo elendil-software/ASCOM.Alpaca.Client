@@ -1,17 +1,17 @@
 ﻿using System;
 using System.IO;
-using ASCOM.Alpaca.Client.Demo.Devices;
-using ASCOM.Alpaca.Client.Demo.IoC;
-using ASCOM.Alpaca.Client.Devices;
-using ASCOM.Alpaca.Client.Request;
-using ASCOM.Alpaca.Client.Transactions;
+using AscomAlpacaClient.Demo.Devices;
+using AscomAlpacaClient.Demo.IoC;
+using AscomAlpacaClient.Devices;
+using AscomAlpacaClient.Request;
+using AscomAlpacaClient.Transactions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.AspNetCore;
 
-namespace ASCOM.Alpaca.Client.Demo
+namespace AscomAlpacaClient.Demo
 {
     static class Program
     {

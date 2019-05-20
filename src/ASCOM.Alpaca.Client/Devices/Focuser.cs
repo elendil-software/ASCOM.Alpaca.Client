@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ASCOM.Alpaca.Client.Logging;
-using ASCOM.Alpaca.Client.Request;
-using ASCOM.Alpaca.Client.Responses;
-using ASCOM.Alpaca.Client.Transactions;
+using AscomAlpacaClient.Logging;
+using AscomAlpacaClient.Request;
+using AscomAlpacaClient.Responses;
+using AscomAlpacaClient.Transactions;
 using RestSharp;
 
-namespace ASCOM.Alpaca.Client.Devices
+namespace AscomAlpacaClient.Devices
 {
     public sealed class Focuser : DeviceBase, IFocuser
     {

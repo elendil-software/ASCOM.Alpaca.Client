@@ -1,7 +1,7 @@
-using ASCOM.Alpaca.Client.Transactions;
+using AscomAlpacaClient.Transactions;
 using Xunit;
 
-namespace ASCOM.Alpaca.Client.Test.Transactions
+namespace AscomAlpacaClient.Test.Transactions
 {
     public class ClientTransactionIdGeneratorTest
     {

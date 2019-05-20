@@ -1,6 +1,6 @@
 using System;
 
-namespace ASCOM.Alpaca.Client.Logging
+namespace AscomAlpacaClient.Logging
 {
     public static class LoggerExtensions
     {

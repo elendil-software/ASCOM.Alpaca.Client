@@ -2,10 +2,10 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using ASCOM.Alpaca.Client.Demo.Desktop.Factories;
-using ASCOM.Alpaca.Client.Devices;
+using AscomAlpacaClient.Demo.Desktop.Factories;
+using AscomAlpacaClient.Devices;
 
-namespace ASCOM.Alpaca.Client.Demo.Desktop.ViewModels
+namespace AscomAlpacaClient.Demo.Desktop.ViewModels
 {
     public class RotatorViewModel : DeviceViewModelBase
     {

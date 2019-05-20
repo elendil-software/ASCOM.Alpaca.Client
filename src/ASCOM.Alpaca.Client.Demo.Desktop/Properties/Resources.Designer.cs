@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ASCOM.Alpaca.Client.Demo.Desktop.Properties
+namespace AscomAlpacaClient.Demo.Desktop.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace ASCOM.Alpaca.Client.Demo.Desktop.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ASCOM.Alpaca.Client.Demo.Desktop.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AscomAlpacaClient.Demo.Desktop.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

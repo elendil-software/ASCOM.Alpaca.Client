@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using ASCOM.Alpaca.Client.Devices;
+using AscomAlpacaClient.Devices;
 using RestSharp;
 
-namespace ASCOM.Alpaca.Client.Request
+namespace AscomAlpacaClient.Request
 {
     internal class RequestBuilder : IRequestBuilder
     {

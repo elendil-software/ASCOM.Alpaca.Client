@@ -1,7 +1,7 @@
 using System;
 using Serilog.Events;
 
-namespace ASCOM.Alpaca.Client.Logging
+namespace AscomAlpacaClient.Logging
 {
     public class SerilogAdapter : ILogger
     {
