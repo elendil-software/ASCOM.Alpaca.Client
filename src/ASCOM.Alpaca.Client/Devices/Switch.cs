@@ -27,12 +27,12 @@ namespace ASCOM.Alpaca.Client.Devices
         {
         }
 
-        public Switch(DeviceConfiguration configuration, ICommandSender commandSender) : 
+        internal Switch(DeviceConfiguration configuration, ICommandSender commandSender) : 
             base(configuration, commandSender)
         {
         }
 
-        public Switch(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
+        internal Switch(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
             base(configuration, commandSender, clientTransactionIdGenerator)
         {
         }

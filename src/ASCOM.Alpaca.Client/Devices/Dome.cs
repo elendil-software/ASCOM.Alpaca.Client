@@ -27,11 +27,11 @@ namespace ASCOM.Alpaca.Client.Devices
         {
         }
 
-        public Dome(DeviceConfiguration configuration, ICommandSender commandSender) : base(configuration, commandSender)
+        internal Dome(DeviceConfiguration configuration, ICommandSender commandSender) : base(configuration, commandSender)
         {
         }
 
-        public Dome(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
+        internal Dome(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
             base(configuration, commandSender, clientTransactionIdGenerator)
         {
         }

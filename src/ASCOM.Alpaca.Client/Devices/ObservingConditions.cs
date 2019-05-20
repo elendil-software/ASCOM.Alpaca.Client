@@ -28,12 +28,12 @@ namespace ASCOM.Alpaca.Client.Devices
         {
         }
 
-        public ObservingConditions(DeviceConfiguration configuration, ICommandSender commandSender) : 
+        internal ObservingConditions(DeviceConfiguration configuration, ICommandSender commandSender) : 
             base(configuration, commandSender)
         {
         }
 
-        public ObservingConditions(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
+        internal ObservingConditions(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
             base(configuration, commandSender, clientTransactionIdGenerator)
         {
         }

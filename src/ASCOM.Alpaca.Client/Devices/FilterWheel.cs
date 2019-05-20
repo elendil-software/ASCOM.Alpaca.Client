@@ -27,11 +27,11 @@ namespace ASCOM.Alpaca.Client.Devices
         {
         }
 
-        public FilterWheel(DeviceConfiguration configuration, ICommandSender commandSender) : base(configuration, commandSender)
+        internal FilterWheel(DeviceConfiguration configuration, ICommandSender commandSender) : base(configuration, commandSender)
         {
         }
 
-        public FilterWheel(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, commandSender, clientTransactionIdGenerator)
+        internal FilterWheel(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, commandSender, clientTransactionIdGenerator)
         {
         }
         

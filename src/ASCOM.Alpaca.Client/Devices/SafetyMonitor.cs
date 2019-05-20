@@ -25,12 +25,12 @@ namespace ASCOM.Alpaca.Client.Devices
         {
         }
 
-        public SafetyMonitor(DeviceConfiguration configuration, ICommandSender commandSender) : 
+        internal SafetyMonitor(DeviceConfiguration configuration, ICommandSender commandSender) : 
             base(configuration, commandSender)
         {
         }
 
-        public SafetyMonitor(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
+        internal SafetyMonitor(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
             base(configuration, commandSender, clientTransactionIdGenerator)
         {
         }

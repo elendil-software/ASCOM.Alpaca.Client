@@ -26,12 +26,12 @@ namespace ASCOM.Alpaca.Client.Devices
         {
         }
 
-        public Focuser(DeviceConfiguration configuration, ICommandSender commandSender) : 
+        internal Focuser(DeviceConfiguration configuration, ICommandSender commandSender) : 
             base(configuration, commandSender)
         {
         }
 
-        public Focuser(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
+        internal Focuser(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
             base(configuration, commandSender, clientTransactionIdGenerator)
         {
         }

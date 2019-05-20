@@ -58,7 +58,6 @@ namespace ASCOM.Alpaca.Client.Demo
                 .AddLogging(configure => configure.AddSerilog())
                 .AddSingleton<ILoggerFactory>(s => new SerilogLoggerFactory(Log.Logger, true))
                 .AddSingleton<IClientTransactionIdGenerator, ClientTransactionIdGenerator>()
-                .AddTransient<ICommandSender, CommandSender>()
                 .AddDevices(devicesConfiguration)
                 .AddSingleton<IDeviceProvider, DeviceProvider>()
                 .AddTransient<IDeviceDemo, DomeDemo>();

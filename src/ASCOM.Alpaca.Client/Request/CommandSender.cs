@@ -8,7 +8,7 @@ using RestSharp;
 
 namespace ASCOM.Alpaca.Client.Request
 {
-    public class CommandSender : ICommandSender
+    internal class CommandSender : ICommandSender
     {
         private readonly ILogger _logger;
 
@@ -25,7 +25,7 @@ namespace ASCOM.Alpaca.Client.Request
         {
             IRestResponse response = new RestClient(baseUrl).Execute(request);
             ThrowExceptionOnError(response);
-            _logger.LogDebug("Response : {Response}", response.Content);
+            _logger?.LogDebug("Response : {Response}", response.Content);
             return response;
         }
 
@@ -33,7 +33,7 @@ namespace ASCOM.Alpaca.Client.Request
         {
             IRestResponse<TASCOMRemoteResponse> response = new RestClient(baseUrl).Execute<TASCOMRemoteResponse>(request);
             ThrowExceptionOnError(response);
-            _logger.LogDebug("Response : {Response}", response.Content);
+            _logger?.LogDebug("Response : {Response}", response.Content);
             return response.Data;
         }
         
@@ -41,7 +41,7 @@ namespace ASCOM.Alpaca.Client.Request
         {
             IRestResponse response = await new RestClient(baseUrl).ExecuteTaskAsync(request);
             ThrowExceptionOnError(response);
-            _logger.LogDebug("Response : {Response}", response.Content);
+            _logger?.LogDebug("Response : {Response}", response.Content);
             return response;
         }
         
@@ -49,7 +49,7 @@ namespace ASCOM.Alpaca.Client.Request
         {
             IRestResponse<TASCOMRemoteResponse> response = await new RestClient(baseUrl).ExecuteTaskAsync<TASCOMRemoteResponse>(request);
             ThrowExceptionOnError(response);
-            _logger.LogDebug("Response : {@Response}", response.Data);
+            _logger?.LogDebug("Response : {@Response}", response.Data);
             return response.Data;
         }
 

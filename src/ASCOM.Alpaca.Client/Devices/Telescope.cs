@@ -29,12 +29,12 @@ namespace ASCOM.Alpaca.Client.Devices
         {
         }
 
-        public Telescope(DeviceConfiguration configuration, ICommandSender commandSender) : 
+        internal Telescope(DeviceConfiguration configuration, ICommandSender commandSender) : 
             base(configuration, commandSender)
         {
         }
 
-        public Telescope(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
+        internal Telescope(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
             base(configuration, commandSender, clientTransactionIdGenerator)
         {
         }

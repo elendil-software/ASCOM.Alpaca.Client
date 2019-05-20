@@ -31,12 +31,12 @@ namespace ASCOM.Alpaca.Client.Devices
         {
         }
 
-        public Camera(DeviceConfiguration configuration, ICommandSender commandSender) : 
+        internal Camera(DeviceConfiguration configuration, ICommandSender commandSender) : 
             base(configuration, commandSender)
         {
         }
 
-        public Camera(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
+        internal Camera(DeviceConfiguration configuration, ICommandSender commandSender, IClientTransactionIdGenerator clientTransactionIdGenerator) : 
             base(configuration, commandSender, clientTransactionIdGenerator)
         {
         }
