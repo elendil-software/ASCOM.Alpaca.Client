@@ -252,7 +252,7 @@ namespace AscomAlpacaClient.Devices
                 return -1;
             }
 
-            return GetClientTransactionId();
+            return _clientTransactionIdGenerator.GetTransactionId(Configuration.ClientId);
         }
     }
 }
