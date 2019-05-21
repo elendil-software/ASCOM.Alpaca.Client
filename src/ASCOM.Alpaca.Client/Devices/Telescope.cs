@@ -473,8 +473,8 @@ namespace AscomAlpacaClient.Devices
             return RequestBuilder.BuildRestRequest(TelescopeMethod.DestinationSideOfPier, Method.GET, parameters, GetClientTransactionId());
         }
 
-        public void FindHome() => ExecuteRequest(BuildFindHomeRequest);
-        public async Task FindHomeAsync() => await ExecuteRequestAsync(BuildFindHomeRequest);
+        public void FindHome() => ExecuteRequest(BuildFindHomeRequest, Configuration.LongTimeoutDuration);
+        public async Task FindHomeAsync() => await ExecuteRequestAsync(BuildFindHomeRequest, Configuration.LongTimeoutDuration);
         private IRestRequest BuildFindHomeRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.FindHome, Method.PUT, GetClientTransactionId());
 
         public void MoveAxis(TelescopeAxis axis, double rate) => ExecuteRequest(BuildMoveAxisRequest, axis, rate);
@@ -489,8 +489,8 @@ namespace AscomAlpacaClient.Devices
             return RequestBuilder.BuildRestRequest(TelescopeMethod.MoveAxis, Method.PUT, parameters, GetClientTransactionId());
         }
 
-        public void Park() => ExecuteRequest(BuildParkRequest);
-        public async Task ParkAsync() => await ExecuteRequestAsync(BuildParkRequest);
+        public void Park() => ExecuteRequest(BuildParkRequest, Configuration.LongTimeoutDuration);
+        public async Task ParkAsync() => await ExecuteRequestAsync(BuildParkRequest, Configuration.LongTimeoutDuration);
         private IRestRequest BuildParkRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.Park, Method.PUT, GetClientTransactionId());
 
         public void PulseGuide(GuideDirection direction, int duration) => ExecuteRequest(BuildPulseGuideRequest, direction, duration);
@@ -517,7 +517,7 @@ namespace AscomAlpacaClient.Devices
             }
             catch (AlpacaNotImplementedException)
             {
-                ExecuteRequest(BuildSlewToAltAzRequest, altitude, azimuth);             
+                ExecuteRequest(BuildSlewToAltAzRequest, altitude, azimuth, Configuration.LongTimeoutDuration);             
             }
         }
 
@@ -529,7 +529,7 @@ namespace AscomAlpacaClient.Devices
             }
             catch (AlpacaNotImplementedException)
             {
-                await ExecuteRequestAsync(BuildSlewToAltAzRequest, altitude, azimuth);             
+                await ExecuteRequestAsync(BuildSlewToAltAzRequest, altitude, azimuth, Configuration.LongTimeoutDuration);             
             }
         }
 
@@ -560,7 +560,7 @@ namespace AscomAlpacaClient.Devices
             }
             catch (AlpacaNotImplementedException)
             {
-                ExecuteRequest(BuildSlewToCoordinatesRequest, rightAscension, declination);             
+                ExecuteRequest(BuildSlewToCoordinatesRequest, rightAscension, declination, Configuration.LongTimeoutDuration);             
             }
         }
         public async Task SlewToCoordinatesAsync(double rightAscension, double declination)
@@ -571,7 +571,7 @@ namespace AscomAlpacaClient.Devices
             }
             catch (AlpacaNotImplementedException)
             {
-                await ExecuteRequestAsync(BuildSlewToCoordinatesRequest, rightAscension, declination);
+                await ExecuteRequestAsync(BuildSlewToCoordinatesRequest, rightAscension, declination, Configuration.LongTimeoutDuration);
             }
         }
         private IRestRequest BuildSlewToCoordinatesRequest(double rightAscension, double declination)
@@ -601,7 +601,7 @@ namespace AscomAlpacaClient.Devices
             }
             catch (AlpacaNotImplementedException)
             {
-                ExecuteRequest(BuildSlewToTargetRequest);
+                ExecuteRequest(BuildSlewToTargetRequest, Configuration.LongTimeoutDuration);
             }
         }
         public async Task SlewToTargetAsync()
@@ -612,7 +612,7 @@ namespace AscomAlpacaClient.Devices
             }
             catch (AlpacaNotImplementedException)
             {
-                await ExecuteRequestAsync(BuildSlewToTargetRequest);
+                await ExecuteRequestAsync(BuildSlewToTargetRequest, Configuration.LongTimeoutDuration);
             }
         }
         private IRestRequest BuildSlewToTargetRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SlewToTarget, Method.PUT, GetClientTransactionId());

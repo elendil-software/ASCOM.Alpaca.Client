@@ -161,86 +161,98 @@ namespace AscomAlpacaClient.Devices
         public async Task<IList<string>> GetSupportedActionsAsync() => await ExecuteRequestAsync<IList<string>, StringListResponse>(BuildGetSupportedActionsRequest);
         private IRestRequest BuildGetSupportedActionsRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.SupportedActions, Method.GET, GetClientTransactionId());
 
-        protected void ExecuteRequest(Func<IRestRequest> requestBuilder)
+        protected void ExecuteRequest(Func<IRestRequest> requestBuilder, int? timeout = null)
         {
             IRestRequest request = requestBuilder();
+            request.SetTimeout(timeout);
             var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
 
-        protected async Task ExecuteRequestAsync(Func<IRestRequest> requestBuilder)
+        protected async Task ExecuteRequestAsync(Func<IRestRequest> requestBuilder, int? timeout = null)
         {
             IRestRequest request = requestBuilder();
+            request.SetTimeout(timeout);
             var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
 
-        protected void ExecuteRequest<T1>(Func<T1, IRestRequest> requestBuilder, T1 param1)
+        protected void ExecuteRequest<T1>(Func<T1, IRestRequest> requestBuilder, T1 param1, int? timeout = null)
         {
             IRestRequest request = requestBuilder(param1);
+            request.SetTimeout(timeout);
             var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
 
-        protected async Task ExecuteRequestAsync<T1>(Func<T1, IRestRequest> requestBuilder, T1 arg)
+        protected async Task ExecuteRequestAsync<T1>(Func<T1, IRestRequest> requestBuilder, T1 arg, int? timeout = null)
         {
             IRestRequest request = requestBuilder(arg);
+            request.SetTimeout(timeout);
             var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
         
-        protected void ExecuteRequest<T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2)
+        protected void ExecuteRequest<T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2, int? timeout = null)
         {
             IRestRequest request = requestBuilder(arg1, arg2);
+            request.SetTimeout(timeout);
             var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
 
-        protected async Task ExecuteRequestAsync<T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2)
+        protected async Task ExecuteRequestAsync<T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2, int? timeout = null)
         {
             IRestRequest request = requestBuilder(arg1, arg2);
+            request.SetTimeout(timeout);
             var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
         
-        protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1>(Func<T1, IRestRequest> requestBuilder, T1 arg) where TAlpacaResponse : IValueResponse<TResult>, new()
+        protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1>(Func<T1, IRestRequest> requestBuilder, T1 arg, int? timeout = null) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder(arg);
+            request.SetTimeout(timeout);
             var response = CommandSender.ExecuteRequest<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
 
-        protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse, T1>(Func<T1, IRestRequest> requestBuilder, T1 arg) where TAlpacaResponse : IValueResponse<TResult>, new()
+        protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse, T1>(Func<T1, IRestRequest> requestBuilder, T1 arg, int? timeout = null) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder(arg);
+            request.SetTimeout(timeout);
             var response = await CommandSender.ExecuteRequestAsync<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
         
-        protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2) where TAlpacaResponse : IValueResponse<TResult>, new()
+        protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2, int? timeout = null) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder(arg1 , arg2);
+            request.SetTimeout(timeout);
             var response = CommandSender.ExecuteRequest<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
 
-        protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse, T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2) where TAlpacaResponse : IValueResponse<TResult>, new()
+        protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse, T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2, int? timeout = null) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder(arg1 , arg2);
+            request.SetTimeout(timeout);
             var response = await CommandSender.ExecuteRequestAsync<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
         
-        protected TResult ExecuteRequest<TResult, TAlpacaResponse>(Func<IRestRequest> requestBuilder) where TAlpacaResponse : IValueResponse<TResult>, new()
+        protected TResult ExecuteRequest<TResult, TAlpacaResponse>(Func<IRestRequest> requestBuilder, int? timeout = null) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder();
+            request.SetTimeout(timeout);
             var response = CommandSender.ExecuteRequest<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
 
-        protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse>(Func<IRestRequest> requestBuilder) where TAlpacaResponse : IValueResponse<TResult>, new()
+        protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse>(Func<IRestRequest> requestBuilder, int? timeout = null) where TAlpacaResponse : IValueResponse<TResult>, new()
         {
             IRestRequest request = requestBuilder();
+            request.SetTimeout(timeout);
             var response = await CommandSender.ExecuteRequestAsync<TAlpacaResponse>(Configuration.GetBaseUrl(), request);
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
