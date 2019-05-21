@@ -8,57 +8,55 @@ namespace AscomAlpacaClient.Errors
     public static class ErrorCodes
     {
         /// <summary>
-        /// Reserved error code (0x400) for property or method not implemented.
+        /// Property or method not implemented
         /// </summary>
         /// <seealso cref="AlpacaNotImplementedException"/>
         public static readonly int NotImplemented = 0x400;
 
         /// <summary>
-        /// Reserved error code (0x401) for reporting an invalid value.
+        /// Invalid value
         /// </summary>
         /// <seealso cref="AlpacaInvalidValueException"/>
         public static readonly int InvalidValue = 0x401;
 
         /// <summary>
-        /// Reserved error code (0x402) for reporting that a value has not been set.
+        /// Value not set
         /// </summary>
         /// <seealso cref="AlpacaValueNotSetException"/>
         public static readonly int ValueNotSet = 0x402;
 
         /// <summary>
-        /// Reserved error code (0x407) used to indicate that the communications channel is not connected.
+        /// Not connected
+        /// Indicates the action can not be executed because the device is not connected 
         /// </summary>
         public static readonly int NotConnected = 0x407;
 
         /// <summary>
-        /// Reserved error code (0x408) used to indicate that the attempted operation is invalid because the mount
-        /// is currently in a Parked state.
+        /// Invalid While Parked
+        /// Indicate that the attempted operation is invalid because the mount is currently in a Parked state.
         /// </summary>
         public static readonly int InvalidWhileParked = 0x408;
 
         /// <summary>
-        /// Reserved error code (0x409) used to indicate that the attempted operation is invalid because the mount
-        /// is currently in a Slaved state.
+        /// Invalid While Slaved
+        /// Indicate that the attempted operation is invalid because the mount is currently in a Slaved state.
         /// </summary>
         public static readonly int InvalidWhileSlaved = 0x409;
-
+        
         /// <summary>
-        /// Reserved error code (0x40A) related to settings.
+        /// Invalid Operation
+        /// Indicate that the requested operation can not be undertaken at this time.
         /// </summary>
-        public static readonly int SettingsProviderError = 0x40A;
+        public static readonly int InvalidOperation = 0x40B;
 
         /// <summary>
-        /// Reserved error code (0x40B) to indicate that the requested operation can not be undertaken at this time.
+        /// Action Not Implemented
+        /// Indicate that the requested action is not implemented in this driver.
         /// </summary>
-        public static readonly int InvalidOperationException = 0x40B;
+        public static readonly int ActionNotImplemented = 0x40C;
 
         /// <summary>
-        /// Reserved error code (0x40C) to indicate that the requested action is not implemented in this driver.
-        /// </summary>
-        public static readonly int ActionNotImplementedException = 0x40C;
-
-        /// <summary>
-        /// Reserved 'catch-all' error code (0x4FF) used when nothing else was specified.
+        /// Default code used in exception if no error code has been specified
         /// </summary>
         public static readonly int UnspecifiedError = 0x4FF;
     }

@@ -7,7 +7,7 @@ namespace AscomAlpacaClient.Test.Exceptions
 {
     public class AlpacaActionNotImplementedExceptionContainsValidErrorCode
     {
-        private readonly int _expectedErrorCode = ErrorCodes.ActionNotImplementedException;
+        private readonly int _expectedErrorCode = ErrorCodes.ActionNotImplemented;
         
         [Fact]
         public void WhenInitializedWith_EmptyConstructor()

@@ -34,7 +34,7 @@ namespace AscomAlpacaClient.Test.Responses
         [Fact]
         public void GivenActionNotImplementedExceptionError_ResponseHandler_ThrowsAlpacaActionNotImplementedException()
         {
-            var response = new StringResponse {ErrorMessage = "Error", ErrorNumber = ErrorCodes.ActionNotImplementedException};
+            var response = new StringResponse {ErrorMessage = "Error", ErrorNumber = ErrorCodes.ActionNotImplemented};
             
             Assert.Throws<AlpacaActionNotImplementedException>(() => response.HandleResponse<string, StringResponse>());
         }
@@ -50,7 +50,7 @@ namespace AscomAlpacaClient.Test.Responses
         [Fact]
         public void GivenInvalidOperationExceptionError_ResponseHandler_ThrowsAlpacaInvalidOperationException()
         {
-            var response = new StringResponse {ErrorMessage = "Error", ErrorNumber = ErrorCodes.InvalidOperationException};
+            var response = new StringResponse {ErrorMessage = "Error", ErrorNumber = ErrorCodes.InvalidOperation};
             
             Assert.Throws<AlpacaInvalidOperationException>(() => ResponseHandler.HandleResponse<string, StringResponse>(response));
         }

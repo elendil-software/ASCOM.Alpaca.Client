@@ -7,7 +7,7 @@ namespace AscomAlpacaClient.Test.Exceptions
 {
     public class AlpacaInvalidOperationExceptionContainsValidErrorCode
     {
-        private readonly int _expectedErrorCode = ErrorCodes.InvalidOperationException;
+        private readonly int _expectedErrorCode = ErrorCodes.InvalidOperation;
         
         [Fact]
         public void WhenInitializedWith_EmptyConstructor()

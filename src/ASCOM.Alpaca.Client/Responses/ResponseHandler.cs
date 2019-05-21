@@ -83,7 +83,7 @@ namespace AscomAlpacaClient.Responses
 
         private static void ThrowExceptionIfInvalidOperation(string errorMessage, int errorCode)
         {
-            if (errorCode == ErrorCodes.InvalidOperationException)
+            if (errorCode == ErrorCodes.InvalidOperation)
             {
                 throw new AlpacaInvalidOperationException(errorMessage);
             }
@@ -91,7 +91,7 @@ namespace AscomAlpacaClient.Responses
 
         private static void ThrowExceptionIfActionNotImplemented(string errorMessage, int errorCode)
         {
-            if (errorCode == ErrorCodes.ActionNotImplementedException)
+            if (errorCode == ErrorCodes.ActionNotImplemented)
             {
                 throw new AlpacaActionNotImplementedException(errorMessage);
             }
