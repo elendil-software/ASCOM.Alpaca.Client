@@ -6,7 +6,7 @@ namespace AscomAlpacaClient.Request
 {
     public interface IRequestBuilder
     {
-        IRestRequest BuildRestRequest(Enum command, Method httpMethod, int clientTransactionId);
-        IRestRequest BuildRestRequest(Enum command, Method httpMethod, Dictionary<string, object> parameters, int clientTransactionId);
+        IRestRequest BuildRestRequest(Enum command, Method httpMethod, int clientTransactionId = -1);
+        IRestRequest BuildRestRequest(Enum command, Method httpMethod, Dictionary<string, object> parameters, int clientTransactionId = -1);
     }
 }
