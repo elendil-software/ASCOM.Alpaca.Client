@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using AscomAlpacaClient.Logging;
 using AscomAlpacaClient.Request;
 using AscomAlpacaClient.Responses;
-using AscomAlpacaClient.Transactions;
 using RestSharp;
 
 namespace AscomAlpacaClient.Devices

@@ -7,7 +7,6 @@ using AscomAlpacaClient.Exceptions;
 using AscomAlpacaClient.Logging;
 using AscomAlpacaClient.Request;
 using AscomAlpacaClient.Responses;
-using AscomAlpacaClient.Transactions;
 using Newtonsoft.Json;
 using RestSharp;
 

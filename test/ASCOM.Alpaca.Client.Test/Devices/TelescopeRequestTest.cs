@@ -7,7 +7,6 @@ using AscomAlpacaClient.Errors;
 using AscomAlpacaClient.Exceptions;
 using AscomAlpacaClient.Request;
 using AscomAlpacaClient.Responses;
-using AscomAlpacaClient.Transactions;
 using Moq;
 using RestSharp;
 using Xunit;

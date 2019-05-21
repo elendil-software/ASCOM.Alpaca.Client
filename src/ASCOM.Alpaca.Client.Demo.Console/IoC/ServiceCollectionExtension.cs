@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using AscomAlpacaClient.Demo.Devices;
 using AscomAlpacaClient.Devices;
-using AscomAlpacaClient.Transactions;
+using AscomAlpacaClient.Request;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AscomAlpacaClient.Demo.IoC

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AscomAlpacaClient.Transactions;
+using AscomAlpacaClient.Request;
 using Caliburn.Micro;
 using Lamar;
 using Lamar.IoC.Instances;

@@ -4,7 +4,6 @@ using AscomAlpacaClient.Demo.Devices;
 using AscomAlpacaClient.Demo.IoC;
 using AscomAlpacaClient.Devices;
 using AscomAlpacaClient.Request;
-using AscomAlpacaClient.Transactions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
