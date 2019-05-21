@@ -30,6 +30,14 @@ namespace AscomAlpacaClient.Test.Responses
             
             Assert.Throws<AlpacaNotImplementedException>(() => response.HandleResponse<string, StringResponse>());
         }
+        
+        [Fact]
+        public void GivenActionNotImplementedExceptionError_ResponseHandler_ThrowsAlpacaActionNotImplementedException()
+        {
+            var response = new StringResponse {ErrorMessage = "Error", ErrorNumber = ErrorCodes.ActionNotImplementedException};
+            
+            Assert.Throws<AlpacaActionNotImplementedException>(() => response.HandleResponse<string, StringResponse>());
+        }
 
         [Fact]
         public void GivenUnspecifiedErrorError_ResponseHandler_ThrowsAlpacaDeviceException()
