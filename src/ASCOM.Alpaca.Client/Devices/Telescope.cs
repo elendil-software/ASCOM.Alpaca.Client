@@ -110,8 +110,7 @@ namespace AscomAlpacaClient.Devices
 
             if (!canSlew)
             {
-                bool canSlewAsync = ExecuteRequest<bool, BoolResponse>(BuildCanAsyncSlewRequest);
-                return canSlewAsync;
+                canSlew = ExecuteRequest<bool, BoolResponse>(BuildCanAsyncSlewRequest);
             }
 
             return canSlew;
@@ -356,7 +355,7 @@ namespace AscomAlpacaClient.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.TargetDeclination, declination.ToString()}
+                {TelescopeMethodParameter.TargetDeclination, declination.ToString(CultureInfo.InvariantCulture)}
             };
             return RequestBuilder.BuildRestRequest(TelescopeMethod.TargetDeclination, Method.PUT, parameters, GetClientTransactionId());
         }
@@ -371,7 +370,7 @@ namespace AscomAlpacaClient.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.TargetRightAscension, rightAscension.ToString()}
+                {TelescopeMethodParameter.TargetRightAscension, rightAscension.ToString(CultureInfo.InvariantCulture)}
             };
             return RequestBuilder.BuildRestRequest(TelescopeMethod.TargetRightAscension, Method.PUT, parameters, GetClientTransactionId());
         }
