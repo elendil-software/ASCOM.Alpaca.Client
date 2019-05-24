@@ -6,7 +6,7 @@ namespace ES.AscomAlpaca.Responses
     /// <summary>
     /// Response that return the value as a collection of <see cref="DriveRate"/>
     /// </summary>
-    public class DriveRatesResponse : Response, IValueResponse<IList<DriveRate>>
+    public class DriveRatesResponse : CommandResponse, IValueResponse<IList<DriveRate>>
     {
         /// <summary>
         /// Drive rate collection returned by the device

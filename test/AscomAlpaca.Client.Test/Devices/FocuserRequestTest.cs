@@ -319,9 +319,9 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
-                .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
+                .Setup(x => x.ExecuteRequest<CommandResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new Response());
+                .Returns(new CommandResponse());
             var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -343,9 +343,9 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
-                .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
+                .Setup(x => x.ExecuteRequestAsync<CommandResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new Response()));
+                .Returns(Task.FromResult(new CommandResponse()));
             var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -449,9 +449,9 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
-                .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
+                .Setup(x => x.ExecuteRequest<CommandResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new Response());
+                .Returns(new CommandResponse());
             var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -470,9 +470,9 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
-                .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
+                .Setup(x => x.ExecuteRequestAsync<CommandResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new Response()));
+                .Returns(Task.FromResult(new CommandResponse()));
             var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -493,9 +493,9 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
-                .Setup(x => x.ExecuteRequest<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
+                .Setup(x => x.ExecuteRequest<CommandResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new Response());
+                .Returns(new CommandResponse());
             var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -517,9 +517,9 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
-                .Setup(x => x.ExecuteRequestAsync<Response>(It.IsAny<string>(), It.IsAny<RestRequest>()))
+                .Setup(x => x.ExecuteRequestAsync<CommandResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new Response()));
+                .Returns(Task.FromResult(new CommandResponse()));
             var focuser = new Focuser(_deviceConfiguration, commandSenderMock.Object);
             
             //Act

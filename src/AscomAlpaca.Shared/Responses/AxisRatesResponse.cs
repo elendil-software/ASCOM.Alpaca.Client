@@ -6,7 +6,7 @@ namespace ES.AscomAlpaca.Responses
     /// <summary>
     /// Response that return the value as a collection of <see cref="AxisRate"/>
     /// </summary>
-    public class AxisRatesResponse : Response, IValueResponse<IList<AxisRate>>
+    public class AxisRatesResponse : CommandResponse, IValueResponse<IList<AxisRate>>
     {
         /// <summary>
         /// Axis rate collection returned by the device

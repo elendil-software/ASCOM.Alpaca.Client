@@ -7,7 +7,7 @@ namespace ES.AscomAlpaca.Responses
     /// Defines the base of an Alpaca response.
     /// This type can be use for request that does not return any value
     /// </summary>
-    public class Response : IResponse
+    public class CommandResponse : IResponse
     {
         /// <summary>
         /// Client's transaction ID (0 to 4294967295), as supplied by the client in the command request.

@@ -3,7 +3,7 @@ namespace ES.AscomAlpaca.Responses
     /// <summary>
     /// 
     /// </summary>
-    public class ImageArrayShort2DResponse : Response, IImageResponse<short[,]>
+    public class ImageArrayShort2DResponse : CommandResponse, IImageResponse<short[,]>
     {
         /// <summary>
         /// 

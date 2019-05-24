@@ -3,7 +3,7 @@ namespace ES.AscomAlpaca.Responses
     /// <summary>
     /// 3 dimension image array response
     /// </summary>
-    public class ImageArrayShort3DResponse : Response, IImageResponse<short[,,]>
+    public class ImageArrayShort3DResponse : CommandResponse, IImageResponse<short[,,]>
     {
         /// <summary>
         ///  3D image array of short (int16) values

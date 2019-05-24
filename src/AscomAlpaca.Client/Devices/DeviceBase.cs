@@ -166,7 +166,7 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             IRestRequest request = requestBuilder();
             request.SetTimeout(timeout);
-            var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
+            var response = CommandSender.ExecuteRequest<CommandResponse>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
 
@@ -174,7 +174,7 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             IRestRequest request = requestBuilder();
             request.SetTimeout(timeout);
-            var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
+            var response = await CommandSender.ExecuteRequestAsync<CommandResponse>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
 
@@ -182,7 +182,7 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             IRestRequest request = requestBuilder(param1);
             request.SetTimeout(timeout);
-            var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
+            var response = CommandSender.ExecuteRequest<CommandResponse>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
 
@@ -190,7 +190,7 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             IRestRequest request = requestBuilder(arg);
             request.SetTimeout(timeout);
-            var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
+            var response = await CommandSender.ExecuteRequestAsync<CommandResponse>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
         
@@ -198,7 +198,7 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             IRestRequest request = requestBuilder(arg1, arg2);
             request.SetTimeout(timeout);
-            var response = CommandSender.ExecuteRequest<Response>(Configuration.GetBaseUrl(), request);
+            var response = CommandSender.ExecuteRequest<CommandResponse>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
 
@@ -206,7 +206,7 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             IRestRequest request = requestBuilder(arg1, arg2);
             request.SetTimeout(timeout);
-            var response = await CommandSender.ExecuteRequestAsync<Response>(Configuration.GetBaseUrl(), request);
+            var response = await CommandSender.ExecuteRequestAsync<CommandResponse>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
         

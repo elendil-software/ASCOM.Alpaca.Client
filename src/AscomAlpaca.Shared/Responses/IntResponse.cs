@@ -3,7 +3,7 @@
     /// <summary>
     /// Response that return the value as an integer
     /// </summary>
-    public class IntResponse : Response, IValueResponse<int>
+    public class IntResponse : CommandResponse, IValueResponse<int>
     {
         /// <summary>
         /// Integer value returned by the device

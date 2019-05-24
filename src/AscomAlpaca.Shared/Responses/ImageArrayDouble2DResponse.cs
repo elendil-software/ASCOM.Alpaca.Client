@@ -3,7 +3,7 @@ namespace ES.AscomAlpaca.Responses
     /// <summary>
     /// 2 dimension image array response
     /// </summary>
-    public class ImageArrayDouble2DResponse : Response, IImageResponse<double[,]>
+    public class ImageArrayDouble2DResponse : CommandResponse, IImageResponse<double[,]>
     {
         /// <summary>
         /// 2D image array of double values
