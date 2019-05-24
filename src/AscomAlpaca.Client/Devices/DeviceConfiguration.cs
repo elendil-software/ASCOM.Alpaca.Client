@@ -8,7 +8,7 @@ namespace ES.AscomAlpaca.Client.Devices
         public int Port { get; set; } = 11111;
         public int DeviceNumber { get; set; }
         public int ClientId { get; set; } = -1;
-        public int LongTimeoutDuration = 120;
+        public int LongTimeout { get; set; } = 120;
         public string GetBaseUrl() => $"{Protocol}{Host}:{Port}/api/{ApiVersion}/";
     }
 }

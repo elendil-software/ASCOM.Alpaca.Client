@@ -475,8 +475,8 @@ namespace ES.AscomAlpaca.Client.Devices
             return RequestBuilder.BuildRestRequest(TelescopeCommand.DestinationSideOfPier, Method.GET, parameters, GetClientTransactionId());
         }
 
-        public void FindHome() => ExecuteRequest(BuildFindHomeRequest, Configuration.LongTimeoutDuration);
-        public async Task FindHomeAsync() => await ExecuteRequestAsync(BuildFindHomeRequest, Configuration.LongTimeoutDuration);
+        public void FindHome() => ExecuteRequest(BuildFindHomeRequest, Configuration.LongTimeout);
+        public async Task FindHomeAsync() => await ExecuteRequestAsync(BuildFindHomeRequest, Configuration.LongTimeout);
         private IRestRequest BuildFindHomeRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.FindHome, Method.PUT, GetClientTransactionId());
 
         public void MoveAxis(TelescopeAxis axis, double rate) => ExecuteRequest(BuildMoveAxisRequest, axis, rate);
@@ -491,8 +491,8 @@ namespace ES.AscomAlpaca.Client.Devices
             return RequestBuilder.BuildRestRequest(TelescopeCommand.MoveAxis, Method.PUT, parameters, GetClientTransactionId());
         }
 
-        public void Park() => ExecuteRequest(BuildParkRequest, Configuration.LongTimeoutDuration);
-        public async Task ParkAsync() => await ExecuteRequestAsync(BuildParkRequest, Configuration.LongTimeoutDuration);
+        public void Park() => ExecuteRequest(BuildParkRequest, Configuration.LongTimeout);
+        public async Task ParkAsync() => await ExecuteRequestAsync(BuildParkRequest, Configuration.LongTimeout);
         private IRestRequest BuildParkRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.Park, Method.PUT, GetClientTransactionId());
 
         public void PulseGuide(GuideDirection direction, int duration) => ExecuteRequest(BuildPulseGuideRequest, direction, duration);
@@ -519,7 +519,7 @@ namespace ES.AscomAlpaca.Client.Devices
             }
             catch (AlpacaNotImplementedException)
             {
-                ExecuteRequest(BuildSlewToAltAzRequest, altitude, azimuth, Configuration.LongTimeoutDuration);             
+                ExecuteRequest(BuildSlewToAltAzRequest, altitude, azimuth, Configuration.LongTimeout);             
             }
         }
 
@@ -531,7 +531,7 @@ namespace ES.AscomAlpaca.Client.Devices
             }
             catch (AlpacaNotImplementedException)
             {
-                await ExecuteRequestAsync(BuildSlewToAltAzRequest, altitude, azimuth, Configuration.LongTimeoutDuration);             
+                await ExecuteRequestAsync(BuildSlewToAltAzRequest, altitude, azimuth, Configuration.LongTimeout);             
             }
         }
 
@@ -562,7 +562,7 @@ namespace ES.AscomAlpaca.Client.Devices
             }
             catch (AlpacaNotImplementedException)
             {
-                ExecuteRequest(BuildSlewToCoordinatesRequest, rightAscension, declination, Configuration.LongTimeoutDuration);             
+                ExecuteRequest(BuildSlewToCoordinatesRequest, rightAscension, declination, Configuration.LongTimeout);             
             }
         }
         public async Task SlewToCoordinatesAsync(double rightAscension, double declination)
@@ -573,7 +573,7 @@ namespace ES.AscomAlpaca.Client.Devices
             }
             catch (AlpacaNotImplementedException)
             {
-                await ExecuteRequestAsync(BuildSlewToCoordinatesRequest, rightAscension, declination, Configuration.LongTimeoutDuration);
+                await ExecuteRequestAsync(BuildSlewToCoordinatesRequest, rightAscension, declination, Configuration.LongTimeout);
             }
         }
         private IRestRequest BuildSlewToCoordinatesRequest(double rightAscension, double declination)
@@ -603,7 +603,7 @@ namespace ES.AscomAlpaca.Client.Devices
             }
             catch (AlpacaNotImplementedException)
             {
-                ExecuteRequest(BuildSlewToTargetRequest, Configuration.LongTimeoutDuration);
+                ExecuteRequest(BuildSlewToTargetRequest, Configuration.LongTimeout);
             }
         }
         public async Task SlewToTargetAsync()
@@ -614,7 +614,7 @@ namespace ES.AscomAlpaca.Client.Devices
             }
             catch (AlpacaNotImplementedException)
             {
-                await ExecuteRequestAsync(BuildSlewToTargetRequest, Configuration.LongTimeoutDuration);
+                await ExecuteRequestAsync(BuildSlewToTargetRequest, Configuration.LongTimeout);
             }
         }
         private IRestRequest BuildSlewToTargetRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.SlewToTarget, Method.PUT, GetClientTransactionId());
