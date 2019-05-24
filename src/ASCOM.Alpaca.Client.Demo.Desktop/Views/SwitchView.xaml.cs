@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace AscomAlpacaClient.Demo.Desktop.Views
+namespace ES.AscomAlpaca.Client.Demo.Desktop.Views
 {
     public partial class SwitchView : UserControl
     {

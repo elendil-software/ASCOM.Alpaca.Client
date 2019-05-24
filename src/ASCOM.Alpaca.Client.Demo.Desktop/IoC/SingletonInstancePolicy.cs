@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AscomAlpacaClient.Request;
 using Caliburn.Micro;
+using ES.AscomAlpaca.Client.Request;
 using Lamar;
 using Lamar.IoC.Instances;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AscomAlpacaClient.Demo.Desktop.IoC
+namespace ES.AscomAlpaca.Client.Demo.Desktop.IoC
 {
     public class SingletonInstancePolicy : IInstancePolicy
     {

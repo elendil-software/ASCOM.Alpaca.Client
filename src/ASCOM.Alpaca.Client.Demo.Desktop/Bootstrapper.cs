@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows;
-using AscomAlpacaClient.Demo.Desktop.IoC;
-using AscomAlpacaClient.Demo.Desktop.ViewModels;
-using AscomAlpacaClient.Devices;
+using System.Windows.Controls;
 using Caliburn.Micro;
+using ES.AscomAlpaca.Client.Demo.Desktop.Converters;
+using ES.AscomAlpaca.Client.Demo.Desktop.IoC;
+using ES.AscomAlpaca.Client.Demo.Desktop.ViewModels;
+using ES.AscomAlpaca.Client.Devices;
+using ES.AscomAlpaca.Client.Logging;
 using Lamar;
 using Serilog;
-using System.Windows.Controls;
-using AscomAlpacaClient.Demo.Desktop.Converters;
-using AscomAlpacaClient.Logging;
-using Microsoft.Extensions.Logging;
 
-namespace AscomAlpacaClient.Demo.Desktop
+namespace ES.AscomAlpaca.Client.Demo.Desktop
 {
     public class Bootstrapper : BootstrapperBase
     {

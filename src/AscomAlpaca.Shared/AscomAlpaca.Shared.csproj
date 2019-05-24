@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</RepositoryUrl>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <Version>0.1.0</Version>
+        <Authors>Julien Tschäppät</Authors>
+        <Product>C# ASCOM Alpaca Client</Product>
+        <Description>C# ASCOM Alpaca Client Library allowing to send request to ASCOM Alpaca</Description>
+        <Copyright>Copyright © 2019 - Julien Tschäppät</Copyright>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageTags>ASCOM Alpaca Astronomy</PackageTags>
+        <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
+        <PackageId>ES.AscomAlpaca.Shared</PackageId>
+        <AssemblyName>ES.AscomAlpaca.Shared</AssemblyName>
+        <RootNamespace>ES.AscomAlpaca</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Include="..\..\LICENSE.md">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
+
+</Project>

@@ -1,8 +1,8 @@
 ﻿using System;
-using AscomAlpacaClient.Devices;
-using AscomAlpacaClient.Request;
+using ES.AscomAlpaca.Client.Devices;
+using ES.AscomAlpaca.Client.Request;
 
-namespace AscomAlpacaClient.Demo.Desktop.Factories
+namespace ES.AscomAlpaca.Client.Demo.Desktop.Factories
 {
     public class DeviceFactory : IDeviceFactory
     {

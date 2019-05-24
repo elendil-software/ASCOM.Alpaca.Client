@@ -4,10 +4,10 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows;
-using AscomAlpacaClient.Demo.Desktop.Factories;
-using AscomAlpacaClient.Devices;
+using ES.AscomAlpaca.Client.Demo.Desktop.Factories;
+using ES.AscomAlpaca.Client.Devices;
 
-namespace AscomAlpacaClient.Demo.Desktop.ViewModels
+namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
 {
     public class SwitchViewModel : DeviceViewModelBase
     {

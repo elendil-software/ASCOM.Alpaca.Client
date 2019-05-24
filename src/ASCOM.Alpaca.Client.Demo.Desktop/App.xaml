@@ -1,12 +1,12 @@
-﻿<Application x:Class="AscomAlpacaClient.Demo.Desktop.App"
+﻿<Application x:Class="ES.AscomAlpaca.Client.Demo.Desktop.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:AscomAlpacaClient.Demo.Desktop">
+             xmlns:desktop="clr-namespace:ES.AscomAlpaca.Client.Demo.Desktop">
     <Application.Resources>
          <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary>
-                    <local:Bootstrapper x:Key="bootstrapper" />
+                    <desktop:Bootstrapper x:Key="bootstrapper" />
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

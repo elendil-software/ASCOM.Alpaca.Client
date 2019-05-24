@@ -9,7 +9,7 @@ using System.Windows;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Julien Tschäppät")]
-[assembly: AssemblyProduct("AscomAlpacaClient Demo Desktop")]
+[assembly: AssemblyProduct("ES.Ascom.Alpaca.Client Demo Desktop")]
 [assembly: AssemblyCopyright("Copyright © 2019 - Julien Tschäppät")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

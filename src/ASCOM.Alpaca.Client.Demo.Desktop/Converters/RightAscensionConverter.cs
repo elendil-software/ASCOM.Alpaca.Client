@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using System.Windows.Data;
 
-namespace AscomAlpacaClient.Demo.Desktop.Converters
+namespace ES.AscomAlpaca.Client.Demo.Desktop.Converters
 {
     public class RightAscensionConverter : IValueConverter
     {

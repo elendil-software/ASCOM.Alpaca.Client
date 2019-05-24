@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace AscomAlpacaClient.Demo.Desktop.Views
+namespace ES.AscomAlpaca.Client.Demo.Desktop.Views
 {
     /// <summary>
     /// Interaction logic for SafetyMonitorView.xaml
