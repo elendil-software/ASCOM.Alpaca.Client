@@ -1,6 +1,6 @@
 ﻿namespace ES.AscomAlpaca.Client.Devices
 {
-    internal enum SwitchMethod
+    internal enum SwitchCommand
     {
         MaxSwitch,
         CanWrite,

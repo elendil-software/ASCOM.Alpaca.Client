@@ -1,6 +1,6 @@
 ﻿namespace ES.AscomAlpaca.Client.Devices
 {
-    internal enum FilterWheelMethod
+    internal enum FilterWheelCommand
     {
         FocusOffsets,
         Names,

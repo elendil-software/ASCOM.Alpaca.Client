@@ -1,6 +1,6 @@
 namespace ES.AscomAlpaca.Client.Devices
 {
-    internal static class TelescopeMethodParameter
+    internal static class TelescopeCommandParameters
     {
         public const string SideOfPier = "SideOfPier";
         public const string GuideRateDeclination = "GuideRateDeclination";

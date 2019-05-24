@@ -1,6 +1,6 @@
 namespace ES.AscomAlpaca.Client.Devices
 {
-    internal static class CameraRequestParameters
+    internal static class CameraCommandParameters
     {
         public const string Light = "Light";
         public const string Direction = "Direction";

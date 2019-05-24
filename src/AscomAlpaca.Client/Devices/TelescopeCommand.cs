@@ -1,6 +1,6 @@
 ﻿namespace ES.AscomAlpaca.Client.Devices
 {
-    internal enum TelescopeMethod
+    internal enum TelescopeCommand
     {
         AlignmentMode,
         Altitude,

@@ -44,67 +44,67 @@ namespace ES.AscomAlpaca.Client.Devices
 
         public AlignmentMode GetAlignmentMode() => ExecuteRequest<AlignmentMode, AlignmentModeResponse>(BuildGetAlignmentModeRequest);    
         public async Task<AlignmentMode> GetAlignmentModeAsync() => await ExecuteRequestAsync<AlignmentMode, AlignmentModeResponse>(BuildGetAlignmentModeRequest);   
-        private IRestRequest BuildGetAlignmentModeRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.AlignmentMode, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetAlignmentModeRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.AlignmentMode, Method.GET, GetClientTransactionId());
 
         public double GetAltitude() => ExecuteRequest<double, DoubleResponse>(BuildGetAltitudeRequest);
         public async Task<double> GetAltitudeAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetAltitudeRequest);    
-        private IRestRequest BuildGetAltitudeRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.Altitude, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetAltitudeRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.Altitude, Method.GET, GetClientTransactionId());
 
         public double GetApertureArea() => ExecuteRequest<double, DoubleResponse>(BuildGetApertureAreaRequest);
         public async Task<double> GetApertureAreaAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetApertureAreaRequest);
-        private IRestRequest BuildGetApertureAreaRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.ApertureArea, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetApertureAreaRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.ApertureArea, Method.GET, GetClientTransactionId());
 
         public double GetApertureDiameter() => ExecuteRequest<double, DoubleResponse>(BuildGetApertureDiameterRequest);
         public async Task<double> GetApertureDiameterAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetApertureDiameterRequest);
-        private IRestRequest BuildGetApertureDiameterRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.ApertureDiameter, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetApertureDiameterRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.ApertureDiameter, Method.GET, GetClientTransactionId());
 
         public bool IsAtHome() => ExecuteRequest<bool, BoolResponse>(BuildIsAtHomeRequest);
         public async Task<bool> IsAtHomeAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsAtHomeRequest);
-        private IRestRequest BuildIsAtHomeRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.AtHome, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildIsAtHomeRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.AtHome, Method.GET, GetClientTransactionId());
 
         public bool IsAtPark() => ExecuteRequest<bool, BoolResponse>(BuildIsAtParkRequest);
         public async Task<bool> IsAtParkAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsAtParkRequest);
-        private IRestRequest BuildIsAtParkRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.AtPark, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildIsAtParkRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.AtPark, Method.GET, GetClientTransactionId());
 
         public double GetAzimuth() => ExecuteRequest<double, DoubleResponse>(BuildGetAzimuthRequest);
         public async Task<double> GetAzimuthAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetAzimuthRequest);
-        private IRestRequest BuildGetAzimuthRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.Azimuth, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetAzimuthRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.Azimuth, Method.GET, GetClientTransactionId());
 
         public bool CanFindHome() => ExecuteRequest<bool, BoolResponse>(BuildCanFindHomeRequest);
         public async Task<bool> CanFindHomeAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanFindHomeRequest);
-        private IRestRequest BuildCanFindHomeRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanFindHome, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanFindHomeRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanFindHome, Method.GET, GetClientTransactionId());
 
         public bool CanPark() => ExecuteRequest<bool, BoolResponse>(BuildCanParkRequest);
         public async Task<bool> CanParkAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanParkRequest);
-        private IRestRequest BuildCanParkRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanPark, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanParkRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanPark, Method.GET, GetClientTransactionId());
 
         public bool CanPulseGuide() => ExecuteRequest<bool, BoolResponse>(BuildCanPulseGuideRequest);
         public async Task<bool> CanPulseGuideAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanPulseGuideRequest);
-        private IRestRequest BuildCanPulseGuideRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanPulseGuide, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanPulseGuideRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanPulseGuide, Method.GET, GetClientTransactionId());
 
         public bool CanSetDeclinationRate() => ExecuteRequest<bool, BoolResponse>(BuildCanSetDeclinationRateRequest);
         public async Task<bool> CanSetDeclinationRateAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSetDeclinationRateRequest);
-        private IRestRequest BuildCanSetDeclinationRateRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSetDeclinationRate, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanSetDeclinationRateRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanSetDeclinationRate, Method.GET, GetClientTransactionId());
 
         public bool CanSetGuideRates() => ExecuteRequest<bool, BoolResponse>(BuildCanSetGuideRatesRequest);
         public async Task<bool> CanSetGuideRatesAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSetGuideRatesRequest);
-        private IRestRequest BuildCanSetGuideRatesRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSetGuideRates, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanSetGuideRatesRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanSetGuideRates, Method.GET, GetClientTransactionId());
 
         public bool CanSetPark() => ExecuteRequest<bool, BoolResponse>(BuildCanSetParkRequest);
         public async Task<bool> CanSetParkAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSetParkRequest);
-        private IRestRequest BuildCanSetParkRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSetPark, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanSetParkRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanSetPark, Method.GET, GetClientTransactionId());
 
         public bool CanSetPierSide() => ExecuteRequest<bool, BoolResponse>(BuildCanSetPierSideRequest);
         public async Task<bool> CanSetPierSideAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSetPierSideRequest);
-        private IRestRequest BuildCanSetPierSideRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSetPierSide, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanSetPierSideRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanSetPierSide, Method.GET, GetClientTransactionId());
 
         public bool CanSetRightAscensionRate() => ExecuteRequest<bool, BoolResponse>(BuildCanSetRightAscensionRateRequest);
         public async Task<bool> CanSetRightAscensionRateAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSetRightAscensionRateRequest);
-        private IRestRequest BuildCanSetRightAscensionRateRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSetRightAscensionRate, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanSetRightAscensionRateRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanSetRightAscensionRate, Method.GET, GetClientTransactionId());
 
         public bool CanSetTracking() => ExecuteRequest<bool, BoolResponse>(BuildCanSetTrackingRequest);
         public async Task<bool> CanSetTrackingAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSetTrackingRequest);
-        private IRestRequest BuildCanSetTrackingRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSetTracking, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanSetTrackingRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanSetTracking, Method.GET, GetClientTransactionId());
 
         public bool CanSlew()
         {
@@ -130,8 +130,8 @@ namespace ES.AscomAlpaca.Client.Devices
             return canSlew;
         }
 
-        private IRestRequest BuildCanSlewRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSlew, Method.GET, GetClientTransactionId());
-        private IRestRequest BuildCanAsyncSlewRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSlewAsync, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanSlewRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanSlew, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanAsyncSlewRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanSlewAsync, Method.GET, GetClientTransactionId());
 
         public bool CanSlewAltAz()
         {
@@ -157,25 +157,25 @@ namespace ES.AscomAlpaca.Client.Devices
             return canSlewAltAz;
         }
 
-        private IRestRequest BuildCanSlewAltAzRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSlewAltAz, Method.GET, GetClientTransactionId());
-        private IRestRequest BuildCanAsyncSlewAltAzRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSlewAltAzAsync, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanSlewAltAzRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanSlewAltAz, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanAsyncSlewAltAzRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanSlewAltAzAsync, Method.GET, GetClientTransactionId());
 
         
         public bool CanSync() => ExecuteRequest<bool, BoolResponse>(BuildCanSyncRequest);
         public async Task<bool> CanSyncAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSyncRequest);
-        private IRestRequest BuildCanSyncRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSync, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanSyncRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanSync, Method.GET, GetClientTransactionId());
 
         public bool CanSyncAltAz() => ExecuteRequest<bool, BoolResponse>(BuildCanSyncAltAzRequest);
         public async Task<bool> CanSyncAltAzAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildCanSyncAltAzRequest);
-        private IRestRequest BuildCanSyncAltAzRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.CanSyncAltAz, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildCanSyncAltAzRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.CanSyncAltAz, Method.GET, GetClientTransactionId());
 
         public double GetDeclination() => ExecuteRequest<double, DoubleResponse>(BuildGetDeclinationRequest);
         public async Task<double> GetDeclinationAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetDeclinationRequest);
-        private IRestRequest BuildGetDeclinationRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.Declination, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetDeclinationRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.Declination, Method.GET, GetClientTransactionId());
 
         public double GetDeclinationRate() => ExecuteRequest<double, DoubleResponse>(BuildGetDeclinationRateRequest);
         public async Task<double> GetDeclinationRateAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetDeclinationRateRequest);
-        private IRestRequest BuildGetDeclinationRateRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.DeclinationRate, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetDeclinationRateRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.DeclinationRate, Method.GET, GetClientTransactionId());
 
         public void SetDeclinationRate(double declinationRate) => ExecuteRequest(BuildSetDeclinationRateRequest, declinationRate);
         public async Task SetDeclinationRateAsync(double declinationRate) => await ExecuteRequestAsync(BuildSetDeclinationRateRequest, declinationRate);
@@ -183,14 +183,14 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.DeclinationRate, declinationRate.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.DeclinationRate, declinationRate.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.DeclinationRate, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.DeclinationRate, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public bool DoesRefraction() => ExecuteRequest<bool, BoolResponse>(BuildDoesRefractionRequest);
         public async Task<bool> DoesRefractionAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildDoesRefractionRequest);
-        private IRestRequest BuildDoesRefractionRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.DoesRefraction, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildDoesRefractionRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.DoesRefraction, Method.GET, GetClientTransactionId());
 
         public void SetDoesRefraction(bool doesRefraction) => ExecuteRequest(BuildSetDoesRefractionRequest, doesRefraction);
         public async Task SetDoesRefractionAsync(bool doesRefraction) => await ExecuteRequestAsync(BuildSetDoesRefractionRequest, doesRefraction);
@@ -198,22 +198,22 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.DoesRefraction, doesRefraction.ToString()}
+                {TelescopeCommandParameters.DoesRefraction, doesRefraction.ToString()}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.DoesRefraction, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.DoesRefraction, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public EquatorialCoordinateType GetEquatorialSystem() => ExecuteRequest<EquatorialCoordinateType, EquatorialCoordinateTypeResponse>(BuildGetEquatorialSystemRequest);
         public async Task<EquatorialCoordinateType> GetEquatorialSystemAsync() => await ExecuteRequestAsync<EquatorialCoordinateType, EquatorialCoordinateTypeResponse>(BuildGetEquatorialSystemRequest);
-        private IRestRequest BuildGetEquatorialSystemRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.EquatorialSystem, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetEquatorialSystemRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.EquatorialSystem, Method.GET, GetClientTransactionId());
 
         public double GetFocalLength() => ExecuteRequest<double, DoubleResponse>(BuildGetFocalLengthRequest);
         public async Task<double> GetFocalLengthAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetFocalLengthRequest);
-        private IRestRequest BuildGetFocalLengthRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.FocalLength, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetFocalLengthRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.FocalLength, Method.GET, GetClientTransactionId());
 
         public double GetGuideRateDeclination() => ExecuteRequest<double, DoubleResponse>(BuildGetGuideRateDeclinationRequest);
         public async Task<double> GetGuideRateDeclinationAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetGuideRateDeclinationRequest);
-        private IRestRequest BuildGetGuideRateDeclinationRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.GuideRateDeclination, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetGuideRateDeclinationRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.GuideRateDeclination, Method.GET, GetClientTransactionId());
 
         public void SetGuideRateDeclination(double guideRate) => ExecuteRequest(BuildSetGuideRateDeclinationRequest, guideRate);
         public async Task SetGuideRateDeclinationAsync(double guideRate) => await ExecuteRequestAsync(BuildSetGuideRateDeclinationRequest, guideRate);
@@ -221,14 +221,14 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.GuideRateDeclination, guideRate.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.GuideRateDeclination, guideRate.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.GuideRateDeclination, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.GuideRateDeclination, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public double GetGuideRateRightAscension() => ExecuteRequest<double, DoubleResponse>(BuildGetGuideRateRightAscensionRequest);
         public async Task<double> GetGuideRateRightAscensionAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetGuideRateRightAscensionRequest);
-        private IRestRequest BuildGetGuideRateRightAscensionRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.GuideRateRightAscension, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetGuideRateRightAscensionRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.GuideRateRightAscension, Method.GET, GetClientTransactionId());
 
         public void SetGuideRateRightAscension(double guideRate) => ExecuteRequest(BuildSetGuideRateRightAscensionRequest, guideRate);
         public async Task SetGuideRateRightAscensionAsync(double guideRate) => await ExecuteRequestAsync(BuildSetGuideRateRightAscensionRequest, guideRate);
@@ -236,22 +236,22 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.GuideRateRightAscension, guideRate.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.GuideRateRightAscension, guideRate.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.GuideRateRightAscension, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.GuideRateRightAscension, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public bool IsPulseGuiding() => ExecuteRequest<bool, BoolResponse>(BuildIsPulseGuidingRequest);
         public async Task<bool> IsPulseGuidingAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsPulseGuidingRequest);
-        private IRestRequest BuildIsPulseGuidingRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.IsPulseGuiding, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildIsPulseGuidingRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.IsPulseGuiding, Method.GET, GetClientTransactionId());
 
         public double GetRightAscension() => ExecuteRequest<double, DoubleResponse>(BuildGetRightAscensionRequest);
         public async Task<double> GetRightAscensionAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetRightAscensionRequest);
-        private IRestRequest BuildGetRightAscensionRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.RightAscension, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetRightAscensionRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.RightAscension, Method.GET, GetClientTransactionId());
 
         public double GetRightAscensionRate() => ExecuteRequest<double, DoubleResponse>(BuildGetRightAscensionRateRequest);
         public async Task<double> GetRightAscensionRateAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetRightAscensionRateRequest);
-        private IRestRequest BuildGetRightAscensionRateRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.RightAscensionRate, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetRightAscensionRateRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.RightAscensionRate, Method.GET, GetClientTransactionId());
 
         public void SetRightAscensionRate(double rightAscensionRate) => ExecuteRequest(BuildSetRightAscensionRateRequest, rightAscensionRate);
         public async Task SetRightAscensionRateAsync(double rightAscensionRate) => await ExecuteRequestAsync(BuildSetRightAscensionRateRequest, rightAscensionRate);
@@ -259,14 +259,14 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.RightAscensionRate, rightAscensionRate.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.RightAscensionRate, rightAscensionRate.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.RightAscensionRate, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.RightAscensionRate, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public PierSide GetSideOfPier() => ExecuteRequest<PierSide, PierSideResponse>(BuildGetSideOfPierRequest);
         public async Task<PierSide> GetSideOfPierAsync() => await ExecuteRequestAsync<PierSide, PierSideResponse>(BuildGetSideOfPierRequest);
-        private IRestRequest BuildGetSideOfPierRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SideOfPier, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetSideOfPierRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.SideOfPier, Method.GET, GetClientTransactionId());
 
         public void SetSideOfPier(PierSide sideOfPier) => ExecuteRequest(BuildSetSideOfPierRequest, sideOfPier);
         public async Task SetSideOfPierAsync(PierSide sideOfPier) => await ExecuteRequestAsync(BuildSetSideOfPierRequest, sideOfPier);
@@ -274,18 +274,18 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.SideOfPier, ((int)sideOfPier).ToString()}
+                {TelescopeCommandParameters.SideOfPier, ((int)sideOfPier).ToString()}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.SideOfPier, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.SideOfPier, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public double GetSiderealTime() => ExecuteRequest<double, DoubleResponse>(BuildGetSiderealTimeRequest);
         public async Task<double> GetSiderealTimeAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetSiderealTimeRequest);
-        private IRestRequest BuildGetSiderealTimeRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SiderealTime, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetSiderealTimeRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.SiderealTime, Method.GET, GetClientTransactionId());
 
         public double GetSiteElevation() => ExecuteRequest<double, DoubleResponse>(BuildGetSiteElevationRequest);
         public async Task<double> GetSiteElevationAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetSiteElevationRequest);
-        private IRestRequest BuildGetSiteElevationRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SiteElevation, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetSiteElevationRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.SiteElevation, Method.GET, GetClientTransactionId());
 
         public void SetSiteElevation(double siteElevation) => ExecuteRequest(BuildSetSiteElevationRequest, siteElevation);
         public async Task SetSiteElevationAsync(double siteElevation) => await ExecuteRequestAsync(BuildSetSiteElevationRequest, siteElevation);
@@ -293,14 +293,14 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.SiteElevation, siteElevation.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.SiteElevation, siteElevation.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.SiteElevation, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.SiteElevation, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public double GetSiteLatitude() => ExecuteRequest<double, DoubleResponse>(BuildGetSiteLatitudeRequest);
         public async Task<double> GetSiteLatitudeAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetSiteLatitudeRequest);
-        private IRestRequest BuildGetSiteLatitudeRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SiteLatitude, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetSiteLatitudeRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.SiteLatitude, Method.GET, GetClientTransactionId());
 
         public void SetSiteLatitude(double latitude) => ExecuteRequest(BuildSetSiteLatitudeRequest, latitude);
         public async Task SetSiteLatitudeAsync(double latitude) => await ExecuteRequestAsync(BuildSetSiteLatitudeRequest, latitude);
@@ -308,14 +308,14 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.SiteLatitude, latitude.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.SiteLatitude, latitude.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.SiteLatitude, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.SiteLatitude, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public double GetSiteLongitude() => ExecuteRequest<double, DoubleResponse>(BuildGetSiteLongitudeRequest);
         public async Task<double> GetSiteLongitudeAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetSiteLongitudeRequest);
-        private IRestRequest BuildGetSiteLongitudeRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SiteLongitude, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetSiteLongitudeRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.SiteLongitude, Method.GET, GetClientTransactionId());
 
         public void SetSiteLongitude(double longitude) => ExecuteRequest(BuildSetSiteLongitudeRequest, longitude);
         public async Task SetSiteLongitudeAsync(double longitude) => await ExecuteRequestAsync(BuildSetSiteLongitudeRequest, longitude);
@@ -323,18 +323,18 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.SiteLongitude, longitude.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.SiteLongitude, longitude.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.SiteLongitude, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.SiteLongitude, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public bool IsSlewing() => ExecuteRequest<bool, BoolResponse>(BuildIsSlewingRequest);
         public async Task<bool> IsSlewingAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsSlewingRequest);
-        private IRestRequest BuildIsSlewingRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.Slewing, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildIsSlewingRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.Slewing, Method.GET, GetClientTransactionId());
 
         public int GetSlewSettleTime() => ExecuteRequest<int, IntResponse>(BuildGetSlewSettleTimeRequest);
         public async Task<int> GetSlewSettleTimeAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetSlewSettleTimeRequest);
-        private IRestRequest BuildGetSlewSettleTimeRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SlewSettleTime, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetSlewSettleTimeRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.SlewSettleTime, Method.GET, GetClientTransactionId());
 
         public void SetSlewSettleTime(int settleTime) => ExecuteRequest(BuildSetSlewSettleTimeRequest, settleTime);
         public async Task SetSlewSettleTimeAsync(int settleTime) => await ExecuteRequestAsync(BuildSetSlewSettleTimeRequest, settleTime);
@@ -342,14 +342,14 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.SlewSettleTime, settleTime.ToString()}
+                {TelescopeCommandParameters.SlewSettleTime, settleTime.ToString()}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.SlewSettleTime, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.SlewSettleTime, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public double GetTargetDeclination() => ExecuteRequest<double, DoubleResponse>(BuildGetTargetDeclinationRequest);
         public async Task<double> GetTargetDeclinationAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetTargetDeclinationRequest);
-        private IRestRequest BuildGetTargetDeclinationRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.TargetDeclination, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetTargetDeclinationRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.TargetDeclination, Method.GET, GetClientTransactionId());
 
         public void SetTargetDeclination(double declination) => ExecuteRequest(BuildSetTargetDeclinationRequest, declination);
         public async Task SetTargetDeclinationAsync(double declination) => await ExecuteRequestAsync(BuildSetTargetDeclinationRequest, declination);
@@ -357,14 +357,14 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.TargetDeclination, declination.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.TargetDeclination, declination.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.TargetDeclination, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.TargetDeclination, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public double GetTargetRightAscension() => ExecuteRequest<double, DoubleResponse>(BuildGetTargetRightAscensionRequest);
         public async Task<double> GetTargetRightAscensionAsync() => await ExecuteRequestAsync<double, DoubleResponse>(BuildGetTargetRightAscensionRequest);
-        private IRestRequest BuildGetTargetRightAscensionRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.TargetRightAscension, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetTargetRightAscensionRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.TargetRightAscension, Method.GET, GetClientTransactionId());
 
         public void SetTargetRightAscension(double rightAscension) => ExecuteRequest(BuildSetTargetRightAscensionRequest, rightAscension);
         public async Task SetTargetRightAscensionAsync(double rightAscension) => await ExecuteRequestAsync(BuildSetTargetRightAscensionRequest, rightAscension);
@@ -372,14 +372,14 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.TargetRightAscension, rightAscension.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.TargetRightAscension, rightAscension.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.TargetRightAscension, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.TargetRightAscension, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public bool IsTracking() => ExecuteRequest<bool, BoolResponse>(BuildIsTrackingRequest);
         public async Task<bool> IsTrackingAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsTrackingRequest);
-        private IRestRequest BuildIsTrackingRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.Tracking, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildIsTrackingRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.Tracking, Method.GET, GetClientTransactionId());
 
         public void SetTracking(bool tracking) => ExecuteRequest(BuildSetTrackingAsyncRequest, tracking);
         public async Task SetTrackingAsync(bool tracking) => await ExecuteRequestAsync(BuildSetTrackingAsyncRequest, tracking);
@@ -387,14 +387,14 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.Tracking, tracking.ToString()}
+                {TelescopeCommandParameters.Tracking, tracking.ToString()}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.Tracking, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.Tracking, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public DriveRate GetTrackingRate() => ExecuteRequest<DriveRate, DriveRateResponse>(BuildGetTrackingRateRequest);
         public async Task<DriveRate> GetTrackingRateAsync() => await ExecuteRequestAsync<DriveRate, DriveRateResponse>(BuildGetTrackingRateRequest);
-        private IRestRequest BuildGetTrackingRateRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.TrackingRate, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetTrackingRateRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.TrackingRate, Method.GET, GetClientTransactionId());
 
         public void SetTrackingRate(DriveRate trackingRate) => ExecuteRequest(BuildSetTrackingRateRequest, trackingRate);
         public async Task SetTrackingRateAsync(DriveRate trackingRate) => await ExecuteRequestAsync(BuildSetTrackingRateRequest, trackingRate);
@@ -402,14 +402,14 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.TrackingRate, ((int)trackingRate).ToString()}
+                {TelescopeCommandParameters.TrackingRate, ((int)trackingRate).ToString()}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.TrackingRate, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.TrackingRate, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public IList<DriveRate> GetTrackingRates() => ExecuteRequest<IList<DriveRate>, DriveRatesResponse>(BuildGetTrackingRatesRequest);
         public async Task<IList<DriveRate>> GetTrackingRatesAsync() => await ExecuteRequestAsync<IList<DriveRate>, DriveRatesResponse>(BuildGetTrackingRatesRequest);
-        private IRestRequest BuildGetTrackingRatesRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.TrackingRates, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetTrackingRatesRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.TrackingRates, Method.GET, GetClientTransactionId());
 
         public DateTime GetUtcDate()
         {
@@ -421,7 +421,7 @@ namespace ES.AscomAlpaca.Client.Devices
             string dateTimeString = await ExecuteRequestAsync<string, StringResponse>(BuildGetUtcDateRequest);
             return DateTime.Parse(dateTimeString, null, DateTimeStyles.AssumeUniversal);
         }
-        private IRestRequest BuildGetUtcDateRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.UTCDate, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetUtcDateRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.UTCDate, Method.GET, GetClientTransactionId());
 
         public void SetUtcDate(DateTime utcDate) => ExecuteRequest(BuildSetUtcDateRequest, utcDate);
         public async Task SetUtcDateAsync(DateTime utcDate) => await ExecuteRequestAsync(BuildSetUtcDateRequest, utcDate);
@@ -429,14 +429,14 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.UTCDate, utcDate.ToString("yyyy-MM-dd'T'HH:mm:ss.fffK", CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.UTCDate, utcDate.ToString("yyyy-MM-dd'T'HH:mm:ss.fffK", CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.UTCDate, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.UTCDate, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public void AbortSlew() => ExecuteRequest(BuildAbortSlewRequest);
         public async Task AbortSlewAsync() => await ExecuteRequestAsync(BuildAbortSlewRequest);
-        private IRestRequest BuildAbortSlewRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.AbortSlew, Method.PUT, GetClientTransactionId());
+        private IRestRequest BuildAbortSlewRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.AbortSlew, Method.PUT, GetClientTransactionId());
 
         public IList<AxisRate> GetAxisRates(TelescopeAxis axis) => ExecuteRequest<IList<AxisRate>, AxisRatesResponse, TelescopeAxis>(BuildGetAxisRatesRequest, axis);
         public async Task<IList<AxisRate>> GetAxisRatesAsync(TelescopeAxis axis) => await ExecuteRequestAsync<IList<AxisRate>, AxisRatesResponse, TelescopeAxis>(BuildGetAxisRatesRequest, axis);
@@ -444,9 +444,9 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.Axis, ((int)axis).ToString()}
+                {TelescopeCommandParameters.Axis, ((int)axis).ToString()}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.AxisRates, Method.GET, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.AxisRates, Method.GET, parameters, GetClientTransactionId());
         }
 
         public bool CanMoveAxis(TelescopeAxis axis) => ExecuteRequest<bool, BoolResponse, TelescopeAxis>(BuildCanMoveAxisRequest, axis);
@@ -455,9 +455,9 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.Axis, ((int)axis).ToString()}
+                {TelescopeCommandParameters.Axis, ((int)axis).ToString()}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.CanMoveAxis, Method.GET, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.CanMoveAxis, Method.GET, parameters, GetClientTransactionId());
         }
 
         public PierSide GetDestinationSideOfPier(double rightAscension, double declination) => 
@@ -469,15 +469,15 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.RightAscension, rightAscension.ToString(CultureInfo.InvariantCulture)},
-                {TelescopeMethodParameter.Declination, declination.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.RightAscension, rightAscension.ToString(CultureInfo.InvariantCulture)},
+                {TelescopeCommandParameters.Declination, declination.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.DestinationSideOfPier, Method.GET, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.DestinationSideOfPier, Method.GET, parameters, GetClientTransactionId());
         }
 
         public void FindHome() => ExecuteRequest(BuildFindHomeRequest, Configuration.LongTimeoutDuration);
         public async Task FindHomeAsync() => await ExecuteRequestAsync(BuildFindHomeRequest, Configuration.LongTimeoutDuration);
-        private IRestRequest BuildFindHomeRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.FindHome, Method.PUT, GetClientTransactionId());
+        private IRestRequest BuildFindHomeRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.FindHome, Method.PUT, GetClientTransactionId());
 
         public void MoveAxis(TelescopeAxis axis, double rate) => ExecuteRequest(BuildMoveAxisRequest, axis, rate);
         public async Task MoveAxisAsync(TelescopeAxis axis, double rate) => await ExecuteRequestAsync(BuildMoveAxisRequest, axis, rate);
@@ -485,15 +485,15 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.Axis, ((int) axis).ToString()},
-                {TelescopeMethodParameter.Rate, rate.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.Axis, ((int) axis).ToString()},
+                {TelescopeCommandParameters.Rate, rate.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.MoveAxis, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.MoveAxis, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public void Park() => ExecuteRequest(BuildParkRequest, Configuration.LongTimeoutDuration);
         public async Task ParkAsync() => await ExecuteRequestAsync(BuildParkRequest, Configuration.LongTimeoutDuration);
-        private IRestRequest BuildParkRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.Park, Method.PUT, GetClientTransactionId());
+        private IRestRequest BuildParkRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.Park, Method.PUT, GetClientTransactionId());
 
         public void PulseGuide(GuideDirection direction, int duration) => ExecuteRequest(BuildPulseGuideRequest, direction, duration);
         public async Task PulseGuideAsync(GuideDirection direction, int duration) => await ExecuteRequestAsync(BuildPulseGuideRequest, direction, duration);
@@ -501,15 +501,15 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.Direction, ((int)direction).ToString()},
-                {TelescopeMethodParameter.Duration, duration.ToString()}
+                {TelescopeCommandParameters.Direction, ((int)direction).ToString()},
+                {TelescopeCommandParameters.Duration, duration.ToString()}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.PulseGuide, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.PulseGuide, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public void SetPark() => ExecuteRequest(BuildSetParkRequest);
         public async Task SetParkAsync() => await ExecuteRequestAsync(BuildSetParkRequest);
-        private IRestRequest BuildSetParkRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SetPark, Method.PUT, GetClientTransactionId());
+        private IRestRequest BuildSetParkRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.SetPark, Method.PUT, GetClientTransactionId());
 
         public void SlewToAltAz(double altitude, double azimuth)
         {
@@ -539,19 +539,19 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.Altitude, altitude.ToString(CultureInfo.InvariantCulture)},
-                {TelescopeMethodParameter.Azimuth, azimuth.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.Altitude, altitude.ToString(CultureInfo.InvariantCulture)},
+                {TelescopeCommandParameters.Azimuth, azimuth.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.SlewToAltAz, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.SlewToAltAz, Method.PUT, parameters, GetClientTransactionId());
         }
         private IRestRequest BuildSlewAsyncToAltAzRequest(double altitude, double azimuth)
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.Altitude, altitude.ToString(CultureInfo.InvariantCulture)},
-                {TelescopeMethodParameter.Azimuth, azimuth.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.Altitude, altitude.ToString(CultureInfo.InvariantCulture)},
+                {TelescopeCommandParameters.Azimuth, azimuth.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.SlewToAltAzAsync, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.SlewToAltAzAsync, Method.PUT, parameters, GetClientTransactionId());
         }
         
         public void SlewToCoordinates(double rightAscension, double declination)
@@ -580,19 +580,19 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.RightAscension, rightAscension.ToString(CultureInfo.InvariantCulture)},
-                {TelescopeMethodParameter.Declination, declination.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.RightAscension, rightAscension.ToString(CultureInfo.InvariantCulture)},
+                {TelescopeCommandParameters.Declination, declination.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.SlewToCoordinates, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.SlewToCoordinates, Method.PUT, parameters, GetClientTransactionId());
         }
         private IRestRequest BuildSlewAsyncToCoordinatesRequest(double rightAscension, double declination)
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.RightAscension, rightAscension.ToString(CultureInfo.InvariantCulture)},
-                {TelescopeMethodParameter.Declination, declination.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.RightAscension, rightAscension.ToString(CultureInfo.InvariantCulture)},
+                {TelescopeCommandParameters.Declination, declination.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.SlewToCoordinatesAsync, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.SlewToCoordinatesAsync, Method.PUT, parameters, GetClientTransactionId());
         }
         
         public void SlewToTarget()
@@ -617,8 +617,8 @@ namespace ES.AscomAlpaca.Client.Devices
                 await ExecuteRequestAsync(BuildSlewToTargetRequest, Configuration.LongTimeoutDuration);
             }
         }
-        private IRestRequest BuildSlewToTargetRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SlewToTarget, Method.PUT, GetClientTransactionId());
-        private IRestRequest BuildSlewAsyncToTargetRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SlewToTargetAsync, Method.PUT, GetClientTransactionId());
+        private IRestRequest BuildSlewToTargetRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.SlewToTarget, Method.PUT, GetClientTransactionId());
+        private IRestRequest BuildSlewAsyncToTargetRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.SlewToTargetAsync, Method.PUT, GetClientTransactionId());
 
         public void SyncToAltAz(double altitude, double azimuth) => ExecuteRequest(BuildSyncToAltAzRequest, altitude, azimuth);
         public async Task SyncToAltAzAsync(double altitude, double azimuth) => await ExecuteRequestAsync(BuildSyncToAltAzRequest, altitude, azimuth);
@@ -626,10 +626,10 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.Altitude, altitude.ToString(CultureInfo.InvariantCulture)},
-                {TelescopeMethodParameter.Azimuth, azimuth.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.Altitude, altitude.ToString(CultureInfo.InvariantCulture)},
+                {TelescopeCommandParameters.Azimuth, azimuth.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.SyncToAltAz, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.SyncToAltAz, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public void SyncToCoordinates(double rightAscension, double declination) => ExecuteRequest(BuildSyncToCoordinatesRequest, rightAscension, declination);
@@ -638,18 +638,18 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {TelescopeMethodParameter.RightAscension, rightAscension.ToString(CultureInfo.InvariantCulture)},
-                {TelescopeMethodParameter.Declination, declination.ToString(CultureInfo.InvariantCulture)}
+                {TelescopeCommandParameters.RightAscension, rightAscension.ToString(CultureInfo.InvariantCulture)},
+                {TelescopeCommandParameters.Declination, declination.ToString(CultureInfo.InvariantCulture)}
             };
-            return RequestBuilder.BuildRestRequest(TelescopeMethod.SyncToCoordinates, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(TelescopeCommand.SyncToCoordinates, Method.PUT, parameters, GetClientTransactionId());
         }
 
         public void SyncToTarget() => ExecuteRequest(BuildSyncToTargetRequest);
         public async Task SyncToTargetAsync() => await ExecuteRequestAsync(BuildSyncToTargetRequest);
-        private IRestRequest BuildSyncToTargetRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.SyncToTarget, Method.PUT, GetClientTransactionId());
+        private IRestRequest BuildSyncToTargetRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.SyncToTarget, Method.PUT, GetClientTransactionId());
 
         public void Unpark() => ExecuteRequest(BuildUnparkRequest);
         public async Task UnparkAsync() => await ExecuteRequestAsync(BuildUnparkRequest);
-        private IRestRequest BuildUnparkRequest() => RequestBuilder.BuildRestRequest(TelescopeMethod.UnPark, Method.PUT, GetClientTransactionId());
+        private IRestRequest BuildUnparkRequest() => RequestBuilder.BuildRestRequest(TelescopeCommand.UnPark, Method.PUT, GetClientTransactionId());
     }
 }

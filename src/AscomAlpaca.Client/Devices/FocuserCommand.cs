@@ -1,6 +1,6 @@
 ﻿namespace ES.AscomAlpaca.Client.Devices
 {
-    internal enum FocuserMethod
+    internal enum FocuserCommand
     {
         Absolute,
         IsMoving,

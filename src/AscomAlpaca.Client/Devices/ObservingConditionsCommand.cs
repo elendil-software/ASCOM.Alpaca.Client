@@ -1,6 +1,6 @@
 ﻿namespace ES.AscomAlpaca.Client.Devices
 {
-    internal enum ObservingConditionsMethod
+    internal enum ObservingConditionsCommand
     {
         AveragePeriod,
         CloudCover,

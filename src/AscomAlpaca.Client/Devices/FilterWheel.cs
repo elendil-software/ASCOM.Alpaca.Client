@@ -39,15 +39,15 @@ namespace ES.AscomAlpaca.Client.Devices
 
         public IList<int> GetFocusOffsets() => ExecuteRequest<IList<int>, IntListResponse>(BuildGetFocusOffsetRequest);
         public async Task<IList<int>> GetFocusOffsetsAsync() => await ExecuteRequestAsync<IList<int>, IntListResponse>(BuildGetFocusOffsetRequest);
-        private IRestRequest BuildGetFocusOffsetRequest() => RequestBuilder.BuildRestRequest(FilterWheelMethod.FocusOffsets, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetFocusOffsetRequest() => RequestBuilder.BuildRestRequest(FilterWheelCommand.FocusOffsets, Method.GET, GetClientTransactionId());
 
         public IList<string> GetNames() => ExecuteRequest<IList<string>, StringListResponse>(BuildGetNamesRequest);
         public async Task<IList<string>> GetNamesAsync() => await ExecuteRequestAsync<IList<string>, StringListResponse>(BuildGetNamesRequest);
-        private IRestRequest BuildGetNamesRequest() => RequestBuilder.BuildRestRequest(FilterWheelMethod.Names, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetNamesRequest() => RequestBuilder.BuildRestRequest(FilterWheelCommand.Names, Method.GET, GetClientTransactionId());
 
         public int GetPosition() => ExecuteRequest<int, IntResponse>(BuildGetPositionRequest);
         public async Task<int> GetPositionAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetPositionRequest);
-        private IRestRequest BuildGetPositionRequest() => RequestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.GET, GetClientTransactionId());
+        private IRestRequest BuildGetPositionRequest() => RequestBuilder.BuildRestRequest(FilterWheelCommand.Position, Method.GET, GetClientTransactionId());
 
         public void SetPosition(int position) => ExecuteRequest(BuildSetPositionRequest, position);
         public async Task SetPositionAsync(int position) => await ExecuteRequestAsync(BuildSetPositionRequest, position);
@@ -55,10 +55,10 @@ namespace ES.AscomAlpaca.Client.Devices
         {
             var parameters = new Dictionary<string, object>
             {
-                {FilterWheelRequestParameters.Position, position.ToString(CultureInfo.InvariantCulture)}
+                {FilterWheelCommandParameters.Position, position.ToString(CultureInfo.InvariantCulture)}
             };
 
-            return RequestBuilder.BuildRestRequest(FilterWheelMethod.Position, Method.PUT, parameters, GetClientTransactionId());
+            return RequestBuilder.BuildRestRequest(FilterWheelCommand.Position, Method.PUT, parameters, GetClientTransactionId());
         }
     }
 }

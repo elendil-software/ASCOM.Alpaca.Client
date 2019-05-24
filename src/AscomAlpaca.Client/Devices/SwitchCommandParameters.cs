@@ -1,6 +1,6 @@
 namespace ES.AscomAlpaca.Client.Devices
 {
-    internal static class SwitchRequestParameters
+    internal static class SwitchCommandParameters
     {
         public const string Id = "Id";
         public const string State = "State";
