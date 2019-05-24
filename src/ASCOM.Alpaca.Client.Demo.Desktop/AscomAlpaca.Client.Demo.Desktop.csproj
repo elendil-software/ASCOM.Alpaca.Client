@@ -230,6 +230,10 @@
       <Project>{aee5f6b7-3c58-45cf-a5c8-b4a7ba4ead31}</Project>
       <Name>AscomAlpaca.Client</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AscomAlpaca.Shared\AscomAlpaca.Shared.csproj">
+      <Project>{f84d4eb8-cf1b-42ba-9cb0-1898a4212e64}</Project>
+      <Name>AscomAlpaca.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

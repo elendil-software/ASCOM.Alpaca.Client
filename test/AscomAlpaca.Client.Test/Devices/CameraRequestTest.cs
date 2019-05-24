@@ -2,6 +2,8 @@
 using ES.AscomAlpaca.Client.Devices;
 using ES.AscomAlpaca.Client.Request;
 using ES.AscomAlpaca.Client.Responses;
+using ES.AscomAlpaca.Devices;
+using ES.AscomAlpaca.Responses;
 using Moq;
 using RestSharp;
 using Xunit;

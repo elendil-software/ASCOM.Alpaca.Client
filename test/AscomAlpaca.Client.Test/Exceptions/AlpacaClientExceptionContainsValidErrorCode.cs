@@ -1,6 +1,5 @@
 using System;
-using ES.AscomAlpaca.Client.Errors;
-using ES.AscomAlpaca.Client.Exceptions;
+using ES.AscomAlpaca.Exceptions;
 using Xunit;
 
 namespace ES.AscomAlpaca.Client.Test.Exceptions

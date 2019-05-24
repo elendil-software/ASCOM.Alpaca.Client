@@ -1,4 +1,5 @@
 using ES.AscomAlpaca.Client.Responses;
+using ES.AscomAlpaca.Responses;
 using Xunit;
 
 namespace ES.AscomAlpaca.Client.Test.Responses

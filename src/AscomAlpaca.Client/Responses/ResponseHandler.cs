@@ -1,5 +1,5 @@
-using ES.AscomAlpaca.Client.Errors;
-using ES.AscomAlpaca.Client.Exceptions;
+using ES.AscomAlpaca.Exceptions;
+using ES.AscomAlpaca.Responses;
 
 namespace ES.AscomAlpaca.Client.Responses
 {

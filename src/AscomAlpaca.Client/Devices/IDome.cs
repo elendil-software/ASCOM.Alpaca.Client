@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using ES.AscomAlpaca.Devices;
 
 namespace ES.AscomAlpaca.Client.Devices
 {

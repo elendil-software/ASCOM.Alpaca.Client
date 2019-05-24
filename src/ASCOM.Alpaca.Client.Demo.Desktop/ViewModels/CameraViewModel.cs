@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using ES.AscomAlpaca.Client.Demo.Desktop.Factories;
 using ES.AscomAlpaca.Client.Devices;
-using ES.AscomAlpaca.Client.Exceptions;
+using ES.AscomAlpaca.Devices;
+using ES.AscomAlpaca.Exceptions;
 
 namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
 {

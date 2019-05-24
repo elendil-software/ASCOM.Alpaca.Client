@@ -1,6 +1,6 @@
-using ES.AscomAlpaca.Client.Errors;
-using ES.AscomAlpaca.Client.Exceptions;
 using ES.AscomAlpaca.Client.Responses;
+using ES.AscomAlpaca.Exceptions;
+using ES.AscomAlpaca.Responses;
 using Xunit;
 
 namespace ES.AscomAlpaca.Client.Test.Responses
