@@ -24,7 +24,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -45,7 +45,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -114,7 +114,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -135,7 +135,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -156,7 +156,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -177,7 +177,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -198,7 +198,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -219,7 +219,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -240,7 +240,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -261,7 +261,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -282,7 +282,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -303,7 +303,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -324,7 +324,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -345,7 +345,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -366,7 +366,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -387,7 +387,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -408,7 +408,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -429,7 +429,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -450,7 +450,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -471,7 +471,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -492,7 +492,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -513,7 +513,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -534,7 +534,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -555,7 +555,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -576,7 +576,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -597,7 +597,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -618,7 +618,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -639,7 +639,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -704,7 +704,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new StringResponse());
+                .Returns(new StringResponse("test"));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -728,7 +728,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new StringResponse()));
+                .Returns(Task.FromResult(new StringResponse("test")));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -752,7 +752,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -776,7 +776,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var observingConditions = new ObservingConditions(_deviceConfiguration, commandSenderMock.Object);
             
             //Act

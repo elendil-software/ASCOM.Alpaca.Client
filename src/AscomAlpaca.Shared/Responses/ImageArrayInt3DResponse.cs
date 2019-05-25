@@ -5,7 +5,7 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class ImageArrayInt3DResponse : CommandResponse, IImageResponse<int[,,]>
     {
-        public ImageArrayInt3DResponse()
+        private ImageArrayInt3DResponse()
         {
         }
 

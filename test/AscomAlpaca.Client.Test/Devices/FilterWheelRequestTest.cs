@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using ES.AscomAlpaca.Client.Devices;
 using ES.AscomAlpaca.Client.Request;
 using ES.AscomAlpaca.Responses;
@@ -24,7 +25,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntListResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntListResponse());
+                .Returns(new IntListResponse(new List<int>{1}));
             var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -45,7 +46,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntListResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntListResponse()));
+                .Returns(Task.FromResult(new IntListResponse(new List<int>{1})));
             var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -66,7 +67,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<StringListResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new StringListResponse());
+                .Returns(new StringListResponse(new List<string> {"test"}));
             var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -87,7 +88,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<StringListResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new StringListResponse()));
+                .Returns(Task.FromResult(new StringListResponse(new List<string> {"test"})));
             var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -108,7 +109,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -129,7 +130,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var filterWheel = new FilterWheel(_deviceConfiguration, commandSenderMock.Object);
             
             //Act

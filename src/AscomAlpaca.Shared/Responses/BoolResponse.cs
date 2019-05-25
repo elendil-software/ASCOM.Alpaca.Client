@@ -5,7 +5,7 @@
     /// </summary>
     public class BoolResponse : CommandResponse, IValueResponse<bool>
     {
-        public BoolResponse()
+        private BoolResponse()
         {
         }
 

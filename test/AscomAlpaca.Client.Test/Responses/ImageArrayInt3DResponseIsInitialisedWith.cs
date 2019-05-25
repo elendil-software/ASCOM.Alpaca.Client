@@ -8,7 +8,7 @@ namespace ES.AscomAlpaca.Client.Test.Responses
         [Fact]
         public void ImageArrayInt3DResponse_IsInitialisedWith_Rank2_And_TypeInt()
         {
-            var response = new ImageArrayInt3DResponse();
+            var response = new ImageArrayInt3DResponse(new int[1,1,1]);
             
             Assert.Equal(3, response.Rank);
             Assert.Equal(ImageArrayType.Int, response.ArrayType);

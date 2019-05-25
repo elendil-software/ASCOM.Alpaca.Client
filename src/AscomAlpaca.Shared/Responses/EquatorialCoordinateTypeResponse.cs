@@ -7,7 +7,7 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class EquatorialCoordinateTypeResponse : CommandResponse, IValueResponse<EquatorialCoordinateType>
     {
-        public EquatorialCoordinateTypeResponse()
+        private EquatorialCoordinateTypeResponse()
         {
         }
 

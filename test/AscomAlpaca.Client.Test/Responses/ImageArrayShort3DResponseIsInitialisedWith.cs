@@ -8,7 +8,7 @@ namespace ES.AscomAlpaca.Client.Test.Responses
         [Fact]
         public void ImageArrayShort3DResponse_IsInitialisedWith_Rank2_And_TypeShort()
         {
-            var response = new ImageArrayShort3DResponse();
+            var response = new ImageArrayShort3DResponse(new short[1,1,1]);
             
             Assert.Equal(3, response.Rank);
             Assert.Equal(ImageArrayType.Short, response.ArrayType);

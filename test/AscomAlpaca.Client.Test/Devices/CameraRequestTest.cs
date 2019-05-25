@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using ES.AscomAlpaca.Client.Devices;
 using ES.AscomAlpaca.Client.Request;
 using ES.AscomAlpaca.Devices;
@@ -25,7 +26,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -46,7 +47,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -67,7 +68,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -88,7 +89,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -109,7 +110,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -130,7 +131,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -199,7 +200,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -220,7 +221,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -289,7 +290,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<CameraStateResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new CameraStateResponse());
+                .Returns(new CameraStateResponse(CameraState.Idle));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -310,7 +311,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<CameraStateResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new CameraStateResponse()));
+                .Returns(Task.FromResult(new CameraStateResponse(CameraState.Idle)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -331,7 +332,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -352,7 +353,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -373,7 +374,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -394,7 +395,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -415,7 +416,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -436,7 +437,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -457,7 +458,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -478,7 +479,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -499,7 +500,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -520,7 +521,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -541,7 +542,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -562,7 +563,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -583,7 +584,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -604,7 +605,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -625,7 +626,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -646,7 +647,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -667,7 +668,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -688,7 +689,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -709,7 +710,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -730,7 +731,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -751,7 +752,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -772,7 +773,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -841,7 +842,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -862,7 +863,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -883,7 +884,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -904,7 +905,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -925,7 +926,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -946,7 +947,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -967,7 +968,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -988,7 +989,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1009,7 +1010,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1030,7 +1031,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1051,7 +1052,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1072,7 +1073,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1141,7 +1142,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1162,7 +1163,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1183,7 +1184,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1204,7 +1205,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1273,7 +1274,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1294,7 +1295,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1315,7 +1316,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1336,7 +1337,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1357,7 +1358,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<StringListResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new StringListResponse());
+                .Returns(new StringListResponse(new List<string> {"test"}));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1378,7 +1379,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<StringListResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new StringListResponse()));
+                .Returns(Task.FromResult(new StringListResponse(new List<string> {"test"})));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1399,7 +1400,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1420,7 +1421,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1441,7 +1442,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1462,7 +1463,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1567,7 +1568,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1588,7 +1589,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1609,7 +1610,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1630,7 +1631,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1651,7 +1652,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1672,7 +1673,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1735,7 +1736,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1756,7 +1757,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1777,7 +1778,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1798,7 +1799,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1819,7 +1820,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1840,7 +1841,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1861,7 +1862,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1882,7 +1883,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1951,7 +1952,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1972,7 +1973,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2041,7 +2042,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2062,7 +2063,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2083,7 +2084,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2104,7 +2105,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2125,7 +2126,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2146,7 +2147,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2167,7 +2168,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2188,7 +2189,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2257,7 +2258,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<StringListResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new StringListResponse());
+                .Returns(new StringListResponse(new List<string> {"test"}));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2278,7 +2279,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<StringListResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new StringListResponse()));
+                .Returns(Task.FromResult(new StringListResponse(new List<string> {"test"})));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2299,7 +2300,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new StringResponse());
+                .Returns(new StringResponse("test"));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2320,7 +2321,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new StringResponse()));
+                .Returns(Task.FromResult(new StringResponse("test")));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2341,7 +2342,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<SensorTypeResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new SensorTypeResponse());
+                .Returns(new SensorTypeResponse(SensorType.Color));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2362,7 +2363,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<SensorTypeResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new SensorTypeResponse()));
+                .Returns(Task.FromResult(new SensorTypeResponse(SensorType.Color)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2383,7 +2384,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2404,7 +2405,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2473,7 +2474,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2494,7 +2495,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2563,7 +2564,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2584,7 +2585,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act

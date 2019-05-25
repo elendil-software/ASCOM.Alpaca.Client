@@ -7,7 +7,7 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class ShutterStateResponse : CommandResponse, IValueResponse<ShutterState>
     {
-        public ShutterStateResponse()
+        private ShutterStateResponse()
         {
         }
 

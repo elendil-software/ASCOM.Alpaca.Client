@@ -8,7 +8,7 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class DriveRatesResponse : CommandResponse, IValueResponse<IList<DriveRate>>
     {
-        public DriveRatesResponse()
+        private DriveRatesResponse()
         {
         }
 

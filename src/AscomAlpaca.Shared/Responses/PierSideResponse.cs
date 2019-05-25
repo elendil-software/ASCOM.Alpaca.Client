@@ -7,7 +7,7 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class PierSideResponse : CommandResponse, IValueResponse<PierSide>
     {
-        public PierSideResponse()
+        private PierSideResponse()
         {
         }
 

@@ -24,7 +24,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -45,7 +45,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -68,7 +68,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -92,7 +92,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -116,7 +116,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -140,7 +140,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -218,7 +218,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new StringResponse());
+                .Returns(new StringResponse("test"));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -242,7 +242,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new StringResponse()));
+                .Returns(Task.FromResult(new StringResponse("test")));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -266,7 +266,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new StringResponse());
+                .Returns(new StringResponse("test"));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -290,7 +290,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new StringResponse()));
+                .Returns(Task.FromResult(new StringResponse("test")));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -368,7 +368,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -392,7 +392,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -470,7 +470,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -494,7 +494,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -518,7 +518,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -542,7 +542,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -566,7 +566,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -590,7 +590,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var switchDevice = new Switch(_deviceConfiguration, commandSenderMock.Object);
             
             //Act

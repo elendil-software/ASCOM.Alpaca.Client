@@ -8,7 +8,7 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class AxisRatesResponse : CommandResponse, IValueResponse<IList<AxisRate>>
     {
-        public AxisRatesResponse()
+        private AxisRatesResponse()
         {
         }
 

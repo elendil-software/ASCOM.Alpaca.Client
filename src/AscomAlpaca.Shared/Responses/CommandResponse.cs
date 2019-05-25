@@ -17,6 +17,7 @@ namespace ES.AscomAlpaca.Responses
 
         public CommandResponse(uint clientTransactionId = 0, uint serverTransactionId = 0)
         {
+            ErrorMessage = "";
             ClientTransactionID = clientTransactionId;
             ServerTransactionID = serverTransactionId;
         }

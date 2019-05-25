@@ -7,7 +7,7 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class AlignmentModeResponse : CommandResponse, IValueResponse<AlignmentMode>
     {
-        public AlignmentModeResponse()
+        private AlignmentModeResponse()
         {
         }
 

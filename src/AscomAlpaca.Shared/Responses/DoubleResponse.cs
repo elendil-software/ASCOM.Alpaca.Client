@@ -5,7 +5,7 @@
     /// </summary>
     public class DoubleResponse : CommandResponse, IValueResponse<double>
     {
-        public DoubleResponse()
+        private DoubleResponse()
         {
         }
 

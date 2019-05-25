@@ -29,7 +29,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<AlignmentModeResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new AlignmentModeResponse());
+                .Returns(new AlignmentModeResponse(AlignmentMode.Polar));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -50,7 +50,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<AlignmentModeResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new AlignmentModeResponse()));
+                .Returns(Task.FromResult(new AlignmentModeResponse(AlignmentMode.Polar)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -71,7 +71,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -92,7 +92,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -113,7 +113,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -134,7 +134,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -155,7 +155,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -176,7 +176,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -197,7 +197,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -218,7 +218,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -239,7 +239,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -260,7 +260,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -281,7 +281,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -302,7 +302,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -323,7 +323,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -344,7 +344,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -365,7 +365,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -386,7 +386,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -407,7 +407,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -428,7 +428,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -449,7 +449,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -470,7 +470,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -491,7 +491,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -512,7 +512,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -533,7 +533,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -554,7 +554,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -575,7 +575,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -596,7 +596,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -617,7 +617,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -638,7 +638,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -659,7 +659,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -680,7 +680,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -702,7 +702,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -726,7 +726,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -750,7 +750,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -774,7 +774,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequests.Add(request))
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -797,7 +797,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -818,7 +818,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -839,7 +839,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -860,7 +860,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -881,7 +881,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -902,7 +902,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -923,7 +923,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -944,7 +944,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1013,7 +1013,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1034,7 +1034,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1103,7 +1103,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<EquatorialCoordinateTypeResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new EquatorialCoordinateTypeResponse());
+                .Returns(new EquatorialCoordinateTypeResponse(EquatorialCoordinateType.J2000));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1124,7 +1124,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<EquatorialCoordinateTypeResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new EquatorialCoordinateTypeResponse()));
+                .Returns(Task.FromResult(new EquatorialCoordinateTypeResponse(EquatorialCoordinateType.J2000)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1145,7 +1145,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1166,7 +1166,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1187,7 +1187,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1208,7 +1208,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1277,7 +1277,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1298,7 +1298,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1367,7 +1367,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1388,7 +1388,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1409,7 +1409,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1430,7 +1430,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1451,7 +1451,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1472,7 +1472,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1541,7 +1541,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<PierSideResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new PierSideResponse());
+                .Returns(new PierSideResponse(PierSide.East));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1562,7 +1562,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<PierSideResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new PierSideResponse()));
+                .Returns(Task.FromResult(new PierSideResponse(PierSide.East)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1631,7 +1631,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1652,7 +1652,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1673,7 +1673,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1694,7 +1694,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1763,7 +1763,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1784,7 +1784,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1853,7 +1853,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1874,7 +1874,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1943,7 +1943,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1964,7 +1964,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1985,7 +1985,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new IntResponse());
+                .Returns(new IntResponse(1));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2006,7 +2006,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<IntResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new IntResponse()));
+                .Returns(Task.FromResult(new IntResponse(1)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2075,7 +2075,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2096,7 +2096,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2165,7 +2165,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DoubleResponse());
+                .Returns(new DoubleResponse(1.0));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2186,7 +2186,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DoubleResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DoubleResponse()));
+                .Returns(Task.FromResult(new DoubleResponse(1.0)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2255,7 +2255,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2276,7 +2276,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2345,7 +2345,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DriveRateResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DriveRateResponse());
+                .Returns(new DriveRateResponse(DriveRate.Sidereal));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2366,7 +2366,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DriveRateResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DriveRateResponse()));
+                .Returns(Task.FromResult(new DriveRateResponse(DriveRate.Sidereal)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2435,7 +2435,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<DriveRatesResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new DriveRatesResponse());
+                .Returns(new DriveRatesResponse(new List<DriveRate>{DriveRate.Sidereal}));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2456,7 +2456,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<DriveRatesResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new DriveRatesResponse()));
+                .Returns(Task.FromResult(new DriveRatesResponse(new List<DriveRate>{DriveRate.Sidereal})));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2611,7 +2611,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<AxisRatesResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new AxisRatesResponse());
+                .Returns(new AxisRatesResponse(new List<AxisRate>{new AxisRate()}));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2635,7 +2635,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<AxisRatesResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new AxisRatesResponse()));
+                .Returns(Task.FromResult(new AxisRatesResponse(new List<AxisRate>{new AxisRate()})));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2659,7 +2659,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new BoolResponse());
+                .Returns(new BoolResponse(false));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2683,7 +2683,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<BoolResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new BoolResponse()));
+                .Returns(Task.FromResult(new BoolResponse(false)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2709,7 +2709,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<PierSideResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new PierSideResponse());
+                .Returns(new PierSideResponse(PierSide.East));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -2736,7 +2736,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<PierSideResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new PierSideResponse()));
+                .Returns(Task.FromResult(new PierSideResponse(PierSide.East)));
             var telescope = new Telescope(_deviceConfiguration, commandSenderMock.Object);
             
             //Act

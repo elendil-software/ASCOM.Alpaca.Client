@@ -7,7 +7,7 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class StringListResponse : CommandResponse, IValueResponse<IList<string>>
     {
-        public StringListResponse()
+        private StringListResponse()
         {
         }
 

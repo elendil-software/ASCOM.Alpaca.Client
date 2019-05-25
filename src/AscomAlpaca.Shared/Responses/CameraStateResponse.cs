@@ -7,7 +7,7 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class CameraStateResponse : CommandResponse, IValueResponse<CameraState>
     {
-        public CameraStateResponse()
+        private CameraStateResponse()
         {
         }
 

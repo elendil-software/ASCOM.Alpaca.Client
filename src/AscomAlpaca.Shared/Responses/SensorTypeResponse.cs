@@ -7,7 +7,7 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class SensorTypeResponse : CommandResponse, IValueResponse<SensorType>
     {
-        public SensorTypeResponse()
+        private SensorTypeResponse()
         {
         }
 

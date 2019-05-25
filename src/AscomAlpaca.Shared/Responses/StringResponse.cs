@@ -5,7 +5,7 @@
     /// </summary>
     public class StringResponse : CommandResponse, IValueResponse<string>
     {
-        public StringResponse()
+        private StringResponse()
         {
         }
 
