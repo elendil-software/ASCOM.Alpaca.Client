@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using ES.AscomAlpaca.Client.Logging;
 using ES.AscomAlpaca.Exceptions;
 using ES.AscomAlpaca.Responses;
+using Newtonsoft.Json;
 using RestSharp;
 
 namespace ES.AscomAlpaca.Client.Request
@@ -12,6 +13,10 @@ namespace ES.AscomAlpaca.Client.Request
     {
         private readonly ILogger _logger;
         private readonly IRestClientFactory _restClientFactory;
+        private readonly JsonSerializerSettings _jsonSerializerSettings = new JsonSerializerSettings
+        {
+            ContractResolver = new NewtonsoftJsonPrivateResolver()
+        };
 
         public CommandSender()
         {
@@ -37,12 +42,13 @@ namespace ES.AscomAlpaca.Client.Request
             return response;
         }
 
-        public TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(string baseUrl, IRestRequest request) where TASCOMRemoteResponse : IResponse, new()
+        public TASCOMRemoteResponse ExecuteRequest<TASCOMRemoteResponse>(string baseUrl, IRestRequest request) where TASCOMRemoteResponse : IResponse
         {
-            IRestResponse<TASCOMRemoteResponse> response = _restClientFactory.Create(baseUrl).Execute<TASCOMRemoteResponse>(request);
+            IRestResponse response = _restClientFactory.Create(baseUrl).Execute(request);
             ThrowExceptionOnError(response);
-            _logger?.LogDebug("Response : {Response}", response.Content);
-            return response.Data;
+            var data = JsonConvert.DeserializeObject<TASCOMRemoteResponse>(response.Content, _jsonSerializerSettings);
+            _logger?.LogDebug("Response : {Response}", data);
+            return data;
         }
         
         public async Task<IRestResponse> ExecuteRequestAsync(string baseUrl, IRestRequest request)
@@ -53,12 +59,13 @@ namespace ES.AscomAlpaca.Client.Request
             return response;
         }
         
-        public async Task<TASCOMRemoteResponse> ExecuteRequestAsync<TASCOMRemoteResponse>(string baseUrl, IRestRequest request) where TASCOMRemoteResponse : IResponse, new()
+        public async Task<TASCOMRemoteResponse> ExecuteRequestAsync<TASCOMRemoteResponse>(string baseUrl, IRestRequest request) where TASCOMRemoteResponse : IResponse
         {
-            IRestResponse<TASCOMRemoteResponse> response = await _restClientFactory.Create(baseUrl).ExecuteTaskAsync<TASCOMRemoteResponse>(request);
+            IRestResponse response = await _restClientFactory.Create(baseUrl).ExecuteTaskAsync(request);
             ThrowExceptionOnError(response);
-            _logger?.LogDebug("Response : {@Response}", response.Data);
-            return response.Data;
+            var data = JsonConvert.DeserializeObject<TASCOMRemoteResponse>(response.Content, _jsonSerializerSettings);
+            _logger?.LogDebug("Response : {@Response}", data);
+            return data;
         }
 
         private void ThrowExceptionOnError(IRestResponse response)
