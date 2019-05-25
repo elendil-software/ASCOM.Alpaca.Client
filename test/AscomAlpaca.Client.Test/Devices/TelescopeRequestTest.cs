@@ -2384,7 +2384,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             //Arrange
             string commandName = "trackingrate";
             string trackingRateParameterName = "TrackingRate";
-            DriveRate trackingRateParameterValue = DriveRate.DriveSidereal;
+            DriveRate trackingRateParameterValue = DriveRate.Sidereal;
             IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
@@ -2408,7 +2408,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             //Arrange
             string commandName = "trackingrate";
             string trackingRateParameterName = "TrackingRate";
-            DriveRate trackingRateParameterValue = DriveRate.DriveSidereal;
+            DriveRate trackingRateParameterValue = DriveRate.Sidereal;
             IRestRequest sentRequest = null;
             var commandSenderMock = new Mock<ICommandSender>();
             commandSenderMock
