@@ -11,7 +11,7 @@ namespace ES.AscomAlpaca.Devices
         Other = 0,
 
         /// <summary>
-        /// Topocentric coordinates.Coordinates of the object at the current date having allowed for annual aberration,
+        /// Topocentric coordinates of the object at the current date having allowed for annual aberration,
         /// precession and nutation.This is the most common coordinate type for amateur telescopes.
         /// </summary>
         Topocentric = 1,
