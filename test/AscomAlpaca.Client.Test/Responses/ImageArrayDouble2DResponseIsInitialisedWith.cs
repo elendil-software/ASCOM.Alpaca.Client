@@ -1,4 +1,3 @@
-using ES.AscomAlpaca.Client.Responses;
 using ES.AscomAlpaca.Responses;
 using Xunit;
 

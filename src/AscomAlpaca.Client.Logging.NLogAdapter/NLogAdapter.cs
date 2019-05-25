@@ -1,7 +1,5 @@
 using System;
 using NLog;
-using ILogger = ES.AscomAlpaca.Client.Logging.ILogger;
-using LogLevel = ES.AscomAlpaca.Client.Logging.LogLevel;
 
 namespace ES.AscomAlpaca.Client.Logging
 {

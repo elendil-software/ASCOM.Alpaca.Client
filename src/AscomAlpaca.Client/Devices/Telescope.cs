@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Threading.Tasks;
 using ES.AscomAlpaca.Client.Logging;
 using ES.AscomAlpaca.Client.Request;
-using ES.AscomAlpaca.Client.Responses;
 using ES.AscomAlpaca.Devices;
 using ES.AscomAlpaca.Exceptions;
 using ES.AscomAlpaca.Responses;

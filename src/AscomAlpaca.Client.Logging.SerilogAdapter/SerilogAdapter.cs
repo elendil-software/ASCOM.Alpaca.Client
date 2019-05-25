@@ -1,6 +1,5 @@
 using System;
 using Serilog.Events;
-using LogEvent = ES.AscomAlpaca.Client.Logging.LogEvent;
 
 namespace ES.AscomAlpaca.Client.Logging
 {

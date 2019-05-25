@@ -2,7 +2,6 @@
 using System.Net;
 using System.Threading.Tasks;
 using ES.AscomAlpaca.Client.Logging;
-using ES.AscomAlpaca.Client.Responses;
 using ES.AscomAlpaca.Exceptions;
 using ES.AscomAlpaca.Responses;
 using RestSharp;
