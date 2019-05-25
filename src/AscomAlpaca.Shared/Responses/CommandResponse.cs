@@ -1,4 +1,5 @@
 ﻿
+using System;
 using ES.AscomAlpaca.Exceptions;
 
 namespace ES.AscomAlpaca.Responses
@@ -9,27 +10,51 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class CommandResponse : IResponse
     {
+        public CommandResponse()
+        {
+            ErrorMessage = "";
+        }
+
+        public CommandResponse(uint clientTransactionId = 0, uint serverTransactionId = 0)
+        {
+            ClientTransactionID = clientTransactionId;
+            ServerTransactionID = serverTransactionId;
+        }
+
+        public CommandResponse(int errorNumber, string errorMessage, uint clientTransactionId = 0, uint serverTransactionId = 0)
+        {
+            if (errorNumber == 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(errorNumber), "Must be different from zero");
+            }
+            
+            ErrorNumber = errorNumber;
+            ErrorMessage = errorMessage ?? "";
+            ClientTransactionID = clientTransactionId;
+            ServerTransactionID = serverTransactionId;
+        }
+
         /// <summary>
         /// Client's transaction ID (0 to 4294967295), as supplied by the client in the command request.
         /// </summary>
-        public uint ClientTransactionID { get; set; }
+        public uint ClientTransactionID { get; private set; }
 
         /// <summary>
         /// Server's transaction ID (0 to 4294967295), should be unique for each client transaction so that log messages on the client can be associated with logs on the device.
         /// </summary>
-        public uint ServerTransactionID { get; set; }
+        public uint ServerTransactionID { get; private set; }
 
         /// <summary>
         /// Zero for a successful transaction, or a non-zero integer(-2147483648 to 2147483647) if the device encountered an issue.Devices must use ASCOM reserved error
         /// numbers whenever appropriate so that clients can take informed actions. E.g.returning 0x401 (1025) to indicate that an invalid value was received.
         /// </summary>
         /// <seealso cref="ErrorCodes"/>
-        public int ErrorNumber { get; set; }
+        public int ErrorNumber { get; private set; }
 
         /// <summary>
         /// Empty string for a successful transaction, or a message describing the issue that was encountered. If an error message is returned,
         /// a non zero <see cref="ErrorNumber"/> must also be returned.
         /// </summary>
-        public string ErrorMessage { get; set; } = "";
+        public string ErrorMessage { get; private set; }
     }
 }

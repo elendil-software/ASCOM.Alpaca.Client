@@ -11,24 +11,24 @@ namespace ES.AscomAlpaca.Responses
         /// <summary>
         /// Client's transaction ID (0 to 4294967295), as supplied by the client in the command request.
         /// </summary>
-        uint ClientTransactionID { get; set; }
+        uint ClientTransactionID { get; }
 
         /// <summary>
         /// Server's transaction ID (0 to 4294967295), should be unique for each client transaction so that log messages on the client can be associated with logs on the device.
         /// </summary>
-        uint ServerTransactionID { get; set; }
+        uint ServerTransactionID { get; }
 
         /// <summary>
         /// Zero for a successful transaction, or a non-zero integer(-2147483648 to 2147483647) if the device encountered an issue.Devices must use ASCOM reserved error
         /// numbers whenever appropriate so that clients can take informed actions. E.g.returning 0x401 (1025) to indicate that an invalid value was received.
         /// </summary>
         /// <seealso cref="ErrorCodes"/>
-        int ErrorNumber { get; set; }
+        int ErrorNumber { get; }
 
         /// <summary>
         /// Empty string for a successful transaction, or a message describing the issue that was encountered. If an error message is returned,
         /// a non zero <see cref="ErrorNumber"/> must also be returned.
         /// </summary>
-        string ErrorMessage { get; set; }
+        string ErrorMessage { get; }
     }
 }

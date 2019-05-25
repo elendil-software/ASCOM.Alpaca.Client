@@ -8,9 +8,23 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class DriveRatesResponse : CommandResponse, IValueResponse<IList<DriveRate>>
     {
+        public DriveRatesResponse()
+        {
+        }
+
+        public DriveRatesResponse(IList<DriveRate> value, uint clientTransactionId = 0, uint serverTransactionId = 0) : base(clientTransactionId, serverTransactionId)
+        {
+            Value = value ?? new List<DriveRate>();
+        }
+
+        public DriveRatesResponse(int errorNumber, string errorMessage, uint clientTransactionId = 0, uint serverTransactionId = 0) : 
+            base(errorNumber, errorMessage, clientTransactionId, serverTransactionId)
+        {
+        }
+        
         /// <summary>
         /// Drive rate collection returned by the device
         /// </summary>
-        public IList<DriveRate> Value { get; set; }
+        public IList<DriveRate> Value { get; private set; }
     }
 }

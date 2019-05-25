@@ -5,10 +5,24 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class ImageArrayShort3DResponse : CommandResponse, IImageResponse<short[,,]>
     {
+        public ImageArrayShort3DResponse()
+        {
+        }
+
+        public ImageArrayShort3DResponse(short[,,] value, uint clientTransactionId = 0, uint serverTransactionId = 0) : base(clientTransactionId, serverTransactionId)
+        {
+            Value = value ?? new short[0,0,0];
+        }
+
+        public ImageArrayShort3DResponse(int errorNumber, string errorMessage, uint clientTransactionId = 0, uint serverTransactionId = 0) : 
+            base(errorNumber, errorMessage, clientTransactionId, serverTransactionId)
+        {
+        }
+        
         /// <summary>
         ///  3D image array of short (int16) values
         /// </summary>
-        public short[,,] Value { get; set; }
+        public short[,,] Value { get; private set; }
 
         /// <summary>
         /// Image array type (int16)

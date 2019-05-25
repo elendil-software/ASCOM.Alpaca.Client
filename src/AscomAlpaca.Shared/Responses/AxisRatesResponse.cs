@@ -8,9 +8,23 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class AxisRatesResponse : CommandResponse, IValueResponse<IList<AxisRate>>
     {
+        public AxisRatesResponse()
+        {
+        }
+
+        public AxisRatesResponse(IList<AxisRate> value, uint clientTransactionId = 0, uint serverTransactionId = 0) : base(clientTransactionId, serverTransactionId)
+        {
+            Value = value ?? new List<AxisRate>();
+        }
+
+        public AxisRatesResponse(int errorNumber, string errorMessage, uint clientTransactionId = 0, uint serverTransactionId = 0) : 
+            base(errorNumber, errorMessage, clientTransactionId, serverTransactionId)
+        {
+        }
+        
         /// <summary>
         /// Axis rate collection returned by the device
         /// </summary>
-        public IList<AxisRate> Value { get; set; }
+        public IList<AxisRate> Value  { get; private set; }
     }
 }

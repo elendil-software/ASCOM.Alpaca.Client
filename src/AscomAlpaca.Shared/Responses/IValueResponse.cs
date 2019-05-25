@@ -8,6 +8,6 @@
         /// <summary>
         /// The value of the response
         /// </summary>
-        T Value { get; set; }
+        T Value { get; }
     }
 }

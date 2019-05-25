@@ -5,6 +5,20 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class ImageArrayDouble2DResponse : CommandResponse, IImageResponse<double[,]>
     {
+        public ImageArrayDouble2DResponse()
+        {
+        }
+
+        public ImageArrayDouble2DResponse(double[,] value, uint clientTransactionId = 0, uint serverTransactionId = 0) : base(clientTransactionId, serverTransactionId)
+        {
+            Value = value ?? new double[0,0];
+        }
+
+        public ImageArrayDouble2DResponse(int errorNumber, string errorMessage, uint clientTransactionId = 0, uint serverTransactionId = 0) : 
+            base(errorNumber, errorMessage, clientTransactionId, serverTransactionId)
+        {
+        }
+        
         /// <summary>
         /// 2D image array of double values
         /// </summary>

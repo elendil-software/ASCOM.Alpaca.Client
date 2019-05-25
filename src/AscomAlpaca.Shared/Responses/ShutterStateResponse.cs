@@ -7,6 +7,20 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class ShutterStateResponse : CommandResponse, IValueResponse<ShutterState>
     {
+        public ShutterStateResponse()
+        {
+        }
+
+        public ShutterStateResponse(ShutterState value, uint clientTransactionId = 0, uint serverTransactionId = 0) : base(clientTransactionId, serverTransactionId)
+        {
+            Value = value;
+        }
+
+        public ShutterStateResponse(int errorNumber, string errorMessage, uint clientTransactionId = 0, uint serverTransactionId = 0) : 
+            base(errorNumber, errorMessage, clientTransactionId, serverTransactionId)
+        {
+        }
+        
         /// <summary>
         /// Shutter state returned by the device
         /// </summary>

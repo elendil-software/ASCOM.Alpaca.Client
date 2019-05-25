@@ -1694,7 +1694,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequest<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(new StringResponse { Value = "2019-04-26T16:02:33" });
+                .Returns(new StringResponse("2019-04-26T16:02:33"));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
@@ -1715,7 +1715,7 @@ namespace ES.AscomAlpaca.Client.Test.Devices
             commandSenderMock
                 .Setup(x => x.ExecuteRequestAsync<StringResponse>(It.IsAny<string>(), It.IsAny<RestRequest>()))
                 .Callback((string baseUrl, IRestRequest request) => sentRequest = request)
-                .Returns(Task.FromResult(new StringResponse { Value = "2019-04-26T16:02:33" }));
+                .Returns(Task.FromResult(new StringResponse("2019-04-26T16:02:33")));
             var camera = new Camera(_deviceConfiguration, commandSenderMock.Object);
             
             //Act
