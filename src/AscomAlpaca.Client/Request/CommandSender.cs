@@ -42,9 +42,7 @@ namespace ES.AscomAlpaca.Client.Request
         {
             IRestResponse response = _restClientFactory.Create(baseUrl).Execute(request);
             ThrowExceptionOnError(response);
-            var data = _alpacaObjectDeserializer.DeserializeObject<TASCOMRemoteResponse>(response.Content);
-            _logger?.LogDebug("Response : {Response}", data);
-            return data;
+            return DeserializeResponse<TASCOMRemoteResponse>(response);
         }
         
         public async Task<IRestResponse> ExecuteRequestAsync(string baseUrl, IRestRequest request)
@@ -59,6 +57,11 @@ namespace ES.AscomAlpaca.Client.Request
         {
             IRestResponse response = await _restClientFactory.Create(baseUrl).ExecuteTaskAsync(request);
             ThrowExceptionOnError(response);
+            return DeserializeResponse<TASCOMRemoteResponse>(response);
+        }
+
+        private TASCOMRemoteResponse DeserializeResponse<TASCOMRemoteResponse>(IRestResponse response) where TASCOMRemoteResponse : IResponse
+        {
             var data = _alpacaObjectDeserializer.DeserializeObject<TASCOMRemoteResponse>(response.Content);
             _logger?.LogDebug("Response : {@Response}", data);
             return data;
