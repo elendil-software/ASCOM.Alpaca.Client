@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using ES.AscomAlpaca.Client.Logging;
 using ES.AscomAlpaca.Exceptions;
 using ES.AscomAlpaca.Responses;
-using Newtonsoft.Json;
 using RestSharp;
 
 namespace ES.AscomAlpaca.Client.Request
@@ -13,11 +12,8 @@ namespace ES.AscomAlpaca.Client.Request
     {
         private readonly ILogger _logger;
         private readonly IRestClientFactory _restClientFactory;
-        private readonly JsonSerializerSettings _jsonSerializerSettings = new JsonSerializerSettings
-        {
-            ContractResolver = new NewtonsoftJsonPrivateResolver()
-        };
-
+        private readonly AlpacaObjectDeserializer _alpacaObjectDeserializer = new AlpacaObjectDeserializer();
+        
         public CommandSender()
         {
             _restClientFactory = new RestClientFactory();
@@ -46,7 +42,7 @@ namespace ES.AscomAlpaca.Client.Request
         {
             IRestResponse response = _restClientFactory.Create(baseUrl).Execute(request);
             ThrowExceptionOnError(response);
-            var data = JsonConvert.DeserializeObject<TASCOMRemoteResponse>(response.Content, _jsonSerializerSettings);
+            var data = _alpacaObjectDeserializer.DeserializeObject<TASCOMRemoteResponse>(response.Content);
             _logger?.LogDebug("Response : {Response}", data);
             return data;
         }
@@ -63,7 +59,7 @@ namespace ES.AscomAlpaca.Client.Request
         {
             IRestResponse response = await _restClientFactory.Create(baseUrl).ExecuteTaskAsync(request);
             ThrowExceptionOnError(response);
-            var data = JsonConvert.DeserializeObject<TASCOMRemoteResponse>(response.Content, _jsonSerializerSettings);
+            var data = _alpacaObjectDeserializer.DeserializeObject<TASCOMRemoteResponse>(response.Content);
             _logger?.LogDebug("Response : {@Response}", data);
             return data;
         }
