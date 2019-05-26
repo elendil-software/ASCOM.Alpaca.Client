@@ -2,9 +2,9 @@ using System;
 using ES.AscomAlpaca.Exceptions;
 using Xunit;
 
-namespace ES.AscomAlpaca.Client.Test.Exceptions
+namespace ES.AscomAlpaca.Shared.Test.Exceptions
 {
-    public class AlpacaServerExceptionContainsValidErrorCode
+    public class AlpacaClientExceptionContainsValidErrorCode
     {
         private readonly int _expectedErrorCode = 0x500;
         private readonly int _expectedUnspecifiedError = ErrorCodes.UnspecifiedError;
@@ -12,7 +12,7 @@ namespace ES.AscomAlpaca.Client.Test.Exceptions
         [Fact]
         public void WhenInitializedWith_EmptyConstructor()
         {
-            var exception = new AlpacaServerException();
+            var exception = new AlpacaClientException();
 
             Assert.Equal(_expectedUnspecifiedError, exception.AlpacaErrorCode);
         }
@@ -20,7 +20,7 @@ namespace ES.AscomAlpaca.Client.Test.Exceptions
         [Fact]
         public void WhenInitializedWith_MessageConstructor()
         {
-            var exception = new AlpacaServerException("message");
+            var exception = new AlpacaClientException("message");
 
             Assert.Equal(_expectedUnspecifiedError, exception.AlpacaErrorCode);
         }
@@ -28,7 +28,7 @@ namespace ES.AscomAlpaca.Client.Test.Exceptions
         [Fact]
         public void WhenInitializedWith_MessageAndInnerExceptionConstructor()
         {
-            var exception = new AlpacaServerException("message", new Exception());
+            var exception = new AlpacaClientException("message", new Exception());
 
             Assert.Equal(_expectedUnspecifiedError, exception.AlpacaErrorCode);
         }
@@ -36,7 +36,7 @@ namespace ES.AscomAlpaca.Client.Test.Exceptions
         [Fact]
         public void WhenInitializedWith_ErrorCodeConstructor()
         {
-            var exception = new AlpacaServerException(_expectedErrorCode);
+            var exception = new AlpacaClientException(_expectedErrorCode);
 
             Assert.Equal(_expectedErrorCode, exception.AlpacaErrorCode);
         }
@@ -44,7 +44,7 @@ namespace ES.AscomAlpaca.Client.Test.Exceptions
         [Fact]
         public void WhenInitializedWith_MessageAndErrorCodeConstructor()
         {
-            var exception = new AlpacaServerException("message", _expectedErrorCode);
+            var exception = new AlpacaClientException("message", _expectedErrorCode);
 
             Assert.Equal(_expectedErrorCode, exception.AlpacaErrorCode);
         }
@@ -52,7 +52,7 @@ namespace ES.AscomAlpaca.Client.Test.Exceptions
         [Fact]
         public void WhenInitializedWith_MessageAndErrorCodeAndInnerExceptionConstructor()
         {
-            var exception = new AlpacaServerException("message", _expectedErrorCode, new Exception());
+            var exception = new AlpacaClientException("message", _expectedErrorCode, new Exception());
 
             Assert.Equal(_expectedErrorCode, exception.AlpacaErrorCode);
         }

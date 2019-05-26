@@ -2,16 +2,16 @@ using System;
 using ES.AscomAlpaca.Exceptions;
 using Xunit;
 
-namespace ES.AscomAlpaca.Client.Test.Exceptions
+namespace ES.AscomAlpaca.Shared.Test.Exceptions
 {
-    public class AlpacaNotConnectedExceptionContainsValidErrorCode
+    public class AlpacaSlavedExceptionContainsValidErrorCode
     {
-        private readonly int _expectedErrorCode = ErrorCodes.NotConnected;
+        private readonly int _expectedErrorCode = ErrorCodes.InvalidWhileSlaved;
         
         [Fact]
         public void WhenInitializedWith_EmptyConstructor()
         {
-            var exception = new AlpacaNotConnectedException();
+            var exception = new AlpacaSlavedException();
 
             Assert.Equal(_expectedErrorCode, exception.AlpacaErrorCode);
         }
@@ -19,7 +19,7 @@ namespace ES.AscomAlpaca.Client.Test.Exceptions
         [Fact]
         public void WhenInitializedWith_MessageConstructor()
         {
-            var exception = new AlpacaNotConnectedException("message");
+            var exception = new AlpacaSlavedException("message");
 
             Assert.Equal(_expectedErrorCode, exception.AlpacaErrorCode);
         }
@@ -27,7 +27,7 @@ namespace ES.AscomAlpaca.Client.Test.Exceptions
         [Fact]
         public void WhenInitializedWith_MessageAndInnerExceptionConstructor()
         {
-            var exception = new AlpacaNotConnectedException("message", new Exception());
+            var exception = new AlpacaSlavedException("message", new Exception());
 
             Assert.Equal(_expectedErrorCode, exception.AlpacaErrorCode);
         }

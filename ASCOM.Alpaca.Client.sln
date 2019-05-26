@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{5C3AF67C-1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AscomAlpaca.Shared", "src\AscomAlpaca.Shared\AscomAlpaca.Shared.csproj", "{F84D4EB8-CF1B-42BA-9CB0-1898A4212E64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AscomAlpaca.Shared.Test", "test\AscomAlpaca.Shared.Test\AscomAlpaca.Shared.Test.csproj", "{EF629041-3F07-4218-9808-0424181A998D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{F84D4EB8-CF1B-42BA-9CB0-1898A4212E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F84D4EB8-CF1B-42BA-9CB0-1898A4212E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F84D4EB8-CF1B-42BA-9CB0-1898A4212E64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF629041-3F07-4218-9808-0424181A998D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF629041-3F07-4218-9808-0424181A998D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF629041-3F07-4218-9808-0424181A998D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF629041-3F07-4218-9808-0424181A998D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{CCDD330A-D0AB-4F08-8970-936FCCC069BE} = {5C3AF67C-1A35-4E0A-99DD-10CB8A79B93C}
 		{ED5A8944-465A-4FF8-B8F8-28063C5D43D8} = {5C3AF67C-1A35-4E0A-99DD-10CB8A79B93C}
 		{88ECB311-08E3-432C-A17C-5BA333F120CF} = {336B6505-A982-4660-972D-27D36F06B501}
+		{EF629041-3F07-4218-9808-0424181A998D} = {336B6505-A982-4660-972D-27D36F06B501}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E9D3954-7498-42D1-94D7-9F7C99A98C26}

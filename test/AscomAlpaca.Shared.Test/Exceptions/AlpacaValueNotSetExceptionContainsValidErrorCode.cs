@@ -2,7 +2,7 @@ using System;
 using ES.AscomAlpaca.Exceptions;
 using Xunit;
 
-namespace ES.AscomAlpaca.Client.Test.Exceptions
+namespace ES.AscomAlpaca.Shared.Test.Exceptions
 {
     public class AlpacaValueNotSetExceptionContainsValidErrorCode
     {

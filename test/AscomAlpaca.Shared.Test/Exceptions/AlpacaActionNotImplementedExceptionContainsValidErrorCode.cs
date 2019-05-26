@@ -2,16 +2,16 @@ using System;
 using ES.AscomAlpaca.Exceptions;
 using Xunit;
 
-namespace ES.AscomAlpaca.Client.Test.Exceptions
+namespace ES.AscomAlpaca.Shared.Test.Exceptions
 {
-    public class AlpacaParkedExceptionContainsValidErrorCode
+    public class AlpacaActionNotImplementedExceptionContainsValidErrorCode
     {
-        private readonly int _expectedErrorCode = ErrorCodes.InvalidWhileParked;
+        private readonly int _expectedErrorCode = ErrorCodes.ActionNotImplemented;
         
         [Fact]
         public void WhenInitializedWith_EmptyConstructor()
         {
-            var exception = new AlpacaParkedException();
+            var exception = new AlpacaActionNotImplementedException();
 
             Assert.Equal(_expectedErrorCode, exception.AlpacaErrorCode);
         }
@@ -19,7 +19,7 @@ namespace ES.AscomAlpaca.Client.Test.Exceptions
         [Fact]
         public void WhenInitializedWith_MessageConstructor()
         {
-            var exception = new AlpacaParkedException("message");
+            var exception = new AlpacaActionNotImplementedException("message");
 
             Assert.Equal(_expectedErrorCode, exception.AlpacaErrorCode);
         }
@@ -27,7 +27,7 @@ namespace ES.AscomAlpaca.Client.Test.Exceptions
         [Fact]
         public void WhenInitializedWith_MessageAndInnerExceptionConstructor()
         {
-            var exception = new AlpacaParkedException("message", new Exception());
+            var exception = new AlpacaActionNotImplementedException("message", new Exception());
 
             Assert.Equal(_expectedErrorCode, exception.AlpacaErrorCode);
         }

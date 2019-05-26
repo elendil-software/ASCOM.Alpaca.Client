@@ -1,7 +1,7 @@
 using ES.AscomAlpaca.Responses;
 using Xunit;
 
-namespace ES.AscomAlpaca.Client.Test.Responses
+namespace ES.AscomAlpaca.Shared.Test.Responses
 {
     public class ImageArrayDouble3DResponseIsInitialisedWith
     {
