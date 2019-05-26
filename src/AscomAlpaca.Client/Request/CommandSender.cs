@@ -72,12 +72,12 @@ namespace ES.AscomAlpaca.Client.Request
             if (response.ResponseStatus != ResponseStatus.Completed && response.StatusCode == 0)
             {
                 _logger?.LogError("Request not completed, response status : {ResponseStatus}, error message : {ErrorMessage}", response.ResponseStatus, response.ErrorMessage);
-                throw new AlpacaClientException(response.ErrorMessage, response.ErrorException);
+                throw new AlpacaException(response.ErrorMessage, response.ErrorException);
             }
             else if (response.StatusCode != HttpStatusCode.OK)
             {
                 _logger?.LogError("{ErrorName} ({ErrorCode}), error message : {ErrorMessage}", response.StatusCode, (int)response.StatusCode, response.Content);
-                throw new AlpacaServerException(response.Content);
+                throw new AlpacaException(response.Content);
             }
         }
     }
