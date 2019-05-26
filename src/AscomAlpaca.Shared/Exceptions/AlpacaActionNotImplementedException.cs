@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace ES.AscomAlpaca.Exceptions
 {
     [Serializable]
-    public class AlpacaActionNotImplementedException : AlpacaDeviceException
+    public class AlpacaActionNotImplementedException : AlpacaNotImplementedException
     {
         public AlpacaActionNotImplementedException() : base(ErrorCodes.ActionNotImplemented)
         {
