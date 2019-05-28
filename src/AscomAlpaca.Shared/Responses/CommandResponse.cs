@@ -10,7 +10,7 @@ namespace ES.AscomAlpaca.Responses
     /// </summary>
     public class CommandResponse : IResponse
     {
-        public CommandResponse()
+        private CommandResponse()
         {
             ErrorMessage = "";
         }
