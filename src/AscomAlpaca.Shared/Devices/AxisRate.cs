@@ -1,7 +1,8 @@
 namespace ES.AscomAlpaca.Devices
 {
     /// <summary>
-    /// Describe a rate at which the telescope may be moved about the specified axis by the MoveAxis(TelescopeAxes, Double) method.
+    /// Describe a rate at which the telescope may be moved about the specified axis by the
+    /// <see cref="!:https://ascom-standards.org/api/#/Telescope%20Specific%20Methods/put_telescope__device_number__moveaxis">MoveAxis</see> command.
     /// </summary>
     public class AxisRate
     {

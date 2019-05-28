@@ -2,10 +2,8 @@ namespace ES.AscomAlpaca.Devices
 {
     /// <summary>
     /// The pointing state of the mount.
-    ///
-    /// ASCOM has adopted the 
-    /// convention that the Normal pointing state will be the state where the mount is on the East side of the pier, looking West with the counterweights below 
-    /// the optical assembly.
+    /// ASCOM has adopted the convention that the Normal pointing state will be the state where the mount is on the East side of the pier,
+    /// looking West with the counterweights below the optical assembly.
     /// </summary>
     public enum PierSide
     {

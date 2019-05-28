@@ -5,29 +5,29 @@ namespace ES.AscomAlpaca.Devices
     /// </summary>
     public enum SensorType
     {
-        ///<summary>
-        ///Camera produces monochrome array with no Bayer encoding
-        ///</summary>
+        /// <summary>
+        /// Camera produces monochrome array with no Bayer encoding
+        /// </summary>
         Monochrome = 0,
-        ///<summary>
-        ///Camera produces color image directly, requiring not Bayer decoding
-        ///</summary>
+        /// <summary>
+        /// Camera produces color image directly, requiring not Bayer decoding
+        /// </summary>
         Color = 1,
-        ///<summary>
-        ///Camera produces RGGB encoded Bayer array images
-        ///</summary>
+        /// <summary>
+        /// Camera produces RGGB encoded Bayer array images
+        /// </summary>
         RGGB = 2,
-        ///<summary>
-        ///Camera produces CMYG encoded Bayer array images
-        ///</summary>
+        /// <summary>
+        /// Camera produces CMYG encoded Bayer array images
+        /// </summary>
         CMYG = 3,
-        ///<summary>
-        ///Camera produces CMYG2 encoded Bayer array images
-        ///</summary>
+        /// <summary>
+        /// Camera produces CMYG2 encoded Bayer array images
+        /// </summary>
         CMYG2 = 4,
-        ///<summary>
-        ///Camera produces Kodak TRUESENSE Bayer LRGB array images
-        ///</summary>
+        /// <summary>
+        /// Camera produces Kodak TRUESENSE Bayer LRGB array images
+        /// </summary>
         LRGB = 5,
     }
 }
