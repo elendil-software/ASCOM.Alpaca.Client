@@ -12,8 +12,9 @@
         ImageArrayType ArrayType { get; }
 
         /// <summary>
-        /// The array's rank, will be 2 (single plane image (monochrome)) or 3 (multi-plane image).
+        /// The array's rank. It defines the image type (monochrome or colour).
         /// </summary>
-        int Rank { get; }
+        /// <seealso cref="ImageArrayRank"/>
+        ImageArrayRank Rank { get; }
     }
 }

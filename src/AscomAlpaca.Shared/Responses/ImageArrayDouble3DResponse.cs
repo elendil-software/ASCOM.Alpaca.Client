@@ -25,13 +25,15 @@ namespace ES.AscomAlpaca.Responses
         public double[,,] Value { get; private set; }
 
         /// <summary>
-        /// Image array type (double)
+        /// Image array type
+        /// For this object it will always be <see cref="ImageArrayType.Double"/> 
         /// </summary>
         public ImageArrayType ArrayType { get; } = ImageArrayType.Double;
 
         /// <summary>
-        /// The array's rank, will be 3 (multi plane image (colour)).
+        /// The array's rank
+        /// For this object it will always be <see cref="ImageArrayRank.MultiPlane"/> 
         /// </summary>
-        public int Rank { get; } = 3;
+        public ImageArrayRank Rank { get; } = ImageArrayRank.MultiPlane;
     }
 }

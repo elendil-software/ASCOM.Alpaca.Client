@@ -20,18 +20,20 @@ namespace ES.AscomAlpaca.Responses
         }
         
         /// <summary>
-        ///  3D image array of short (int16) values
+        /// 3D image array of short (int16) values
         /// </summary>
         public short[,,] Value { get; private set; }
 
         /// <summary>
-        /// Image array type (int16)
+        /// Image array type.
+        /// For this object it will always be <see cref="ImageArrayType.Short"/> 
         /// </summary>
         public ImageArrayType ArrayType { get; } = ImageArrayType.Short;
 
         /// <summary>
-        /// The array's rank, will be 3 (multi plane image (colour)).
+        /// The array's rank
+        /// For this object it will always be <see cref="ImageArrayRank.SinglePlane"/> 
         /// </summary>
-        public int Rank { get; } = 3;
+        public ImageArrayRank Rank { get; } = ImageArrayRank.MultiPlane;
     }
 }

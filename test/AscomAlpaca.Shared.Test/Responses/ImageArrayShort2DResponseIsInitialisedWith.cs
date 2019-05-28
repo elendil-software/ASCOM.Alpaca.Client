@@ -10,7 +10,7 @@ namespace ES.AscomAlpaca.Shared.Test.Responses
         {
             var response = new ImageArrayShort2DResponse(new short[1,1]);
             
-            Assert.Equal(2, response.Rank);
+            Assert.Equal(ImageArrayRank.SinglePlane, response.Rank);
             Assert.Equal(ImageArrayType.Short, response.ArrayType);
         }
     }

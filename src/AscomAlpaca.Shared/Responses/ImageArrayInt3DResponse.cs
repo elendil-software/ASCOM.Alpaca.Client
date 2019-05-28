@@ -25,13 +25,15 @@ namespace ES.AscomAlpaca.Responses
         public int[,,] Value { get; private set; }
 
         /// <summary>
-        /// Image array type (int32)
+        /// Image array type
+        /// For this object it will always be <see cref="ImageArrayType.Int"/> 
         /// </summary>
         public ImageArrayType ArrayType { get; } = ImageArrayType.Int;
 
         /// <summary>
-        /// The array's rank, will be 3 (multi plane image (colour)).
+        /// The array's rank
+        /// For this object it will always be <see cref="ImageArrayRank.MultiPlane"/> 
         /// </summary>
-        public int Rank { get; } = 3;
+        public ImageArrayRank Rank { get; } = ImageArrayRank.MultiPlane;
     }
 }

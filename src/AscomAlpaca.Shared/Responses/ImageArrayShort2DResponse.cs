@@ -25,13 +25,15 @@ namespace ES.AscomAlpaca.Responses
         public short[,] Value { get; set; }
 
         /// <summary>
-        /// 
+        /// Image array type.
+        /// For this object it will always be <see cref="ImageArrayType.Short"/> 
         /// </summary>
         public ImageArrayType ArrayType { get; } = ImageArrayType.Short;
 
         /// <summary>
-        /// 
+        /// The array's rank
+        /// For this object it will always be <see cref="ImageArrayRank.SinglePlane"/> 
         /// </summary>
-        public int Rank { get; } = 2;
+        public ImageArrayRank Rank { get; } = ImageArrayRank.SinglePlane;
     }
 }
