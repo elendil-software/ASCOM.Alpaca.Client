@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace ES.AscomAlpaca.Exceptions
 {
     [Serializable]
-    public class AlpacaParkedException : AlpacaDeviceException
+    public class AlpacaParkedException : AlpacaInvalidOperationException
     {
         public AlpacaParkedException() : base(ErrorCodes.InvalidWhileParked)
         {
