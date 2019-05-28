@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace ES.AscomAlpaca.Exceptions
 {
     [Serializable]
-    public class AlpacaNotConnectedException : AlpacaDeviceException
+    public class AlpacaNotConnectedException : AlpacaInvalidOperationException
     {
         public AlpacaNotConnectedException() : base(ErrorCodes.NotConnected)
         {
