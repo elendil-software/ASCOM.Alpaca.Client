@@ -1,5 +1,8 @@
 namespace ES.AscomAlpaca.Responses
 {
+    /// <summary>
+    /// Represents the number of planes of an image
+    /// </summary>
     public enum ImageArrayRank
     {
         /// <summary>
