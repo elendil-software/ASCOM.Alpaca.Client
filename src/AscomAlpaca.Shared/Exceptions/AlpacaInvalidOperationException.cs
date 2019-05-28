@@ -9,12 +9,21 @@ namespace ES.AscomAlpaca.Exceptions
         public AlpacaInvalidOperationException() : base(ErrorCodes.InvalidOperation)
         {
         }
+        protected AlpacaInvalidOperationException(int alpacaErrorCode) : base(alpacaErrorCode)
+        {
+        }
 
         public AlpacaInvalidOperationException(string message) : base(message, ErrorCodes.InvalidOperation)
         {
         }
 
+        protected AlpacaInvalidOperationException(string message, int alpacaErrorCode) : base(message, alpacaErrorCode)
+        {
+        }
         public AlpacaInvalidOperationException(string message, Exception innerException) : base(message, ErrorCodes.InvalidOperation, innerException)
+        {
+        }
+        protected AlpacaInvalidOperationException(string message, int alpacaErrorCode, Exception innerException) : base(message, alpacaErrorCode, innerException)
         {
         }
 
