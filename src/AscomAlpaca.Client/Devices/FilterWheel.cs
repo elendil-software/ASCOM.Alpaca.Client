@@ -36,19 +36,27 @@ namespace ES.AscomAlpaca.Client.Devices
         
         protected override DeviceType DeviceType { get; } = DeviceType.FilterWheel;
 
+        /// <inheritdoc/>
         public IList<int> GetFocusOffsets() => ExecuteRequest<IList<int>, IntListResponse>(BuildGetFocusOffsetRequest);
+        /// <inheritdoc/>
         public async Task<IList<int>> GetFocusOffsetsAsync() => await ExecuteRequestAsync<IList<int>, IntListResponse>(BuildGetFocusOffsetRequest);
         private IRestRequest BuildGetFocusOffsetRequest() => RequestBuilder.BuildRestRequest(FilterWheelCommand.FocusOffsets, Method.GET, GetClientTransactionId());
 
+        /// <inheritdoc/>
         public IList<string> GetNames() => ExecuteRequest<IList<string>, StringListResponse>(BuildGetNamesRequest);
+        /// <inheritdoc/>
         public async Task<IList<string>> GetNamesAsync() => await ExecuteRequestAsync<IList<string>, StringListResponse>(BuildGetNamesRequest);
         private IRestRequest BuildGetNamesRequest() => RequestBuilder.BuildRestRequest(FilterWheelCommand.Names, Method.GET, GetClientTransactionId());
 
+        /// <inheritdoc/>
         public int GetPosition() => ExecuteRequest<int, IntResponse>(BuildGetPositionRequest);
+        /// <inheritdoc/>
         public async Task<int> GetPositionAsync() => await ExecuteRequestAsync<int, IntResponse>(BuildGetPositionRequest);
         private IRestRequest BuildGetPositionRequest() => RequestBuilder.BuildRestRequest(FilterWheelCommand.Position, Method.GET, GetClientTransactionId());
 
+        /// <inheritdoc/>
         public void SetPosition(int position) => ExecuteRequest(BuildSetPositionRequest, position);
+        /// <inheritdoc/>
         public async Task SetPositionAsync(int position) => await ExecuteRequestAsync(BuildSetPositionRequest, position);
         private IRestRequest BuildSetPositionRequest(int position)
         {
