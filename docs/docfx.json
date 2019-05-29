@@ -4,13 +4,25 @@
       "src": [
         {
           "files": [
-            "src/**.csproj"
-          ]
+            "src/AscomAlpaca.Client/AscomAlpaca.Client.csproj",
+            "src/AscomAlpaca.Shared/AscomAlpaca.Shared.csproj",
+            "src/AscomAlpaca.Client.Logging.NLogAdapter/AscomAlpaca.Client.Logging.NLogAdapter.csproj",
+            "src/AscomAlpaca.Client.Logging.SerilogAdapter/AscomAlpaca.Client.Logging.SerilogAdapter.csproj"
+          ],
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**",
+            "_site/**"
+          ],
+          "cwd": ".."
         }
       ],
       "dest": "api",
       "disableGitFeatures": false,
-      "disableDefaultFilter": false
+      "disableDefaultFilter": false,
+      "properties": {
+        "TargetFramework": "netstandard2.0"
+      }
     }
   ],
   "build": {
@@ -52,7 +64,8 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default"
+      "default",
+      "templates/material"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
