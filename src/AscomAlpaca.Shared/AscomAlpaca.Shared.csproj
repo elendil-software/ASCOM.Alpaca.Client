@@ -19,6 +19,14 @@
         <RootNamespace>ES.AscomAlpaca</RootNamespace>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\AscomAlpaca.Shared.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\AscomAlpaca.Shared.xml</DocumentationFile>
+    </PropertyGroup>
+
     <ItemGroup>
       <None Include="..\..\LICENSE.md">
         <Pack>True</Pack>

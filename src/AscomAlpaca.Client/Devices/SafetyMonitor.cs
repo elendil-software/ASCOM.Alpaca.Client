@@ -8,18 +8,22 @@ namespace ES.AscomAlpaca.Client.Devices
 {
     public sealed class SafetyMonitor : DeviceBase, ISafetyMonitor
     {
+        /// <inheritdoc/>
         public SafetyMonitor(DeviceConfiguration configuration) : base(configuration)
         {
         }
 
+        /// <inheritdoc/>
         public SafetyMonitor(DeviceConfiguration configuration, ILogger logger) : base(configuration, logger)
         {
         }
 
+        /// <inheritdoc/>
         public SafetyMonitor(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, clientTransactionIdGenerator)
         {
         }
 
+        /// <inheritdoc/>
         public SafetyMonitor(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger) : base(configuration, clientTransactionIdGenerator, logger)
         {
         }
@@ -36,7 +40,9 @@ namespace ES.AscomAlpaca.Client.Devices
 
         protected override DeviceType DeviceType { get; } = DeviceType.SafetyMonitor;
         
+        /// <inheritdoc/>
         public bool IsSafe() => ExecuteRequest<bool, BoolResponse>(BuildIsSafeRequest);
+        /// <inheritdoc/>
         public async Task<bool> IsSafeAsync() => await ExecuteRequestAsync<bool, BoolResponse>(BuildIsSafeRequest);
         private IRestRequest BuildIsSafeRequest() => RequestBuilder.BuildRestRequest(SafetyMonitorCommand.IsSafe, Method.GET, GetClientTransactionId());
     }
