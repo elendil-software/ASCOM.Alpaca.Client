@@ -22,6 +22,14 @@
         <AssemblyName>ES.AscomAlpaca.Client.Logging.SerilogAdapter</AssemblyName>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile></DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile></DocumentationFile>
+    </PropertyGroup>
+
     <ItemGroup>
       <PackageReference Include="Serilog" Version="2.8.0" />
     </ItemGroup>
