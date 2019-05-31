@@ -14,24 +14,44 @@ using RestSharp;
 
 namespace ES.AscomAlpaca.Client.Devices
 {
+    /// <summary>
+    /// Client implementation of an ASCOM Alpaca Camera device.
+    /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Camera</para>
+    /// </summary>
     public sealed class Camera : DeviceBase, ICamera
     {
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Camera" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
         public Camera(DeviceConfiguration configuration) : base(configuration)
         {
         }
-
-        /// <inheritdoc/>
+        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Camera" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="logger">Logger, can be useful for debugging</param>
         public Camera(DeviceConfiguration configuration, ILogger logger) : base(configuration, logger)
         {
         }
-
-        /// <inheritdoc/>
+        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Camera" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="clientTransactionIdGenerator">Client Transaction ID Generator</param>
         public Camera(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, clientTransactionIdGenerator)
         {
         }
-
-        /// <inheritdoc/>
+        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Camera" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="clientTransactionIdGenerator">Client Transaction ID Generator</param>
+        /// <param name="logger">Logger, can be useful for debugging</param>
         public Camera(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger) : base(configuration, clientTransactionIdGenerator, logger)
         {
         }
@@ -46,6 +66,7 @@ namespace ES.AscomAlpaca.Client.Devices
         {
         }
         
+        /// <inheritdoc/>
         protected override DeviceType DeviceType { get; } = DeviceType.Camera;
 
         /// <inheritdoc/>

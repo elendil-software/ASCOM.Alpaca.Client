@@ -11,24 +11,44 @@ using RestSharp;
 
 namespace ES.AscomAlpaca.Client.Devices
 {
+    /// <summary>
+    /// Client implementation of an ASCOM Alpaca Telescope device.
+    /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Telescope</para>
+    /// </summary>
     public sealed class Telescope : DeviceBase, ITelescope
     {
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Telescope" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
         public Telescope(DeviceConfiguration configuration) : base(configuration)
         {
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Telescope" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="logger">Logger, can be useful for debugging</param>
         public Telescope(DeviceConfiguration configuration, ILogger logger) : base(configuration, logger)
         {
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Telescope" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="clientTransactionIdGenerator">Client Transaction ID Generator</param>
         public Telescope(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, clientTransactionIdGenerator)
         {
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Telescope" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="clientTransactionIdGenerator">Client Transaction ID Generator</param>
+        /// <param name="logger">Logger, can be useful for debugging</param>
         public Telescope(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger) : base(configuration, clientTransactionIdGenerator, logger)
         {
         }
@@ -43,6 +63,7 @@ namespace ES.AscomAlpaca.Client.Devices
         {
         }
 
+        /// <inheritdoc/>
         protected override DeviceType DeviceType { get; } = DeviceType.Telescope;
 
         /// <inheritdoc/>

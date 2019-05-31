@@ -5,6 +5,9 @@ using ES.AscomAlpaca.Devices;
 
 namespace ES.AscomAlpaca.Client.Devices
 {
+    /// <summary>
+    /// Defines the capabilities supported by an ASCOM Alpaca Camera device
+    /// </summary>
     public interface ICamera : IDevice
     {
         /// <summary>
@@ -433,11 +436,10 @@ namespace ES.AscomAlpaca.Client.Devices
         /// 
         /// This regular expression accomplishes the etraction into two named groups Type and Rank
         /// 
-        /// ^*"Type":(?<Type>\\d*),"Rank":(?<Rank>\\d*)
+        /// ^*"Type":(?&lt;Type&gt;\\d*),"Rank":(?&lt;Rank&gt;\\d*)
         /// 
         /// which can then be used to select the correct de-serialisation data class.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <returns></returns>
         Array GetImageArray();
         
@@ -459,11 +461,10 @@ namespace ES.AscomAlpaca.Client.Devices
         /// 
         /// This regular expression accomplishes the etraction into two named groups Type and Rank
         /// 
-        /// ^*"Type":(?<Type>\\d*),"Rank":(?<Rank>\\d*)
+        /// ^*"Type":(?&lt;Type&gt;\\d*),"Rank":(?&lt;Rank&gt;\\d*)
         /// 
         /// which can then be used to select the correct de-serialisation data class.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <returns></returns>
         Task<Array> GetImageArrayAsync();
 
@@ -484,11 +485,10 @@ namespace ES.AscomAlpaca.Client.Devices
         /// 
         /// This regular expression accomplishes the extraction into two named groups: Type and Rank:
         /// 
-        /// __`^*"Type":(?<Type>\\d*),"Rank":(?<Rank>\\d*)`__
+        /// __`^*"Type":(?&lt;Type&gt;\\d*),"Rank":(?&lt;Rank&gt;\\d*)`__
         /// 
         /// which can then be used to select the correct deserialisation data class.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <returns></returns>
         Array GetImageArrayVariant();
 
@@ -509,11 +509,10 @@ namespace ES.AscomAlpaca.Client.Devices
         /// 
         /// This regular expression accomplishes the extraction into two named groups: Type and Rank:
         /// 
-        /// __`^*"Type":(?<Type>\\d*),"Rank":(?<Rank>\\d*)`__
+        /// __`^*"Type":(?&lt;Type&gt;\\d*),"Rank":(?&lt;Rank&gt;\\d*)`__
         /// 
         /// which can then be used to select the correct deserialisation data class.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <returns></returns>
         Task<Array> GetImageArrayVariantAsync();
 
@@ -642,13 +641,13 @@ namespace ES.AscomAlpaca.Client.Devices
         /// <summary>
         /// Sets the current subframe width
         /// </summary>
-        /// <param name="numX">Sets the subframe height, if binning is active, value is in binned pixels.</param>
+        /// <param name="numY">Sets the subframe height, if binning is active, value is in binned pixels.</param>
         void SetNumY(int numY);
         
         /// <summary>
         /// Sets the current subframe width
         /// </summary>
-        /// <param name="numX">Sets the subframe height, if binning is active, value is in binned pixels.</param>
+        /// <param name="numY">Sets the subframe height, if binning is active, value is in binned pixels.</param>
         Task SetNumYAsync(int numY);
 
         /// <summary>

@@ -9,24 +9,44 @@ using RestSharp;
 
 namespace ES.AscomAlpaca.Client.Devices
 {
+    /// <summary>
+    /// Client implementation of an ASCOM Alpaca Dome device.
+    /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Dome</para>
+    /// </summary>
     public sealed class Dome : DeviceBase, IDome
     {
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Dome" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
         public Dome(DeviceConfiguration configuration) : base(configuration)
         {
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Dome" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="logger">Logger, can be useful for debugging</param>
         public Dome(DeviceConfiguration configuration, ILogger logger) : base(configuration, logger)
         {
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Dome" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="clientTransactionIdGenerator">Client Transaction ID Generator</param>
         public Dome(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, clientTransactionIdGenerator)
         {
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Dome" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="clientTransactionIdGenerator">Client Transaction ID Generator</param>
+        /// <param name="logger">Logger, can be useful for debugging</param>
         public Dome(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger) : base(configuration, clientTransactionIdGenerator, logger)
         {
         }
@@ -40,6 +60,7 @@ namespace ES.AscomAlpaca.Client.Devices
         {
         }
 
+        /// <inheritdoc/>
         protected override DeviceType DeviceType { get; } = DeviceType.Dome;
 
         /// <inheritdoc/>

@@ -3,6 +3,9 @@ using ES.AscomAlpaca.Devices;
 
 namespace ES.AscomAlpaca.Client.Devices
 {
+    /// <summary>
+    /// Defines the capabilities supported by an ASCOM Alpaca Dome device
+    /// </summary>
     public interface IDome : IDevice
     {
         /// <summary>

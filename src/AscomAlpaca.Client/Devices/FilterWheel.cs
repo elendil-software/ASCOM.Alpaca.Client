@@ -8,20 +8,44 @@ using RestSharp;
 
 namespace ES.AscomAlpaca.Client.Devices
 {
+    /// <summary>
+    /// Client implementation of an ASCOM Alpaca Filter Wheel device.
+    /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Filter Wheel</para>
+    /// </summary>
     public sealed class FilterWheel : DeviceBase, IFilterWheel
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FilterWheel" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
         public FilterWheel(DeviceConfiguration configuration) : base(configuration)
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FilterWheel" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="logger">Logger, can be useful for debugging</param>
         public FilterWheel(DeviceConfiguration configuration, ILogger logger) : base(configuration, logger)
         {
         }
-
+        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FilterWheel" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="clientTransactionIdGenerator">Client Transaction ID Generator</param>
         public FilterWheel(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, clientTransactionIdGenerator)
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FilterWheel" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="clientTransactionIdGenerator">Client Transaction ID Generator</param>
+        /// <param name="logger">Logger, can be useful for debugging</param>
         public FilterWheel(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger) : base(configuration, clientTransactionIdGenerator, logger)
         {
         }
@@ -34,6 +58,7 @@ namespace ES.AscomAlpaca.Client.Devices
         {
         }
         
+        /// <inheritdoc/>
         protected override DeviceType DeviceType { get; } = DeviceType.FilterWheel;
 
         /// <inheritdoc/>

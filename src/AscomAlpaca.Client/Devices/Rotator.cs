@@ -8,24 +8,44 @@ using RestSharp;
 
 namespace ES.AscomAlpaca.Client.Devices
 {
+    /// <summary>
+    /// Client implementation of an ASCOM Alpaca Rotator device.
+    /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Rotator</para>
+    /// </summary>
     public sealed class Rotator : DeviceBase, IRotator
     {
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Rotator" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
         public Rotator(DeviceConfiguration configuration) : base(configuration)
         {
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Rotator" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="logger">Logger, can be useful for debugging</param>
         public Rotator(DeviceConfiguration configuration, ILogger logger) : base(configuration, logger)
         {
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Rotator" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="clientTransactionIdGenerator">Client Transaction ID Generator</param>
         public Rotator(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator) : base(configuration, clientTransactionIdGenerator)
         {
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Rotator" /> class.
+        /// </summary>
+        /// <param name="configuration">Device configuration</param>
+        /// <param name="clientTransactionIdGenerator">Client Transaction ID Generator</param>
+        /// <param name="logger">Logger, can be useful for debugging</param>
         public Rotator(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger) : base(configuration, clientTransactionIdGenerator, logger)
         {
         }
@@ -40,6 +60,7 @@ namespace ES.AscomAlpaca.Client.Devices
         {
         }
 
+        /// <inheritdoc/>
         protected override DeviceType DeviceType { get; } = DeviceType.Rotator;
 
         /// <inheritdoc/>

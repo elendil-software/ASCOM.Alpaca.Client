@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 
 namespace ES.AscomAlpaca.Client.Devices
 {
+    /// <summary>
+    /// Defines the capabilities supported by an ASCOM Alpaca Observing conditions device
+    /// </summary>
     public interface IObservingConditions : IDevice
     {
         /// <summary>

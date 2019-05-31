@@ -2,6 +2,9 @@ using System.Threading.Tasks;
 
 namespace ES.AscomAlpaca.Client.Devices
 {
+    /// <summary>
+    /// Defines the capabilities supported by an ASCOM Alpaca Rotator device
+    /// </summary>
     public interface IRotator : IDevice
     {
         /// <summary>

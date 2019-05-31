@@ -5,6 +5,9 @@ using ES.AscomAlpaca.Devices;
 
 namespace ES.AscomAlpaca.Client.Devices
 {
+    /// <summary>
+    /// Defines the capabilities supported by an ASCOM Alpaca Telescope device
+    /// </summary>
     public interface ITelescope : IDevice
     {
         /// <summary>
