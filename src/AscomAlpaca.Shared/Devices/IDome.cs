@@ -1,21 +1,16 @@
-using System.Threading.Tasks;
-using ES.AscomAlpaca.Devices;
-
-namespace ES.AscomAlpaca.Client.Devices
+namespace ES.AscomAlpaca.Devices
 {
     /// <summary>
     /// Defines the capabilities supported by an ASCOM Alpaca Dome device
     /// </summary>
-    /// <seealso cref="IDome"/>
-    public interface IDomeAsync : IDeviceAsync
+    /// <seealso cref="IDomeAsync"/>
+    public interface IDome : IDevice
     {
-
-
         /// <summary>
         /// The dome altitude (degrees, horizon zero and increasing positive to 90 zenith).
         /// </summary>
         /// <returns>The dome altitude</returns>
-        Task<double> GetAltitudeAsync();
+        double GetAltitude();
 
         /// <summary>
         /// Indicates whether the dome is in the home position. This is normally used following a FindHome() operation.
@@ -25,141 +20,141 @@ namespace ES.AscomAlpaca.Client.Devices
         /// dome comes to rest at the home position.
         /// </summary>
         /// <returns>True if the dome is in the home position, false if not</returns>
-        Task<bool> IsAtHomeAsync();
+        bool IsAtHome();
 
         /// <summary>
         /// True if the dome is in the programmed park position.
         /// Set only following a Park() operation and reset with any slew operation.
         /// </summary>
         /// <returns>True if the dome is in the park position, false if not</returns>
-        Task<bool> IsAtParkAsync();
+        bool IsAtPark();
 
         /// <summary>
         /// Returns the dome azimuth (degrees, North zero and increasing clockwise, i.e., 90 East, 180 South, 270 West)
         /// </summary>
         /// <returns>The dome azimuth in degrees</returns>
-        Task<double> GetAzimuthAsync();
+        double GetAzimuth();
 
         /// <summary>
         /// True if the dome can move to the home position.
         /// </summary>
         /// <returns></returns>
-        Task<bool> CanFindHomeAsync();
+        bool CanFindHome();
 
         /// <summary>
         /// True if the dome is capable of programmed parking (Park() method)
         /// </summary>
         /// <returns></returns>
-        Task<bool> CanParkAsync();
+        bool CanPark();
 
         /// <summary>
         /// True if driver is capable of setting the dome altitude.
         /// </summary>
         /// <returns></returns>
-        Task<bool> CanSetAltitudeAsync();
+        bool CanSetAltitude();
 
         /// <summary>
         /// True if driver is capable of setting the dome azimuth.
         /// </summary>
         /// <returns></returns>
-        Task<bool> CanSetAzimuthAsync();
+        bool CanSetAzimuth();
 
         /// <summary>
         /// True if driver is capable of setting the dome park position.
         /// </summary>
         /// <returns></returns>
-        Task<bool> CanSetParkAsync();
+        bool CanSetPark();
 
         /// <summary>
         /// True if driver is capable of automatically operating shutter
         /// </summary>
         /// <returns></returns>
-        Task<bool> CanSetShutterAsync();
+        bool CanSetShutter();
 
         /// <summary>
         /// True if driver is capable of slaving to a telescope.
         /// </summary>
         /// <returns></returns>
-        Task<bool> CanSlaveAsync();
+        bool CanSlave();
 
         /// <summary>
         /// True if driver is capable of synchronizing the dome azimuth position using the SyncToAzimuth(Double) method.
         /// </summary>
         /// <returns></returns>
-        Task<bool> CanSyncAzimuthAsync();
+        bool CanSyncAzimuth();
 
         /// <summary>
         /// Returns the status of the dome shutter or roll-off roof.
         /// </summary>
         /// <returns></returns>
-        Task<ShutterState> GetShutterStatusAsync();
+        ShutterState GetShutterStatus();
 
         /// <summary>
         /// True if the dome is slaved to the telescope in its hardware, else False.
         /// </summary>
         /// <returns></returns>
-        Task<bool> IsSlavedAsync();
+        bool IsSlaved();
 
         /// <summary>
         /// Sets whether the dome is slaved to the telescope
         /// </summary>
-        /// <param name="slaved"></param>
-        Task SetSlavedAsync(bool slaved);
+        /// <param name="slaved">True if telescope is slaved to dome, otherwise false</param>
+        void SetSlaved(bool slaved);
 
         /// <summary>
         /// Indicates whether the any part of the dome is moving
         /// </summary>
         /// <returns>True if any part of the dome is currently moving, False if all dome components are steady.</returns>
-        Task<bool> IsSlewingAsync();
+        bool IsSlewing();
 
         /// <summary>
         /// Immediately cancel current dome operation.
         /// Calling this method will immediately disable hardware slewing (Slaved will become False).
         /// </summary>
-        Task AbortSlewAsync();
+        void AbortSlew();
 
         /// <summary>
         /// Close the shutter or otherwise shield telescope from the sky.
         /// </summary>
-        Task CloseShutterAsync();
+        void CloseShutter();
 
         /// <summary>
         /// Start operation to search for the dome home position.
         /// After Home position is established initializes Azimuth to the default value and sets the AtHome flag.
         /// </summary>
-        Task FindHomeAsync();
+        void FindHome();
 
         /// <summary>
         /// Open shutter or otherwise expose telescope to the sky.
         /// </summary>
-        Task OpenShutterAsync();
+        void OpenShutter();
 
         /// <summary>
         /// Rotate dome in azimuth to park position.
         /// After assuming programmed park position, sets AtPark flag.
         /// </summary>
-        Task ParkAsync();
+        void Park();
 
         /// <summary>
         /// Set the current azimuth, altitude position of dome to be the park position
         /// </summary>
-        Task SetParkAsync();
-
+        void SetPark();
+        
         /// <summary>
         /// Slew the dome to the given altitude position.
         /// </summary>
         /// <param name="altitude">Target dome altitude (degrees, horizon zero and increasing positive to 90 zenith)</param>
-        Task SlewToAltitudeAsync(double altitude);
+        void SlewToAltitude(double altitude);
 
         /// <summary>
         /// Slew the dome to the given azimuth position.
         /// </summary>
         /// <param name="azimuth">Target dome azimuth (degrees, North zero and increasing clockwise. i.e., 90 East, 180 South, 270 West)</param>
-        Task SlewToAzimuthAsync(double azimuth);
+        void SlewToAzimuth(double azimuth);
 
         /// <summary>
         /// Synchronize the current position of the dome to the given azimuth.
         /// </summary>
-        Task SyncToAzimuthAsync(double azimuth);
+        void SyncToAzimuth(double azimuth);
     }
 }

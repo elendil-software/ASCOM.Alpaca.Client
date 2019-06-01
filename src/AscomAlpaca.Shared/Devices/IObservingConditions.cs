@@ -1,87 +1,84 @@
 using System;
-using System.Threading.Tasks;
 
-namespace ES.AscomAlpaca.Client.Devices
+namespace ES.AscomAlpaca.Devices
 {
     /// <summary>
     /// Defines the capabilities supported by an ASCOM Alpaca Observing conditions device
     /// </summary>
-    /// <seealso cref="IObservingConditions"/>
-    public interface IObservingConditionsAsync : IDeviceAsync
+    /// <seealso cref="IObservingConditionsAsync"/>
+    public interface IObservingConditions : IDevice
     {
-
-
         /// <summary>
         /// Gets the time period over which observations will be averaged
         /// </summary>
         /// <returns></returns>
-        Task<double> GetAveragePeriodAsync();
-
+        double GetAveragePeriod();
+        
         /// <summary>
         /// Sets the time period over which observations will be averaged
         /// </summary>
         /// <param name="period">Time period (hours) over which to average sensor readings</param>
-        Task SetAveragePeriodAsync(double period);
+        void SetAveragePeriod(double period);
 
         /// <summary>
         /// Gets the percentage of the sky obscured by cloud
         /// </summary>
         /// <returns></returns>
-        Task<double> GetCloudCoverAsync();
+        double GetCloudCover();
 
         /// <summary>
-        /// Gets the atmospheric dew point at the observatory reported in °C.
+        /// Gets the atmospheric dew point at the observatory reported in Â°C.
         /// </summary>
         /// <returns></returns>
-        Task<double> GetDewPointAsync();
+        double GetDewPoint();
 
         /// <summary>
         /// Gets the atmospheric  humidity (%) at the observatory
         /// </summary>
         /// <returns></returns>
-        Task<double> GetHumidityAsync();
+        double GetHumidity();
 
         /// <summary>
         /// Gets the atmospheric pressure in hectoPascals at the observatory's altitude - NOT reduced to sea level.
         /// </summary>
         /// <returns></returns>
-        Task<double> GetPressureAsync();
+        double GetPressure();
 
         /// <summary>
         /// Gets the rain rate (mm/hour) at the observatory.
         /// </summary>
         /// <returns></returns>
-        Task<double> GetRainRateAsync();
+        double GetRainRate();
 
         /// <summary>
         /// Gets the sky brightness at the observatory (Lux)
         /// </summary>
         /// <returns></returns>
-        Task<double> GetSkyBrightnessAsync();
+        double GetSkyBrightness();
 
         /// <summary>
         /// Gets the sky quality at the observatory (magnitudes per square arc second)
         /// </summary>
         /// <returns></returns>
-        Task<double> GetSkyQualityAsync();
+        double GetSkyQuality();
 
         /// <summary>
-        /// Gets the sky temperature(°C) at the observatory.
+        /// Gets the sky temperature(Â°C) at the observatory.
         /// </summary>
         /// <returns></returns>
-        Task<double> GetSkyTemperatureAsync();
+        double GetSkyTemperature();
 
         /// <summary>
         /// Gets the seeing at the observatory measured as star full width half maximum (FWHM) in arc secs.
         /// </summary>
         /// <returns></returns>
-        Task<double> GetStarFwhmAsync();
+        double GetStarFwhm();
 
         /// <summary>
-        /// Gets the temperature(°C) at the observatory.
+        /// Gets the temperature(Â°C) at the observatory.
         /// </summary>
         /// <returns></returns>
-        Task<double> GetTemperatureAsync();
+        double GetTemperature();
 
         /// <summary>
         /// Gets the wind direction. The returned value must be between 0.0 and 360.0,
@@ -91,36 +88,35 @@ namespace ES.AscomAlpaca.Client.Devices
         /// West=270.0 and North=360.0.
         /// </summary>
         /// <returns></returns>
-        Task<double> GetWindDirectionAsync();
+        double GetWindDirection();
 
         /// <summary>
         /// Gets the peak 3 second wind gust(m/s) at the observatory over the last 2 minutes.
         /// </summary>
         /// <returns></returns>
-        Task<double> GetWindGustAsync();
+        double GetWindGust();
 
         /// <summary>
         /// Gets the wind speed(m/s) at the observatory.
         /// </summary>
         /// <returns></returns>
-        Task<double> GetWindSpeedAsync();
+        double GetWindSpeed();
 
         /// <summary>
         /// Forces the driver to immediately query its attached hardware to refresh sensor values.
         /// </summary>
-        Task RefreshAsync();
+        void Refresh();
 
         /// <summary>
         /// Gets a description of the sensor with the name specified in the PropertyName parameter
         /// </summary>
         /// <returns></returns>
-        Task<string> GetSensorDescriptionAsync(ObservingConditionSensorName sensorName);
-        
+        string GetSensorDescription(ObservingConditionSensorName sensorName);
+
         /// <summary>
         /// Gets the time since the sensor was last updated
         /// </summary>
         /// <returns></returns>
-        Task<TimeSpan> GetTimeSinceLastUpdateAsync(ObservingConditionSensorName sensorName);
-
+        TimeSpan GetTimeSinceLastUpdate(ObservingConditionSensorName sensorName);
     }
 }

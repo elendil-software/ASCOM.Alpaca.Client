@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ES.AscomAlpaca.Client.Devices
+namespace ES.AscomAlpaca.Devices
 {
     /// <summary>
     /// Base interface of every client implementation of ASCOM Alpaca device 

@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using ES.AscomAlpaca.Client.Logging;
 using ES.AscomAlpaca.Client.Request;
+using ES.AscomAlpaca.Devices;
 using ES.AscomAlpaca.Responses;
 using RestSharp;
 

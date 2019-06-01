@@ -1,4 +1,4 @@
-namespace ES.AscomAlpaca.Client.Devices
+namespace ES.AscomAlpaca.Devices
 {
     /// <summary>
     /// Defines the capabilities supported by an ASCOM Alpaca Switch device

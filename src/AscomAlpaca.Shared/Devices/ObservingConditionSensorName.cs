@@ -1,4 +1,4 @@
-namespace ES.AscomAlpaca.Client.Devices
+namespace ES.AscomAlpaca.Devices
 {
     /// <summary>
     /// Available sensors in an Observing Conditions devices
