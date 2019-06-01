@@ -240,6 +240,11 @@ namespace ES.AscomAlpaca.Client.Devices
         public async Task<IList<string>> GetSupportedActionsAsync() => await ExecuteRequestAsync<IList<string>, StringListResponse>(BuildGetSupportedActionsRequest);
         private IRestRequest BuildGetSupportedActionsRequest() => RequestBuilder.BuildRestRequest(DeviceMethod.SupportedActions, Method.GET, GetClientTransactionId());
 
+        /// <summary>
+        /// Execute the request returned by <paramref name="requestBuilder"/>
+        /// </summary>
+        /// <param name="requestBuilder">Function that returns an <see cref="IRestRequest"/></param>
+        /// <param name="timeout">Timeout for this request, if <c>null</c> default timeout is used</param>
         protected void ExecuteRequest(Func<IRestRequest> requestBuilder, int? timeout = null)
         {
             IRestRequest request = requestBuilder();
@@ -248,6 +253,11 @@ namespace ES.AscomAlpaca.Client.Devices
             response.HandleResponse();
         }
 
+        /// <summary>
+        /// Execute the request returned by <paramref name="requestBuilder"/>
+        /// </summary>
+        /// <param name="requestBuilder">Function that returns an <see cref="IRestRequest"/></param>
+        /// <param name="timeout">Timeout for this request, if <c>null</c> default timeout is used</param>
         protected async Task ExecuteRequestAsync(Func<IRestRequest> requestBuilder, int? timeout = null)
         {
             IRestRequest request = requestBuilder();
@@ -256,14 +266,28 @@ namespace ES.AscomAlpaca.Client.Devices
             response.HandleResponse();
         }
 
-        protected void ExecuteRequest<T1>(Func<T1, IRestRequest> requestBuilder, T1 param1, int? timeout = null)
+        /// <summary>
+        /// Execute the request returned by <paramref name="requestBuilder"/>
+        /// </summary>
+        /// <param name="requestBuilder">Function that returns an <see cref="IRestRequest"/></param>
+        /// <param name="arg">A parameter to pass to <paramref name="requestBuilder"/></param>
+        /// <param name="timeout">Timeout for this request, if <c>null</c> default timeout is used</param>
+        /// <typeparam name="T1">A type accepted by <paramref name="requestBuilder"/></typeparam>
+        protected void ExecuteRequest<T1>(Func<T1, IRestRequest> requestBuilder, T1 arg, int? timeout = null)
         {
-            IRestRequest request = requestBuilder(param1);
+            IRestRequest request = requestBuilder(arg);
             request.SetTimeout(timeout);
             var response = CommandSender.ExecuteRequest<CommandResponse>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
 
+        /// <summary>
+        /// Execute the request returned by <paramref name="requestBuilder"/>
+        /// </summary>
+        /// <param name="requestBuilder">Function that returns an <see cref="IRestRequest"/></param>
+        /// <param name="arg">A parameter to pass to <paramref name="requestBuilder"/></param>
+        /// <param name="timeout">Timeout for this request, if <c>null</c> default timeout is used</param>
+        /// <typeparam name="T1">A type accepted by <paramref name="requestBuilder"/></typeparam>
         protected async Task ExecuteRequestAsync<T1>(Func<T1, IRestRequest> requestBuilder, T1 arg, int? timeout = null)
         {
             IRestRequest request = requestBuilder(arg);
@@ -272,6 +296,15 @@ namespace ES.AscomAlpaca.Client.Devices
             response.HandleResponse();
         }
         
+        /// <summary>
+        /// Execute the request returned by <paramref name="requestBuilder"/>
+        /// </summary>
+        /// <param name="requestBuilder">Function that returns an <see cref="IRestRequest"/></param>
+        /// <param name="arg1">A parameter to pass to <paramref name="requestBuilder"/></param>
+        /// <param name="arg2">A parameter to pass to <paramref name="requestBuilder"/></param>
+        /// <param name="timeout">Timeout for this request, if <c>null</c> default timeout is used</param>
+        /// <typeparam name="T1">A type accepted by <paramref name="requestBuilder"/></typeparam>
+        /// <typeparam name="T2">A type accepted by <paramref name="requestBuilder"/></typeparam>
         protected void ExecuteRequest<T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2, int? timeout = null)
         {
             IRestRequest request = requestBuilder(arg1, arg2);
@@ -280,6 +313,15 @@ namespace ES.AscomAlpaca.Client.Devices
             response.HandleResponse();
         }
 
+        /// <summary>
+        /// Execute the request returned by <paramref name="requestBuilder"/>
+        /// </summary>
+        /// <param name="requestBuilder">Function that returns an <see cref="IRestRequest"/></param>
+        /// <param name="arg1">A parameter to pass to <paramref name="requestBuilder"/></param>
+        /// <param name="arg2">A parameter to pass to <paramref name="requestBuilder"/></param>
+        /// <param name="timeout">Timeout for this request, if <c>null</c> default timeout is used</param>
+        /// <typeparam name="T1">A type accepted by <paramref name="requestBuilder"/></typeparam>
+        /// <typeparam name="T2">A type accepted by <paramref name="requestBuilder"/></typeparam>
         protected async Task ExecuteRequestAsync<T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2, int? timeout = null)
         {
             IRestRequest request = requestBuilder(arg1, arg2);
@@ -287,7 +329,17 @@ namespace ES.AscomAlpaca.Client.Devices
             var response = await CommandSender.ExecuteRequestAsync<CommandResponse>(Configuration.GetBaseUrl(), request);
             response.HandleResponse();
         }
-        
+
+        /// <summary>
+        /// Execute the request returned by <paramref name="requestBuilder"/>
+        /// </summary>
+        /// <param name="requestBuilder">Function that returns an <see cref="IRestRequest"/></param>
+        /// <param name="arg">A parameter to pass to <paramref name="requestBuilder"/></param>
+        /// <param name="timeout">Timeout for this request, if <c>null</c> default timeout is used</param>
+        /// <typeparam name="T1">A type accepted by <paramref name="requestBuilder"/></typeparam>
+        /// <typeparam name="TResult">The type of <see cref="IValueResponse{T}.Value"/></typeparam>
+        /// <typeparam name="TAlpacaResponse">A type that implements <see cref="IResponse"/></typeparam>
+        /// <returns>The value returned by the device</returns>
         protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1>(Func<T1, IRestRequest> requestBuilder, T1 arg, int? timeout = null) where TAlpacaResponse : IValueResponse<TResult>
         {
             IRestRequest request = requestBuilder(arg);
@@ -296,6 +348,16 @@ namespace ES.AscomAlpaca.Client.Devices
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
 
+        /// <summary>
+        /// Execute the request returned by <paramref name="requestBuilder"/>
+        /// </summary>
+        /// <param name="requestBuilder">Function that returns an <see cref="IRestRequest"/></param>
+        /// <param name="arg">A parameter to pass to <paramref name="requestBuilder"/></param>
+        /// <param name="timeout">Timeout for this request, if <c>null</c> default timeout is used</param>
+        /// <typeparam name="T1">A type accepted by <paramref name="requestBuilder"/></typeparam>
+        /// <typeparam name="TResult">The type of <see cref="IValueResponse{T}.Value"/></typeparam>
+        /// <typeparam name="TAlpacaResponse">A type that implements <see cref="IResponse"/></typeparam>
+        /// <returns>The value returned by the device</returns>
         protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse, T1>(Func<T1, IRestRequest> requestBuilder, T1 arg, int? timeout = null) where TAlpacaResponse : IValueResponse<TResult>
         {
             IRestRequest request = requestBuilder(arg);
@@ -304,6 +366,18 @@ namespace ES.AscomAlpaca.Client.Devices
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
         
+        /// <summary>
+        /// Execute the request returned by <paramref name="requestBuilder"/>
+        /// </summary>
+        /// <param name="requestBuilder">Function that returns an <see cref="IRestRequest"/></param>
+        /// <param name="arg1">A parameter to pass to <paramref name="requestBuilder"/></param>
+        /// <param name="arg2">A parameter to pass to <paramref name="requestBuilder"/></param>
+        /// <param name="timeout">Timeout for this request, if <c>null</c> default timeout is used</param>
+        /// <typeparam name="T1">A type accepted by <paramref name="requestBuilder"/></typeparam>
+        /// <typeparam name="T2">A type accepted by <paramref name="requestBuilder"/></typeparam>
+        /// <typeparam name="TResult">The type of <see cref="IValueResponse{T}.Value"/></typeparam>
+        /// <typeparam name="TAlpacaResponse">A type that implements <see cref="IResponse"/></typeparam>
+        /// <returns>The value returned by the device</returns>
         protected TResult ExecuteRequest<TResult, TAlpacaResponse, T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2, int? timeout = null) where TAlpacaResponse : IValueResponse<TResult>
         {
             IRestRequest request = requestBuilder(arg1 , arg2);
@@ -312,6 +386,18 @@ namespace ES.AscomAlpaca.Client.Devices
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
 
+        /// <summary>
+        /// Execute the request returned by <paramref name="requestBuilder"/>
+        /// </summary>
+        /// <param name="requestBuilder">Function that returns an <see cref="IRestRequest"/></param>
+        /// <param name="arg1">A parameter to pass to <paramref name="requestBuilder"/></param>
+        /// <param name="arg2">A parameter to pass to <paramref name="requestBuilder"/></param>
+        /// <param name="timeout">Timeout for this request, if <c>null</c> default timeout is used</param>
+        /// <typeparam name="T1">A type accepted by <paramref name="requestBuilder"/></typeparam>
+        /// <typeparam name="T2">A type accepted by <paramref name="requestBuilder"/></typeparam>
+        /// <typeparam name="TResult">The type of <see cref="IValueResponse{T}.Value"/></typeparam>
+        /// <typeparam name="TAlpacaResponse">A type that implements <see cref="IResponse"/></typeparam>
+        /// <returns>The value returned by the device</returns>
         protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse, T1, T2>(Func<T1, T2, IRestRequest> requestBuilder, T1 arg1, T2 arg2, int? timeout = null) where TAlpacaResponse : IValueResponse<TResult>
         {
             IRestRequest request = requestBuilder(arg1 , arg2);
@@ -320,6 +406,12 @@ namespace ES.AscomAlpaca.Client.Devices
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
         
+        /// <summary>
+        /// Execute the request returned by <paramref name="requestBuilder"/>
+        /// </summary>
+        /// <param name="requestBuilder">Function that returns an <see cref="IRestRequest"/></param>
+        /// <param name="timeout">Timeout for this request, if <c>null</c> default timeout is used</param>
+        /// <returns>The value returned by the device</returns>
         protected TResult ExecuteRequest<TResult, TAlpacaResponse>(Func<IRestRequest> requestBuilder, int? timeout = null) where TAlpacaResponse : IValueResponse<TResult>
         {
             IRestRequest request = requestBuilder();
@@ -328,6 +420,12 @@ namespace ES.AscomAlpaca.Client.Devices
             return response.HandleResponse<TResult, TAlpacaResponse>();
         }
 
+        /// <summary>
+        /// Execute the request returned by <paramref name="requestBuilder"/>
+        /// </summary>
+        /// <param name="requestBuilder">Function that returns an <see cref="IRestRequest"/></param>
+        /// <param name="timeout">Timeout for this request, if <c>null</c> default timeout is used</param>
+        /// <returns>The value returned by the device</returns>
         protected async Task<TResult> ExecuteRequestAsync<TResult, TAlpacaResponse>(Func<IRestRequest> requestBuilder, int? timeout = null) where TAlpacaResponse : IValueResponse<TResult>
         {
             IRestRequest request = requestBuilder();
