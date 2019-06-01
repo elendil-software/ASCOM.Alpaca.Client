@@ -1,6 +1,7 @@
 ﻿using System;
 using ES.AscomAlpaca.Client.Devices;
 using ES.AscomAlpaca.Client.Request;
+using ES.AscomAlpaca.Devices;
 
 namespace ES.AscomAlpaca.Client.Demo.Desktop.Factories
 {

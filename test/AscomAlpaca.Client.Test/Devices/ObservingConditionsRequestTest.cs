@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using ES.AscomAlpaca.Client.Devices;
 using ES.AscomAlpaca.Client.Request;
+using ES.AscomAlpaca.Devices;
 using ES.AscomAlpaca.Responses;
 using Moq;
 using RestSharp;
@@ -11,7 +12,6 @@ namespace ES.AscomAlpaca.Client.Test.Devices
     public class ObservingConditionsRequestTest : DeviceRequestsTestBase
     {
         private readonly DeviceConfiguration _deviceConfiguration = new DeviceConfiguration { DeviceNumber = 5 };
-        private readonly ClientTransactionIdGenerator _clientTransactionIdGenerator = new ClientTransactionIdGenerator();
         protected override DeviceType DeviceType { get; } = DeviceType.ObservingConditions;
         
         [Fact]

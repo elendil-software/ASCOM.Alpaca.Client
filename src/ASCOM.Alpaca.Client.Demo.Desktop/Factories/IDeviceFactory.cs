@@ -1,4 +1,5 @@
 ﻿using ES.AscomAlpaca.Client.Devices;
+using ES.AscomAlpaca.Devices;
 
 namespace ES.AscomAlpaca.Client.Demo.Desktop.Factories
 {

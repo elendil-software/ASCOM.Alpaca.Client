@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using ES.AscomAlpaca.Client.Devices;
+using ES.AscomAlpaca.Devices;
 
 namespace ES.AscomAlpaca.Client.Demo.Console.Devices
 {

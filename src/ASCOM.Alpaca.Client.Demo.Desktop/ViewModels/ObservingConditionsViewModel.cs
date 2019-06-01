@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using ES.AscomAlpaca.Client.Demo.Desktop.Factories;
 using ES.AscomAlpaca.Client.Devices;
+using ES.AscomAlpaca.Devices;
 
 namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
 {

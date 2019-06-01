@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using ES.AscomAlpaca.Client.Devices;
+using ES.AscomAlpaca.Devices;
 
 namespace ES.AscomAlpaca.Client.Demo.Console.Devices
 {
