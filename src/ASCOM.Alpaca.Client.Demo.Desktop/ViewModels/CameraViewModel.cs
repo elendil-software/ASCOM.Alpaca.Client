@@ -12,7 +12,7 @@ namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
 {
     public class CameraViewModel : DeviceViewModelBase
     {
-        private ICamera _camera;
+        private Camera _camera;
         private int _cameraXSize;
         private int _cameraYSize;
         private int _bayerOffsetX;

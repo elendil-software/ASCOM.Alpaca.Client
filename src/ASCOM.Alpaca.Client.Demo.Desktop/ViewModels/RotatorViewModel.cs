@@ -9,7 +9,7 @@ namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
 {
     public class RotatorViewModel : DeviceViewModelBase
     {
-        private IRotator _rotator;
+        private Rotator _rotator;
         private bool _canReverse;
         private bool _isMoving;
         private double _position;

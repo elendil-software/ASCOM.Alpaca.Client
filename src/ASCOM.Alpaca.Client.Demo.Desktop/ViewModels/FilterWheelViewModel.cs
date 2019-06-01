@@ -14,7 +14,7 @@ namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
         private int _selectedFilter;
         private int _currentPosition;
 
-        private IFilterWheel _filterWheel;
+        private FilterWheel _filterWheel;
 
         public FilterWheelViewModel(IDeviceFactory deviceFactory) : base(deviceFactory)
         {

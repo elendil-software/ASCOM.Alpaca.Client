@@ -10,7 +10,7 @@ namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
 {
     public class TelescopeViewModel : DeviceViewModelBase
     {
-        private ITelescope _telescope;
+        private Telescope _telescope;
         private bool _canMoveAxis;
         private bool _canFindHome;
         private bool _canPark;

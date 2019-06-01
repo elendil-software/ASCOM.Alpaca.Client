@@ -11,7 +11,7 @@ namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
 {
     public class SwitchViewModel : DeviceViewModelBase
     {
-        private ISwitch _switch;
+        private Switch _switch;
         private int _maxSwitch;
 
         public SwitchViewModel(IDeviceFactory deviceFactory) : base(deviceFactory)

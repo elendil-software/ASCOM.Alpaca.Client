@@ -9,7 +9,7 @@ namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
 {
     public class FocuserViewModel : DeviceViewModelBase
     {
-        private IFocuser _focuser;
+        private Focuser _focuser;
         private bool _isAbsolute;
         private bool _isMoving;
         private int _maxIncrement;

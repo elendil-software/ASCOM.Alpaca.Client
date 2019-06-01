@@ -8,7 +8,7 @@ namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
 {
     public class ObservingConditionsViewModel : DeviceViewModelBase
     {
-        private IObservingConditions _observingConditions;
+        private ObservingConditions _observingConditions;
         private double _cloudCover;
         private double _dewPoint;
         private double _humidity;

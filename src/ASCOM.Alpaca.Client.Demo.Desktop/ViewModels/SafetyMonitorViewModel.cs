@@ -9,7 +9,7 @@ namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
     public class SafetyMonitorViewModel : DeviceViewModelBase
     {
         private bool _isSafe;
-        private ISafetyMonitor _safetyMonitor;
+        private SafetyMonitor _safetyMonitor;
 
         public SafetyMonitorViewModel(IDeviceFactory deviceFactory) : base(deviceFactory)
         {

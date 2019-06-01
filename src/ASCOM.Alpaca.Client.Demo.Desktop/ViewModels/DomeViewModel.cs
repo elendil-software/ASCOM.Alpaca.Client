@@ -10,7 +10,7 @@ namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
 {
     public class DomeViewModel : DeviceViewModelBase
     {
-        private IDome _dome;
+        private Dome _dome;
         
         private double _altitude;
         private bool _atHome;
