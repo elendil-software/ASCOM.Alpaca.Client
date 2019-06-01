@@ -85,7 +85,7 @@ namespace ES.AscomAlpaca.Devices
 
         /// <summary>
         /// Gets the wind direction. The returned value must be between 0.0 and 360.0,
-        /// interpreted according to the metereological standard, where a special value
+        /// interpreted according to the meteorological standard, where a special value
         /// of 0.0 is returned when the wind speed is 0.0. Wind direction is measured
         /// clockwise from north, through east, where East=90.0, South=180.0,
         /// West=270.0 and North=360.0.
@@ -121,6 +121,5 @@ namespace ES.AscomAlpaca.Devices
         /// </summary>
         /// <returns></returns>
         Task<TimeSpan> GetTimeSinceLastUpdateAsync(ObservingConditionSensorName sensorName);
-
     }
 }
