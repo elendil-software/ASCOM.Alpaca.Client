@@ -1,17 +1,19 @@
+using System.Threading.Tasks;
+
 namespace ES.AscomAlpaca.Client.Devices
 {
     /// <summary>
     /// Defines the capabilities supported by an ASCOM Alpaca Switch device
     /// </summary>
-    /// <seealso cref="ISwitchAsync"/>
-    public interface ISwitch : IDevice
+    /// <seealso cref="ISwitch"/>
+    public interface ISwitchAsync : IDeviceAsync
     {
         /// <summary>
         /// Returns the number of switch devices managed by this driver.
         /// Devices are numbered from 0 to MaxSwitch - 1
         /// </summary>
         /// <returns></returns>
-        int GetMaxSwitch();
+        Task<int> GetMaxSwitchAsync();
 
         /// <summary>
         /// Reports if the specified switch device can be written to, default true.
@@ -20,7 +22,7 @@ namespace ES.AscomAlpaca.Client.Devices
         /// </summary>
         /// <param name="id">The device number (0 to MaxSwitch - 1)</param>
         /// <returns></returns>
-        bool CanWrite(int id);
+        Task<bool> CanWriteAsync(int id);
 
         /// <summary>
         /// Return the state of switch device id as a boolean.
@@ -28,14 +30,14 @@ namespace ES.AscomAlpaca.Client.Devices
         /// </summary>
         /// <param name="id">The device number (0 to MaxSwitch - 1)</param>
         /// <returns></returns>
-        bool GetSwitch(int id);
+        Task<bool> GetSwitchAsync(int id);
 
         /// <summary>
         /// Sets a switch controller device to the specified state, true or false.
         /// </summary>
         /// <param name="id">The device number (0 to MaxSwitch - 1)</param>
         /// <param name="state">The required control state (True or False)</param>
-        void SetSwitch(int id, bool state);
+        Task SetSwitchAsync(int id, bool state);
 
         /// <summary>
         /// Gets the description of the specified switch device.
@@ -45,7 +47,7 @@ namespace ES.AscomAlpaca.Client.Devices
         /// </summary>
         /// <param name="id">The device number (0 to MaxSwitch - 1)</param>
         /// <returns></returns>
-        string GetSwitchDescription(int id);
+        Task<string> GetSwitchDescriptionAsync(int id);
 
         /// <summary>
         /// Gets the name of the specified switch device.
@@ -53,15 +55,15 @@ namespace ES.AscomAlpaca.Client.Devices
         /// </summary>
         /// <param name="id">The device number (0 to MaxSwitch - 1)</param>
         /// <returns></returns>
-        string GetSwitchName(int id);
+        Task<string> GetSwitchNameAsync(int id);
 
         /// <summary>
         /// Sets a switch device name to the specified value.
         /// </summary>
         /// <param name="id">The device number (0 to MaxSwitch - 1)</param>
         /// <param name="name">The name of the device</param>
-        void SetSwitchName(int id, string name);
-        
+        Task SetSwitchNameAsync(int id, string name);
+
         /// <summary>
         /// Gets the value of the specified switch device as a double.
         /// Devices are numbered from 0 to MaxSwitch - 1, The value of this
@@ -69,30 +71,30 @@ namespace ES.AscomAlpaca.Client.Devices
         /// </summary>
         /// <param name="id">The device number (0 to MaxSwitch - 1)</param>
         /// <returns></returns>
-        double GetSwitchValue(int id);
+        Task<double> GetSwitchValueAsync(int id);
 
         /// <summary>
         /// Sets a switch device value to the specified value.
         /// </summary>
         /// <param name="id">The device number (0 to MaxSwitch - 1)</param>
         /// <param name="value">The value to be set, between MinSwitchValue and MaxSwitchValue</param>
-        void SetSwitchValue(int id, double value);
-        
+        Task SetSwitchValueAsync(int id, double value);
+
         /// <summary>
         /// Gets the minimum value of the specified switch device as a double.
         /// Devices are numbered from 0 to MaxSwitch - 1.
         /// </summary>
         /// <param name="id">The device number (0 to MaxSwitch - 1)</param>
         /// <returns></returns>
-        double GetMinSwitchValue(int id);
-        
+        Task<double> GetMinSwitchValueAsync(int id);
+
         /// <summary>
         /// Gets the maximum value of the specified switch device as a double.
         /// Devices are numbered from 0 to MaxSwitch - 1.
         /// </summary>
         /// <param name="id">The device number (0 to MaxSwitch - 1)</param>
         /// <returns></returns>
-        double GetMaxSwitchValue(int id);
+        Task<double> GetMaxSwitchValueAsync(int id);
 
         /// <summary>
         /// Returns the step size that this device supports (the difference
@@ -101,6 +103,6 @@ namespace ES.AscomAlpaca.Client.Devices
         /// </summary>
         /// <param name="id">The device number (0 to MaxSwitch - 1)</param>
         /// <returns></returns>
-        double GetSwitchStep(int id);
+        Task<double> GetSwitchStepAsync(int id);
     }
 }

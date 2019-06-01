@@ -13,7 +13,7 @@ namespace ES.AscomAlpaca.Client.Devices
     /// Base class of any client device implementation.
     /// <para>It defines the common methods that every device has to implement</para>
     /// </summary>
-    public abstract class DeviceBase : IDevice
+    public abstract class DeviceBase : IDevice, IDeviceAsync
     {
         private readonly IClientTransactionIdGenerator _clientTransactionIdGenerator;
         /// <summary>

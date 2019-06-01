@@ -12,7 +12,7 @@ namespace ES.AscomAlpaca.Client.Devices
     /// Client implementation of an ASCOM Alpaca Rotator device.
     /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Rotator</para>
     /// </summary>
-    public sealed class Rotator : DeviceBase, IRotator
+    public sealed class Rotator : DeviceBase, IRotator, IRotatorAsync
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Rotator" /> class.

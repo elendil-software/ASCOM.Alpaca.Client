@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using ES.AscomAlpaca.Devices;
 
 namespace ES.AscomAlpaca.Client.Devices
@@ -7,378 +8,378 @@ namespace ES.AscomAlpaca.Client.Devices
     /// <summary>
     /// Defines the capabilities supported by an ASCOM Alpaca Telescope device
     /// </summary>
-    /// <seealso cref="ITelescopeAsync"/>
-    public interface ITelescope : IDevice
+    /// <seealso cref="ITelescope"/>
+    public interface ITelescopeAsync : IDeviceAsync
     {
         /// <summary>
         /// Returns the alignment mode of the mount (Alt/Az, Polar, German Polar).
         /// </summary>
         /// <returns></returns>
-        AlignmentMode GetAlignmentMode();
+        Task<AlignmentMode> GetAlignmentModeAsync();
 
         /// <summary>
         /// Returns the Altitude above the local horizon of the telescope's current position (degrees, positive up)
         /// </summary>
         /// <returns></returns>
-        double GetAltitude();
+        Task<double> GetAltitudeAsync();
 
         /// <summary>
         /// Returns thhe area of the telescope's aperture, taking into account any obstructions (square meters)
         /// </summary>
         /// <returns></returns>
-        double GetApertureArea();
+        Task<double> GetApertureAreaAsync();
 
         /// <summary>
         /// Returns the telescope's effective aperture diameter (meters)
         /// </summary>
         /// <returns></returns>
-        double GetApertureDiameter();
+        Task<double> GetApertureDiameterAsync();
 
         /// <summary>
         /// Indicates whether the mount is at the home position.
         /// </summary>
         /// <returns>True if the mount is stopped in the Home position.</returns>
-        bool IsAtHome();
+        Task<bool> IsAtHomeAsync();
 
         /// <summary>
         /// Indicates whether the telescope is at the park position.
         /// </summary>
         /// <returns>True if the telescope has been put into the parked state</returns>
-        bool IsAtPark();
+        Task<bool> IsAtParkAsync();
 
         /// <summary>
         /// Returns the azimuth at the local horizon of the telescope's current position (degrees, North-referenced,
         /// positive East/clockwise).
         /// </summary>
         /// <returns></returns>
-        double GetAzimuth();
+        Task<double> GetAzimuthAsync();
 
         /// <summary>
         /// Indicates whether the mount can find the home position.
         /// </summary>
         /// <returns></returns>
-        bool CanFindHome();
+        Task<bool> CanFindHomeAsync();
 
         /// <summary>
         /// Indicates whether the telescope can be parked.
         /// </summary>
         /// <returns></returns>
-        bool CanPark();
+        Task<bool> CanParkAsync();
 
         /// <summary>
         /// ndicates whether the telescope can be pulse guided.
         /// </summary>
         /// <returns></returns>
-        bool CanPulseGuide();
+        Task<bool> CanPulseGuideAsync();
 
         /// <summary>
         /// Indicates whether the DeclinationRate property can be changed.
         /// </summary>
         /// <returns></returns>
-        bool CanSetDeclinationRate();
+        Task<bool> CanSetDeclinationRateAsync();
 
         /// <summary>
         /// Indicates whether the DeclinationRate property can be changed.
         /// </summary>
         /// <returns></returns>
-        bool CanSetGuideRates();
+        Task<bool> CanSetGuideRatesAsync();
 
         /// <summary>
         /// Indicates whether the telescope park position can be set.
         /// </summary>
         /// <returns></returns>
-        bool CanSetPark();
+        Task<bool> CanSetParkAsync();
 
         /// <summary>
         /// Indicates whether the telescope SideOfPier can be set.
         /// </summary>
         /// <returns></returns>
-        bool CanSetPierSide();
+        Task<bool> CanSetPierSideAsync();
 
         /// <summary>
         /// Indicates whether the RightAscensionRate property can be changed.
         /// </summary>
         /// <returns></returns>
-        bool CanSetRightAscensionRate();
+        Task<bool> CanSetRightAscensionRateAsync();
 
         /// <summary>
         /// Indicates whether the Tracking property can be changed.
         /// </summary>
         /// <returns></returns>
-        bool CanSetTracking();
+        Task<bool> CanSetTrackingAsync();
 
         /// <summary>
         /// Indicates whether the telescope can slew synchronously.
         /// </summary>
         /// <returns></returns>
-        bool CanSlew();
+        Task<bool> CanSlewAsync();
 
         /// <summary>
         /// Indicates whether the telescope can slew synchronously to AltAz coordinates.
         /// </summary>
         /// <returns></returns>
-        bool CanSlewAltAz();
+        Task<bool> CanSlewAltAzAsync();
 
         /// <summary>
         /// Indicates whether the telescope can sync to equatorial coordinates.
         /// </summary>
         /// <returns></returns>
-        bool CanSync();
+        Task<bool> CanSyncAsync();
 
         /// <summary>
         /// Indicates whether the telescope can sync to local horizontal coordinates.
         /// </summary>
         /// <returns></returns>
-        bool CanSyncAltAz();
+        Task<bool> CanSyncAltAzAsync();
 
         /// <summary>
         /// The declination (degrees) of the telescope's current equatorial coordinates, in the coordinate system
-        /// given by <see cref="GetEquatorialSystem"/>. 
+        /// given by <see cref="GetEquatorialSystemAsync"/>. 
         /// </summary>
         /// <returns></returns>
-        double GetDeclination();
+        Task<double> GetDeclinationAsync();
 
         /// <summary>
         /// Returns the telescope's declination tracking rate.
         /// </summary>
         /// <returns>The declination tracking rate (arcseconds per second, default = 0.0)</returns>
-        double GetDeclinationRate();
+        Task<double> GetDeclinationRateAsync();
 
         /// <summary>
         /// Sets the telescope's declination tracking rate.
         /// </summary>
         /// <param name="declinationRate">Declination tracking rate (arcseconds per second)</param>
-        void SetDeclinationRate(double declinationRate);
+        Task SetDeclinationRateAsync(double declinationRate);
 
         /// <summary>
         /// Indicates whether atmospheric refraction is applied to coordinates.
         /// </summary>
         /// <returns></returns>
-        bool DoesRefraction();
+        Task<bool> DoesRefractionAsync();
 
         /// <summary>
         /// Determines whether atmospheric refraction is applied to coordinates.
         /// </summary>
         /// <param name="doesRefraction">Set True to make the telescope or driver applie atmospheric refraction to coordinates.</param>
-        void SetDoesRefraction(bool doesRefraction);
+        Task SetDoesRefractionAsync(bool doesRefraction);
 
         /// <summary>
         /// Returns the current equatorial coordinate system used by this telescope.
         /// </summary>
         /// <returns></returns>
-        EquatorialCoordinateType GetEquatorialSystem();
+        Task<EquatorialCoordinateType> GetEquatorialSystemAsync();
 
         /// <summary>
         /// Returns the telescope's focal length in meters.
         /// </summary>
         /// <returns></returns>
-        double GetFocalLength();
+        Task<double> GetFocalLengthAsync();
 
         /// <summary>
         /// Returns the  current Declination rate offset for telescope guiding (degrees/sec)
         /// </summary>
         /// <returns></returns>
-        double GetGuideRateDeclination();
+        Task<double> GetGuideRateDeclinationAsync();
 
         /// <summary>
         /// Sets the current Declination movement rate offset for telescope guiding (degrees/sec).
         /// </summary>
         /// <param name="guideRate">Declination movement rate offset degrees/sec).</param>
-        void SetGuideRateDeclination(double guideRate);
+        Task SetGuideRateDeclinationAsync(double guideRate);
 
         /// <summary>
         /// Returns the  current Right ascension rate offset for telescope guiding (degrees/sec)
         /// </summary>
         /// <returns></returns>
-        double GetGuideRateRightAscension();
+        Task<double> GetGuideRateRightAscensionAsync();
 
         /// <summary>
         /// Sets the current Right ascension movement rate offset for telescope guiding (degrees/sec).
         /// </summary>
         /// <param name="guideRate">Right ascension movement rate offset degrees/sec).</param>
-        void SetGuideRateRightAscension(double guideRate);
+        Task SetGuideRateRightAscensionAsync(double guideRate);
 
         /// <summary>
         /// Indicates whether the telescope is currently executing a PulseGuide command
         /// </summary>
         /// <returns></returns>
-        bool IsPulseGuiding();
+        Task<bool> IsPulseGuidingAsync();
 
         /// <summary>
         /// Returns the right ascension (hours) of the telescope's current equatorial coordinates,
-        /// in the coordinate system given by the <see cref="GetEquatorialSystem"/>
+        /// in the coordinate system given by the <see cref="GetEquatorialSystemAsync"/>
         /// </summary>
         /// <returns></returns>
-        double GetRightAscension();
+        Task<double> GetRightAscensionAsync();
 
         /// <summary>
         /// Returns the right ascension tracking rate (arcseconds per second, default = 0.0)
         /// </summary>
         /// <returns></returns>
-        double GetRightAscensionRate();
+        Task<double> GetRightAscensionRateAsync();
 
         /// <summary>
         /// Sets the right ascension tracking rate (arcseconds per second)
         /// </summary>
         /// <param name="rightAscensionRate">Right ascension tracking rate (arcseconds per second)</param>
-        void SetRightAscensionRate(double rightAscensionRate);
+        Task SetRightAscensionRateAsync(double rightAscensionRate);
 
         /// <summary>
         /// Indicates the pointing state of the mount.
         /// </summary>
         /// <returns></returns>
-        PierSide GetSideOfPier();
+        Task<PierSide> GetSideOfPierAsync();
 
         /// <summary>
         /// Sets the pointing state of the mount.
         /// </summary>
         /// <param name="sideOfPier">New pointing state.</param>
-        void SetSideOfPier(PierSide sideOfPier);
+        Task SetSideOfPierAsync(PierSide sideOfPier);
 
         /// <summary>
         /// Returns the local apparent sidereal time from the telescope's internal clock (hours, sidereal).
         /// </summary>
         /// <returns></returns>
-        double GetSiderealTime();
+        Task<double> GetSiderealTimeAsync();
 
         /// <summary>
         /// Returns the elevation above mean sea level (meters) of the site at which the telescope is located.
         /// </summary>
         /// <returns></returns>
-        double GetSiteElevation();
+        Task<double> GetSiteElevationAsync();
 
         /// <summary>
         /// Sets the elevation above mean sea level (metres) of the site at which the telescope is located.
         /// </summary>
         /// <param name="siteElevation">Elevation above mean sea level (metres).</param>
-        void SetSiteElevation(double siteElevation);
+        Task SetSiteElevationAsync(double siteElevation);
 
         /// <summary>
         /// Returns the latitude (degrees, positive East, WGS84) of the site at which the telescope is located.
         /// </summary>
         /// <returns></returns>
-        double GetSiteLatitude();
+        Task<double> GetSiteLatitudeAsync();
 
         /// <summary>
         /// Sets the observing site's latitude (degrees).
         /// </summary>
         /// <param name="latitude">Site latitude (degrees)</param>
-        void SetSiteLatitude(double latitude);
+        Task SetSiteLatitudeAsync(double latitude);
 
         /// <summary>
         /// Returns the longitude (degrees, positive East, WGS84) of the site at which the telescope is located.
         /// </summary>
         /// <returns></returns>
-        double GetSiteLongitude();
+        Task<double> GetSiteLongitudeAsync();
 
         /// <summary>
         /// Sets the observing site's longitude (degrees).
         /// </summary>
         /// <param name="longitude">Site longitude (degrees)</param>
-        void SetSiteLongitude(double longitude);
+        Task SetSiteLongitudeAsync(double longitude);
 
         /// <summary>
         /// Indicates whether the telescope is currently slewing.
         /// </summary>
         /// <returns></returns>
-        bool IsSlewing();
+        Task<bool> IsSlewingAsync();
 
         /// <summary>
         /// Returns the post-slew settling time.
         /// </summary>
         /// <returns></returns>
-        int GetSlewSettleTime();
+        Task<int> GetSlewSettleTimeAsync();
 
         /// <summary>
         /// Sets the post-slew settling time.
         /// </summary>
         /// <param name="settleTime">Settle time in seconds</param>
-        void SetSlewSettleTime(int settleTime);
+        Task SetSlewSettleTimeAsync(int settleTime);
 
         /// <summary>
         /// Returns the declination (degrees, positive North) for the target of an equatorial slew or sync operation
         /// </summary>
         /// <returns></returns>
-        double GetTargetDeclination();
+        Task<double> GetTargetDeclinationAsync();
 
         /// <summary>
         /// Sets the declination (degrees, positive North) for the target of an equatorial slew or sync operation
         /// </summary>
         /// <param name="declination">Target declination (degrees, positive North)</param>
-        void SetTargetDeclination(double declination);
+        Task SetTargetDeclinationAsync(double declination);
 
         /// <summary>
         /// Returns the right ascension (hours) for the target of an equatorial slew or sync operation
         /// </summary>
         /// <returns></returns>
-        double GetTargetRightAscension();
+        Task<double> GetTargetRightAscensionAsync();
 
         /// <summary>
         /// Sets the right ascension (hours) for the target of an equatorial slew or sync operation
         /// </summary>
         /// <param name="rightAscension">Target right ascension(hours)</param>
-        void SetTargetRightAscension(double rightAscension);
+        Task SetTargetRightAscensionAsync(double rightAscension);
 
         /// <summary>
         /// Indicates whether the telescope is tracking.
         /// </summary>
         /// <returns></returns>
-        bool IsTracking();
+        Task<bool> IsTrackingAsync();
 
         /// <summary>
         /// Enables or disables telescope tracking.
         /// </summary>
         /// <param name="tracking">Tracking enabled / disabled</param>
-        void SetTracking(bool tracking);
+        Task SetTrackingAsync(bool tracking);
 
         /// <summary>
         /// Returns the current tracking rate of the telescope's sidereal drive.
         /// </summary>
         /// <returns></returns>
-        DriveRate GetTrackingRate();
+        Task<DriveRate> GetTrackingRateAsync();
 
         /// <summary>
         /// Sets the mount's tracking rate.
         /// </summary>
         /// <param name="trackingRate"></param>
-        void SetTrackingRate(DriveRate trackingRate);
+        Task SetTrackingRateAsync(DriveRate trackingRate);
 
         /// <summary>
         /// Returns a collection of supported DriveRates values.
         /// </summary>
         /// <returns></returns>
-        IList<DriveRate> GetTrackingRates();
+        Task<IList<DriveRate>> GetTrackingRatesAsync();
 
         /// <summary>
         /// Returns the UTC date/time of the telescope's internal clock.
         /// </summary>
         /// <returns></returns>
-        DateTime GetUtcDate();
+        Task<DateTime> GetUtcDateAsync();
 
         /// <summary>
         /// Sets the UTC date/time of the telescope's internal clock.
         /// </summary>
         /// <param name="utcDate"></param>
-        void SetUtcDate(DateTime utcDate);
+        Task SetUtcDateAsync(DateTime utcDate);
 
         /// <summary>
         /// Immediately stops a slew in progress.
         /// </summary>
-        void AbortSlew();
+        Task AbortSlewAsync();
 
         /// <summary>
         /// Returns the rates at which the telescope may be moved about the specified axis.
         /// </summary>
         /// <param name="axis">The axis about which rate information is desired</param>
         /// <returns></returns>
-        IList<AxisRate> GetAxisRates(TelescopeAxis axis);
+        Task<IList<AxisRate>> GetAxisRatesAsync(TelescopeAxis axis);
 
         /// <summary>
         /// Indicates whether the telescope can move the requested axis.
         /// </summary>
         /// <param name="axis">The axis about which rate information is desired.</param>
         /// <returns></returns>
-        bool CanMoveAxis(TelescopeAxis axis);
+        Task<bool> CanMoveAxisAsync(TelescopeAxis axis);
 
         /// <summary>
         /// Predicts the pointing state after a German equatorial mount slews to given coordinates.
@@ -386,81 +387,80 @@ namespace ES.AscomAlpaca.Client.Devices
         /// <param name="rightAscension">Right Ascension coordinate (0.0 to 23.99999999 hours</param>
         /// <param name="declination">Declination coordinate (-90.0 to +90.0 degrees)</param>
         /// <returns></returns>
-        PierSide GetDestinationSideOfPier(double rightAscension, double declination);
+        Task<PierSide> GetDestinationSideOfPierAsync(double rightAscension, double declination);
 
         /// <summary>
         /// Moves the mount to the "home" position.
         /// </summary>
-        void FindHome();
+        Task FindHomeAsync();
 
         /// <summary>
         /// Move the telescope in one axis at the given rate.
         /// </summary>
         /// <param name="axis">The axis about which rate information is desired</param>
         /// <param name="rate">The rate of motion (deg/sec) about the specified axis</param>
-        void MoveAxis(TelescopeAxis axis, double rate);
+        Task MoveAxisAsync(TelescopeAxis axis, double rate);
 
         /// <summary>
         /// Move the telescope to its park position, stop all motion (or restrict to a small safe range), and set AtPark to True. )
         /// </summary>
-        void Park();
+        Task ParkAsync();
 
         /// <summary>
         /// Moves the scope in the given direction for the given time.
         /// </summary>
         /// <param name="direction">The direction in which the guide-rate motion is to be made</param>
         /// <param name="duration">The duration of the guide-rate motion (milliseconds)</param>
-        void PulseGuide(GuideDirection direction, int duration);
+        Task PulseGuideAsync(GuideDirection direction, int duration);
 
         /// <summary>
         /// Sets the telescope's park position to be its current position.
         /// </summary>
-        void SetPark();
+        Task SetParkAsync();
 
         /// <summary>
         /// Move the telescope to the given local horizontal coordinates, return when slew is complete
         /// </summary>
         /// <param name="altitude">Altitude coordinate (degrees, positive up)</param>
         /// <param name="azimuth">Azimuth coordinate (degrees, North-referenced, positive East/clockwise)</param>
-        void SlewToAltAz(double altitude, double azimuth);
+        Task SlewToAltAzAsync(double altitude, double azimuth);
 
         /// <summary>
         /// Synchronously slew to the given equatorial coordinates.
         /// </summary>
         /// <param name="rightAscension">Right Ascension coordinate (hours)</param>
         /// <param name="declination">Declination coordinate (degrees)</param>
-        void SlewToCoordinates(double rightAscension, double declination);
+        Task SlewToCoordinatesAsync(double rightAscension, double declination);
 
         /// <summary>
         /// Move the telescope to the TargetRightAscension and TargetDeclination equatorial coordinates, return
         /// when slew is complete
         /// </summary>
-        void SlewToTarget();
+        Task SlewToTargetAsync();
 
         /// <summary>
         /// Matches the scope's local horizontal coordinates to the given local horizontal coordinates.
         /// </summary>
         /// <param name="altitude">Altitude coordinate (degrees, positive up)</param>
         /// <param name="azimuth">Azimuth coordinate (degrees, North-referenced, positive East/clockwise)</param>
-        void SyncToAltAz(double altitude, double azimuth);
-        
+        Task SyncToAltAzAsync(double altitude, double azimuth);
+
         /// <summary>
         /// Matches the scope's equatorial coordinates to the given equatorial coordinates.
         /// </summary>
         /// <param name="rightAscension">Right Ascension coordinate (hours)</param>
         /// <param name="declination">Declination coordinate (degrees)</param>
-        void SyncToCoordinates(double rightAscension, double declination);
-        
+        Task SyncToCoordinatesAsync(double rightAscension, double declination);
+
         /// <summary>
         /// Matches the scope's equatorial coordinates to the TargetRightAscension and
         /// TargetDeclination equatorial coordinates.
         /// </summary>
-        void SyncToTarget();
+        Task SyncToTargetAsync();
 
         /// <summary>
         /// Unparks the mount.
         /// </summary>
-        void Unpark();
+        Task UnparkAsync();
     }
-    
 }

@@ -12,7 +12,7 @@ namespace ES.AscomAlpaca.Client.Devices
     /// Client implementation of an ASCOM Alpaca Switch device.
     /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Switch</para>
     /// </summary>
-    public sealed class Switch : DeviceBase, ISwitch 
+    public sealed class Switch : DeviceBase, ISwitch, ISwitchAsync
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Switch" /> class.

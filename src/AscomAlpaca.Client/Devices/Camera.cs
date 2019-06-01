@@ -18,7 +18,7 @@ namespace ES.AscomAlpaca.Client.Devices
     /// Client implementation of an ASCOM Alpaca Camera device.
     /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Camera</para>
     /// </summary>
-    public sealed class Camera : DeviceBase, ICamera
+    public sealed class Camera : DeviceBase, ICamera, ICameraAsync
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Camera" /> class.

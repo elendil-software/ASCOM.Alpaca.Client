@@ -5,72 +5,60 @@ namespace ES.AscomAlpaca.Client.Devices
     /// <summary>
     /// Defines the capabilities supported by an ASCOM Alpaca Rotator device
     /// </summary>
-    /// <seealso cref="IRotatorAsync"/>
-    public interface IRotator : IDevice
+    /// <seealso cref="IRotator"/>
+    public interface IRotatorAsync : IDeviceAsync
     {
         /// <summary>
         /// Indicates whether the rotator supports the Reverse method.
         /// </summary>
         /// <returns>True if the rotator supports the Reverse method.</returns>
-        bool CanReverse();
+        Task<bool> CanReverseAsync();
 
         /// <summary>
         /// Indicates whether the rotator is currently moving.
         /// </summary>
         /// <returns></returns>
-        bool IsMoving();
+        Task<bool> IsMovingAsync();
 
         /// <summary>
         /// Returns the rotator's current position.
         /// </summary>
         /// <returns>Current instantaneous Rotator position, in degrees.</returns>
-        double GetPosition();
+        Task<double> GetPositionAsync();
 
         /// <summary>
-        /// Returns the rotatorâ€™s Reverse state.
+        /// Returns the rotator’s Reverse state.
         /// </summary>
         /// <returns></returns>
-        bool IsReversed();
+        Task<bool> IsReversedAsync();
 
         /// <summary>
-        /// Sets the rotatorâ€™s Reverse state.
+        /// Sets the rotator’s Reverse state.
         /// </summary>
         /// <param name="reversed">True if the rotation and angular direction must be reversed to match the optical characteristcs</param>
-        void SetReversed(bool reversed);
-
-        /// <summary>
-        /// Returns the minimum StepSize
-        /// </summary>
-        /// <returns>The minimum StepSize, in degrees.</returns>
-        double GetStepSize();
-
-        /// <summary>
-        /// Returns the minimum StepSize
-        /// </summary>
-        /// <returns>The minimum StepSize, in degrees.</returns>
-        Task<double> GetStepSizeAsync();
+        Task SetReversedAsync(bool reversed);
 
         /// <summary>
         /// Returns the destination position angle for Move() and MoveAbsolute().
         /// </summary>
         /// <returns></returns>
-        double GetTargetPosition();
+        Task<double> GetTargetPositionAsync();
 
         /// <summary>
         /// Immediately stop any Rotator motion due to a previous Move or MoveAbsolute method call.
         /// </summary>
-        void Halt();
+        Task HaltAsync();
 
         /// <summary>
         /// Causes the rotator to move Position degrees relative to the current Position value.
         /// </summary>
         /// <param name="position">Relative position to move in degrees from current Position.</param>
-        void Move(double position);
+        Task MoveAsync(double position);
 
         /// <summary>
         /// Causes the rotator to move the absolute position of Position degrees.
         /// </summary>
         /// <param name="position">Absolute position in degrees.</param>
-        void MoveAbsolute(double position);
+        Task MoveAbsoluteAsync(double position);
     }
 }

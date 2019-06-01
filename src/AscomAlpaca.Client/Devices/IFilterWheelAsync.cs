@@ -1,23 +1,24 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ES.AscomAlpaca.Client.Devices
 {
     /// <summary>
     /// Defines the capabilities supported by an ASCOM Alpaca Filter wheel device
     /// </summary>
-    public interface IFilterWheel : IDevice
+    public interface IFilterWheelAsync : IDeviceAsync
     {
         /// <summary>
         /// Get the filter focus offsets
         /// </summary>
         /// <returns>Focus offsets</returns>
-        IList<int> GetFocusOffsets();
-        
+        Task<IList<int>> GetFocusOffsetsAsync();
+
         /// <summary>
         /// Get the Filter wheel filter names
         /// </summary>
         /// <returns>Filter names</returns>
-        IList<string> GetNames();
+        Task<IList<string>> GetNamesAsync();
 
         /// <summary>
         /// Returns the current filter wheel position or -1 if wheel is moving.
@@ -25,7 +26,7 @@ namespace ES.AscomAlpaca.Client.Devices
         /// Starts filter wheel rotation immediately when written.</para>
         /// </summary>
         /// <returns>current filter wheel position or -1 if wheel is moving</returns>
-        int GetPosition();
+        Task<int> GetPositionAsync();
 
         /// <summary>
         /// Sets the filter wheel position.
@@ -33,6 +34,6 @@ namespace ES.AscomAlpaca.Client.Devices
         /// Starts filter wheel rotation immediately when written.</para>
         /// </summary>
         /// <param name="position">The filter wheel position</param>
-        void SetPosition(int position);
+        Task SetPositionAsync(int position);
     }
 }

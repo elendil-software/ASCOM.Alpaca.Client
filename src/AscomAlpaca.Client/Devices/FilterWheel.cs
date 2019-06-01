@@ -12,7 +12,7 @@ namespace ES.AscomAlpaca.Client.Devices
     /// Client implementation of an ASCOM Alpaca Filter Wheel device.
     /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Filter Wheel</para>
     /// </summary>
-    public sealed class FilterWheel : DeviceBase, IFilterWheel
+    public sealed class FilterWheel : DeviceBase, IFilterWheel, IFilterWheelAsync
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FilterWheel" /> class.

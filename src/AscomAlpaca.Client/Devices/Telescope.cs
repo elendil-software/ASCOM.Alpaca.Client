@@ -15,7 +15,7 @@ namespace ES.AscomAlpaca.Client.Devices
     /// Client implementation of an ASCOM Alpaca Telescope device.
     /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Telescope</para>
     /// </summary>
-    public sealed class Telescope : DeviceBase, ITelescope
+    public sealed class Telescope : DeviceBase, ITelescope, ITelescopeAsync
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Telescope" /> class.

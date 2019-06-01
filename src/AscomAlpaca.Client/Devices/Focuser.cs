@@ -11,7 +11,7 @@ namespace ES.AscomAlpaca.Client.Devices
     /// Client implementation of an ASCOM Alpaca Focuser device.
     /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Focuser</para>
     /// </summary>
-    public sealed class Focuser : DeviceBase, IFocuser
+    public sealed class Focuser : DeviceBase, IFocuser, IFocuserAsync
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Focuser" /> class.

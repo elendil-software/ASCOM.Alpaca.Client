@@ -10,7 +10,7 @@ namespace ES.AscomAlpaca.Client.Devices
     /// Client implementation of an ASCOM Alpaca Safety Monitor device.
     /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Safety Monitor</para>
     /// </summary>
-    public sealed class SafetyMonitor : DeviceBase, ISafetyMonitor
+    public sealed class SafetyMonitor : DeviceBase, ISafetyMonitor, ISafetyMonitorAsync
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SafetyMonitor" /> class.

@@ -13,7 +13,7 @@ namespace ES.AscomAlpaca.Client.Devices
     /// Client implementation of an ASCOM Alpaca Dome device.
     /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Dome</para>
     /// </summary>
-    public sealed class Dome : DeviceBase, IDome
+    public sealed class Dome : DeviceBase, IDome, IDomeAsync
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Dome" /> class.

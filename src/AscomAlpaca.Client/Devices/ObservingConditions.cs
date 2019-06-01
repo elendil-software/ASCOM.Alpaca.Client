@@ -13,7 +13,7 @@ namespace ES.AscomAlpaca.Client.Devices
     /// Client implementation of an ASCOM Alpaca Observing Conditions device.
     /// <para>This class is meant to be use in a client application that need to control an ASCOM Alpaca Observing Conditions</para>
     /// </summary>
-    public sealed class ObservingConditions : DeviceBase, IObservingConditions
+    public sealed class ObservingConditions : DeviceBase, IObservingConditions, IObservingConditionsAsync
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ObservingConditions" /> class.
