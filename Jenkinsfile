@@ -19,7 +19,12 @@ pipeline {
     booleanParam(
       name: 'Publish_NuGet_Package',
       defaultValue: false,
-      description: 'Publish NuGet Package'
+      description: 'Publish NuGet Package to local directory'
+    )
+    booleanParam(
+      name: 'Push_NuGet_Package',
+      defaultValue: false,
+      description: 'Push NuGet Package to NuGet.org'
     )
 	string(
       name: 'NextVersion',
@@ -71,7 +76,14 @@ pipeline {
       }
       steps {
         powershell(script: "${env.ScriptsDir}\\NuGet-CreateLocalDir.ps1", label: 'Create local NuGet directory')
-        powershell(script: "${env.ScriptsDir}\\NuGet-CopyNupkg.ps1", label: 'Copy *.nupkg files')
+        powershell(script: "${env.ScriptsDir}\\NuGet-CopyNupkg.ps1", label: 'Copy *.nupkg files to local directory')
+      }
+    }
+    stage('NuGet') {
+      when {
+        expression { params.Push_NuGet_Package == true }
+      }
+      steps {
         powershell(script: "${env.ScriptsDir}\\NuGet-Push.ps1", label: 'Push *.nupkg files')
       }
     }
