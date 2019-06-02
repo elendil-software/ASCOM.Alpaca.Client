@@ -1,0 +1,2248 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ICamera
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ICamera
+   ">
+    <meta name="generator" content="docfx 2.42.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ES.AscomAlpaca.Devices.ICamera">
+  
+  
+  <h1 id="ES_AscomAlpaca_Devices_ICamera" data-uid="ES.AscomAlpaca.Devices.ICamera" class="text-break">Interface ICamera
+  </h1>
+  <div class="markdown level0 summary"><p>Defines the capabilities supported by an ASCOM Alpaca Camera device</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDevice.html#ES_AscomAlpaca_Devices_IDevice_DeviceNumber">IDevice.DeviceNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDevice.html#ES_AscomAlpaca_Devices_IDevice_InvokeAction_System_String_System_String_">IDevice.InvokeAction(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDevice.html#ES_AscomAlpaca_Devices_IDevice_SendCommandBlind_System_String_System_Boolean_">IDevice.SendCommandBlind(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDevice.html#ES_AscomAlpaca_Devices_IDevice_SendCommandBool_System_String_System_Boolean_">IDevice.SendCommandBool(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDevice.html#ES_AscomAlpaca_Devices_IDevice_SendCommandString_System_String_System_Boolean_">IDevice.SendCommandString(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDevice.html#ES_AscomAlpaca_Devices_IDevice_IsConnected">IDevice.IsConnected()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDevice.html#ES_AscomAlpaca_Devices_IDevice_SetConnected_System_Boolean_">IDevice.SetConnected(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDevice.html#ES_AscomAlpaca_Devices_IDevice_GetDescription">IDevice.GetDescription()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDevice.html#ES_AscomAlpaca_Devices_IDevice_GetDriverInfo">IDevice.GetDriverInfo()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDevice.html#ES_AscomAlpaca_Devices_IDevice_GetDriverVersion">IDevice.GetDriverVersion()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDevice.html#ES_AscomAlpaca_Devices_IDevice_GetInterfaceVersion">IDevice.GetInterfaceVersion()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDevice.html#ES_AscomAlpaca_Devices_IDevice_GetName">IDevice.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDevice.html#ES_AscomAlpaca_Devices_IDevice_GetSupportedActions">IDevice.GetSupportedActions()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ES.AscomAlpaca.Devices.html">ES.AscomAlpaca.Devices</a></h6>
+  <h6><strong>Assembly</strong>: ES.AscomAlpaca.Shared.dll</h6>
+  <h5 id="ES_AscomAlpaca_Devices_ICamera_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ICamera : IDevice</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_AbortExposure.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.AbortExposure%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L430">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_AbortExposure_" data-uid="ES.AscomAlpaca.Devices.ICamera.AbortExposure*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_AbortExposure" data-uid="ES.AscomAlpaca.Devices.ICamera.AbortExposure">AbortExposure()</h4>
+  <div class="markdown level1 summary"><p>Aborts the current exposure, if any, and returns the camera to Idle state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AbortExposure()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_CanAbortExposure.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.CanAbortExposure%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L68">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_CanAbortExposure_" data-uid="ES.AscomAlpaca.Devices.ICamera.CanAbortExposure*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_CanAbortExposure" data-uid="ES.AscomAlpaca.Devices.ICamera.CanAbortExposure">CanAbortExposure()</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the camera can abort exposures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanAbortExposure()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Returns true if the camera can abort exposures; false if not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_CanAsymmetricBin.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.CanAsymmetricBin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L74">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_CanAsymmetricBin_" data-uid="ES.AscomAlpaca.Devices.ICamera.CanAsymmetricBin*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_CanAsymmetricBin" data-uid="ES.AscomAlpaca.Devices.ICamera.CanAsymmetricBin">CanAsymmetricBin()</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the camera supports asymmetric binning</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanAsymmetricBin()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Returns true if the camera supports asymmetric binning; false if not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_CanFastReadout.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.CanFastReadout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L80">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_CanFastReadout_" data-uid="ES.AscomAlpaca.Devices.ICamera.CanFastReadout*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_CanFastReadout" data-uid="ES.AscomAlpaca.Devices.ICamera.CanFastReadout">CanFastReadout()</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the camera has a fast readout mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanFastReadout()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_CanGetCoolerPower.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.CanGetCoolerPower%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L86">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_CanGetCoolerPower_" data-uid="ES.AscomAlpaca.Devices.ICamera.CanGetCoolerPower*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_CanGetCoolerPower" data-uid="ES.AscomAlpaca.Devices.ICamera.CanGetCoolerPower">CanGetCoolerPower()</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the camera's cooler power setting can be read.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanGetCoolerPower()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_CanPulseGuide.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.CanPulseGuide%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L92">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_CanPulseGuide_" data-uid="ES.AscomAlpaca.Devices.ICamera.CanPulseGuide*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_CanPulseGuide" data-uid="ES.AscomAlpaca.Devices.ICamera.CanPulseGuide">CanPulseGuide()</h4>
+  <div class="markdown level1 summary"><p>Returns a flag indicating whether this camera supports pulse guiding</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanPulseGuide()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_CanSetCCDTemperature.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.CanSetCCDTemperature%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L98">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_CanSetCCDTemperature_" data-uid="ES.AscomAlpaca.Devices.ICamera.CanSetCCDTemperature*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_CanSetCCDTemperature" data-uid="ES.AscomAlpaca.Devices.ICamera.CanSetCCDTemperature">CanSetCCDTemperature()</h4>
+  <div class="markdown level1 summary"><p>Returns a flag indicating whether this camera supports setting the CCD temperature</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanSetCCDTemperature()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_CanStopExposure.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.CanStopExposure%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L104">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_CanStopExposure_" data-uid="ES.AscomAlpaca.Devices.ICamera.CanStopExposure*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_CanStopExposure" data-uid="ES.AscomAlpaca.Devices.ICamera.CanStopExposure">CanStopExposure()</h4>
+  <div class="markdown level1 summary"><p>Returns a flag indicating whether this camera can stop an exposure that is in progress</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanStopExposure()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetBayerOffsetX.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetBayerOffsetX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L16">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetBayerOffsetX_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetBayerOffsetX*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetBayerOffsetX" data-uid="ES.AscomAlpaca.Devices.ICamera.GetBayerOffsetX">GetBayerOffsetX()</h4>
+  <div class="markdown level1 summary"><p>Returns the X offset of the Bayer matrix, as defined in SensorType.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetBayerOffsetX()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetBayerOffsetY.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetBayerOffsetY%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L22">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetBayerOffsetY_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetBayerOffsetY*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetBayerOffsetY" data-uid="ES.AscomAlpaca.Devices.ICamera.GetBayerOffsetY">GetBayerOffsetY()</h4>
+  <div class="markdown level1 summary"><p>Returns the Y offset of the Bayer matrix, as defined in SensorType.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetBayerOffsetY()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetBinX.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetBinX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L28">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetBinX_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetBinX*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetBinX" data-uid="ES.AscomAlpaca.Devices.ICamera.GetBinX">GetBinX()</h4>
+  <div class="markdown level1 summary"><p>Returns the binning factor for the X axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetBinX()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetBinY.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetBinY%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L39">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetBinY_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetBinY*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetBinY" data-uid="ES.AscomAlpaca.Devices.ICamera.GetBinY">GetBinY()</h4>
+  <div class="markdown level1 summary"><p>Returns the binning factor for the Y axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetBinY()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetCameraState.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetCameraState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L50">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetCameraState_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetCameraState*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetCameraState" data-uid="ES.AscomAlpaca.Devices.ICamera.GetCameraState">GetCameraState()</h4>
+  <div class="markdown level1 summary"><p>Returns the current camera operational state</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">CameraState GetCameraState()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.AscomAlpaca.Devices.CameraState.html">CameraState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetCameraXSize.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetCameraXSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L56">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetCameraXSize_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetCameraXSize*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetCameraXSize" data-uid="ES.AscomAlpaca.Devices.ICamera.GetCameraXSize">GetCameraXSize()</h4>
+  <div class="markdown level1 summary"><p>Returns the width of the CCD camera chip in unbinned pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetCameraXSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetCameraYSize.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetCameraYSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L62">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetCameraYSize_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetCameraYSize*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetCameraYSize" data-uid="ES.AscomAlpaca.Devices.ICamera.GetCameraYSize">GetCameraYSize()</h4>
+  <div class="markdown level1 summary"><p>Returns the height of the CCD camera chip in unbinned pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetCameraYSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetCCDTemperature.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetCCDTemperature%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L110">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetCCDTemperature_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetCCDTemperature*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetCCDTemperature" data-uid="ES.AscomAlpaca.Devices.ICamera.GetCCDTemperature">GetCCDTemperature()</h4>
+  <div class="markdown level1 summary"><p>Returns the current CCD temperature in degrees Celsius.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetCCDTemperature()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetCCDTemperatureSetPoint.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetCCDTemperatureSetPoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L393">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetCCDTemperatureSetPoint_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetCCDTemperatureSetPoint*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetCCDTemperatureSetPoint" data-uid="ES.AscomAlpaca.Devices.ICamera.GetCCDTemperatureSetPoint">GetCCDTemperatureSetPoint()</h4>
+  <div class="markdown level1 summary"><p>Returns the current camera cooler setpoint in degrees Celsius.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetCCDTemperatureSetPoint()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetCoolerPower.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetCoolerPower%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L128">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetCoolerPower_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetCoolerPower*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetCoolerPower" data-uid="ES.AscomAlpaca.Devices.ICamera.GetCoolerPower">GetCoolerPower()</h4>
+  <div class="markdown level1 summary"><p>Returns the present cooler power level, in percent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetCoolerPower()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetElectronPerADU.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetElectronPerADU%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L134">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetElectronPerADU_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetElectronPerADU*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetElectronPerADU" data-uid="ES.AscomAlpaca.Devices.ICamera.GetElectronPerADU">GetElectronPerADU()</h4>
+  <div class="markdown level1 summary"><p>Returns the gain of the camera in photoelectrons per A/D unit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetElectronPerADU()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetExposureMax.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetExposureMax%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L140">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetExposureMax_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetExposureMax*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetExposureMax" data-uid="ES.AscomAlpaca.Devices.ICamera.GetExposureMax">GetExposureMax()</h4>
+  <div class="markdown level1 summary"><p>Returns the maximum exposure time supported by StartExposure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetExposureMax()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetExposureMin.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetExposureMin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L146">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetExposureMin_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetExposureMin*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetExposureMin" data-uid="ES.AscomAlpaca.Devices.ICamera.GetExposureMin">GetExposureMin()</h4>
+  <div class="markdown level1 summary"><p>Returns the Minimium exposure time in seconds that the camera supports through StartExposure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetExposureMin()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetExposureResolution.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetExposureResolution%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L152">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetExposureResolution_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetExposureResolution*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetExposureResolution" data-uid="ES.AscomAlpaca.Devices.ICamera.GetExposureResolution">GetExposureResolution()</h4>
+  <div class="markdown level1 summary"><p>Returns the smallest increment in exposure time supported by StartExposure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetExposureResolution()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetFullWellCapacity.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetFullWellCapacity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L171">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetFullWellCapacity_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetFullWellCapacity*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetFullWellCapacity" data-uid="ES.AscomAlpaca.Devices.ICamera.GetFullWellCapacity">GetFullWellCapacity()</h4>
+  <div class="markdown level1 summary"><p>Reports the full well capacity of the camera in electrons, at the
+current camera settings (binning, SetupDialog settings, etc.).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetFullWellCapacity()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetGain.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetGain%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L177">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetGain_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetGain*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetGain" data-uid="ES.AscomAlpaca.Devices.ICamera.GetGain">GetGain()</h4>
+  <div class="markdown level1 summary"><p>Returns an index into the Gains array for the selected camera gain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetGain()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetGainMax.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetGainMax%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L189">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetGainMax_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetGainMax*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetGainMax" data-uid="ES.AscomAlpaca.Devices.ICamera.GetGainMax">GetGainMax()</h4>
+  <div class="markdown level1 summary"><p>Returns the maximum value of Gain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetGainMax()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetGainMin.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetGainMin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L195">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetGainMin_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetGainMin*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetGainMin" data-uid="ES.AscomAlpaca.Devices.ICamera.GetGainMin">GetGainMin()</h4>
+  <div class="markdown level1 summary"><p>Returns the minimum value of Gain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetGainMin()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetGains.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetGains%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L201">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetGains_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetGains*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetGains" data-uid="ES.AscomAlpaca.Devices.ICamera.GetGains">GetGains()</h4>
+  <div class="markdown level1 summary"><p>Returns the Gains supported by the camera.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;string&gt; GetGains()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetHeatSinkTemperature.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetHeatSinkTemperature%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L214">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetHeatSinkTemperature_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetHeatSinkTemperature*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetHeatSinkTemperature" data-uid="ES.AscomAlpaca.Devices.ICamera.GetHeatSinkTemperature">GetHeatSinkTemperature()</h4>
+  <div class="markdown level1 summary"><p>Returns the current heat sink temperature (called &quot;ambient temperature&quot;
+by some manufacturers) in degrees Celsius.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetHeatSinkTemperature()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetImageArray.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetImageArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L239">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetImageArray_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetImageArray*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetImageArray" data-uid="ES.AscomAlpaca.Devices.ICamera.GetImageArray">GetImageArray()</h4>
+  <div class="markdown level1 summary"><p>Returns an array of integers containing the exposure pixel values&quot;,
+&quot;description&quot;: &quot;Returns an array of 32bit integers containing the pixel values from the last
+exposure. This call can return either a 2 dimension (monochrome images) or 3 dimension (colour or
+multi-plane images) array of size NumX * NumY or NumX * NumY * NumPlanes. Where applicable, the
+size of NumPlanes has to be determined by inspection of the returned Array.</p>
+<p>Since 32bit integers are always returned by this call, the returned JSON Type value (0 = Unknown,
+1 = short(16bit), 2 = int(32bit), 3 = Double) is always 2. The number of planes is given in the
+returned Rank value.</p>
+<p>When de-serialising to an object it helps enormously to know the array Rank beforehand so that
+the correct data class can be used. This can be achieved through a regular expression or by
+direct parsing of the returned JSON string to extract the Type and Rank values before
+de-serialising.</p>
+<p>This regular expression accomplishes the etraction into two named groups Type and Rank</p>
+<p>^<em>&quot;Type&quot;:(?&lt;Type&gt;\d</em>),&quot;Rank&quot;:(?&lt;Rank&gt;\d*)</p>
+<p>which can then be used to select the correct de-serialisation data class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Array GetImageArray()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Array</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetImageArrayVariant.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetImageArrayVariant%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L263">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetImageArrayVariant_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetImageArrayVariant*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetImageArrayVariant" data-uid="ES.AscomAlpaca.Devices.ICamera.GetImageArrayVariant">GetImageArrayVariant()</h4>
+  <div class="markdown level1 summary"><p>Returns an array containing the pixel values from the last exposure. This call can return either
+a 2 dimension (monochrome images) or 3 dimension (colour or multi-plane images) array of size
+NumX * NumY  or NumX * NumY * NumPlanes. Where applicable, the size of NumPlanes has to be
+determined by inspection of the returned Array.</p>
+<p>This call can return values as short(16bit) integers, int(32bit) integers or double floating
+point values. The nature of the returned values is given in the Type parameter: 0 = Unknown, 1 =
+short(16bit), 2 = int(32bit), 3 = Double. The number of planes is given in the returned Rank value.</p>
+<p>When deserialising to an object it helps enormously to know the Type and Rank beforehand so that
+the correct data class can be used. This can be achieved through a regular expression or by
+direct parsing of the returned JSON string to extract the Type and Rank values before
+deserialising.</p>
+<p>This regular expression accomplishes the extraction into two named groups: Type and Rank:</p>
+<p><strong><code>^*&amp;quot;Type&amp;quot;:(?&amp;lt;Type&gt;\\d*),&amp;quot;Rank&amp;quot;:(?&amp;lt;Rank&gt;\\d*)</code></strong></p>
+<p>which can then be used to select the correct deserialisation data class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Array GetImageArrayVariant()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Array</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetLastExposureDuration.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetLastExposureDuration%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L281">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetLastExposureDuration_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetLastExposureDuration*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetLastExposureDuration" data-uid="ES.AscomAlpaca.Devices.ICamera.GetLastExposureDuration">GetLastExposureDuration()</h4>
+  <div class="markdown level1 summary"><p>Get the duration of the last exposure in seconds (i.e. shutter open time).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetLastExposureDuration()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetLastExposureStartTime.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetLastExposureStartTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L288">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetLastExposureStartTime_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetLastExposureStartTime*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetLastExposureStartTime" data-uid="ES.AscomAlpaca.Devices.ICamera.GetLastExposureStartTime">GetLastExposureStartTime()</h4>
+  <div class="markdown level1 summary"><p>Start time of the last exposure in FITS standard format.
+(CCYY-MM-DDThh:mm:ss[.sss...])</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTime GetLastExposureStartTime()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetMaxADU.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetMaxADU%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L294">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetMaxADU_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetMaxADU*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetMaxADU" data-uid="ES.AscomAlpaca.Devices.ICamera.GetMaxADU">GetMaxADU()</h4>
+  <div class="markdown level1 summary"><p>Reports the maximum ADU value the camera can produce.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetMaxADU()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetMaxBinX.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetMaxBinX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L300">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetMaxBinX_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetMaxBinX*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetMaxBinX" data-uid="ES.AscomAlpaca.Devices.ICamera.GetMaxBinX">GetMaxBinX()</h4>
+  <div class="markdown level1 summary"><p>Returns the maximum allowed binning for the X camera axis</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetMaxBinX()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetMaxBinY.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetMaxBinY%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L306">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetMaxBinY_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetMaxBinY*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetMaxBinY" data-uid="ES.AscomAlpaca.Devices.ICamera.GetMaxBinY">GetMaxBinY()</h4>
+  <div class="markdown level1 summary"><p>Returns the maximum allowed binning for the Y camera axis</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetMaxBinY()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetNumX.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetNumX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L312">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetNumX_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetNumX*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetNumX" data-uid="ES.AscomAlpaca.Devices.ICamera.GetNumX">GetNumX()</h4>
+  <div class="markdown level1 summary"><p>Returns the current subframe width, if binning is active, value is in binned pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetNumX()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetNumY.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetNumY%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L324">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetNumY_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetNumY*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetNumY" data-uid="ES.AscomAlpaca.Devices.ICamera.GetNumY">GetNumY()</h4>
+  <div class="markdown level1 summary"><p>Returns the current subframe height, if binning is active, value is in binned pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetNumY()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetPercentCompleted.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetPercentCompleted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L338">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetPercentCompleted_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetPercentCompleted*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetPercentCompleted" data-uid="ES.AscomAlpaca.Devices.ICamera.GetPercentCompleted">GetPercentCompleted()</h4>
+  <div class="markdown level1 summary"><p>Returns the percentage of the current operation that is complete.
+If valid, returns an integer between 0 and 100, where 0 indicates 0%
+progress (function just started) and 100 indicates 100% progress (i.e. completion).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetPercentCompleted()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetPixelSizeX.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetPixelSizeX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L344">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetPixelSizeX_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetPixelSizeX*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetPixelSizeX" data-uid="ES.AscomAlpaca.Devices.ICamera.GetPixelSizeX">GetPixelSizeX()</h4>
+  <div class="markdown level1 summary"><p>Returns the width of the CCD chip pixels in microns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetPixelSizeX()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetPixelSizeY.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetPixelSizeY%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L351">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetPixelSizeY_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetPixelSizeY*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetPixelSizeY" data-uid="ES.AscomAlpaca.Devices.ICamera.GetPixelSizeY">GetPixelSizeY()</h4>
+  <div class="markdown level1 summary"><p>Returns the height of the CCD chip pixels in microns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetPixelSizeY()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetReadoutMode.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetReadoutMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L359">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetReadoutMode_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetReadoutMode*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetReadoutMode" data-uid="ES.AscomAlpaca.Devices.ICamera.GetReadoutMode">GetReadoutMode()</h4>
+  <div class="markdown level1 summary"><p>Indicates the canera's readout mode as an index into the array ReadoutModes.
+ReadoutMode is an index into the array ReadoutModes and returns the
+desired readout mode for the camera. Defaults to 0 if not set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetReadoutMode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetReadoutModes.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetReadoutModes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L374">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetReadoutModes_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetReadoutModes*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetReadoutModes" data-uid="ES.AscomAlpaca.Devices.ICamera.GetReadoutModes">GetReadoutModes()</h4>
+  <div class="markdown level1 summary"><p>Get the list of available readout modes.
+This property provides an array of strings, each of which describes
+an available readout mode of the camera.
+At least one string must be present in the list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;string&gt; GetReadoutModes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetSensorName.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetSensorName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L380">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetSensorName_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetSensorName*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetSensorName" data-uid="ES.AscomAlpaca.Devices.ICamera.GetSensorName">GetSensorName()</h4>
+  <div class="markdown level1 summary"><p>Gets the name of the sensor used within the camera.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetSensorName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetSensorType.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetSensorType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L387">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetSensorType_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetSensorType*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetSensorType" data-uid="ES.AscomAlpaca.Devices.ICamera.GetSensorType">GetSensorType()</h4>
+  <div class="markdown level1 summary"><p>Returns a value indicating whether the sensor is monochrome, or what Bayer matrix it encodes.
+Please see the ASCOM Help file for more informaiton on the SensorType.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">SensorType GetSensorType()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.AscomAlpaca.Devices.SensorType.html">SensorType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetStartX.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetStartX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L406">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetStartX_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetStartX*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetStartX" data-uid="ES.AscomAlpaca.Devices.ICamera.GetStartX">GetStartX()</h4>
+  <div class="markdown level1 summary"><p>Gets the subframe start position for the X axis (0 based).
+If binning is active, value is in binned pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetStartX()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_GetStartY.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.GetStartY%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L419">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_GetStartY_" data-uid="ES.AscomAlpaca.Devices.ICamera.GetStartY*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_GetStartY" data-uid="ES.AscomAlpaca.Devices.ICamera.GetStartY">GetStartY()</h4>
+  <div class="markdown level1 summary"><p>Gets the subframe start position for the Y axis (0 based).
+If binning is active, value is in binned pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetStartY()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_HasShutter.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.HasShutter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L207">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_HasShutter_" data-uid="ES.AscomAlpaca.Devices.ICamera.HasShutter*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_HasShutter" data-uid="ES.AscomAlpaca.Devices.ICamera.HasShutter">HasShutter()</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the camera has a mechanical shutter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HasShutter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_IsCoolerOn.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.IsCoolerOn%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L116">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_IsCoolerOn_" data-uid="ES.AscomAlpaca.Devices.ICamera.IsCoolerOn*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_IsCoolerOn" data-uid="ES.AscomAlpaca.Devices.ICamera.IsCoolerOn">IsCoolerOn()</h4>
+  <div class="markdown level1 summary"><p>Returns the current cooler on/off state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsCoolerOn()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_IsFastReadout.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.IsFastReadout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L158">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_IsFastReadout_" data-uid="ES.AscomAlpaca.Devices.ICamera.IsFastReadout*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_IsFastReadout" data-uid="ES.AscomAlpaca.Devices.ICamera.IsFastReadout">IsFastReadout()</h4>
+  <div class="markdown level1 summary"><p>Returns whether Fast Readout Mode is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsFastReadout()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_IsImageReady.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.IsImageReady%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L269">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_IsImageReady_" data-uid="ES.AscomAlpaca.Devices.ICamera.IsImageReady*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_IsImageReady" data-uid="ES.AscomAlpaca.Devices.ICamera.IsImageReady">IsImageReady()</h4>
+  <div class="markdown level1 summary"><p>Indicates that an image is ready to be downloaded</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsImageReady()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_IsPulseGuiding.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.IsPulseGuiding%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L275">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_IsPulseGuiding_" data-uid="ES.AscomAlpaca.Devices.ICamera.IsPulseGuiding*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_IsPulseGuiding" data-uid="ES.AscomAlpaca.Devices.ICamera.IsPulseGuiding">IsPulseGuiding()</h4>
+  <div class="markdown level1 summary"><p>Indicates that the camera is pulse guideing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsPulseGuiding()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_PulseGuide_ES_AscomAlpaca_Devices_GuideDirection_System_Int32_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.PulseGuide(ES.AscomAlpaca.Devices.GuideDirection%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L437">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_PulseGuide_" data-uid="ES.AscomAlpaca.Devices.ICamera.PulseGuide*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_PulseGuide_ES_AscomAlpaca_Devices_GuideDirection_System_Int32_" data-uid="ES.AscomAlpaca.Devices.ICamera.PulseGuide(ES.AscomAlpaca.Devices.GuideDirection,System.Int32)">PulseGuide(GuideDirection, Int32)</h4>
+  <div class="markdown level1 summary"><p>Activates the Camera's mount control sytem to instruct the mount to move in a particular direction for a given period of time</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void PulseGuide(GuideDirection direction, int duration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.AscomAlpaca.Devices.GuideDirection.html">GuideDirection</a></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>Direction of movement</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>Duration of movement in milli-seconds</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_SetBinX_System_Int32_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.SetBinX(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L33">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_SetBinX_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetBinX*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_SetBinX_System_Int32_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetBinX(System.Int32)">SetBinX(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the binning factor for the X axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetBinX(int binX)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">binX</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_SetBinY_System_Int32_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.SetBinY(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L44">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_SetBinY_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetBinY*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_SetBinY_System_Int32_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetBinY(System.Int32)">SetBinY(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the binning factor for the Y axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetBinY(int binY)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">binY</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_SetCCDTemperatureSetPoint_System_Double_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.SetCCDTemperatureSetPoint(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L399">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_SetCCDTemperatureSetPoint_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetCCDTemperatureSetPoint*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_SetCCDTemperatureSetPoint_System_Double_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetCCDTemperatureSetPoint(System.Double)">SetCCDTemperatureSetPoint(Double)</h4>
+  <div class="markdown level1 summary"><p>Set the camera's cooler setpoint (degrees Celsius).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetCCDTemperatureSetPoint(double temperature)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">temperature</span></td>
+        <td><p>Temperature set point in degrees Celsius</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_SetCoolerOn_System_Boolean_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.SetCoolerOn(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L122">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_SetCoolerOn_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetCoolerOn*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_SetCoolerOn_System_Boolean_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetCoolerOn(System.Boolean)">SetCoolerOn(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Turns on and off the camera cooler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetCoolerOn(bool coolerOn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">coolerOn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_SetFastReadout_System_Boolean_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.SetFastReadout(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L164">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_SetFastReadout_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetFastReadout*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_SetFastReadout_System_Boolean_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetFastReadout(System.Boolean)">SetFastReadout(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets whether Fast Readout Mode is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetFastReadout(bool fastReadout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">fastReadout</span></td>
+        <td><p>True to enable fast readout mode</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_SetGain_System_Int32_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.SetGain(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L183">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_SetGain_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetGain*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_SetGain_System_Int32_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetGain(System.Int32)">SetGain(Int32)</h4>
+  <div class="markdown level1 summary"><p>Set the camera gain</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetGain(int gain)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">gain</span></td>
+        <td><p>Index of the current camera gain in the Gains string array.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_SetNumX_System_Int32_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.SetNumX(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L318">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_SetNumX_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetNumX*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_SetNumX_System_Int32_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetNumX(System.Int32)">SetNumX(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the current subframe width</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetNumX(int numX)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">numX</span></td>
+        <td><p>Sets the subframe width, if binning is active, value is in binned pixels.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_SetNumY_System_Int32_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.SetNumY(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L330">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_SetNumY_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetNumY*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_SetNumY_System_Int32_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetNumY(System.Int32)">SetNumY(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the current subframe width</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetNumY(int numY)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">numY</span></td>
+        <td><p>Sets the subframe height, if binning is active, value is in binned pixels.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_SetReadoutMode_System_Int32_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.SetReadoutMode(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L365">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_SetReadoutMode_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetReadoutMode*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_SetReadoutMode_System_Int32_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetReadoutMode(System.Int32)">SetReadoutMode(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the ReadoutMode as an index into the array ReadoutModes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetReadoutMode(int readoutMode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">readoutMode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_SetStartX_System_Int32_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.SetStartX(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L412">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_SetStartX_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetStartX*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_SetStartX_System_Int32_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetStartX(System.Int32)">SetStartX(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the current subframe X axis start position in binned pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetStartX(int startX)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startX</span></td>
+        <td><p>The subframe X axis start position in binned pixels.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_SetStartY_System_Int32_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.SetStartY(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L425">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_SetStartY_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetStartY*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_SetStartY_System_Int32_" data-uid="ES.AscomAlpaca.Devices.ICamera.SetStartY(System.Int32)">SetStartY(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the current subframe Y axis start position in binned pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetStartY(int startY)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startY</span></td>
+        <td><p>The subframe Y axis start position in binned pixels.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_StartExposure_System_Double_System_Boolean_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.StartExposure(System.Double%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L444">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_StartExposure_" data-uid="ES.AscomAlpaca.Devices.ICamera.StartExposure*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_StartExposure_System_Double_System_Boolean_" data-uid="ES.AscomAlpaca.Devices.ICamera.StartExposure(System.Double,System.Boolean)">StartExposure(Double, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Starts an exposure. Use ImageReady to check when the exposure is complete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StartExposure(double duration, bool isLight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>Duration of exposure in seconds</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isLight</span></td>
+        <td><p>True if light frame, false if dark frame.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera_StopExposure.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera.StopExposure%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L449">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_ICamera_StopExposure_" data-uid="ES.AscomAlpaca.Devices.ICamera.StopExposure*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_ICamera_StopExposure" data-uid="ES.AscomAlpaca.Devices.ICamera.StopExposure">StopExposure()</h4>
+  <div class="markdown level1 summary"><p>Stops the current exposure, if any. If an exposure is in progress, the readout process is initiated. Ignored if readout is already in process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StopExposure()</code></pre>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="ES.AscomAlpaca.Devices.ICameraAsync.html">ICameraAsync</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_ICamera.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.ICamera%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/ICamera.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

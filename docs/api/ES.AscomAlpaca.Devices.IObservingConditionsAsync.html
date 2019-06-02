@@ -1,0 +1,788 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IObservingConditionsAsync
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IObservingConditionsAsync
+   ">
+    <meta name="generator" content="docfx 2.42.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync">
+  
+  
+  <h1 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync" class="text-break">Interface IObservingConditionsAsync
+  </h1>
+  <div class="markdown level0 summary"><p>Defines the capabilities supported by an ASCOM Alpaca Observing conditions device</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDeviceAsync.html#ES_AscomAlpaca_Devices_IDeviceAsync_DeviceNumber">IDeviceAsync.DeviceNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDeviceAsync.html#ES_AscomAlpaca_Devices_IDeviceAsync_InvokeActionAsync_System_String_System_String_">IDeviceAsync.InvokeActionAsync(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDeviceAsync.html#ES_AscomAlpaca_Devices_IDeviceAsync_SendCommandBlindAsync_System_String_System_Boolean_">IDeviceAsync.SendCommandBlindAsync(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDeviceAsync.html#ES_AscomAlpaca_Devices_IDeviceAsync_SendCommandBoolAsync_System_String_System_Boolean_">IDeviceAsync.SendCommandBoolAsync(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDeviceAsync.html#ES_AscomAlpaca_Devices_IDeviceAsync_SendCommandStringAsync_System_String_System_Boolean_">IDeviceAsync.SendCommandStringAsync(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDeviceAsync.html#ES_AscomAlpaca_Devices_IDeviceAsync_IsConnectedAsync">IDeviceAsync.IsConnectedAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDeviceAsync.html#ES_AscomAlpaca_Devices_IDeviceAsync_SetConnectedAsync_System_Boolean_">IDeviceAsync.SetConnectedAsync(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDeviceAsync.html#ES_AscomAlpaca_Devices_IDeviceAsync_GetDescriptionAsync">IDeviceAsync.GetDescriptionAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDeviceAsync.html#ES_AscomAlpaca_Devices_IDeviceAsync_GetDriverInfoAsync">IDeviceAsync.GetDriverInfoAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDeviceAsync.html#ES_AscomAlpaca_Devices_IDeviceAsync_GetDriverVersionAsync">IDeviceAsync.GetDriverVersionAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDeviceAsync.html#ES_AscomAlpaca_Devices_IDeviceAsync_GetInterfaceVersionAsync">IDeviceAsync.GetInterfaceVersionAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDeviceAsync.html#ES_AscomAlpaca_Devices_IDeviceAsync_GetNameAsync">IDeviceAsync.GetNameAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.AscomAlpaca.Devices.IDeviceAsync.html#ES_AscomAlpaca_Devices_IDeviceAsync_GetSupportedActionsAsync">IDeviceAsync.GetSupportedActionsAsync()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ES.AscomAlpaca.Devices.html">ES.AscomAlpaca.Devices</a></h6>
+  <h6><strong>Assembly</strong>: ES.AscomAlpaca.Shared.dll</h6>
+  <h5 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IObservingConditionsAsync : IDeviceAsync</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetAveragePeriodAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetAveragePeriodAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L18">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetAveragePeriodAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetAveragePeriodAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetAveragePeriodAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetAveragePeriodAsync">GetAveragePeriodAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the time period over which observations will be averaged</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetAveragePeriodAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetCloudCoverAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetCloudCoverAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L30">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetCloudCoverAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetCloudCoverAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetCloudCoverAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetCloudCoverAsync">GetCloudCoverAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the percentage of the sky obscured by cloud</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetCloudCoverAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetDewPointAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetDewPointAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L36">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetDewPointAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetDewPointAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetDewPointAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetDewPointAsync">GetDewPointAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the atmospheric dew point at the observatory reported in °C.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetDewPointAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetHumidityAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetHumidityAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L42">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetHumidityAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetHumidityAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetHumidityAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetHumidityAsync">GetHumidityAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the atmospheric  humidity (%) at the observatory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetHumidityAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetPressureAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetPressureAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L48">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetPressureAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetPressureAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetPressureAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetPressureAsync">GetPressureAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the atmospheric pressure in hectoPascals at the observatory's altitude - NOT reduced to sea level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetPressureAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetRainRateAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetRainRateAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L54">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetRainRateAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetRainRateAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetRainRateAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetRainRateAsync">GetRainRateAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the rain rate (mm/hour) at the observatory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetRainRateAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetSensorDescriptionAsync_ES_AscomAlpaca_Devices_ObservingConditionSensorName_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetSensorDescriptionAsync(ES.AscomAlpaca.Devices.ObservingConditionSensorName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L117">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetSensorDescriptionAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetSensorDescriptionAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetSensorDescriptionAsync_ES_AscomAlpaca_Devices_ObservingConditionSensorName_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetSensorDescriptionAsync(ES.AscomAlpaca.Devices.ObservingConditionSensorName)">GetSensorDescriptionAsync(ObservingConditionSensorName)</h4>
+  <div class="markdown level1 summary"><p>Gets a description of the sensor with the name specified in the PropertyName parameter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; GetSensorDescriptionAsync(ObservingConditionSensorName sensorName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.AscomAlpaca.Devices.ObservingConditionSensorName.html">ObservingConditionSensorName</a></td>
+        <td><span class="parametername">sensorName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetSkyBrightnessAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetSkyBrightnessAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L60">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetSkyBrightnessAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetSkyBrightnessAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetSkyBrightnessAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetSkyBrightnessAsync">GetSkyBrightnessAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the sky brightness at the observatory (Lux)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetSkyBrightnessAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetSkyQualityAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetSkyQualityAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L66">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetSkyQualityAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetSkyQualityAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetSkyQualityAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetSkyQualityAsync">GetSkyQualityAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the sky quality at the observatory (magnitudes per square arc second)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetSkyQualityAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetSkyTemperatureAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetSkyTemperatureAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L72">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetSkyTemperatureAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetSkyTemperatureAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetSkyTemperatureAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetSkyTemperatureAsync">GetSkyTemperatureAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the sky temperature(°C) at the observatory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetSkyTemperatureAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetStarFwhmAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetStarFwhmAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L78">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetStarFwhmAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetStarFwhmAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetStarFwhmAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetStarFwhmAsync">GetStarFwhmAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the seeing at the observatory measured as star full width half maximum (FWHM) in arc secs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetStarFwhmAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetTemperatureAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetTemperatureAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L84">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetTemperatureAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetTemperatureAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetTemperatureAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetTemperatureAsync">GetTemperatureAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the temperature(°C) at the observatory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetTemperatureAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetTimeSinceLastUpdateAsync_ES_AscomAlpaca_Devices_ObservingConditionSensorName_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetTimeSinceLastUpdateAsync(ES.AscomAlpaca.Devices.ObservingConditionSensorName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L123">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetTimeSinceLastUpdateAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetTimeSinceLastUpdateAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetTimeSinceLastUpdateAsync_ES_AscomAlpaca_Devices_ObservingConditionSensorName_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetTimeSinceLastUpdateAsync(ES.AscomAlpaca.Devices.ObservingConditionSensorName)">GetTimeSinceLastUpdateAsync(ObservingConditionSensorName)</h4>
+  <div class="markdown level1 summary"><p>Gets the time since the sensor was last updated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;TimeSpan&gt; GetTimeSinceLastUpdateAsync(ObservingConditionSensorName sensorName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.AscomAlpaca.Devices.ObservingConditionSensorName.html">ObservingConditionSensorName</a></td>
+        <td><span class="parametername">sensorName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetWindDirectionAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetWindDirectionAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L94">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetWindDirectionAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetWindDirectionAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetWindDirectionAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetWindDirectionAsync">GetWindDirectionAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the wind direction. The returned value must be between 0.0 and 360.0,
+interpreted according to the meteorological standard, where a special value
+of 0.0 is returned when the wind speed is 0.0. Wind direction is measured
+clockwise from north, through east, where East=90.0, South=180.0,
+West=270.0 and North=360.0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetWindDirectionAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetWindGustAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetWindGustAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L100">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetWindGustAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetWindGustAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetWindGustAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetWindGustAsync">GetWindGustAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the peak 3 second wind gust(m/s) at the observatory over the last 2 minutes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetWindGustAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetWindSpeedAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetWindSpeedAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L106">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetWindSpeedAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetWindSpeedAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_GetWindSpeedAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.GetWindSpeedAsync">GetWindSpeedAsync()</h4>
+  <div class="markdown level1 summary"><p>Gets the wind speed(m/s) at the observatory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;double&gt; GetWindSpeedAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_RefreshAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.RefreshAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L111">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_RefreshAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.RefreshAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_RefreshAsync" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.RefreshAsync">RefreshAsync()</h4>
+  <div class="markdown level1 summary"><p>Forces the driver to immediately query its attached hardware to refresh sensor values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task RefreshAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync_SetAveragePeriodAsync_System_Double_.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync.SetAveragePeriodAsync(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L24">View Source</a>
+  </span>
+  <a id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_SetAveragePeriodAsync_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.SetAveragePeriodAsync*"></a>
+  <h4 id="ES_AscomAlpaca_Devices_IObservingConditionsAsync_SetAveragePeriodAsync_System_Double_" data-uid="ES.AscomAlpaca.Devices.IObservingConditionsAsync.SetAveragePeriodAsync(System.Double)">SetAveragePeriodAsync(Double)</h4>
+  <div class="markdown level1 summary"><p>Sets the time period over which observations will be averaged</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task SetAveragePeriodAsync(double period)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">period</span></td>
+        <td><p>Time period (hours) over which to average sensor readings</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="ES.AscomAlpaca.Devices.IObservingConditions.html">IObservingConditions</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/develop/apiSpec/new?filename=ES_AscomAlpaca_Devices_IObservingConditionsAsync.md&amp;value=---%0Auid%3A%20ES.AscomAlpaca.Devices.IObservingConditionsAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/src/AscomAlpaca.Shared/Devices/IObservingConditionsAsync.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
