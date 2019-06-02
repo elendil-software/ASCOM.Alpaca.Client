@@ -3,8 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:converters="clr-namespace:ES.AscomAlpaca.Client.Demo.Desktop.Converters"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <converters:RightAscensionConverter x:Key="RightAscensionConverter" />
+        <converters:AngleConverter x:Key="AngleConverter" />
+    </UserControl.Resources>
     <StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,5,5,5" VerticalAlignment="Center">
             <Label VerticalAlignment="Center" FontWeight="Bold">Host</Label>
@@ -184,13 +189,13 @@
                     </Grid.RowDefinitions>
 
                     <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">Right Ascension</Label>
-                    <Label Grid.Row="0" Grid.Column="1" Name="RightAscension">...</Label>
+                    <Label Grid.Row="0" Grid.Column="1" Name="RightAscension" Content="{Binding RightAscension, Converter={StaticResource RightAscensionConverter}}"/>
                     <Label Grid.Row="1" Grid.Column="0" FontWeight="Bold">Declination</Label>
-                    <Label Grid.Row="1" Grid.Column="1" Name="Declination">...</Label>
+                    <Label Grid.Row="1" Grid.Column="1" Name="Declination" Content="{Binding Declination, Converter={StaticResource AngleConverter}}"/>
                     <Label Grid.Row="2" Grid.Column="0" FontWeight="Bold">Azimuth</Label>
-                    <Label Grid.Row="2" Grid.Column="1" Name="Azimuth">...</Label>
+                    <Label Grid.Row="2" Grid.Column="1" Name="Azimuth" Content="{Binding Azimuth, Converter={StaticResource AngleConverter}}"/>
                     <Label Grid.Row="3" Grid.Column="0" FontWeight="Bold">Altitude</Label>
-                    <Label Grid.Row="3" Grid.Column="1" Name="Altitude">...</Label>
+                    <Label Grid.Row="3" Grid.Column="1" Name="Altitude" Content="{Binding Altitude, Converter={StaticResource AngleConverter}}"/>
                 </Grid>
             </GroupBox>
         </StackPanel>
@@ -212,11 +217,11 @@
                 <StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Label VerticalAlignment="Center" FontWeight="Bold">R.A.</Label>
-                        <TextBox Margin="5" Padding="5" Width="100" Name="TargetRightAscension"></TextBox>
+                        <TextBox Margin="5" Padding="5" Width="100" Name="TargetRightAscension" Text="{Binding TargetRightAscension, Converter={StaticResource RightAscensionConverter}}"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Label VerticalAlignment="Center" FontWeight="Bold">Dec.</Label>
-                        <TextBox Margin="5" Padding="5" Width="100" Name="TargetDeclination"></TextBox>
+                        <TextBox Margin="5" Padding="5" Width="100" Name="TargetDeclination" Text="{Binding TargetDeclination, Converter={StaticResource AngleConverter}}"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Button Margin="5" Padding="5" Name="SetTarget">Set Target</Button>
