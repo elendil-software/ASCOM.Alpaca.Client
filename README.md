@@ -10,5 +10,4 @@ Any improvement suggestion, new ideas, ... will be appreciated
 
 ## Documentation
 
-You will find all information in the [wiki](https://github.com/elendil-software/ASCOM.Alpaca.Client/wiki)
-
+[Documentation and API Reference](https://elendil-software.github.io/ASCOM.Alpaca.Client)
