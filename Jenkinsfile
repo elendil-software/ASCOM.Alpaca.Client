@@ -3,7 +3,7 @@ pipeline {
   environment {
     SolutionFile = 'ASCOM.Alpaca.Client.sln'
     SonarqubeProjectKey = 'ASCOM.Alpaca.Client'
-    NuGetPackageKey = 'AscomAlpacaClient'
+    NuGetPackageKey = 'ES.AscomAlpaca'
   }
   parameters {
     booleanParam(
@@ -70,7 +70,7 @@ pipeline {
         powershell(script: "${env.ScriptsDir}\\MSBuild.ps1", label: 'MSBuild')
       }
     }
-    stage('NuGet') {
+    stage('Create local NuGet') {
       when {
         expression { params.Publish_NuGet_Package == true }
       }
@@ -79,7 +79,7 @@ pipeline {
         powershell(script: "${env.ScriptsDir}\\NuGet-CopyNupkg.ps1", label: 'Copy *.nupkg files to local directory')
       }
     }
-    stage('NuGet') {
+    stage('Push NuGet') {
       when {
         expression { params.Push_NuGet_Package == true }
       }
