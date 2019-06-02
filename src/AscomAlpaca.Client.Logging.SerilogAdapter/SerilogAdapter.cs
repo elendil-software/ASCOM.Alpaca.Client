@@ -3,15 +3,23 @@ using Serilog.Events;
 
 namespace ES.AscomAlpaca.Client.Logging
 {
+    /// <summary>
+    /// <see cref="ILogger"/> adapter for <see cref="Serilog.ILogger"/>
+    /// </summary>
     public class SerilogAdapter : ILogger
     {
         private readonly Serilog.ILogger _logger;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SerilogAdapter" /> class.
+        /// </summary>
+        /// <param name="logger">A configured instance of <see cref="Serilog.ILogger"/></param>
         public SerilogAdapter(Serilog.ILogger logger)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
+        /// <inheritdoc/>
         public void Log(LogEvent logEvent)
         {
             LogEventLevel serilogLogLevel = ConvertLogLevel(logEvent.LogLevel);

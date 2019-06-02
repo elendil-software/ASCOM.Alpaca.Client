@@ -3,15 +3,23 @@ using NLog;
 
 namespace ES.AscomAlpaca.Client.Logging
 {
+    /// <summary>
+    /// <see cref="ILogger"/> adapter for <see cref="NLog.ILogger"/>
+    /// </summary>
     public class NLogAdapter : ILogger
     {
         private readonly NLog.ILogger _logger;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NLogAdapter" /> class.
+        /// </summary>
+        /// <param name="logger">A configured instance of <see cref="NLog.ILogger"/></param>
         public NLogAdapter(NLog.ILogger logger)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
         
+        /// <inheritdoc/>
         public void Log(LogEvent logEvent)
         {
             NLog.LogLevel nLogLevel = ConvertLogLevel(logEvent.LogLevel);
