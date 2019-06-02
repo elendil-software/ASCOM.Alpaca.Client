@@ -1,0 +1,18 @@
+- name: Introduction
+  href: Getting-Started.md
+- name: Using Ascom Alpaca Client
+  items:
+    - name: Components
+      href: Components.md
+    - name: Supported Devices
+      href: Supported-Devices.md
+    - name: Device Configuration
+      href: Device-Configuration.md
+    - name: Client Transaction ID Generator
+      href: Client-Transaction-ID-Generator.md
+    - name: Logging
+      href: Logging.md
+- name: Advanced Configuration
+  href: Advanced-Configuration.md  
+- name: Sync And Async
+  href: Sync-And-Async.md
