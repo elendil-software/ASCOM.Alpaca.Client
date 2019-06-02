@@ -1,9 +1,7 @@
-- name: Introduction
+- name: Getting Started
   href: Getting-Started.md
-- name: Using Ascom Alpaca Client
+- name: Components
   items:
-    - name: Components
-      href: Components.md
     - name: Supported Devices
       href: Supported-Devices.md
     - name: Device Configuration
@@ -13,6 +11,4 @@
     - name: Logging
       href: Logging.md
 - name: Advanced Configuration
-  href: Advanced-Configuration.md  
-- name: Sync And Async
-  href: Sync-And-Async.md
+  href: Advanced-Configuration.md

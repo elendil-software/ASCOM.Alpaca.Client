@@ -7,5 +7,5 @@ Currently NLog and Serilog are available. Feel free to open an issue or a Pull R
 
 ## Logger adapters
 
-* [SerilogAdapter](https://www.nuget.org/packages/AscomAlpacaClient.Logging.SerilogAdapter/)
-* [NLogAdapter](https://www.nuget.org/packages/AscomAlpacaClient.Logging.NLogAdapter/)
+* [SerilogAdapter](https://www.nuget.org/packages/)
+* [NLogAdapter](https://www.nuget.org/packages/)
