@@ -23,11 +23,11 @@
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <DocumentationFile></DocumentationFile>
+      <DocumentationFile>bin\Debug\ES.AscomAlpaca.Client.Logging.NLogAdapter.xml</DocumentationFile>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DocumentationFile></DocumentationFile>
+      <DocumentationFile>bin\Release\ES.AscomAlpaca.Client.Logging.NLogAdapter.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -37,7 +37,6 @@
     <ItemGroup>
       <None Include="..\..\LICENSE.md">
         <Pack>True</Pack>
-        <PackagePath></PackagePath>
       </None>
     </ItemGroup>
 

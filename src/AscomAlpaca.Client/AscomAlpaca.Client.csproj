@@ -16,8 +16,6 @@
     <AssemblyVersion>0.1.0</AssemblyVersion>
     <FileVersion>0.1.0</FileVersion>
     <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
-    <PackageLicenseUrl></PackageLicenseUrl>
-    <PackageIconUrl></PackageIconUrl>
     <TargetFrameworks>net452;net462;net472;netstandard2.0;netcoreapp2.2</TargetFrameworks>
     <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">netstandard2.0;netcoreapp2.2</TargetFrameworks>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
@@ -45,7 +43,6 @@
   <ItemGroup>
     <None Include="..\..\LICENSE.md">
       <Pack>True</Pack>
-      <PackagePath></PackagePath>
     </None>
   </ItemGroup>
 
