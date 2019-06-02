@@ -26,11 +26,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DocumentationFile>bin\Debug\AscomAlpaca.Client.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\ES.AscomAlpaca.Client.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DocumentationFile>bin\Release\AscomAlpaca.Client.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\ES.AscomAlpaca.Client.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
