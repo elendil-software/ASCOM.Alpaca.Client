@@ -53,5 +53,14 @@
     <ProjectReference Include="..\AscomAlpaca.Shared\AscomAlpaca.Shared.csproj" />
   </ItemGroup>
 
-
+  <PropertyGroup>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);IncludeDependencies</TargetsForTfmSpecificBuildOutput>
+  </PropertyGroup>
+  
+  <Target Name="IncludeDependencies">
+    <ItemGroup>
+      <BuildOutputInPackage Include="$(OutputPath)ES.AscomAlpaca.Shared.dll" />
+      <BuildOutputInPackage Include="$(OutputPath)ES.AscomAlpaca.Shared.xml" />
+    </ItemGroup>
+  </Target>
 </Project>
