@@ -11,12 +11,12 @@
         <Product>C# ASCOM Alpaca Client</Product>
         <Description>C# ASCOM Alpaca Client Library allowing to send request to ASCOM Alpaca</Description>
         <Copyright>Copyright © 2019 - Julien Tschäppät</Copyright>
-        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <PackageTags>ASCOM Alpaca Astronomy</PackageTags>
         <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
         <PackageId>ES.AscomAlpaca.Shared</PackageId>
         <AssemblyName>ES.AscomAlpaca.Shared</AssemblyName>
         <RootNamespace>ES.AscomAlpaca</RootNamespace>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -30,6 +30,7 @@
     <ItemGroup>
       <None Include="..\..\LICENSE.md">
         <Pack>True</Pack>
+        <PackagePath></PackagePath>
       </None>
     </ItemGroup>
 
