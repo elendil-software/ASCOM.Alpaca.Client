@@ -41,7 +41,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AscomAlpaca.Shared\AscomAlpaca.Shared.csproj" />
+    <ProjectReference Include="..\AscomAlpaca.Shared\AscomAlpaca.Shared.csproj">
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
