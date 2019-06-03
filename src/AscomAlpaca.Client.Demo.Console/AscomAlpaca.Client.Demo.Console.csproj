@@ -41,6 +41,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\AscomAlpaca.Client\AscomAlpaca.Client.csproj" />
+      <ProjectReference Include="..\AscomAlpaca.Shared\AscomAlpaca.Shared.csproj" />
     </ItemGroup>
 
 </Project>
