@@ -280,6 +280,9 @@ namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
             }
         }
 
+        public double TargetRightAscension { get; set; }
+        public double TargetDeclination { get; set; }
+
         public async Task Connect()
         {
             _telescope = DeviceFactory.CreateDeviceInstance<Telescope>(new DeviceConfiguration
@@ -448,6 +451,27 @@ namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
         {
             await _telescope.PulseGuideAsync(GuideDirection.West, Duration);
             await RefreshMountStatus();
+        }
+
+        public async Task SetTarget()
+        {
+            await _telescope.SetTargetRightAscensionAsync(TargetRightAscension);
+            await _telescope.SetTargetDeclinationAsync(TargetDeclination);
+        }
+
+        public async Task SlewToTarget()
+        {
+            await _telescope.SlewToTargetAsync();
+        }
+
+        public async Task SlewToCoordinates()
+        {
+            await _telescope.SlewToCoordinatesAsync(TargetRightAscension, TargetDeclination);
+        }
+
+        public async Task AbortSlew()
+        {
+            await _telescope.AbortSlewAsync();
         }
         
         private async Task RefreshMountStatus()
