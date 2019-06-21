@@ -3,7 +3,7 @@ pipeline {
   environment {
     SolutionFile = 'ASCOM.Alpaca.Client.sln'
     SonarqubeProjectKey = 'ASCOM.Alpaca.Client'
-    NuGetPackageKey = 'ES.AscomAlpaca'
+    NuGetPackageKey = 'ES.Ascom.Alpaca'
   }
   parameters {
     booleanParam(
