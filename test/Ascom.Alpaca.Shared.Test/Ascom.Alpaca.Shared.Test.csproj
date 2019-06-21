@@ -10,7 +10,7 @@
         <FileVersion>0.1.0</FileVersion>
         <Version>0.1.0</Version>
         <Copyright>Copyright © 2019 - Julien Tschäppät</Copyright>
-        <PackageId>ES.AscomAlpaca.Shared.Test</PackageId>
+        <PackageId>ES.Ascom.Alpaca.Shared.Test</PackageId>
         <Authors>Julien Tschäppät</Authors>
         <Product>C# ASCOM Alpaca Shared Test</Product>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>

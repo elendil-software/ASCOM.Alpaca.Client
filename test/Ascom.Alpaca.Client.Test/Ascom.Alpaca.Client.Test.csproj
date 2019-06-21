@@ -7,7 +7,7 @@
         <FileVersion>0.1.0</FileVersion>
         <Version>0.1.0</Version>
         <Copyright>Copyright © 2019 - Julien Tschäppät</Copyright>
-        <PackageId>ES.AscomAlpaca.Client.Test</PackageId>
+        <PackageId>ES.Ascom.Alpaca.Client.Test</PackageId>
         <Authors>Julien Tschäppät</Authors>
         <Product>C# ASCOM Alpaca Client Test</Product>
         <AssemblyName>ES.Ascom.Alpaca.Client.Test</AssemblyName>

@@ -6,7 +6,7 @@
         <RootNamespace>ES.Ascom.Alpaca.Client.Logging</RootNamespace>
         <AssemblyName>ES.Ascom.Alpaca.Client.Logging.Log4NetAdapter</AssemblyName>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageId>ES.AscomAlpaca.Client.Logging.Log4NetAdapter</PackageId>
+        <PackageId>ES.Ascom.Alpaca.Client.Logging.Log4NetAdapter</PackageId>
         <PackageVersion>0.1.0</PackageVersion>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Version>0.1.0</Version>

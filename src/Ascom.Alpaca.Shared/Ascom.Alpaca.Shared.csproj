@@ -13,7 +13,7 @@
         <Copyright>Copyright © 2019 - Julien Tschäppät</Copyright>
         <PackageTags>ASCOM Alpaca Astronomy</PackageTags>
         <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
-        <PackageId>ES.AscomAlpaca.Shared</PackageId>
+        <PackageId>ES.Ascom.Alpaca.Shared</PackageId>
         <AssemblyName>ES.Ascom.Alpaca.Shared</AssemblyName>
         <RootNamespace>ES.Ascom.Alpaca</RootNamespace>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
