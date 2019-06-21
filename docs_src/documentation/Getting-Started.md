@@ -1,12 +1,10 @@
 ## Installing from NuGet
 
-**TODO : Define package name**
-
-The package is [...](http://nuget.org/packages/...). 
+The package is [ES.Ascom.Alpaca.Client](http://nuget.org/packages/ES.Ascom.Alpaca.Client). 
 The supported platforms are .NET 4.7.2+, .NET Standard 2.0 and .NET Core
 
 ```
-PM> Install-Package ...
+PM> Install-Package ES.Ascom.Alpaca.Client
 ```
 
 ## Basic Usage

@@ -1,0 +1,883 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IDome
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IDome
+   ">
+    <meta name="generator" content="docfx 2.42.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ES.Ascom.Alpaca.Devices.IDome">
+  
+  
+  <h1 id="ES_Ascom_Alpaca_Devices_IDome" data-uid="ES.Ascom.Alpaca.Devices.IDome" class="text-break">Interface IDome
+  </h1>
+  <div class="markdown level0 summary"><p>Defines the capabilities supported by an ASCOM Alpaca Dome device</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_DeviceNumber">IDevice.DeviceNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_InvokeAction_System_String_System_String_">IDevice.InvokeAction(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_SendCommandBlind_System_String_System_Boolean_">IDevice.SendCommandBlind(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_SendCommandBool_System_String_System_Boolean_">IDevice.SendCommandBool(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_SendCommandString_System_String_System_Boolean_">IDevice.SendCommandString(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_IsConnected">IDevice.IsConnected()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_SetConnected_System_Boolean_">IDevice.SetConnected(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_GetDescription">IDevice.GetDescription()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_GetDriverInfo">IDevice.GetDriverInfo()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_GetDriverVersion">IDevice.GetDriverVersion()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_GetInterfaceVersion">IDevice.GetInterfaceVersion()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_GetName">IDevice.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_GetSupportedActions">IDevice.GetSupportedActions()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ES.Ascom.Alpaca.Devices.html">ES.Ascom.Alpaca.Devices</a></h6>
+  <h6><strong>Assembly</strong>: ES.Ascom.Alpaca.Shared.dll</h6>
+  <h5 id="ES_Ascom_Alpaca_Devices_IDome_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IDome : IDevice</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_AbortSlew.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.AbortSlew%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L114">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_AbortSlew_" data-uid="ES.Ascom.Alpaca.Devices.IDome.AbortSlew*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_AbortSlew" data-uid="ES.Ascom.Alpaca.Devices.IDome.AbortSlew">AbortSlew()</h4>
+  <div class="markdown level1 summary"><p>Immediately cancel current dome operation.
+Calling this method will immediately disable hardware slewing (Slaved will become False).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AbortSlew()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_CanFindHome.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.CanFindHome%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L42">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_CanFindHome_" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanFindHome*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_CanFindHome" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanFindHome">CanFindHome()</h4>
+  <div class="markdown level1 summary"><p>True if the dome can move to the home position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanFindHome()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_CanPark.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.CanPark%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L48">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_CanPark_" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanPark*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_CanPark" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanPark">CanPark()</h4>
+  <div class="markdown level1 summary"><p>True if the dome is capable of programmed parking (Park() method)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanPark()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_CanSetAltitude.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.CanSetAltitude%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L54">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_CanSetAltitude_" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanSetAltitude*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_CanSetAltitude" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanSetAltitude">CanSetAltitude()</h4>
+  <div class="markdown level1 summary"><p>True if driver is capable of setting the dome altitude.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanSetAltitude()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_CanSetAzimuth.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.CanSetAzimuth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L60">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_CanSetAzimuth_" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanSetAzimuth*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_CanSetAzimuth" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanSetAzimuth">CanSetAzimuth()</h4>
+  <div class="markdown level1 summary"><p>True if driver is capable of setting the dome azimuth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanSetAzimuth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_CanSetPark.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.CanSetPark%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L66">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_CanSetPark_" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanSetPark*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_CanSetPark" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanSetPark">CanSetPark()</h4>
+  <div class="markdown level1 summary"><p>True if driver is capable of setting the dome park position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanSetPark()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_CanSetShutter.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.CanSetShutter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L72">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_CanSetShutter_" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanSetShutter*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_CanSetShutter" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanSetShutter">CanSetShutter()</h4>
+  <div class="markdown level1 summary"><p>True if driver is capable of automatically operating shutter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanSetShutter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_CanSlave.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.CanSlave%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L78">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_CanSlave_" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanSlave*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_CanSlave" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanSlave">CanSlave()</h4>
+  <div class="markdown level1 summary"><p>True if driver is capable of slaving to a telescope.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanSlave()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_CanSyncAzimuth.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.CanSyncAzimuth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L84">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_CanSyncAzimuth_" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanSyncAzimuth*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_CanSyncAzimuth" data-uid="ES.Ascom.Alpaca.Devices.IDome.CanSyncAzimuth">CanSyncAzimuth()</h4>
+  <div class="markdown level1 summary"><p>True if driver is capable of synchronizing the dome azimuth position using the SyncToAzimuth(Double) method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanSyncAzimuth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_CloseShutter.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.CloseShutter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L119">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_CloseShutter_" data-uid="ES.Ascom.Alpaca.Devices.IDome.CloseShutter*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_CloseShutter" data-uid="ES.Ascom.Alpaca.Devices.IDome.CloseShutter">CloseShutter()</h4>
+  <div class="markdown level1 summary"><p>Close the shutter or otherwise shield telescope from the sky.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CloseShutter()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_FindHome.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.FindHome%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L125">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_FindHome_" data-uid="ES.Ascom.Alpaca.Devices.IDome.FindHome*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_FindHome" data-uid="ES.Ascom.Alpaca.Devices.IDome.FindHome">FindHome()</h4>
+  <div class="markdown level1 summary"><p>Start operation to search for the dome home position.
+After Home position is established initializes Azimuth to the default value and sets the AtHome flag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void FindHome()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_GetAltitude.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.GetAltitude%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L13">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_GetAltitude_" data-uid="ES.Ascom.Alpaca.Devices.IDome.GetAltitude*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_GetAltitude" data-uid="ES.Ascom.Alpaca.Devices.IDome.GetAltitude">GetAltitude()</h4>
+  <div class="markdown level1 summary"><p>The dome altitude (degrees, horizon zero and increasing positive to 90 zenith).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetAltitude()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>The dome altitude</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_GetAzimuth.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.GetAzimuth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L36">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_GetAzimuth_" data-uid="ES.Ascom.Alpaca.Devices.IDome.GetAzimuth*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_GetAzimuth" data-uid="ES.Ascom.Alpaca.Devices.IDome.GetAzimuth">GetAzimuth()</h4>
+  <div class="markdown level1 summary"><p>Returns the dome azimuth (degrees, North zero and increasing clockwise, i.e., 90 East, 180 South, 270 West)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetAzimuth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>The dome azimuth in degrees</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_GetShutterStatus.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.GetShutterStatus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L90">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_GetShutterStatus_" data-uid="ES.Ascom.Alpaca.Devices.IDome.GetShutterStatus*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_GetShutterStatus" data-uid="ES.Ascom.Alpaca.Devices.IDome.GetShutterStatus">GetShutterStatus()</h4>
+  <div class="markdown level1 summary"><p>Returns the status of the dome shutter or roll-off roof.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ShutterState GetShutterStatus()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Devices.ShutterState.html">ShutterState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_IsAtHome.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.IsAtHome%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L23">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_IsAtHome_" data-uid="ES.Ascom.Alpaca.Devices.IDome.IsAtHome*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_IsAtHome" data-uid="ES.Ascom.Alpaca.Devices.IDome.IsAtHome">IsAtHome()</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the dome is in the home position. This is normally used following a FindHome() operation.
+The value is reset with any azimuth slew operation that moves the dome away from the home position.
+AtHome may also become true during normal slew operations, if the dome passes through the home position
+and the dome controller hardware is capable of detecting that; or at the end of a slew operation if the
+dome comes to rest at the home position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsAtHome()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the dome is in the home position, false if not</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_IsAtPark.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.IsAtPark%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L30">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_IsAtPark_" data-uid="ES.Ascom.Alpaca.Devices.IDome.IsAtPark*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_IsAtPark" data-uid="ES.Ascom.Alpaca.Devices.IDome.IsAtPark">IsAtPark()</h4>
+  <div class="markdown level1 summary"><p>True if the dome is in the programmed park position.
+Set only following a Park() operation and reset with any slew operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsAtPark()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the dome is in the park position, false if not</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_IsSlaved.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.IsSlaved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L96">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_IsSlaved_" data-uid="ES.Ascom.Alpaca.Devices.IDome.IsSlaved*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_IsSlaved" data-uid="ES.Ascom.Alpaca.Devices.IDome.IsSlaved">IsSlaved()</h4>
+  <div class="markdown level1 summary"><p>True if the dome is slaved to the telescope in its hardware, else False.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsSlaved()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_IsSlewing.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.IsSlewing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L108">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_IsSlewing_" data-uid="ES.Ascom.Alpaca.Devices.IDome.IsSlewing*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_IsSlewing" data-uid="ES.Ascom.Alpaca.Devices.IDome.IsSlewing">IsSlewing()</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the any part of the dome is moving</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsSlewing()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if any part of the dome is currently moving, False if all dome components are steady.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_OpenShutter.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.OpenShutter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L130">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_OpenShutter_" data-uid="ES.Ascom.Alpaca.Devices.IDome.OpenShutter*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_OpenShutter" data-uid="ES.Ascom.Alpaca.Devices.IDome.OpenShutter">OpenShutter()</h4>
+  <div class="markdown level1 summary"><p>Open shutter or otherwise expose telescope to the sky.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OpenShutter()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_Park.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.Park%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L136">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_Park_" data-uid="ES.Ascom.Alpaca.Devices.IDome.Park*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_Park" data-uid="ES.Ascom.Alpaca.Devices.IDome.Park">Park()</h4>
+  <div class="markdown level1 summary"><p>Rotate dome in azimuth to park position.
+After assuming programmed park position, sets AtPark flag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Park()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_SetPark.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.SetPark%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L141">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_SetPark_" data-uid="ES.Ascom.Alpaca.Devices.IDome.SetPark*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_SetPark" data-uid="ES.Ascom.Alpaca.Devices.IDome.SetPark">SetPark()</h4>
+  <div class="markdown level1 summary"><p>Set the current azimuth, altitude position of dome to be the park position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetPark()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_SetSlaved_System_Boolean_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.SetSlaved(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L102">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_SetSlaved_" data-uid="ES.Ascom.Alpaca.Devices.IDome.SetSlaved*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_SetSlaved_System_Boolean_" data-uid="ES.Ascom.Alpaca.Devices.IDome.SetSlaved(System.Boolean)">SetSlaved(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets whether the dome is slaved to the telescope</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetSlaved(bool slaved)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">slaved</span></td>
+        <td><p>True if telescope is slaved to dome, otherwise false</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_SlewToAltitude_System_Double_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.SlewToAltitude(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L147">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_SlewToAltitude_" data-uid="ES.Ascom.Alpaca.Devices.IDome.SlewToAltitude*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_SlewToAltitude_System_Double_" data-uid="ES.Ascom.Alpaca.Devices.IDome.SlewToAltitude(System.Double)">SlewToAltitude(Double)</h4>
+  <div class="markdown level1 summary"><p>Slew the dome to the given altitude position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SlewToAltitude(double altitude)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">altitude</span></td>
+        <td><p>Target dome altitude (degrees, horizon zero and increasing positive to 90 zenith)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_SlewToAzimuth_System_Double_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.SlewToAzimuth(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L153">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_SlewToAzimuth_" data-uid="ES.Ascom.Alpaca.Devices.IDome.SlewToAzimuth*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_SlewToAzimuth_System_Double_" data-uid="ES.Ascom.Alpaca.Devices.IDome.SlewToAzimuth(System.Double)">SlewToAzimuth(Double)</h4>
+  <div class="markdown level1 summary"><p>Slew the dome to the given azimuth position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SlewToAzimuth(double azimuth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">azimuth</span></td>
+        <td><p>Target dome azimuth (degrees, North zero and increasing clockwise. i.e., 90 East, 180 South, 270 West)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome_SyncToAzimuth_System_Double_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome.SyncToAzimuth(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L158">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IDome_SyncToAzimuth_" data-uid="ES.Ascom.Alpaca.Devices.IDome.SyncToAzimuth*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IDome_SyncToAzimuth_System_Double_" data-uid="ES.Ascom.Alpaca.Devices.IDome.SyncToAzimuth(System.Double)">SyncToAzimuth(Double)</h4>
+  <div class="markdown level1 summary"><p>Synchronize the current position of the dome to the given azimuth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SyncToAzimuth(double azimuth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">azimuth</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="ES.Ascom.Alpaca.Devices.IDomeAsync.html">IDomeAsync</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IDome.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IDome%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IDome.cs/#L7" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

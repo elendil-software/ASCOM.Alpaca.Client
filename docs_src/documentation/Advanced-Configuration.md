@@ -9,7 +9,7 @@ var configuration = new DeviceConfiguration
     Host = "127.0.0.1",
     Port = 11111,
     ApiVersion = "v1",
-    DeviceNumber = 0
+    DeviceNumber = 0,
 };
 
 ITelescope telescope = new Telescope(configuration);

@@ -70,13 +70,14 @@
 
 <p>A logger can be passed passed to device implementation to log the raw responses.
 This should be necessary only if you need to log the ClientID and ClientTransactionID.</p>
-<p>The devices constructors accept logger that implements <code>AscomAlpacaClient.Logging.ILogger</code>.
+<p>The devices constructors accept logger that implements <code>ES.Ascom.Alpaca.Client.Logging.ILogger</code>.
 For conveniency, adapters for common logger are provided in additional NuGet packages.
 Currently NLog and Serilog are available. Feel free to open an issue or a Pull Request if you need implementation for other logger.</p>
 <h2 id="logger-adapters">Logger adapters</h2>
 <ul>
-<li><a href="https://www.nuget.org/packages/">SerilogAdapter</a></li>
-<li><a href="https://www.nuget.org/packages/">NLogAdapter</a></li>
+<li><a href="https://www.nuget.org/packages/ES.Ascom.Alpaca.Client.Logging.SerilogAdapter">Serilog Adapter</a></li>
+<li><a href="https://www.nuget.org/packages/ES.Ascom.Alpaca.Client.Logging.NLogAdapter">NLog Adapter</a></li>
+<li><a href="https://www.nuget.org/packages/ES.Ascom.Alpaca.Client.Logging.Log4NetAdapter">Log4Net Adapter</a></li>
 </ul>
 </article>
           </div>

@@ -9,3 +9,4 @@ An instance of this class is required by any device class.
 | ApiVersion   | v1            | yes      |
 | DeviceNumber | 0             | yes      |
 | ClientId     | -1 (Not set)  | no       |
+| LongTimeout  | 120           | yes      |

@@ -1,0 +1,1193 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Focuser
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Focuser
+   ">
+    <meta name="generator" content="docfx 2.42.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser">
+  
+  
+  <h1 id="ES_Ascom_Alpaca_Client_Devices_Focuser" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser" class="text-break">Class Focuser
+  </h1>
+  <div class="markdown level0 summary"><p>Client implementation of an ASCOM Alpaca Focuser device.</p>
+<p>This class is meant to be use in a client application that need to control an ASCOM Alpaca Focuser</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html">DeviceBase</a></div>
+    <div class="level2"><span class="xref">Focuser</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="ES.Ascom.Alpaca.Devices.IFocuser.html">IFocuser</a></div>
+    <div><a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html">IDevice</a></div>
+    <div><a class="xref" href="ES.Ascom.Alpaca.Devices.IFocuserAsync.html">IFocuserAsync</a></div>
+    <div><a class="xref" href="ES.Ascom.Alpaca.Devices.IDeviceAsync.html">IDeviceAsync</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_DeviceNumber">DeviceBase.DeviceNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_InvokeAction_System_String_System_String_">DeviceBase.InvokeAction(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_InvokeActionAsync_System_String_System_String_">DeviceBase.InvokeActionAsync(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SendCommandBlind_System_String_System_Boolean_">DeviceBase.SendCommandBlind(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SendCommandBlindAsync_System_String_System_Boolean_">DeviceBase.SendCommandBlindAsync(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SendCommandBool_System_String_System_Boolean_">DeviceBase.SendCommandBool(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SendCommandBoolAsync_System_String_System_Boolean_">DeviceBase.SendCommandBoolAsync(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SendCommandString_System_String_System_Boolean_">DeviceBase.SendCommandString(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SendCommandStringAsync_System_String_System_Boolean_">DeviceBase.SendCommandStringAsync(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_IsConnected">DeviceBase.IsConnected()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_IsConnectedAsync">DeviceBase.IsConnectedAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SetConnected_System_Boolean_">DeviceBase.SetConnected(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SetConnectedAsync_System_Boolean_">DeviceBase.SetConnectedAsync(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetDescription">DeviceBase.GetDescription()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetDescriptionAsync">DeviceBase.GetDescriptionAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetDriverInfo">DeviceBase.GetDriverInfo()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetDriverInfoAsync">DeviceBase.GetDriverInfoAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetDriverVersion">DeviceBase.GetDriverVersion()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetDriverVersionAsync">DeviceBase.GetDriverVersionAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetInterfaceVersion">DeviceBase.GetInterfaceVersion()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetInterfaceVersionAsync">DeviceBase.GetInterfaceVersionAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetName">DeviceBase.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetNameAsync">DeviceBase.GetNameAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetSupportedActions">DeviceBase.GetSupportedActions()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetSupportedActionsAsync">DeviceBase.GetSupportedActionsAsync()</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.html">ES.Ascom.Alpaca.Client.Devices</a></h6>
+  <h6><strong>Assembly</strong>: ES.Ascom.Alpaca.Client.dll</h6>
+  <h5 id="ES_Ascom_Alpaca_Client_Devices_Focuser_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Focuser : DeviceBase, IFocuser, IDevice, IFocuserAsync, IDeviceAsync</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.%23ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L21">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser__ctor_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.#ctor*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.#ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration)">Focuser(DeviceConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.Focuser.html">Focuser</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Focuser(DeviceConfiguration configuration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration.html">DeviceConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Device configuration</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_ES_Ascom_Alpaca_Client_Logging_ILogger_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.%23ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration%2CES.Ascom.Alpaca.Client.Logging.ILogger)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L30">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser__ctor_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.#ctor*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_ES_Ascom_Alpaca_Client_Logging_ILogger_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.#ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration,ES.Ascom.Alpaca.Client.Logging.ILogger)">Focuser(DeviceConfiguration, ILogger)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.Focuser.html">Focuser</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Focuser(DeviceConfiguration configuration, ILogger logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration.html">DeviceConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Device configuration</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Logging.ILogger.html">ILogger</a></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>Logger, can be useful for debugging</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_ES_Ascom_Alpaca_Client_Request_IClientTransactionIdGenerator_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.%23ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration%2CES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L39">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser__ctor_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.#ctor*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_ES_Ascom_Alpaca_Client_Request_IClientTransactionIdGenerator_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.#ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration,ES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator)">Focuser(DeviceConfiguration, IClientTransactionIdGenerator)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.Focuser.html">Focuser</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Focuser(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration.html">DeviceConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Device configuration</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator.html">IClientTransactionIdGenerator</a></td>
+        <td><span class="parametername">clientTransactionIdGenerator</span></td>
+        <td><p>Client Transaction ID Generator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_ES_Ascom_Alpaca_Client_Request_IClientTransactionIdGenerator_ES_Ascom_Alpaca_Client_Logging_ILogger_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.%23ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration%2CES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator%2CES.Ascom.Alpaca.Client.Logging.ILogger)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L49">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser__ctor_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.#ctor*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_ES_Ascom_Alpaca_Client_Request_IClientTransactionIdGenerator_ES_Ascom_Alpaca_Client_Logging_ILogger_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.#ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration,ES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator,ES.Ascom.Alpaca.Client.Logging.ILogger)">Focuser(DeviceConfiguration, IClientTransactionIdGenerator, ILogger)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.Focuser.html">Focuser</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Focuser(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration.html">DeviceConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Device configuration</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator.html">IClientTransactionIdGenerator</a></td>
+        <td><span class="parametername">clientTransactionIdGenerator</span></td>
+        <td><p>Client Transaction ID Generator</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Logging.ILogger.html">ILogger</a></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>Logger, can be useful for debugging</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_DeviceType.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.DeviceType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L64">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_DeviceType_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.DeviceType*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_DeviceType" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.DeviceType">DeviceType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DeviceType DeviceType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceType.html">DeviceType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ES.Ascom.Alpaca.Client.Devices.DeviceBase.DeviceType</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_GetMaxIncrement.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.GetMaxIncrement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L79">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetMaxIncrement_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetMaxIncrement*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetMaxIncrement" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetMaxIncrement">GetMaxIncrement()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetMaxIncrement()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_GetMaxIncrementAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.GetMaxIncrementAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L81">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetMaxIncrementAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetMaxIncrementAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetMaxIncrementAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetMaxIncrementAsync">GetMaxIncrementAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;int&gt; GetMaxIncrementAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_GetMaxStep.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.GetMaxStep%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L85">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetMaxStep_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetMaxStep*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetMaxStep" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetMaxStep">GetMaxStep()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetMaxStep()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_GetMaxStepAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.GetMaxStepAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L87">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetMaxStepAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetMaxStepAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetMaxStepAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetMaxStepAsync">GetMaxStepAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;int&gt; GetMaxStepAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_GetPosition.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.GetPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L91">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetPosition_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetPosition*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetPosition" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetPosition">GetPosition()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetPosition()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_GetPositionAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.GetPositionAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L93">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetPositionAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetPositionAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetPositionAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetPositionAsync">GetPositionAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;int&gt; GetPositionAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_GetStepSize.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.GetStepSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L97">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetStepSize_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetStepSize*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetStepSize" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetStepSize">GetStepSize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetStepSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_GetStepSizeAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.GetStepSizeAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L99">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetStepSizeAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetStepSizeAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetStepSizeAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetStepSizeAsync">GetStepSizeAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;double&gt; GetStepSizeAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_GetTemperature.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.GetTemperature%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L129">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetTemperature_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetTemperature*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetTemperature" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetTemperature">GetTemperature()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetTemperature()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_GetTemperatureAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.GetTemperatureAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L131">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetTemperatureAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetTemperatureAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_GetTemperatureAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.GetTemperatureAsync">GetTemperatureAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;double&gt; GetTemperatureAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_Halt.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.Halt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L135">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_Halt_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.Halt*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_Halt" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.Halt">Halt()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Halt()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_HaltAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.HaltAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L137">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_HaltAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.HaltAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_HaltAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.HaltAsync">HaltAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task HaltAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_IsAbsolute.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.IsAbsolute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L67">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsAbsolute_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsAbsolute*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsAbsolute" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsAbsolute">IsAbsolute()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAbsolute()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_IsAbsoluteAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.IsAbsoluteAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L69">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsAbsoluteAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsAbsoluteAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsAbsoluteAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsAbsoluteAsync">IsAbsoluteAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsAbsoluteAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_IsMoving.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.IsMoving%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L73">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsMoving_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsMoving*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsMoving" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsMoving">IsMoving()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMoving()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_IsMovingAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.IsMovingAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L75">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsMovingAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsMovingAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsMovingAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsMovingAsync">IsMovingAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsMovingAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_IsTempComp.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.IsTempComp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L103">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsTempComp_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsTempComp*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsTempComp" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsTempComp">IsTempComp()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTempComp()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_IsTempCompAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.IsTempCompAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L105">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsTempCompAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsTempCompAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsTempCompAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsTempCompAsync">IsTempCompAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsTempCompAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_IsTempCompAvailable.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.IsTempCompAvailable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L123">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsTempCompAvailable_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsTempCompAvailable*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsTempCompAvailable" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsTempCompAvailable">IsTempCompAvailable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTempCompAvailable()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_IsTempCompAvailableAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.IsTempCompAvailableAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L125">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsTempCompAvailableAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsTempCompAvailableAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_IsTempCompAvailableAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.IsTempCompAvailableAsync">IsTempCompAvailableAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsTempCompAvailableAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_Move_System_Int32_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.Move(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L141">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_Move_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.Move*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_Move_System_Int32_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.Move(System.Int32)">Move(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Move(int position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_MoveAsync_System_Int32_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.MoveAsync(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L143">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_MoveAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.MoveAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_MoveAsync_System_Int32_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.MoveAsync(System.Int32)">MoveAsync(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task MoveAsync(int position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_SetTempComp_System_Boolean_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.SetTempComp(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L109">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_SetTempComp_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.SetTempComp*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_SetTempComp_System_Boolean_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.SetTempComp(System.Boolean)">SetTempComp(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTempComp(bool tempComp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">tempComp</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser_SetTempCompAsync_System_Boolean_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser.SetTempCompAsync(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L111">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Focuser_SetTempCompAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.SetTempCompAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Focuser_SetTempCompAsync_System_Boolean_" data-uid="ES.Ascom.Alpaca.Client.Devices.Focuser.SetTempCompAsync(System.Boolean)">SetTempCompAsync(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SetTempCompAsync(bool tempComp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">tempComp</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IFocuser.html">IFocuser</a>
+  </div>
+  <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html">IDevice</a>
+  </div>
+  <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IFocuserAsync.html">IFocuserAsync</a>
+  </div>
+  <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDeviceAsync.html">IDeviceAsync</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Focuser.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Focuser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Focuser.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

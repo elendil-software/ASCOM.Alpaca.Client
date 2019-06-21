@@ -5,11 +5,11 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Devices.Camera.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Devices.Camera.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Devices.Camera.html",
-          "hash": "WufPJcTUkqRMGWjKAdpVMg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Devices.Camera.html",
+          "hash": "PWgitehjFa1b4L33Y5++1A=="
         }
       },
       "is_incremental": true,
@@ -17,11 +17,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Devices.DeviceBase.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Devices.DeviceBase.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Devices.DeviceBase.html",
-          "hash": "usNq5OJvDHcOOusVa+Tpkg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Devices.DeviceBase.html",
+          "hash": "EsNxVdp/dhLrHZWeEAL6QA=="
         }
       },
       "is_incremental": true,
@@ -29,11 +29,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Devices.DeviceConfiguration.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Devices.DeviceConfiguration.html",
-          "hash": "gyTsYqdxnnBFeZIZRgQFTw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration.html",
+          "hash": "9vlVeHVI894Sx+uFwVlnvA=="
         }
       },
       "is_incremental": true,
@@ -41,11 +41,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Devices.DeviceType.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Devices.DeviceType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Devices.DeviceType.html",
-          "hash": "m/KfqvtyngqGyC3hEwKX6A=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Devices.DeviceType.html",
+          "hash": "eTmpviM+7IehXqRtvEfinw=="
         }
       },
       "is_incremental": true,
@@ -53,11 +53,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Devices.Dome.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Devices.Dome.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Devices.Dome.html",
-          "hash": "gBzhz79O+gz3+ZU0Lwa7DQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Devices.Dome.html",
+          "hash": "MdwSUA7WE2BQ5faG5aIB/g=="
         }
       },
       "is_incremental": true,
@@ -65,11 +65,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Devices.FilterWheel.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Devices.FilterWheel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Devices.FilterWheel.html",
-          "hash": "3422BYl6jKQztF56t4fXzQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Devices.FilterWheel.html",
+          "hash": "4PLJ4ex1JzjYxf51W39oXw=="
         }
       },
       "is_incremental": true,
@@ -77,11 +77,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Devices.Focuser.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Devices.Focuser.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Devices.Focuser.html",
-          "hash": "CpGc4ga+gH518wWtGHUfTQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Devices.Focuser.html",
+          "hash": "nQR6HqMdXUs462DM8TP6pA=="
         }
       },
       "is_incremental": true,
@@ -89,11 +89,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Devices.ObservingConditions.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Devices.ObservingConditions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Devices.ObservingConditions.html",
-          "hash": "04yAK3uydnIs7Ct1ms0KHQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Devices.ObservingConditions.html",
+          "hash": "7LdP3LjtU+VzKC+i9s4Fkg=="
         }
       },
       "is_incremental": true,
@@ -101,11 +101,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Devices.Rotator.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Devices.Rotator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Devices.Rotator.html",
-          "hash": "uoszvIjothdkIRZpRVlgjw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Devices.Rotator.html",
+          "hash": "+GXRQVPv7u5jsp7FHH+Zqw=="
         }
       },
       "is_incremental": true,
@@ -113,11 +113,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Devices.SafetyMonitor.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Devices.SafetyMonitor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Devices.SafetyMonitor.html",
-          "hash": "z9CgM0MjWQYIF0vpQ3j3SQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Devices.SafetyMonitor.html",
+          "hash": "65fhoaHC7UuCLdzTlVB+nQ=="
         }
       },
       "is_incremental": true,
@@ -125,11 +125,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Devices.Switch.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Devices.Switch.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Devices.Switch.html",
-          "hash": "CrHyen2WuOOvffoxkwK7/w=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Devices.Switch.html",
+          "hash": "Om9YLu5yVTKCY3JDiuEoLQ=="
         }
       },
       "is_incremental": true,
@@ -137,11 +137,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Devices.Telescope.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Devices.Telescope.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Devices.Telescope.html",
-          "hash": "ZWWj+JvLwEdnjHmeis9Qtg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Devices.Telescope.html",
+          "hash": "WiP0+Lyw0K3bNcVoab7jhw=="
         }
       },
       "is_incremental": true,
@@ -149,11 +149,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Devices.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Devices.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Devices.html",
-          "hash": "8QyP4XbTsSyLP4wgJrlJVw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Devices.html",
+          "hash": "aOCUEuNLQAD6GrRP0Bqy0g=="
         }
       },
       "is_incremental": true,
@@ -161,11 +161,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Logging.ILogger.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Logging.ILogger.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Logging.ILogger.html",
-          "hash": "hImTxMwFt86zsZSVsgTfWg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Logging.ILogger.html",
+          "hash": "Pxr5TszawCFDPAW6x6z3HA=="
         }
       },
       "is_incremental": true,
@@ -173,11 +173,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Logging.LogEvent.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Logging.LogEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Logging.LogEvent.html",
-          "hash": "2Yd4UbZ2HHawCfyqDoWxRw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Logging.LogEvent.html",
+          "hash": "pDY191CW7jVHV3a1iDgI7w=="
         }
       },
       "is_incremental": true,
@@ -185,11 +185,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Logging.LogLevel.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Logging.LogLevel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Logging.LogLevel.html",
-          "hash": "TUqlKkjwZcLgvbhq0A+/3g=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Logging.LogLevel.html",
+          "hash": "erukoX3HKHTBgQk0WKF3IQ=="
         }
       },
       "is_incremental": true,
@@ -197,11 +197,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Logging.NLogAdapter.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Logging.NLogAdapter.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Logging.NLogAdapter.html",
-          "hash": "GLwLqkYPXY55YObOnvlMfw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Logging.NLogAdapter.html",
+          "hash": "Q8n3oBIAXuAnFGQB/ILBMA=="
         }
       },
       "is_incremental": true,
@@ -209,11 +209,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Logging.SerilogAdapter.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Logging.SerilogAdapter.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Logging.SerilogAdapter.html",
-          "hash": "H5y3EXYZn3CuN8l2yeWZJA=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Logging.SerilogAdapter.html",
+          "hash": "l/sJj04hBZJ428TsvPs98g=="
         }
       },
       "is_incremental": true,
@@ -221,11 +221,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Logging.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Logging.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Logging.html",
-          "hash": "pA+XoB0AuzBqi8BrRVmnuQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Logging.html",
+          "hash": "GJk59jk6h7mTC981mBj+Tg=="
         }
       },
       "is_incremental": true,
@@ -233,11 +233,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Request.ClientTransactionIdGenerator.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Request.ClientTransactionIdGenerator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Request.ClientTransactionIdGenerator.html",
-          "hash": "Z9jb0r137SNsmoDHcBX9Kg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Request.ClientTransactionIdGenerator.html",
+          "hash": "04u1g61qORmD34Qvl27WOA=="
         }
       },
       "is_incremental": true,
@@ -245,11 +245,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Request.IClientTransactionIdGenerator.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Request.IClientTransactionIdGenerator.html",
-          "hash": "5T1DtXRMXYJG+1AwZ2RAIg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator.html",
+          "hash": "93CWJj7Ribqekn0VFJY3rg=="
         }
       },
       "is_incremental": true,
@@ -257,11 +257,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Client.Request.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Client.Request.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Client.Request.html",
-          "hash": "VVsp1evlBxaPQZYuNLJBww=="
+          "relative_path": "api/ES.Ascom.Alpaca.Client.Request.html",
+          "hash": "G9+v61lGp4pDgncscGxL8w=="
         }
       },
       "is_incremental": true,
@@ -269,11 +269,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.AlignmentMode.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.AlignmentMode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.AlignmentMode.html",
-          "hash": "+b4jM0adAiMBX3lS8WQS/g=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.AlignmentMode.html",
+          "hash": "9rY0yYnQf0+actk6O9jIGw=="
         }
       },
       "is_incremental": true,
@@ -281,11 +281,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.AxisRate.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.AxisRate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.AxisRate.html",
-          "hash": "ajd1/Dshq7IjsLG3ncDgmg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.AxisRate.html",
+          "hash": "dtxLN+atgJyEDk+F9r9VXg=="
         }
       },
       "is_incremental": true,
@@ -293,11 +293,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.CameraState.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.CameraState.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.CameraState.html",
-          "hash": "vU+cDg+fpui3ywrfY3QGow=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.CameraState.html",
+          "hash": "EkCWaWW+0x6jDRI4g3KbcQ=="
         }
       },
       "is_incremental": true,
@@ -305,11 +305,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.DriveRate.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.DriveRate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.DriveRate.html",
-          "hash": "c1KPie0olz3kDcaVvm/f5A=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.DriveRate.html",
+          "hash": "zE5yW2yUvY/eh8NouFa9Cw=="
         }
       },
       "is_incremental": true,
@@ -317,11 +317,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.EquatorialCoordinateType.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.EquatorialCoordinateType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.EquatorialCoordinateType.html",
-          "hash": "DOeoTKnGvbO7tByNTQHoLQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.EquatorialCoordinateType.html",
+          "hash": "RusKQe2w5cWrIX99WeHqqQ=="
         }
       },
       "is_incremental": true,
@@ -329,11 +329,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.GuideDirection.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.GuideDirection.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.GuideDirection.html",
-          "hash": "8DOos9mwNuJBlWY25XSGag=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.GuideDirection.html",
+          "hash": "PKhWX4RH6iiJmOl50YSygw=="
         }
       },
       "is_incremental": true,
@@ -341,11 +341,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.ICamera.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.ICamera.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.ICamera.html",
-          "hash": "6TnTc0ZX1v+hAFeSI9BSXQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.ICamera.html",
+          "hash": "0MBb8gpTHfksAi98o2wz/w=="
         }
       },
       "is_incremental": true,
@@ -353,11 +353,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.ICameraAsync.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.ICameraAsync.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.ICameraAsync.html",
-          "hash": "YhGDCuq8oMWKAquEnBm8ag=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.ICameraAsync.html",
+          "hash": "vQyy48SANIO62/rxNiIaLA=="
         }
       },
       "is_incremental": true,
@@ -365,11 +365,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.IDevice.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.IDevice.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.IDevice.html",
-          "hash": "ZDOMY2zDfVMhLzuZRCUyjA=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.IDevice.html",
+          "hash": "CDYgL7eKrjpSJlkgpY8GPg=="
         }
       },
       "is_incremental": true,
@@ -377,11 +377,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.IDeviceAsync.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.IDeviceAsync.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.IDeviceAsync.html",
-          "hash": "wc0e/i7+TbxPnha6x4VAew=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.IDeviceAsync.html",
+          "hash": "WvNGwZI78VjsprqiJSxqyQ=="
         }
       },
       "is_incremental": true,
@@ -389,11 +389,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.IDome.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.IDome.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.IDome.html",
-          "hash": "/JV9pIoUu4+PbPvRLjNgCw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.IDome.html",
+          "hash": "JXDNEXB0w36BRLLTVSD1NQ=="
         }
       },
       "is_incremental": true,
@@ -401,11 +401,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.IDomeAsync.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.IDomeAsync.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.IDomeAsync.html",
-          "hash": "h8wPKdz2Wa6qQOxwjIJQHg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.IDomeAsync.html",
+          "hash": "Gl1UkAyf9FKT6ITK8JLfNg=="
         }
       },
       "is_incremental": true,
@@ -413,11 +413,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.IFilterWheel.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.IFilterWheel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.IFilterWheel.html",
-          "hash": "kCvhwORqAjpgZQsY6HDEvg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.IFilterWheel.html",
+          "hash": "5dg9t6PQs+lnwtHkn8r7qA=="
         }
       },
       "is_incremental": true,
@@ -425,11 +425,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.IFilterWheelAsync.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.IFilterWheelAsync.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.IFilterWheelAsync.html",
-          "hash": "XS6JPIHEOYv1y7P1WBi5Ug=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.IFilterWheelAsync.html",
+          "hash": "q9HSgOSZhGMbmCUNt0b8gA=="
         }
       },
       "is_incremental": true,
@@ -437,11 +437,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.IFocuser.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.IFocuser.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.IFocuser.html",
-          "hash": "/GdwapCkiemOB2Ymew8SVg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.IFocuser.html",
+          "hash": "RD/G7up2W9GB37ORiKQRlg=="
         }
       },
       "is_incremental": true,
@@ -449,11 +449,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.IFocuserAsync.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.IFocuserAsync.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.IFocuserAsync.html",
-          "hash": "Haa4IbvuDwLR3i940eRFqQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.IFocuserAsync.html",
+          "hash": "WDDEtNzIRP8TelTlTNG0Kw=="
         }
       },
       "is_incremental": true,
@@ -461,11 +461,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.IObservingConditions.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.IObservingConditions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.IObservingConditions.html",
-          "hash": "pscSgIOWW4e07wLXpZGbKA=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.IObservingConditions.html",
+          "hash": "/WNgEpXQ+Rg7LROpS0L5bg=="
         }
       },
       "is_incremental": true,
@@ -473,11 +473,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.IObservingConditionsAsync.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.IObservingConditionsAsync.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.IObservingConditionsAsync.html",
-          "hash": "0+6hk+6ZcGG/1BCQANNZWg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.IObservingConditionsAsync.html",
+          "hash": "IsIz8C4zznojrBkynGuaIA=="
         }
       },
       "is_incremental": true,
@@ -485,11 +485,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.IRotator.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.IRotator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.IRotator.html",
-          "hash": "QnJrufYZ1vV4cIzDhiukxg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.IRotator.html",
+          "hash": "g9VmdAI+llgJvwZsIy2ELA=="
         }
       },
       "is_incremental": true,
@@ -497,11 +497,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.IRotatorAsync.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.IRotatorAsync.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.IRotatorAsync.html",
-          "hash": "7GnoAW7rx8gV4pwyjltLqQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.IRotatorAsync.html",
+          "hash": "dXynWaWqfc+oJrw4UkYOJw=="
         }
       },
       "is_incremental": true,
@@ -509,11 +509,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.ISafetyMonitor.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.ISafetyMonitor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.ISafetyMonitor.html",
-          "hash": "zBe86ZBBMCU9NIVNqtXwww=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.ISafetyMonitor.html",
+          "hash": "aJS3I6UkDhf8VP8B7o+HHw=="
         }
       },
       "is_incremental": true,
@@ -521,11 +521,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.ISafetyMonitorAsync.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.ISafetyMonitorAsync.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.ISafetyMonitorAsync.html",
-          "hash": "Atl9/py5K47x9/Tg2K2omQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.ISafetyMonitorAsync.html",
+          "hash": "bIoFQKtKOGcFtToD1sKcKw=="
         }
       },
       "is_incremental": true,
@@ -533,11 +533,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.ISwitch.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.ISwitch.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.ISwitch.html",
-          "hash": "lBCOErAq7F3GWSlwwvtulA=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.ISwitch.html",
+          "hash": "Xt2M+XxVURP7FXH5yl42lw=="
         }
       },
       "is_incremental": true,
@@ -545,11 +545,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.ISwitchAsync.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.ISwitchAsync.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.ISwitchAsync.html",
-          "hash": "NxkhJs5exDEwm7xA/fY5iA=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.ISwitchAsync.html",
+          "hash": "y3cQ1z127bLj3yQfdXa8WQ=="
         }
       },
       "is_incremental": true,
@@ -557,11 +557,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.ITelescope.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.ITelescope.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.ITelescope.html",
-          "hash": "HBkSMlQGIQJXbKqX0Dk6Uw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.ITelescope.html",
+          "hash": "HzMIyi8AJg0AlcGWpMN4bw=="
         }
       },
       "is_incremental": true,
@@ -569,11 +569,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.ITelescopeAsync.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.ITelescopeAsync.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.ITelescopeAsync.html",
-          "hash": "c/HHghKp5NqHPNyPOKE5OA=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.ITelescopeAsync.html",
+          "hash": "ZEZbTO5mZS6w8nmTAvLcjg=="
         }
       },
       "is_incremental": true,
@@ -581,11 +581,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.ObservingConditionSensorName.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.ObservingConditionSensorName.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.ObservingConditionSensorName.html",
-          "hash": "V6Zlsg8hFUJT5cNwseMNNA=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.ObservingConditionSensorName.html",
+          "hash": "MBsO3v8W9nZ4JSXUdXKhzg=="
         }
       },
       "is_incremental": true,
@@ -593,11 +593,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.PierSide.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.PierSide.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.PierSide.html",
-          "hash": "1NXQ50aC2BU2k1acqqS+/A=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.PierSide.html",
+          "hash": "D6R7OX+apYrMhs4YOs5Ezw=="
         }
       },
       "is_incremental": true,
@@ -605,11 +605,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.SensorType.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.SensorType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.SensorType.html",
-          "hash": "57eVZaZTKrp0M2BKOFFKgQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.SensorType.html",
+          "hash": "XMZ5FpM2/F98TRMPM1+2fw=="
         }
       },
       "is_incremental": true,
@@ -617,11 +617,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.ShutterState.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.ShutterState.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.ShutterState.html",
-          "hash": "LlMhULpPln4GEFd36nEV6g=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.ShutterState.html",
+          "hash": "QiBM6LLCT1u4VQ7EWIF+uA=="
         }
       },
       "is_incremental": true,
@@ -629,11 +629,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.TelescopeAxis.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.TelescopeAxis.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.TelescopeAxis.html",
-          "hash": "t2Ap/aRXfSPrVbO/kMWJsg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.TelescopeAxis.html",
+          "hash": "+liHYPfPaoYIUfNAs33SxQ=="
         }
       },
       "is_incremental": true,
@@ -641,11 +641,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Devices.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Devices.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Devices.html",
-          "hash": "gfoH16NcplhPlzJX//Ccrw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Devices.html",
+          "hash": "jRoYNEK7/4pXPmtyg8e+1g=="
         }
       },
       "is_incremental": true,
@@ -653,11 +653,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaActionNotImplementedException.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaActionNotImplementedException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaActionNotImplementedException.html",
-          "hash": "uk0UaRkH63BWCzcoaiaAag=="
+          "relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaActionNotImplementedException.html",
+          "hash": "4gcvl+pLKXO71O2TL6CBqQ=="
         }
       },
       "is_incremental": true,
@@ -665,11 +665,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaDeviceException.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaDeviceException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaDeviceException.html",
-          "hash": "BZ9XB2A0bEMjqvev1rr3Uw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaDeviceException.html",
+          "hash": "K0AjcMrugULopdw3TQfNBw=="
         }
       },
       "is_incremental": true,
@@ -680,11 +680,11 @@
         "ReferencedXrefPropertyNotString"
       ],
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaException.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaException.html",
-          "hash": "to8svtEvzYKzK9r3kHp7Rg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaException.html",
+          "hash": "FWJ4xvz0ByothwiNPalZ1w=="
         }
       },
       "is_incremental": true,
@@ -692,11 +692,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaInvalidOperationException.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaInvalidOperationException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaInvalidOperationException.html",
-          "hash": "L8rmcB+WvSkllR2CBOG2eA=="
+          "relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaInvalidOperationException.html",
+          "hash": "GXKFmX500KpUMtyPmc0+3Q=="
         }
       },
       "is_incremental": true,
@@ -704,11 +704,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaInvalidValueException.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaInvalidValueException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaInvalidValueException.html",
-          "hash": "syk0GMVMH2kgLkR0QheRbw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaInvalidValueException.html",
+          "hash": "e5x3oXD4kv867nGiIZDPcg=="
         }
       },
       "is_incremental": true,
@@ -716,11 +716,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaNotConnectedException.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaNotConnectedException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaNotConnectedException.html",
-          "hash": "ru8Vzb5Do6bfFpOi/USVmw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaNotConnectedException.html",
+          "hash": "Otq2kuMV7hbqgtOCtGsl5g=="
         }
       },
       "is_incremental": true,
@@ -728,11 +728,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaNotImplementedException.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaNotImplementedException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaNotImplementedException.html",
-          "hash": "9hVzrkhtjb2rM8zTrJLm4A=="
+          "relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaNotImplementedException.html",
+          "hash": "IH0ISEPL+pzSuybJJOEytQ=="
         }
       },
       "is_incremental": true,
@@ -740,11 +740,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaParkedException.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaParkedException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaParkedException.html",
-          "hash": "6swCza/eaSV2y2JKQWFw+w=="
+          "relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaParkedException.html",
+          "hash": "Pnh2s46grqIYM622yxBdjg=="
         }
       },
       "is_incremental": true,
@@ -752,11 +752,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaSlavedException.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaSlavedException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaSlavedException.html",
-          "hash": "z+DK57fvhcSa8qpUBIjPbQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaSlavedException.html",
+          "hash": "pLJl9Ab9E9rQXaOIhZFXQg=="
         }
       },
       "is_incremental": true,
@@ -764,11 +764,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaValueNotSetException.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaValueNotSetException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Exceptions.AlpacaValueNotSetException.html",
-          "hash": "6MGPdXs3RWWlQV+bAHVi/A=="
+          "relative_path": "api/ES.Ascom.Alpaca.Exceptions.AlpacaValueNotSetException.html",
+          "hash": "DbJ3f1ry2ZRoWzCHjjXVCw=="
         }
       },
       "is_incremental": true,
@@ -776,11 +776,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Exceptions.ErrorCodes.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Exceptions.ErrorCodes.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Exceptions.ErrorCodes.html",
-          "hash": "H2FL5+f2u8S0yXOvclQecA=="
+          "relative_path": "api/ES.Ascom.Alpaca.Exceptions.ErrorCodes.html",
+          "hash": "NAMfThb8luELYmCnjrfZnw=="
         }
       },
       "is_incremental": true,
@@ -788,11 +788,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Exceptions.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Exceptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Exceptions.html",
-          "hash": "7zTiHvTxKjxsr7Bo5S5etw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Exceptions.html",
+          "hash": "RCCvKjqytKGHkQqI5miLoQ=="
         }
       },
       "is_incremental": true,
@@ -800,11 +800,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.AlignmentModeResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.AlignmentModeResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.AlignmentModeResponse.html",
-          "hash": "W/z4EabGyxzenT0CIJMQcg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.AlignmentModeResponse.html",
+          "hash": "duiz8RRQlobFXOfZPAROcQ=="
         }
       },
       "is_incremental": true,
@@ -812,11 +812,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.AxisRatesResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.AxisRatesResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.AxisRatesResponse.html",
-          "hash": "2GOXrDXIL7WeeXc23fssRQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.AxisRatesResponse.html",
+          "hash": "IWDwPU1JOK4a7LdvEU1bOg=="
         }
       },
       "is_incremental": true,
@@ -824,11 +824,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.BoolResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.BoolResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.BoolResponse.html",
-          "hash": "gFNqTa4B5TnjCLbQOmDLCA=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.BoolResponse.html",
+          "hash": "Na057zW7RFnAeLfNJ6Lk0w=="
         }
       },
       "is_incremental": true,
@@ -836,11 +836,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.CameraStateResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.CameraStateResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.CameraStateResponse.html",
-          "hash": "2Yk4LNvZdkp160UtKrWBgQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.CameraStateResponse.html",
+          "hash": "1ZaAjdDGsPTLouIw/h7fLw=="
         }
       },
       "is_incremental": true,
@@ -848,11 +848,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.CommandResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.CommandResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.CommandResponse.html",
-          "hash": "o3rIIBcB8zNBG0JWanweyw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.CommandResponse.html",
+          "hash": "spWQLIQed2QmUz+URm1lWQ=="
         }
       },
       "is_incremental": true,
@@ -860,11 +860,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.DoubleResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.DoubleResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.DoubleResponse.html",
-          "hash": "AKVvZHsZG2UUKhybEiFCyg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.DoubleResponse.html",
+          "hash": "QLUf9ZArLTIDhERI7NoVpg=="
         }
       },
       "is_incremental": true,
@@ -872,11 +872,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.DriveRateResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.DriveRateResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.DriveRateResponse.html",
-          "hash": "ILMz4rBWwN1XaYfkJzGu3w=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.DriveRateResponse.html",
+          "hash": "7M8AI3P2RiTL9yu6/f4lDA=="
         }
       },
       "is_incremental": true,
@@ -884,11 +884,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.DriveRatesResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.DriveRatesResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.DriveRatesResponse.html",
-          "hash": "oS8lBNCtaX64csLAJGpoFg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.DriveRatesResponse.html",
+          "hash": "qEEMwWjCo0yktgJkf1SDaA=="
         }
       },
       "is_incremental": true,
@@ -896,11 +896,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.EquatorialCoordinateTypeResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.EquatorialCoordinateTypeResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.EquatorialCoordinateTypeResponse.html",
-          "hash": "qxgQmfb2kvAbfsN3V2LXpw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.EquatorialCoordinateTypeResponse.html",
+          "hash": "RV7dni53L4+KkgQENqXanQ=="
         }
       },
       "is_incremental": true,
@@ -908,11 +908,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.IImageResponse-1.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.IImageResponse-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.IImageResponse-1.html",
-          "hash": "7hLTE7jjtazpa5Ulp4oA3Q=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.IImageResponse-1.html",
+          "hash": "kbLPX1zcJ9sEXXJ02/MDPA=="
         }
       },
       "is_incremental": true,
@@ -920,11 +920,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.IResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.IResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.IResponse.html",
-          "hash": "FyAT/dY1r9RFPjwnNQVU1A=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.IResponse.html",
+          "hash": "5WOyVgx5NfnS64n6PkSIKg=="
         }
       },
       "is_incremental": true,
@@ -932,11 +932,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.IValueResponse-1.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.IValueResponse-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.IValueResponse-1.html",
-          "hash": "9jc8IPcz1yQCG2dJ3ztYQw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.IValueResponse-1.html",
+          "hash": "clo0ReQRskhu+hO/EycVdA=="
         }
       },
       "is_incremental": true,
@@ -944,11 +944,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayDouble2DResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayDouble2DResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayDouble2DResponse.html",
-          "hash": "5cNR1YJoFN82if68PvpMFw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayDouble2DResponse.html",
+          "hash": "kIp9s8EqzxUCTmUkeAK8vQ=="
         }
       },
       "is_incremental": true,
@@ -956,11 +956,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayDouble3DResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayDouble3DResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayDouble3DResponse.html",
-          "hash": "NBilfnoExNm78X+4AD9P6w=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayDouble3DResponse.html",
+          "hash": "4j5JS4sUCn4hxU2VwP90QQ=="
         }
       },
       "is_incremental": true,
@@ -968,11 +968,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayInt2DResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayInt2DResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayInt2DResponse.html",
-          "hash": "Y7Sm+n0Uk7YRerhKIwzsHQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayInt2DResponse.html",
+          "hash": "8CCc006EILnI9UH679tR4A=="
         }
       },
       "is_incremental": true,
@@ -980,11 +980,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayInt3DResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayInt3DResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayInt3DResponse.html",
-          "hash": "TLPVuT87adyoHVd+vcjwvA=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayInt3DResponse.html",
+          "hash": "JuavSxb+6r3PNp/XNAQTbQ=="
         }
       },
       "is_incremental": true,
@@ -992,11 +992,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayRank.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayRank.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayRank.html",
-          "hash": "HL547tos2ZoHp4NjMNJHIg=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayRank.html",
+          "hash": "NJcph3ZwuBeATzK1wsyXiQ=="
         }
       },
       "is_incremental": true,
@@ -1004,11 +1004,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayShort2DResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayShort2DResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayShort2DResponse.html",
-          "hash": "vy3cWQVCIowILI7Ee8ThVA=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayShort2DResponse.html",
+          "hash": "0rgSMKSMA4+Lw5iq05/CrQ=="
         }
       },
       "is_incremental": true,
@@ -1016,11 +1016,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayShort3DResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayShort3DResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayShort3DResponse.html",
-          "hash": "PurE4Jc8UCFYg/pZ79Lj4A=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayShort3DResponse.html",
+          "hash": "SOwNeDLhPUn7D79Pstpe9Q=="
         }
       },
       "is_incremental": true,
@@ -1028,11 +1028,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayType.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.ImageArrayType.html",
-          "hash": "oUZkVSlFZH2RWm3pyYwAzw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.ImageArrayType.html",
+          "hash": "vEDjt99EDVNYh4tZF/IAxQ=="
         }
       },
       "is_incremental": true,
@@ -1040,11 +1040,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.IntListResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.IntListResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.IntListResponse.html",
-          "hash": "5omtCbCio65S1WHpuQtY+w=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.IntListResponse.html",
+          "hash": "6VY/ytJ8RktNOQ/bS9Fcsw=="
         }
       },
       "is_incremental": true,
@@ -1052,11 +1052,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.IntResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.IntResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.IntResponse.html",
-          "hash": "JGzCvDA79BQ5d+apwJkJdw=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.IntResponse.html",
+          "hash": "relvUclNsNtJYC3YRNad0Q=="
         }
       },
       "is_incremental": true,
@@ -1064,11 +1064,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.PierSideResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.PierSideResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.PierSideResponse.html",
-          "hash": "tCDyU4P95jr59IyDkCkhEA=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.PierSideResponse.html",
+          "hash": "1kFLeRQ4wYFCukTPNAe48A=="
         }
       },
       "is_incremental": true,
@@ -1076,11 +1076,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.SensorTypeResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.SensorTypeResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.SensorTypeResponse.html",
-          "hash": "j7wgdxjVD+j3kRA3qGw2/w=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.SensorTypeResponse.html",
+          "hash": "EZm5ikK/VYTiZvNwku7qzg=="
         }
       },
       "is_incremental": true,
@@ -1088,11 +1088,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.ShutterStateResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.ShutterStateResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.ShutterStateResponse.html",
-          "hash": "NwCMArp95unAtLPAYpzE4A=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.ShutterStateResponse.html",
+          "hash": "2GH+42nITwyYmCZxvU3P1g=="
         }
       },
       "is_incremental": true,
@@ -1100,11 +1100,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.StringListResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.StringListResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.StringListResponse.html",
-          "hash": "AZ1yvB/zAfTYejoLH3m32g=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.StringListResponse.html",
+          "hash": "JTUJonrkB/Y132Z6e+yJiw=="
         }
       },
       "is_incremental": true,
@@ -1112,11 +1112,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.StringResponse.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.StringResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.StringResponse.html",
-          "hash": "M+uZ5Al4XLh58vhYdHqWlQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.StringResponse.html",
+          "hash": "JVVcvxBsOqWbKKCDmtl1Yw=="
         }
       },
       "is_incremental": true,
@@ -1124,11 +1124,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ES.AscomAlpaca.Responses.yml",
+      "source_relative_path": "api/ES.Ascom.Alpaca.Responses.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ES.AscomAlpaca.Responses.html",
-          "hash": "kEZwdh3ZT6uzOT02IZKhkQ=="
+          "relative_path": "api/ES.Ascom.Alpaca.Responses.html",
+          "hash": "9V2wSRc8xNhGo/5GcJzRyw=="
         }
       },
       "is_incremental": true,
@@ -1140,7 +1140,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "LRbQsYU8Uoe51qaug2HIZQ=="
+          "hash": "LqNo8t7Ocy65d0QNUA/v5Q=="
         }
       },
       "is_incremental": true,
@@ -1152,7 +1152,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "+yb0OKl32qsi4nCKGuHehg=="
+          "hash": "5xcCIl6EAZ+5LSkCJi3aZA=="
         }
       },
       "is_incremental": false,
@@ -1164,10 +1164,10 @@
       "output": {
         ".html": {
           "relative_path": "documentation/Advanced-Configuration.html",
-          "hash": "b1p+QUuhppKuN6oMBeT/uw=="
+          "hash": "vwj06IMSrv6MkNvh4NPnJw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1176,10 +1176,10 @@
       "output": {
         ".html": {
           "relative_path": "documentation/Client-Transaction-ID-Generator.html",
-          "hash": "jRBNLJ9eV62bzFcuxGMckg=="
+          "hash": "6+wqHWFhBkp5qRFl1ocGZg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1188,10 +1188,10 @@
       "output": {
         ".html": {
           "relative_path": "documentation/Device-Configuration.html",
-          "hash": "El9S8c+vFQ9eeWWZws/xug=="
+          "hash": "1uDvbfxhrOVFKB8iOsiXWg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1200,10 +1200,10 @@
       "output": {
         ".html": {
           "relative_path": "documentation/Getting-Started.html",
-          "hash": "/r6BmpgeAzOoaxZI4huAig=="
+          "hash": "azOVW5D3DftffkbjEpOXVA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1212,10 +1212,10 @@
       "output": {
         ".html": {
           "relative_path": "documentation/Home.html",
-          "hash": "VX4V84blx9zsiOaF55yHfA=="
+          "hash": "MXP6UqKDI5h8fsa9DqDftQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1224,10 +1224,10 @@
       "output": {
         ".html": {
           "relative_path": "documentation/Logging.html",
-          "hash": "c1PaDekzsxeyCW9MEvRIKQ=="
+          "hash": "7S/9+oBqONXtMzrT2mMyjg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1236,10 +1236,10 @@
       "output": {
         ".html": {
           "relative_path": "documentation/Supported-Devices.html",
-          "hash": "Fi+wh+uXUyrlbkaTKcWojQ=="
+          "hash": "dnwuv2Ee9BKCCG3CStawEA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1248,10 +1248,10 @@
       "output": {
         ".html": {
           "relative_path": "documentation/Sync-And-Async.html",
-          "hash": "k1gmE0Yuxl3tc2syXGrjQA=="
+          "hash": "8PbiRYKgCQYlUdm622BoiQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1267,12 +1267,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "JcSmmtmMj/MtpgJrYAEAuw=="
+          "hash": "A6TJJHtfHeCSjp+lg6m0+w=="
         }
       },
       "is_incremental": true,
@@ -1284,7 +1287,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "nykns8khyxluIG5S7U3upQ=="
+          "hash": "05hsCjPQ1cmLidhuPhjC0Q=="
         }
       },
       "is_incremental": false,
@@ -1307,17 +1310,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 10,
-          "skipped_file_count": 9
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 94,
           "skipped_file_count": 94
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 10,
+          "skipped_file_count": 10
         }
       }
     },

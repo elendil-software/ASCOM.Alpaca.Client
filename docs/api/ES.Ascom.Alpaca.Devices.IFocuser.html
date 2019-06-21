@@ -1,0 +1,542 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IFocuser
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IFocuser
+   ">
+    <meta name="generator" content="docfx 2.42.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ES.Ascom.Alpaca.Devices.IFocuser">
+  
+  
+  <h1 id="ES_Ascom_Alpaca_Devices_IFocuser" data-uid="ES.Ascom.Alpaca.Devices.IFocuser" class="text-break">Interface IFocuser
+  </h1>
+  <div class="markdown level0 summary"><p>Defines the capabilities supported by an ASCOM Alpaca Focuser device</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_DeviceNumber">IDevice.DeviceNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_InvokeAction_System_String_System_String_">IDevice.InvokeAction(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_SendCommandBlind_System_String_System_Boolean_">IDevice.SendCommandBlind(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_SendCommandBool_System_String_System_Boolean_">IDevice.SendCommandBool(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_SendCommandString_System_String_System_Boolean_">IDevice.SendCommandString(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_IsConnected">IDevice.IsConnected()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_SetConnected_System_Boolean_">IDevice.SetConnected(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_GetDescription">IDevice.GetDescription()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_GetDriverInfo">IDevice.GetDriverInfo()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_GetDriverVersion">IDevice.GetDriverVersion()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_GetInterfaceVersion">IDevice.GetInterfaceVersion()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_GetName">IDevice.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html#ES_Ascom_Alpaca_Devices_IDevice_GetSupportedActions">IDevice.GetSupportedActions()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ES.Ascom.Alpaca.Devices.html">ES.Ascom.Alpaca.Devices</a></h6>
+  <h6><strong>Assembly</strong>: ES.Ascom.Alpaca.Shared.dll</h6>
+  <h5 id="ES_Ascom_Alpaca_Devices_IFocuser_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IFocuser : IDevice</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IFocuser_GetMaxIncrement.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IFocuser.GetMaxIncrement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IFocuser.cs/#L27">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IFocuser_GetMaxIncrement_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.GetMaxIncrement*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IFocuser_GetMaxIncrement" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.GetMaxIncrement">GetMaxIncrement()</h4>
+  <div class="markdown level1 summary"><p>Maximum increment size allowed by the focuser; i.e. the maximum number
+of steps allowed in one move operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetMaxIncrement()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IFocuser_GetMaxStep.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IFocuser.GetMaxStep%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IFocuser.cs/#L33">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IFocuser_GetMaxStep_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.GetMaxStep*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IFocuser_GetMaxStep" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.GetMaxStep">GetMaxStep()</h4>
+  <div class="markdown level1 summary"><p>Returns the focuser's maximum step size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetMaxStep()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IFocuser_GetPosition.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IFocuser.GetPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IFocuser.cs/#L39">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IFocuser_GetPosition_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.GetPosition*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IFocuser_GetPosition" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.GetPosition">GetPosition()</h4>
+  <div class="markdown level1 summary"><p>Returns the focuser's current position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int GetPosition()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IFocuser_GetStepSize.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IFocuser.GetStepSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IFocuser.cs/#L45">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IFocuser_GetStepSize_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.GetStepSize*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IFocuser_GetStepSize" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.GetStepSize">GetStepSize()</h4>
+  <div class="markdown level1 summary"><p>Returns the focuser's step size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetStepSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>Step size (microns) for the focuser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IFocuser_GetTemperature.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IFocuser.GetTemperature%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IFocuser.cs/#L69">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IFocuser_GetTemperature_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.GetTemperature*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IFocuser_GetTemperature" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.GetTemperature">GetTemperature()</h4>
+  <div class="markdown level1 summary"><p>Returns the focuser's current temperature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double GetTemperature()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IFocuser_Halt.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IFocuser.Halt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IFocuser.cs/#L74">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IFocuser_Halt_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.Halt*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IFocuser_Halt" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.Halt">Halt()</h4>
+  <div class="markdown level1 summary"><p>Immediately stops focuser motion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Halt()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IFocuser_IsAbsolute.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IFocuser.IsAbsolute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IFocuser.cs/#L14">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IFocuser_IsAbsolute_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.IsAbsolute*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IFocuser_IsAbsolute" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.IsAbsolute">IsAbsolute()</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the focuser is capable of absolute position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsAbsolute()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the focuser is capable of absolute position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IFocuser_IsMoving.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IFocuser.IsMoving%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IFocuser.cs/#L20">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IFocuser_IsMoving_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.IsMoving*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IFocuser_IsMoving" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.IsMoving">IsMoving()</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the focuser is currently moving.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsMoving()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the focuser is currently moving to a new position. False if the focuser is stationary.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IFocuser_IsTempComp.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IFocuser.IsTempComp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IFocuser.cs/#L51">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IFocuser_IsTempComp_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.IsTempComp*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IFocuser_IsTempComp" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.IsTempComp">IsTempComp()</h4>
+  <div class="markdown level1 summary"><p>Gets the state of temperature compensation mode (if available), else always False.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsTempComp()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IFocuser_IsTempCompAvailable.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IFocuser.IsTempCompAvailable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IFocuser.cs/#L63">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IFocuser_IsTempCompAvailable_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.IsTempCompAvailable*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IFocuser_IsTempCompAvailable" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.IsTempCompAvailable">IsTempCompAvailable()</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the focuser has temperature compensation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsTempCompAvailable()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if focuser has temperature compensation available.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IFocuser_Move_System_Int32_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IFocuser.Move(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IFocuser.cs/#L80">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IFocuser_Move_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.Move*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IFocuser_Move_System_Int32_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.Move(System.Int32)">Move(Int32)</h4>
+  <div class="markdown level1 summary"><p>Moves the focuser by the specified amount or to the specified position depending on the value of the Absolute property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Move(int position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Step distance or absolute position, depending on the value of the Absolute property</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IFocuser_SetTempComp_System_Boolean_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IFocuser.SetTempComp(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IFocuser.cs/#L57">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Devices_IFocuser_SetTempComp_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.SetTempComp*"></a>
+  <h4 id="ES_Ascom_Alpaca_Devices_IFocuser_SetTempComp_System_Boolean_" data-uid="ES.Ascom.Alpaca.Devices.IFocuser.SetTempComp(System.Boolean)">SetTempComp(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the state of temperature compensation mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetTempComp(bool tempComp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">tempComp</span></td>
+        <td><p>Set true to enable the focuser's temperature compensation mode, otherwise false for normal operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="ES.Ascom.Alpaca.Devices.IFocuserAsync.html">IFocuserAsync</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Devices_IFocuser.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Devices.IFocuser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Shared/Devices/IFocuser.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

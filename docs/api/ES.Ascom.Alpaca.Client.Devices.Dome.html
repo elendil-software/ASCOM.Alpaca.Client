@@ -1,0 +1,1936 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Dome
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Dome
+   ">
+    <meta name="generator" content="docfx 2.42.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome">
+  
+  
+  <h1 id="ES_Ascom_Alpaca_Client_Devices_Dome" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome" class="text-break">Class Dome
+  </h1>
+  <div class="markdown level0 summary"><p>Client implementation of an ASCOM Alpaca Dome device.</p>
+<p>This class is meant to be use in a client application that need to control an ASCOM Alpaca Dome</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html">DeviceBase</a></div>
+    <div class="level2"><span class="xref">Dome</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="ES.Ascom.Alpaca.Devices.IDome.html">IDome</a></div>
+    <div><a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html">IDevice</a></div>
+    <div><a class="xref" href="ES.Ascom.Alpaca.Devices.IDomeAsync.html">IDomeAsync</a></div>
+    <div><a class="xref" href="ES.Ascom.Alpaca.Devices.IDeviceAsync.html">IDeviceAsync</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_DeviceNumber">DeviceBase.DeviceNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_InvokeAction_System_String_System_String_">DeviceBase.InvokeAction(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_InvokeActionAsync_System_String_System_String_">DeviceBase.InvokeActionAsync(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SendCommandBlind_System_String_System_Boolean_">DeviceBase.SendCommandBlind(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SendCommandBlindAsync_System_String_System_Boolean_">DeviceBase.SendCommandBlindAsync(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SendCommandBool_System_String_System_Boolean_">DeviceBase.SendCommandBool(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SendCommandBoolAsync_System_String_System_Boolean_">DeviceBase.SendCommandBoolAsync(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SendCommandString_System_String_System_Boolean_">DeviceBase.SendCommandString(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SendCommandStringAsync_System_String_System_Boolean_">DeviceBase.SendCommandStringAsync(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_IsConnected">DeviceBase.IsConnected()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_IsConnectedAsync">DeviceBase.IsConnectedAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SetConnected_System_Boolean_">DeviceBase.SetConnected(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_SetConnectedAsync_System_Boolean_">DeviceBase.SetConnectedAsync(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetDescription">DeviceBase.GetDescription()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetDescriptionAsync">DeviceBase.GetDescriptionAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetDriverInfo">DeviceBase.GetDriverInfo()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetDriverInfoAsync">DeviceBase.GetDriverInfoAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetDriverVersion">DeviceBase.GetDriverVersion()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetDriverVersionAsync">DeviceBase.GetDriverVersionAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetInterfaceVersion">DeviceBase.GetInterfaceVersion()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetInterfaceVersionAsync">DeviceBase.GetInterfaceVersionAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetName">DeviceBase.GetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetNameAsync">DeviceBase.GetNameAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetSupportedActions">DeviceBase.GetSupportedActions()</a>
+    </div>
+    <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceBase.html#ES_Ascom_Alpaca_Client_Devices_DeviceBase_GetSupportedActionsAsync">DeviceBase.GetSupportedActionsAsync()</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.html">ES.Ascom.Alpaca.Client.Devices</a></h6>
+  <h6><strong>Assembly</strong>: ES.Ascom.Alpaca.Client.dll</h6>
+  <h5 id="ES_Ascom_Alpaca_Client_Devices_Dome_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Dome : DeviceBase, IDome, IDevice, IDomeAsync, IDeviceAsync</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.%23ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L22">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome__ctor_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.#ctor*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.#ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration)">Dome(DeviceConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.Dome.html">Dome</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dome(DeviceConfiguration configuration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration.html">DeviceConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Device configuration</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_ES_Ascom_Alpaca_Client_Logging_ILogger_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.%23ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration%2CES.Ascom.Alpaca.Client.Logging.ILogger)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L31">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome__ctor_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.#ctor*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_ES_Ascom_Alpaca_Client_Logging_ILogger_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.#ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration,ES.Ascom.Alpaca.Client.Logging.ILogger)">Dome(DeviceConfiguration, ILogger)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.Dome.html">Dome</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dome(DeviceConfiguration configuration, ILogger logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration.html">DeviceConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Device configuration</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Logging.ILogger.html">ILogger</a></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>Logger, can be useful for debugging</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_ES_Ascom_Alpaca_Client_Request_IClientTransactionIdGenerator_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.%23ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration%2CES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L40">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome__ctor_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.#ctor*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_ES_Ascom_Alpaca_Client_Request_IClientTransactionIdGenerator_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.#ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration,ES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator)">Dome(DeviceConfiguration, IClientTransactionIdGenerator)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.Dome.html">Dome</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dome(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration.html">DeviceConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Device configuration</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator.html">IClientTransactionIdGenerator</a></td>
+        <td><span class="parametername">clientTransactionIdGenerator</span></td>
+        <td><p>Client Transaction ID Generator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_ES_Ascom_Alpaca_Client_Request_IClientTransactionIdGenerator_ES_Ascom_Alpaca_Client_Logging_ILogger_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.%23ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration%2CES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator%2CES.Ascom.Alpaca.Client.Logging.ILogger)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L50">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome__ctor_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.#ctor*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome__ctor_ES_Ascom_Alpaca_Client_Devices_DeviceConfiguration_ES_Ascom_Alpaca_Client_Request_IClientTransactionIdGenerator_ES_Ascom_Alpaca_Client_Logging_ILogger_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.#ctor(ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration,ES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator,ES.Ascom.Alpaca.Client.Logging.ILogger)">Dome(DeviceConfiguration, IClientTransactionIdGenerator, ILogger)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ES.Ascom.Alpaca.Client.Devices.Dome.html">Dome</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dome(DeviceConfiguration configuration, IClientTransactionIdGenerator clientTransactionIdGenerator, ILogger logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceConfiguration.html">DeviceConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Device configuration</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Request.IClientTransactionIdGenerator.html">IClientTransactionIdGenerator</a></td>
+        <td><span class="parametername">clientTransactionIdGenerator</span></td>
+        <td><p>Client Transaction ID Generator</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Logging.ILogger.html">ILogger</a></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>Logger, can be useful for debugging</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_DeviceType.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.DeviceType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L64">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_DeviceType_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.DeviceType*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_DeviceType" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.DeviceType">DeviceType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DeviceType DeviceType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Client.Devices.DeviceType.html">DeviceType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ES.Ascom.Alpaca.Client.Devices.DeviceBase.DeviceType</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_AbortSlew.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.AbortSlew%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L171">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_AbortSlew_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.AbortSlew*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_AbortSlew" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.AbortSlew">AbortSlew()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AbortSlew()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_AbortSlewAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.AbortSlewAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L173">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_AbortSlewAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.AbortSlewAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_AbortSlewAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.AbortSlewAsync">AbortSlewAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task AbortSlewAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanFindHome.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanFindHome%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L91">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanFindHome_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanFindHome*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanFindHome" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanFindHome">CanFindHome()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanFindHome()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanFindHomeAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanFindHomeAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L93">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanFindHomeAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanFindHomeAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanFindHomeAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanFindHomeAsync">CanFindHomeAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; CanFindHomeAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanPark.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanPark%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L97">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanPark_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanPark*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanPark" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanPark">CanPark()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanPark()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanParkAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanParkAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L99">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanParkAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanParkAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanParkAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanParkAsync">CanParkAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; CanParkAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanSetAltitude.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanSetAltitude%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L103">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetAltitude_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetAltitude*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetAltitude" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetAltitude">CanSetAltitude()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanSetAltitude()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanSetAltitudeAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanSetAltitudeAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L105">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetAltitudeAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetAltitudeAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetAltitudeAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetAltitudeAsync">CanSetAltitudeAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; CanSetAltitudeAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanSetAzimuth.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanSetAzimuth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L109">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetAzimuth_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetAzimuth*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetAzimuth" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetAzimuth">CanSetAzimuth()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanSetAzimuth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanSetAzimuthAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanSetAzimuthAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L111">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetAzimuthAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetAzimuthAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetAzimuthAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetAzimuthAsync">CanSetAzimuthAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; CanSetAzimuthAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanSetPark.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanSetPark%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L115">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetPark_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetPark*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetPark" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetPark">CanSetPark()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanSetPark()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanSetParkAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanSetParkAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L117">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetParkAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetParkAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetParkAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetParkAsync">CanSetParkAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; CanSetParkAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanSetShutter.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanSetShutter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L121">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetShutter_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetShutter*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetShutter" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetShutter">CanSetShutter()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanSetShutter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanSetShutterAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanSetShutterAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L123">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetShutterAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetShutterAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSetShutterAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSetShutterAsync">CanSetShutterAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; CanSetShutterAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanSlave.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanSlave%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L127">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSlave_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSlave*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSlave" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSlave">CanSlave()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanSlave()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanSlaveAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanSlaveAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L129">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSlaveAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSlaveAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSlaveAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSlaveAsync">CanSlaveAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; CanSlaveAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanSyncAzimuth.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanSyncAzimuth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L133">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSyncAzimuth_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSyncAzimuth*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSyncAzimuth" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSyncAzimuth">CanSyncAzimuth()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanSyncAzimuth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CanSyncAzimuthAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CanSyncAzimuthAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L135">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSyncAzimuthAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSyncAzimuthAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CanSyncAzimuthAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CanSyncAzimuthAsync">CanSyncAzimuthAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; CanSyncAzimuthAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CloseShutter.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CloseShutter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L177">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CloseShutter_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CloseShutter*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CloseShutter" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CloseShutter">CloseShutter()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CloseShutter()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_CloseShutterAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.CloseShutterAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L179">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_CloseShutterAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CloseShutterAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_CloseShutterAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.CloseShutterAsync">CloseShutterAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task CloseShutterAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_FindHome.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.FindHome%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L183">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_FindHome_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.FindHome*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_FindHome" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.FindHome">FindHome()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FindHome()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_FindHomeAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.FindHomeAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L185">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_FindHomeAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.FindHomeAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_FindHomeAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.FindHomeAsync">FindHomeAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task FindHomeAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_GetAltitude.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.GetAltitude%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L67">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_GetAltitude_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.GetAltitude*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_GetAltitude" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.GetAltitude">GetAltitude()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetAltitude()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_GetAltitudeAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.GetAltitudeAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L69">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_GetAltitudeAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.GetAltitudeAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_GetAltitudeAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.GetAltitudeAsync">GetAltitudeAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;double&gt; GetAltitudeAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_GetAzimuth.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.GetAzimuth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L85">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_GetAzimuth_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.GetAzimuth*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_GetAzimuth" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.GetAzimuth">GetAzimuth()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetAzimuth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_GetAzimuthAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.GetAzimuthAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L87">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_GetAzimuthAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.GetAzimuthAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_GetAzimuthAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.GetAzimuthAsync">GetAzimuthAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;double&gt; GetAzimuthAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_GetShutterStatus.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.GetShutterStatus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L139">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_GetShutterStatus_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.GetShutterStatus*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_GetShutterStatus" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.GetShutterStatus">GetShutterStatus()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShutterState GetShutterStatus()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ES.Ascom.Alpaca.Devices.ShutterState.html">ShutterState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_GetShutterStatusAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.GetShutterStatusAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L141">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_GetShutterStatusAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.GetShutterStatusAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_GetShutterStatusAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.GetShutterStatusAsync">GetShutterStatusAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ShutterState&gt; GetShutterStatusAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ES.Ascom.Alpaca.Devices.ShutterState.html">ShutterState</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_IsAtHome.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.IsAtHome%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L73">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_IsAtHome_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsAtHome*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_IsAtHome" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsAtHome">IsAtHome()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAtHome()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_IsAtHomeAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.IsAtHomeAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L75">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_IsAtHomeAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsAtHomeAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_IsAtHomeAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsAtHomeAsync">IsAtHomeAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsAtHomeAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_IsAtPark.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.IsAtPark%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L79">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_IsAtPark_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsAtPark*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_IsAtPark" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsAtPark">IsAtPark()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAtPark()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_IsAtParkAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.IsAtParkAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L81">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_IsAtParkAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsAtParkAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_IsAtParkAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsAtParkAsync">IsAtParkAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsAtParkAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_IsSlaved.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.IsSlaved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L145">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_IsSlaved_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsSlaved*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_IsSlaved" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsSlaved">IsSlaved()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSlaved()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_IsSlavedAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.IsSlavedAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L147">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_IsSlavedAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsSlavedAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_IsSlavedAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsSlavedAsync">IsSlavedAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsSlavedAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_IsSlewing.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.IsSlewing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L165">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_IsSlewing_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsSlewing*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_IsSlewing" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsSlewing">IsSlewing()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSlewing()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_IsSlewingAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.IsSlewingAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L167">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_IsSlewingAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsSlewingAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_IsSlewingAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.IsSlewingAsync">IsSlewingAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsSlewingAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_OpenShutter.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.OpenShutter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L189">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_OpenShutter_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.OpenShutter*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_OpenShutter" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.OpenShutter">OpenShutter()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OpenShutter()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_OpenShutterAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.OpenShutterAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L191">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_OpenShutterAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.OpenShutterAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_OpenShutterAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.OpenShutterAsync">OpenShutterAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task OpenShutterAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_Park.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.Park%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L195">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_Park_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.Park*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_Park" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.Park">Park()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Park()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_ParkAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.ParkAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L197">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_ParkAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.ParkAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_ParkAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.ParkAsync">ParkAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ParkAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_SetPark.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.SetPark%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L201">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_SetPark_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SetPark*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_SetPark" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SetPark">SetPark()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPark()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_SetParkAsync.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.SetParkAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L203">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_SetParkAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SetParkAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_SetParkAsync" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SetParkAsync">SetParkAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SetParkAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_SetSlaved_System_Boolean_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.SetSlaved(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L151">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_SetSlaved_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SetSlaved*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_SetSlaved_System_Boolean_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SetSlaved(System.Boolean)">SetSlaved(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSlaved(bool slaved)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">slaved</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_SetSlavedAsync_System_Boolean_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.SetSlavedAsync(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L153">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_SetSlavedAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SetSlavedAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_SetSlavedAsync_System_Boolean_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SetSlavedAsync(System.Boolean)">SetSlavedAsync(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SetSlavedAsync(bool slaved)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">slaved</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_SlewToAltitude_System_Double_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.SlewToAltitude(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L207">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_SlewToAltitude_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SlewToAltitude*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_SlewToAltitude_System_Double_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SlewToAltitude(System.Double)">SlewToAltitude(Double)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SlewToAltitude(double altitude)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">altitude</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_SlewToAltitudeAsync_System_Double_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.SlewToAltitudeAsync(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L209">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_SlewToAltitudeAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SlewToAltitudeAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_SlewToAltitudeAsync_System_Double_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SlewToAltitudeAsync(System.Double)">SlewToAltitudeAsync(Double)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SlewToAltitudeAsync(double altitude)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">altitude</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_SlewToAzimuth_System_Double_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.SlewToAzimuth(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L221">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_SlewToAzimuth_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SlewToAzimuth*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_SlewToAzimuth_System_Double_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SlewToAzimuth(System.Double)">SlewToAzimuth(Double)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SlewToAzimuth(double azimuth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">azimuth</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_SlewToAzimuthAsync_System_Double_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.SlewToAzimuthAsync(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L223">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_SlewToAzimuthAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SlewToAzimuthAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_SlewToAzimuthAsync_System_Double_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SlewToAzimuthAsync(System.Double)">SlewToAzimuthAsync(Double)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SlewToAzimuthAsync(double azimuth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">azimuth</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_SyncToAzimuth_System_Double_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.SyncToAzimuth(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L235">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_SyncToAzimuth_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SyncToAzimuth*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_SyncToAzimuth_System_Double_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SyncToAzimuth(System.Double)">SyncToAzimuth(Double)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SyncToAzimuth(double azimuth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">azimuth</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome_SyncToAzimuthAsync_System_Double_.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome.SyncToAzimuthAsync(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L237">View Source</a>
+  </span>
+  <a id="ES_Ascom_Alpaca_Client_Devices_Dome_SyncToAzimuthAsync_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SyncToAzimuthAsync*"></a>
+  <h4 id="ES_Ascom_Alpaca_Client_Devices_Dome_SyncToAzimuthAsync_System_Double_" data-uid="ES.Ascom.Alpaca.Client.Devices.Dome.SyncToAzimuthAsync(System.Double)">SyncToAzimuthAsync(Double)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SyncToAzimuthAsync(double azimuth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">azimuth</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDome.html">IDome</a>
+  </div>
+  <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDevice.html">IDevice</a>
+  </div>
+  <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDomeAsync.html">IDomeAsync</a>
+  </div>
+  <div>
+      <a class="xref" href="ES.Ascom.Alpaca.Devices.IDeviceAsync.html">IDeviceAsync</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/new/master/apiSpec/new?filename=ES_Ascom_Alpaca_Client_Devices_Dome.md&amp;value=---%0Auid%3A%20ES.Ascom.Alpaca.Client.Devices.Dome%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/src/Ascom.Alpaca.Client/Devices/Dome.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
