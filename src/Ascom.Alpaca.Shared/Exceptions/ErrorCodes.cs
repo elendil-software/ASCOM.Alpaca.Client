@@ -1,4 +1,4 @@
-namespace ES.AscomAlpaca.Exceptions
+namespace ES.Ascom.Alpaca.Exceptions
 {
     /// <summary>
     /// Error numbers that can be returned by ASCOM Alpaca devices.

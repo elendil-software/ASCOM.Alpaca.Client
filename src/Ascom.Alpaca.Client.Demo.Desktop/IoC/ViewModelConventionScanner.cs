@@ -5,7 +5,7 @@ using Lamar.Scanning;
 using Lamar.Scanning.Conventions;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ES.AscomAlpaca.Client.Demo.Desktop.IoC
+namespace ES.Ascom.Alpaca.Client.Demo.Desktop.IoC
 {
     public class ViewModelConventionScanner : IRegistrationConvention
     {

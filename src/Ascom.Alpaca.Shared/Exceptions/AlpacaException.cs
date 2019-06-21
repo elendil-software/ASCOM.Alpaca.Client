@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using System.Security.Permissions;
 
-namespace ES.AscomAlpaca.Exceptions
+namespace ES.Ascom.Alpaca.Exceptions
 { 
     /// <summary>
     /// Represents errors that occur during ASCOM Alpaca related application execution.

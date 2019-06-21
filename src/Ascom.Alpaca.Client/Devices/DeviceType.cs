@@ -1,4 +1,4 @@
-namespace ES.AscomAlpaca.Client.Devices
+namespace ES.Ascom.Alpaca.Client.Devices
 {
     /// <summary>
     /// Device type enumeration

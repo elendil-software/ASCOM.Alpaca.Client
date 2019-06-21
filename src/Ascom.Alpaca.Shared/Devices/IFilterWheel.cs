@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace ES.AscomAlpaca.Devices
+namespace ES.Ascom.Alpaca.Devices
 {
     /// <summary>
     /// Defines the capabilities supported by an ASCOM Alpaca Filter wheel device

@@ -1,8 +1,8 @@
 using System;
-using ES.AscomAlpaca.Exceptions;
+using ES.Ascom.Alpaca.Exceptions;
 using Xunit;
 
-namespace ES.AscomAlpaca.Shared.Test.Exceptions
+namespace ES.Ascom.Alpaca.Shared.Test.Exceptions
 {
     public class AlpacaExceptionContainsValidErrorCode
     {

@@ -1,11 +1,11 @@
 using System.ComponentModel;
-using ES.AscomAlpaca.Client.Demo.Console.Devices;
-using ES.AscomAlpaca.Client.Devices;
-using ES.AscomAlpaca.Client.Request;
-using ES.AscomAlpaca.Devices;
+using ES.Ascom.Alpaca.Client.Demo.Console.Devices;
+using ES.Ascom.Alpaca.Client.Devices;
+using ES.Ascom.Alpaca.Client.Request;
+using ES.Ascom.Alpaca.Devices;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ES.AscomAlpaca.Client.Demo.Console.IoC
+namespace ES.Ascom.Alpaca.Client.Demo.Console.IoC
 {
     public static class ServiceCollectionExtension
     {

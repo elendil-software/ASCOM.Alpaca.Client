@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using ES.AscomAlpaca.Client.Request;
-using ES.AscomAlpaca.Responses;
+using ES.Ascom.Alpaca.Client.Request;
+using ES.Ascom.Alpaca.Responses;
 using Xunit;
 
-namespace ES.AscomAlpaca.Client.Test.Request
+namespace ES.Ascom.Alpaca.Client.Test.Request
 {
     public class AlpacaObjectDeserializerTest
     {

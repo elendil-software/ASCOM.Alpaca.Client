@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using ES.AscomAlpaca.Client.Demo.Desktop.Factories;
-using ES.AscomAlpaca.Client.Devices;
-using ES.AscomAlpaca.Devices;
-using ES.AscomAlpaca.Exceptions;
+using ES.Ascom.Alpaca.Client.Demo.Desktop.Factories;
+using ES.Ascom.Alpaca.Client.Devices;
+using ES.Ascom.Alpaca.Devices;
+using ES.Ascom.Alpaca.Exceptions;
 
-namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
+namespace ES.Ascom.Alpaca.Client.Demo.Desktop.ViewModels
 {
     public class CameraViewModel : DeviceViewModelBase
     {

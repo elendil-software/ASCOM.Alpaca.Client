@@ -1,7 +1,7 @@
 using System;
 using NLog;
 
-namespace ES.AscomAlpaca.Client.Logging
+namespace ES.Ascom.Alpaca.Client.Logging
 {
     /// <summary>
     /// <see cref="ILogger"/> adapter for <see cref="NLog.ILogger"/>

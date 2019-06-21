@@ -1,6 +1,6 @@
 using System;
 
-namespace ES.AscomAlpaca.Devices
+namespace ES.Ascom.Alpaca.Devices
 {
     /// <summary>
     /// Defines the capabilities supported by an ASCOM Alpaca Observing conditions device

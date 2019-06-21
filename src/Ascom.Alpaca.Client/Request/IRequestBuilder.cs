@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using RestSharp;
 
-namespace ES.AscomAlpaca.Client.Request
+namespace ES.Ascom.Alpaca.Client.Request
 {
     /// <summary>
     /// A request builder can be use to prepare a <see cref="IRestRequest"/>

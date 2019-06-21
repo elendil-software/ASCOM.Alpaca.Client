@@ -1,4 +1,4 @@
-namespace ES.AscomAlpaca.Devices
+namespace ES.Ascom.Alpaca.Devices
 {
     /// <summary>
     /// Available sensors in an Observing Conditions devices

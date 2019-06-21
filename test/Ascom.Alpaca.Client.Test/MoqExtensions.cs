@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using Moq.Language.Flow;
 
-namespace ES.AscomAlpaca.Client.Test
+namespace ES.Ascom.Alpaca.Client.Test
 {
     /// <summary>
     /// Extensions methods based on this blog post : https://haacked.com/archive/2010/11/24/moq-sequences-revisited.aspx/

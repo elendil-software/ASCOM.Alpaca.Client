@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ES.AscomAlpaca.Client.Devices;
+using ES.Ascom.Alpaca.Client.Devices;
 using Microsoft.Extensions.Logging;
 
-namespace ES.AscomAlpaca.Client.Demo.Console.Devices
+namespace ES.Ascom.Alpaca.Client.Demo.Console.Devices
 {
     internal class FilterWheelDemo : DeviceDemoBase, IDeviceDemo
     {

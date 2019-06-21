@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace ES.AscomAlpaca.Exceptions
+namespace ES.Ascom.Alpaca.Exceptions
 {
     
     /// <summary>

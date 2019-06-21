@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using ES.AscomAlpaca.Client.Logging;
-using ES.AscomAlpaca.Client.Request;
-using ES.AscomAlpaca.Client.Responses;
-using ES.AscomAlpaca.Devices;
-using ES.AscomAlpaca.Exceptions;
-using ES.AscomAlpaca.Responses;
+using ES.Ascom.Alpaca.Client.Logging;
+using ES.Ascom.Alpaca.Client.Request;
+using ES.Ascom.Alpaca.Client.Responses;
+using ES.Ascom.Alpaca.Devices;
+using ES.Ascom.Alpaca.Exceptions;
+using ES.Ascom.Alpaca.Responses;
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace ES.AscomAlpaca.Client.Devices
+namespace ES.Ascom.Alpaca.Client.Devices
 {
     /// <summary>
     /// Client implementation of an ASCOM Alpaca Camera device.

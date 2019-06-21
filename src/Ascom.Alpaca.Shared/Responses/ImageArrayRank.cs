@@ -1,4 +1,4 @@
-namespace ES.AscomAlpaca.Responses
+namespace ES.Ascom.Alpaca.Responses
 {
     /// <summary>
     /// Represents the number of planes of an image

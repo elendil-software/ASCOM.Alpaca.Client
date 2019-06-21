@@ -1,4 +1,4 @@
-namespace ES.AscomAlpaca.Devices
+namespace ES.Ascom.Alpaca.Devices
 {
     /// <summary>
     /// The alignment mode of the mount.

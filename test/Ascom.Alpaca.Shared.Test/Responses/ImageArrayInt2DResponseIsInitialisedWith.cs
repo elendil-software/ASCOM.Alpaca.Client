@@ -1,7 +1,7 @@
-using ES.AscomAlpaca.Responses;
+using ES.Ascom.Alpaca.Responses;
 using Xunit;
 
-namespace ES.AscomAlpaca.Shared.Test.Responses
+namespace ES.Ascom.Alpaca.Shared.Test.Responses
 {
     public class ImageArrayInt2DResponseIsInitialisedWith
     {

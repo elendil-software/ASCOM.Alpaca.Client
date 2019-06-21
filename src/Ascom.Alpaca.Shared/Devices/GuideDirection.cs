@@ -1,4 +1,4 @@
-namespace ES.AscomAlpaca.Devices
+namespace ES.Ascom.Alpaca.Devices
 {
     /// <summary>
     /// The direction in which the guide-rate motion is to be made.

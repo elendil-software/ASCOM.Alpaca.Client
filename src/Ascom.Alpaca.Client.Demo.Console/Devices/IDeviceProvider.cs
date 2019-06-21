@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using ES.AscomAlpaca.Devices;
+using ES.Ascom.Alpaca.Devices;
 
-namespace ES.AscomAlpaca.Client.Demo.Console.Devices
+namespace ES.Ascom.Alpaca.Client.Demo.Console.Devices
 {
     public interface IDeviceProvider
     {

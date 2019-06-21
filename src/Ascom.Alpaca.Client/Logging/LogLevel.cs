@@ -1,4 +1,4 @@
-namespace ES.AscomAlpaca.Client.Logging
+namespace ES.Ascom.Alpaca.Client.Logging
 {
     /// <summary>
     /// Defines logging severity levels.

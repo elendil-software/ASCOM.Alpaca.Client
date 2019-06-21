@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace ES.AscomAlpaca.Client.Demo.Desktop.Views
+namespace ES.Ascom.Alpaca.Client.Demo.Desktop.Views
 {
     /// <summary>
     /// Interaction logic for FilterWheelView.xaml

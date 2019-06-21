@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ES.AscomAlpaca.Responses
+namespace ES.Ascom.Alpaca.Responses
 {
     /// <summary>
     /// Response that return the value as a collection of strings

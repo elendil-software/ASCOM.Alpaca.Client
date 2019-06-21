@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ES.AscomAlpaca.Client.Demo.Desktop.Properties {
+namespace ES.Ascom.Alpaca.Client.Demo.Desktop.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

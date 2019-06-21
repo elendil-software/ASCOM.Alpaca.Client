@@ -1,6 +1,6 @@
 using RestSharp;
 
-namespace ES.AscomAlpaca.Client.Request
+namespace ES.Ascom.Alpaca.Client.Request
 {
     internal static class RestRequestExtensions
     {

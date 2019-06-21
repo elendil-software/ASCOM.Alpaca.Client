@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ES.AscomAlpaca.Client.Devices;
-using ES.AscomAlpaca.Client.Request;
-using ES.AscomAlpaca.Responses;
+using ES.Ascom.Alpaca.Client.Devices;
+using ES.Ascom.Alpaca.Client.Request;
+using ES.Ascom.Alpaca.Responses;
 using Moq;
 using RestSharp;
 using Xunit;
 
-namespace ES.AscomAlpaca.Client.Test.Devices
+namespace ES.Ascom.Alpaca.Client.Test.Devices
 {
     public class DeviceRequestTest : DeviceRequestsTestBase
     {

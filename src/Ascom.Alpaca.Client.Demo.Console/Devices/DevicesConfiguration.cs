@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace ES.AscomAlpaca.Client.Demo.Console.Devices
+namespace ES.Ascom.Alpaca.Client.Demo.Console.Devices
 {
     public class DevicesConfiguration
     {

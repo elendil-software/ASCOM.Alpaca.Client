@@ -1,4 +1,4 @@
-namespace ES.AscomAlpaca.Client.Logging
+namespace ES.Ascom.Alpaca.Client.Logging
 {
     /// <summary>
     /// Represents a type used to log events

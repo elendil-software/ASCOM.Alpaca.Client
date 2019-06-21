@@ -2,7 +2,7 @@ using System;
 using log4net;
 using log4net.Core;
 
-namespace ES.AscomAlpaca.Client.Logging
+namespace ES.Ascom.Alpaca.Client.Logging
 {
     /// <summary>
     /// <see cref="ILogger"/> adapter for <see cref="ILog"/>

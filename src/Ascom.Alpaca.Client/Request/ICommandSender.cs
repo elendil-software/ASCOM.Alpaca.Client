@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using ES.AscomAlpaca.Responses;
+using ES.Ascom.Alpaca.Responses;
 using RestSharp;
 
-namespace ES.AscomAlpaca.Client.Request
+namespace ES.Ascom.Alpaca.Client.Request
 {
     /// <summary>
     /// An <see cref="ICommandSender"/> is to send a <see cref="IRestRequest"/> to an ASCOM Alpaca device

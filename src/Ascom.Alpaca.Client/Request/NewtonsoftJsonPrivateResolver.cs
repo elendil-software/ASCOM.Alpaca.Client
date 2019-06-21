@@ -2,7 +2,7 @@ using System.Reflection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace ES.AscomAlpaca.Client.Request
+namespace ES.Ascom.Alpaca.Client.Request
 {
     internal class NewtonsoftJsonPrivateResolver : DefaultContractResolver
     {

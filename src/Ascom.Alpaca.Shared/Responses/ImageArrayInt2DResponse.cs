@@ -1,4 +1,4 @@
-namespace ES.AscomAlpaca.Responses
+namespace ES.Ascom.Alpaca.Responses
 {
     /// <summary>
     /// 2 dimension image array response

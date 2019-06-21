@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace ES.AscomAlpaca.Devices
+namespace ES.Ascom.Alpaca.Devices
 {
     /// <summary>
     /// Base interface of every client implementation of ASCOM Alpaca device 

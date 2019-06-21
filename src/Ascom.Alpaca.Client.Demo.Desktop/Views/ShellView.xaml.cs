@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace ES.AscomAlpaca.Client.Demo.Desktop.Views
+namespace ES.Ascom.Alpaca.Client.Demo.Desktop.Views
 {
     /// <summary>
     /// Interaction logic for ShellView.xaml

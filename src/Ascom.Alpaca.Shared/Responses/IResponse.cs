@@ -1,7 +1,7 @@
 ﻿
-using ES.AscomAlpaca.Exceptions;
+using ES.Ascom.Alpaca.Exceptions;
 
-namespace ES.AscomAlpaca.Responses
+namespace ES.Ascom.Alpaca.Responses
 {
     /// <summary>
     /// Defines the base of an Alpaca response.

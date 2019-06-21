@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace ES.AscomAlpaca.Client.Demo.Desktop.Converters
+namespace ES.Ascom.Alpaca.Client.Demo.Desktop.Converters
 {
 	internal static class CoordinatesConverter
     {

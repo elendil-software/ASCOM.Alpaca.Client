@@ -4,15 +4,15 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using Caliburn.Micro;
-using ES.AscomAlpaca.Client.Demo.Desktop.Converters;
-using ES.AscomAlpaca.Client.Demo.Desktop.IoC;
-using ES.AscomAlpaca.Client.Demo.Desktop.ViewModels;
-using ES.AscomAlpaca.Client.Devices;
-using ES.AscomAlpaca.Client.Logging;
+using ES.Ascom.Alpaca.Client.Demo.Desktop.Converters;
+using ES.Ascom.Alpaca.Client.Demo.Desktop.IoC;
+using ES.Ascom.Alpaca.Client.Demo.Desktop.ViewModels;
+using ES.Ascom.Alpaca.Client.Devices;
+using ES.Ascom.Alpaca.Client.Logging;
 using Lamar;
 using Serilog;
 
-namespace ES.AscomAlpaca.Client.Demo.Desktop
+namespace ES.Ascom.Alpaca.Client.Demo.Desktop
 {
     public class Bootstrapper : BootstrapperBase
     {

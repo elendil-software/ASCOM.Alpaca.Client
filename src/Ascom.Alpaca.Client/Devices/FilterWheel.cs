@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
-using ES.AscomAlpaca.Client.Logging;
-using ES.AscomAlpaca.Client.Request;
-using ES.AscomAlpaca.Devices;
-using ES.AscomAlpaca.Responses;
+using ES.Ascom.Alpaca.Client.Logging;
+using ES.Ascom.Alpaca.Client.Request;
+using ES.Ascom.Alpaca.Devices;
+using ES.Ascom.Alpaca.Responses;
 using RestSharp;
 
-namespace ES.AscomAlpaca.Client.Devices
+namespace ES.Ascom.Alpaca.Client.Devices
 {
     /// <summary>
     /// Client implementation of an ASCOM Alpaca Filter Wheel device.

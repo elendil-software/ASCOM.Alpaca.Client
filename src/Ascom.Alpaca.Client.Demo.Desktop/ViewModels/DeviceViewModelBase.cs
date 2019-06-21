@@ -1,8 +1,8 @@
 ﻿using System;
 using Caliburn.Micro;
-using ES.AscomAlpaca.Client.Demo.Desktop.Factories;
+using ES.Ascom.Alpaca.Client.Demo.Desktop.Factories;
 
-namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
+namespace ES.Ascom.Alpaca.Client.Demo.Desktop.ViewModels
 {
     public class DeviceViewModelBase : Screen
     {

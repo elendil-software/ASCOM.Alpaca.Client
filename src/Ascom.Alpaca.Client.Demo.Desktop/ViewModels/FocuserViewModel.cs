@@ -2,10 +2,10 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using ES.AscomAlpaca.Client.Demo.Desktop.Factories;
-using ES.AscomAlpaca.Client.Devices;
+using ES.Ascom.Alpaca.Client.Demo.Desktop.Factories;
+using ES.Ascom.Alpaca.Client.Devices;
 
-namespace ES.AscomAlpaca.Client.Demo.Desktop.ViewModels
+namespace ES.Ascom.Alpaca.Client.Demo.Desktop.ViewModels
 {
     public class FocuserViewModel : DeviceViewModelBase
     {

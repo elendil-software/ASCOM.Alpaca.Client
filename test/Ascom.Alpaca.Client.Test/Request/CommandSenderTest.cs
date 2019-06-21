@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Net;
-using ES.AscomAlpaca.Client.Request;
-using ES.AscomAlpaca.Exceptions;
-using ES.AscomAlpaca.Responses;
+using ES.Ascom.Alpaca.Client.Request;
+using ES.Ascom.Alpaca.Exceptions;
+using ES.Ascom.Alpaca.Responses;
 using Moq;
 using RestSharp;
 using Xunit;
 
-namespace ES.AscomAlpaca.Client.Test.Request
+namespace ES.Ascom.Alpaca.Client.Test.Request
 {
     public class CommandSenderTest
     {

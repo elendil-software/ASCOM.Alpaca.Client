@@ -1,4 +1,4 @@
-namespace ES.AscomAlpaca.Client.Request
+namespace ES.Ascom.Alpaca.Client.Request
 {
     /// <summary>
     /// Generate a client transaction ID.

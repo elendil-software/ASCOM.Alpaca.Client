@@ -1,7 +1,7 @@
-using ES.AscomAlpaca.Responses;
+using ES.Ascom.Alpaca.Responses;
 using Newtonsoft.Json;
 
-namespace ES.AscomAlpaca.Client.Request
+namespace ES.Ascom.Alpaca.Client.Request
 {
     internal class AlpacaObjectDeserializer
     {

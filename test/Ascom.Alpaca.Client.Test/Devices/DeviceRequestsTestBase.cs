@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using ES.AscomAlpaca.Client.Devices;
+using ES.Ascom.Alpaca.Client.Devices;
 using RestSharp;
 using Xunit;
 
-namespace ES.AscomAlpaca.Client.Test.Devices
+namespace ES.Ascom.Alpaca.Client.Test.Devices
 {
     public abstract class DeviceRequestsTestBase
     {
