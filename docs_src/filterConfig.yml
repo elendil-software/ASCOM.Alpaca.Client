@@ -1,31 +1,31 @@
 apiRules:
   - exclude:
-      uidRegex: ^ES\.AscomAlpaca\.Client\.Request\.IRequestBuilder$
+      uidRegex: ^ES\.Ascom.Alpaca\.Client\.Request\.IRequestBuilder$
       type: Interface  
   - exclude:
-      uidRegex: ^ES\.AscomAlpaca\.Client\.Request\.ICommandSender$
+      uidRegex: ^ES\.Ascom.Alpaca\.Client\.Request\.ICommandSender$
       type: Interface
   - exclude:
-      uidRegex: ^ES\.AscomAlpaca\.Client\.Request\.IRestClientFactory$
+      uidRegex: ^ES\.Ascom.Alpaca\.Client\.Request\.IRestClientFactory$
       type: Interface
   - exclude:
-      uidRegex: ^ES\.AscomAlpaca\.Client\.Devices\.DeviceBase\.CommandSender
+      uidRegex: ^ES\.Ascom.Alpaca\.Client\.Devices\.DeviceBase\.CommandSender
       type: Field
   - exclude:
-      uidRegex: ^ES\.AscomAlpaca\.Client\.Devices\.DeviceBase\.RequestBuilder
+      uidRegex: ^ES\.Ascom.Alpaca\.Client\.Devices\.DeviceBase\.RequestBuilder
       type: Field
   - exclude:
-      uidRegex: ^ES\.AscomAlpaca\.Client\.Devices\.DeviceBase\.Configuration
+      uidRegex: ^ES\.Ascom.Alpaca\.Client\.Devices\.DeviceBase\.Configuration
       type: Field
   - exclude:
-      uidRegex: ^ES\.AscomAlpaca\.Client\.Devices\.DeviceBase\.DeviceType
+      uidRegex: ^ES\.Ascom.Alpaca\.Client\.Devices\.DeviceBase\.DeviceType
       type: Property
   - exclude:
-      uidRegex: ^ES\.AscomAlpaca\.Client\.Devices\.DeviceBase\.GetClientTransactionId$
+      uidRegex: ^ES\.Ascom.Alpaca\.Client\.Devices\.DeviceBase\.GetClientTransactionId$
       type: Method
   - exclude:
-      uidRegex: ^ES\.AscomAlpaca\.Client\.Devices\.DeviceBase\.ExecuteRequest
+      uidRegex: ^ES\.Ascom.Alpaca\.Client\.Devices\.DeviceBase\.ExecuteRequest
       type: Method
   - exclude:
-      uidRegex: ^ES\.AscomAlpaca\.Client\.Devices\.DeviceBase\.ExecuteRequestAsync
+      uidRegex: ^ES\.Ascom.Alpaca\.Client\.Devices\.DeviceBase\.ExecuteRequestAsync
       type: Method

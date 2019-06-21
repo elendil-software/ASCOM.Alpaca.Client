@@ -14,19 +14,19 @@
         <PackageTags>ASCOM Alpaca Astronomy</PackageTags>
         <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
         <PackageId>ES.AscomAlpaca.Shared</PackageId>
-        <AssemblyName>ES.AscomAlpaca.Shared</AssemblyName>
-        <RootNamespace>ES.AscomAlpaca</RootNamespace>
+        <AssemblyName>ES.Ascom.Alpaca.Shared</AssemblyName>
+        <RootNamespace>ES.Ascom.Alpaca</RootNamespace>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <AssemblyVersion>0.1.0</AssemblyVersion>
         <FileVersion>0.1.0</FileVersion>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <DocumentationFile>bin\Debug\ES.AscomAlpaca.Shared.xml</DocumentationFile>
+      <DocumentationFile>bin\Debug\ES.Ascom.Alpaca.Shared.xml</DocumentationFile>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DocumentationFile>bin\Release\ES.AscomAlpaca.Shared.xml</DocumentationFile>
+      <DocumentationFile>bin\Release\ES.Ascom.Alpaca.Shared.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>

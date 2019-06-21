@@ -10,8 +10,8 @@
         <PackageId>ES.AscomAlpaca.Client.Test</PackageId>
         <Authors>Julien Tschäppät</Authors>
         <Product>C# ASCOM Alpaca Client Test</Product>
-        <AssemblyName>ES.AscomAlpaca.Client.Test</AssemblyName>
-        <RootNamespace>ES.AscomAlpaca.Client.Test</RootNamespace>
+        <AssemblyName>ES.Ascom.Alpaca.Client.Test</AssemblyName>
+        <RootNamespace>ES.Ascom.Alpaca.Client.Test</RootNamespace>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</PackageProjectUrl>
         <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</RepositoryUrl>
@@ -41,8 +41,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\AscomAlpaca.Client\AscomAlpaca.Client.csproj" />
-      <ProjectReference Include="..\..\src\AscomAlpaca.Shared\AscomAlpaca.Shared.csproj" />
+      <ProjectReference Include="..\..\src\Ascom.Alpaca.Client\Ascom.Alpaca.Client.csproj" />
+      <ProjectReference Include="..\..\src\Ascom.Alpaca.Shared\Ascom.Alpaca.Shared.csproj" />
     </ItemGroup>
 
 </Project>

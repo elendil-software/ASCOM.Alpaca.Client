@@ -1,41 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <RootNamespace>ES.Ascom.Alpaca.Client.Logging</RootNamespace>
         <TargetFrameworks>net452;net462;net472;netstandard2.0;netcoreapp2.2</TargetFrameworks>
         <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">netstandard2.0;netcoreapp2.2</TargetFrameworks>
-        <RootNamespace>ES.AscomAlpaca.Client.Logging</RootNamespace>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageId>ES.AscomAlpaca.Client.Logging.SerilogAdapter</PackageId>
         <Version>0.1.0</Version>
         <Authors>Julien Tschäppät</Authors>
-        <Product>C# ASCOM Alpaca Client Logging SerilogAdapter</Product>
+        <Product>C# ASCOM Alpaca Client Logging NLogAdapter</Product>
+        <Description>NLog adapter to use with ES.AscomAlpaca.Client</Description>
         <Copyright>Copyright © 2019 - Julien Tschäppät</Copyright>
-        <Description>Serilog adapter to use with ES.AscomAlpaca.Client</Description>
         <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</PackageProjectUrl>
         <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</RepositoryUrl>
-        <PackageTags>ASCOM Alpaca Astronomy</PackageTags>
+        <PackageTags>ASCOM Astronomy</PackageTags>
         <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
+        <PackageId>ES.AscomAlpaca.Client.Logging.NLogAdapter</PackageId>
         <AssemblyVersion>0.1.0</AssemblyVersion>
         <FileVersion>0.1.0</FileVersion>
-        <AssemblyName>ES.AscomAlpaca.Client.Logging.SerilogAdapter</AssemblyName>
+        <AssemblyName>ES.Ascom.Alpaca.Client.Logging.NLogAdapter</AssemblyName>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <DocumentationFile>bin\Debug\ES.AscomAlpaca.Client.Logging.SerilogAdapter.xml</DocumentationFile>
+      <DocumentationFile>bin\Debug\ES.Ascom.Alpaca.Client.Logging.NLogAdapter.xml</DocumentationFile>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DocumentationFile>bin\Release\ES.AscomAlpaca.Client.Logging.SerilogAdapter.xml</DocumentationFile>
+      <DocumentationFile>bin\Release\ES.Ascom.Alpaca.Client.Logging.NLogAdapter.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Serilog" Version="2.8.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\AscomAlpaca.Client\AscomAlpaca.Client.csproj" />
+      <PackageReference Include="NLog" Version="4.6.4" />
     </ItemGroup>
 
     <ItemGroup>
@@ -43,6 +39,10 @@
         <Pack>True</Pack>
         <PackagePath></PackagePath>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Ascom.Alpaca.Client\Ascom.Alpaca.Client.csproj" />
     </ItemGroup>
 
 </Project>
