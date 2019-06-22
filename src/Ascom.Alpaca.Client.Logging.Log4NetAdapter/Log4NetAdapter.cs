@@ -1,6 +1,7 @@
 using System;
 using log4net;
 using log4net.Core;
+using MessageTemplates;
 
 namespace ES.Ascom.Alpaca.Client.Logging
 {
@@ -23,25 +24,28 @@ namespace ES.Ascom.Alpaca.Client.Logging
         /// <inheritdoc/>
         public void Log(LogEvent logEvent)
         {
+            var message = MessageTemplate.Format(logEvent.Message, logEvent.PropertyValues);
+            
             switch (logEvent.LogLevel)
             {
                 case LogLevel.Fatal:
-                    _logger.Fatal(logEvent.Message, logEvent.Exception);
+                    _logger.Fatal(message, logEvent.Exception);
                     break;
                 case LogLevel.Error:
-                    _logger.Error(logEvent.Message, logEvent.Exception);
+                    _logger.Error(message, logEvent.Exception);
                     break;
                 case LogLevel.Warning:
-                    _logger.Warn(logEvent.Message, logEvent.Exception);
+                    _logger.Warn(message, logEvent.Exception);
                     break;
                 case LogLevel.Information:
-                    _logger.Info(logEvent.Message, logEvent.Exception);
+                    _logger.Info(message, logEvent.Exception);
                     break;
+                case LogLevel.Trace:
                 case LogLevel.Debug:
-                    _logger.Debug(logEvent.Message, logEvent.Exception);
+                    _logger.Debug(message, logEvent.Exception);
                     break;
                 default:
-                    _logger.Debug(logEvent.Message, logEvent.Exception);
+                    _logger.Debug(message, logEvent.Exception);
                     break;
             }
         }
