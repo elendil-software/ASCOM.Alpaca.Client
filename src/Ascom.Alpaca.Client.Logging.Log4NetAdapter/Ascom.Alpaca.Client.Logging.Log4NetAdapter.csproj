@@ -12,7 +12,7 @@
         <Version>0.1.0</Version>
         <Authors>Julien Tschäppät</Authors>
         <Product>C# ASCOM Alpaca Client Logging NLogAdapter</Product>
-        <Description>NLog adapter to use with ES.AscomAlpaca.Client</Description>
+        <Description>NLog adapter to use with ES.Ascom.Alpaca.Client</Description>
         <Copyright>Copyright © 2019 - Julien Tschäppät</Copyright>
         <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</PackageProjectUrl>
         <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</RepositoryUrl>

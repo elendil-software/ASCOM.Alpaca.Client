@@ -11,7 +11,7 @@
         <Authors>Julien Tschäppät</Authors>
         <Product>C# ASCOM Alpaca Client Logging SerilogAdapter</Product>
         <Copyright>Copyright © 2019 - Julien Tschäppät</Copyright>
-        <Description>Serilog adapter to use with ES.AscomAlpaca.Client</Description>
+        <Description>Serilog adapter to use with ES.Ascom.Alpaca.Client</Description>
         <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</PackageProjectUrl>
         <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</RepositoryUrl>
         <PackageTags>ASCOM Alpaca Astronomy</PackageTags>

@@ -5,11 +5,11 @@
         <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">netstandard2.0;netcoreapp2.2</TargetFrameworks>
         <PackageProjectUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</PackageProjectUrl>
         <RepositoryUrl>https://github.com/elendil-software/ASCOM.Alpaca.Client</RepositoryUrl>
-        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Version>0.1.0</Version>
         <Authors>Julien Tschäppät</Authors>
-        <Product>C# ASCOM Alpaca Client</Product>
-        <Description>C# ASCOM Alpaca Client Library allowing to send request to ASCOM Alpaca</Description>
+        <Product>C# ASCOM Alpaca Shared Library</Product>
+        <Description>This package provide common classes, interfaces, ... that can be used in an ASCOM Alpaca client or device</Description>
         <Copyright>Copyright © 2019 - Julien Tschäppät</Copyright>
         <PackageTags>ASCOM Alpaca Astronomy</PackageTags>
         <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
@@ -19,6 +19,7 @@
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
         <AssemblyVersion>0.1.0</AssemblyVersion>
         <FileVersion>0.1.0</FileVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

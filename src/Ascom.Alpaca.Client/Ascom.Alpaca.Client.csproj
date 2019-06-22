@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>C# ASCOM Alpaca Client Library allowing to send request to ASCOM Alpaca</Description>
+    <Description>This package provide classes, interfaces, ... allowing to send request to ASCOM Alpaca devices</Description>
     <Authors>Julien Tschäppät</Authors>
     <Company>Julien Tschäppät</Company>
     <Version>0.1.0</Version>
@@ -51,14 +51,4 @@
     <ProjectReference Include="..\Ascom.Alpaca.Shared\Ascom.Alpaca.Shared.csproj" />
   </ItemGroup>
 
-  <PropertyGroup>
-    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);IncludeDependencies</TargetsForTfmSpecificBuildOutput>
-  </PropertyGroup>
-  
-  <Target Name="IncludeDependencies">
-    <ItemGroup>
-      <BuildOutputInPackage Include="$(OutputPath)ES.Ascom.Alpaca.Shared.dll" />
-      <BuildOutputInPackage Include="$(OutputPath)ES.Ascom.Alpaca.Shared.xml" />
-    </ItemGroup>
-  </Target>
 </Project>
