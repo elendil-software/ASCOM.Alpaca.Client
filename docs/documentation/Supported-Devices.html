@@ -68,19 +68,64 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
 
-<p>AscomAlpacaClient supports all ASCOM Alpaca devices.</p>
-<p>For each ASCOM Alpaca device an interface and a class has been defined</p>
-<ul>
-<li>ICamera / Camera</li>
-<li>IDome / Dome</li>
-<li>IFilterWheel / FilterWheel</li>
-<li>IFocuser / Focuser</li>
-<li>IObservingConditions / ObservingConditions</li>
-<li>IRotator / Rotator</li>
-<li>ISwitch / Switch</li>
-<li>ISafetyMonitor / SafetyMonitor</li>
-<li>ITelescope / Telescope</li>
-</ul>
+<p>Ascom Alpaca Client supports all ASCOM Alpaca devices.</p>
+<p>For each ASCOM Alpaca device two interfaces and a class have been defined</p>
+<table>
+<thead>
+<tr>
+<th>Sync interface</th>
+<th>Async interface</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ICamera</td>
+<td>ICameraAsync</td>
+<td>Camera</td>
+</tr>
+<tr>
+<td>IDome</td>
+<td>IDomeAsync</td>
+<td>Dome</td>
+</tr>
+<tr>
+<td>IFilterWheel</td>
+<td>IFilterWheelAsync</td>
+<td>FilterWheel</td>
+</tr>
+<tr>
+<td>IFocuser</td>
+<td>IFocuserAsync</td>
+<td>Focuser</td>
+</tr>
+<tr>
+<td>IObservingConditions</td>
+<td>IObservingConditionsAsync</td>
+<td>ObservingConditions</td>
+</tr>
+<tr>
+<td>IRotator</td>
+<td>IRotatorAsync</td>
+<td>Rotator</td>
+</tr>
+<tr>
+<td>ISwitch</td>
+<td>ISwitchAsync</td>
+<td>Switch</td>
+</tr>
+<tr>
+<td>ISafetyMonitor</td>
+<td>ISafetyMonitorAsync</td>
+<td>SafetyMonitor</td>
+</tr>
+<tr>
+<td>ITelescope</td>
+<td>ITelescopeAsync</td>
+<td>Telescope</td>
+</tr>
+</tbody>
+</table>
 </article>
           </div>
           
@@ -89,7 +134,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/develop/docs_src/documentation/Supported-Devices.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/elendil-software/ASCOM.Alpaca.Client/blob/master/docs_src/documentation/Supported-Devices.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

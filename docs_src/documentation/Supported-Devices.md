@@ -1,13 +1,15 @@
-AscomAlpacaClient supports all ASCOM Alpaca devices.
+Ascom Alpaca Client supports all ASCOM Alpaca devices.
 
-For each ASCOM Alpaca device an interface and a class has been defined
+For each ASCOM Alpaca device two interfaces and a class have been defined
 
-- ICamera / Camera
-- IDome / Dome
-- IFilterWheel / FilterWheel
-- IFocuser / Focuser
-- IObservingConditions / ObservingConditions
-- IRotator / Rotator
-- ISwitch / Switch
-- ISafetyMonitor / SafetyMonitor
-- ITelescope / Telescope
+| Sync interface       | Async interface             | Class               |
+| -------------------- | --------------------------- | ------------------- |
+| ICamera              | ICameraAsync                | Camera              |
+| IDome                | IDomeAsync                  | Dome                |
+| IFilterWheel         | IFilterWheelAsync           | FilterWheel         |
+| IFocuser             | IFocuserAsync               | Focuser             |
+| IObservingConditions | IObservingConditionsAsync   | ObservingConditions |
+| IRotator             | IRotatorAsync               | Rotator             |
+| ISwitch              | ISwitchAsync                | Switch              |
+| ISafetyMonitor       | ISafetyMonitorAsync         | SafetyMonitor       |
+| ITelescope           | ITelescopeAsync             | Telescope           |

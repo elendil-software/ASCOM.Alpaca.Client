@@ -21,7 +21,10 @@ var configuration = new DeviceConfiguration
     DeviceNumber = 0
 };
 
-ITelescope telescope = new Telescope(configuration);
+Telescope telescope = new Telescope(configuration);
 
 await telescope.SlewToCoordinatesAsync(9.9517788, 68.98033);
+// or 
+telescope.SlewToCoordinates(9.9517788, 68.98033);
+
 ```

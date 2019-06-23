@@ -1200,10 +1200,10 @@
       "output": {
         ".html": {
           "relative_path": "documentation/Getting-Started.html",
-          "hash": "azOVW5D3DftffkbjEpOXVA=="
+          "hash": "uFFYL+iW7f73HC71SDUtqg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1236,10 +1236,10 @@
       "output": {
         ".html": {
           "relative_path": "documentation/Supported-Devices.html",
-          "hash": "dnwuv2Ee9BKCCG3CStawEA=="
+          "hash": "gR2i8JG+hzlBdeKlslTinw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1278,7 +1278,7 @@
           "hash": "A6TJJHtfHeCSjp+lg6m0+w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1303,12 +1303,11 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
+          "total_file_count": 10,
+          "skipped_file_count": 8
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
@@ -1316,11 +1315,12 @@
           "total_file_count": 94,
           "skipped_file_count": 94
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 10,
-          "skipped_file_count": 10
+          "total_file_count": 0,
+          "skipped_file_count": 0
         }
       }
     },
