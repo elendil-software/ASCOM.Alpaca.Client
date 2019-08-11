@@ -37,4 +37,8 @@
       </None>
     </ItemGroup>
 
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="InheritDoc -b $(OutDir) -o" IgnoreExitCode="true" />
+    </Target>
+
 </Project>

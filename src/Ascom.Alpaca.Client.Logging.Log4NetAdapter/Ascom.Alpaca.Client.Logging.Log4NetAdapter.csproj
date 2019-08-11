@@ -46,4 +46,8 @@
       <ProjectReference Include="..\Ascom.Alpaca.Client\Ascom.Alpaca.Client.csproj" />
     </ItemGroup>
 
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="InheritDoc -b $(OutDir) -o" IgnoreExitCode="true" />
+    </Target>
+
 </Project>
