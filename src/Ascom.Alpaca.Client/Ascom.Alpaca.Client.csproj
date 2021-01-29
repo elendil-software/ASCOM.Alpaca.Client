@@ -16,7 +16,7 @@
     <AssemblyVersion>0.1.0</AssemblyVersion>
     <FileVersion>0.1.0</FileVersion>
     <PackageReleaseNotes>https://github.com/elendil-software/ASCOM.Alpaca.Client/releases</PackageReleaseNotes>
-    <TargetFrameworks>net452;net462;net472;netstandard2.0;netcoreapp2.2</TargetFrameworks>
+    <TargetFrameworks>net452;net472;netcoreapp3.1;netstandard2.0</TargetFrameworks>
     <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">netstandard2.0;netcoreapp2.2</TargetFrameworks>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <RootNamespace>ES.Ascom.Alpaca.Client</RootNamespace>
