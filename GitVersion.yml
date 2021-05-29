@@ -1,5 +1,0 @@
-branches:
-  develop:
-    tag: preview
-ignore:
-  sha: []
