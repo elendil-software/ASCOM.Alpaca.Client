@@ -1,14 +1,11 @@
 # ASCOM Alpaca Client Toolkit
 
+## NOTICE: This project is no longer being maintained. :warning:
+
 **This project isn't maintainded anymore**
 
 This library provides methods that simplify the integration of 
 [ASCOM Alpaca](https://ascom-standards.org/Developer/Alpaca.htm) in .NET Core / .NET Standard Software
-
-**Important**
-This project is under development and should not be use in production.
-
-Any improvement suggestion, new ideas, ... will be appreciated
 
 ## Documentation
 
